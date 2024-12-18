@@ -1,9 +1,9 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.[code]
-canonical: https://interop.esante.gouv.fr/ig/fhir/[code] # the last part of canonical and id must be the same
+id: ans.document.fr.core
+canonical: https://interop.esante.gouv.fr/ig/document/core # the last part of canonical and id must be the same
 name: ExampleIG # Should be an acronym
-title: ANS IG Example
+title: ANS IG document core
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
   url: https://esante.gouv.fr
@@ -17,7 +17,10 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
 
+FSHOnly: true
 
+dependencies:
+  hl7.cda.uv.core: 2.0.0-sd
 
 pages:
     index.md:
@@ -34,6 +37,14 @@ pages:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
+    structuration_min.md:
+        title: Structuration minimale
+        ressourcesCDA.md:
+            title: Ressources CDA
+        ressourcesFHIR.md:
+            title: Ressources FHIR
+        modelesLogiques.md:
+            title: Modèles logiques
 
 menu:
     Accueil: index.html
@@ -47,4 +58,10 @@ menu:
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
+    Structuration minimale:
+        Ressources CDA: ressourcesCDA.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
+
+
+
+
