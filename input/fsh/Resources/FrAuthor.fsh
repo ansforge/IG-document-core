@@ -19,4 +19,4 @@ Description: "author permet d’enregistrer un auteur du document."
 * functionCode.sdtcValueSet 0..0 // Interdit l’attribut @sdtcValueSet dans functionCode
 * functionCode.sdtcValueSetVersion 0..0 // Interdit l’attribut @sdtcValueSetVersion dans functionCode
 * time.value 1..1
-//* assignedAuthor only Reference(//interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assignedAuthor) // Déclare une référence obligatoire vers FrAssignedAuthor
+* assignedAuthor only Reference(fr-core-assignedAuthor) // Déclare une référence obligatoire vers FrAssignedAuthor
