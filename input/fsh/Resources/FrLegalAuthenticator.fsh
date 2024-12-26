@@ -1,7 +1,7 @@
 // StructureDefinition for legalAuthenticator
-Profile: LegalAuthenticator
+Profile: FrLegalAuthenticator
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator
-Id: LegalAuthenticator
+Id: fr-core-legalAuthenticator
 Title: "legalAuthenticator"
 Description: "LegalAuthenticator représente les caractéristiques du professionnel et/ou de l'établissement participant."
 * ^status = #draft

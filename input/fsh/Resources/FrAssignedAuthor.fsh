@@ -1,7 +1,7 @@
 // StructureDefinition for Author
-Profile: AssignedAuthor
+Profile: FrAssignedAuthor
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor
-Id: AssignedAuthor
+Id: fr-core-assignedAuthor
 Title: "assignedAuthor"
 Description: "assignedAuthor contient les éléments permettant de décrire l’auteur."
 * ^status = #draft

@@ -1,7 +1,7 @@
 // StructureDefinition for Author
-Profile: Author
+Profile: FrAuthor
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Author
-Id: Author
+Id: fr-core-author
 Title: "author"
 Description: "author permet d’enregistrer un auteur du document."
 * ^status = #draft
@@ -19,4 +19,4 @@ Description: "author permet d’enregistrer un auteur du document."
 * functionCode.sdtcValueSet 0..0 // Interdit l’attribut @sdtcValueSet dans functionCode
 * functionCode.sdtcValueSetVersion 0..0 // Interdit l’attribut @sdtcValueSetVersion dans functionCode
 * time.value 1..1
-//* assignedAuthor only Reference(AssignedAuthor) // Déclare une référence obligatoire vers AssignedAuthor
+//* assignedAuthor only Reference(//interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assignedAuthor) // Déclare une référence obligatoire vers FrAssignedAuthor
