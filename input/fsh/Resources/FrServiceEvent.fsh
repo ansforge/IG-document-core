@@ -1,7 +1,7 @@
 // StructureDefinition for ServiceEvent
 Profile: FrServiceEvent
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent
-Id: fr-core-serviceEvent
+Id: fr-core-service-event
 Title: "serviceEvent"
 Description: "ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
 L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal 

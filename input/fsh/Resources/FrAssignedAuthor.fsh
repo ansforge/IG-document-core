@@ -1,7 +1,7 @@
 // StructureDefinition for Author
 Profile: FrAssignedAuthor
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor
-Id: fr-core-assignedAuthor
+Id: fr-core-assigned-author
 Title: "assignedAuthor"
 Description: "assignedAuthor contient les éléments permettant de décrire l’auteur."
 * ^status = #draft
@@ -25,4 +25,4 @@ Expression: "id.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/n
  */
 
 
-* code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/ (required)
+* code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS/ (required)
