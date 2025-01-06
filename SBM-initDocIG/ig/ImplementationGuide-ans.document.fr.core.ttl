@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-02T14:56:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-06T16:20:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -628,6 +628,18 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authoring-device> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-authoring-device" ]
+       ] ;
+       fhir:name [ fhir:v "authoringDevice" ] ;
+       fhir:description [ fhir:v "authoringDevice contient les informations complémentaires si l’auteur est un système." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-authorization" ]
        ] ;
@@ -717,6 +729,18 @@
        ] ;
        fhir:name [ fhir:v "inFulfillmentOf" ] ;
        fhir:description [ fhir:v "​InFulfillmentOf permet d'Associer un document à une prescription ." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-intended-recipient> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-intended-recipient" ]
+       ] ;
+       fhir:name [ fhir:v "IntendedRecipient" ] ;
+       fhir:description [ fhir:v "IntendedRecipient permet d'enregistrer le destinataire prévu du document." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -837,6 +861,30 @@
        ] ;
        fhir:name [ fhir:v "RelatedEntity" ] ;
        fhir:description [ fhir:v "RelatedEntity permet de décrire : un informateur non professionnel / personne de \nconfiance / personne à prévenir en cas d’urgence / aidant / personne aidée." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-custodian-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-custodian-organization" ]
+       ] ;
+       fhir:name [ fhir:v "representedCustodianOrganization" ] ;
+       fhir:description [ fhir:v "representedCustodianOrganization contient les éléments caractérisant la structure conservant le \ndocument, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-organization" ]
+       ] ;
+       fhir:name [ fhir:v "representedOrganization" ] ;
+       fhir:description [ fhir:v "Structure pour le compte de laquelle intervient le professionnel." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

@@ -18,14 +18,22 @@ package IG #DDDDDD{
              AssignedAuthor.id.nullFlavor => [None..0]
              AssignedAuthor.sdtcIdentifiedBy => [None..0]
              AssignedAuthor.code => [None..None]
+             AssignedAuthor.assignedPerson => [None..None]
+             AssignedAuthor.assignedAuthoringDevice => [None..None]
+             AssignedAuthor.representedOrganization => [None..None]
         } 
 
         class FrAssignedCustodian{
 
              AssignedCustodian => [None..None]
+             AssignedCustodian.typeId.nullFlavor => [None..0]
+             AssignedCustodian.typeId.assigningAuthorityName => [None..0]
+             AssignedCustodian.typeId.displayable => [None..0]
+             AssignedCustodian.classCode => [None..0]
+             AssignedCustodian.representedCustodianOrganization => [None..None]
         } 
 
-        class FrAssignedntity{
+        class FrAssignedEntity{
 
              AssignedEntity => [None..None]
              AssignedEntity.nullFlavor => [None..0]
@@ -36,12 +44,24 @@ package IG #DDDDDD{
              AssignedEntity.id => [None..1]
              AssignedEntity.sdtcIdentifiedBy => [None..0]
              AssignedEntity.code.nullFlavor => [None..0]
+             AssignedEntity.code.codeSystemVersion => [None..0]
+             AssignedEntity.code.sdtcValueSet => [None..0]
+             AssignedEntity.code.sdtcValueSetVersion => [None..0]
+             AssignedEntity.assignedPerson => [None..None]
+             AssignedEntity.representedOrganization => [None..None]
              AssignedEntity.sdtcPatient => [None..0]
         } 
 
         class FrAssociatedEntity{
 
              AssociatedEntity => [None..None]
+             AssociatedEntity.nullFlavor => [None..0]
+             AssociatedEntity.typeId.nullFlavor => [None..0]
+             AssociatedEntity.typeId.assigningAuthorityName => [None..0]
+             AssociatedEntity.typeId.displayable => [None..0]
+             AssociatedEntity.sdtcIdentifiedBy => [None..0]
+             AssociatedEntity.associatedPerson => [None..None]
+             AssociatedEntity.scopingOrganization => [None..None]
         } 
 
         class FrAuthenticator{
@@ -68,6 +88,17 @@ package IG #DDDDDD{
              Author.assignedAuthor => [None..None]
         } 
 
+        class FrAuthoringDevice{
+
+             AuthoringDevice.typeId.nullFlavor => [None..0]
+             AuthoringDevice.typeId.assigningAuthorityName => [None..0]
+             AuthoringDevice.typeId.displayable => [None..0]
+             AuthoringDevice.classCode => [None..0]
+             AuthoringDevice.determinerCode => [None..0]
+             AuthoringDevice.manufacturerModelName => [1..None]
+             AuthoringDevice.softwareName => [1..None]
+        } 
+
         class FrAuthorization{
 
              Authorization => [None..None]
@@ -81,11 +112,25 @@ package IG #DDDDDD{
         class FrCustodian{
 
              Custodian => [None..None]
+             Custodian.nullFlavor => [None..0]
+             Custodian.typeId.nullFlavor => [None..0]
+             Custodian.typeId.assigningAuthorityName => [None..0]
+             Custodian.typeId.displayable => [None..0]
+             Custodian.typeCode => [None..0]
+             Custodian.assignedCustodian => [None..None]
         } 
 
         class FrDataEnterer{
 
              DataEnterer => [None..None]
+             DataEnterer.nullFlavor => [None..0]
+             DataEnterer.typeId.nullFlavor => [None..0]
+             DataEnterer.typeId.assigningAuthorityName => [None..0]
+             DataEnterer.typeId.displayable => [None..0]
+             DataEnterer.typeCode => [None..0]
+             DataEnterer.contextControlCode => [None..0]
+             DataEnterer.time => [1..None]
+             DataEnterer.assignedEntity => [None..None]
         } 
 
         class FrDocumentationOf{
@@ -114,6 +159,29 @@ package IG #DDDDDD{
         class FrInformationRecipient{
 
              InformationRecipient => [None..None]
+             InformationRecipient.nullFlavor => [None..0]
+             InformationRecipient.typeId.nullFlavor => [None..0]
+             InformationRecipient.typeId.assigningAuthorityName => [None..0]
+             InformationRecipient.typeId.displayable => [None..0]
+             InformationRecipient.typeCode => [None..0]
+             InformationRecipient.intendedRecipient => [None..None]
+        } 
+
+        class FrIntendedRecipient{
+
+             IntendedRecipient.typeId.nullFlavor => [None..0]
+             IntendedRecipient.typeId.assigningAuthorityName => [None..0]
+             IntendedRecipient.typeId.displayable => [None..0]
+             IntendedRecipient.classCode => [None..0]
+             IntendedRecipient.id.assigningAuthorityName => [None..0]
+             IntendedRecipient.id.displayable => [None..0]
+             IntendedRecipient.id.root => [1..None]
+             IntendedRecipient.id.extension => [1..None]
+             IntendedRecipient.informationRecipient => [None..None]
+             IntendedRecipient.receivedOrganization => [None..None]
+             IntendedRecipient.receivedOrganization.id.assigningAuthorityName => [None..0]
+             IntendedRecipient.receivedOrganization.id.displayable => [None..0]
+             IntendedRecipient.receivedOrganization.id.root => [None..None]
         } 
 
         class FrLegalAuthenticator{
@@ -141,7 +209,9 @@ package IG #DDDDDD{
 
         class FrPatient{
 
-             Patient.classCode => [None..0]
+             Patient.typeId.nullFlavor => [None..0]
+             Patient.typeId.assigningAuthorityName => [None..0]
+             Patient.typeId.displayable => [None..0]
              Patient.determinerCode => [None..0]
              Patient.name => [1..1]
              Patient.administrativeGenderCode => [1..None]
@@ -172,6 +242,7 @@ package IG #DDDDDD{
              Person.name.family => [1..1]
              Person.name.given => [None..1]
              Person.name.prefix => [None..1]
+             Person.name.suffix => [None..None]
              Person.name.validTime => [None..0]
              Person.name.nullFlavor => [None..0]
              Person.name.use => [None..0]
@@ -215,6 +286,28 @@ package IG #DDDDDD{
              RelatedEntity.relatedPerson => [1..None]
         } 
 
+        class FrRepresentedCustodianOrganization{
+
+             CustodianOrganization.typeId.nullFlavor => [None..0]
+             CustodianOrganization.typeId.assigningAuthorityName => [None..0]
+             CustodianOrganization.typeId.displayable => [None..0]
+             CustodianOrganization.classCode => [None..0]
+             CustodianOrganization.determinerCode => [None..0]
+             CustodianOrganization.id => [None..1]
+             CustodianOrganization.sdtcTelecom => [None..0]
+        } 
+
+        class FrRepresentedOrganization{
+
+             Organization.typeId.nullFlavor => [None..0]
+             Organization.typeId.assigningAuthorityName => [None..0]
+             Organization.typeId.displayable => [None..0]
+             Organization.classCode => [None..0]
+             Organization.determinerCode => [None..0]
+             Organization.name => [None..1]
+             Organization.standardIndustryClassCode => [None..None]
+        } 
+
         class FrServiceEvent{
 
              ServiceEvent => [None..None]
@@ -241,7 +334,7 @@ package "Ressources de base" #palegreen {
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedEntity" as  classa57c2cf8eee922b736f24aae263fb85a 
 
-    classa57c2cf8eee922b736f24aae263fb85a --> FrAssignedntity
+    classa57c2cf8eee922b736f24aae263fb85a --> FrAssignedEntity
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssociatedEntity" as  classf02f59ca36afce3537fd13cedd8610bc 
 
@@ -254,6 +347,10 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/Author" as  class937cfe84638a385773bc82a876cf4a8d 
 
     class937cfe84638a385773bc82a876cf4a8d --> FrAuthor
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/AuthoringDevice" as  classf46502fb30744212b0c5841a6e4ea035 
+
+    classf46502fb30744212b0c5841a6e4ea035 --> FrAuthoringDevice
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/Authorization" as  class598114d4c6d4bf797def36d247d40839 
 
@@ -286,6 +383,10 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/InformationRecipient" as  classb6fd1ae4a9b50563c83e48eaaf673af4 
 
     classb6fd1ae4a9b50563c83e48eaaf673af4 --> FrInformationRecipient
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/IntendedRecipient" as  classb4c0abb01d11eefbc617aa004a0b6393 
+
+    classb4c0abb01d11eefbc617aa004a0b6393 --> FrIntendedRecipient
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator" as  class57f35676579cccc1659c4601fa19b43b 
 
@@ -322,6 +423,14 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/RelatedEntity" as  class0a3bfa693dae125e5c0a4e8cab321d9a 
 
     class0a3bfa693dae125e5c0a4e8cab321d9a --> FrRelatedEntity
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/CustodianOrganization" as  class958e4615d47e79ed7eef2368401c733a 
+
+    class958e4615d47e79ed7eef2368401c733a --> FrRepresentedCustodianOrganization
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Organization" as  class70defb4802516f8b110654a1e3649ed7 
+
+    class70defb4802516f8b110654a1e3649ed7 --> FrRepresentedOrganization
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent" as  class21fc45b6eacaebf264ceab7c3130a980 
 
