@@ -10,10 +10,10 @@ confiance / personne à prévenir en cas d’urgence / aidant / personne aidée.
 * typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* classCode from https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass
 * telecom 1..* // rendre l'élément telecom obligatoire 1..* au lieu de 0..*
 * relatedPerson 1..1 // rendre l'élément relatedPerson obligatoire 1..1 au lieu de 0..1
 * relatedPerson only fr-core-person
-* classCode from https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass
 /* * classCode ^definition = """
   Valeurs possibles pour classCode:
   - NOK

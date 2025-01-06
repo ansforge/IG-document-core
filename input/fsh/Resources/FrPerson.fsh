@@ -19,8 +19,8 @@ Description: "Person permet de décrire : une personne physique "
 * name.prefix 0..1
 * name.nullFlavor 0..0
 * name.use 0..0
-//* name.item 0..0
 * name.validTime 0..0
 * name.prefix ^short = "Civilité : Valeur issue du JDV_J245-Civilite-CISIS (1.2.250.1.213.1.1.5.718)."
+* name.suffix ^short = "Titre : Valeur issue du JDV_J246_Titre_CISIS (1.2.250.1.213.1.1.5.719)."
 * sdtcDesc 0..0
 * sdtcAsPatientRelationship	0..0

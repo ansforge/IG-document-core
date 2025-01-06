@@ -23,6 +23,7 @@ Description: "nullFlavor must not be present in assignedAuthor.id."
 Severity: error
 Expression: "id.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/nullFlavor').exists().not()"
  */
-
-
-* code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS/ (required)
+* code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)
+* assignedPerson only fr-core-person
+* assignedAuthoringDevice only fr-core-authoring-device
+* representedOrganization only fr-core-represented-organization
