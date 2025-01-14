@@ -3,7 +3,7 @@ Profile: FrAssignedPerson
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Person
 Id: fr-core-person
 Title: "AssignedPerson"
-Description: "AssignedPerson permet de décrire : une personne physique "
+Description: "AssignedPerson permet de décrire une personne physique "
 * ^status = #draft
 * nullFlavor 0..0 // Interdire l’attribut @nullFlavor
 * classCode 0..0
