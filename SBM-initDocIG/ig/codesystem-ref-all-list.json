@@ -1,6 +1,67 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-administrative-gender.html" : "AdministrativeGender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/identifier-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "oids" : ["2.16.840.1.113883.4.642.4.58"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-doc-typecodes.html" : "FHIR Document Type Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "version" : "4.0.0",
+      "status" : "active",
+      "name" : "IdentifierType",
+      "title" : "identifierType",
+      "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+      "oids" : ["2.16.840.1.113883.18.108"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActClass",
       "version" : "4.0.0",
       "status" : "active",
@@ -10,7 +71,20 @@
       "oids" : ["2.16.840.1.113883.5.6"],
       "uses" : {
       },
-      "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAActClass.html" : "CDAActClass"
+      "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAActClass.html" : "CDAActClass",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActClassClinicalDocument.html" : "ActClassClinicalDocument"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActMood",
@@ -22,7 +96,20 @@
       "oids" : ["2.16.840.1.113883.5.1001"],
       "uses" : {
       },
+      "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAActMoodIntent.html" : "CDAActMoodIntent",
       "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAActMood.html" : "CDAActMood"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActPriority",
+      "title" : "ActPriority",
+      "description" : "A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
+      "oids" : ["2.16.840.1.113883.5.7"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActPriority.html" : "ActPriority"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType",
@@ -34,11 +121,23 @@
       "oids" : ["2.16.840.1.113883.5.1002"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.2.0/ValueSet-v3-ActRelationshipFulfills.html" : "ActRelationshipFulfills",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActRelationshipAuthorizedBy.html" : "ActRelationshipAuthorizedBy",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActRelationshipHasComponent.html" : "ActRelationshipHasComponent",
       "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAActRelationshipType.html" : "CDAActRelationshipType",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-xActRelationshipDocument.html" : "x_ActRelationshipDocument",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActRelationshipAuthorizedBy.html" : "ActRelationshipAuthorizedBy"
+      "http://terminology.hl7.org/5.2.0/ValueSet-v3-ActRelationshipFulfills.html" : "ActRelationshipFulfills"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActStatus",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActStatus",
+      "title" : "ActStatus",
+      "description" : "Codes representing the defined possible states of an Act, as defined by the Act class state machine.",
+      "oids" : ["2.16.840.1.113883.5.14"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActStatus.html" : "ActStatus"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ContextControl",
@@ -210,9 +309,9 @@
       "oids" : ["2.16.840.1.113883.5.110"],
       "uses" : {
       },
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-RoleClassRelationshipFormal.html" : "RoleClassRelationshipFormal",
       "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDARoleClassAssociative.html" : "CDARoleClassAssociative",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-RoleClassAssignedEntity.html" : "RoleClassAssignedEntity",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-RoleClassRelationshipFormal.html" : "RoleClassRelationshipFormal",
       "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDAInformationRecipientRole.html" : "CDAInformationRecipientRole"
     },
     {
@@ -228,6 +327,18 @@
       "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDARoleCode.html" : "CDARoleCode"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-SetOperator",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "SetOperator",
+      "title" : "SetOperator",
+      "description" : "**** MISSING DESCRIPTION ****",
+      "oids" : ["2.16.840.1.113883.5.1069"],
+      "uses" : {
+      },
+      "http://hl7.org/cda/stds/core/2.0.0-sd/ValueSet-CDASetOperator.html" : "CDASetOperator"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-SoftwareNameExample",
       "version" : "2.0.0",
       "status" : "active",
@@ -238,6 +349,17 @@
       "uses" : {
       },
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-SoftwareNameExample.html" : "Software Name Example"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "FRCoreCodeSystemv2_0203",
+      "title" : "FR Core CodeSystem v2-0203",
+      "description" : "HL7 v2 - Identifier type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
@@ -277,6 +399,90 @@
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html" : "JDV_J01-XdsAuthorSpecialty-CISIS"
     },
     {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_A13-HL7ParticipationType",
+      "title" : null,
+      "description" : "HL7 Type de participation",
+      "oids" : ["2.16.840.1.113883.5.90"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J144-ParticipationType-CISIS.html" : "JDV_J144-ParticipationType-CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_G08-TypeIdentifiantPersonne",
+      "title" : null,
+      "description" : "Type d'identifiant de personne",
+      "oids" : ["1.2.250.1.71.1.2.15"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-identifier-type.html" : "FR Core ValueSet Practitioner identifier type"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G13-OrientationParticuliere/FHIR/TRE-G13-OrientationParticuliere",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_G13-OrientationParticuliere",
+      "title" : null,
+      "description" : "Orientation particulière",
+      "oids" : ["1.2.250.1.213.2.31"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_G15-ProfessionSante",
+      "title" : null,
+      "description" : "Professions de santé définies par le code de la santé publique",
+      "oids" : ["1.2.250.1.71.1.2.7"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R04-TypeSavoirFaire",
+      "title" : null,
+      "description" : "Type de savoir-faire",
+      "oids" : ["1.2.250.1.213.1.6.1.16"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J91-TypeSavoirFaire-RASS.html" : "JDV_J91-TypeSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R09-CategorieProfessionnelle",
+      "title" : null,
+      "description" : "Catégorie professionnelle",
+      "oids" : ["1.2.250.1.213.1.6.1.10"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J89-CategorieProfessionnelle-RASS.html" : "JDV_J89-CategorieProfessionnelle-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R14-TypeDiplome/FHIR/TRE-R14-TypeDiplome",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R14-TypeDiplome",
+      "title" : null,
+      "description" : "Type de diplôme",
+      "oids" : ["1.2.250.1.213.1.6.1.36"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J81-TypeDiplome-RASS.html" : "JDV_J81-TypeDiplome-RASS"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
       "version" : "1.4.0",
       "status" : "active",
@@ -299,6 +505,18 @@
       "uses" : {
       },
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J11-RelationPatient-CISIS.html" : "JDV_J11-RelationPatient-CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R226-Dip2iemeCycleNQ/FHIR/TRE-R226-Dip2iemeCycleNQ",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R226-Dip2iemeCycleNQ",
+      "title" : null,
+      "description" : "Diplôme de 2ième cycle non qualifiant",
+      "oids" : ["1.2.250.1.213.1.6.1.118"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R258-RelationPriseCharge/FHIR/TRE-R258-RelationPriseCharge",
@@ -325,6 +543,30 @@
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J47-FunctionCode-CISIS.html" : "JDV_J47-FunctionCode-CISIS"
     },
     {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R260-HL7RoleClass",
+      "title" : null,
+      "description" : "Rôle de la personne point de contact auprès d'une autre personne repris de la terminologie HL7 v3 RoleClass (https://www.hl7.org/fhir/v3/RoleClass/cs.html)",
+      "oids" : ["2.16.840.1.113883.5.110"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J141-RoleClass-CISIS.html" : "JDV_J141-RoleClass-CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R291-AutreProfession/FHIR/TRE-R291-AutreProfession",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R291-AutreProfession",
+      "title" : null,
+      "description" : "Liste de professionnels non membres d'une profession réglementée",
+      "oids" : ["1.2.250.1.213.1.6.1.140"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R303-HL7v3AdministrativeGender/FHIR/TRE-R303-HL7v3AdministrativeGender",
       "version" : "1.4.0",
       "status" : "active",
@@ -335,6 +577,258 @@
       "uses" : {
       },
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J143-AdministrativeGender-CISIS.html" : "JDV_J143-AdministrativeGender-CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R348-FormationSpecialiseeTransversale/FHIR/TRE-R348-FormationSpecialiseeTransversale",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R348-FormationSpecialiseeTransversale",
+      "title" : null,
+      "description" : "Formation Spécialisée Transversale (FST)",
+      "oids" : ["1.2.250.1.213.1.6.1.251"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R359-SurspecialiteTransversale/FHIR/TRE-R359-SurspecialiteTransversale",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R359-SurspecialiteTransversale",
+      "title" : null,
+      "description" : "Surspécialité (compétence) acquise par l'interne à l'issue d'une Formation Spécialisée Transversale (FST)",
+      "oids" : ["1.2.250.1.213.2.76"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R36-AutreDiplomeObtenu/FHIR/TRE-R36-AutreDiplomeObtenu",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R36-AutreDiplomeObtenu",
+      "title" : null,
+      "description" : "Autre diplôme obtenu",
+      "oids" : ["1.2.250.1.213.1.6.1.54"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R38-SpecialiteOrdinale",
+      "title" : null,
+      "description" : "Spécialité ordinale",
+      "oids" : ["1.2.250.1.213.2.28"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R39-Competence/FHIR/TRE-R39-Competence",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R39-Competence",
+      "title" : null,
+      "description" : "Compétence",
+      "oids" : ["1.2.250.1.213.2.29"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R40-CompetenceExclusive/FHIR/TRE-R40-CompetenceExclusive",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R40-CompetenceExclusive",
+      "title" : null,
+      "description" : "Compétence exclusive",
+      "oids" : ["1.2.250.1.213.2.30"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R42-DESCnonQualifiant/FHIR/TRE-R42-DESCnonQualifiant",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R42-DESCnonQualifiant",
+      "title" : null,
+      "description" : "Savoir-faire liés aux DESC du groupe 1 non qualifiants",
+      "oids" : ["1.2.250.1.213.2.32"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R43-CapaciteSavoirFaire/FHIR/TRE-R43-CapaciteSavoirFaire",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R43-CapaciteSavoirFaire",
+      "title" : null,
+      "description" : "Capacité (savoir-faire)",
+      "oids" : ["1.2.250.1.213.2.33"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R44-QualificationPAC/FHIR/TRE-R44-QualificationPAC",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R44-QualificationPAC",
+      "title" : null,
+      "description" : "Qualification de praticien adjoint contractuel",
+      "oids" : ["1.2.250.1.213.2.34"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R45-FonctionQualifiee",
+      "title" : null,
+      "description" : "Fonction qualifiée",
+      "oids" : ["1.2.250.1.213.2.35"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R48-DiplomeEtatFrancais/FHIR/TRE-R48-DiplomeEtatFrancais",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R48-DiplomeEtatFrancais",
+      "title" : null,
+      "description" : "Diplôme de l'Etat français",
+      "oids" : ["1.2.250.1.213.1.6.1.31"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R49-DiplomeEtudeSpecialisee/FHIR/TRE-R49-DiplomeEtudeSpecialisee",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R49-DiplomeEtudeSpecialisee",
+      "title" : null,
+      "description" : "Diplôme d'Etudes Spécialisées",
+      "oids" : ["1.2.250.1.213.1.6.1.32"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R50-DESCGroupe1Diplome/FHIR/TRE-R50-DESCGroupe1Diplome",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R50-DESCGroupe1Diplome",
+      "title" : null,
+      "description" : "DESC Groupe 1 (diplôme)",
+      "oids" : ["1.2.250.1.213.1.6.1.48"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R51-DESCGroupe2Diplome/FHIR/TRE-R51-DESCGroupe2Diplome",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R51-DESCGroupe2Diplome",
+      "title" : null,
+      "description" : "DESC Groupe 2 (diplôme)",
+      "oids" : ["1.2.250.1.213.1.6.1.49"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R52-CapaciteDiplome/FHIR/TRE-R52-CapaciteDiplome",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R52-CapaciteDiplome",
+      "title" : null,
+      "description" : "Capacité (diplôme)",
+      "oids" : ["1.2.250.1.213.1.6.1.50"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R53-DiplomePaysEEE/FHIR/TRE-R53-DiplomePaysEEE",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R53-DiplomePaysEEE",
+      "title" : null,
+      "description" : "Diplôme d'un pays de l'EEE",
+      "oids" : ["1.2.250.1.213.1.6.1.51"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R54-DiplomeUniversiteInterUniversitaire/FHIR/TRE-R54-DiplomeUniversiteInterUniversitaire",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R54-DiplomeUniversiteInterUniversitaire",
+      "title" : null,
+      "description" : "Diplôme d'Université ou Inter-Universitaire",
+      "oids" : ["1.2.250.1.213.1.6.1.34"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R55-CertificatEtudeSpeciale/FHIR/TRE-R55-CertificatEtudeSpeciale",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R55-CertificatEtudeSpeciale",
+      "title" : null,
+      "description" : "Certificat d'Etude Spéciale",
+      "oids" : ["1.2.250.1.213.1.6.1.52"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R56-Attestation/FHIR/TRE-R56-Attestation",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R56-Attestation",
+      "title" : null,
+      "description" : "Attestation",
+      "oids" : ["1.2.250.1.213.1.6.1.27"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R57-DiplomeEuropeenEtudeSpecialisee/FHIR/TRE-R57-DiplomeEuropeenEtudeSpecialisee",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R57-DiplomeEuropeenEtudeSpecialisee",
+      "title" : null,
+      "description" : "Diplôme Européen d'Etudes Spécialisées",
+      "oids" : ["1.2.250.1.213.1.6.1.33"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R58-AutreTypeDiplome/FHIR/TRE-R58-AutreTypeDiplome",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R58-AutreTypeDiplome",
+      "title" : null,
+      "description" : "Autre type de diplôme",
+      "oids" : ["1.2.250.1.213.1.6.1.53"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J105-EnsembleDiplome-RASS.html" : "JDV_J105-EnsembleDiplome-RASS"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
@@ -359,6 +853,7 @@
       "oids" : ["1.2.250.1.213.1.6.1.4"],
       "uses" : {
       },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS",
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html" : "JDV_J01-XdsAuthorSpecialty-CISIS"
     },
     {
@@ -371,7 +866,32 @@
       "oids" : ["1.2.250.1.213.1.6.1.109"],
       "uses" : {
       },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J106-EnsembleProfession-RASS.html" : "JDV_J106-EnsembleProfession-RASS",
       "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J01-XdsAuthorSpecialty-CISIS.html" : "JDV_J01-XdsAuthorSpecialty-CISIS"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R97-DroitExerciceCompl/FHIR/TRE-R97-DroitExerciceCompl",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "TRE_R97-DroitExerciceCompl",
+      "title" : null,
+      "description" : "Droit d'exercice complémentaire",
+      "oids" : ["1.2.250.1.213.1.6.1.111"],
+      "uses" : {
+      },
+      "https://interop.esante.gouv.fr/ig/nos/1.4.0/ValueSet-JDV-J107-EnsembleSavoirFaire-RASS.html" : "JDV_J107-EnsembleSavoirFaire-RASS"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
     }
   ]
 }

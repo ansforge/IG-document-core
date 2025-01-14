@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-01-06T16:22:16+00:00"/>
+  <date value="2025-01-14T14:51:40+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -54,6 +54,11 @@
     <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
     <packageId value="ans.fr.nos"/>
     <version value="1.4.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_fr_core">
+    <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
+    <packageId value="hl7.fhir.fr.core"/>
+    <version value="2.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -477,6 +482,17 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ps3-20"/>
+      </reference>
+      <name value="AccessionNumberExtension"/>
+      <description value="ps3-20:accessionNumber est une extension pour l’imagerie."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
@@ -506,6 +522,17 @@
       </reference>
       <name value="assignedEntity"/>
       <description value="AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-person"/>
+      </reference>
+      <name value="AssignedPerson"/>
+      <description value="AssignedPerson permet de décrire : une personne physique"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -667,6 +694,28 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/fr-core-order"/>
+      </reference>
+      <name value="order"/>
+      <description value="order représente la prescription à l’origine de l’acte dont résulte le document."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-parent-document"/>
+      </reference>
+      <name value="parentDocument"/>
+      <description value="Document de référence."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-core-participant"/>
       </reference>
       <name value="participant"/>
@@ -711,21 +760,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-person"/>
-      </reference>
-      <name value="Person"/>
-      <description value="Person permet de décrire : une personne physique"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/PN"/>
       </reference>
       <name value="PN: PersonName (V3 Data Type)"/>
       <description value="A name for a person. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for person name values are &quot;Jim Bob Walton, Jr.&quot;, &quot;Adam Everyman&quot;, etc. A person name may be as simple as a character string or may consist of several person name parts, such as, &quot;Jim&quot;, &quot;Bob&quot;, &quot;Walton&quot;, and &quot;Jr.&quot;. PN differs from EN because the qualifier type cannot include LS (Legal Status)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-practitioner"/>
+      </reference>
+      <name value="practitioner"/>
+      <description value="AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -794,17 +843,6 @@
       <description value="ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. &#xA;L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal &#xA;doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor."/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/TRER260HL7RoleClassVS"/>
-      </reference>
-      <name value="TRE_R260-HL7RoleClass"/>
-      <description value="TRE_R260-HL7RoleClass"/>
-      <exampleBoolean value="false"/>
-    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -822,33 +860,113 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_techniques.html"/>
+          <valueUrl value="structureGenerale.html"/>
         </extension>
-        <nameUrl value="specifications_techniques.html"/>
-        <title value="Specifications Techniques"/>
+        <nameUrl value="structureGenerale.html"/>
+        <title value="Structure générale document"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="construction_des_flux.html"/>
+            <valueUrl value="mappingCDA-FHIR-struc-gen.html"/>
           </extension>
-          <nameUrl value="construction_des_flux.html"/>
-          <title value="Construction Des Flux"/>
+          <nameUrl value="mappingCDA-FHIR-struc-gen.html"/>
+          <title value="Mapping CDA / FHIR"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux1.html"/>
+            <valueUrl value="ressourcesCDA-struc-gen.html"/>
           </extension>
-          <nameUrl value="st_flux1.html"/>
-          <title value="Flux 01"/>
+          <nameUrl value="ressourcesCDA-struc-gen.html"/>
+          <title value="CDA"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux2.html"/>
+            <valueUrl value="ressourcesFHIR-struc-gen.html"/>
           </extension>
-          <nameUrl value="st_flux2.html"/>
-          <title value="Flux 02"/>
+          <nameUrl value="ressourcesFHIR-struc-gen.html"/>
+          <title value="FHIR"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="enteteDocument.html"/>
+        </extension>
+        <nameUrl value="enteteDocument.html"/>
+        <title value="Entête document"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="modelesLogiques-entete.html"/>
+          </extension>
+          <nameUrl value="modelesLogiques-entete.html"/>
+          <title value="Modèle logique"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-entete.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-entete.html"/>
+          <title value="Mapping CDA / FHIR"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="ressourcesCDA-entete.html"/>
+          </extension>
+          <nameUrl value="ressourcesCDA-entete.html"/>
+          <title value="CDA"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="ressourcesFHIR-entete.html"/>
+          </extension>
+          <nameUrl value="ressourcesFHIR-entete.html"/>
+          <title value="FHIR"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="corpsDocument.html"/>
+        </extension>
+        <nameUrl value="corpsDocument.html"/>
+        <title value="Corps d'un document"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="modelesLogiques-corps.html"/>
+          </extension>
+          <nameUrl value="modelesLogiques-corps.html"/>
+          <title value="Modèle logique"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-corps.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-corps.html"/>
+          <title value="Mapping CDA / FHIR"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="ressourcesCDA-corps.html"/>
+          </extension>
+          <nameUrl value="ressourcesCDA-corps.html"/>
+          <title value="CDA"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="ressourcesFHIR-corps.html"/>
+          </extension>
+          <nameUrl value="ressourcesFHIR-corps.html"/>
+          <title value="FHIR"/>
           <generation value="markdown"/>
         </page>
       </page>
@@ -873,38 +991,6 @@
           </extension>
           <nameUrl value="downloads.html"/>
           <title value="Téléchargements et usages"/>
-          <generation value="markdown"/>
-        </page>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="structuration_min.html"/>
-        </extension>
-        <nameUrl value="structuration_min.html"/>
-        <title value="Structuration minimale"/>
-        <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="ressourcesCDA.html"/>
-          </extension>
-          <nameUrl value="ressourcesCDA.html"/>
-          <title value="Ressources CDA"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="ressourcesFHIR.html"/>
-          </extension>
-          <nameUrl value="ressourcesFHIR.html"/>
-          <title value="Ressources FHIR"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="modelesLogiques.html"/>
-          </extension>
-          <nameUrl value="modelesLogiques.html"/>
-          <title value="Modèles logiques"/>
           <generation value="markdown"/>
         </page>
       </page>

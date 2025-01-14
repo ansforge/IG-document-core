@@ -67,6 +67,19 @@ package IG #DDDDDD{
         class FrAuthenticator{
 
              Authenticator => [None..None]
+             Authenticator.nullFlavor => [None..0]
+             Authenticator.typeId.nullFlavor => [None..0]
+             Authenticator.typeId.assigningAuthorityName => [None..0]
+             Authenticator.typeId.displayable => [None..0]
+             Authenticator.typeCode => [None..0]
+             Authenticator.time => [None..None]
+             Authenticator.time.value => [None..None]
+             Authenticator.signatureCode => [None..None]
+             Authenticator.signatureCode.code => [None..None]
+             Authenticator.signatureCode.sdtcValueSet => [None..0]
+             Authenticator.signatureCode.sdtcValueSetVersion => [None..0]
+             Authenticator.sdtcSignatureText => [None..0]
+             Authenticator.assignedEntity => [None..None]
         } 
 
         class FrAuthor{
@@ -102,6 +115,16 @@ package IG #DDDDDD{
         class FrAuthorization{
 
              Authorization => [None..None]
+             Authorization.typeId.nullFlavor => [None..0]
+             Authorization.typeId.assigningAuthorityName => [None..0]
+             Authorization.typeId.displayable => [None..0]
+             Authorization.typeCode => [None..0]
+             Authorization.consent => [None..None]
+             Authorization.consent.id => [None..None]
+             Authorization.consent.code => [None..None]
+             Authorization.consent.statusCode.code => [None..None]
+             Authorization.consent.statusCode.sdtcValueSet => [None..0]
+             Authorization.consent.statusCode.sdtcValueSetVersion => [None..0]
         } 
 
         class FrComponentOf{
@@ -136,11 +159,22 @@ package IG #DDDDDD{
         class FrDocumentationOf{
 
              DocumentationOf => [None..None]
+             DocumentationOf.nullFlavor => [None..0]
+             DocumentationOf.typeId.nullFlavor => [None..0]
+             DocumentationOf.typeId.assigningAuthorityName => [None..0]
+             DocumentationOf.typeId.displayable => [None..0]
+             DocumentationOf.typeCode => [None..0]
+             DocumentationOf.serviceEvent => [None..None]
         } 
 
         class FrInFulfillmentOf{
 
              InFulfillmentOf => [None..None]
+             InFulfillmentOf.typeId.nullFlavor => [None..0]
+             InFulfillmentOf.typeId.assigningAuthorityName => [None..0]
+             InFulfillmentOf.typeId.displayable => [None..0]
+             InFulfillmentOf.typeCode => [None..0]
+             InFulfillmentOf.order => [None..None]
         } 
 
         class FrInformant{
@@ -187,11 +221,84 @@ package IG #DDDDDD{
         class FrLegalAuthenticator{
 
              LegalAuthenticator => [None..None]
+             LegalAuthenticator.nullFlavor => [None..0]
+             LegalAuthenticator.typeId.nullFlavor => [None..0]
+             LegalAuthenticator.typeId.assigningAuthorityName => [None..0]
+             LegalAuthenticator.typeId.displayable => [None..0]
+             LegalAuthenticator.typeCode => [None..0]
+             LegalAuthenticator.contextControlCode => [None..0]
+             LegalAuthenticator.time => [None..None]
+             LegalAuthenticator.time.value => [None..None]
+             LegalAuthenticator.signatureCode => [None..None]
+             LegalAuthenticator.signatureCode.code => [None..None]
+             LegalAuthenticator.signatureCode.sdtcValueSet => [None..0]
+             LegalAuthenticator.signatureCode.sdtcValueSetVersion => [None..0]
+             LegalAuthenticator.sdtcSignatureText => [None..0]
+             LegalAuthenticator.assignedEntity => [None..None]
+             LegalAuthenticator.assignedEntity.code => [None..None]
+        } 
+
+        class FrOrder{
+
+             Order.nullFlavor => [None..0]
+             Order.typeId.nullFlavor => [None..0]
+             Order.typeId.assigningAuthorityName => [None..0]
+             Order.typeId.displayable => [None..0]
+             Order.classCode => [None..0]
+             Order.moodCode => [None..0]
+             Order.id => [None..None]
+             Order.id.nullFlavor => [None..0]
+             Order.id.assigningAuthorityName => [None..0]
+             Order.id.displayable => [None..0]
+             Order.id.root => [1..None]
+             Order.id.extension => [None..None]
+             Order.code => [None..0]
+             Order.priorityCode => [None..0]
+        } 
+
+        class FrParentDocument{
+
+             ParentDocument => [None..None]
+             ParentDocument.nullFlavor => [None..0]
+             ParentDocument.id => [None..1]
+             ParentDocument.id.assigningAuthorityName => [None..0]
+             ParentDocument.id.displayable => [None..0]
+             ParentDocument.id.root => [1..None]
+             ParentDocument.id.extension => [None..None]
         } 
 
         class FrParticipant{
 
              Participant1 => [None..None]
+             Participant1.typeId.nullFlavor => [None..0]
+             Participant1.typeId.assigningAuthorityName => [None..0]
+             Participant1.typeId.displayable => [None..0]
+             Participant1.typeCode => [None..None]
+             Participant1.contextControlCode => [None..0]
+             Participant1.functionCode => [None..None]
+             Participant1.functionCode.nullFlavor => [None..0]
+             Participant1.functionCode.code => [1..None]
+             Participant1.functionCode.codeSystem => [1..None]
+             Participant1.functionCode.codeSystemVersion => [None..0]
+             Participant1.functionCode.sdtcValueSet => [None..0]
+             Participant1.functionCode.sdtcValueSetVersion => [None..0]
+             Participant1.functionCode.originalText => [None..None]
+             Participant1.time => [1..None]
+             Participant1.time.operator => [None..0]
+             Participant1.time.low => [None..None]
+             Participant1.time.center => [None..0]
+             Participant1.time.width => [None..0]
+             Participant1.time.high => [None..None]
+             Participant1.associatedEntity => [None..None]
+             Participant1.associatedEntity.classCode => [None..None]
+             Participant1.associatedEntity.id => [None..None]
+             Participant1.associatedEntity.id.root => [None..None]
+             Participant1.associatedEntity.id.extension => [None..None]
+             Participant1.associatedEntity.code => [None..None]
+             Participant1.associatedEntity.addr => [None..None]
+             Participant1.associatedEntity.telecom => [None..None]
+             Participant1.associatedEntity.associatedPerson => [None..None]
+             Participant1.associatedEntity.scopingOrganization => [None..None]
         } 
 
         class FrPatientRole{
@@ -227,10 +334,17 @@ package IG #DDDDDD{
 
         class FrPerformer{
 
-             Performer1 => [None..None]
+             Performer1.typeId.nullFlavor => [None..0]
+             Performer1.typeId.assigningAuthorityName => [None..0]
+             Performer1.typeId.displayable => [None..0]
+             Performer1.typeCode => [None..None]
+             Performer1.functionCode => [None..None]
+             Performer1.time => [None..None]
+             Performer1.assignedEntity => [None..None]
+             Performer1.assignedEntity.code => [None..None]
         } 
 
-        class FrPerson{
+        class FrAssignedPerson{
 
              Person.nullFlavor => [None..0]
              Person.typeId.nullFlavor => [None..0]
@@ -250,6 +364,11 @@ package IG #DDDDDD{
              Person.sdtcAsPatientRelationship => [None..0]
         } 
 
+        class FrCorePractitioner{
+
+             Practitioner => [None..None]
+        } 
+
         class FrRecordTarget{
 
              RecordTarget => [None..None]
@@ -265,6 +384,11 @@ package IG #DDDDDD{
         class FrRelatedDocument{
 
              RelatedDocument => [None..None]
+             RelatedDocument.typeId.nullFlavor => [None..0]
+             RelatedDocument.typeId.assigningAuthorityName => [None..0]
+             RelatedDocument.typeId.displayable => [None..0]
+             RelatedDocument.typeCode => [None..None]
+             RelatedDocument.parentDocument => [None..None]
         } 
 
         class FrRelatedEntity{
@@ -311,12 +435,48 @@ package IG #DDDDDD{
         class FrServiceEvent{
 
              ServiceEvent => [None..None]
+             ServiceEvent.nullFlavor => [None..0]
+             ServiceEvent.typeId.nullFlavor => [None..0]
+             ServiceEvent.typeId.assigningAuthorityName => [None..0]
+             ServiceEvent.typeId.displayable => [None..0]
+             ServiceEvent.classCode => [None..0]
+             ServiceEvent.moodCode => [None..0]
+             ServiceEvent.id => [None..None]
+             ServiceEvent.code => [None..None]
+             ServiceEvent.code.nullFlavor => [None..0]
+             ServiceEvent.code.code => [1..None]
+             ServiceEvent.code.codeSystem => [1..None]
+             ServiceEvent.code.codeSystemVersion => [None..0]
+             ServiceEvent.code.displayName => [1..None]
+             ServiceEvent.code.sdtcValueSet => [None..0]
+             ServiceEvent.code.sdtcValueSetVersion => [None..0]
+             ServiceEvent.code.translation => [None..None]
+             ServiceEvent.code.translation.nullFlavor => [None..0]
+             ServiceEvent.code.translation.codeSystemVersion => [None..0]
+             ServiceEvent.code.translation.sdtcValueSet => [None..0]
+             ServiceEvent.code.translation.sdtcValueSetVersion => [None..0]
+             ServiceEvent.code.translation.qualifier => [None..None]
+             ServiceEvent.effectiveTime => [None..None]
+             ServiceEvent.effectiveTime.nullFlavor => [None..0]
+             ServiceEvent.effectiveTime.operator => [None..0]
+             ServiceEvent.effectiveTime.low => [1..None]
+             ServiceEvent.effectiveTime.center => [None..0]
+             ServiceEvent.effectiveTime.width => [None..0]
+             ServiceEvent.effectiveTime.high => [None..None]
+             ServiceEvent.performer => [None..1]
+             ServiceEvent.performer.typeCode => [None..None]
          }
 
      }
      package extension #paleturquoise {
 
 
+        class AccessionNumberExtension{
+
+          Extension.extension:accessionNumber => [0..1]
+          Extension.extension:accessionNumber.url => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
          }
      }
      package valueset #PaleVioletRed{
@@ -392,6 +552,14 @@ package "Ressources de base" #palegreen {
 
     class57f35676579cccc1659c4601fa19b43b --> FrLegalAuthenticator
 
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Order" as  class358c910e07ad3f95a61b1dae6d4a35be 
+
+    class358c910e07ad3f95a61b1dae6d4a35be --> FrOrder
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/ParentDocument" as  class4313f3b50ac00c5473aecb642b99f6e4 
+
+    class4313f3b50ac00c5473aecb642b99f6e4 --> FrParentDocument
+
  class "http://hl7.org/cda/stds/core/StructureDefinition/Participant1" as  class2fd9a3b182710aa68f9e615904fe1537 
 
     class2fd9a3b182710aa68f9e615904fe1537 --> FrParticipant
@@ -410,7 +578,11 @@ package "Ressources de base" #palegreen {
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/Person" as  classb14b9f756425869ebeb8ade0004931e1 
 
-    classb14b9f756425869ebeb8ade0004931e1 --> FrPerson
+    classb14b9f756425869ebeb8ade0004931e1 --> FrAssignedPerson
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
+
+    class722d091912544e694771fe1d2c6739cb --> FrCorePractitioner
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget" as  class0baedfe5573df35f7a6ee5934c45b818 
 

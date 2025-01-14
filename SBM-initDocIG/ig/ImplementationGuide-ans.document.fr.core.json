@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-01-06T16:22:16+00:00",
+  "date" : "2025-01-14T14:51:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,6 +60,12 @@
     "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
     "packageId" : "ans.fr.nos",
     "version" : "1.4.0"
+  },
+  {
+    "id" : "hl7_fhir_fr_core",
+    "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+    "packageId" : "hl7.fhir.fr.core",
+    "version" : "2.1.0"
   }],
   "definition" : {
     "extension" : [{
@@ -641,6 +647,18 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ps3-20"
+      },
+      "name" : "AccessionNumberExtension",
+      "description" : "ps3-20:accessionNumber est une extension pour l’imagerie.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
@@ -672,6 +690,18 @@
       },
       "name" : "assignedEntity",
       "description" : "AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-person"
+      },
+      "name" : "AssignedPerson",
+      "description" : "AssignedPerson permet de décrire : une personne physique",
       "exampleBoolean" : false
     },
     {
@@ -848,6 +878,30 @@
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-core-order"
+      },
+      "name" : "order",
+      "description" : "order représente la prescription à l’origine de l’acte dont résulte le document.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-parent-document"
+      },
+      "name" : "parentDocument",
+      "description" : "Document de référence.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-core-participant"
       },
       "name" : "participant",
@@ -896,22 +950,22 @@
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-core-person"
+        "reference" : "StructureDefinition/PN"
       },
-      "name" : "Person",
-      "description" : "Person permet de décrire : une personne physique",
+      "name" : "PN: PersonName (V3 Data Type)",
+      "description" : "A name for a person. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for person name values are \"Jim Bob Walton, Jr.\", \"Adam Everyman\", etc. A person name may be as simple as a character string or may consist of several person name parts, such as, \"Jim\", \"Bob\", \"Walton\", and \"Jr.\". PN differs from EN because the qualifier type cannot include LS (Legal Status).",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/PN"
+        "reference" : "StructureDefinition/fr-core-practitioner"
       },
-      "name" : "PN: PersonName (V3 Data Type)",
-      "description" : "A name for a person. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for person name values are \"Jim Bob Walton, Jr.\", \"Adam Everyman\", etc. A person name may be as simple as a character string or may consist of several person name parts, such as, \"Jim\", \"Bob\", \"Walton\", and \"Jr.\". PN differs from EN because the qualifier type cannot include LS (Legal Status).",
+      "name" : "practitioner",
+      "description" : "AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant.",
       "exampleBoolean" : false
     },
     {
@@ -985,18 +1039,6 @@
       "name" : "serviceEvent",
       "description" : "ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nL'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal \ndoit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/TRER260HL7RoleClassVS"
-      },
-      "name" : "TRE_R260-HL7RoleClass",
-      "description" : "TRE_R260-HL7RoleClass",
-      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
@@ -1018,36 +1060,126 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "specifications_techniques.html"
+          "valueUrl" : "structureGenerale.html"
         }],
-        "nameUrl" : "specifications_techniques.html",
-        "title" : "Specifications Techniques",
+        "nameUrl" : "structureGenerale.html",
+        "title" : "Structure générale document",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "construction_des_flux.html"
+            "valueUrl" : "mappingCDA-FHIR-struc-gen.html"
           }],
-          "nameUrl" : "construction_des_flux.html",
-          "title" : "Construction Des Flux",
+          "nameUrl" : "mappingCDA-FHIR-struc-gen.html",
+          "title" : "Mapping CDA / FHIR",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "st_flux1.html"
+            "valueUrl" : "ressourcesCDA-struc-gen.html"
           }],
-          "nameUrl" : "st_flux1.html",
-          "title" : "Flux 01",
+          "nameUrl" : "ressourcesCDA-struc-gen.html",
+          "title" : "CDA",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "st_flux2.html"
+            "valueUrl" : "ressourcesFHIR-struc-gen.html"
           }],
-          "nameUrl" : "st_flux2.html",
-          "title" : "Flux 02",
+          "nameUrl" : "ressourcesFHIR-struc-gen.html",
+          "title" : "FHIR",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "enteteDocument.html"
+        }],
+        "nameUrl" : "enteteDocument.html",
+        "title" : "Entête document",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "modelesLogiques-entete.html"
+          }],
+          "nameUrl" : "modelesLogiques-entete.html",
+          "title" : "Modèle logique",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mappingCDA-FHIR-entete.html"
+          }],
+          "nameUrl" : "mappingCDA-FHIR-entete.html",
+          "title" : "Mapping CDA / FHIR",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressourcesCDA-entete.html"
+          }],
+          "nameUrl" : "ressourcesCDA-entete.html",
+          "title" : "CDA",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressourcesFHIR-entete.html"
+          }],
+          "nameUrl" : "ressourcesFHIR-entete.html",
+          "title" : "FHIR",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "corpsDocument.html"
+        }],
+        "nameUrl" : "corpsDocument.html",
+        "title" : "Corps d'un document",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "modelesLogiques-corps.html"
+          }],
+          "nameUrl" : "modelesLogiques-corps.html",
+          "title" : "Modèle logique",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mappingCDA-FHIR-corps.html"
+          }],
+          "nameUrl" : "mappingCDA-FHIR-corps.html",
+          "title" : "Mapping CDA / FHIR",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressourcesCDA-corps.html"
+          }],
+          "nameUrl" : "ressourcesCDA-corps.html",
+          "title" : "CDA",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "ressourcesFHIR-corps.html"
+          }],
+          "nameUrl" : "ressourcesFHIR-corps.html",
+          "title" : "FHIR",
           "generation" : "markdown"
         }]
       },
@@ -1075,42 +1207,6 @@
           }],
           "nameUrl" : "downloads.html",
           "title" : "Téléchargements et usages",
-          "generation" : "markdown"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "structuration_min.html"
-        }],
-        "nameUrl" : "structuration_min.html",
-        "title" : "Structuration minimale",
-        "generation" : "markdown",
-        "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "ressourcesCDA.html"
-          }],
-          "nameUrl" : "ressourcesCDA.html",
-          "title" : "Ressources CDA",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "ressourcesFHIR.html"
-          }],
-          "nameUrl" : "ressourcesFHIR.html",
-          "title" : "Ressources FHIR",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "modelesLogiques.html"
-          }],
-          "nameUrl" : "modelesLogiques.html",
-          "title" : "Modèles logiques",
           "generation" : "markdown"
         }]
       }]

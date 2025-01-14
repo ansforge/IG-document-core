@@ -36,10 +36,10 @@
   ] ) ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-person"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "FrPerson"] ; # 
-  fhir:title [ fhir:v "Person"] ; # 
+  fhir:name [ fhir:v "FrAssignedPerson"] ; # 
+  fhir:title [ fhir:v "AssignedPerson"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-06T16:22:16+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-14T14:51:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -48,7 +48,7 @@
        fhir:value [ fhir:v "https://esante.gouv.fr" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Person permet de décrire : une personne physique "] ; # 
+  fhir:description [ fhir:v "AssignedPerson permet de décrire : une personne physique "] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
@@ -58,6 +58,11 @@
   ] ) ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
+     fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+     fhir:uri [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ] ;
+     fhir:name [ fhir:v "Mapping de AssignedPerson vers Practitioner" ] ;
+     fhir:comment [ fhir:v "Mapping de l'élément AssignedPerson vers Practitioner." ]
+  ] [
      fhir:identity [ fhir:v "rim" ] ;
      fhir:uri [ fhir:v "http://hl7.org/v3"^^xsd:anyURI ] ;
      fhir:name [ fhir:v "RIM Mapping" ]
@@ -335,6 +340,10 @@
        ] ;
        fhir:type ( [
          fhir:code [ fhir:v "http://hl7.org/cda/stds/core/StructureDefinition/PN"^^xsd:anyURI ]
+       ] ) ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+         fhir:map [ fhir:v "practitioner.name" ]
        ] )
      ] [
        fhir:id [ fhir:v "Person.name.nullFlavor" ] ;
@@ -829,12 +838,20 @@
        fhir:id [ fhir:v "Person.name" ] ;
        fhir:path [ fhir:v "Person.name" ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
-       fhir:max [ fhir:v "1" ]
+       fhir:max [ fhir:v "1" ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+         fhir:map [ fhir:v "practitioner.name" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Person.name.family" ] ;
        fhir:path [ fhir:v "Person.name.family" ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
-       fhir:max [ fhir:v "1" ]
+       fhir:max [ fhir:v "1" ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+         fhir:map [ fhir:v "practitioner.name.family" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Person.name.given" ] ;
        fhir:path [ fhir:v "Person.name.given" ] ;
@@ -843,11 +860,19 @@
        fhir:id [ fhir:v "Person.name.prefix" ] ;
        fhir:path [ fhir:v "Person.name.prefix" ] ;
        fhir:short [ fhir:v "Civilité : Valeur issue du JDV_J245-Civilite-CISIS (1.2.250.1.213.1.1.5.718)." ] ;
-       fhir:max [ fhir:v "1" ]
+       fhir:max [ fhir:v "1" ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+         fhir:map [ fhir:v "practitioner.name.prefix" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Person.name.suffix" ] ;
        fhir:path [ fhir:v "Person.name.suffix" ] ;
-       fhir:short [ fhir:v "Titre : Valeur issue du JDV_J246_Titre_CISIS (1.2.250.1.213.1.1.5.719)." ]
+       fhir:short [ fhir:v "Titre : Valeur issue du JDV_J246_Titre_CISIS (1.2.250.1.213.1.1.5.719)." ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "AssignedPersonToPractitioner" ] ;
+         fhir:map [ fhir:v "practitioner.name.suffix" ]
+       ] )
      ] [
        fhir:id [ fhir:v "Person.name.validTime" ] ;
        fhir:path [ fhir:v "Person.name.validTime" ] ;

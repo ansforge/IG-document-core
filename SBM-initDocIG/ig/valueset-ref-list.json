@@ -1,15 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/TRER260HL7RoleClassVS",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "TRER260HL7RoleClassVS",
-      "title" : "TRE_R260-HL7RoleClass",
-      "description" : "TRE_R260-HL7RoleClass",
-      "systems" : ["urn:oid:2.16.840.1.113883.5.110"]
-    },
-    {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS",
       "version" : "1.4.0",
       "status" : "active",
@@ -27,7 +18,10 @@
       "sources" : ["1.2.250.1.213.1.1.5.461"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor"
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-participant.html" : "participant"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS",
@@ -64,6 +58,22 @@
       "StructureDefinition-fr-core-related-entity.html" : "RelatedEntity"
     },
     {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J141-RoleClass-CISIS",
+      "title" : null,
+      "description" : "RoleClassAssociative CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.588"],
+      "sources" : ["1.2.250.1.213.1.1.5.588"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-participant.html" : "participant"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS",
       "version" : "1.4.0",
       "status" : "active",
@@ -78,6 +88,22 @@
       "uses" : {
       },
       "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J144-ParticipationType-CISIS",
+      "title" : null,
+      "description" : "Type de participation CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.591"],
+      "sources" : ["1.2.250.1.213.1.1.5.591"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-participant.html" : "participant"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS",
@@ -95,6 +121,7 @@
       "sources" : ["1.2.250.1.213.1.1.5.124"],
       "uses" : {
       },
+      "StructureDefinition-fr-core-participant.html" : "participant",
       "StructureDefinition-fr-core-author.html" : "author"
     }
   ]
