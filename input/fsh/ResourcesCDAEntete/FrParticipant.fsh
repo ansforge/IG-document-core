@@ -35,13 +35,13 @@ Description: "participant représente toute personne/structure impliquée dans l
 * associatedEntity.classCode from https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS (required)
 * associatedEntity.classCode ^short = "PS / Non PS La valeur doit être issue du JDV_J141_RoleClass_CISIS (1.2.250.1.213.1.1.5.588)."
 * associatedEntity.id ^short = "Identifiant du participant Obligatoire pour les professionnels"
-* associatedEntity.id.root ^short = "Pour les professionnels : '1.2.250.1.71.4.2.1'
-Pour les autres : libre"
-* associatedEntity.id.extension ^short = "Pour les professionnels : Valeur de l’identifiant du professionnel participant. Source : valeur de PS_IdNat (voir annexe [6]) 
-Pour les autres : libre"
+* associatedEntity.id.root ^short = "- Pour les professionnels : '1.2.250.1.71.4.2.1' 
+- Pour les autres : libre"
+* associatedEntity.id.extension ^short = "- Pour les professionnels : Valeur de l’identifiant du professionnel participant. Source : valeur de PS_IdNat (voir annexe [6]) 
+- Pour les autres : libre"
 * associatedEntity.code ^short = "Profession / savoir-faire ou rôle : 
-Facultatif pour les PS, non PS et systèmes 
-Facultatif pour patient/usager"
+- Facultatif pour les PS, non PS et systèmes 
+- Facultatif pour patient/usager"
 * associatedEntity.code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)
 * associatedEntity.addr ^short = "Adresse géopostale du participant"
 * associatedEntity.telecom ^short = "Coordonnées télécom du participant"

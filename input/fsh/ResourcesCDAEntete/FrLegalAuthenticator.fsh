@@ -14,11 +14,9 @@ Description: "LegalAuthenticator représente les caractéristiques du profession
 * sdtcSignatureText 0..0 // Interdire l'élément sdtcSignatureText
 * time ^short = "Date et heure de la prise de responsabilité" 
 * time.value ^short = "Date et heure de la prise de responsabilité précisée à la seconde avec précision du décalage par rapport au temps universel (UTC)"
-* signatureCode ^short = "Signature"
-* signatureCode.code ^short = "S"
+* signatureCode ^short = "signatureCode confirme la prise la responsabilité du document."
 * signatureCode.sdtcValueSet 0..0
 * signatureCode.sdtcValueSetVersion 0..0
 * assignedEntity only fr-core-assigned-entity // assignedEntity est de type fr-core-assigned-entity
 * assignedEntity ^short = "Responsable du document"
 * assignedEntity.code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)
-

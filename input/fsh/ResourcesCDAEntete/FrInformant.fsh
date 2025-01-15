@@ -11,6 +11,5 @@ Description: "Informateur / personne de confiance / personne à prévenir en cas
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
 * typeCode 0..0 // Interdire l’attribut @typeCode
 * contextControlCode 0..0 // Interdire l’attribut @contextControlCode
-
 * assignedEntity only fr-core-assigned-entity // assignedEntity est de type fr-core-assigned-entity
 * relatedEntity only fr-core-related-entity // relatedEntity est de type fr-core-related-entity

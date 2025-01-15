@@ -8,14 +8,8 @@ Description: "RelatedDocument référence un document existant (à remplacer ou 
 * typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* typeCode ^short = "'RPLC' pour remplacement :
-Seul le remplacement au sens annulation et remplacement 
-du document référencé par la version courante du 
-document est autorisé.
-
-'XFRM' pour transformation :
-La relation est portée par le document CDA transformé (et 
-pas par le document de référence). 
-"
+* typeCode ^short = "le typeCode prend la valeur :
+- 'RPLC' pour remplacement, seul le remplacement au sens annulation et remplacement du document référencé par la version courante du document est autorisé.
+- 'XFRM' pour transformation, la relation est portée par le document CDA transformé (et pas par le document de référence)."
 * parentDocument ^short = "Document de référence."
 * parentDocument only fr-core-parent-document

@@ -13,5 +13,4 @@ Description: "Description du patient/usager"
 * sdtcIdentifiedBy 0..0 // Interdire l’élément sdtcIdentifiedBy
 * providerOrganization 0..0 // Interdire l’élément providerOrganization
 * patient 1..1 // Ajouter une contrainte sur la cardinalité
-
 * patient only fr-core-patient // patient est de type fr-core-patient

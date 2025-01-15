@@ -14,4 +14,3 @@ Description: "Performer est l'exécutant de l’évènement documenté. Il est o
 * assignedEntity ^short = "Exécutant"
 * assignedEntity only fr-core-assigned-entity // assignedEntity est de type fr-core-assigned-entity
 * assignedEntity.code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)
-
