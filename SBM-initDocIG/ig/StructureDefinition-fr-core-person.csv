@@ -32,19 +32,19 @@
 "Person.name.item","Person.name.item","","","",1,*,"","","","http://hl7.org/fhir/StructureDefinition/Base {[]} {[]}
 ","","A series of items that constitute the name.","","","","","","","","","",,,,,"",,,,"EN.item",0,*,"","EN-1:Can only have only one of the possible item elements in each choice {(delimiter | family | given | prefix | suffix | xmlText).count() = 1}
 "
-"Person.name.item.delimiter","Person.name.item.delimiter","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+"Person.name.item.delimiter","Person.name.item.delimiter","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"EN.item.delimiter",0,*,"",""
-"Person.name.item.family","Person.name.item.family","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"",""
-"Person.name.item.given","Person.name.item.given","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+"Person.name.item.family","Person.name.item.family","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"","","practitioner.name.family"
+"Person.name.item.given","Person.name.item.given","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
-"Person.name.item.prefix","Person.name.item.prefix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.prefix",0,*,"",""
-"Person.name.item.suffix","Person.name.item.suffix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.suffix",0,*,"",""
-"Person.name.item.xmlText","Person.name.item.xmlText","","","",0,1,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
+"Person.name.item.prefix","Person.name.item.prefix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Civilité","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS","",,,,"EN.item.prefix",0,*,"","","practitioner.name.prefix"
+"Person.name.item.suffix","Person.name.item.suffix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Titre","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS","",,,,"EN.item.suffix",0,*,"","","practitioner.name.suffix"
+"Person.name.item.xmlText","Person.name.item.xmlText","","","",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
 ","Allows for mixed text content","","This element is represented in XML as textual content. The actual name ""xmlText"" will not appear in a CDA instance.","","","","","","","","",,,,,"",,,,"EN.item.xmlText",0,1,"",""
-"Person.name.validTime","Person.name.validTime","","","Valid Time",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
+"Person.name.validTime","Person.name.validTime","","","Valid Time",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
 ","","An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.","","","","","","","","","",,,,,"",,,,"EN.validTime",0,1,"",""
 "Person.sdtcDesc","Person.sdtcDesc","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ED {[]} {[]}
 ","","The desc extension allows multimedia depictions of patients, healthcare providers, or other individuals to be included in a CDA document.","","","","","","","","","",,,,,"",,,,"Person.sdtcDesc",0,1,"",""

@@ -45,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6.31"}
-    h3,h4,h5,h6{--heading-prefix:"6.31"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.30"}
+    h3,h4,h5,h6{--heading-prefix:"6.30"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -105,13 +105,13 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="mappingCDA-FHIR-struc-gen.html">Mapping CDA / FHIR</a>
-      </li>
-      <li>
         <a href="ressourcesCDA-struc-gen.html">CDA</a>
       </li>
       <li>
         <a href="ressourcesFHIR-struc-gen.html">FHIR</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-struc-gen.html">Mapping CDA / FHIR</a>
       </li>
     </ul>
   </li>
@@ -121,16 +121,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="modelesLogiques-entete.html">Modèle logique</a>
-      </li>
-      <li>
-        <a href="mappingCDA-FHIR-entete.html">Mapping CDA / FHIR</a>
+        <a href="modelesLogiquesMetier-entete.html">Modèle logique métier</a>
       </li>
       <li>
         <a href="ressourcesCDA-entete.html">CDA</a>
       </li>
       <li>
         <a href="ressourcesFHIR-entete.html">FHIR</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-entete.html">Mapping CDA / FHIR</a>
       </li>
     </ul>
   </li>
@@ -140,16 +140,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="modelesLogiques-corps.html">Modèle logique</a>
-      </li>
-      <li>
-        <a href="mappingCDA-FHIR-corps.html">Mapping CDA / FHIR</a>
+        <a href="modelesLogiquesMetier-corps.html">Modèle logique métier</a>
       </li>
       <li>
         <a href="ressourcesCDA-corps.html">CDA</a>
       </li>
       <li>
         <a href="ressourcesFHIR-corps.html">FHIR</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-corps.html">Mapping CDA / FHIR</a>
       </li>
     </ul>
   </li>
@@ -306,7 +306,7 @@
         
           Draft
           
-            as of 2025-01-14
+            as of 2025-01-15
           
         
       </td>
@@ -323,8 +323,7 @@
 
 <p>
 <p>ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
-L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal 
-doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor.</p>
+L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor.</p>
 
 </p>
 
@@ -425,24 +424,20 @@ doit inclure un élément effectiveTime et un élément performer renseignés, s
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) <br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ae"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code" title="Drawn from concept domain ActCode">code</a><a name="k-ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aea"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache.">@code</a><a name="k-ServiceEvent.code.code"> </a></td>
@@ -450,13 +445,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -527,8 +519,8 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)<br/></td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aefg"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems.">translation</a><a name="k-ServiceEvent.code.translation.translation"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -541,7 +533,7 @@ la région anatomique (obligatoire)<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression.">@value</a><a name="k-ServiceEvent.effectiveTime.value"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -553,23 +545,19 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval.">high</a><a name="k-ServiceEvent.effectiveTime.high"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="k-ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.">@nullFlavor</a><a name="k-ServiceEvent.performer.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -752,7 +740,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -818,24 +806,20 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="af"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code">code</a><a name="d-ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">@nullFlavor</span><a name="d-ServiceEvent.code.nullFlavor"> </a></td>
@@ -849,13 +833,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -926,15 +907,15 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)</td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime">effectiveTime</a><a name="d-ServiceEvent.effectiveTime"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">@nullFlavor</span><a name="d-ServiceEvent.effectiveTime.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -952,7 +933,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="agd"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">center</span><a name="d-ServiceEvent.effectiveTime.center"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -970,17 +951,13 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ah"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="d-ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span>..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aha"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.typeCode">@typeCode</a><a name="d-ServiceEvent.performer.typeCode"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1001,7 +978,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -1053,24 +1030,20 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) <br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ae"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code" title="Drawn from concept domain ActCode">code</a><a name="ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aea"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache.">@code</a><a name="ServiceEvent.code.code"> </a></td>
@@ -1078,13 +1051,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -1155,8 +1125,8 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)<br/></td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aefg"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems.">translation</a><a name="ServiceEvent.code.translation.translation"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1169,7 +1139,7 @@ la région anatomique (obligatoire)<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression.">@value</a><a name="ServiceEvent.effectiveTime.value"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1181,23 +1151,19 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval.">high</a><a name="ServiceEvent.effectiveTime.high"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.">@nullFlavor</a><a name="ServiceEvent.performer.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1380,7 +1346,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -1413,28 +1379,21 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
       ]
     },
     "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.templateId" title="When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question" class="dict"><span style="text-decoration: underline">templateId</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.id" title="" class="dict"><span style="text-decoration: underline">id</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) </span>
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code" title="Drawn from concept domain ActCode" class="dict"><span style="text-decoration: underline">code</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.id" title="" class="dict"><span style="text-decoration: underline">id</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)</span>
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code" title="Drawn from concept domain ActCode" class="dict"><span style="text-decoration: underline">code</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache" class="dict"><span style="text-decoration: underline">code</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.codeSystem" title="Specifies the code system that defines the code" class="dict"><span style="text-decoration: underline">codeSystem</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
@@ -1450,22 +1409,18 @@ Pour les documents d’expression personnelle du patient/usager :
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.displayName" title="A name or title for the code, under which the sending system shows the code value to its users" class="dict"><span style="text-decoration: underline">displayName</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.originalText" title="The text or phrase used as the basis for the coding" class="dict"><span style="text-decoration: underline">originalText</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#http://hl7.org/cda/stds/core/StructureDefinition/ED">http://hl7.org/cda/stds/core/StructureDefinition/ED</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.qualifier" title="Specifies additional codes that increase the specificity of the the primary code" class="dict"><span style="text-decoration: underline">qualifier</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html#http://hl7.org/cda/stds/core/StructureDefinition/CR">http://hl7.org/cda/stds/core/StructureDefinition/CR</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)</span>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)</span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems" class="dict"><span style="text-decoration: underline">translation</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#http://hl7.org/cda/stds/core/StructureDefinition/CD">http://hl7.org/cda/stds/core/StructureDefinition/CD</a></span>}] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
       }]
     },
     "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime" title="" class="dict"><span style="text-decoration: underline">effectiveTime</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </span>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
-      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.low" title="This is the low limit of the interval" class="dict"><span style="text-decoration: underline">low</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Date/heure de début de l'évènement documenté </span>
-      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval" class="dict"><span style="text-decoration: underline">high</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de fin de l'évènement documenté </span>
+      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.low" title="This is the low limit of the interval" class="dict"><span style="text-decoration: underline">low</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Date/heure de début de l'évènement documenté</span>
+      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval" class="dict"><span style="text-decoration: underline">high</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de fin de l'évènement documenté</span>
     },
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer" title="" class="dict"><span style="text-decoration: underline">performer</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span>  <span style="color: navy; opacity: 0.8">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.</span>
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer" title="" class="dict"><span style="text-decoration: underline">performer</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span>  <span style="color: navy; opacity: 0.8">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing" class="dict"><span style="text-decoration: underline">nullFlavor</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy"></a></span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.realmCode" title="When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question" class="dict"><span style="text-decoration: underline">realmCode</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CS.html#http://hl7.org/cda/stds/core/StructureDefinition/CS">http://hl7.org/cda/stds/core/StructureDefinition/CS</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.typeId" title="When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question" class="dict"><span style="text-decoration: underline">typeId</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
@@ -1586,24 +1541,20 @@ Summary
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) <br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ae"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code" title="Drawn from concept domain ActCode">code</a><a name="ka-ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aea"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache.">@code</a><a name="ka-ServiceEvent.code.code"> </a></td>
@@ -1611,13 +1562,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -1688,8 +1636,8 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)<br/></td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aefg"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems.">translation</a><a name="ka-ServiceEvent.code.translation.translation"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1702,7 +1650,7 @@ la région anatomique (obligatoire)<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression.">@value</a><a name="ka-ServiceEvent.effectiveTime.value"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1714,23 +1662,19 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval.">high</a><a name="ka-ServiceEvent.effectiveTime.high"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="ka-ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.">@nullFlavor</a><a name="ka-ServiceEvent.performer.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1913,7 +1857,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -1979,24 +1923,20 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="af"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code">code</a><a name="da-ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">@nullFlavor</span><a name="da-ServiceEvent.code.nullFlavor"> </a></td>
@@ -2010,13 +1950,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -2087,15 +2024,15 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)</td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime">effectiveTime</a><a name="da-ServiceEvent.effectiveTime"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">@nullFlavor</span><a name="da-ServiceEvent.effectiveTime.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2113,7 +2050,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="agd"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <span style="text-decoration:line-through">center</span><a name="da-ServiceEvent.effectiveTime.center"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2131,17 +2068,13 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ah"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="da-ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span>..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aha"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.typeCode">@typeCode</a><a name="da-ServiceEvent.performer.typeCode"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2161,7 +2094,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -2213,24 +2146,20 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html">II</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) <br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ae"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code" title="Drawn from concept domain ActCode">code</a><a name="sa-ServiceEvent.code"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html">CE</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aea"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache.">@code</a><a name="sa-ServiceEvent.code.code"> </a></td>
@@ -2238,13 +2167,10 @@ Pour les documents produits via les SNR : non utilisé</td></tr>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-cs-simple.html" title="code">cs</a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</td></tr>
 
@@ -2315,8 +2241,8 @@ Pour les documents d’expression personnelle du patient/usager :
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html">CR</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)<br/></td></tr>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aefg"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems.">translation</a><a name="sa-ServiceEvent.code.translation.translation"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2329,7 +2255,7 @@ la région anatomique (obligatoire)<br/></td></tr>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html">IVL_TS</a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </td></tr>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afa"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression.">@value</a><a name="sa-ServiceEvent.effectiveTime.value"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2341,23 +2267,19 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de début de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="afc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval.">high</a><a name="sa-ServiceEvent.effectiveTime.high"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html">IVXB_TS</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté </td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Date/heure de fin de l'évènement documenté</td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ag"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer">performer</a><a name="sa-ServiceEvent.performer"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-fr-core-performer.html" title="http://hl7.org/cda/stds/core/StructureDefinition/Performer1">FrPerformer</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aga"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a no-external="true" href="StructureDefinition-fr-core-service-event-definitions.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.">@nullFlavor</a><a name="sa-ServiceEvent.performer.nullFlavor"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -2540,7 +2462,7 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
             <h4>Constraints</h4>
 <table class="list">
 <tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: documentationOf.serviceEvent.performer.exists()</td><td></td></tr>
+<tr><td>PerformerRequire</td><td>error</td><td>ServiceEvent</td><td>performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal<br/>: performer.exists()</td><td></td></tr>
 </table>
 
           
@@ -2573,28 +2495,21 @@ alimente la métadonnée XDS practiceSettingCode obligatoire.<br/></td></tr>
       ]
     },
     "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.templateId" title="When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question" class="dict"><span style="text-decoration: underline">templateId</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.id" title="" class="dict"><span style="text-decoration: underline">id</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Identifiant de l’évènement documenté :
-
-Obligatoire pour :
-- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number) 
-- la demande d'acte d'imagerie pour porter l'Order Placer Number 
-- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier) </span>
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code" title="Drawn from concept domain ActCode" class="dict"><span style="text-decoration: underline">code</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Code de l’évènement documenté :
-
-Obligatoire pour :
-- une demande d'acte d'imagerie 
-- un CR d’imagerie 
-- un CR d’examen de l’enfant 
-- un document d’expression personnelle du patient/usager 
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.id" title="" class="dict"><span style="text-decoration: underline">id</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#http://hl7.org/cda/stds/core/StructureDefinition/II">http://hl7.org/cda/stds/core/StructureDefinition/II</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Identifiant de l’évènement documenté : Obligatoire pour :
+- les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
+- la demande d'acte d'imagerie pour porter l'Order Placer Number
+- les CR d’imagerie pour porter le studyInstanceUID dans l'attribut @root uniquement (pas d'attribut @extension) et limité à 64 car. (voir DICOM Part 5 / section 9 Unique Identifiers (UIDs) et Annexe B Creating a Privately Defined Unique Identifier)</span>
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code" title="Drawn from concept domain ActCode" class="dict"><span style="text-decoration: underline">code</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Code de l’évènement documenté : Obligatoire pour :
+- une demande d'acte d'imagerie
+- un CR d’imagerie
+- un CR d’examen de l’enfant
+- un document d’expression personnelle du patient/usager
 Pour les documents produits via les SNR : non utilisé</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.code" title="The plain code symbol defined by the code system. For example, &quot;784.0&quot; is the code symbol of the ICD-9 code &quot;784.0&quot; for headache" class="dict"><span style="text-decoration: underline">code</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Code de l’évènement :
-
 Pour les documents des professionnels :
-
-- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant. 
-- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit). 
-- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes). 
-
+- Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
+- Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
+- Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
 Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.codeSystem" title="Specifies the code system that defines the code" class="dict"><span style="text-decoration: underline">codeSystem</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"></span>
@@ -2610,22 +2525,18 @@ Pour les documents d’expression personnelle du patient/usager :
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.displayName" title="A name or title for the code, under which the sending system shows the code value to its users" class="dict"><span style="text-decoration: underline">displayName</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.originalText" title="The text or phrase used as the basis for the coding" class="dict"><span style="text-decoration: underline">originalText</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#http://hl7.org/cda/stds/core/StructureDefinition/ED">http://hl7.org/cda/stds/core/StructureDefinition/ED</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.qualifier" title="Specifies additional codes that increase the specificity of the the primary code" class="dict"><span style="text-decoration: underline">qualifier</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CR.html#http://hl7.org/cda/stds/core/StructureDefinition/CR">http://hl7.org/cda/stds/core/StructureDefinition/CR</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Précise que le translation concerne :
-la modalité d'imagerie (obligatoire)
-la région anatomique (obligatoire)</span>
+- la modalité d'imagerie (obligatoire)
+- la région anatomique (obligatoire)</span>
         "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.code.translation.translation" title="A set of other concept descriptors that translate this concept descriptor into other code systems" class="dict"><span style="text-decoration: underline">translation</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#http://hl7.org/cda/stds/core/StructureDefinition/CD">http://hl7.org/cda/stds/core/StructureDefinition/CD</a></span>}] <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
       }]
     },
     "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime" title="" class="dict"><span style="text-decoration: underline">effectiveTime</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de début et de fin de l'évènement documenté :
-Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC) </span>
+Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.value" title="A quantity specifying a point on the axis of natural time. A point in time is most often represented as a calendar expression" class="dict"><span style="text-decoration: underline">value</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
-      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.low" title="This is the low limit of the interval" class="dict"><span style="text-decoration: underline">low</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Date/heure de début de l'évènement documenté </span>
-      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval" class="dict"><span style="text-decoration: underline">high</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de fin de l'évènement documenté </span>
+      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.low" title="This is the low limit of the interval" class="dict"><span style="text-decoration: underline">low</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Date/heure de début de l'évènement documenté</span>
+      "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.effectiveTime.high" title="This is the high limit of the interval" class="dict"><span style="text-decoration: underline">high</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS">http://hl7.org/cda/stds/core/StructureDefinition/IVXB-TS</a></span>} <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Date/heure de fin de l'évènement documenté</span>
     },
-    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer" title="" class="dict"><span style="text-decoration: underline">performer</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span>  <span style="color: navy; opacity: 0.8">Exécutant de l’évènement documenté :
-performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si 
-le document de santé est déposé dans un système d'information partagé alors l'élément 
-documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode 
-alimente la métadonnée XDS practiceSettingCode obligatoire.</span>
+    "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer" title="" class="dict"><span style="text-decoration: underline">performer</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="This element is an array in the base standard, but the profile only allows on element"><b>Only One!</b></span>  <span style="color: navy; opacity: 0.8">Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire.</span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.nullFlavor" title="If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing" class="dict"><span style="text-decoration: underline">nullFlavor</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy"></a></span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.realmCode" title="When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question" class="dict"><span style="text-decoration: underline">realmCode</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CS.html#http://hl7.org/cda/stds/core/StructureDefinition/CS">http://hl7.org/cda/stds/core/StructureDefinition/CS</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
       "<a href="StructureDefinition-fr-core-service-event.html#ServiceEvent.performer.typeId" title="When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question" class="dict"><span style="text-decoration: underline">typeId</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"></span>
@@ -2747,7 +2658,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 14, 2025 21:51+0000">2025-01-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 15, 2025 14:08+0000">2025-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -75,7 +75,6 @@ package IG #DDDDDD{
              Authenticator.time => [None..None]
              Authenticator.time.value => [None..None]
              Authenticator.signatureCode => [None..None]
-             Authenticator.signatureCode.code => [None..None]
              Authenticator.signatureCode.sdtcValueSet => [None..0]
              Authenticator.signatureCode.sdtcValueSetVersion => [None..0]
              Authenticator.sdtcSignatureText => [None..0]
@@ -230,7 +229,6 @@ package IG #DDDDDD{
              LegalAuthenticator.time => [None..None]
              LegalAuthenticator.time.value => [None..None]
              LegalAuthenticator.signatureCode => [None..None]
-             LegalAuthenticator.signatureCode.code => [None..None]
              LegalAuthenticator.signatureCode.sdtcValueSet => [None..0]
              LegalAuthenticator.signatureCode.sdtcValueSetVersion => [None..0]
              LegalAuthenticator.sdtcSignatureText => [None..0]
@@ -353,20 +351,15 @@ package IG #DDDDDD{
              Person.classCode => [None..0]
              Person.determinerCode => [None..0]
              Person.name => [1..1]
-             Person.name.family => [1..1]
-             Person.name.given => [None..1]
-             Person.name.prefix => [None..1]
-             Person.name.suffix => [None..None]
-             Person.name.validTime => [None..0]
              Person.name.nullFlavor => [None..0]
              Person.name.use => [None..0]
+             Person.name.item.family => [1..1]
+             Person.name.item.given => [None..1]
+             Person.name.item.prefix => [None..1]
+             Person.name.item.suffix => [None..None]
+             Person.name.validTime => [None..0]
              Person.sdtcDesc => [None..0]
              Person.sdtcAsPatientRelationship => [None..0]
-        } 
-
-        class FrCorePractitioner{
-
-             Practitioner => [None..None]
         } 
 
         class FrRecordTarget{
@@ -397,7 +390,6 @@ package IG #DDDDDD{
              RelatedEntity.typeId.nullFlavor => [None..0]
              RelatedEntity.typeId.assigningAuthorityName => [None..0]
              RelatedEntity.typeId.displayable => [None..0]
-             RelatedEntity.classCode => [None..None]
              RelatedEntity.code => [None..None]
              RelatedEntity.code.nullFlavor => [None..0]
              RelatedEntity.code.code => [1..None]
@@ -471,12 +463,6 @@ package IG #DDDDDD{
      package extension #paleturquoise {
 
 
-        class AccessionNumberExtension{
-
-          Extension.extension:accessionNumber => [0..1]
-          Extension.extension:accessionNumber.url => [None..None]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..0]
          }
      }
      package valueset #PaleVioletRed{
@@ -579,10 +565,6 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/Person" as  classb14b9f756425869ebeb8ade0004931e1 
 
     classb14b9f756425869ebeb8ade0004931e1 --> FrAssignedPerson
-
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner" as  class722d091912544e694771fe1d2c6739cb 
-
-    class722d091912544e694771fe1d2c6739cb --> FrCorePractitioner
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget" as  class0baedfe5573df35f7a6ee5934c45b818 
 

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-14T21:51:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-15T14:08:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -561,18 +561,6 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/ps3-20> ;
-         fhir:reference [ fhir:v "StructureDefinition/ps3-20" ]
-       ] ;
-       fhir:name [ fhir:v "AccessionNumberExtension" ] ;
-       fhir:description [ fhir:v "ps3-20:accessionNumber est une extension pour l’imagerie." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
@@ -676,7 +664,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-authorization" ]
        ] ;
        fhir:name [ fhir:v "authorization" ] ;
-       fhir:description [ fhir:v "Authorization, permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de \nconsentement a été fourni." ] ;
+       fhir:description [ fhir:v "Authorization, permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -712,7 +700,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-data-enterer" ]
        ] ;
        fhir:name [ fhir:v "dataEnterer" ] ;
-       fhir:description [ fhir:v "DataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du \ndocument." ] ;
+       fhir:description [ fhir:v "DataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -724,7 +712,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-documentation-of" ]
        ] ;
        fhir:name [ fhir:v "documentationOf" ] ;
-       fhir:description [ fhir:v "DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nIl y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une \ndate de début et un exécutant." ] ;
+       fhir:description [ fhir:v "DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -760,7 +748,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-inFulfillment-of" ]
        ] ;
        fhir:name [ fhir:v "inFulfillmentOf" ] ;
-       fhir:description [ fhir:v "​InFulfillmentOf permet d'Associer un document à une prescription ." ] ;
+       fhir:description [ fhir:v "​InFulfillmentOf permet d'Associer un document à une prescription." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -864,30 +852,6 @@
          fhir:value [ fhir:v "StructureDefinition:logical" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PN> ;
-         fhir:reference [ fhir:v "StructureDefinition/PN" ]
-       ] ;
-       fhir:name [ fhir:v "PN: PersonName (V3 Data Type)" ] ;
-       fhir:description [ fhir:v "A name for a person. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for person name values are \"Jim Bob Walton, Jr.\", \"Adam Everyman\", etc. A person name may be as simple as a character string or may consist of several person name parts, such as, \"Jim\", \"Bob\", \"Walton\", and \"Jr.\". PN differs from EN because the qualifier type cannot include LS (Legal Status)." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-practitioner> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-practitioner" ]
-       ] ;
-       fhir:name [ fhir:v "practitioner" ] ;
-       fhir:description [ fhir:v "AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:logical" ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-record-target" ]
        ] ;
@@ -916,7 +880,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-related-entity" ]
        ] ;
        fhir:name [ fhir:v "RelatedEntity" ] ;
-       fhir:description [ fhir:v "RelatedEntity permet de décrire : un informateur non professionnel / personne de \nconfiance / personne à prévenir en cas d’urgence / aidant / personne aidée." ] ;
+       fhir:description [ fhir:v "RelatedEntity permet de décrire : un informateur non professionnel / personne de confiance / personne à prévenir en cas d’urgence / aidant / personne aidée." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -928,7 +892,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-custodian-organization" ]
        ] ;
        fhir:name [ fhir:v "representedCustodianOrganization" ] ;
-       fhir:description [ fhir:v "representedCustodianOrganization contient les éléments caractérisant la structure conservant le \ndocument, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication." ] ;
+       fhir:description [ fhir:v "representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -952,7 +916,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-core-service-event" ]
        ] ;
        fhir:name [ fhir:v "serviceEvent" ] ;
-       fhir:description [ fhir:v "ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nL'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal \ndoit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." ] ;
+       fhir:description [ fhir:v "ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nL'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
@@ -982,14 +946,6 @@
          fhir:page ( [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "mappingCDA-FHIR-struc-gen.html"^^xsd:anyURI ]
-           ] ) ;
-           fhir:name [ fhir:v "mappingCDA-FHIR-struc-gen.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
              fhir:value [ fhir:v "ressourcesCDA-struc-gen.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "ressourcesCDA-struc-gen.html"^^xsd:anyURI ] ;
@@ -1003,6 +959,14 @@
            fhir:name [ fhir:v "ressourcesFHIR-struc-gen.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "mappingCDA-FHIR-struc-gen.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "mappingCDA-FHIR-struc-gen.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
          fhir:extension ( [
@@ -1015,18 +979,10 @@
          fhir:page ( [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "modelesLogiques-entete.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "modelesLogiquesMetier-entete.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "modelesLogiques-entete.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Modèle logique" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI ]
-           ] ) ;
-           fhir:name [ fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:name [ fhir:v "modelesLogiquesMetier-entete.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Modèle logique métier" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -1044,6 +1000,14 @@
            fhir:name [ fhir:v "ressourcesFHIR-entete.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
          fhir:extension ( [
@@ -1056,18 +1020,10 @@
          fhir:page ( [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "modelesLogiques-corps.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "modelesLogiquesMetier-corps.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "modelesLogiques-corps.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Modèle logique" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "mappingCDA-FHIR-corps.html"^^xsd:anyURI ]
-           ] ) ;
-           fhir:name [ fhir:v "mappingCDA-FHIR-corps.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:name [ fhir:v "modelesLogiquesMetier-corps.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Modèle logique métier" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -1084,6 +1040,14 @@
            ] ) ;
            fhir:name [ fhir:v "ressourcesFHIR-corps.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "FHIR" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "mappingCDA-FHIR-corps.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "mappingCDA-FHIR-corps.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
