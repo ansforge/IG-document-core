@@ -1,0 +1,1 @@
+* [mapping assignedPerson to practitioner](./StructureDefinition-fr-core-person-mappings.html)

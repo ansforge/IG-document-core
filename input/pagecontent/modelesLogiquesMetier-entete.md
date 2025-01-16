@@ -1,0 +1,1 @@
+[Modèle logique métier de l'en-tête](StructureDefinition-fr-modelesLogiquesMetier-entete.html)
