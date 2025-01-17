@@ -10,17 +10,18 @@ Description: "AssignedPerson permet de décrire une personne physique"
 * determinerCode 0..0
 * typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* name 1..1 
+* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId 
+* name 1..1
+* name only fr-core-name
+* name.item.family ^short = "Nom de famille ou nom d’usage"
 * name.item.family 1..1
+* name.item.given ^short = "Prénom"
 * name.item.given 0..1
-* name.item.prefix 0..1
-* name.nullFlavor 0..0
-* name.use 0..0
-* name.validTime 0..0
 * name.item.prefix ^short = "Civilité"
+* name.item.prefix 0..1
 * name.item.prefix from https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS
 * name.item.suffix ^short = "Titre"
+* name.item.suffix 0..1
 * name.item.suffix from https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS
 * sdtcDesc 0..0
 * sdtcAsPatientRelationship	0..0

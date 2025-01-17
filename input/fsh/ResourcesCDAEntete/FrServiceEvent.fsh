@@ -48,7 +48,7 @@ Pour les documents d’expression personnelle du patient/usager :
 - la modalité d'imagerie (obligatoire)
 - la région anatomique (obligatoire)"
 //*lab:status ajouter une extension
-* effectiveTime.nullFlavor 0..0
+* effectiveTime.nullFlavor 0..0 // Interdire nullFlavor dans effectiveTime du serviceEvent pour l’évènement documenté principal 
 * effectiveTime ^short = "Date/heure de début et de fin de l'évènement documenté :
 Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)"
 * effectiveTime.low 1..1
@@ -59,6 +59,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 * effectiveTime.width 0..0
 * effectiveTime.operator 0..0
 * performer 0..1
+* performer.nullFlavor 0..0 // Interdire nullFlavor dans performer du serviceEvent pour l’évènement documenté principal 
 * performer only fr-core-performer
 * performer ^short = "Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire."
 * performer.typeCode = #PRF

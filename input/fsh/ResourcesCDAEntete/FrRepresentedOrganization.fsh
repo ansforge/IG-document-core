@@ -11,4 +11,6 @@ Description: "Structure pour le compte de laquelle intervient le professionnel."
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
 * name 0..1
+* standardIndustryClassCode ^short = "Cadre d'exercice."
+* standardIndustryClassCode.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans standardIndustryClassCode
 * standardIndustryClassCode from https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS
