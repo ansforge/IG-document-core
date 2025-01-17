@@ -1,0 +1,200 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"PatientDocument","PatientDocument","","","",0,*,"","","","null {[]} {[]}
+","Patient / Usager","Patient/Usager concerné par le document.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"PatientDocument.identifiantPatient","PatientDocument.identifiantPatient","","","",1,1,"","","","Identifier {[]} {[]}
+","Identifiant du patient / usager.","Identifiant du patient / usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.identifiantPatient",1,1,"",""
+"PatientDocument.adresse","PatientDocument.adresse","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale du patient/usager.","Adresse géopostale du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.adresse",0,*,"",""
+"PatientDocument.coordonneesTelecom","PatientDocument.coordonneesTelecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","","","","","","","","","",,,,,"",,,,"PatientDocument.coordonneesTelecom",0,*,"",""
+"PatientDocument.personnePhysique","PatientDocument.personnePhysique","","","",0,1,"","","","BackboneElement {[]} {[]}
+","patient contient les éléments permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc...","patient contient les éléments permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc...","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.id","PatientDocument.personnePhysique.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.extension","PatientDocument.personnePhysique.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.modifierExtension","PatientDocument.personnePhysique.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom","PatientDocument.personnePhysique.nomsPrenom","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Nom du patient/usager.","Nom du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.nomsPrenom.id","PatientDocument.personnePhysique.nomsPrenom.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.extension","PatientDocument.personnePhysique.nomsPrenom.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.modifierExtension","PatientDocument.personnePhysique.nomsPrenom.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.noms","PatientDocument.personnePhysique.nomsPrenom.noms","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Nom du patient/usager.","Nom du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.noms",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.nomsPrenom.noms.id","PatientDocument.personnePhysique.nomsPrenom.noms.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.noms.extension","PatientDocument.personnePhysique.nomsPrenom.noms.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.noms.modifierExtension","PatientDocument.personnePhysique.nomsPrenom.noms.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.noms.nomNaissance","PatientDocument.personnePhysique.nomsPrenom.noms.nomNaissance","","","",0,1,"","","","string {[]} {[]}
+","Nom du patient/usager.","Nom du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.noms.nomNaissance",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.noms.nomUtilise","PatientDocument.personnePhysique.nomsPrenom.noms.nomUtilise","","","",0,1,"","","","string {[]} {[]}
+","Nom du patient/usager.","Nom du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.noms.nomUtilise",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.prenom","PatientDocument.personnePhysique.nomsPrenom.prenom","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Prénom du patient/usager.","Prénom du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.prenom",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.nomsPrenom.prenom.id","PatientDocument.personnePhysique.nomsPrenom.prenom.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.prenom.extension","PatientDocument.personnePhysique.nomsPrenom.prenom.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.prenom.modifierExtension","PatientDocument.personnePhysique.nomsPrenom.prenom.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.nomsPrenom.prenom.listePrenoms","PatientDocument.personnePhysique.nomsPrenom.prenom.listePrenoms","","","",0,1,"","","","string {[]} {[]}
+","Liste des prénoms de l'acte de naissance.","Liste des prénoms de l'acte de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.prenom.listePrenoms",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.prenom.premierPrenom","PatientDocument.personnePhysique.nomsPrenom.prenom.premierPrenom","","","",0,1,"","","","string {[]} {[]}
+","Premier prénom de l'acte de naissance.","Premier prénom de l'acte de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.prenom.premierPrenom",0,1,"",""
+"PatientDocument.personnePhysique.nomsPrenom.prenom.premierNomUtilise","PatientDocument.personnePhysique.nomsPrenom.prenom.premierNomUtilise","","","",0,1,"","","","string {[]} {[]}
+","Prénom utilisé.","Prénom utilisé.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.nomsPrenom.prenom.premierNomUtilise",0,1,"",""
+"PatientDocument.personnePhysique.sexe","PatientDocument.personnePhysique.sexe","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Sexe du patient.","Sexe du patient.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.sexe",1,1,"",""
+"PatientDocument.personnePhysique.dateNaissance","PatientDocument.personnePhysique.dateNaissance","","","",1,1,"","","","dateTime {[]} {[]}
+","Date de naissance.","Date de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.dateNaissance",1,1,"",""
+"PatientDocument.personnePhysique.dateDeces","PatientDocument.personnePhysique.dateDeces","","","",0,1,"","","","boolean {[]} {[]}
+","Patient décédé ou pas ?.","Patient décédé ou pas ?.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.dateDeces",0,1,"",""
+"PatientDocument.personnePhysique.grossesseMultiple","PatientDocument.personnePhysique.grossesseMultiple","","","",0,1,"","","","boolean {[]} {[]}
+","Patient né d'une grossesse multiple.","Patient né d'une grossesse multiple.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.grossesseMultiple",0,1,"",""
+"PatientDocument.personnePhysique.numeroOrdreNaissance","PatientDocument.personnePhysique.numeroOrdreNaissance","","","",0,1,"","","","string {[]} {[]}
+","Numéro d’ordre de naissance.","Numéro d’ordre de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.numeroOrdreNaissance",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient","PatientDocument.personnePhysique.representantPatient","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Représentant du patient/usager.","Représentant du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.representantPatient.id","PatientDocument.personnePhysique.representantPatient.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.extension","PatientDocument.personnePhysique.representantPatient.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.modifierExtension","PatientDocument.personnePhysique.representantPatient.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.adresse","PatientDocument.personnePhysique.representantPatient.adresse","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale.","Adresse géopostale.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.adresse",0,*,"",""
+"PatientDocument.personnePhysique.representantPatient.coordonneesTelecom","PatientDocument.personnePhysique.representantPatient.coordonneesTelecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom.","Coordonnées télécom.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.coordonneesTelecom",0,*,"",""
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Personne représentant le patient/usager.","Personne représentant le patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.id","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.extension","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.modifierExtension","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Nom et Prénom du représentant.","Nom et Prénom du représentant.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.id","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.extension","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.modifierExtension","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.nom","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.nom","","","",0,1,"","","","string {[]} {[]}
+","Nom du représentant.","Nom du représentant.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.nom",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.prenom","PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.prenom","","","",0,1,"","","","string {[]} {[]}
+","Prénom du représentant.","Prénom du représentant.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomPrenom.prenom",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Structure représentant le patient/usager.","Structure représentant le patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.id","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.extension","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.modifierExtension","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.identifiant","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.identifiant","","","",0,1,"","","","Identifier {[]} {[]}
+","Identifiant de la structure.","Identifiant de la structure.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.identifiant",0,1,"",""
+"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.nom","PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.nom","","","",0,1,"","","","string {[]} {[]}
+","Nom de la structure.","Nom de la structure.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.representantPatient.structureRepresentatntPatient.nom",0,1,"",""
+"PatientDocument.personnePhysique.lieuNaissance","PatientDocument.personnePhysique.lieuNaissance","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Lieu de naissance.","Lieu de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.lieuNaissance",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.id","PatientDocument.personnePhysique.lieuNaissance.id","","","",0,0,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.lieuNaissance.extension","PatientDocument.personnePhysique.lieuNaissance.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.lieuNaissance.modifierExtension","PatientDocument.personnePhysique.lieuNaissance.modifierExtension","","","",0,0,"","Y","Y","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.lieuNaissance.nomLieuNaissance","PatientDocument.personnePhysique.lieuNaissance.nomLieuNaissance","","","",0,1,"","","","string {[]} {[]}
+","Nom du lieu de naissance du patient/usager.","Nom du lieu de naissance du patient/usager.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.lieuNaissance.nomLieuNaissance",0,1,"",""
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG","","","",0,1,"","","","Address {[]} {[]}
+","Adresse et code officiel géographique du lieu de naissance.","Adresse et code officiel géographique du lieu de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.id","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.extension","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.use","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.use","","","",0,1,"","Y","Y","code {[]} {[]}
+","home | work | temp | old | billing - purpose of this address","The purpose of this address.","Applications can assume that an address is current unless it explicitly says that it is temporary or old.","Allows an appropriate address to be chosen from a list of many.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""home""/>","","",,"required","The use of an address.","http://hl7.org/fhir/ValueSet/address-use|4.0.1","",,,,"Address.use",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.type","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.type","","","",0,1,"","","Y","code {[]} {[]}
+","postal | physical | both","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","The type of an address (physical / postal).","http://hl7.org/fhir/ValueSet/address-type|4.0.1","",,,,"Address.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.text","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.text","","","",0,1,"","","Y","string {[]} {[]}
+","Text representation of the address","Specifies the entire address as it should be displayed e.g. on a postal label. This may be provided instead of or as well as the specific parts.","Can provide both a text representation and parts. Applications updating an address SHALL ensure that  when both text and parts are present,  no content is included in the text that isn't found in a part.","A renderable, unencoded form.","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street, Erewhon 9132""/>","","",,,,,"",,,,"Address.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.line","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.line","","","",0,*,"","","Y","string {[]} {[]}
+","Street name, number, direction & P.O. Box etc.","This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""137 Nowhere Street""/>","","",,,,,"",,,,"Address.line",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.city","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.city","","Municpality
+","",0,1,"","","Y","string {[]} {[]}
+","Name of city, town etc.","The name of the city, town, suburb, village or other community or delivery center.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Erewhon""/>","","",,,,,"",,,,"Address.city",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.district","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.district","","County
+","",0,1,"","","Y","string {[]} {[]}
+","District name (aka county)","The name of the administrative area (county).","District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Madison""/>","","",,,,,"",,,,"Address.district",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.state","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.state","","Province
+Territory","",0,1,"","","Y","string {[]} {[]}
+","Sub-unit of country (abbreviations ok)","Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).","","","","","","","","","",,,,,"",,,,"Address.state",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.postalCode","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.postalCode","","Zip
+","",0,1,"","","Y","string {[]} {[]}
+","Postal code for area","A postal code designating a region defined by the postal service.","","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,,,,"",,,,"Address.postalCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.country","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.country","","","",0,1,"","","Y","string {[]} {[]}
+","Country (e.g. can be ISO 3166 2 or 3 letter code)","Country - a nation as commonly understood or generally accepted.","ISO 3166 3 letter codes can be used in place of a human readable country name.","","","","","","","","",,,,,"",,,,"Address.country",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.period","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.period","","","",0,1,"","","Y","Period {[]} {[]}
+","Time period when address was/is in use","Time period when address was/is in use.","","Allows addresses to be placed in historical context.","","","","","<valuePeriod xmlns=""http://hl7.org/fhir"">
+  <start value=""2010-03-23""/>
+  <end value=""2010-07-01""/>
+</valuePeriod>","","",,,,,"",,,,"Address.period",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.COG","PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.COG","","","",0,1,"","","","string {[]} {[]}
+","Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance.","Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance.","","","","","","","","","",,,,,"",,,,"PatientDocument.personnePhysique.lieuNaissance.adresseEtCOG.COG",0,1,"",""
