@@ -6,7 +6,8 @@
 "Person.realmCode","Person.realmCode","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CS {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.realmCode",0,*,"",""
 "Person.typeId","Person.typeId","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
-","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"",""
+","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"","II-1:An II instance must have either a root or an nullFlavor. {root.exists() or nullFlavor.exists()}
+"
 "Person.typeId.nullFlavor","Person.typeId.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "Person.typeId.assigningAuthorityName","Person.typeId.assigningAuthorityName","","","Assigning Authority Name",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
@@ -23,7 +24,7 @@
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""PSN""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject","",,,,"Person.classCode",0,1,"",""
 "Person.determinerCode","Person.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"Person.determinerCode",0,1,"",""
-"Person.name","Person.name","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/PN {[]} {[]}
+"Person.name","Person.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"Person.name",0,*,"","","practitioner.name"
 "Person.name.nullFlavor","Person.name.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
@@ -35,9 +36,9 @@
 "Person.name.item.delimiter","Person.name.item.delimiter","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"EN.item.delimiter",0,*,"",""
 "Person.name.item.family","Person.name.item.family","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"","","practitioner.name.family"
+","Nom de famille ou nom d’usage","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"","","practitioner.name.family"
 "Person.name.item.given","Person.name.item.given","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
+","Prénom","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
 "Person.name.item.prefix","Person.name.item.prefix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
 ","Civilité","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS","",,,,"EN.item.prefix",0,*,"","","practitioner.name.prefix"
 "Person.name.item.suffix","Person.name.item.suffix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
@@ -55,7 +56,8 @@
 "Person.sdtcAsPatientRelationship.realmCode","Person.sdtcAsPatientRelationship.realmCode","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CS {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.realmCode",0,*,"",""
 "Person.sdtcAsPatientRelationship.typeId","Person.sdtcAsPatientRelationship.typeId","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
-","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"",""
+","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"","II-1:An II instance must have either a root or an nullFlavor. {root.exists() or nullFlavor.exists()}
+"
 "Person.sdtcAsPatientRelationship.typeId.nullFlavor","Person.sdtcAsPatientRelationship.typeId.nullFlavor","","","Exceptional Value Detail",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "Person.sdtcAsPatientRelationship.typeId.assigningAuthorityName","Person.sdtcAsPatientRelationship.typeId.assigningAuthorityName","","","Assigning Authority Name",0,1,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}

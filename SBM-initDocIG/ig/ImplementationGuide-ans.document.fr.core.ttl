@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-15T14:08:36+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-17T15:05:21+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -67,7 +67,7 @@
        fhir:link <http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.cda.uv.core" ] ;
-     fhir:version [ fhir:v "2.0.0-sd" ]
+     fhir:version [ fhir:v "2.0.1-sd" ]
   ] [
      fhir:id [ fhir:v "ans_fr_nos" ] ;
      fhir:uri [
@@ -773,6 +773,18 @@
        ] ;
        fhir:name [ fhir:v "legalAuthenticator" ] ;
        fhir:description [ fhir:v "LegalAuthenticator représente les caractéristiques du professionnel et/ou de l'établissement participant." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-name" ]
+       ] ;
+       fhir:name [ fhir:v "name" ] ;
+       fhir:description [ fhir:v "Nom d'une personne physique" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

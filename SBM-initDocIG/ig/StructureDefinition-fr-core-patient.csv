@@ -1,12 +1,13 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
 "Patient","Patient","","","",1,1,"","","","null {[]} {[]}
 ","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
-"Patient.nullFlavor","Patient.nullFlavor","","","Exceptional Value Detail",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"Patient.nullFlavor","Patient.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "Patient.realmCode","Patient.realmCode","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CS {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of realm-specific constraints. The value of this attribute identifies the realm in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.realmCode",0,*,"",""
 "Patient.typeId","Patient.typeId","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
-","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"",""
+","","When valued in an instance, this attribute signals the imposition of constraints defined in an HL7-specified message type. This might be a common type (also known as CMET in the messaging communication environment), or content included within a wrapper. The value of this attribute provides a unique identifier for the type in question.","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.typeId",0,1,"","II-1:An II instance must have either a root or an nullFlavor. {root.exists() or nullFlavor.exists()}
+"
 "Patient.typeId.nullFlavor","Patient.typeId.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "Patient.typeId.assigningAuthorityName","Patient.typeId.assigningAuthorityName","","","Assigning Authority Name",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
@@ -27,6 +28,27 @@
 ","","","","","","","","","","","",,,,,"",,,,"Patient.id",0,1,"",""
 "Patient.name","Patient.name","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/PN {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"Patient.name",0,*,"",""
+"Patient.name.nullFlavor","Patient.name.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
+"Patient.name.use","Patient.name.use","","","Use Code",0,*,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+","","A set of codes advising a system or user which name in a set of like names to select for a given purpose. A name without specific use code might be a default name useful for any purpose, but a name with a specific use code would be preferred for that respective purpose","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAEntityNameUse","",,,,"EN.use",0,*,"",""
+"Patient.name.item","Patient.name.item","","","",1,*,"","","","http://hl7.org/fhir/StructureDefinition/Base {[]} {[]}
+","","A series of items that constitute the name.","","","","","","","","","",,,,,"",,,,"EN.item",0,*,"","EN-1:Can only have only one of the possible item elements in each choice {(delimiter | family | given | prefix | suffix | xmlText).count() = 1}
+"
+"Patient.name.item.delimiter","Patient.name.item.delimiter","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.delimiter",0,*,"",""
+"Patient.name.item.family","Patient.name.item.family","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"",""
+"Patient.name.item.given","Patient.name.item.given","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
+"Patient.name.item.prefix","Patient.name.item.prefix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.prefix",0,*,"",""
+"Patient.name.item.suffix","Patient.name.item.suffix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"EN.item.suffix",0,*,"",""
+"Patient.name.item.xmlText","Patient.name.item.xmlText","","","",0,1,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
+","Allows for mixed text content","","This element is represented in XML as textual content. The actual name ""xmlText"" will not appear in a CDA instance.","","","","","","","","",,,,,"",,,,"EN.item.xmlText",0,1,"",""
+"Patient.name.validTime","Patient.name.validTime","","","Valid Time",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
+","","An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.","","","","","","","","","",,,,,"",,,,"EN.validTime",0,1,"",""
 "Patient.sdtcDesc","Patient.sdtcDesc","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ED {[]} {[]}
 ","","The desc extension allows multimedia depictions of patients, healthcare providers, or other individuals to be included in a CDA document.","","","","","","","","","",,,,,"",,,,"Patient.sdtcDesc",0,1,"",""
 "Patient.administrativeGenderCode","Patient.administrativeGenderCode","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CE {[]} {[]}

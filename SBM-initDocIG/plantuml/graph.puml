@@ -16,6 +16,10 @@ package IG #DDDDDD{
              AssignedAuthor.typeId.displayable => [None..0]
              AssignedAuthor.classCode => [None..0]
              AssignedAuthor.id.nullFlavor => [None..0]
+             AssignedAuthor.id.assigningAuthorityName => [None..0]
+             AssignedAuthor.id.displayable => [None..0]
+             AssignedAuthor.id.root => [1..None]
+             AssignedAuthor.id.extension => [1..None]
              AssignedAuthor.sdtcIdentifiedBy => [None..0]
              AssignedAuthor.code => [None..None]
              AssignedAuthor.assignedPerson => [None..None]
@@ -42,6 +46,11 @@ package IG #DDDDDD{
              AssignedEntity.typeId.displayable => [None..0]
              AssignedEntity.classCode => [None..0]
              AssignedEntity.id => [None..1]
+             AssignedEntity.id.nullFlavor => [None..0]
+             AssignedEntity.id.assigningAuthorityName => [None..0]
+             AssignedEntity.id.displayable => [None..0]
+             AssignedEntity.id.root => [1..None]
+             AssignedEntity.id.extension => [1..None]
              AssignedEntity.sdtcIdentifiedBy => [None..0]
              AssignedEntity.code.nullFlavor => [None..0]
              AssignedEntity.code.codeSystemVersion => [None..0]
@@ -59,7 +68,14 @@ package IG #DDDDDD{
              AssociatedEntity.typeId.nullFlavor => [None..0]
              AssociatedEntity.typeId.assigningAuthorityName => [None..0]
              AssociatedEntity.typeId.displayable => [None..0]
+             AssociatedEntity.classCode => [None..None]
+             AssociatedEntity.id => [None..None]
+             AssociatedEntity.id.root => [None..None]
+             AssociatedEntity.id.extension => [None..None]
              AssociatedEntity.sdtcIdentifiedBy => [None..0]
+             AssociatedEntity.code => [None..None]
+             AssociatedEntity.addr => [None..None]
+             AssociatedEntity.telecom => [None..None]
              AssociatedEntity.associatedPerson => [None..None]
              AssociatedEntity.scopingOrganization => [None..None]
         } 
@@ -120,7 +136,7 @@ package IG #DDDDDD{
              Authorization.typeCode => [None..0]
              Authorization.consent => [None..None]
              Authorization.consent.id => [None..None]
-             Authorization.consent.code => [None..None]
+             Authorization.consent.code => [1..None]
              Authorization.consent.statusCode.code => [None..None]
              Authorization.consent.statusCode.sdtcValueSet => [None..0]
              Authorization.consent.statusCode.sdtcValueSetVersion => [None..0]
@@ -129,6 +145,7 @@ package IG #DDDDDD{
         class FrComponentOf{
 
              ComponentOf => [None..None]
+             ComponentOf.nullFlavor => [None..0]
         } 
 
         class FrCustodian{
@@ -236,6 +253,16 @@ package IG #DDDDDD{
              LegalAuthenticator.assignedEntity.code => [None..None]
         } 
 
+        class FrName{
+
+             fr-core-name => [None..None]
+             fr-core-name.nullFlavor => [None..0]
+             fr-core-name.use => [None..0]
+             fr-core-name.item.delimiter => [None..0]
+             fr-core-name.item.xmlText => [None..0]
+             fr-core-name.validTime => [None..0]
+        } 
+
         class FrOrder{
 
              Order.nullFlavor => [None..0]
@@ -259,6 +286,7 @@ package IG #DDDDDD{
              ParentDocument => [None..None]
              ParentDocument.nullFlavor => [None..0]
              ParentDocument.id => [None..1]
+             ParentDocument.id.nullFlavor => [None..0]
              ParentDocument.id.assigningAuthorityName => [None..0]
              ParentDocument.id.displayable => [None..0]
              ParentDocument.id.root => [1..None]
@@ -288,15 +316,6 @@ package IG #DDDDDD{
              Participant1.time.width => [None..0]
              Participant1.time.high => [None..None]
              Participant1.associatedEntity => [None..None]
-             Participant1.associatedEntity.classCode => [None..None]
-             Participant1.associatedEntity.id => [None..None]
-             Participant1.associatedEntity.id.root => [None..None]
-             Participant1.associatedEntity.id.extension => [None..None]
-             Participant1.associatedEntity.code => [None..None]
-             Participant1.associatedEntity.addr => [None..None]
-             Participant1.associatedEntity.telecom => [None..None]
-             Participant1.associatedEntity.associatedPerson => [None..None]
-             Participant1.associatedEntity.scopingOrganization => [None..None]
         } 
 
         class FrPatientRole{
@@ -307,6 +326,11 @@ package IG #DDDDDD{
              PatientRole.typeId => [None..0]
              PatientRole.templateId => [None..0]
              PatientRole.classCode => [None..0]
+             PatientRole.id.nullFlavor => [None..0]
+             PatientRole.id.assigningAuthorityName => [None..0]
+             PatientRole.id.displayable => [None..0]
+             PatientRole.id.root => [1..None]
+             PatientRole.id.extension => [None..None]
              PatientRole.sdtcIdentifiedBy => [None..0]
              PatientRole.patient => [1..None]
              PatientRole.providerOrganization => [None..0]
@@ -314,11 +338,13 @@ package IG #DDDDDD{
 
         class FrPatient{
 
+             Patient.nullFlavor => [None..0]
              Patient.typeId.nullFlavor => [None..0]
              Patient.typeId.assigningAuthorityName => [None..0]
              Patient.typeId.displayable => [None..0]
              Patient.determinerCode => [None..0]
              Patient.name => [1..1]
+             Patient.name.nullFlavor => [None..0]
              Patient.administrativeGenderCode => [1..None]
              Patient.birthTime => [1..None]
              Patient.maritalStatusCode => [None..0]
@@ -351,13 +377,10 @@ package IG #DDDDDD{
              Person.classCode => [None..0]
              Person.determinerCode => [None..0]
              Person.name => [1..1]
-             Person.name.nullFlavor => [None..0]
-             Person.name.use => [None..0]
              Person.name.item.family => [1..1]
              Person.name.item.given => [None..1]
              Person.name.item.prefix => [None..1]
-             Person.name.item.suffix => [None..None]
-             Person.name.validTime => [None..0]
+             Person.name.item.suffix => [None..1]
              Person.sdtcDesc => [None..0]
              Person.sdtcAsPatientRelationship => [None..0]
         } 
@@ -422,6 +445,7 @@ package IG #DDDDDD{
              Organization.determinerCode => [None..0]
              Organization.name => [None..1]
              Organization.standardIndustryClassCode => [None..None]
+             Organization.standardIndustryClassCode.nullFlavor => [None..0]
         } 
 
         class FrServiceEvent{
@@ -456,6 +480,7 @@ package IG #DDDDDD{
              ServiceEvent.effectiveTime.width => [None..0]
              ServiceEvent.effectiveTime.high => [None..None]
              ServiceEvent.performer => [None..1]
+             ServiceEvent.performer.nullFlavor => [None..0]
              ServiceEvent.performer.typeCode => [None..None]
          }
 
@@ -537,6 +562,10 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator" as  class57f35676579cccc1659c4601fa19b43b 
 
     class57f35676579cccc1659c4601fa19b43b --> FrLegalAuthenticator
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/PN" as  class91b9b68696e7cdd4a91365aa0d0d170c 
+
+    class91b9b68696e7cdd4a91365aa0d0d170c --> FrName
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/Order" as  class358c910e07ad3f95a61b1dae6d4a35be 
 

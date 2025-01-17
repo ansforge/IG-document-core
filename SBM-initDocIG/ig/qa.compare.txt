@@ -1,7 +1,7 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 32, warn = 3, info = 0
+err = 33, warn = 20, info = 0
 $--
 Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https://interop.esante.gouv.fr/ig/document/core)
  Build Errors : 0 / 3 / 0
@@ -9,7 +9,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-assigned-author : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-assigned-custodian : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-assigned-entity : 1 / 0 / 1
- /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-associated-entity : 1 / 0 / 1
+ /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-associated-entity : 2 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-authenticator : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-author : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-authoring-device : 1 / 0 / 1
@@ -23,9 +23,10 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-information-recipient : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-intended-recipient : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-legal-authenticator : 1 / 0 / 1
+ /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-name : 1 / 17 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-order : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-parent-document : 1 / 0 / 1
- /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-participant : 3 / 0 / 1
+ /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-participant : 2 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-patient : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-patient-role : 1 / 0 / 1
  /home/runner/work/IG-CDA-fr-core/IG-CDA-fr-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-performer : 1 / 0 / 1
@@ -49,6 +50,7 @@ ERROR: StructureDefinition/fr-core-assigned-custodian: StructureDefinition.snaps
 == fsh-generated/resources/StructureDefinition-fr-core-assigned-entity.json ==
 ERROR: StructureDefinition/fr-core-assigned-entity: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-associated-entity.json ==
+ERROR: associatedEntity.AssociatedEntity.classCode: Binding https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS is not a subset of binding http://hl7.org/cda/stds/core/ValueSet/CDARoleClassAssociative
 ERROR: StructureDefinition/fr-core-associated-entity: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-authenticator.json ==
 ERROR: StructureDefinition/fr-core-authenticator: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
@@ -76,13 +78,31 @@ ERROR: StructureDefinition/fr-core-information-recipient: StructureDefinition.sn
 ERROR: StructureDefinition/fr-core-intended-recipient: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-legal-authenticator.json ==
 ERROR: StructureDefinition/fr-core-legal-authenticator: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
+== fsh-generated/resources/StructureDefinition-fr-core-name.json ==
+ERROR: StructureDefinition/fr-core-name: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/fr-core-name: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
 == fsh-generated/resources/StructureDefinition-fr-core-order.json ==
 ERROR: StructureDefinition/fr-core-order: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-parent-document.json ==
 ERROR: StructureDefinition/fr-core-parent-document: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-participant.json ==
 ERROR: participant.Participant1.typeCode: Binding https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS is not a subset of binding http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType
-ERROR: participant.associatedEntity[[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-associated-entity]]].Participant1.associatedEntity.classCode: Binding https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS is not a subset of binding http://hl7.org/cda/stds/core/ValueSet/CDARoleClassAssociative
 ERROR: StructureDefinition/fr-core-participant: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
 == fsh-generated/resources/StructureDefinition-fr-core-patient.json ==
 ERROR: StructureDefinition/fr-core-patient: StructureDefinition.snapshot: Constraint failed: sdf-3: 'Each element definition in a snapshot must have a formal definition and cardinalities'
