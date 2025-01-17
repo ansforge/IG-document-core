@@ -1,15 +1,14 @@
 // -------------------------------------------------------------------------------				
 //  Logical Model				Patient.fsh
 // -------------------------------------------------------------------------------				
-Logical: FrPatientDocument				
-//Id: fr-patient-document			
-Title: "1.1- Patient / Usager"				
-Description:  """Patient/Usager concerné par le document."""				
-//* insert SetFmmandStatusRule( 1, informative)				
+Logical: PatientDocument							
+Title: "Patient / Usager"				
+Description:  """Patient/Usager concerné par le document."""
+Characteristics: #can-be-target							
 * identifiantPatient 1..1 Identifier "Identifiant du patient / usager."""				
 * adresse 0..* Address "Adresse géopostale du patient/usager."				
 * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …)."		 		
-* personnePhysique  0..1 BackboneElement "patient contient les éléments XML permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc... "				
+* personnePhysique  0..1 BackboneElement "patient contient les éléments permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc..."				
 * personnePhysique.id 0..0	
 * personnePhysique.extension 0..0 
 * personnePhysique.modifierExtension 0..0 
