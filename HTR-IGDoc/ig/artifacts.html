@@ -194,7 +194,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-ModeleLogiqueMetierEntete.html">next&gt;</a>
+          | <a href="StructureDefinition-EnteteDocument.html">next&gt;</a>
 
           </span>
 
@@ -231,13 +231,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Modèle logique métier</a>
       </li>
       <li>
-         <a href="#2">Ressources FHIR</a>
+         <a href="#2">Eléments CDA</a>
       </li>
       <li>
-         <a href="#3">Eléments CDA</a>
-      </li>
-      <li>
-         <a href="#4">Structures: Logical Models</a>
+         <a href="#3">Ressources FHIR</a>
       </li>
    </ul>
 </div>
@@ -247,50 +244,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
    <h3>Modèle logique métier </h3>
-    <p>Modèle logique métier</p>
+    
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ModeleLogiqueMetierEntete.html"
-                  title="StructureDefinition/ModeleLogiqueMetierEntete">**1-Modèle logique métier de l'en-tête**</a>
+               <a href="StructureDefinition-EnteteDocument.html"
+                  title="StructureDefinition/EnteteDocument">1- Modèle logique métier de l'en-tête</a>
             </td>
             <td>
-<p>En-tête d’un document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-AuteurDocument.html"
-                  title="StructureDefinition/AuteurDocument">Auteur du document (humain ou système)</a>
-            </td>
-            <td>
-<p>Professionnel ou patient/usager ou système, auteur du document incluant la structure de rattachement de l’auteur. L’auteur du document peut être un professionnel, un patient ou un système.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-InformateurDocument.html"
-                  title="StructureDefinition/InformateurDocument">Informateur du document</a>
-            </td>
-            <td>
-<p>Informateur (informant), ayant fourni des informations utiles aux actes en rapport avec la production du document .</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-NonProfessionnelDocument.html"
-                  title="StructureDefinition/NonProfessionnelDocument">Informateur non professionnel du document</a>
-            </td>
-            <td>
-<p>Informateur non professionnel.</p>
+<p>Eléments de l’en-tête contenat les données d’indentification du document.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-PatientDocument.html"
-                  title="StructureDefinition/PatientDocument">Patient / Usager</a>
+                  title="StructureDefinition/PatientDocument">1.1- Patient / Usager</a>
             </td>
             <td>
 <p>Patient/Usager concerné par le document.</p>
@@ -298,8 +268,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ProfessionnelDocument.html"
-                  title="StructureDefinition/ProfessionnelDocument">Professionnel.</a>
+               <a href="StructureDefinition-AuteurDocument.html"
+                  title="StructureDefinition/AuteurDocument">1.2- Auteur du document (humain ou système)</a>
+            </td>
+            <td>
+<p>Professionnel ou patient/usager ou système, auteur du document incluant la structure de rattachement de l’auteur. L’auteur du document peut être un professionnel, un patient ou un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ProfessionnelAuteurDocument.html"
+                  title="StructureDefinition/ProfessionnelAuteurDocument">1.2.1- Professionnel (Auteur du document)</a>
             </td>
             <td>
 <p>Un professionnel (personne physique) via son logiciel de professionnel.</p>
@@ -308,73 +287,148 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-SystemeDocument.html"
-                  title="StructureDefinition/SystemeDocument">Système</a>
+                  title="StructureDefinition/SystemeDocument">1.2.2- Système</a>
             </td>
             <td>
-<p>L’auteur du document est un système.</p>
+<p>Informations complémentaires si l’auteur est un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-InformateurDocument.html"
+                  title="StructureDefinition/InformateurDocument">1.3- Informateur</a>
+            </td>
+            <td>
+<p>Informateur (informant), ayant fourni des informations utiles aux actes en rapport avec la production du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ProfessionnelDocument.html"
+                  title="StructureDefinition/ProfessionnelDocument">1.3.1- Professionnel / Structure</a>
+            </td>
+            <td>
+<p>Un professionnel et/ou une structure ayant fourni des informations concernant le document (rôle d’informateur).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-NonProfessionnelDocument.html"
+                  title="StructureDefinition/NonProfessionnelDocument">1.3.2- Informateur non professionnel</a>
+            </td>
+            <td>
+<p>Informateur non professionnel ayant fourni des informations relatives au document, ou personne de confiance désignée par le patient/usager<br />
+ou personne à prévenir en cas d’urgence ou aidant du patient/usager ou personne aidée.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-StructureConservationDocument.html"
+                  title="StructureDefinition/StructureConservationDocument">1.4- Structure chargée de la conservation du document</a>
+            </td>
+            <td>
+<p>La structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DestinatairePrevuDocument.html"
+                  title="StructureDefinition/DestinatairePrevuDocument">1.5- Destinataire prévu du document</a>
+            </td>
+            <td>
+<p>Personne déclarée comme destinataire prévu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ResponsableDocument.html"
+                  title="StructureDefinition/ResponsableDocument">1.6- Responsable du document</a>
+            </td>
+            <td>
+<p>Le responsable du document représente : Le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre 
+professionnel ou le professionnel qui prend la responsabilité du document produit par un système de structure ou le patient/usager (responsable du document d’expression personnelle) ou le SNR responsable du document produit via ce SNR ou le Dossier Pharmaceutique (DP) responsable des documents qu’il produit.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ValidateurDocument.html"
+                  title="StructureDefinition/ValidateurDocument">1.7- Validateur du document</a>
+            </td>
+            <td>
+<p>Professionnel attestant la validité du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-OperateurSaisie.html"
+                  title="StructureDefinition/OperateurSaisie">1.8- Opérateur de saisie</a>
+            </td>
+            <td>
+<p>Opérateur de saisie contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ParticipantDocument.html"
+                  title="StructureDefinition/ParticipantDocument">1.9- Autres personnes / structures impliquées</a>
+            </td>
+            <td>
+<p>Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AssociationPrescription.html"
+                  title="StructureDefinition/AssociationPrescription">1.10- Association du document à une prescription</a>
+            </td>
+            <td>
+<p>Association à une prescription à l’origine de l’acte dont résulte le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EvenementDocumente.html"
+                  title="StructureDefinition/EvenementDocumente">1.11- Évènement documenté</a>
+            </td>
+            <td>
+<p>Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DocumentReference.html"
+                  title="StructureDefinition/DocumentReference">1.12- Document de référence</a>
+            </td>
+            <td>
+<p>Référence un document existant (à remplacer ou transformé).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ConsentementDocument.html"
+                  title="StructureDefinition/ConsentementDocument">1.13- Consentement associé au document</a>
+            </td>
+            <td>
+<p>Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AssociationPriseEncharge.html"
+                  title="StructureDefinition/AssociationPriseEncharge">1.14- Association du document à une prise en charge</a>
+            </td>
+            <td>
+<p>Permet d’associer le document à une prise en charge du patient/usager.</p>
 </td>
          </tr>
       </tbody>
    </table>
    <a name="2"> </a>
-   <h3>Ressources FHIR </h3>
-    <p>Profils FHIR</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-bundle-document.html"
-                  title="StructureDefinition/fr-bundle-document">FrBundleDocument</a>
-            </td>
-            <td>
-<p>FrBundleDocument est utilisé pour représenter l’en-tête et le corps d’un document .</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-Composition-document.html"
-                  title="StructureDefinition/fr-Composition-document">FrCompositionDocument</a>
-            </td>
-            <td>
-<p>Clinical document utilisé pour représenter un document FHIR.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-patient-fhir-document.html"
-                  title="StructureDefinition/fr-patient-fhir-document">FrPatientFHIRDocument</a>
-            </td>
-            <td>
-<p>Patient concerné par le document.</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="3"> </a>
    <h3>Eléments CDA </h3>
-    <p>Profils CDA</p>
+    
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-assigned-author.html"
-                  title="StructureDefinition/fr-core-assigned-author">assignedAuthor</a>
-            </td>
-            <td>
-<p>assignedAuthor contient les éléments permettant de décrire l’auteur.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-assigned-custodian.html"
-                  title="StructureDefinition/fr-core-assigned-custodian">assignedCustodian</a>
-            </td>
-            <td>
-<p>assignedCustodian, contient l’élément representedCustodianOrganization caractérisant la structure conservant le document.</p>
-</td>
-         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-assigned-entity.html"
@@ -382,15 +436,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-person.html"
-                  title="StructureDefinition/fr-core-person">AssignedPerson</a>
-            </td>
-            <td>
-<p>AssignedPerson permet de décrire une personne physique</p>
 </td>
          </tr>
          <tr>
@@ -404,11 +449,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-authenticator.html"
-                  title="StructureDefinition/fr-core-authenticator">authenticator</a>
+               <a href="StructureDefinition-fr-core-record-target.html"
+                  title="StructureDefinition/fr-core-record-target">recordTarget</a>
             </td>
             <td>
-<p>Authenticator, professionnel (personne physique) attestant la validité du contenu du document.</p>
+<p>Patient/Usager concerné par le document.</p>
 </td>
          </tr>
          <tr>
@@ -422,42 +467,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-authoring-device.html"
-                  title="StructureDefinition/fr-core-authoring-device">authoringDevice</a>
-            </td>
-            <td>
-<p>authoringDevice contient les informations complémentaires si l’auteur est un système.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-authorization.html"
-                  title="StructureDefinition/fr-core-authorization">authorization</a>
-            </td>
-            <td>
-<p>Authorization, permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-component-of.html"
-                  title="StructureDefinition/fr-core-component-of">componentOf</a>
-            </td>
-            <td>
-<p>componentOf permet d’associer le document à une prise en charge du patient/usager.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-custodian.html"
-                  title="StructureDefinition/fr-core-custodian">custodian</a>
-            </td>
-            <td>
-<p>Structure chargée de la conservation du document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-data-enterer.html"
                   title="StructureDefinition/fr-core-data-enterer">dataEnterer</a>
             </td>
@@ -467,11 +476,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-documentation-of.html"
-                  title="StructureDefinition/fr-core-documentation-of">documentationOf</a>
+               <a href="StructureDefinition-fr-core-assigned-author.html"
+                  title="StructureDefinition/fr-core-assigned-author">assignedAuthor</a>
             </td>
             <td>
-<p>DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+<p>assignedAuthor contient les éléments permettant de décrire l’auteur.</p>
 </td>
          </tr>
          <tr>
@@ -485,6 +494,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-related-entity.html"
+                  title="StructureDefinition/fr-core-related-entity">RelatedEntity</a>
+            </td>
+            <td>
+<p>RelatedEntity permet de décrire : un informateur non professionnel / personne de confiance / personne à prévenir en cas d’urgence / aidant / personne aidée.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-custodian.html"
+                  title="StructureDefinition/fr-core-custodian">custodian</a>
+            </td>
+            <td>
+<p>Structure chargée de la conservation du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-information-recipient.html"
                   title="StructureDefinition/fr-core-information-recipient">informationRecipient</a>
             </td>
@@ -494,20 +521,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-inFulfillment-of.html"
-                  title="StructureDefinition/fr-core-inFulfillment-of">inFulfillmentOf</a>
+               <a href="StructureDefinition-fr-core-assigned-custodian.html"
+                  title="StructureDefinition/fr-core-assigned-custodian">assignedCustodian</a>
             </td>
             <td>
-<p>​InFulfillmentOf permet d’Associer un document à une prescription.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-intended-recipient.html"
-                  title="StructureDefinition/fr-core-intended-recipient">IntendedRecipient</a>
-            </td>
-            <td>
-<p>IntendedRecipient permet d’enregistrer le destinataire prévu du document.</p>
+<p>assignedCustodian, contient l’élément representedCustodianOrganization caractérisant la structure conservant le document.</p>
 </td>
          </tr>
          <tr>
@@ -521,20 +539,101 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-order.html"
-                  title="StructureDefinition/fr-core-order">order</a>
+               <a href="StructureDefinition-fr-core-authorization.html"
+                  title="StructureDefinition/fr-core-authorization">authorization</a>
             </td>
             <td>
-<p>order représente la prescription à l’origine de l’acte dont résulte le document.</p>
+<p>Authorization, permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-parent-document.html"
-                  title="StructureDefinition/fr-core-parent-document">parentDocument</a>
+               <a href="StructureDefinition-fr-core-inFulfillment-of.html"
+                  title="StructureDefinition/fr-core-inFulfillment-of">inFulfillmentOf</a>
             </td>
             <td>
-<p>Document de référence.</p>
+<p>​InFulfillmentOf permet d’Associer un document à une prescription.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-documentation-of.html"
+                  title="StructureDefinition/fr-core-documentation-of">documentationOf</a>
+            </td>
+            <td>
+<p>DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-performer.html"
+                  title="StructureDefinition/fr-core-performer">performer</a>
+            </td>
+            <td>
+<p>Performer est l’exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-related-document.html"
+                  title="StructureDefinition/fr-core-related-document">relatedDocument</a>
+            </td>
+            <td>
+<p>RelatedDocument référence un document existant (à remplacer ou transformé).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-component-of.html"
+                  title="StructureDefinition/fr-core-component-of">componentOf</a>
+            </td>
+            <td>
+<p>componentOf permet d’associer le document à une prise en charge du patient/usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-intended-recipient.html"
+                  title="StructureDefinition/fr-core-intended-recipient">IntendedRecipient</a>
+            </td>
+            <td>
+<p>IntendedRecipient permet d’enregistrer le destinataire prévu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-patient-role.html"
+                  title="StructureDefinition/fr-core-patient-role">PatientRole</a>
+            </td>
+            <td>
+<p>Description du patient/usager</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-person.html"
+                  title="StructureDefinition/fr-core-person">AssignedPerson</a>
+            </td>
+            <td>
+<p>AssignedPerson permet de décrire une personne physique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-authenticator.html"
+                  title="StructureDefinition/fr-core-authenticator">authenticator</a>
+            </td>
+            <td>
+<p>Authenticator, professionnel (personne physique) attestant la validité du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-authoring-device.html"
+                  title="StructureDefinition/fr-core-authoring-device">authoringDevice</a>
+            </td>
+            <td>
+<p>authoringDevice contient les informations complémentaires si l’auteur est un système.</p>
 </td>
          </tr>
          <tr>
@@ -553,51 +652,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Personne physique</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-patient-role.html"
-                  title="StructureDefinition/fr-core-patient-role">PatientRole</a>
-            </td>
-            <td>
-<p>Description du patient/usager</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-performer.html"
-                  title="StructureDefinition/fr-core-performer">performer</a>
-            </td>
-            <td>
-<p>Performer est l’exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-record-target.html"
-                  title="StructureDefinition/fr-core-record-target">recordTarget</a>
-            </td>
-            <td>
-<p>Patient/Usager concerné par le document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-related-document.html"
-                  title="StructureDefinition/fr-core-related-document">relatedDocument</a>
-            </td>
-            <td>
-<p>RelatedDocument référence un document existant (à remplacer ou transformé).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-related-entity.html"
-                  title="StructureDefinition/fr-core-related-entity">RelatedEntity</a>
-            </td>
-            <td>
-<p>RelatedEntity permet de décrire : un informateur non professionnel / personne de confiance / personne à prévenir en cas d’urgence / aidant / personne aidée.</p>
 </td>
          </tr>
          <tr>
@@ -628,14 +682,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor.</p>
 </td>
          </tr>
-      </tbody>
-   </table>
-   <a name="4"> </a>
-   <h3>Structures: Logical Models </h3>
-    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-order.html"
+                  title="StructureDefinition/fr-core-order">order</a>
+            </td>
+            <td>
+<p>order représente la prescription à l’origine de l’acte dont résulte le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-parent-document.html"
+                  title="StructureDefinition/fr-core-parent-document">parentDocument</a>
+            </td>
+            <td>
+<p>Document de référence.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-name.html"
@@ -643,6 +707,41 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
             </td>
             <td>
 <p>Nom d’une personne physique</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Ressources FHIR </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-bundle-document.html"
+                  title="StructureDefinition/fr-bundle-document">FrBundleDocument</a>
+            </td>
+            <td>
+<p>FrBundleDocument est utilisé pour représenter l’en-tête et le corps d’un document .</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-Composition-document.html"
+                  title="StructureDefinition/fr-Composition-document">FrCompositionDocument</a>
+            </td>
+            <td>
+<p>Clinical document utilisé pour représenter un document FHIR.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-patient-fhir-document.html"
+                  title="StructureDefinition/fr-patient-fhir-document">FrPatientFHIRDocument</a>
+            </td>
+            <td>
+<p>Patient concerné par le document.</p>
 </td>
          </tr>
       </tbody>
@@ -677,7 +776,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-ModeleLogiqueMetierEntete.html">next&gt;</a>
+                <a href="StructureDefinition-EnteteDocument.html">next&gt;</a>
 
               </td>
             </tr>
@@ -687,7 +786,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 17, 2025 15:26+0000">2025-01-17</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 23, 2025 13:26+0000">2025-01-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
