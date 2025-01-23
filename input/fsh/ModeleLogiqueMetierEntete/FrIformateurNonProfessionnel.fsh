@@ -2,9 +2,10 @@
 //  Logical Model				informateur-non-professionnel.fsh
 // -------------------------------------------------------------------------------				
 Logical: NonProfessionnelDocument			
-Title: "Informateur non professionnel du document"	
+Title: "1.3.2- Informateur non professionnel"	
 //Id: fr-informateur-non-professionnel			
-Description: "Informateur non professionnel." 	
+Description: "Informateur non professionnel ayant fourni des informations relatives au document, ou personne de confiance désignée par le patient/usager  
+ou personne à prévenir en cas d’urgence ou aidant du patient/usager ou personne aidée." 	
 Characteristics: #can-be-target	
 * rolePersonne 1..1 CodeableConcept "Rôle joué par la personne."		 		
 * lienPatient 0..1 CodeableConcept "Lien de la personne avec le patient/usager."		 		
