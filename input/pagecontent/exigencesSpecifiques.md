@@ -84,6 +84,3 @@ Les terminologies publiées sur le SMT et les jeux de valeurs sont accessibles a
   * Voir le swagger des APIs : [https://smt.esante.gouv.fr/api-docs/](https://smt.esante.gouv.fr/api-docs/) (aller sur API liées au serveur FHIR)
   * Voir des exemples : [https://smt.esante.gouv.fr/formations/formations-specifiques/consommer-des-terminologies-et-des-jeux-de-valeurs-en-fhir-depuis-le-serveur-multi-terminologies-de-lans/](https://smt.esante.gouv.fr/formations/formations-specifiques/consommer-des-terminologies-et-des-jeux-de-valeurs-en-fhir-depuis-le-serveur-multi-terminologies-de-lans/) 
 * un Implantation Guide FHIR : [https://ansforge.github.io/IG-terminologie-de-sante/ig/main/](https://ansforge.github.io/IG-terminologie-de-sante/ig/main/)
-
-
-

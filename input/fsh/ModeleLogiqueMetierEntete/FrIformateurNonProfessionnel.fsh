@@ -16,36 +16,3 @@ Characteristics: #can-be-target
   * nomPersonne	1..1 BackboneElement "Nom de la personne."	
     * nom 1..1 string "Nom."
     * prenom 0..1 string "Prénom."			
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				

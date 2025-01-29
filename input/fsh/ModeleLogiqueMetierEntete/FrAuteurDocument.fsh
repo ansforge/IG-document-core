@@ -9,45 +9,7 @@ Description: "Professionnel ou patient/usager ou système, auteur du document in
 * precisionRoleFonctionnel 0..1 CodeableConcept "Précision sur le rôle fonctionnel."
 // Définition des éléments
 * auteur[x] 0..1 ProfessionnelAuteurDocument or  PatientDocument or SystemeDocument  "L'auteur du document. Peut être un professionnel, un patient ou un système."
-
 //--- END				
 //--- END				
 //--- END				
-//--- END				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+//--- END											

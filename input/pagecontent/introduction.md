@@ -9,4 +9,3 @@ Ce guide ne remplace pas les standards, il vient en complément de ces standards
 S'il existe des différences entre les standards et ce guide, les standards prévalent.
 
 Les spécifications françaises des documents dématérialisés définies dans le CI-SIS s'imposent à la communauté des acteurs partageant ou échangeant des documents électroniques.
-

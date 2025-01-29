@@ -480,25 +480,3 @@ Le système consommateur est libre d'utiliser sa propre feuille de style ou la f
 Si le document CDA contient une copie PDF du document, c'est le PDF qui DOIT être imprimé.
 
 Sinon, l’impression du document au format CDA DOIT être réalisée par la transformation du document CDA en html (par la feuille de style XSLT) puis la transformation du fichier html obtenu en PDF/A-1.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
