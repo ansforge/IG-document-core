@@ -14,7 +14,7 @@ Un document FHIR, par sa conception, permet de respecter les exigences spécifiq
 
 Le standard FHIR permet de coupler dans un même document :
 * le **contenu lisible par un humain**, sans médiation et présenté dans son contexte avec toute la clarté requise,
-* les **données codées et structurées** dont dérive ce contenu, directement intégrables dans les bases de données des SIS consommateurs des professionnels qui le souhaitent.
+* les **données codées et structurées** dont dérivent ce contenu, directement intégrables dans les bases de données des SIS consommateurs des professionnels qui le souhaitent.
 
 ### Structure d'un document FHIR
 D'un point de vue technique, un **document FHIR** est un **Bundle** de type "document" contenant une première ressource Composition suivie d'autres ressources référencées dans la Composition. La Composition est similaire à un index, mais contient également des informations d'entête clés.
