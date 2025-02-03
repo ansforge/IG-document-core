@@ -146,6 +146,11 @@ package IG #DDDDDD{
 
              ComponentOf => [None..None]
              ComponentOf.nullFlavor => [None..0]
+             ComponentOf.typeId.nullFlavor => [None..0]
+             ComponentOf.typeId.assigningAuthorityName => [None..0]
+             ComponentOf.typeId.displayable => [None..0]
+             ComponentOf.typeCode => [None..0]
+             ComponentOf.encompassingEncounter => [None..None]
         } 
 
         class FrCustodian{
@@ -181,6 +186,77 @@ package IG #DDDDDD{
              DocumentationOf.typeId.displayable => [None..0]
              DocumentationOf.typeCode => [None..0]
              DocumentationOf.serviceEvent => [None..None]
+        } 
+
+        class FrEncompassingEncounter{
+
+             EncompassingEncounter.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.typeId.displayable => [None..0]
+             EncompassingEncounter.classCode => [None..0]
+             EncompassingEncounter.moodCode => [None..0]
+             EncompassingEncounter.id => [None..None]
+             EncompassingEncounter.code => [None..None]
+             EncompassingEncounter.code.nullFlavor => [None..0]
+             EncompassingEncounter.code.codeSystem => [1..None]
+             EncompassingEncounter.code.codeSystemVersion => [None..0]
+             EncompassingEncounter.code.displayName => [1..None]
+             EncompassingEncounter.code.sdtcValueSet => [None..0]
+             EncompassingEncounter.code.sdtcValueSetVersion => [None..0]
+             EncompassingEncounter.effectiveTime => [None..None]
+             EncompassingEncounter.sdtcAdmissionReferralSourceCode => [None..0]
+             EncompassingEncounter.dischargeDispositionCode => [None..None]
+             EncompassingEncounter.responsibleParty => [None..None]
+             EncompassingEncounter.responsibleParty.nullFlavor => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.displayable => [None..0]
+             EncompassingEncounter.encounterParticipant => [None..None]
+             EncompassingEncounter.location => [1..None]
+             EncompassingEncounter.location.nullFlavor => [None..0]
+             EncompassingEncounter.location.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.location.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.location.typeId.displayable => [None..0]
+             EncompassingEncounter.location.typeCode => [None..0]
+             EncompassingEncounter.location.healthCareFacility => [None..None]
+        } 
+
+        class FrEncounterParticipant{
+
+             EncounterParticipant.typeId.nullFlavor => [None..0]
+             EncounterParticipant.typeId.assigningAuthorityName => [None..0]
+             EncounterParticipant.typeId.displayable => [None..0]
+             EncounterParticipant.typeCode => [None..None]
+             EncounterParticipant.time => [None..None]
+             EncounterParticipant.assignedEntity => [1..None]
+        } 
+
+        class FrHealthCareFacility{
+
+             HealthCareFacility.nullFlavor => [None..0]
+             HealthCareFacility.typeId.nullFlavor => [None..0]
+             HealthCareFacility.typeId.assigningAuthorityName => [None..0]
+             HealthCareFacility.typeId.displayable => [None..0]
+             HealthCareFacility.classCode => [None..0]
+             HealthCareFacility.id => [None..0]
+             HealthCareFacility.sdtcIdentifiedBy => [None..0]
+             HealthCareFacility.code => [1..None]
+             HealthCareFacility.code.nullFlavor => [None..0]
+             HealthCareFacility.code.code => [1..None]
+             HealthCareFacility.code.codeSystem => [1..None]
+             HealthCareFacility.code.codeSystemVersion => [None..0]
+             HealthCareFacility.code.displayName => [1..None]
+             HealthCareFacility.code.sdtcValueSet => [None..0]
+             HealthCareFacility.code.sdtcValueSetVersion => [None..0]
+             HealthCareFacility.code.translation => [None..1]
+             HealthCareFacility.code.translation.nullFlavor => [None..0]
+             HealthCareFacility.code.translation.code => [1..None]
+             HealthCareFacility.code.translation.codeSystem => [1..None]
+             HealthCareFacility.code.translation.codeSystemVersion => [None..0]
+             HealthCareFacility.code.translation.displayName => [1..None]
+             HealthCareFacility.code.translation.sdtcValueSet => [None..0]
+             HealthCareFacility.code.translation.sdtcValueSetVersion => [None..0]
+             HealthCareFacility.location => [None..None]
         } 
 
         class FrInFulfillmentOf{
@@ -443,7 +519,6 @@ package IG #DDDDDD{
              Organization.typeId.displayable => [None..0]
              Organization.classCode => [None..0]
              Organization.determinerCode => [None..0]
-             Organization.name => [None..1]
              Organization.standardIndustryClassCode => [None..None]
              Organization.standardIndustryClassCode.nullFlavor => [None..0]
         } 
@@ -542,6 +617,18 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/DocumentationOf" as  class0977267ea48347e7fb26a0e81e862268 
 
     class0977267ea48347e7fb26a0e81e862268 --> FrDocumentationOf
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/EncompassingEncounter" as  class71895803bd5b89edafce351523a041e6 
+
+    class71895803bd5b89edafce351523a041e6 --> FrEncompassingEncounter
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/EncounterParticipant" as  class10428a590ddf9ce27b1fe90b22a362bd 
+
+    class10428a590ddf9ce27b1fe90b22a362bd --> FrEncounterParticipant
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/HealthCareFacility" as  class02cc646ca5601d63f73402bfbbfdc6eb 
+
+    class02cc646ca5601d63f73402bfbbfdc6eb --> FrHealthCareFacility
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/InFulfillmentOf" as  classe90f25fe105c3c9c4c47c62629a3765d 
 

@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-01-17T15:05:21+00:00"/>
+  <date value="2025-02-03T10:34:19+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.1.0"/>
+    <version value="6.2.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -621,6 +621,39 @@
       </reference>
       <name value="documentationOf"/>
       <description value="DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-encompassing-encounter"/>
+      </reference>
+      <name value="encompassingEncounter"/>
+      <description value="encompassingEncounter décrit la prise en charge du patient/usager par un professionnel ou par une structure."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-encounter-participant"/>
+      </reference>
+      <name value="encounterParticipant"/>
+      <description value="encounterParticipant représente une personne impliquée dans la prise en charge du patient/usager, comme &#xA;par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel &#xA;ayant donné son avis quant à la prise en charge."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-health-care-facility"/>
+      </reference>
+      <name value="healthCareFacility"/>
+      <description value="healthCareFacility représente la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

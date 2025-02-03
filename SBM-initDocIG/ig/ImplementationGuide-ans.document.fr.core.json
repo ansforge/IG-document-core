@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-01-17T15:05:21+00:00",
+  "date" : "2025-02-03T10:34:19+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.1.0"
+    "version" : "6.2.0"
   },
   {
     "id" : "hl7ext",
@@ -798,6 +798,42 @@
       },
       "name" : "documentationOf",
       "description" : "DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-encompassing-encounter"
+      },
+      "name" : "encompassingEncounter",
+      "description" : "encompassingEncounter décrit la prise en charge du patient/usager par un professionnel ou par une structure.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-encounter-participant"
+      },
+      "name" : "encounterParticipant",
+      "description" : "encounterParticipant représente une personne impliquée dans la prise en charge du patient/usager, comme \npar exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel \nayant donné son avis quant à la prise en charge.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-health-care-facility"
+      },
+      "name" : "healthCareFacility",
+      "description" : "healthCareFacility représente la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.).",
       "exampleBoolean" : false
     },
     {
