@@ -39,7 +39,7 @@
   fhir:name [ fhir:v "FrServiceEvent"] ; # 
   fhir:title [ fhir:v "serviceEvent"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-02-03T10:34:19+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-05T14:18:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1499,6 +1499,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.id" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.id" ] ;
+       fhir:short [ fhir:v "Identifiant du responsable" ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1608,7 +1609,7 @@
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.id.extension" ] ;
        fhir:representation ( [ fhir:v "xmlAttr" ] ) ;
        fhir:label [ fhir:v "Extension" ] ;
-       fhir:short [ fhir:v "Valeur de l’identifiant" ] ;
+       fhir:short [ fhir:v "Valeur de l’identifiant.\n- Pour le PS, valeur de PS_IdNat (voir CI-SIS_ANX_SOURCES-DONNEES-PERSONNES-STRUCTURES).\n- Pour le patient/usager, valeur de l'INS du patient/usager." ] ;
        fhir:definition [ fhir:v "A character string as a unique identifier within the scope of the identifier root." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
@@ -1647,6 +1648,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.code" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.code" ] ;
+       fhir:short [ fhir:v "Profession ou rôle du responsable" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1898,6 +1900,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.addr" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.addr" ] ;
+       fhir:short [ fhir:v "Adresse géopostale" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -1911,6 +1914,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.telecom" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.telecom" ] ;
+       fhir:short [ fhir:v "Coordonnées télécom" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -1924,6 +1928,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.assignedPerson" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.assignedPerson" ] ;
+       fhir:short [ fhir:v "Personne physique : \n- Obligatoire pour un professionnel \n- Obligatoire pour un patient/usager \n- Non utilisé pour un SNR \n- Non utilisé pour le DP" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1941,6 +1946,7 @@
      ] [
        fhir:id [ fhir:v "ServiceEvent.performer.assignedEntity.representedOrganization" ] ;
        fhir:path [ fhir:v "ServiceEvent.performer.assignedEntity.representedOrganization" ] ;
+       fhir:short [ fhir:v "Structure de rattachement :\n- Pour un PS : Organisation pour le compte de laquelle intervient le PS.\n- Pour un patient : seul l'élément standardIndustryClassCode est renseigné (cas particulier des documents d'expression personnelle du patient)." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [

@@ -24,7 +24,12 @@
 "AssignedAuthor.classCode","AssignedAuthor.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedAuthor.classCode",0,1,"",""
 "AssignedAuthor.id","AssignedAuthor.id","","","",1,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.id",1,*,"",""
+","Identifiant de l’auteur : 
+- Obligatoire pour un professionnel 
+- Obligatoire pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.id",1,*,"",""
 "AssignedAuthor.id.nullFlavor","AssignedAuthor.id.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "AssignedAuthor.id.assigningAuthorityName","AssignedAuthor.id.assigningAuthorityName","","","Assigning Authority Name",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
@@ -42,14 +47,35 @@
 "AssignedAuthor.sdtcIdentifiedBy","AssignedAuthor.sdtcIdentifiedBy","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IdentifiedBy {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.sdtcIdentifiedBy",0,*,"",""
 "AssignedAuthor.code","AssignedAuthor.code","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CE {[]} {[]}
-","","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS","",,,,"AssignedAuthor.code",0,1,"",""
+","Profession / savoir-faire ou rôle : 
+- Obligatoire pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS","",,,,"AssignedAuthor.code",0,1,"",""
 "AssignedAuthor.addr","AssignedAuthor.addr","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/AD {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.addr",0,*,"",""
+","Adresse géopostale de l’auteur","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.addr",0,*,"",""
 "AssignedAuthor.telecom","AssignedAuthor.telecom","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/TEL {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.telecom",0,*,"",""
+","Coordonnées télécom de l’auteur","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.telecom",0,*,"",""
 "AssignedAuthor.assignedPerson","AssignedAuthor.assignedPerson","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/Person {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-person]]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.assignedPerson",0,1,"",""
+","Identité de l’auteur :  
+- Obligatoire pour un professionnel 
+- Obligatoire pour le patient/usager 
+- Ne pas utiliser pour un système de structure 
+- Ne pas utiliser pour un SNR 
+- Ne pas utiliser pour le DP","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.assignedPerson",0,1,"",""
 "AssignedAuthor.assignedAuthoringDevice","AssignedAuthor.assignedAuthoringDevice","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/AuthoringDevice {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authoring-device]]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.assignedAuthoringDevice",0,1,"",""
+","Informations complémentaires si l’auteur est 
+un système :
+- Ne pas utiliser pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.assignedAuthoringDevice",0,1,"",""
 "AssignedAuthor.representedOrganization","AssignedAuthor.representedOrganization","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/Organization {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-organization]]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.representedOrganization",0,1,"",""
+","Structure correspondante : 
+- Obligatoire pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP","","","","","","","","","","",,,,,"",,,,"AssignedAuthor.representedOrganization",0,1,"",""

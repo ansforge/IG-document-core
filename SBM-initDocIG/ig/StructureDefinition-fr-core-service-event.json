@@ -35,7 +35,7 @@
   "name" : "FrServiceEvent",
   "title" : "serviceEvent",
   "status" : "draft",
-  "date" : "2025-02-03T10:34:19+00:00",
+  "date" : "2025-02-05T14:18:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -1362,6 +1362,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.id",
       "path" : "ServiceEvent.performer.assignedEntity.id",
+      "short" : "Identifiant du responsable",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -1457,7 +1458,7 @@
       "path" : "ServiceEvent.performer.assignedEntity.id.extension",
       "representation" : ["xmlAttr"],
       "label" : "Extension",
-      "short" : "Valeur de l’identifiant",
+      "short" : "Valeur de l’identifiant.\n- Pour le PS, valeur de PS_IdNat (voir CI-SIS_ANX_SOURCES-DONNEES-PERSONNES-STRUCTURES).\n- Pour le patient/usager, valeur de l'INS du patient/usager.",
       "definition" : "A character string as a unique identifier within the scope of the identifier root.",
       "min" : 1,
       "max" : "1",
@@ -1496,6 +1497,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.code",
       "path" : "ServiceEvent.performer.assignedEntity.code",
+      "short" : "Profession ou rôle du responsable",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -1727,6 +1729,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.addr",
       "path" : "ServiceEvent.performer.assignedEntity.addr",
+      "short" : "Adresse géopostale",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1741,6 +1744,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.telecom",
       "path" : "ServiceEvent.performer.assignedEntity.telecom",
+      "short" : "Coordonnées télécom",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1755,6 +1759,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.assignedPerson",
       "path" : "ServiceEvent.performer.assignedEntity.assignedPerson",
+      "short" : "Personne physique : \n- Obligatoire pour un professionnel \n- Obligatoire pour un patient/usager \n- Non utilisé pour un SNR \n- Non utilisé pour le DP",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -1770,6 +1775,7 @@
     {
       "id" : "ServiceEvent.performer.assignedEntity.representedOrganization",
       "path" : "ServiceEvent.performer.assignedEntity.representedOrganization",
+      "short" : "Structure de rattachement :\n- Pour un PS : Organisation pour le compte de laquelle intervient le PS.\n- Pour un patient : seul l'élément standardIndustryClassCode est renseigné (cas particulier des documents d'expression personnelle du patient).",
       "min" : 0,
       "max" : "1",
       "base" : {

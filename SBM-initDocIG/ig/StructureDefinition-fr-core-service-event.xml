@@ -81,7 +81,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
   <name value="FrServiceEvent"/>
   <title value="serviceEvent"/>
   <status value="draft"/>
-  <date value="2025-02-03T10:34:19+00:00"/>
+  <date value="2025-02-05T14:18:33+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -1329,6 +1329,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.id">
       <path value="ServiceEvent.performer.assignedEntity.id"/>
+      <short value="Identifiant du responsable"/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1419,7 +1420,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
       <path value="ServiceEvent.performer.assignedEntity.id.extension"/>
       <representation value="xmlAttr"/>
       <label value="Extension"/>
-      <short value="Valeur de l’identifiant"/>
+      <short value="Valeur de l’identifiant.&#xA;- Pour le PS, valeur de PS_IdNat (voir CI-SIS_ANX_SOURCES-DONNEES-PERSONNES-STRUCTURES).&#xA;- Pour le patient/usager, valeur de l'INS du patient/usager."/>
       <definition value="A character string as a unique identifier within the scope of the identifier root."/>
       <min value="1"/>
       <max value="1"/>
@@ -1454,6 +1455,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.code">
       <path value="ServiceEvent.performer.assignedEntity.code"/>
+      <short value="Profession ou rôle du responsable"/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -1669,6 +1671,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.addr">
       <path value="ServiceEvent.performer.assignedEntity.addr"/>
+      <short value="Adresse géopostale"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -1682,6 +1685,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.telecom">
       <path value="ServiceEvent.performer.assignedEntity.telecom"/>
+      <short value="Coordonnées télécom"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -1695,6 +1699,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.assignedPerson">
       <path value="ServiceEvent.performer.assignedEntity.assignedPerson"/>
+      <short value="Personne physique : &#xA;- Obligatoire pour un professionnel &#xA;- Obligatoire pour un patient/usager &#xA;- Non utilisé pour un SNR &#xA;- Non utilisé pour le DP"/>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -1709,6 +1714,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
     </element>
     <element id="ServiceEvent.performer.assignedEntity.representedOrganization">
       <path value="ServiceEvent.performer.assignedEntity.representedOrganization"/>
+      <short value="Structure de rattachement :&#xA;- Pour un PS : Organisation pour le compte de laquelle intervient le PS.&#xA;- Pour un patient : seul l'élément standardIndustryClassCode est renseigné (cas particulier des documents d'expression personnelle du patient)."/>
       <min value="0"/>
       <max value="1"/>
       <base>
