@@ -44,8 +44,7 @@ Description: "assignedAuthor contient les éléments permettant de décrire l’
 - Ne pas utiliser pour un SNR 
 - Ne pas utiliser pour le DP"
 * assignedPerson only fr-core-person
-* assignedAuthoringDevice ^short = "Informations complémentaires si l’auteur est 
-un système :
+* assignedAuthoringDevice ^short = "Informations complémentaires si l’auteur est un système :
 - Ne pas utiliser pour un professionnel 
 - Ne pas utiliser pour le patient/usager 
 - Obligatoire pour un système de structure 
