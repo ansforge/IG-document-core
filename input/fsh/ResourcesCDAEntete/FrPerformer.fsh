@@ -5,9 +5,9 @@ Id: fr-core-performer
 Title: "performer"
 Description: "Performer est l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal." 
 * ^status = #draft
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* typeId.nullFlavor 0..0 
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
 * typeCode ^short = "PRF pour performer (Exécutant)"
 * functionCode ^short = "Rôle fonctionnel"
 * time ^short = "Date et heure de participation"

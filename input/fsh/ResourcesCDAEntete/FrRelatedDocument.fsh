@@ -5,9 +5,9 @@ Id: fr-core-related-document
 Title: "relatedDocument"
 Description: "RelatedDocument référence un document existant (à remplacer ou transformé)." 
 * ^status = #draft
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
 * typeCode ^short = "le typeCode prend la valeur :
 - 'RPLC' pour remplacement, seul le remplacement au sens annulation et remplacement du document référencé par la version courante du document est autorisé.
 - 'XFRM' pour transformation, la relation est portée par le document CDA transformé (et pas par le document de référence)."

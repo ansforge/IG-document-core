@@ -5,15 +5,16 @@ Id: fr-core-assigned-entity
 Title: "assignedEntity"
 Description: "AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* code.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans code
-* code.codeSystemVersion 0..0 // Interdire l’attribut @codeSystemVersion dans code
-* code.sdtcValueSet 0..0 // Interdire l’attribut @sdtcValueSet dans code
-* code.sdtcValueSetVersion 0..0 // Interdire l’attribut @sdtcValueSetVersion dans code
-* classCode 0..0 // Interdire l’attribut @classCode
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* code.nullFlavor 0..0
+* code.codeSystemVersion 0..0
+* code.sdtcValueSet 0..0
+* code.sdtcValueSetVersion 0..0
+* classCode 0..0
+* id ^short = "Identifiant du responsable"
 * id 1..1 // Rendre l'id en 1..1 au lieu de 1..*
 * id.nullFlavor 0..0
 * id.root 1..1
@@ -23,10 +24,23 @@ Description: "AssignedEntity est utilisé dans les éléments suivants : dataEnt
 - Pour un SNR : OID de l'éditeur 
 - Pour le DP : '1.2.250.1.71.4.2.1'"
 * id.extension 1..1
-* id.extension ^short = "Valeur de l’identifiant"
+* id.extension ^short = "Valeur de l’identifiant.
+- Pour le PS, valeur de PS_IdNat (voir CI-SIS_ANX_SOURCES-DONNEES-PERSONNES-STRUCTURES).
+- Pour le patient/usager, valeur de l'INS du patient/usager."
 * id.assigningAuthorityName	0..0
 * id.displayable 0..0
-* sdtcIdentifiedBy 0..0 // Interdire l'élément sdtcIdentifiedBy
-* sdtcPatient 0..0 // Interdire l'élément sdtcPatient
+* sdtcIdentifiedBy 0..0
+* sdtcPatient 0..0
+* code ^short = "Profession ou rôle du responsable"
+* addr ^short = "Adresse géopostale"
+* telecom ^short = "Coordonnées télécom"
+* assignedPerson ^short = "Personne physique : 
+- Obligatoire pour un professionnel 
+- Obligatoire pour un patient/usager 
+- Non utilisé pour un SNR 
+- Non utilisé pour le DP"
 * assignedPerson only fr-core-person
+* representedOrganization ^short = "Structure de rattachement :
+- Pour un PS : Organisation pour le compte de laquelle intervient le PS.
+- Pour un patient : seul l'élément standardIndustryClassCode est renseigné (cas particulier des documents d'expression personnelle du patient)."
 * representedOrganization only fr-core-represented-organization

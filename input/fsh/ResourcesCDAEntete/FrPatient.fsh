@@ -5,20 +5,29 @@ Id: fr-core-patient
 Title: "patient"
 Description: "Personne physique"
 * ^status = #draft
-* nullFlavor 0..0 // Interdit l’attribut @nullFlavor dans  patient
-* typeId.nullFlavor 0..0 // Interdit l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdit l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdit l’attribut @displayable dans typeId
-* determinerCode 0..0  // Interdire l’attribut @determinerCode
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* determinerCode 0..0
+* name ^short = "Noms et prénoms."
 * name 1..1 // Rendre le name obligatoire
-* name.nullFlavor 0..0 // Interdit l’attribut @nullFlavor dans name
+* name.nullFlavor 0..0
+* administrativeGenderCode ^short = "Sexe."
 * administrativeGenderCode 1..1 // Rendre le administrativeGenderCode obligatoire
 * administrativeGenderCode from https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS
+* birthTime ^short = "Date de naissance."
 * birthTime 1..1 // Rendre le birthTime obligatoire
-* maritalStatusCode 0..0 // Interdire l'élément maritalStatusCode
-* religiousAffiliationCode 0..0 // Interdire l'élément religiousAffiliationCode
-* raceCode 0..0 // Interdire l'élément raceCode
-* sdtcRaceCode 0..0 // Interdire l'élément sdtcRaceCode
-* ethnicGroupCode 0..0 // Interdire l'élément ethnicGroupCode
-* sdtcEthnicGroupCode 0..0 // Interdire l'élément sdtcEthnicGroupCode
-* languageCommunication 0..0 // Interdire l'élément languageCommunication
+* sdtcDeceasedInd ^short = "Patient décédé ou pas ?"
+* sdtcDeceasedTime ^short = "Date de décès."
+* sdtcMultipleBirthInd ^short = "Patient né d'une grossesse multiple."
+* sdtcMultipleBirthOrderNumber ^short = "Numéro d’ordre de naissance (si issu d'une grossesse multiple)."	
+* maritalStatusCode 0..0
+* religiousAffiliationCode 0..0 
+* raceCode 0..0 
+* sdtcRaceCode 0..0
+* ethnicGroupCode 0..0 
+* sdtcEthnicGroupCode 0..0
+* languageCommunication 0..0
+* guardian ^short = "Représentant du patient/usager."
+* birthplace ^short = "Lieu de naissance."

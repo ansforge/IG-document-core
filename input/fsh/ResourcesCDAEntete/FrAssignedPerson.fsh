@@ -5,12 +5,13 @@ Id: fr-core-person
 Title: "AssignedPerson"
 Description: "AssignedPerson permet de décrire une personne physique"
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
+* nullFlavor 0..0
 * classCode 0..0
 * determinerCode 0..0
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId 
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* name ^short = "Identité de la personne physique responsable"
 * name 1..1
 * name only fr-core-name
 * name.item.family ^short = "Nom de famille ou nom d’usage"

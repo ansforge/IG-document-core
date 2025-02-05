@@ -5,13 +5,13 @@ Id: fr-core-legal-authenticator
 Title: "legalAuthenticator"
 Description: "LegalAuthenticator représente les caractéristiques du professionnel et/ou de l'établissement participant."
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* typeCode 0..0 // Interdire l’attribut @typeCode
-* contextControlCode 0..0 // Interdire l’attribut @contextControlCode
-* sdtcSignatureText 0..0 // Interdire l'élément sdtcSignatureText
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* typeCode 0..0
+* contextControlCode 0..0
+* sdtcSignatureText 0..0
 * time ^short = "Date et heure de la prise de responsabilité" 
 * time.value ^short = "Date et heure de la prise de responsabilité précisée à la seconde avec précision du décalage par rapport au temps universel (UTC)"
 * signatureCode ^short = "signatureCode confirme la prise la responsabilité du document."

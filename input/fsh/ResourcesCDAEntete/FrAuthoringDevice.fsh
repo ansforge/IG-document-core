@@ -5,10 +5,12 @@ Id: fr-core-authoring-device
 Title: "authoringDevice"
 Description: "authoringDevice contient les informations complémentaires si l’auteur est un système."
 * ^status = #draft
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
 * classCode 0..0
 * determinerCode 0..0
+* manufacturerModelName ^short = "Nom du modèle du système."
 * manufacturerModelName 1..1
+* softwareName ^short = "Nom du système."
 * softwareName 1..1

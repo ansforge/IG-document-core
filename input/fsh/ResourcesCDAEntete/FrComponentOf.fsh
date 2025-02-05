@@ -5,11 +5,11 @@ Id: fr-core-component-of
 Title: "componentOf"
 Description: "componentOf permet d'associer le document à une prise en charge du patient/usager." 
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* typeCode 0..0 // Interdire l’attribut @typeCode
+* nullFlavor 0..0
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* typeCode 0..0
 * encompassingEncounter only fr-core-encompassing-encounter	
 * encompassingEncounter	 ^short = "Prise en charge"

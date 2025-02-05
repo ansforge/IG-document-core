@@ -5,8 +5,8 @@ Id: fr-core-parent-document
 Title: "parentDocument"
 Description: "Document de référence." 
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* id.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans id
+* nullFlavor 0..0
+* id.nullFlavor 0..0 
 * id 1..1
 * id ^short = "Identifiant unique du document de référence"
 * id.assigningAuthorityName	0..0

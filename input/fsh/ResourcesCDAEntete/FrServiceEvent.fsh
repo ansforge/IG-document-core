@@ -32,10 +32,10 @@ Pour les documents d’expression personnelle du patient/usager :
 * code.code 1..1
 * code.codeSystem 1..1
 * code.displayName 1..1
-* code.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans code
-* code.codeSystemVersion 0..0 // Interdire l’attribut @codeSystemVersion dans code
-* code.sdtcValueSet 0..0 // Interdire l’attribut @sdtcValueSet dans code
-* code.sdtcValueSetVersion 0..0 // Interdire l’attribut @sdtcValueSetVersion dans code
+* code.nullFlavor 0..0 
+* code.codeSystemVersion 0..0
+* code.sdtcValueSet 0..0
+* code.sdtcValueSetVersion 0..0
 * code.translation ^short = "Obligatoire pour :
 - un CR d’imagerie
 - un CR d’examen de l’enfant"

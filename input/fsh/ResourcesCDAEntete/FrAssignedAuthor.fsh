@@ -5,13 +5,19 @@ Id: fr-core-assigned-author
 Title: "assignedAuthor"
 Description: "assignedAuthor contient les éléments permettant de décrire l’auteur."
 * ^status = #draft
-* nullFlavor 0..0 // interdire le nullFlavor dans assignedAuthor
-* typeId.nullFlavor 0..0 // Interdit l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdit l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdit l’attribut @displayable dans typeId
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
 * classCode 0..0
 * sdtcIdentifiedBy 0..0
-* id.nullFlavor 0..0 // interdire le nullFlavor dans assignedAuthor.id
+* id ^short = "Identifiant de l’auteur : 
+- Obligatoire pour un professionnel 
+- Obligatoire pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP"
+* id.nullFlavor 0..0
 * id.root 1..1
 * id.root ^short = "- Pour un professionnel : '1.2.250.1.71.4.2.1'
 - Pour le patient/usager : OID de l'autorité d'affectation de l'INS
@@ -22,7 +28,34 @@ Description: "assignedAuthor contient les éléments permettant de décrire l’
 * id.extension ^short = "Valeur de l’identifiant"
 * id.assigningAuthorityName	0..0
 * id.displayable 0..0
+* code ^short = "Profession / savoir-faire ou rôle : 
+- Obligatoire pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP"
 * code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)
+* addr ^short = "Adresse géopostale de l’auteur"
+* telecom ^short = "Coordonnées télécom de l’auteur"
+* assignedPerson ^short = "Identité de l’auteur :  
+- Obligatoire pour un professionnel 
+- Obligatoire pour le patient/usager 
+- Ne pas utiliser pour un système de structure 
+- Ne pas utiliser pour un SNR 
+- Ne pas utiliser pour le DP"
 * assignedPerson only fr-core-person
+* assignedAuthoringDevice ^short = "Informations complémentaires si l’auteur est 
+un système :
+- Ne pas utiliser pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP"
 * assignedAuthoringDevice only fr-core-authoring-device
+* representedOrganization ^short = "Structure correspondante : 
+- Obligatoire pour un professionnel 
+- Ne pas utiliser pour le patient/usager 
+- Obligatoire pour un système de structure 
+- Obligatoire pour un SNR 
+- Obligatoire pour le DP"
 * representedOrganization only fr-core-represented-organization

@@ -5,10 +5,10 @@ Id: fr-core-authorization
 Title: "authorization"
 Description: "Authorization, permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."
 * ^status = #draft
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* typeCode 0..0 // Interdire l’attribut @typeCode
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* typeCode 0..0
 * consent ^short = "Consentement"
 * consent.id ^short = "Identifiant du consentement"
 * consent.code ^short = "Type de consentement"

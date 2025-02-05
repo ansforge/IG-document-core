@@ -5,12 +5,12 @@ Id: fr-core-authenticator
 Title: "authenticator"
 Description: "Authenticator, professionnel (personne physique) attestant la validité du contenu du document."
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* typeCode 0..0 // Interdire l’attribut @typeCode
-* sdtcSignatureText 0..0 // Interdire l'élément sdtcSignatureText
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* typeCode 0..0
+* sdtcSignatureText 0..0
 * signatureCode ^short = "signatureCode signifie que le professionnel a validé les informations portées sur le document."
 * signatureCode.sdtcValueSet 0..0
 * signatureCode.sdtcValueSetVersion 0..0

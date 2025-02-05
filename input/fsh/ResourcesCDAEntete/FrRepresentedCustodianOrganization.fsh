@@ -5,10 +5,21 @@ Id: fr-core-represented-custodian-organization
 Title: "representedCustodianOrganization"
 Description: "representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."
 * ^status = #draft
-* classCode 0..0 // Interdire l’attribut @classCode
-* determinerCode 0..0 // Interdire l’attribut @determinerCode
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0 // Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* classCode 0..0
+* determinerCode 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0 
+* typeId.displayable 0..0
+* id ^short = "Identifiant de la structure."
 * id 1..1 // modifier la cardinalité de l'élément id 1..* ==> 1..1
-* sdtcTelecom 0..0 // Interdire l'élément sdtcTelecom
+  * root ^short = "- Pour une structure sanitaire ou médico-sociale : valeur fixée à '1.2.250.1.71.4.2.2' 
+- Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : 
+valeur fixée à '1.2.250.1.213.4.1'"
+  * extension ^short = "- Pour une structure sanitaire ou médico-sociale : valeur de Struct_idNat (voir annexe [6]) 
+- Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : Non renseigné"
+* name ^short = "Nom de la structure : 
+- Pour une structure sanitaire ou médico-sociale : valeur de Struct_Nom (voir annexe [6]) 
+- Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : valeur fixée à 'DMP'"
+* telecom ^short = "Coordonnées télécom de la structure."
+* addr ^short = "Adresse géopostale de la structure."
+* sdtcTelecom 0..0

@@ -5,10 +5,10 @@ Id: fr-core-associated-entity
 Title: "associatedEntity"
 Description: "AssociatedEntity représente les caractéristiques du professionnel et/ou de l'établissement participant."
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0 
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
 * sdtcIdentifiedBy 0..0
 * classCode from https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS (required)
 * classCode ^short = "PS / Non PS La valeur doit être issue du JDV_J141_RoleClass_CISIS (1.2.250.1.213.1.1.5.588)."
