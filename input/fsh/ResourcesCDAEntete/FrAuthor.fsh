@@ -11,7 +11,7 @@ Description: "author permet d’enregistrer un auteur du document."
 * typeId.displayable 0..0
 * typeCode 0..0
 * contextControlCode 0..0
-* functionCode ^short = "Rôle fonctionnel de l'auteur. A utiliser uniquement si l'auteur est un professionnel."
+* functionCode ^short = "Rôle fonctionnel de l'auteur."
 * functionCode.code from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS (required)
 * functionCode.nullFlavor 0..0
 * functionCode.code 1..1 // Rendre le code en obligatoire si functionCode existe

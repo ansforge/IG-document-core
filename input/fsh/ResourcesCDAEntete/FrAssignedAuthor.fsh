@@ -26,7 +26,7 @@ Description: "assignedAuthor contient les éléments permettant de décrire l’
 - Pour le DP : '1.2.250.1.71.4.2.1'"
 * id.extension 1..1
 * id.extension ^short = "Valeur de l’identifiant"
-* id.assigningAuthorityName	0..0
+* id.assigningAuthorityName 0..0
 * id.displayable 0..0
 * code ^short = "Profession / savoir-faire ou rôle : 
 - Obligatoire pour un professionnel 

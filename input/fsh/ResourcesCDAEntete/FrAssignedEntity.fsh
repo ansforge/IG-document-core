@@ -27,7 +27,7 @@ Description: "AssignedEntity est utilisé dans les éléments suivants : dataEnt
 * id.extension ^short = "Valeur de l’identifiant.
 - Pour le PS, valeur de PS_IdNat (voir CI-SIS_ANX_SOURCES-DONNEES-PERSONNES-STRUCTURES).
 - Pour le patient/usager, valeur de l'INS du patient/usager."
-* id.assigningAuthorityName	0..0
+* id.assigningAuthorityName 0..0
 * id.displayable 0..0
 * sdtcIdentifiedBy 0..0
 * sdtcPatient 0..0
