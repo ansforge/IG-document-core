@@ -3,7 +3,7 @@ Profile: FrAssignedAuthor
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor
 Id: fr-core-assigned-author
 Title: "assignedAuthor"
-Description: "assignedAuthor contient les éléments permettant de décrire l’auteur."
+Description: "L'élément de l'en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur."
 * ^status = #draft
 * nullFlavor 0..0
 * typeId.nullFlavor 0..0

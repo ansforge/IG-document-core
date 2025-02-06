@@ -3,7 +3,7 @@ Profile: FrRelatedDocument
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/RelatedDocument
 Id: fr-core-related-document
 Title: "relatedDocument"
-Description: "RelatedDocument référence un document existant (à remplacer ou transformé)." 
+Description: "L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)." 
 * ^status = #draft
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0

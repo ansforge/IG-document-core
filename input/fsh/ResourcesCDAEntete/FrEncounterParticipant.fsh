@@ -3,8 +3,7 @@ Profile: FrEncounterParticipant
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/EncounterParticipant
 Id: fr-core-encounter-participant
 Title: "encounterParticipant"
-Description: "encounterParticipant représente une personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel 
-ayant donné son avis quant à la prise en charge." 
+Description: "L'élément de l'en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel ayant donné son avis quant à la prise en charge." 
 * ^status = #draft
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0

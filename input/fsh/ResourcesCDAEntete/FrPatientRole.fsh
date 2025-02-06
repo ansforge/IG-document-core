@@ -2,8 +2,8 @@
 Profile: FrPatientRole
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/PatientRole
 Id: fr-core-patient-role
-Title: "PatientRole"
-Description: "Description du patient/usager"
+Title: "patientRole"
+Description: "L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager."
 * ^status = #draft
 * nullFlavor 0..0
 * realmCode 0..0

@@ -3,7 +3,7 @@ Profile: FrAssignedEntity
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssignedEntity
 Id: fr-core-assigned-entity
 Title: "assignedEntity"
-Description: "AssignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."
+Description: "L'élément de l'en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."
 * ^status = #draft
 * nullFlavor 0..0
 * typeId.nullFlavor 0..0

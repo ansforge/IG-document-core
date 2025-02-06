@@ -3,7 +3,7 @@ Profile: FrInformant
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Informant
 Id: fr-core-informant
 Title: "informant"
-Description: "Informateur / personne de confiance / personne à prévenir en cas d’urgence / aidant / personne aidée."
+Description: "L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."
 * ^status = #draft
 * nullFlavor 0..0
 * typeId.nullFlavor 0..0

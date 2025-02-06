@@ -3,7 +3,7 @@ Profile: FrEncompassingEncounter
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/EncompassingEncounter
 Id: fr-core-encompassing-encounter 
 Title: "encompassingEncounter"
-Description: "encompassingEncounter décrit la prise en charge du patient/usager par un professionnel ou par une structure." 
+Description: "L'élément de l'en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure." 
 * ^status = #draft
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0

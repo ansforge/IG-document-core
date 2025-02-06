@@ -3,7 +3,7 @@ Profile: FrAuthenticator
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Authenticator
 Id: fr-core-authenticator
 Title: "authenticator"
-Description: "Authenticator, professionnel (personne physique) attestant la validité du contenu du document."
+Description: "L'élément de l'en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document."
 * ^status = #draft
 * nullFlavor 0..0
 * typeId.nullFlavor 0..0
