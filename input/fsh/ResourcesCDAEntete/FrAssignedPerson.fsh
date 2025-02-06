@@ -25,4 +25,4 @@ Description: "L'élément de l'en-tête du CDA assignedPerson permet de décrire
 * name.item.suffix 0..1
 * name.item.suffix from https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS
 * sdtcDesc 0..0
-* sdtcAsPatientRelationship	0..0
+* sdtcAsPatientRelationship 0..0
