@@ -40,9 +40,10 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -96,23 +97,58 @@
     <a href="index.html">Accueil</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Description des flux
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Structure générale document
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="ressourcesCDA-struc-gen.html">CDA</a>
       </li>
       <li>
-        <a href="st_flux1.html">Flux 01</a>
+        <a href="ressourcesFHIR-struc-gen.html">FHIR</a>
       </li>
       <li>
-        <a href="st_flux2.html">Flux 02</a>
+        <a href="mappingCDA-FHIR-struc-gen.html">Mapping CDA / FHIR</a>
       </li>
     </ul>
   </li>
-  <li>
-    <a href="artifacts.html">Ressources de conformité</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Entête document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modelesLogiquesMetier-entete.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="ressourcesCDA-entete.html">CDA</a>
+      </li>
+      <li>
+        <a href="ressourcesFHIR-entete.html">FHIR</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-entete.html">Mapping CDA / FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Corps d&apos;un document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modelesLogiquesMetier-corps.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="ressourcesCDA-corps.html">CDA</a>
+      </li>
+      <li>
+        <a href="ressourcesFHIR-corps.html">FHIR</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-corps.html">Mapping CDA / FHIR</a>
+      </li>
+    </ul>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
@@ -131,20 +167,10 @@
       <li>
         <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
       </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Structuration minimale
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
       <li>
-        <a href="ressourcesCDA.html">Ressources CDA</a>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
       </li>
     </ul>
-  </li>
-  <li>
-    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -162,9 +188,11 @@
 
           <span style="float:right;">
 
-            <a href="modelesLogiques.html">&lt;prev</a> | 
+            <a href="downloads.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
+
+          | <a href="StructureDefinition-fr-core-assigned-author.html">next&gt;</a>
 
           </span>
 
@@ -196,12 +224,331 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:html="http://www.w3.org/1999/xhtml"
      class="markdown-toc">
    <p>Contents:</p>
-   <ul/>
+   <ul>
+      <li>
+         <a href="#1">Other</a>
+      </li>
+   </ul>
 </div>
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:f="http://hl7.org/fhir"
      xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Other </h3>
+    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-assigned-author.html"
+                  title="StructureDefinition/fr-core-assigned-author">assignedAuthor</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-assigned-custodian.html"
+                  title="StructureDefinition/fr-core-assigned-custodian">assignedCustodian</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-assigned-entity.html"
+                  title="StructureDefinition/fr-core-assigned-entity">assignedEntity</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-person.html"
+                  title="StructureDefinition/fr-core-person">assignedPerson</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA assignedPerson permet de décrire une personne physique.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-associated-entity.html"
+                  title="StructureDefinition/fr-core-associated-entity">associatedEntity</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-authenticator.html"
+                  title="StructureDefinition/fr-core-authenticator">authenticator</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-author.html"
+                  title="StructureDefinition/fr-core-author">author</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA author permet d’enregistrer un auteur du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-authoring-device.html"
+                  title="StructureDefinition/fr-core-authoring-device">authoringDevice</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-authorization.html"
+                  title="StructureDefinition/fr-core-authorization">authorization</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA authorization permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-component-of.html"
+                  title="StructureDefinition/fr-core-component-of">componentOf</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA componentOf permet d’associer le document à une prise en charge du patient/usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-custodian.html"
+                  title="StructureDefinition/fr-core-custodian">custodian</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-data-enterer.html"
+                  title="StructureDefinition/fr-core-data-enterer">dataEnterer</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-documentation-of.html"
+                  title="StructureDefinition/fr-core-documentation-of">documentationOf</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-encompassing-encounter.html"
+                  title="StructureDefinition/fr-core-encompassing-encounter">encompassingEncounter</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-encounter-participant.html"
+                  title="StructureDefinition/fr-core-encounter-participant">encounterParticipant</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-health-care-facility.html"
+                  title="StructureDefinition/fr-core-health-care-facility">healthCareFacility</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-inFulfillment-of.html"
+                  title="StructureDefinition/fr-core-inFulfillment-of">inFulfillmentOf</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-informant.html"
+                  title="StructureDefinition/fr-core-informant">informant</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA informant permet d’identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-information-recipient.html"
+                  title="StructureDefinition/fr-core-information-recipient">informationRecipient</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA informationRecipient permet d’enregistrer une personne déclarée comme destinataire prévu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-intended-recipient.html"
+                  title="StructureDefinition/fr-core-intended-recipient">intendedRecipient</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA intendedRecipient permet d’enregistrer le destinataire prévu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-legal-authenticator.html"
+                  title="StructureDefinition/fr-core-legal-authenticator">legalAuthenticator</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-name.html"
+                  title="StructureDefinition/fr-core-name">name</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA name correspond au nom d’une personne physique.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-order.html"
+                  title="StructureDefinition/fr-core-order">order</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-parent-document.html"
+                  title="StructureDefinition/fr-core-parent-document">parentDocument</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA parentDocument permet de représenter le document de référence.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-participant.html"
+                  title="StructureDefinition/fr-core-participant">participant</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-patient.html"
+                  title="StructureDefinition/fr-core-patient">patient</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA patient permet de représenter une personne physique.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-patient-role.html"
+                  title="StructureDefinition/fr-core-patient-role">patientRole</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA patientRole permet de décrire le patient/usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-performer.html"
+                  title="StructureDefinition/fr-core-performer">performer</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA performer permet de représenter l’exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-record-target.html"
+                  title="StructureDefinition/fr-core-record-target">recordTarget</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-related-document.html"
+                  title="StructureDefinition/fr-core-related-document">relatedDocument</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-related-entity.html"
+                  title="StructureDefinition/fr-core-related-entity">relatedEntity</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-represented-custodian-organization.html"
+                  title="StructureDefinition/fr-core-represented-custodian-organization">representedCustodianOrganization</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l’identifiant, le nom, les adresses géopostales et de télécommunication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-represented-organization.html"
+                  title="StructureDefinition/fr-core-represented-organization">representedOrganization</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-service-event.html"
+                  title="StructureDefinition/fr-core-service-event">serviceEvent</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
+L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -224,7 +571,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="modelesLogiques.html">&lt;prev</a>
+                <a href="downloads.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -232,7 +579,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <span style="visibility:hidden">next&gt;</span>
+                <a href="StructureDefinition-fr-core-assigned-author.html">next&gt;</a>
 
               </td>
             </tr>
@@ -242,7 +589,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 26, 2024 09:49+0000">2024-12-26</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 12, 2025 11:57+0000">2025-02-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
