@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				consentement-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model	: consentement-document				
 Logical: ConsentementDocument		
 Title: "1.13- Consentement associé au document"	
 //Id: fr-consentement-documente			

@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				Patient.fsh
-// -------------------------------------------------------------------------------				
+	//  Logical Model : patient	
 Logical: PatientDocument							
 Title: "1.1- Patient / Usager"				
 Description:  """Patient/Usager concerné par le document."""
@@ -36,7 +34,4 @@ Characteristics: #can-be-target
           * lieu 1..1 BackboneElement "Lieu de naissance."
             * nomLieuNaissance 0..1 string "Nom du lieu de naissance du patient/usager."
             * adresseEtCodeOfficielGeographique 0..1 Address "Adresse et code officiel géographique du lieu de naissance."
-              * CodeOfficielGeographique 0..1 string "Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance."
-//--- END				
-//--- END				
-//--- END				
+              * CodeOfficielGeographique 0..1 string "Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance."		

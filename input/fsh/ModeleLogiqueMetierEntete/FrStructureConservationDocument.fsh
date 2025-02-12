@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				structure-conservation-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : structure-conservation-document			
 Logical: StructureConservationDocument			
 Title: "1.4- Structure chargée de la conservation du document"	
 //Id: fr-structure-conservation-document			

@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				participant-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : participant-document		
 Logical: ParticipantDocument			
 Title: "1.9- Autres personnes / structures impliquées"	
 //Id: fr-participant-document			

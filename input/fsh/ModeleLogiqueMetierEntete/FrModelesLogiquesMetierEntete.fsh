@@ -1,11 +1,11 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				entete-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : entete-document				
 Logical: EnteteDocument							
 Title: "1- Modèle logique métier de l'en-tête"				
 Description:  """Eléments de l'en-tête contenat les données d'indentification du document."""										
 * identifiantUniqueDocument 1..1 Identifier "Identifiant unique du document."
-* typeDocument 1..1 CodeableConcept "Type de document."				
+* modeleDocument 1..1 Identifier "Modèle du document et version du modèle."
+* typeDocument 1..1 CodeableConcept "Type de document."	
+* titreDocument 1..1 string "Titre du document."			
 * dateDeCreation 1..1 dateTime "Date de création du document."				
 * niveauConfidentialite 1..1 CodeableConcept  "Niveau de confidentialité du document."				
 * languePrincipaleDocument 1..1 CodeableConcept "Langue principale du document."
@@ -25,7 +25,4 @@ Description:  """Eléments de l'en-tête contenat les données d'indentification
 * evenementDocumente 1..* EvenementDocumente "1.11- Evènement documenté et notamment le cadre d'exercice."				
 * documentReference 0..1 DocumentReference "1.12- Document de référence."
 * consentementAssocieAuDocument 0..* ConsentementDocument "1.13- Consentement associé au document."
-* associationPriseEncharge 1..1 AssociationPriseEncharge "1.14- Association du document à une prise en charge."
-//--- END				
-//--- END				
-//--- END				
+* associationPriseEncharge 1..1 AssociationPriseEncharge "1.14- Association du document à une prise en charge."			

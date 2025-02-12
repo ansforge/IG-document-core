@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				association-prise-en-charge.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : association-prise-en-charge		
 Logical: AssociationPriseEncharge		
 Title: "1.14- Association du document à une prise en charge"	
 //Id: fr-association-prise-en-charge.			

@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				responsable-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : responsable-document			
 Logical: ResponsableDocument			
 Title: "1.6- Responsable du document"	
 //Id: fr-responsable-document			

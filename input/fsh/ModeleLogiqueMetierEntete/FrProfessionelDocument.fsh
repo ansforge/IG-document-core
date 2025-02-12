@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				professionnel-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : professionnel-document			
 Logical: ProfessionnelDocument			
 Title: "1.3.1- Professionnel / Structure"	
 //Id: fr-professionnel-document			
@@ -21,8 +19,4 @@ Characteristics: #can-be-target
   * nomStructure 0..1 string "Nom de la structure."
   * coordonneesTelecomStructure 0..* ContactPoint "Coordonnées télécom."
   * adresseStructure  0..* Address "Addresse."	
-  * cadreExercice 0..1 CodeableConcept	"Cadre d'exercice."
-//--- END				
-//--- END				
-//--- END				
-//--- END				
+  * cadreExercice 0..1 CodeableConcept	"Cadre d'exercice."			

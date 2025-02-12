@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				auteurSysteme.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : auteur-systeme	
 Logical: SystemeDocument			
 Title: "1.2.2- Système"	
 //Id: fr-auteur-systeme	
@@ -14,8 +12,4 @@ Characteristics: #can-be-target
     * nomSysteme 1..1 string "Nom du système."
   * structure 1..1 BackboneElement "Structure."	
     * identifiantStructure 0..1 Identifier "Identifiant de la structure."
-    * nomStructure 0..1 string "Nom de la structure."
-//--- END				
-//--- END				
-//--- END				
-//--- END				
+    * nomStructure 0..1 string "Nom de la structure."		

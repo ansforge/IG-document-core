@@ -1,13 +1,10 @@
-//===================================
+// StructureDefinition for bundle-document
 /// INVARIANTS
-//===================================
 Invariant:  bdle-document-1
 Description: "Un Bundle DOIT inclure une et une seule ressource Composition."
 Expression: "entry.resource.ofType(Composition).count() = 1"
 Severity:    #error
-//==========================
 // PROFILE
-//==========================
 Profile: FrBundleDocument
 Parent: Bundle
 Id: fr-bundle-document
@@ -18,7 +15,7 @@ Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le c
 * obeys bdle-document-1
 * identifier 1..
 * type = #document (exactly)
-* timestamp 1..
+* timestamp 1..1
 * entry MS
 // Slicing sur entry
 * entry ^slicing.discriminator[0].type = #type
@@ -39,3 +36,6 @@ Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le c
 // Définition de l'entrée patient
 * entry contains patient 0..1
 * entry[patient].resource only FrPatientFHIRDocument
+// Définition de l'entrée practitionerRole
+* entry contains auteur 1..*
+* entry[auteur].resource only FrPractitionerRoleDocument

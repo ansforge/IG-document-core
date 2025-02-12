@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				evenement-documente.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : evenement-documente				
 Logical: EvenementDocumente		
 Title: "1.11- Évènement documenté"	
 //Id: fr-evenement-documente			

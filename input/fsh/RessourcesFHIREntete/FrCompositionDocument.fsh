@@ -1,3 +1,4 @@
+// StructureDefinition for composition-document
 Profile: FrCompositionDocument
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: fr-Composition-document
@@ -5,7 +6,15 @@ Title: "FrCompositionDocument"
 Description: "Clinical document utilisé pour représenter un document FHIR."
 * . ^short = "Clinical document"
 * . ^definition = "Clinical document."
-* identifier MS
+//Composition.meta.profile : templateId
+* meta.profile ^slicing.discriminator.type = #value
+* meta.profile ^slicing.discriminator.path = "$this"
+* meta.profile ^slicing.rules = #open
+* meta.profile ^slicing.description = "Modèle du document et version du modèle"
+* meta.profile contains canonical 1..1
+* meta.profile[canonical] = Canonical(fr-Composition-document)
+
+* identifier 1..1 MS
 * identifier ^short = "Identifiant lot de versions"
 * status MS
 * status ^short = "Statut du document"
@@ -21,11 +30,13 @@ Description: "Clinical document utilisé pour représenter un document FHIR."
 * subject.reference 1.. MS
 * date MS
 * date ^short = "Date de création"
-* confidentiality MS
+* confidentiality 1..1 MS
 * confidentiality ^short = "Niveau de confidentialité"
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document.Un document peut avoir un ou plusieurs auteurs."
+* author only Reference(FrPractitionerRoleDocument)
+* author.extension contains fr-core-author-time named time 1..1
 * attester MS
 * attester.mode MS
 * attester.time MS

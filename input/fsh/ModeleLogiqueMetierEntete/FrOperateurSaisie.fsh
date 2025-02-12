@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				operateur-saisie.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : operateur-saisie		
 Logical: OperateurSaisie			
 Title: "1.8- Opérateur de saisie"	
 //Id: fr-operateur-saisie			

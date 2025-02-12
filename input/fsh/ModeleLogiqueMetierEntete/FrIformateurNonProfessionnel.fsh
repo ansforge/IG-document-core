@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				informateur-non-professionnel.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : informateur-non-professionnel			
 Logical: NonProfessionnelDocument			
 Title: "1.3.2- Informateur non professionnel"	
 //Id: fr-informateur-non-professionnel			

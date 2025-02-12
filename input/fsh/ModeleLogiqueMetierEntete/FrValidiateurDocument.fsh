@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				validateur-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : validateur-document			
 Logical: ValidateurDocument			
 Title: "1.7- Validateur du document"	
 //Id: fr-validateur-document			

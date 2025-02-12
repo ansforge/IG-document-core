@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				document-reference.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : document-reference	
 Logical: DocumentReference			
 Title: "1.12- Document de référence"	
 //Id: fr-document-reference			

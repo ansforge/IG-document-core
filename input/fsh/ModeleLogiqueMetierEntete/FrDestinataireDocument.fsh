@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				destinataire-prevu-document.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model				destinataire-prevu-document			
 Logical: DestinatairePrevuDocument			
 Title: "1.5- Destinataire prévu du document"	
 //Id: fr-destinataire-prevu-document			

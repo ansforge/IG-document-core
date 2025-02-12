@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------------------				
-//  Logical Model				professionnel-auteur.fsh
-// -------------------------------------------------------------------------------				
+//  Logical Model : professionnel-auteur			
 Logical: ProfessionnelAuteurDocument			
 Title: "1.2.1- Professionnel (Auteur du document)"	
 //Id: fr-professionnel-auteur-document			
@@ -19,8 +17,4 @@ Characteristics: #can-be-target
       * titre 0..1  string "Titre."		 		
   * structure 1..1 BackboneElement "Structure."	 		
     * identifiantStructure 0..1 Identifier "Identifiant de la structure."		 		
-    * nomStructure 0..1 string "Nom de la structure."		 		
-//--- END				
-//--- END				
-//--- END				
-//--- END				
+    * nomStructure 0..1 string "Nom de la structure."		 				
