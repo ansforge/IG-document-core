@@ -33,7 +33,7 @@ Le prologue d'un document CDA R2 comporte :
 * Au minimum une ligne pour l'encodage du document XML
 * Une ligne complémentaire si une feuille de style personnalisée est couplée au document CDA (non préconisé en France).
 ##### Encodage du document XML
-L’encodage spécifié dans le prologue du document, est obligatoirement UTF-8. C’est l’encodage par défaut pour un document XML.
+L’encodage spécifié dans le prologue du document est obligatoirement UTF-8. C’est l’encodage par défaut pour un document XML.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 ```
