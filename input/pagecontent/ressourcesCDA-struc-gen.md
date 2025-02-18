@@ -357,7 +357,7 @@ Exemples :
 * si `typeCode="RSON"` et `inversionInd="true"`, alors SOURCE est la raison de TARGET.
 
 ##### nullFlavor
-Lorsqu’une donnée est obligatoire mais que l’on ne connaît pas la valeur de cette donnée lors de l’élaboration du document, il est possible d’utiliser un attribut nullFlavor qui permet d'indiquer la raison pour laquelle la valeur ne peut être fournie.
+Lorsqu’une donnée est obligatoire mais que l’on ne connaît pas la valeur de cette donnée lors de l’élaboration du document, il est possible d’utiliser un attribut `nullFlavor` qui permet d'indiquer la raison pour laquelle la valeur ne peut être fournie.
 Par exemple, la date de début d’un problème est obligatoire (cardinalité [1..1]) mais le médecin ne la connait pas au moment de la rédaction du document. Dans ce cas, on peut utiliser un nullFlavor :
 `<low nullFlavor='UNK'>`
 Dans certains cas, l'utilisation de la valeur nullFlavor n’est pas autorisée pour obliger à fournir une valeur ayant une signification précise dans le contexte. Dans ce cas, les spécifications doivent préciser que l’utilisation du nullFLavor est interdite.
