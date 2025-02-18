@@ -10,10 +10,11 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActClass"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
       "StructureDefinition-fr-core-authorization.html" : "authorization",
-      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
-      "StructureDefinition-fr-core-order.html" : "order"
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-order.html" : "order",
+      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActMood",
@@ -25,9 +26,10 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActMood"],
       "uses" : {
       },
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
       "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
       "StructureDefinition-fr-core-parent-document.html" : "parentDocument",
-      "StructureDefinition-fr-core-authorization.html" : "authorization",
       "StructureDefinition-fr-core-service-event.html" : "serviceEvent"
     },
     {
@@ -66,12 +68,12 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ContextControl"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
-      "StructureDefinition-fr-core-informant.html" : "informant",
-      "StructureDefinition-fr-core-participant.html" : "participant",
       "StructureDefinition-fr-core-author.html" : "author",
       "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
-      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator"
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAEntityCode",
@@ -98,8 +100,9 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-name.html" : "name",
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson"
+      "StructureDefinition-fr-core-patient.html" : "patient",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-name.html" : "name"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAInformationRecipientRole",
@@ -111,7 +114,7 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-intended-recipient.html" : "IntendedRecipient"
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor",
@@ -123,38 +126,41 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
-      "StructureDefinition-fr-core-custodian.html" : "custodian",
-      "StructureDefinition-fr-core-participant.html" : "participant",
-      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
-      "StructureDefinition-fr-core-parent-document.html" : "parentDocument",
-      "StructureDefinition-fr-core-related-document.html" : "relatedDocument",
-      "StructureDefinition-fr-core-performer.html" : "performer",
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson",
-      "StructureDefinition-fr-core-patient-role.html" : "PatientRole",
-      "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
-      "StructureDefinition-fr-core-information-recipient.html" : "informationRecipient",
-      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
-      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
-      "StructureDefinition-fr-core-authorization.html" : "authorization",
-      "StructureDefinition-fr-core-patient.html" : "patient",
-      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
-      "StructureDefinition-fr-core-order.html" : "order",
-      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity",
-      "StructureDefinition-fr-core-component-of.html" : "componentOf",
-      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
-      "StructureDefinition-fr-core-informant.html" : "informant",
-      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
-      "StructureDefinition-fr-core-intended-recipient.html" : "IntendedRecipient",
-      "StructureDefinition-fr-core-related-entity.html" : "RelatedEntity",
-      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
-      "StructureDefinition-fr-core-documentation-of.html" : "documentationOf",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
       "StructureDefinition-fr-core-inFulfillment-of.html" : "inFulfillmentOf",
+      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
+      "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-custodian.html" : "custodian",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant",
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility",
+      "StructureDefinition-fr-core-documentation-of.html" : "documentationOf",
+      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity",
       "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice",
-      "StructureDefinition-fr-core-name.html" : "name",
-      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument",
+      "StructureDefinition-fr-core-patient-role.html" : "patientRole",
       "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
-      "StructureDefinition-fr-core-authenticator.html" : "authenticator"
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-related-document.html" : "relatedDocument",
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
+      "StructureDefinition-fr-core-component-of.html" : "componentOf",
+      "StructureDefinition-fr-core-patient.html" : "patient",
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-information-recipient.html" : "informationRecipient",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
+      "StructureDefinition-fr-core-authenticator.html" : "authenticator",
+      "StructureDefinition-fr-core-name.html" : "name",
+      "StructureDefinition-fr-core-order.html" : "order"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType",
@@ -166,25 +172,15 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
-      "StructureDefinition-fr-core-custodian.html" : "custodian",
-      "StructureDefinition-fr-core-informant.html" : "informant",
       "StructureDefinition-fr-core-author.html" : "author",
       "StructureDefinition-fr-core-authenticator.html" : "authenticator",
       "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
-      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator"
-    },
-    {
-      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDARoleClassAssociative",
-      "version" : "2.0.0-sd",
-      "status" : "draft",
-      "name" : "CDARoleClassAssociative",
-      "title" : "CDARoleClassAssociative",
-      "description" : "A general association between two entities that is neither partitive nor ontological.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
-      "uses" : {
-      },
-      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity"
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-custodian.html" : "custodian",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDARoleClassMutualRelationship",
@@ -196,7 +192,7 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-related-entity.html" : "RelatedEntity"
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity"
     },
     {
       "url" : "http://hl7.org/cda/stds/core/ValueSet/CDARoleCode",
@@ -208,7 +204,6 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
       "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity"
     },
     {
@@ -279,8 +274,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
-      "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument"
+      "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument",
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/all-languages",
@@ -336,8 +331,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
-      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument"
+      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument",
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
@@ -449,9 +444,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.240"],
       "uses" : {
       },
+      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument",
       "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
-      "StructureDefinition-fr-core-parent-document.html" : "parentDocument",
-      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument"
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
@@ -535,13 +530,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
       "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument",
-      "StructureDefinition-fr-practitionerRole-document.html" : "FrPractitionerRoleDocument",
-      "StructureDefinition-fr-Organization-document.html" : "FrOrganizationDocument",
       "StructureDefinition-fr-bundle-document.html" : "FrBundleDocument",
-      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument",
-      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument"
+      "StructureDefinition-fr-Organization-document.html" : "FrOrganizationDocument",
+      "StructureDefinition-fr-practitionerRole-document.html" : "FrPractitionerRoleDocument",
+      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument",
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
+      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -569,8 +564,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.65"],
       "uses" : {
       },
-      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
-      "StructureDefinition-fr-human-name-document.html" : "HumanNameDocument"
+      "StructureDefinition-fr-human-name-document.html" : "HumanNameDocument",
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/organization-type",
@@ -646,8 +641,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
-      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument"
+      "StructureDefinition-fr-Composition-document.html" : "FrCompositionDocument",
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/udi-entry-type",
@@ -765,8 +760,8 @@
       "sources" : ["2.16.840.1.113883.1.11.15933"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument",
-      "StructureDefinition-fr-core-authorization.html" : "authorization"
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-clinical-document.html" : "clinicalDocument"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
@@ -809,7 +804,7 @@
       "uses" : {
       },
       "StructureDefinition-fr-core-patient.html" : "patient",
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson"
+      "StructureDefinition-fr-core-person.html" : "assignedPerson"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-EntityClassOrganization",
@@ -823,9 +818,9 @@
       "sources" : ["2.16.840.1.113883.1.11.10889"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
-      "StructureDefinition-fr-core-intended-recipient.html" : "IntendedRecipient",
-      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization"
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-EntityDeterminer",
@@ -839,12 +834,12 @@
       "sources" : ["2.16.840.1.113883.1.11.10878"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
-      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice",
-      "StructureDefinition-fr-core-intended-recipient.html" : "IntendedRecipient",
-      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
       "StructureDefinition-fr-core-patient.html" : "patient",
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson"
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-Ethnicity",
@@ -891,6 +886,35 @@
       "StructureDefinition-fr-core-patient.html" : "patient"
     },
     {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-OrganizationIndustryClassNAICS",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "OrganizationIndustryClassNAICS",
+      "title" : "OrganizationIndustryClassNAICS",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/naics"],
+      "oids" : ["2.16.840.1.113883.1.11.19298"],
+      "sources" : ["2.16.840.1.113883.1.11.19298"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ParticipationTargetLocation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ParticipationTargetLocation",
+      "title" : "ParticipationTargetLocation",
+      "description" : "The facility where the service is done. May be a static building (or room therein) or a moving location (e.g., ambulance, helicopter, aircraft, train, truck, ship, etc.)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.1.11.10302"],
+      "sources" : ["2.16.840.1.113883.1.11.10302"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
+    },
+    {
       "url" : "http://terminology.hl7.org/ValueSet/v3-Race",
       "version" : "3.0.0",
       "status" : "active",
@@ -932,12 +956,12 @@
       "sources" : ["2.16.840.1.113883.1.11.11595"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
-      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
       "StructureDefinition-fr-core-performer.html" : "performer",
       "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
       "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
-      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity"
+      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity",
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal",
@@ -951,7 +975,21 @@
       "sources" : ["2.16.840.1.113883.1.11.10416"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-patient-role.html" : "PatientRole"
+      "StructureDefinition-fr-core-patient-role.html" : "patientRole"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-RoleClassServiceDeliveryLocation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "RoleClassServiceDeliveryLocation",
+      "title" : "RoleClassServiceDeliveryLocation",
+      "description" : "A role played by a place at which services may be provided.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "oids" : ["2.16.840.1.113883.1.11.16927"],
+      "sources" : ["2.16.840.1.113883.1.11.16927"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-SoftwareNameExample",
@@ -968,6 +1006,20 @@
       "uses" : {
       },
       "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "USEncounterDischargeDisposition",
+      "title" : "USEncounterDischargeDisposition",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/nubc-UB92"],
+      "oids" : ["2.16.840.1.113883.1.11.19453"],
+      "sources" : ["2.16.840.1.113883.1.11.19453"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-xActRelationshipDocument",
@@ -1011,8 +1063,8 @@
       "sources" : ["2.16.840.1.113883.1.11.19601"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
-      "StructureDefinition-fr-core-performer.html" : "performer"
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-marital-status",
@@ -1094,12 +1146,29 @@
       "uses" : {
       },
       "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument",
-      "StructureDefinition-fr-core-participant.html" : "participant",
-      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument",
-      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
       "StructureDefinition-fr-core-performer.html" : "performer",
       "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
-      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator"
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument",
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "title" : null,
+      "description" : "XDS healthcareFacilityTypeCode CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+        "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.466"],
+      "sources" : ["1.2.250.1.213.1.1.5.466"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS",
@@ -1116,8 +1185,8 @@
       "sources" : ["1.2.250.1.213.1.1.5.467"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
-      "StructureDefinition-fr-core-intended-recipient.html" : "IntendedRecipient"
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS",
@@ -1134,7 +1203,23 @@
       "sources" : ["1.2.250.1.213.3.3.16"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-related-entity.html" : "RelatedEntity"
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J140-EncounterParticipationType-CISIS",
+      "title" : null,
+      "description" : "JDV_J140-EncounterParticipationType-CISIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.528"],
+      "sources" : ["1.2.250.1.213.1.1.5.528"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS",
@@ -1150,7 +1235,24 @@
       "sources" : ["1.2.250.1.213.1.1.5.588"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-participant.html" : "participant"
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J142-TypeRencontre-CISIS/FHIR/JDV-J142-TypeRencontre-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J142-TypeRencontre-CISIS",
+      "title" : null,
+      "description" : "Type de prise en charge CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode",
+        "https://mos.esante.gouv.fr/NOS/TRE_R305-TypeRencontre/FHIR/TRE-R305-TypeRencontre"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.589"],
+      "sources" : ["1.2.250.1.213.1.1.5.589"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS",
@@ -1169,22 +1271,6 @@
       "StructureDefinition-fr-core-patient.html" : "patient"
     },
     {
-      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS",
-      "version" : "1.4.0",
-      "status" : "active",
-      "name" : "JDV_J144-ParticipationType-CISIS",
-      "title" : null,
-      "description" : "Type de participation CI-SIS",
-      "systems" : [
-        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
-      ],
-      "oids" : ["1.2.250.1.213.1.1.5.591"],
-      "sources" : ["1.2.250.1.213.1.1.5.591"],
-      "uses" : {
-      },
-      "StructureDefinition-fr-core-participant.html" : "participant"
-    },
-    {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS",
       "version" : "1.4.0",
       "status" : "active",
@@ -1198,7 +1284,7 @@
       "sources" : ["1.2.250.1.213.1.1.5.718"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
       "StructureDefinition-fr-human-name-document.html" : "HumanNameDocument"
     },
     {
@@ -1215,7 +1301,7 @@
       "sources" : ["1.2.250.1.213.1.1.5.719"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-person.html" : "AssignedPerson",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
       "StructureDefinition-fr-human-name-document.html" : "HumanNameDocument"
     },
     {
@@ -1234,9 +1320,9 @@
       "sources" : ["1.2.250.1.213.1.1.5.124"],
       "uses" : {
       },
+      "StructureDefinition-fr-core-author.html" : "author",
       "StructureDefinition-fr-practitionerRole-document.html" : "FrPractitionerRoleDocument",
-      "StructureDefinition-fr-core-participant.html" : "participant",
-      "StructureDefinition-fr-core-author.html" : "author"
+      "StructureDefinition-fr-core-participant.html" : "participant"
     }
   ]
 }
