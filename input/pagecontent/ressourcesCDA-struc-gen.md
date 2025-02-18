@@ -336,7 +336,7 @@ On considère que l’élément SOURCE est l'élément contenant la relation ent
 </div>
 
 ###### L’attribut typeCode d’un entryRelationship
-Les valeurs utilisées pour caractériser un élément entryRelationship avec l'attribut typeCode sont :
+Les valeurs utilisées pour caractériser un élément `entryRelationship` avec l'attribut `typeCode` sont :
 
 |-------|----------------------------------------------|
 | XRCPT | SOURCE résume TARGET                        |
