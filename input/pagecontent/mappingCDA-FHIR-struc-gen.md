@@ -33,7 +33,7 @@ Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant d
 | Association du document à une prescription | inFulfillmentOf | [0..*] | Composition.extension:order | [0..*] |
 | Évènement documenté | documentationOf | [1..*] | Composition.event | [0..*] |
 | Document de référence | relatedDocument | [0..1] | Composition.relatesTo | [0..*] |
-| Consentement associé au document | authorization | [0..*] | Composition.extension:consent | |
+| Consentement associé au document | authorization | [0..*] | Composition.extension:consent |  [0..*]|
 | Association du document à une prise en charge | componentOf | [1..1] | Composition.encounter | [0..1] |
 | **Corps du document** | component / structuredBody ou nonXMLBody | | | |
 | Sections | section | [1..*] | Composition.section | [1..*] |
