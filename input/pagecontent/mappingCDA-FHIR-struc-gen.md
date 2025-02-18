@@ -18,7 +18,7 @@ Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant d
 | Langue | languageCode | [1..1] | Composition.language | [0..1] |
 | Identifiant lot de versions | setId | [1..1] | Composition.identifier | [0..1] |
 | Version du document | versionNumber | [1..1] | Composition.extension:R5-Composition-version | [0..1] |
-| Statut du document | | [1..1] | Composition.status | [1..1] |
+| Statut du document | |  | Composition.status | [1..1] |
 | Patient / Usager | recordTarget | [1..1] | Composition.subject | [0..1] |
 | Auteur | author | [1..*] | Composition.author | |
 | Opérateur de saisie | dataEnterer | [0..1] | Composition.extension:data-enterer | |
