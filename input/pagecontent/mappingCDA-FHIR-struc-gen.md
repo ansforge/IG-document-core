@@ -23,7 +23,7 @@ Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant d
 | Auteur | author | [1..*] | Composition.author | |
 | Opérateur de saisie | dataEnterer | [0..1] | Composition.extension:data-enterer | [0..1]|
 | Informateur | informant | [0..*] | Composition.extension:informant | [0..*]|
-| Informateur : Personne de confiance, Personne à prévenir en cas d'urgence, Aidant, Aidé | informant | [0..*] | Composition.subject (ressource Patient / Patient.contact) | |
+| Informateur : Personne de confiance, Personne à prévenir en cas d'urgence, Aidant, Aidé | informant | [0..*] | Composition.subject (ressource Patient / Patient.contact) | [0..*] |
 | Structure chargée de la conservation du document | custodian | [1..1] | Composition.custodian | |
 | Destinataire prévu du document | informationRecipient | [0..*] | Composition.extension:informationRecipient | [0..*] |
 | Responsable du document | legalAuthenticator | [1..1] | Composition.attester | [0..*] |
