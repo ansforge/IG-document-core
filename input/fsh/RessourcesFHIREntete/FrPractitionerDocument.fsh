@@ -12,6 +12,8 @@ Description: "Auteur du document"
   * code ^binding.valueSet = "https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS"
   * code ^short = "Profession / savoir-faire ou rôle"
 * address 0..*
+  * ^short = "Adresse"
 * telecom 0..*
+  * ^short = "Coordonnées télécom"
 * name 1..1 
 * name only fr-human-name-document

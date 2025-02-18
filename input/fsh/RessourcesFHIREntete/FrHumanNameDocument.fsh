@@ -11,6 +11,7 @@ Description: "Nom du professionnel de santé."
 * family 1..1
 * given 0..1
 * prefix ^short = "Civilité"
+* prefix 0..1
 * prefix from https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS
 * suffix 0..1
 * suffix ^short = "Titre"

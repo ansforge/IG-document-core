@@ -13,9 +13,11 @@ Description: "Clinical document utilisé pour représenter un document FHIR."
 * meta.profile ^slicing.description = "Modèle du document et version du modèle"
 * meta.profile contains canonical 1..1
 * meta.profile[canonical] = Canonical(fr-Composition-document)
+//* extension contains $composition-clinicaldocument-version named versionNumberDocument 0..1
+//* extension[versionNumberDocument] ^short = "Version du document"
 
-* identifier 1..1 MS
 * identifier ^short = "Identifiant lot de versions"
+* identifier 1..1 MS
 * status MS
 * status ^short = "Statut du document"
 * type only CodeableConcept
@@ -35,14 +37,33 @@ Description: "Clinical document utilisé pour représenter un document FHIR."
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document.Un document peut avoir un ou plusieurs auteurs."
-* author only Reference(FrPractitionerRoleDocument)
-* author.extension contains fr-core-author-time named time 1..1
-* attester MS
-* attester.mode MS
-* attester.time MS
-* attester.party MS
+* author only Reference(FrPractitionerRoleDocument or FrPatientFHIRDocument or FrDeviceDocument)
+* author.extension contains fr-author-time named time 1..1
+
+// Slicing de attester basé sur le mode (legal/professional)
+* attester ^slicing.discriminator.type = #value
+* attester ^slicing.discriminator.path = "mode"
+* attester ^slicing.rules = #open
+// Responsable du document : legalAuthenticator
+* attester contains legal 1..1
+* attester[legal].mode = #legal
+* attester[legal].time 1..1
+* attester[legal].party 1..1 
+* attester[legal].party only Reference(FrPractitionerRoleDocument)
+* attester[legal] ^short = "Responsable du document"
+// Professionnel attestant la validité du contenu du document : authenticator
+* attester contains professional 1..1
+* attester[professional].mode = #professional
+* attester[professional].time 1..1
+* attester[legal].party 1..1 
+* attester[professional].party only Reference(FrPractitionerRoleDocument)
+* attester[professional] ^short = "Professionnel attestant la validité du contenu du document"
+
 * custodian MS
 * relatesTo.target[x] only Identifier or Reference(Composition or FrCompositionDocument)
+
+* extension contains fr-data-enterer-extension named data-enterer 1..1
+
 * section 1..* MS
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[0].path = "code"

@@ -1,10 +1,9 @@
 <!-- Liste des ressources-->
 > **Note :**  
-> Ce guide présente les ressources FHIR utilisées pour créer la partie entête des documents médicaux et médico-sociaux. 
-> Les documents FHIR peuvent être échangés entre les systèmes et conservés dans des plateformes de partage. 
-### Liste des définitions principales
+> Cette page contient la liste des profils FHIR définis dans guide d’implémentation **ANS IG document core** pour implémenter la partie entête des documents médicaux et médico-sociaux. 
+### Liste des profils
 
-| **Liens vers les définitions** |  
+| **Liens vers les profils** |  
 |--------------------------------|  
 | [FrBundleDocument](StructureDefinition-fr-bundle-document.html) |  
 | [FrCompositionDocument](StructureDefinition-fr-composition-document.html) |  

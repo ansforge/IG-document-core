@@ -37,5 +37,14 @@ Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le c
 * entry contains patient 0..1
 * entry[patient].resource only FrPatientFHIRDocument
 // Définition de l'entrée practitionerRole
-* entry contains auteur 1..*
-* entry[auteur].resource only FrPractitionerRoleDocument
+* entry contains practitionerRole 1..*
+* entry[practitionerRole].resource only FrPractitionerRoleDocument
+// Définition de l'entrée practitioner
+* entry contains practitioner 1..*
+* entry[practitioner].resource only FrPractitionerDocument
+// Définition de l'entrée organization
+* entry contains organization 1..*
+* entry[organization].resource only FrOrganizationDocument
+// Définition de l'entrée device
+* entry contains device 1..*
+* entry[device].resource only FrDeviceDocument
