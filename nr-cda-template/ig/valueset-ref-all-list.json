@@ -1,0 +1,833 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActClass",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAActClass",
+      "title" : "CDAActClass",
+      "description" : "A code specifying the major type of Act that this Act-instance represents.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActClass"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-order.html" : "order",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActMood",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAActMood",
+      "title" : "CDAActMood",
+      "description" : "A code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActMood"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActMoodIntent",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAActMoodIntent",
+      "title" : "CDAActMoodIntent",
+      "description" : "An intention or plan to perform a service.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActMood"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-order.html" : "order"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAActRelationshipType",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAActRelationshipType",
+      "title" : "CDAActRelationshipType",
+      "description" : "A code specifying the meaning and purpose of every ActRelationship instance. Each of its values implies specific constraints to what kinds of Act objects can be related and in which way.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-documentation-of.html" : "documentationOf"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAContextControl",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAContextControl",
+      "title" : "CDAContextControl",
+      "description" : "A code that specifies how an ActRelationship or Participation contributes to the context of an Act, and whether it may be propagated to descendent Acts whose association allows such propagation.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ContextControl"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAEntityCode",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAEntityCode",
+      "title" : "CDAEntityCode",
+      "description" : "A value representing the specific kind of Entity the instance represents.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-EntityCode",
+        "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAEntityNameUse",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAEntityNameUse",
+      "title" : "CDAEntityNameUse",
+      "description" : "A set of codes advising a system or user which name in a set of names to select for a given purpose - limited to values allowed in original CDA definition",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityNameUse"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-name.html" : "name",
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAInformationRecipientRole",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAInformationRecipientRole",
+      "title" : "CDAInformationRecipientRole",
+      "description" : "Used to represent the role(s) of those who should receive a copy of a document - limited to values allowed in original CDA definition",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDANullFlavor",
+      "title" : "CDANullFlavor",
+      "description" : "CDA NullFlavors - limited to values allowed in original CDA definition",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-inFulfillment-of.html" : "inFulfillmentOf",
+      "StructureDefinition-fr-core-documentation-of.html" : "documentationOf",
+      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
+      "StructureDefinition-fr-core-authenticator.html" : "authenticator",
+      "StructureDefinition-fr-core-related-document.html" : "relatedDocument",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility",
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity",
+      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-order.html" : "order",
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice",
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-information-recipient.html" : "informationRecipient",
+      "StructureDefinition-fr-core-name.html" : "name",
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument",
+      "StructureDefinition-fr-core-patient-role.html" : "patientRole",
+      "StructureDefinition-fr-core-component-of.html" : "componentOf",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant",
+      "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-patient.html" : "patient",
+      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity",
+      "StructureDefinition-fr-core-custodian.html" : "custodian"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDAParticipationType",
+      "title" : "CDAParticipationType",
+      "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation. Limited to values allowed in original CDA definition",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authenticator.html" : "authenticator",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-data-enterer.html" : "dataEnterer",
+      "StructureDefinition-fr-core-informant.html" : "informant",
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter",
+      "StructureDefinition-fr-core-participant.html" : "participant",
+      "StructureDefinition-fr-core-record-target.html" : "recordTarget",
+      "StructureDefinition-fr-core-custodian.html" : "custodian"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDARoleClassMutualRelationship",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDARoleClassMutualRelationship",
+      "title" : "CDARoleClassMutualRelationship",
+      "description" : "A relationship that is based on mutual behavior of the two Entities as being related. The basis of such relationship may be agreements (e.g., spouses, contract parties) or they may be de facto behavior (e.g. friends) or may be an incidental involvement with each other (e.g. parties over a dispute, siblings, children).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDARoleCode",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDARoleCode",
+      "title" : "CDARoleCode",
+      "description" : "A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDASetOperator",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDASetOperator",
+      "title" : "CDASetOperator",
+      "description" : "Determins the intersectionality of multiple sets",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-SetOperator"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-participant.html" : "participant"
+    },
+    {
+      "url" : "http://hl7.org/cda/stds/core/ValueSet/CDASignatureCode",
+      "version" : "2.0.1-sd",
+      "status" : "draft",
+      "name" : "CDASignatureCode",
+      "title" : "CDASignatureCode",
+      "description" : "A set of codes specifying whether and how the participant has attested his participation through a signature - limited to values allowed in original CDA definition.\n\n**Note:** CDA Release One represented either an intended (`X`) or actual (`S`) authenticator. CDA Release Two only represents an actual authenticator, so has deprecated the value of `X`.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ParticipationSignature"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authenticator.html" : "authenticator",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDocumentTypeCodes",
+      "title" : "FHIR Document Type Codes",
+      "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.240"],
+      "sources" : ["2.16.840.1.113883.4.642.3.240"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActClassClinicalDocument",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActClassClinicalDocument",
+      "title" : "ActClassClinicalDocument",
+      "description" : "A clinical document is a documentation of clinical observations and services, with the following characteristics: (1) Persistence - A clinical document continues to exist in an unaltered state, for a time period defined by local and regulatory requirements; (2) Stewardship - A clinical document is maintained by a person or organization entrusted with its care; (3) Potential for authentication - A clinical document is an assemblage of information that is intended to be legally authenticated; (4) Wholeness - Authentication of a clinical document applies to the whole and does not apply to portions of the document without the full context of the document; (5) Human readability - A clinical document is human readable.\"",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActClass"],
+      "oids" : ["2.16.840.1.113883.1.11.13948"],
+      "sources" : ["2.16.840.1.113883.1.11.13948"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-parent-document.html" : "parentDocument"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "v3 Code System ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authorization.html" : "authorization",
+      "StructureDefinition-fr-core-order.html" : "order"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActPriority",
+      "title" : "ActPriority",
+      "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+      "oids" : ["2.16.840.1.113883.1.11.16866"],
+      "sources" : ["2.16.840.1.113883.1.11.16866"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-order.html" : "order"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActRelationshipAuthorizedBy",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActRelationshipAuthorizedBy",
+      "title" : "ActRelationshipAuthorizedBy",
+      "description" : "A relationship in which the target act authorizes or certifies the source act.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.19965"],
+      "sources" : ["2.16.840.1.113883.1.11.19965"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authorization.html" : "authorization"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ActRelationshipFulfills",
+      "title" : "ActRelationshipFulfills",
+      "description" : "The source act fulfills (in whole or in part) the target act. Source act must be in a mood equal or more actual than the target act.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.10342"],
+      "sources" : ["2.16.840.1.113883.1.11.10342"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-inFulfillment-of.html" : "inFulfillmentOf"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActRelationshipHasComponent",
+      "title" : "ActRelationshipHasComponent",
+      "description" : "A collection of sub-services as steps or subtasks performed for the source service. Services may be performed sequentially or concurrently.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.10318"],
+      "sources" : ["2.16.840.1.113883.1.11.10318"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-component-of.html" : "componentOf"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActStatus",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActStatus",
+      "title" : "ActStatus",
+      "description" : "Contains the names (codes) for each of the states in the state-machine of the RIM Act class.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActStatus"],
+      "oids" : ["2.16.840.1.113883.1.11.15933"],
+      "sources" : ["2.16.840.1.113883.1.11.15933"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authorization.html" : "authorization"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-EntityClassDevice",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "EntityClassDevice",
+      "title" : "EntityClassDevice",
+      "description" : "A subtype of ManufacturedMaterial used in an activity, without being substantially changed through that activity. The kind of device is identified by the code attribute inherited from Entity.\r\n\r\n*Usage:* This includes durable (reusable) medical equipment as well as disposable equipment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityClass"],
+      "oids" : ["2.16.840.1.113883.1.11.11623"],
+      "sources" : ["2.16.840.1.113883.1.11.11623"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "EntityClassLivingSubject",
+      "title" : "EntityClassLivingSubject",
+      "description" : "Anything that essentially has the property of life, independent of current state (a dead human corpse is still essentially a living subject.)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityClass"],
+      "oids" : ["2.16.840.1.113883.1.11.10884"],
+      "sources" : ["2.16.840.1.113883.1.11.10884"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-EntityClassOrganization",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "EntityClassOrganization",
+      "title" : "EntityClassOrganization",
+      "description" : "A social or legal structure formed by human beings.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityClass"],
+      "oids" : ["2.16.840.1.113883.1.11.10889"],
+      "sources" : ["2.16.840.1.113883.1.11.10889"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-EntityDeterminer",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "EntityDeterminer",
+      "title" : "EntityDeterminer",
+      "description" : "EntityDeterminer in natural language grammar is the class of words that comprises articles, demonstrative pronouns, and quantifiers. In the RIM, determiner is a structural code in the Entity class to distinguish whether any given Entity object stands for some, any one, or a specific thing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-EntityDeterminer"],
+      "oids" : ["2.16.840.1.113883.1.11.10878"],
+      "sources" : ["2.16.840.1.113883.1.11.10878"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice",
+      "StructureDefinition-fr-core-represented-custodian-organization.html" : "representedCustodianOrganization",
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-person.html" : "assignedPerson",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient",
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-Ethnicity",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "Ethnicity",
+      "title" : "Ethnicity",
+      "description" : "In the United States, federal standards for classifying data on ethnicity determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define ethnicity, and they recognize the absence of an anthropological or scientific basis for ethnicity classification. Instead, the federal standards acknowledge that ethnicity is a social-political construct in which an individual's own identification with a particular ethnicity is preferred to observer identification. The standards specify two minimum ethnicity categories: Hispanic or Latino, and Not Hispanic or Latino. The standards define a Hispanic or Latino as a person of \"Mexican, Puerto Rican, Cuban, South or Central America, or other Spanish culture or origin, regardless of race.\" The standards stipulate that ethnicity data need not be limited to the two minimum categories, but any expansion must be collapsible to those categories. In addition, the standards stipulate that an individual can be Hispanic or Latino or can be Not Hispanic or Latino, but cannot be both.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Ethnicity"],
+      "oids" : ["2.16.840.1.113883.1.11.15836"],
+      "sources" : ["2.16.840.1.113883.1.11.15836"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ManufacturerModelNameExample",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ManufacturerModelNameExample",
+      "title" : "Manufacturer Model Name Example",
+      "description" : "An example value set representing the ManufacturerModelName concept domain used  to convey a coded name for the software used to author content.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ManufacturerModelNameExample"
+      ],
+      "oids" : ["2.16.840.1.113883.11.21014"],
+      "sources" : ["2.16.840.1.113883.11.21014"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-MaritalStatus",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "MaritalStatus",
+      "title" : "MaritalStatus",
+      "description" : "The domestic partnership status of a person.\r\n\r\n*Example:*Married, separated, divorced, widowed, common-law marriage.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"],
+      "oids" : ["2.16.840.1.113883.1.11.12212"],
+      "sources" : ["2.16.840.1.113883.1.11.12212"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-OrganizationIndustryClassNAICS",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "OrganizationIndustryClassNAICS",
+      "title" : "OrganizationIndustryClassNAICS",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/naics"],
+      "oids" : ["2.16.840.1.113883.1.11.19298"],
+      "sources" : ["2.16.840.1.113883.1.11.19298"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ParticipationTargetLocation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ParticipationTargetLocation",
+      "title" : "ParticipationTargetLocation",
+      "description" : "The facility where the service is done. May be a static building (or room therein) or a moving location (e.g., ambulance, helicopter, aircraft, train, truck, ship, etc.)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.1.11.10302"],
+      "sources" : ["2.16.840.1.113883.1.11.10302"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-Race",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "Race",
+      "title" : "Race",
+      "description" : "In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification. Instead, the federal standards acknowledge that race is a social-political construct in which an individual's own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from \"the original peoples\" of a specified region or nation. The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White. The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Race"],
+      "oids" : ["2.16.840.1.113883.1.11.14914"],
+      "sources" : ["2.16.840.1.113883.1.11.14914"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ReligiousAffiliation",
+      "title" : "ReligiousAffiliation",
+      "description" : "Assigment of spiritual faith affiliation",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.19185"],
+      "sources" : ["2.16.840.1.113883.1.11.19185"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "RoleClassAssignedEntity",
+      "title" : "RoleClassAssignedEntity",
+      "description" : "An agent role in which the agent is an Entity acting in the employ of an organization. The focus is on functional role on behalf of the organization, unlike the Employee role where the focus is on the 'Human Resources' relationship between the employee and the organization.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "oids" : ["2.16.840.1.113883.1.11.11595"],
+      "sources" : ["2.16.840.1.113883.1.11.11595"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-assigned-custodian.html" : "assignedCustodian",
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-assigned-entity.html" : "assignedEntity"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "RoleClassRelationshipFormal",
+      "title" : "RoleClassRelationshipFormal",
+      "description" : "A relationship between two entities that is formally recognized, frequently by a contract or similar agreement.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "oids" : ["2.16.840.1.113883.1.11.10416"],
+      "sources" : ["2.16.840.1.113883.1.11.10416"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient-role.html" : "patientRole"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-RoleClassServiceDeliveryLocation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "RoleClassServiceDeliveryLocation",
+      "title" : "RoleClassServiceDeliveryLocation",
+      "description" : "A role played by a place at which services may be provided.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "oids" : ["2.16.840.1.113883.1.11.16927"],
+      "sources" : ["2.16.840.1.113883.1.11.16927"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-SoftwareNameExample",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "SoftwareNameExample",
+      "title" : "Software Name Example",
+      "description" : "An example value set representing the SoftwareName concept domain used to convey a coded name for a device..",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-SoftwareNameExample"
+      ],
+      "oids" : ["2.16.840.1.113883.11.21015"],
+      "sources" : ["2.16.840.1.113883.11.21015"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-authoring-device.html" : "authoringDevice"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "USEncounterDischargeDisposition",
+      "title" : "USEncounterDischargeDisposition",
+      "description" : "***No description***",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/nubc-UB92"],
+      "oids" : ["2.16.840.1.113883.1.11.19453"],
+      "sources" : ["2.16.840.1.113883.1.11.19453"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-xActRelationshipDocument",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "XActRelationshipDocument",
+      "title" : "x_ActRelationshipDocument",
+      "description" : "Used to enumerate the relationships between two clinical documents for document management.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActRelationshipType"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.11610"],
+      "sources" : ["2.16.840.1.113883.1.11.11610"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-related-document.html" : "relatedDocument"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-xInformationRecipient",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "XInformationRecipient",
+      "title" : "x_InformationRecipient",
+      "description" : "Used to represent participant(s) who should receive a copy of a document.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.1.11.19366"],
+      "sources" : ["2.16.840.1.113883.1.11.19366"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-information-recipient.html" : "informationRecipient"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "XServiceEventPerformer",
+      "title" : "x_ServiceEventPerformer",
+      "description" : "Clones using this x\\_domain should have a name \"performer\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.1.11.19601"],
+      "sources" : ["2.16.840.1.113883.1.11.19601"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-performer.html" : "performer"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J01-XdsAuthorSpecialty-CISIS",
+      "title" : null,
+      "description" : "XDS authorSpecialty CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_A02-ProfessionSavFaire-CISIS/FHIR/TRE-A02-ProfessionSavFaire-CISIS",
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+        "https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/FHIR/TRE-R95-UsagerTitre",
+        "https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/FHIR/TRE-R94-ProfessionSocial"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.461"],
+      "sources" : ["1.2.250.1.213.1.1.5.461"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-service-event.html" : "serviceEvent",
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
+      "StructureDefinition-fr-core-performer.html" : "performer",
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "title" : null,
+      "description" : "XDS healthcareFacilityTypeCode CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+        "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.466"],
+      "sources" : ["1.2.250.1.213.1.1.5.466"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J04-XdsPracticeSettingCode-CISIS",
+      "title" : null,
+      "description" : "XDS practiceSettingCode CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice",
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.467"],
+      "sources" : ["1.2.250.1.213.1.1.5.467"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-core-intended-recipient.html" : "intendedRecipient"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J11-RelationPatient-CISIS",
+      "title" : null,
+      "description" : "Relation par rapport au patient - CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
+        "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique"
+      ],
+      "oids" : ["1.2.250.1.213.3.3.16"],
+      "sources" : ["1.2.250.1.213.3.3.16"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-related-entity.html" : "relatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J140-EncounterParticipationType-CISIS",
+      "title" : null,
+      "description" : "JDV_J140-EncounterParticipationType-CISIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.528"],
+      "sources" : ["1.2.250.1.213.1.1.5.528"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J141-RoleClass-CISIS",
+      "title" : null,
+      "description" : "RoleClassAssociative CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.588"],
+      "sources" : ["1.2.250.1.213.1.1.5.588"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J142-TypeRencontre-CISIS/FHIR/JDV-J142-TypeRencontre-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J142-TypeRencontre-CISIS",
+      "title" : null,
+      "description" : "Type de prise en charge CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode",
+        "https://mos.esante.gouv.fr/NOS/TRE_R305-TypeRencontre/FHIR/TRE-R305-TypeRencontre"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.589"],
+      "sources" : ["1.2.250.1.213.1.1.5.589"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "encompassingEncounter"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J143-AdministrativeGender-CISIS",
+      "title" : null,
+      "description" : "Sexe administratif CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R303-HL7v3AdministrativeGender/FHIR/TRE-R303-HL7v3AdministrativeGender"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.590"],
+      "sources" : ["1.2.250.1.213.1.1.5.590"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "patient"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J245-Civilite-CISIS",
+      "title" : null,
+      "description" : "Civilités CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.718"],
+      "sources" : ["1.2.250.1.213.1.1.5.718"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-person.html" : "assignedPerson"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J246-Titre-CISIS",
+      "title" : null,
+      "description" : "Civilités CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.719"],
+      "sources" : ["1.2.250.1.213.1.1.5.719"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-person.html" : "assignedPerson"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J47-FunctionCode-CISIS",
+      "title" : null,
+      "description" : "Jeux de valeurs des Rôles fonctionnels HL7 et CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_R258-RelationPriseCharge/FHIR/TRE-R258-RelationPriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.124"],
+      "sources" : ["1.2.250.1.213.1.1.5.124"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-author.html" : "author",
+      "StructureDefinition-fr-core-participant.html" : "participant"
+    }
+  ]
+}
