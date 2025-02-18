@@ -354,7 +354,7 @@ Les valeurs utilisées pour caractériser un élément `entryRelationship` avec 
 L'attribut `inversionInd` (valeur booléenne) permet d’inverser la relation décrite par `typeCode`. Si l’on omet l’attribut `inversionInd`, alors on considère que `inversionInd="false"` (valeur par défaut).
 Exemples :
 * si `typeCode="RSON"` et `inversionInd="false"", alors TARGET est la raison de SOURCE.
-* si typeCode=‘RSON’ et inversionInd="true", alors SOURCE est la raison de TARGET.
+* si `typeCode="RSON"` et `inversionInd="true"`, alors SOURCE est la raison de TARGET.
 
 ##### nullFlavor
 Lorsqu’une donnée est obligatoire mais que l’on ne connaît pas la valeur de cette donnée lors de l’élaboration du document, il est possible d’utiliser un attribut nullFlavor qui permet d'indiquer la raison pour laquelle la valeur ne peut être fournie.
