@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-01-31T08:45:39+00:00",
+  "date" : "2025-02-18T10:06:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_cda_uv_core",
@@ -655,6 +655,14 @@
     {
       "id" : "Ressources FHIR",
       "name" : "Ressources FHIR"
+    },
+    {
+      "id" : "Extensions FHIR",
+      "name" : "Extensions FHIR"
+    },
+    {
+      "id" : "Mapping",
+      "name" : "Concept Maps"
     }],
     "resource" : [{
       "extension" : [{
@@ -902,6 +910,19 @@
       "description" : "Permet d'associer le document à une prise en charge du patient/usager.",
       "exampleBoolean" : false,
       "groupingId" : "Modèles logiques"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-core-clinical-document"
+      },
+      "name" : "clinicalDocument",
+      "description" : "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources CDA"
     },
     {
       "extension" : [{
@@ -1344,6 +1365,110 @@
       "description" : "Patient concerné par le document.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-practitionerRole-document"
+      },
+      "name" : "FrPractitionerRoleDocument",
+      "description" : "Auteur du document.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-practitioner-document"
+      },
+      "name" : "FrPractitionerDocument",
+      "description" : "Auteur du document",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-Organization-document"
+      },
+      "name" : "FrOrganizationDocument",
+      "description" : "Structure pour le compte de laquelle intervient le professionnel.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-device-document"
+      },
+      "name" : "FrDeviceDocument",
+      "description" : "Système",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-human-name-document"
+      },
+      "name" : "HumanNameDocument",
+      "description" : "Nom du professionnel de santé.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-author-time"
+      },
+      "name" : "Author Time",
+      "description" : "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-data-enterer-extension"
+      },
+      "name" : "DataEnterer",
+      "description" : "Extension permettant d'ajouter un opérateur de saisie dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingmodelemetierCDAFHIR"
+      },
+      "name" : "Mapping du modèle logique métier entre CDA et FHIR",
+      "description" : "Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping"
     }],
     "page" : {
       "extension" : [{

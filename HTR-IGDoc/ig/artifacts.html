@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"6"}
     h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
@@ -65,7 +66,7 @@
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  <img alt=" flag" src="assets/images/zwe.svg" height="16" title=""/>
 
 
             </span>
@@ -260,6 +261,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>
          <a href="#3">Ressources FHIR</a>
       </li>
+      <li>
+         <a href="#4">Extensions FHIR</a>
+      </li>
+      <li>
+         <a href="#5">Concept Maps</a>
+      </li>
    </ul>
 </div>
 <div xmlns="http://www.w3.org/1999/xhtml"
@@ -453,6 +460,15 @@ professionnel ou le professionnel qui prend la responsabilité du document produ
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-clinical-document.html"
+                  title="StructureDefinition/fr-core-clinical-document">clinicalDocument</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête CDA ‘ClinicalDocument’ est l’élément racine d’un document médical.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-assigned-entity.html"
@@ -768,6 +784,94 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Patient concerné par le document.</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-practitionerRole-document.html"
+                  title="StructureDefinition/fr-practitionerRole-document">FrPractitionerRoleDocument</a>
+            </td>
+            <td>
+<p>Auteur du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-practitioner-document.html"
+                  title="StructureDefinition/fr-practitioner-document">FrPractitionerDocument</a>
+            </td>
+            <td>
+<p>Auteur du document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-Organization-document.html"
+                  title="StructureDefinition/fr-Organization-document">FrOrganizationDocument</a>
+            </td>
+            <td>
+<p>Structure pour le compte de laquelle intervient le professionnel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-device-document.html"
+                  title="StructureDefinition/fr-device-document">FrDeviceDocument</a>
+            </td>
+            <td>
+<p>Système</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-human-name-document.html"
+                  title="StructureDefinition/fr-human-name-document">HumanNameDocument</a>
+            </td>
+            <td>
+<p>Nom du professionnel de santé.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Extensions FHIR </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-author-time.html"
+                  title="StructureDefinition/fr-author-time">Author Time</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un horodatage (TS) à l’élément author d’une Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-data-enterer-extension.html"
+                  title="StructureDefinition/fr-data-enterer-extension">DataEnterer</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un opérateur de saisie dans la Composition.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Concept Maps </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingmodelemetierCDAFHIR.html"
+                  title="ConceptMap/mappingmodelemetierCDAFHIR">Mapping du modèle logique métier entre CDA et FHIR</a>
+            </td>
+            <td>
+<p>Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.</p>
+</td>
+         </tr>
       </tbody>
    </table>
 </div>
@@ -810,7 +914,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 31, 2025 08:45+0000">2025-01-31</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 18, 2025 10:06+0000">2025-02-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

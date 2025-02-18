@@ -119,7 +119,9 @@ package IG #DDDDDD{
 
              EnteteDocument => [None..None]
              EnteteDocument.identifiantUniqueDocument => [1..1]
+             EnteteDocument.modeleDocument => [1..1]
              EnteteDocument.typeDocument => [1..1]
+             EnteteDocument.titreDocument => [1..1]
              EnteteDocument.dateDeCreation => [1..1]
              EnteteDocument.niveauConfidentialite => [1..1]
              EnteteDocument.languePrincipaleDocument => [1..1]
@@ -391,22 +393,41 @@ package IG #DDDDDD{
         class FrCompositionDocument{
 
              Composition => [None..None]
-             Composition.identifier => [None..None]
+             Composition.meta.profile => [1..None]
+             Composition.meta.profile:canonical => [1..1]
+             Composition.extension => [1..None]
+             Composition.extension:data-enterer => <&plus>[1..1]
+             Composition.identifier => [1..None]
              Composition.status => [None..None]
              Composition.type => [None..None]
              Composition.subject => [1..None]
              Composition.subject.reference => [1..None]
              Composition.date => [None..None]
              Composition.author => [None..None]
+             Composition.author.extension => [1..None]
+             Composition.author.extension:time => <&plus>[1..1]
              Composition.title => [None..None]
-             Composition.confidentiality => [None..None]
-             Composition.attester => [None..None]
-             Composition.attester.mode => [None..None]
-             Composition.attester.time => [None..None]
-             Composition.attester.party => [None..None]
+             Composition.confidentiality => [1..None]
+             Composition.attester => [2..None]
+             Composition.attester:legal => [1..1]
+             Composition.attester:legal.mode => [None..None]
+             Composition.attester:legal.time => [1..None]
+             Composition.attester:legal.party => [1..None]
+             Composition.attester:professional => [1..1]
+             Composition.attester:professional.mode => [None..None]
+             Composition.attester:professional.time => [1..None]
+             Composition.attester:professional.party => [None..None]
              Composition.custodian => [None..None]
              Composition.relatesTo.target[x] => [None..None]
              Composition.section => [1..None]
+        } 
+
+        class FrOrganizationDocument{
+
+             Organization.implicitRules => [None..0]
+             Organization.identifier => [None..None]
+             Organization.active => [None..0]
+             Organization.name => [None..None]
         } 
 
         class FrBundleDocument{
@@ -414,7 +435,7 @@ package IG #DDDDDD{
              Bundle.identifier => [1..None]
              Bundle.type => [None..None]
              Bundle.timestamp => [1..None]
-             Bundle.entry => [1..None]
+             Bundle.entry => [5..None]
              Bundle.entry.fullUrl => [1..None]
              Bundle.entry.search => [None..0]
              Bundle.entry.request => [None..0]
@@ -423,6 +444,14 @@ package IG #DDDDDD{
              Bundle.entry:composition.resource => [None..None]
              Bundle.entry:patient => [0..1]
              Bundle.entry:patient.resource => [None..None]
+             Bundle.entry:practitionerRole => [1..*]
+             Bundle.entry:practitionerRole.resource => [None..None]
+             Bundle.entry:practitioner => [1..*]
+             Bundle.entry:practitioner.resource => [None..None]
+             Bundle.entry:organization => [1..*]
+             Bundle.entry:organization.resource => [None..None]
+             Bundle.entry:device => [1..*]
+             Bundle.entry:device.resource => [None..None]
         } 
 
         class FrAssignedAuthor{
@@ -544,6 +573,37 @@ package IG #DDDDDD{
              Authorization.consent.statusCode.sdtcValueSetVersion => [None..0]
         } 
 
+        class FrClinicalDocument{
+
+             ClinicalDocument => [None..None]
+             ClinicalDocument.realmCode => [1..1]
+             ClinicalDocument.typeId => [1..None]
+             ClinicalDocument.templateId => [3..None]
+             ClinicalDocument.id => [None..None]
+             ClinicalDocument.code => [None..None]
+             ClinicalDocument.title => [1..None]
+             ClinicalDocument.effectiveTime => [None..None]
+             ClinicalDocument.confidentialityCode => [None..None]
+             ClinicalDocument.languageCode => [1..None]
+             ClinicalDocument.setId => [1..None]
+             ClinicalDocument.versionNumber => [1..None]
+             ClinicalDocument.copyTime => [None..0]
+             ClinicalDocument.recordTarget => [None..1]
+             ClinicalDocument.author => [None..None]
+             ClinicalDocument.dataEnterer => [None..None]
+             ClinicalDocument.informant => [None..None]
+             ClinicalDocument.custodian => [None..None]
+             ClinicalDocument.informationRecipient => [None..None]
+             ClinicalDocument.legalAuthenticator => [1..None]
+             ClinicalDocument.authenticator => [None..None]
+             ClinicalDocument.participant => [None..None]
+             ClinicalDocument.inFulfillmentOf => [None..None]
+             ClinicalDocument.documentationOf => [1..None]
+             ClinicalDocument.relatedDocument => [None..1]
+             ClinicalDocument.authorization => [None..None]
+             ClinicalDocument.componentOf => [1..None]
+        } 
+
         class FrComponentOf{
 
              ComponentOf => [None..None]
@@ -551,7 +611,6 @@ package IG #DDDDDD{
 
         class FrCustodian{
 
-             Custodian => [None..None]
              Custodian.nullFlavor => [None..0]
              Custodian.typeId.nullFlavor => [None..0]
              Custodian.typeId.assigningAuthorityName => [None..0]
@@ -562,7 +621,6 @@ package IG #DDDDDD{
 
         class FrDataEnterer{
 
-             DataEnterer => [None..None]
              DataEnterer.nullFlavor => [None..0]
              DataEnterer.typeId.nullFlavor => [None..0]
              DataEnterer.typeId.assigningAuthorityName => [None..0]
@@ -575,7 +633,6 @@ package IG #DDDDDD{
 
         class FrDocumentationOf{
 
-             DocumentationOf => [None..None]
              DocumentationOf.nullFlavor => [None..0]
              DocumentationOf.typeId.nullFlavor => [None..0]
              DocumentationOf.typeId.assigningAuthorityName => [None..0]
@@ -586,7 +643,6 @@ package IG #DDDDDD{
 
         class FrInFulfillmentOf{
 
-             InFulfillmentOf => [None..None]
              InFulfillmentOf.typeId.nullFlavor => [None..0]
              InFulfillmentOf.typeId.assigningAuthorityName => [None..0]
              InFulfillmentOf.typeId.displayable => [None..0]
@@ -596,7 +652,6 @@ package IG #DDDDDD{
 
         class FrInformant{
 
-             Informant => [None..None]
              Informant.nullFlavor => [None..0]
              Informant.typeId.nullFlavor => [None..0]
              Informant.typeId.assigningAuthorityName => [None..0]
@@ -609,7 +664,6 @@ package IG #DDDDDD{
 
         class FrInformationRecipient{
 
-             InformationRecipient => [None..None]
              InformationRecipient.nullFlavor => [None..0]
              InformationRecipient.typeId.nullFlavor => [None..0]
              InformationRecipient.typeId.assigningAuthorityName => [None..0]
@@ -637,7 +691,6 @@ package IG #DDDDDD{
 
         class FrLegalAuthenticator{
 
-             LegalAuthenticator => [None..None]
              LegalAuthenticator.nullFlavor => [None..0]
              LegalAuthenticator.typeId.nullFlavor => [None..0]
              LegalAuthenticator.typeId.assigningAuthorityName => [None..0]
@@ -684,7 +737,6 @@ package IG #DDDDDD{
 
         class FrParentDocument{
 
-             ParentDocument => [None..None]
              ParentDocument.nullFlavor => [None..0]
              ParentDocument.id => [None..1]
              ParentDocument.id.assigningAuthorityName => [None..0]
@@ -695,7 +747,6 @@ package IG #DDDDDD{
 
         class FrParticipant{
 
-             Participant1 => [None..None]
              Participant1.typeId.nullFlavor => [None..0]
              Participant1.typeId.assigningAuthorityName => [None..0]
              Participant1.typeId.displayable => [None..0]
@@ -729,7 +780,6 @@ package IG #DDDDDD{
 
         class FrPatientRole{
 
-             PatientRole => [None..None]
              PatientRole.nullFlavor => [None..0]
              PatientRole.realmCode => [None..0]
              PatientRole.typeId => [None..0]
@@ -792,7 +842,6 @@ package IG #DDDDDD{
 
         class FrRecordTarget{
 
-             RecordTarget => [None..None]
              RecordTarget.nullFlavor => [None..0]
              RecordTarget.typeId.nullFlavor => [None..0]
              RecordTarget.typeId.assigningAuthorityName => [None..0]
@@ -804,7 +853,6 @@ package IG #DDDDDD{
 
         class FrRelatedDocument{
 
-             RelatedDocument => [None..None]
              RelatedDocument.typeId.nullFlavor => [None..0]
              RelatedDocument.typeId.assigningAuthorityName => [None..0]
              RelatedDocument.typeId.displayable => [None..0]
@@ -886,15 +934,93 @@ package IG #DDDDDD{
              ServiceEvent.performer.typeCode => [None..None]
         } 
 
+        class FrDeviceDocument{
+
+             Device.identifier => [1..None]
+             Device.deviceName => [None..None]
+             Device.type => [None..None]
+             Device.owner => [1..None]
+        } 
+
+        class HumanNameDocument{
+
+             HumanName.use => [None..0]
+             HumanName.text => [None..0]
+             HumanName.family => [1..None]
+             HumanName.given => [None..1]
+             HumanName.prefix => [None..1]
+             HumanName.suffix => [None..1]
+             HumanName.period => [None..0]
+        } 
+
         class FrPatientFHIRDocument{
 
-             Patient.gender => [None..None]
+             Patient => [None..None]
+        } 
+
+        class FrPractitionerDocument{
+
+             Practitioner.identifier => [1..None]
+             Practitioner.name => [1..1]
+             Practitioner.telecom => [None..None]
+             Practitioner.address => [None..None]
+             Practitioner.qualification => [None..1]
+             Practitioner.qualification.code => [None..None]
+        } 
+
+        class FrPractitionerRoleDocument{
+
+             PractitionerRole.identifier => [None..0]
+             PractitionerRole.active => [None..0]
+             PractitionerRole.period => [None..0]
+             PractitionerRole.practitioner => [None..None]
+             PractitionerRole.organization => [None..None]
+             PractitionerRole.code => [None..1]
+             PractitionerRole.specialty => [None..0]
+             PractitionerRole.location => [None..0]
+             PractitionerRole.healthcareService => [None..0]
+             PractitionerRole.telecom => [None..0]
+             PractitionerRole.availableTime => [None..0]
+             PractitionerRole.notAvailable => [None..0]
+             PractitionerRole.availabilityExceptions => [None..0]
          }
 
      }
      package extension #paleturquoise {
 
+     FrCompositionDocument -[#black,dashed,thickness=2]-> DataEnterer
+     FrCompositionDocument -[#black,dashed,thickness=2]-> AuthorTime
 
+        class AuthorTime{
+
+          Extension.id => [None..0]
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class DataEnterer{
+
+          Extension.extension => [3..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:type.value[x]:valueCodeableConcept => [0..1]
+          Extension.extension:type.value[x]:valueCodeableConcept.coding.system => [None..None]
+          Extension.extension:type.value[x]:valueCodeableConcept.coding.code => [None..None]
+          Extension.extension:type.value[x]:valueCodeableConcept.text => [None..None]
+          Extension.extension:time => [1..1]
+          Extension.extension:time.extension => [None..0]
+          Extension.extension:time.url => [None..None]
+          Extension.extension:time.value[x] => [None..None]
+          Extension.extension:time.value[x]:valuePeriod => [0..1]
+          Extension.extension:party => [1..1]
+          Extension.extension:party.extension => [None..0]
+          Extension.extension:party.url => [None..None]
+          Extension.extension:party.value[x] => [None..None]
+          Extension.extension:party.value[x]:valueReference => [0..1]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
          }
      }
      package valueset #PaleVioletRed{
@@ -982,6 +1108,10 @@ package "Ressources de base" #palegreen {
 
     class36bd288d6c6ad8dffc41b949ebb77249 --> FrCompositionDocument
 
+ class "Organization" as  classd6b258792ff06f82933c74eeb8aef591 
+
+    classd6b258792ff06f82933c74eeb8aef591 --> FrOrganizationDocument
+
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
@@ -1017,6 +1147,10 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/Authorization" as  class598114d4c6d4bf797def36d247d40839 
 
     class598114d4c6d4bf797def36d247d40839 --> FrAuthorization
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument" as  class989be5c5fb811e081805dc5a32645079 
+
+    class989be5c5fb811e081805dc5a32645079 --> FrClinicalDocument
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/ComponentOf" as  class4277423a305ecb24dc9d37288c280772 
 
@@ -1110,8 +1244,24 @@ package "Ressources de base" #palegreen {
 
     class21fc45b6eacaebf264ceab7c3130a980 --> FrServiceEvent
 
+ class "Device" as  classe0ac20adce6ffee48c7151b070aa5737 
+
+    classe0ac20adce6ffee48c7151b070aa5737 --> FrDeviceDocument
+
+ class "HumanName" as  class95e0fecbaf28f967a098167115412fc6 
+
+    class95e0fecbaf28f967a098167115412fc6 --> HumanNameDocument
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" as  classcb72a5551de902d7716887df67489a97 
 
     classcb72a5551de902d7716887df67489a97 --> FrPatientFHIRDocument
+
+ class "Practitioner" as  classe1fdce734a2fd9596ad930bdb139ca06 
+
+    classe1fdce734a2fd9596ad930bdb139ca06 --> FrPractitionerDocument
+
+ class "PractitionerRole" as  classa6482460b0b027d14fe848816788acb6 
+
+    classa6482460b0b027d14fe848816788acb6 --> FrPractitionerRoleDocument
 }
 @enduml
