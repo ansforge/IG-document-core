@@ -22,7 +22,7 @@ Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant d
 | Patient / Usager | recordTarget | [1..1] | Composition.subject | [0..1] |
 | Auteur | author | [1..*] | Composition.author | |
 | Opérateur de saisie | dataEnterer | [0..1] | Composition.extension:data-enterer | [0..1]|
-| Informateur | informant | [0..*] | Composition.extension:informant | |
+| Informateur | informant | [0..*] | Composition.extension:informant | [0..*]|
 | Informateur : Personne de confiance, Personne à prévenir en cas d'urgence, Aidant, Aidé | informant | [0..*] | Composition.subject (ressource Patient / Patient.contact) | |
 | Structure chargée de la conservation du document | custodian | [1..1] | Composition.custodian | |
 | Destinataire prévu du document | informationRecipient | [0..*] | Composition.extension:informationRecipient | [0..*] |
