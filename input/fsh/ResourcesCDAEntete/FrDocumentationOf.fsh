@@ -3,6 +3,7 @@ Profile: FrDocumentationOf
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/DocumentationOf
 Id: fr-core-documentation-of
 Title: "documentationOf"
+<<<<<<< HEAD
 Description: "DocumentationOf représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." 
 * ^status = #draft
 * nullFlavor 0..0 // Interdire l’attribut @nullFlavor
@@ -10,5 +11,14 @@ Description: "DocumentationOf représente un évènement (acte, traitement, diag
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
 * typeCode 0..0 // Interdire l’attribut @typeCode
+=======
+Description: "L'élément de l'en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." 
+* ^status = #draft
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* typeCode 0..0
+>>>>>>> main
 * serviceEvent only fr-core-service-event
 * serviceEvent ^short = "Évènement documenté"

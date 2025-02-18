@@ -3,11 +3,19 @@ Profile: FrRelatedDocument
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/RelatedDocument
 Id: fr-core-related-document
 Title: "relatedDocument"
+<<<<<<< HEAD
 Description: "RelatedDocument référence un document existant (à remplacer ou transformé)." 
 * ^status = #draft
 * typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
 * typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
 * typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
+=======
+Description: "L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)." 
+* ^status = #draft
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+>>>>>>> main
 * typeCode ^short = "le typeCode prend la valeur :
 - 'RPLC' pour remplacement, seul le remplacement au sens annulation et remplacement du document référencé par la version courante du document est autorisé.
 - 'XFRM' pour transformation, la relation est portée par le document CDA transformé (et pas par le document de référence)."

@@ -3,6 +3,7 @@ Profile: FrParticipant
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Participant1
 Id: fr-core-participant
 Title: "participant"
+<<<<<<< HEAD
 Description: "participant représente toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."
 * ^status = #draft
 * typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
@@ -11,6 +12,15 @@ Description: "participant représente toute personne/structure impliquée dans l
 * contextControlCode 0..0 // Interdire l’attribut @contextControlCode
 * typeCode ^short = "Type de participation : la valeur doit être issue du JDV_J144_ParticipationType_CISIS (1.2.250.1.213.1.1.5.591)"
 * typeCode from https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS
+=======
+Description: "L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."
+* ^status = #draft
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* contextControlCode 0..0
+* typeCode ^short = "Type de participation"
+>>>>>>> main
 * functionCode ^short = "Rôle fonctionnel"
 * time 1..1 // Rendre time obligatoire
 * time ^short = "Date de début et/ou de fin de la participation"
@@ -23,6 +33,7 @@ Description: "participant représente toute personne/structure impliquée dans l
 * time.operator 0..0
 * functionCode.code ^short = "Code issu du JDV_J47_FunctionCode_CISIS (1.2.250.1.213.1.1.5.124)"
 * functionCode.code from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS (required)
+<<<<<<< HEAD
 * functionCode.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans functionCode
 * functionCode.code 1..1 // Rendre le code en obligatoire si functionCode existe
 * functionCode.codeSystem 1..1 // Rendre le codeSystem en obligatoire si functionCode existe
@@ -47,3 +58,14 @@ Description: "participant représente toute personne/structure impliquée dans l
 * associatedEntity.telecom ^short = "Coordonnées télécom du participant"
 * associatedEntity.associatedPerson ^short = "Identité du participant"
 * associatedEntity.scopingOrganization ^short = "Structure"
+=======
+* functionCode.nullFlavor 0..0
+* functionCode.code 1..1 // Rendre le code en obligatoire si functionCode existe
+* functionCode.codeSystem 1..1 // Rendre le codeSystem en obligatoire si functionCode existe
+* functionCode.codeSystemVersion 0..0
+* functionCode.sdtcValueSet 0..0
+* functionCode.sdtcValueSetVersion 0..0
+* functionCode.originalText ^short = "Précision sur le rôle fonctionnel du participant" 
+* associatedEntity only fr-core-associated-entity // associatedEntity est de type fr-core-associated-entity
+* associatedEntity ^short = "Identification du participant"
+>>>>>>> main
