@@ -3,17 +3,6 @@ Profile: FrRepresentedCustodianOrganization
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/CustodianOrganization
 Id: fr-core-represented-custodian-organization
 Title: "representedCustodianOrganization"
-<<<<<<< HEAD
-Description: "representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."
-* ^status = #draft
-* classCode 0..0 // Interdire l’attribut @classCode
-* determinerCode 0..0 // Interdire l’attribut @determinerCode
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0 // Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* id 1..1 // modifier la cardinalité de l'élément id 1..* ==> 1..1
-* sdtcTelecom 0..0 // Interdire l'élément sdtcTelecom
-=======
 Description: "L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."
 * ^status = #draft
 * classCode 0..0
@@ -34,4 +23,3 @@ valeur fixée à '1.2.250.1.213.4.1'"
 * telecom ^short = "Coordonnées télécom de la structure."
 * addr ^short = "Adresse géopostale de la structure."
 * sdtcTelecom 0..0
->>>>>>> main

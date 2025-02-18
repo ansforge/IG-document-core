@@ -3,16 +3,6 @@ Profile: FrOrder
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Order
 Id: fr-core-order
 Title: "order"
-<<<<<<< HEAD
-Description: "order représente la prescription à l’origine de l’acte dont résulte le document." 
-* ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* classCode 0..0 // Interdire l’attribut classCode
-* moodCode 0..0 // Interdire l’attribut moodCode
-=======
 Description: "L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document." 
 * ^status = #draft
 * nullFlavor 0..0
@@ -21,7 +11,6 @@ Description: "L'élément de l'en-tête du CDA order permet de représenter la p
 * typeId.displayable 0..0
 * classCode 0..0
 * moodCode 0..0
->>>>>>> main
 * id ^short = "Identifiant de la prescription, obligatoire pour :
 - un CR de biologie pour porter l’Order Placer Number (numéro de la prescription attribué par le prescripteur)
 - un CR d’imagerie pour porter l'Order Placer Number (numéro de la demande attribué par le demandeur), avec l'attribut @root contenant l'autorité d'affectation et l'attribut @extension contenant l'identifiant géré par cette autorité."

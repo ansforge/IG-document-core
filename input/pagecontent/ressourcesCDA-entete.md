@@ -2,12 +2,6 @@
 > **Note :**  
 > Ce guide de référence Structuration minimale des documents de santé décrit les éléments communs (en
 > tête CDA) aux documents de santé persistants partagés ou échangés dans le contexte français.
-<<<<<<< HEAD
-
----
-
-=======
->>>>>>> main
 ### Liste des définitions principales
 
 | **Liens vers les définitions** |  

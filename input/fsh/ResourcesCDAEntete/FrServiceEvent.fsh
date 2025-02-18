@@ -3,11 +3,7 @@ Profile: FrServiceEvent
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent
 Id: fr-core-service-event
 Title: "serviceEvent"
-<<<<<<< HEAD
-Description: "ServiceEvent représente un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
-=======
 Description: "L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
->>>>>>> main
 L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." 
 * ^status = #draft
 * nullFlavor 0..0 // Interdire l’attribut @nullFlavor
@@ -36,17 +32,10 @@ Pour les documents d’expression personnelle du patient/usager :
 * code.code 1..1
 * code.codeSystem 1..1
 * code.displayName 1..1
-<<<<<<< HEAD
-* code.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans code
-* code.codeSystemVersion 0..0 // Interdire l’attribut @codeSystemVersion dans code
-* code.sdtcValueSet 0..0 // Interdire l’attribut @sdtcValueSet dans code
-* code.sdtcValueSetVersion 0..0 // Interdire l’attribut @sdtcValueSetVersion dans code
-=======
 * code.nullFlavor 0..0 
 * code.codeSystemVersion 0..0
 * code.sdtcValueSet 0..0
 * code.sdtcValueSetVersion 0..0
->>>>>>> main
 * code.translation ^short = "Obligatoire pour :
 - un CR d’imagerie
 - un CR d’examen de l’enfant"
@@ -59,11 +48,7 @@ Pour les documents d’expression personnelle du patient/usager :
 - la modalité d'imagerie (obligatoire)
 - la région anatomique (obligatoire)"
 //*lab:status ajouter une extension
-<<<<<<< HEAD
-* effectiveTime.nullFlavor 0..0
-=======
 * effectiveTime.nullFlavor 0..0 // Interdire nullFlavor dans effectiveTime du serviceEvent pour l’évènement documenté principal 
->>>>>>> main
 * effectiveTime ^short = "Date/heure de début et de fin de l'évènement documenté :
 Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)"
 * effectiveTime.low 1..1
@@ -74,10 +59,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 * effectiveTime.width 0..0
 * effectiveTime.operator 0..0
 * performer 0..1
-<<<<<<< HEAD
-=======
 * performer.nullFlavor 0..0 // Interdire nullFlavor dans performer du serviceEvent pour l’évènement documenté principal 
->>>>>>> main
 * performer only fr-core-performer
 * performer ^short = "Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire."
 * performer.typeCode = #PRF
