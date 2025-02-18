@@ -135,7 +135,7 @@ Comme les données de l'entête d'un document CDA, les métadonnées du document
 Les parties narratives d'un document FHIR peuvent être contenues dans Composition.text et dans Composition.section.text. Il est recommandé de transmettre les métadonnées dans Composition.text et les contenus narratifs dans Composition.section.text.
 De plus, bien que le destinataire du document doive être en mesure d'afficher le contenu de Composition.section.text, il peut choisir d'afficher ou d'ignorer Composition.text, en particulier lorsqu'il est capable d'analyser les champs structurés de la composition.
 
-En résumé :
+**En résumé :**
 Le producteur du document FHIR :
 * DOIT enregistrer la partie narrative de chaque section dans Composition.section.text.
 * DEVRAIT enregistrer les métadonnées du document (par exemple, le patient) dans Composition.text.
