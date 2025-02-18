@@ -351,7 +351,7 @@ Les valeurs utilisées pour caractériser un élément `entryRelationship` avec 
 | SUBJ  | TARGET est le sujet de SOURCE             |
 
 ###### L’attribut inversionInd d’un entryRelationship
-L'attribut inversionInd (valeur booléenne) permet d’inverser la relation décrite par typeCode.Si l’on omet l’attribut InversionInd, alors on considère que inversionInd="false" (valeur par défaut).
+L'attribut `inversionInd` (valeur booléenne) permet d’inverser la relation décrite par `typeCode`. Si l’on omet l’attribut `inversionInd`, alors on considère que `inversionInd="false"` (valeur par défaut).
 Exemples :
 * si typeCode=‘RSON’ et inversionInd="false", alors TARGET est la raison de SOURCE.
 * si typeCode=‘RSON’ et inversionInd="true", alors SOURCE est la raison de TARGET.
