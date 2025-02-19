@@ -13,8 +13,8 @@ Description: "Clinical document utilisé pour représenter un document FHIR."
 * meta.profile ^slicing.description = "Modèle du document et version du modèle"
 * meta.profile contains canonical 1..1
 * meta.profile[canonical] = Canonical(fr-Composition-document)
-//* extension contains $composition-clinicaldocument-version named versionNumberDocument 0..1
-//* extension[versionNumberDocument] ^short = "Version du document"
+
+* extension[versionNumber] obeys MustBeInteger
 
 * identifier ^short = "Identifiant lot de versions"
 * identifier 1..1 MS
@@ -70,3 +70,8 @@ Description: "Clinical document utilisé pour représenter un document FHIR."
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
   * ^definition = "La ressource Composition est structurée en différentes sections."
+
+Invariant:  MustBeInteger
+Description: "La valeur de l'extension versionNumber doit être un entier."
+Expression:  "value.matches('^1[0-9]{9}$')"
+Severity:    #error

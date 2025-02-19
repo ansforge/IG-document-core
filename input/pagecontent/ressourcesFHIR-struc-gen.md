@@ -130,12 +130,15 @@ De plus, pour assurer la compréhension sans ambiguïté de la partie narrative 
 1. Le contenu narratif d'un document FHIR DOIT être visualisable via un navigateur Web standard.
 2. La visualisation d'un document FHIR par un humain NE DOIT PAS nécessiter la transmission d'une feuille de style spécifique par l'expéditeur. La visualisation d'un document FHIR DOIT être possible avec une seule feuille de style ou des outils d'affichage grand public.
 3. Les exigences pour la visualisation par un humain ne concernent que le contenu narratif du document FHIR. Le document FHIR peut contenir des informations supplémentaires pour le traitement automatique uniquement et n'ont pas vocation à être restituées à l'affichage.
+
 Comme les données de l'entête d'un document CDA, les métadonnées du document (par exemple, nom et date de naissance du patient, participants) doivent pouvoir être affichées.
 
 Les parties narratives d'un document FHIR peuvent être contenues dans Composition.text et dans Composition.section.text. Il est recommandé de transmettre les métadonnées dans Composition.text et les contenus narratifs dans Composition.section.text.
+
 De plus, bien que le destinataire du document doive être en mesure d'afficher le contenu de Composition.section.text, il peut choisir d'afficher ou d'ignorer Composition.text, en particulier lorsqu'il est capable d'analyser les champs structurés de la composition.
 
-En résumé :
+**En résumé** :
+
 Le producteur du document FHIR :
 * DOIT enregistrer la partie narrative de chaque section dans Composition.section.text.
 * DEVRAIT enregistrer les métadonnées du document (par exemple, le patient) dans Composition.text.
@@ -144,11 +147,13 @@ Le producteur du document FHIR :
 * PEUT inclure une liste des sections du document dans Composition.text
 
 Le consommateur d'un document FHIR :
+
 * DOIT afficher, au minimum, Composition.title, Composition.section.title et Composition.section.text.
 * PEUT afficher Composition.text
 * PEUT afficher des informations supplémentaires (telles que le nom du patient et sa date de naissance) dérivées de champs structurés de la Composition.
 
 Les bonnes pratiques recommandent que les éléments suivants soient affichés :
+
 * Titre du document
 * Dates du document
 * Types et dates des évènements documentés

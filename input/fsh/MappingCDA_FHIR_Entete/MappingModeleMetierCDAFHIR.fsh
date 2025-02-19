@@ -1,7 +1,6 @@
 Instance: mappingmodelemetierCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingmodelemetierCDAFHIR"
 * name = "MappingModeleMetierCDAFHIR"
 * title = "Mapping du modèle logique métier entre CDA et FHIR"
 * status = #draft

@@ -1,6 +1,7 @@
 <!-- Liste des ressources-->
 > **Note :**  
-> Cette page contient la liste des profils FHIR définis dans guide d’implémentation **ANS IG document core** pour implémenter la partie entête des documents médicaux et médico-sociaux. 
+> Cette page contient la liste des profils FHIR définis dans guide d’implémentation **ANS IG document core** pour implémenter la partie entête des documents médicaux et médico-sociaux.
+
 ### Liste des profils
 
 | **Liens vers les profils** |  
