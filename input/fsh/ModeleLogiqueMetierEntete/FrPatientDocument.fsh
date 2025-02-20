@@ -17,7 +17,7 @@ Characteristics: #can-be-target
       * premierNomUtilise 0..1 string  "Prénom utilisé."
   * sexe 1..1 CodeableConcept "Sexe administratif du patient/usager."
   * dateNaissance 1..1 dateTime "Date et heure de naissance du patient/usager."
-  * dateDeces 0..1 boolean "Patient décédé ou pas ?."
+  * dateDeces 0..1 dateTime "Date et heure du décès du patient/usager"
   * grossesseMultiple 0..1 boolean "Patient né d'une grossesse multiple."
   * numeroOrdreNaissance 0..1 string "Numéro d’ordre de naissance."
   * representantPatient 0..* BackboneElement "Représentant du patient/usager."
