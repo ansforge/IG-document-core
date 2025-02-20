@@ -24,7 +24,7 @@ Characteristics: #can-be-target
     * adresse 0..* Address "Adresse géopostale."
     * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom."
     * personneRepresentantPatient 0..1 BackboneElement "Personne représentant le patient/usager."
-      * nomPrenom 0..1 BackboneElement "Nom et Prénom du représentant."
+      * nomsPrenoms 1..1 BackboneElement "Noms et prénoms du représentant."
         * nom 0..1 string "Nom du représentant."
         * prenom 0..* string "Prénom du représentant."
       * structureRepresentatntPatient 0..1 BackboneElement "Structure représentant le patient/usager."
