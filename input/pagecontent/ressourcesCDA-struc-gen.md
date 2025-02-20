@@ -296,7 +296,7 @@ Ce référencement se fait :
 
 * Dans le bloc narratif :
     - La balise `<content>`, élément optionnel du bloc narratif de la section, permet de délimiter la zone de texte à référencer. 
-    - L'attribut ID de l'élément `<content>` est affecté d'un index de valeur unique dans le document, qui permet le référencement de la zone balisée.
+    - L'attribut `ID` de l'élément `<content>` est affecté d'un index de valeur unique dans le document, qui permet le référencement de la zone balisée.
 
 * Dans l’entry : Le composant `<originalText/reference>` permet de référencer explicitement la zone du bloc narratif référencée par `<content>` en pointant sur la valeur de l'index ID associé.
 
