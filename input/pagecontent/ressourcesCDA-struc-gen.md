@@ -326,7 +326,7 @@ Par exemple : dans l'entrée FR-Probleme, où l'élément `<value>` attend un é
 `entryRelationship` est un élément qui met en relation deux éléments de type Clinical statements (`act`, `observation`, `procedure`, etc.).
 La nature de cette relation est définie par deux attributs, `typeCode` et `inversionInd` :
 
-* typeCode indique en quoi consiste cette relation
+* `typeCode` indique en quoi consiste cette relation
 * `inversionInd` permet d’inverser cette relation.
 
 On considère que l’élément SOURCE est l'élément contenant la relation entryRelationship et l’élément TARGET est l'élément contenu dans l’entryRelationship :
