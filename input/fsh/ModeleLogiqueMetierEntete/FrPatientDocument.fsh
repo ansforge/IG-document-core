@@ -10,7 +10,7 @@ Characteristics: #can-be-target
   * nomsPrenom 0..1 BackboneElement  "Nom du patient/usager."
     * noms 0..1 BackboneElement "Nom du patient/usager."	 
       * nomNaissance 0..1 string "Nom de naissance (ou nom de famille) du patient/usager. Obligatoire si le matricule INS est présent."
-      * nomUtilise 0..1 string "Nom du patient/usager."
+      * nomUtilise 0..1 string "Nom utilisé du patient/usager."
     * prenom 0..1  BackboneElement "Prénom du patient/usager."
       * listePrenoms 0..1 string "Liste des prénoms de l'acte de naissance."
       * premierPrenom 0..1 string "Premier prénom de l'acte de naissance."
