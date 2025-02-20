@@ -1,7 +1,7 @@
 //  Logical Model : auteur			
 Logical: AuteurDocument
 Title: "1.2- Auteur du document (humain ou système)"
-Description: "Professionnel ou patient/usager ou système, auteur du document incluant la structure de rattachement de l'auteur. L'auteur du document peut être un professionnel, un patient ou un système."
+Description: "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. Pour un professionnel ou un système, la structure de rattachement doit être précisée."
 * horodatageParticipation 1..1 time "Horodatage de la participation de l’auteur."
 * roleFonctionnel 0..1 CodeableConcept "Rôle fonctionnel de l’auteur."		 		
 * precisionRoleFonctionnel 0..1 CodeableConcept "Précision sur le rôle fonctionnel."
