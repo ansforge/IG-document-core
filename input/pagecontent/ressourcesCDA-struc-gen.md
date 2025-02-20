@@ -323,7 +323,7 @@ Par exemple : dans l'entrée FR-Probleme, où l'élément `<value>` attend un é
 
 ##### L’entryRelationship : relation entre 2 éléments
 
-entryRelationship est un élément qui met en relation deux éléments de type Clinical statements (act, observation, procedure, etc.).
+`entryRelationship` est un élément qui met en relation deux éléments de type Clinical statements (`act`, `observation`, `procedure`, etc.).
 La nature de cette relation est définie par deux attributs, typeCode et inversionInd :
 
 * typeCode indique en quoi consiste cette relation
