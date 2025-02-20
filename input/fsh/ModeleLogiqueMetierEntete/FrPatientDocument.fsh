@@ -15,7 +15,7 @@ Characteristics: #can-be-target
       * listePrenoms 0..1 string "Liste des prénoms de l'acte de naissance."
       * premierPrenom 0..1 string "Premier prénom de l'acte de naissance."
       * premierNomUtilise 0..1 string  "Prénom utilisé."
-  * sexe 1..1 CodeableConcept "Sexe du patient."
+  * sexe 1..1 CodeableConcept "Sexe administratif du patient/usager."
   * dateNaissance 1..1 dateTime "Date de naissance."
   * dateDeces 0..1 boolean "Patient décédé ou pas ?."
   * grossesseMultiple 0..1 boolean "Patient né d'une grossesse multiple."
