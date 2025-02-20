@@ -26,7 +26,7 @@ Characteristics: #can-be-target
     * personneRepresentantPatient 0..1 BackboneElement "Personne représentant le patient/usager."
       * nomPrenom 0..1 BackboneElement "Nom et Prénom du représentant."
         * nom 0..1 string "Nom du représentant."
-        * prenom 0..1 string "Prénom du représentant."
+        * prenom 0..* string "Prénom du représentant."
       * structureRepresentatntPatient 0..1 BackboneElement "Structure représentant le patient/usager."
         * identifiant 0..1 Identifier "Identifiant de la structure."
         * nom 0..1 string "Nom de la structure."
