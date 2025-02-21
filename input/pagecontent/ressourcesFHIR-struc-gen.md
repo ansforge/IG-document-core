@@ -41,7 +41,7 @@ Un document conforme au standard FHIR se compose :
 
 #### L'entête d’un document FHIR
 
-Les éléments du **Bundle** et de la **Composition** rassemblent les informations générales et nécessaires à la gestion du document (cela correspond à l'entête d'un document CDA). Ces informations permettent de relier le document au contexte dans lequel il a été produit, de le classer dans les catégories adéquates et de gérer son évolution et son accessibilité dans la durée. La structure de base Bundle/Composition est identique quel que soit le type de document et quel que soit le degré de structuration choisi. 
+Les éléments du **Bundle** et de la **Composition** rassemblent les informations générales et nécessaires à la gestion du document (cela correspond à l'entête d'un document CDA). Ces informations permettent de relier le document au contexte dans lequel il a été produit, de le classer dans les catégories adéquates et de gérer son évolution et son accessibilité dans la durée. La structure de base Bundle/Composition est identique quel que soit le type de document et quel que soit le degré de structuration choisi.
 
 Les éléments du **Bundle** et de la **Composition** portent sur :
 
@@ -79,9 +79,8 @@ Les sous-sections FHIR ne peuvent pas contenir de partie narrative. Toute la par
 
 **Les entrées** des sections **sont des références à d'autres ressources** qui contiennent les données de l'entrée.
 
-Les sections peuvent être profilées dans des extensions. Par exemple, dans un [CR-BIO](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html) (ex HL7 Europe Laboratory Report), on pourra avoir les sections suivantes :
-
-* [section:lab-no-subsections](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-no-subsections) : section avec des entrées et sans sous-section
+Les sections peuvent être slicées pour les préciser. Par exemple, dans un [CR-BIO](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html) (ex HL7 Europe Laboratory Report), on pourra avoir les sections suivantes : 
+* [section:lab-no-subsections](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-no-subsections) : section avec des entrées et sans sous-section 
 * [section:lab-subsections](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-subsections) : section avec des sous-sections
 * [section:annotations](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:annotations) : section Commentaire
 
@@ -104,7 +103,7 @@ La norme FHIR permet d’indiquer de façon optionnelle le rattachement d'une se
 * Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l'élément **Composition.section.focus**.
 * Dans une entrée, la personne concernée par les informations de l'entrée, si elle est différente du patient/usager, est indiquée dans l'élément **subject**.
 
-Chaque entrée d'un document peut avoir un **subject**. Si l'entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l'élément **Composition.section.focus** de la section . Si la section ne contient pas d'élément **Composition.section.focus**, la section concerne la personne indiquée dans l'élément **subject** du document.
+Chaque entrée d'un document peut avoir un **subject**. Si l'entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l'élément **Composition.section.focus** de la section. Si la section ne contient pas d'élément **Composition.section.focus**, la section concerne la personne indiquée dans l'élément **subject** du document.
  C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.
 
 ### Conformité des documents FHIR
@@ -162,8 +161,7 @@ Les parties narratives d'un document FHIR peuvent être contenues dans Compositi
 
 De plus, bien que le destinataire du document doive être en mesure d'afficher le contenu de Composition.section.text, il peut choisir d'afficher ou d'ignorer Composition.text, en particulier lorsqu'il est capable d'analyser les champs structurés de la composition.
 
-**En résumé** :
-
+**En résumé :**
 Le producteur du document FHIR :
 
 * DOIT enregistrer la partie narrative de chaque section dans Composition.section.text.
