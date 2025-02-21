@@ -2,7 +2,7 @@ Ce guide constitue les spécifications françaises des documents médicaux et m�
 
 Il s'appuie sur les standards internationaux CDA et FHIR. Selon le cas d'usage un document se conformera à l'un ou l'autre de ces deux standards.
 
-Ce guide ne remplace pas les standards, il vient en complément de ces standards en fournissant : 
+Ce guide ne remplace pas les standards, il vient en complément de ces standards en fournissant :
 
 * des précisions et des conseils pour la mise en œuvre,
 * des exigences spécifiques à l'implémentation en France, par exemple sur l'identification du patient (INS), l'identification des professionnels et des organisations, les terminologies et jeux de valeurs utilisés.

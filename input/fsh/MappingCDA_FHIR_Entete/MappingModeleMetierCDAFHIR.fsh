@@ -62,11 +62,6 @@ Usage: #definition
 // Groupe Mapping 1 : CDA 2 FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Composition-document"
-/* group[=].element[+].code = #ClinicalDocument.id
-* group[=].element[=].display = ""
-* group[=].element[=].target.code = #Bundle.id
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent*/
 * group[=].element[+].code = #ClinicalDocument.templateId
 * group[=].element[=].display = ""
 * group[=].element[=].target.code = #Composition.meta.profile

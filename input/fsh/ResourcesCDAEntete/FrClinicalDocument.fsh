@@ -11,16 +11,12 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
   * ^short = "Référence au standard CDA R2."
 * templateId 3..* 
   * ^short = "Déclarations de conformité."
-* id 1..1 
-  * ^short = "Identifiant unique du document."
-* code 1..1 
-  * ^short = "Type de document."
+* id ^short = "Identifiant unique du document."
+* code ^short = "Type de document."
 * title 1..1 
   * ^short = "Titre du document." 
-* effectiveTime 1..1 
-  * ^short = "Date et heure de création du document."
-* confidentialityCode 1..1 
-  * ^short = "Niveau de confidentialité du document."
+* effectiveTime ^short = "Date et heure de création du document."
+* confidentialityCode ^short = "Niveau de confidentialité du document."
 * languageCode 1..1 
   * ^short = "Langue principale du document."
 * setId 1..1 
@@ -31,31 +27,23 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
 * recordTarget 1..1
 * recordTarget only fr-core-record-target
   * ^short = "Patient/Usager concerné par le document."
-* author 1..*
 * author only fr-core-author
   * ^short = "Professionnel ou patient/usager ou système, auteur du document incluant la structure de rattachement de l'auteur."
-* dataEnterer 0..1 
 * dataEnterer only fr-core-data-enterer
   * ^short = "Opérateur de saisie."
-* informant 0..* 
 * informant only FrInformant 
   * ^short = "Informateur (informant), ayant fourni des informations utiles aux actes en rapport avec la production du document." 
-* custodian 1..1 
 * custodian only FrCustodian 
   * ^short = "Structure conservant le document et garantissant son cycle de vie." 
-* informationRecipient 0..* 
 * informationRecipient only FrInformationRecipient 
   * ^short = "Destinataire prévu du document." 
 * legalAuthenticator 1..1 
 * legalAuthenticator only FrLegalAuthenticator 
-  * ^short = "Professionnel ou patient/usager ou système responsable du document." 
-* authenticator 0..* 
+  * ^short = "Professionnel ou patient/usager ou système responsable du document."
 * authenticator only FrAuthenticator 
   * ^short = "Professionnel attestant la validité du document" 
-* participant 0..* 
 * participant only FrParticipant 
   * ^short = "Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire."
-* inFulfillmentOf 0..* 
 * inFulfillmentOf only FrInFulfillmentOf 
   * ^short = "Prescription" 
 * documentationOf 1..* 
@@ -64,7 +52,6 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
 * relatedDocument 0..1 
 * relatedDocument only FrRelatedDocument 
   * ^short = "Document de référence (à remplacer, transformé, …)." 
-* authorization 0..* 
 * authorization only FrAuthorization 
   * ^short = "Consentement associé au document." 
 * componentOf 1..1 

@@ -1,15 +1,17 @@
 //  Logical Model : auteur-systeme	
-Logical: SystemeDocument			
-Title: "1.2.2- Système"	
+Logical: Systeme		
+Title: "Système"	
 //Id: fr-auteur-systeme	
-Description:  """Informations complémentaires si l’auteur est un système.""" 	
+Description:  "Système auteur du document" 	
 Characteristics: #can-be-target		
 * identificationAuteur 1..1 BackboneElement "Identification de l’auteur."		 		
   * identifiantAuteur 1..* Identifier "Identifiant de l’auteur."
-  * professionSavoirFaireRole 0..1 CodeableConcept "Profession / savoir-faire ou rôle."
+  * professionSavoirFaireRole 1..1 CodeableConcept "Rôle."
   * systeme 1..1 BackboneElement "Système."	
     * nomModeleSysteme 1..1 string "Nom du modèle du système."
     * nomSysteme 1..1 string "Nom du système."
   * structure 1..1 BackboneElement "Structure."	
-    * identifiantStructure 0..1 Identifier "Identifiant de la structure."
-    * nomStructure 0..1 string "Nom de la structure."		
+    * identifiantStructure 1..1 Identifier "Identifiant de la structure."
+    * nomStructure 1..1 string "Nom de la structure."	
+    * adresse 0..* Address "Adresse géopostale."
+    * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom."

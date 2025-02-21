@@ -1,6 +1,6 @@
 ### Principe général
 
-Le mapping CDA / FHIR présenté ici s'appuie sur l'IG [https://build.fhir.org/ig/HL7/fhir-clinical-document/mapping.html](https://build.fhir.org/ig/HL7/fhir-clinical-document/mapping.html) réalisé par HL7.
+Le mapping CDA / FHIR présenté ici s'appuie sur l'IG [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/mapping.html) réalisé par HL7.
 
 Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant de toute syntaxe.
 

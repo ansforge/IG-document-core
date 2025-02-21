@@ -83,6 +83,7 @@ menu:
         CDA: ressourcesCDA-corps.html
         FHIR: ressourcesFHIR-corps.html
         Mapping CDA / FHIR: mappingCDA-FHIR-corps.html
+    Ressources de conformité: artifacts.html
     Autres ressources:
         "Espace de publication du CI-SIS" : new-tab https://esante.gouv.fr/offres-services/ci-sis/espace-publication
         "Serveur Multi-terminologies": new-tab https://smt.esante.gouv.fr/
@@ -95,7 +96,6 @@ menu:
         "Standard FHIR": new-tab https://hl7.org/fhir/R4/index.html
         "Documentation des guides d'implémentation de l'ANS": new-tab https://interop.esante.gouv.fr/ig/documentation/index.html 
         Téléchargements et usage: downloads.html
-        Ressources de conformité: artifacts.html
         
 groups:
   Modèles logiques:
@@ -103,23 +103,22 @@ groups:
     #description: Modèle logique métier
     resources:
       - EnteteDocument	
-      - PatientDocument
-      - AuteurDocument
-      - ProfessionnelAuteurDocument
-      - SystemeDocument 
-      - InformateurDocument
-      - ProfessionnelDocument	
-      - NonProfessionnelDocument
-      - StructureConservationDocument
-      - DestinatairePrevuDocument
-      - ResponsableDocument
-      - ValidateurDocument
+      - Patient
+      - Auteur
+      - ProfessionnelAuteur
+      - PersonneStructure
+      - Systeme
+      - Informateur
+      - StructureConservation
+      - DestinatairePrevu
+      - Responsable
+      - Validateur
       - OperateurSaisie
-      - ParticipantDocument
+      - Participant
       - AssociationPrescription
-      - EvenementDocumente	
+      - Evenement
       - DocumentReference
-      - ConsentementDocument
+      - Consentement
       - AssociationPriseEncharge
 
   Ressources CDA:
@@ -158,6 +157,10 @@ groups:
       - StructureDefinition/fr-core-order
       - StructureDefinition/fr-core-parent-document
       - FrName
+      - StructureDefinition/fr-core-encompassing-encounter
+      - StructureDefinition/fr-core-encounter-participant
+      - StructureDefinition/fr-core-health-care-facility
+
   Ressources FHIR:
     name: Ressources FHIR
     resources:

@@ -86,14 +86,19 @@ Exemple :
 
 ##### CDA R2.0 signé électroniquement
 
-Dans le cas d'un document CDA R2 signé électroniquement, la signature enveloppe le document. L'élément racine est dans ce cas **ds:Signature** du standard xmldsig.
+Dans le cas d'un document CDA R2 signé électroniquement, la signature enveloppe le document.
+
+L'élément racine est dans ce cas **ds:Signature** du standard xmldsig.
+
 L'élément **ClinicalDocument** introduisant ses propres espaces de nommage est, dans ce cas de figure, un descendant de l'élément racine **ds:Signature**. La validation par rapport au schéma CDA_extended.xsd et par rapport aux schématrons ne s'applique qu'au sous-arbre ClinicalDocument.
-La signature électronique du document CDA R2 est spécifiée au paragraphe 4.1 Imputabilité et intégrité du document médical.
+
+La signature électronique du document CDA R2 est spécifiée au paragraphe [4.1 Imputabilité et intégrité du document médical](https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.16.3.pdf).
 
 ##### CDA R2.0 autoprésentable
 
 Dans le cas d'un document CDA, le contenu CDA et la feuille de style sont juxtaposés dans un unique document XML dont l'élément racine est **xsl:stylesheet**.
 L'ensemble [feuille de style + contenu] peut éventuellement être signé électroniquement, ce qui ne change pas cet élément racine.
+
 L'élément **ClinicalDocument** introduisant ses propres espaces de nommage est, dans ce cas de figure, un descendant de l'élément racine **xsl:stylesheet**. La validation par rapport au schéma CDA_extended.xsd et par rapport aux schématrons ne s'applique qu'au sous-arbre ClinicalDocument.
 
 #### L'entête d’un document CDA R2.0
@@ -210,6 +215,7 @@ La majorité des modèles de contenu (sections et entrées) sont issus des spéc
 * IHE PaLM pour les examens biologiques et anatomo-pathologiques,
 * IHE PHARM pour le médicament,
 * IHE QRPH pour les données liées à la recherche clinique et à la santé publique.
+
 Lorsqu’aucun modèle n’est identifié dans les spécifications IHE pour répondre à un besoin spécifique du contexte français, un modèle spécifique est alors créé pour le contexte français.
 
 ##### Structures des sections
@@ -276,15 +282,15 @@ Il s'agit :
 
 * Soit d'un OID et dans ce cas les attributs de l'élément ```<id>``` prennent les valeurs suivantes :
 
-    →root: OID du document
+    → root: OID du document
 
-    →extension: numéro d'identifiant de la section ou de l'entrée affecté par le LPS
+    → extension: numéro d'identifiant de la section ou de l'entrée affecté par le LPS
 
-Exemple **<id root="OID du document' extension='id attribué par le LPS/>**
+    Exemple **```<id root="OID du document' extension='id attribué par le LPS/>```**
 
 * Soit d'un UUID dans le cas où ces éléments viendraient à manquer. Dans ce cas cet identifiant est affecté à l'attribut root et l'attribut extension sera omis.
 
-Exemple **```<id root=2BFB4077-C831-4C6E-8BBD-7368A6130182/>```**
+    Exemple **```<id root=2BFB4077-C831-4C6E-8BBD-7368A6130182/>```**
 
 Cet identifiant unique peut être utilisé comme référence dans une entrée FR-reference-interne.
 
