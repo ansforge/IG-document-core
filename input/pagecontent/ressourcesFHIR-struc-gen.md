@@ -70,7 +70,7 @@ Les sous-sections FHIR ne peuvent pas contenir de partie narrative. Toute la par
 
 **Les entrées** des sections **sont des références à d'autres ressources** qui contiennent les données de l'entrée.
 
-Les sections peuvent être profilées dans des extensions. Par exemple, dans un [CR-BIO](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html) (ex HL7 Europe Laboratory Report), on pourra avoir les sections suivantes : 
+Les sections peuvent être slicées pour les préciser. Par exemple, dans un [CR-BIO](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html) (ex HL7 Europe Laboratory Report), on pourra avoir les sections suivantes : 
 * [section:lab-no-subsections](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-no-subsections) : section avec des entrées et sans sous-section 
 * [section:lab-subsections](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-subsections) : section avec des sous-sections
 * [section:annotations](https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:annotations) : section Commentaire
