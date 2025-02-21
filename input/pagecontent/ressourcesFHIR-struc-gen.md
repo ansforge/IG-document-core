@@ -89,7 +89,7 @@ La norme FHIR permet d’indiquer de façon optionnelle le rattachement d'une se
 * Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l'élément **Composition.section.focus**.
 * Dans une entrée, la personne concernée par les informations de l'entrée, si elle est différente du patient/usager, est indiquée dans l'élément **subject**.
 
-Chaque entrée d'un document peut avoir un **subject**. Si l'entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l'élément **Composition.section.focus** de la section . Si la section ne contient pas d'élément **Composition.section.focus**, la section concerne la personne indiquée dans l'élément **subject** du document.
+Chaque entrée d'un document peut avoir un **subject**. Si l'entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l'élément **Composition.section.focus** de la section. Si la section ne contient pas d'élément **Composition.section.focus**, la section concerne la personne indiquée dans l'élément **subject** du document.
  C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.
 
 ### Conformité des documents FHIR
