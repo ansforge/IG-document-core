@@ -66,7 +66,7 @@
 
 
 
-  <img alt=" flag" src="assets/images/zwe.svg" height="16" title=""/>
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
 
 
             </span>
@@ -156,6 +156,9 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
@@ -194,9 +197,6 @@
       <li>
         <a href="downloads.html">Téléchargements et usage</a>
       </li>
-      <li>
-        <a href="artifacts.html">Ressources de conformité</a>
-      </li>
     </ul>
   </li>
 </ul>
@@ -219,7 +219,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-EnteteDocument.html">next&gt;</a>
+          | <a href="StructureDefinition-AssociationPrescription.html">next&gt;</a>
 
           </span>
 
@@ -268,7 +268,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#5">Concept Maps</a>
       </li>
       <li>
-         <a href="#6">Structures: Logical Models</a>
+         <a href="#6">Terminology: Concept Maps</a>
       </li>
    </ul>
 </div>
@@ -284,26 +284,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-EnteteDocument.html"
-                  title="StructureDefinition/EnteteDocument">1- Modèle logique métier de l'en-tête</a>
-            </td>
-            <td>
-<p>Eléments de l’en-tête contenat les données d’indentification du document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-PatientDocument.html"
-                  title="StructureDefinition/PatientDocument">1.1- Patient / Usager</a>
-            </td>
-            <td>
-<p>Patient/Usager concerné par le document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-AssociationPrescription.html"
-                  title="StructureDefinition/AssociationPrescription">1.10- Association du document à une prescription</a>
+                  title="StructureDefinition/AssociationPrescription">Association du document à une prescription</a>
             </td>
             <td>
 <p>Association à une prescription à l’origine de l’acte dont résulte le document.</p>
@@ -311,35 +293,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-EvenementDocumente.html"
-                  title="StructureDefinition/EvenementDocumente">1.11- Évènement documenté</a>
-            </td>
-            <td>
-<p>Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-DocumentReference.html"
-                  title="StructureDefinition/DocumentReference">1.12- Document de référence</a>
-            </td>
-            <td>
-<p>Référence un document existant (à remplacer ou transformé).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ConsentementDocument.html"
-                  title="StructureDefinition/ConsentementDocument">1.13- Consentement associé au document</a>
-            </td>
-            <td>
-<p>Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-AssociationPriseEncharge.html"
-                  title="StructureDefinition/AssociationPriseEncharge">1.14- Association du document à une prise en charge</a>
+                  title="StructureDefinition/AssociationPriseEncharge">Association du document à une prise en charge</a>
             </td>
             <td>
 <p>Permet d’associer le document à une prise en charge du patient/usager.</p>
@@ -347,112 +302,202 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-AuteurDocument.html"
-                  title="StructureDefinition/AuteurDocument">1.2- Auteur du document (humain ou système)</a>
+               <a href="StructureDefinition-Auteur.html"
+                  title="StructureDefinition/Auteur">Auteur du document (humain ou système)</a>
             </td>
             <td>
-<p>Auteur du document : ce peut être un professionnel, un patient/usager ou un système. Pour un professionnel ou un système, la structure de rattachement doit être précisée.</p>
+<p>Auteur du document : ce peut être un professionnel, un patient/usager ou un système.</p>
+<ul>
+  <li>
+    <p>Pour un professionnel ou un système, la structure de rattachement doit être précisée.</p>
+
+    <p>Voici les cas d’usage des documents et leurs auteurs :</p>
+
+    <p>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Cas d’usage&lt;/th&gt;
+    &lt;th&gt;Auteur(s) du document&lt;/th&gt;
+    &lt;th&gt;Structure de l’auteur&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document par un professionnel sur son logiciel professionnel&lt;/td&gt;
+    &lt;td&gt;Professionnel&lt;/td&gt;
+    &lt;td&gt;Structure&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document patient par un professionnel sur son logiciel professionnel pour le compte du patient&lt;/td&gt;
+    &lt;td&gt;Professionnel&lt;/td&gt;
+    &lt;td&gt;Structure&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document patient par le patient&lt;/td&gt;
+    &lt;td&gt;Patient&lt;/td&gt;
+    &lt;td&gt;non utilisé&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document par un système (dispositif, automate, …) de structure (ES, …)&lt;/td&gt;
+    &lt;td&gt;Système de structure&lt;/td&gt;
+    &lt;td&gt;Structure&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document par un Service numérique référencé (SNR)&lt;/td&gt;
+    &lt;td&gt;SNR&lt;/td&gt;
+    &lt;td&gt;Editeur&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Création d’un document par le DP&lt;/td&gt;
+    &lt;td&gt;CNOP/DP&lt;/td&gt;
+    &lt;td&gt;CNOP&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</p>
+  </li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ProfessionnelAuteurDocument.html"
-                  title="StructureDefinition/ProfessionnelAuteurDocument">1.2.1- Professionnel (Auteur du document)</a>
+               <a href="StructureDefinition-Participant.html"
+                  title="StructureDefinition/Participant">Autres personnes / structures impliquées</a>
             </td>
             <td>
-<p>Un professionnel (personne physique) via son logiciel de professionnel.</p>
+<p>Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-SystemeDocument.html"
-                  title="StructureDefinition/SystemeDocument">1.2.2- Système</a>
+               <a href="StructureDefinition-Consentement.html"
+                  title="StructureDefinition/Consentement">Consentement associé au document</a>
             </td>
             <td>
-<p>Informations complémentaires si l’auteur est un système.</p>
+<p>Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-InformateurDocument.html"
-                  title="StructureDefinition/InformateurDocument">1.3- Informateur</a>
-            </td>
-            <td>
-<p>Informateur (informant), ayant fourni des informations utiles aux actes en rapport avec la production du document.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-ProfessionnelDocument.html"
-                  title="StructureDefinition/ProfessionnelDocument">1.3.1- Professionnel / Structure</a>
-            </td>
-            <td>
-<p>Un professionnel et/ou une structure ayant fourni des informations concernant le document (rôle d’informateur).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-NonProfessionnelDocument.html"
-                  title="StructureDefinition/NonProfessionnelDocument">1.3.2- Informateur non professionnel</a>
-            </td>
-            <td>
-<p>Informateur non professionnel ayant fourni des informations relatives au document, ou personne de confiance désignée par le patient/usager<br />
-ou personne à prévenir en cas d’urgence ou aidant du patient/usager ou personne aidée.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-StructureConservationDocument.html"
-                  title="StructureDefinition/StructureConservationDocument">1.4- Structure chargée de la conservation du document</a>
-            </td>
-            <td>
-<p>La structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-DestinatairePrevuDocument.html"
-                  title="StructureDefinition/DestinatairePrevuDocument">1.5- Destinataire prévu du document</a>
+               <a href="StructureDefinition-DestinatairePrevu.html"
+                  title="StructureDefinition/DestinatairePrevu">Destinataire prévu du document</a>
             </td>
             <td>
 <p>Personne déclarée comme destinataire prévu du document.</p>
+<ul>
+  <li>Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).
+ Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.</li>
+</ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ResponsableDocument.html"
-                  title="StructureDefinition/ResponsableDocument">1.6- Responsable du document</a>
+               <a href="StructureDefinition-DocumentReference.html"
+                  title="StructureDefinition/DocumentReference">Document de référence</a>
             </td>
             <td>
-<p>Le responsable du document représente : Le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre 
-professionnel ou le professionnel qui prend la responsabilité du document produit par un système de structure ou le patient/usager (responsable du document d’expression personnelle) ou le SNR responsable du document produit via ce SNR ou le Dossier Pharmaceutique (DP) responsable des documents qu’il produit.</p>
+<p>Référence un document existant (à remplacer ou transformé).</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ValidateurDocument.html"
-                  title="StructureDefinition/ValidateurDocument">1.7- Validateur du document</a>
+               <a href="StructureDefinition-Informateur.html"
+                  title="StructureDefinition/Informateur">Informateur</a>
             </td>
             <td>
-<p>Professionnel attestant la validité du contenu du document.</p>
+<p>Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EnteteDocument.html"
+                  title="StructureDefinition/EnteteDocument">Modèle logique métier de l'en-tête</a>
+            </td>
+            <td>
+<p>Eléments de l’entête d’un document contenant les données les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-OperateurSaisie.html"
-                  title="StructureDefinition/OperateurSaisie">1.8- Opérateur de saisie</a>
+                  title="StructureDefinition/OperateurSaisie">Opérateur de saisie</a>
             </td>
             <td>
-<p>Opérateur de saisie contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document.</p>
+<p>Opérateur de saisie de la totalité ou d’une partie du contenu du document.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-ParticipantDocument.html"
-                  title="StructureDefinition/ParticipantDocument">1.9- Autres personnes / structures impliquées</a>
+               <a href="StructureDefinition-Patient.html"
+                  title="StructureDefinition/Patient">Patient / Usager</a>
             </td>
             <td>
-<p>Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.</p>
+<p>Patient/Usager concerné par le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PersonneStructure.html"
+                  title="StructureDefinition/PersonneStructure">Personne et/ou Structure</a>
+            </td>
+            <td>
+<p>Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PersonneStructureAuteur.html"
+                  title="StructureDefinition/PersonneStructureAuteur">Personne et/ou Structure (Auteur)</a>
+            </td>
+            <td>
+<p>Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Responsable.html"
+                  title="StructureDefinition/Responsable">Responsable du document</a>
+            </td>
+            <td>
+<p>Représente le responsable du document, qui est :</p>
+<ul>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel.</li>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …).</li>
+  <li>soit le patient/usager responsable du document d’expression personnelle</li>
+  <li>soit le SNR responsable du document produit via ce SNR.</li>
+  <li>Soit le Dossier Pharmaceutique (DP) responsable des documents qu’il produit</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-StructureConservation.html"
+                  title="StructureDefinition/StructureConservation">Structure chargée de la conservation du document</a>
+            </td>
+            <td>
+<p>Structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Systeme.html"
+                  title="StructureDefinition/Systeme">Système</a>
+            </td>
+            <td>
+<p>Système auteur du document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Validateur.html"
+                  title="StructureDefinition/Validateur">Validateur du document</a>
+            </td>
+            <td>
+<p>Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N’est pas utilisé dans un document d’expression personnelle du patient/usager et un document produit par un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Evenement.html"
+                  title="StructureDefinition/Evenement">Évènement documenté</a>
+            </td>
+            <td>
+<p>Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
 </td>
          </tr>
       </tbody>
@@ -587,6 +632,33 @@ professionnel ou le professionnel qui prend la responsabilité du document produ
             </td>
             <td>
 <p>L’élément de l’en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-encompassing-encounter.html"
+                  title="StructureDefinition/fr-core-encompassing-encounter">encompassingEncounter</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-encounter-participant.html"
+                  title="StructureDefinition/fr-core-encounter-participant">encounterParticipant</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-health-care-facility.html"
+                  title="StructureDefinition/fr-core-health-care-facility">healthCareFacility</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.).</p>
 </td>
          </tr>
          <tr>
@@ -878,36 +950,18 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
       </tbody>
    </table>
    <a name="6"> </a>
-   <h3>Structures: Logical Models </h3>
-    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-encompassing-encounter.html"
-                  title="StructureDefinition/fr-core-encompassing-encounter">encompassingEncounter</a>
+               <a href="ConceptMap-MappingGenderFHIRANS.html"
+                  title="ConceptMap/MappingGenderFHIRANS">Mapping entre ValueSet FHIR et ValueSet ANS pour le genre</a>
             </td>
             <td>
-<p>L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-encounter-participant.html"
-                  title="StructureDefinition/fr-core-encounter-participant">encounterParticipant</a>
-            </td>
-            <td>
-<p>L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-health-care-facility.html"
-                  title="StructureDefinition/fr-core-health-care-facility">healthCareFacility</a>
-            </td>
-            <td>
-<p>L’élément de l’en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.).</p>
+<p>Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR et ceux du ValueSet ANS pour le genre.</p>
 </td>
          </tr>
       </tbody>
@@ -942,7 +996,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-EnteteDocument.html">next&gt;</a>
+                <a href="StructureDefinition-AssociationPrescription.html">next&gt;</a>
 
               </td>
             </tr>
@@ -952,7 +1006,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 21, 2025 15:19+0000">2025-02-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Feb 23, 2025 14:03+0000">2025-02-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

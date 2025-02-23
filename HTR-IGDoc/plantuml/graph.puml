@@ -10,109 +10,58 @@ package IG #DDDDDD{
         class AssociationPrescription{
 
              AssociationPrescription => [None..None]
-             AssociationPrescription.prescription => [1..1]
-             AssociationPrescription.prescription.identifiant => [0..1]
+             AssociationPrescription.identifiantPrescription => [0..1]
              AssociationPrescription.accessionNumber => [0..1]
         } 
 
         class AssociationPriseEncharge{
 
              AssociationPriseEncharge => [None..None]
-             AssociationPriseEncharge.priseEnCharge => [1..1]
-             AssociationPriseEncharge.priseEnCharge.identifiantPriseEnCharge => [0..*]
-             AssociationPriseEncharge.priseEnCharge.typePriseEnCharge => [0..1]
-             AssociationPriseEncharge.priseEnCharge.dateDebutFinPriseEnCharge => [1..1]
-             AssociationPriseEncharge.priseEnCharge.typeSortie => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge => [1..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.identifiantPS => [1..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.professionSavoirfaireRole => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.adresse => [0..*]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.coordonneesTelecom => [0..*]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique.nomPersonne => [1..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique.nomPersonne.nom => [1..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique.nomPersonne.prenom => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique.nomPersonne.civilite => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.personnePhysique.nomPersonne.titre => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS.identifiantStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS.nomStructure => [0..1]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS.coordonneesTelecomStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS.adresseStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.responsablePriseEnCharge.entiteResponsablePriseEnCharge.structurePS.cadreExercice => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.identifiant => [1..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.professionSavoirfaireRole => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.adresse => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.coordonneesTelecom => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique.nomPersonne => [1..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique.nomPersonne.nom => [1..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique.nomPersonne.prenom => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique.nomPersonne.civilite => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.personnePhysique.nomPersonne.titre => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS.identifiantStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS.nomStructure => [0..1]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS.coordonneesTelecomStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS.adresseStructure => [0..*]
-             AssociationPriseEncharge.priseEnCharge.personneImpliqueePriseEnCharge.professionnelImplique.structurePS.cadreExercice => [0..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge => [1..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee => [1..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee.secteurActivite => [1..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee.secteurActivite.categorieEtablissement => [0..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee.localisationStructure => [1..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee.localisationStructure.nomStructure => [0..1]
-             AssociationPriseEncharge.priseEnCharge.lieuPriseEnCharge.structurePriseEnChargee.localisationStructure.adresseStructure => [0..1]
+             AssociationPriseEncharge.identifiantPriseEnCharge => [0..*]
+             AssociationPriseEncharge.typePriseEnCharge => [0..1]
+             AssociationPriseEncharge.dateDebutFinPriseEnCharge => [1..1]
+             AssociationPriseEncharge.typeSortie => [0..1]
+             AssociationPriseEncharge.responsablePriseEnCharge => [0..1]
+             AssociationPriseEncharge.personneImpliqueePriseEnCharge => [0..*]
+             AssociationPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
+             AssociationPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
+             AssociationPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
+             AssociationPriseEncharge.lieuPriseEnCharge => [1..1]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure => [0..1]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure.nomStructure => [0..1]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure.adresse => [0..*]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
+             AssociationPriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [0..1]
         } 
 
-        class AuteurDocument{
+        class Auteur{
 
-             AuteurDocument => [None..None]
-             AuteurDocument.horodatageParticipation => [1..1]
-             AuteurDocument.roleFonctionnel => [0..1]
-             AuteurDocument.precisionRoleFonctionnel => [0..1]
-             AuteurDocument.auteur[x] => [0..1]
+             Auteur => [None..None]
+             Auteur.roleFonctionnel => [0..1]
+             Auteur.horodatageParticipation => [1..1]
+             Auteur.auteur[x] => [1..1]
         } 
 
-        class ConsentementDocument{
+        class Consentement{
 
-             ConsentementDocument => [None..None]
-             ConsentementDocument.consentement => [1..1]
-             ConsentementDocument.consentement.identifiantConsentement => [0..*]
-             ConsentementDocument.consentement.typeConsentement => [1..1]
-             ConsentementDocument.consentement.statutConsentement => [1..1]
+             Consentement => [None..None]
+             Consentement.identifiantConsentement => [0..*]
+             Consentement.typeConsentement => [1..1]
+             Consentement.statutConsentement => [1..1]
         } 
 
-        class DestinatairePrevuDocument{
+        class DestinatairePrevu{
 
-             DestinatairePrevuDocument => [None..None]
-             DestinatairePrevuDocument.identifiantDestinataire => [0..*]
-             DestinatairePrevuDocument.adresseDestinataire => [0..*]
-             DestinatairePrevuDocument.coordonneesTelecomDestinataire => [0..*]
-             DestinatairePrevuDocument.informationsSurDestintaire => [0..1]
-             DestinatairePrevuDocument.informationsSurDestintaire.nomDestinataire => [0..*]
-             DestinatairePrevuDocument.informationsSurDestintaire.nomDestinataire.nom => [1..1]
-             DestinatairePrevuDocument.informationsSurDestintaire.nomDestinataire.prenom => [0..1]
-             DestinatairePrevuDocument.informationsSurDestintaire.nomDestinataire.civilite => [0..1]
-             DestinatairePrevuDocument.informationsSurDestintaire.nomDestinataire.titre => [0..1]
-             DestinatairePrevuDocument.structureDestinataire => [0..1]
-             DestinatairePrevuDocument.structureDestinataire.identifiantStructure => [0..1]
-             DestinatairePrevuDocument.structureDestinataire.nomStructure => [0..*]
-             DestinatairePrevuDocument.structureDestinataire.coordonneesTelecomStructure => [0..*]
-             DestinatairePrevuDocument.structureDestinataire.adresseStructure => [0..1]
+             DestinatairePrevu => [None..None]
+             DestinatairePrevu.Destinataire => [0..*]
         } 
 
         class DocumentReference{
 
              DocumentReference => [None..None]
              DocumentReference.typeReference => [1..1]
-             DocumentReference.parentDocument => [1..1]
-             DocumentReference.parentDocument.identifiantUniqueDocument => [1..1]
+             DocumentReference.identifiantUniqueDocument => [1..1]
         } 
 
         class EnteteDocument{
@@ -128,71 +77,39 @@ package IG #DDDDDD{
              EnteteDocument.identifiantDuLotDeVersions => [1..1]
              EnteteDocument.versionDocument => [1..1]
              EnteteDocument.statutDocument => [1..1]
-             EnteteDocument.patientDocument => [1..1]
-             EnteteDocument.auteurDocument => [1..*]
-             EnteteDocument.informateurDocument => [0..*]
-             EnteteDocument.structureConservationDocument => [1..1]
-             EnteteDocument.destinataireDocument => [0..*]
-             EnteteDocument.responsableDocuement => [1..1]
-             EnteteDocument.validateurDocument => [0..*]
+             EnteteDocument.patient => [1..1]
+             EnteteDocument.auteur => [1..*]
              EnteteDocument.operateurSaisie => [0..1]
+             EnteteDocument.informateur => [0..*]
+             EnteteDocument.structureConservation => [1..1]
+             EnteteDocument.destinataire => [0..*]
+             EnteteDocument.responsable => [1..1]
+             EnteteDocument.validateur => [0..*]
              EnteteDocument.participant => [0..*]
              EnteteDocument.associationPrescription => [1..1]
-             EnteteDocument.evenementDocumente => [1..*]
+             EnteteDocument.evenement => [1..*]
              EnteteDocument.documentReference => [0..1]
-             EnteteDocument.consentementAssocieAuDocument => [0..*]
+             EnteteDocument.consentementAssocie => [0..*]
              EnteteDocument.associationPriseEncharge => [1..1]
         } 
 
-        class EvenementDocumente{
+        class Evenement{
 
-             EvenementDocumente => [None..None]
-             EvenementDocumente.evenementDocumente => [1..1]
-             EvenementDocumente.evenementDocumente.identifiantSpecifique => [0..*]
-             EvenementDocumente.evenementDocumente.statut => [0..*]
-             EvenementDocumente.evenementDocumente.codeEvenement => [0..1]
-             EvenementDocumente.evenementDocumente.codeEvenement.translation => [0..*]
-             EvenementDocumente.evenementDocumente.dateHeureEvenement => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement => [1..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.roleFonctionnel => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.dateHeureParticipation => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant => [1..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.identifiant => [1..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.professionSavoirfaireRole => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.adresse => [0..*]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.coordonneesTelecom => [0..*]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique.nomPersonne => [1..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique.nomPersonne.nom => [1..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique.nomPersonne.prenom => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique.nomPersonne.civilite => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.personnePhysique.nomPersonne.titre => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable.identifiantStructure => [0..*]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable.nomStructure => [0..1]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable.coordonneesTelecomStructure => [0..*]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable.adresseStructure => [0..*]
-             EvenementDocumente.evenementDocumente.executantEvenement.executant.structureResponsable.cadreExercice => [1..1]
+             Evenement => [None..None]
+             Evenement.identifiantEvenement => [0..*]
+             Evenement.codeEvenement => [0..1]
+             Evenement.codeEvenement.translation => [0..*]
+             Evenement.dateHeureEvenement => [0..1]
+             Evenement.executantEvenement => [1..1]
+             Evenement.executantEvenement.roleFonctionnel => [0..1]
+             Evenement.executantEvenement.dateHeureParticipation => [0..1]
+             Evenement.executantEvenement.executant => [1..1]
         } 
 
-        class InformateurDocument{
+        class Informateur{
 
-             InformateurDocument => [None..None]
-             InformateurDocument.informateur[x] => [1..1]
-        } 
-
-        class NonProfessionnelDocument{
-
-             NonProfessionnelDocument => [None..None]
-             NonProfessionnelDocument.rolePersonne => [1..1]
-             NonProfessionnelDocument.lienPatient => [0..1]
-             NonProfessionnelDocument.lienPatient.precisionLien => [0..*]
-             NonProfessionnelDocument.adressePersonne => [0..*]
-             NonProfessionnelDocument.coordonneesTelecom => [0..*]
-             NonProfessionnelDocument.personnePhysique => [1..1]
-             NonProfessionnelDocument.personnePhysique.nomPersonne => [1..1]
-             NonProfessionnelDocument.personnePhysique.nomPersonne.nom => [1..1]
-             NonProfessionnelDocument.personnePhysique.nomPersonne.prenom => [0..1]
+             Informateur => [None..None]
+             Informateur.informateur => [1..1]
         } 
 
         class OperateurSaisie{
@@ -200,194 +117,136 @@ package IG #DDDDDD{
              OperateurSaisie => [None..None]
              OperateurSaisie.dateSaisie => [1..1]
              OperateurSaisie.operateurSaisie => [1..1]
-             OperateurSaisie.operateurSaisie.identifiant => [1..1]
-             OperateurSaisie.operateurSaisie.professionSavoirfaireRole => [0..1]
-             OperateurSaisie.operateurSaisie.adresse => [0..*]
-             OperateurSaisie.operateurSaisie.coordonneesTelecom => [0..*]
-             OperateurSaisie.operateurSaisie.personnePhysique => [0..1]
-             OperateurSaisie.operateurSaisie.personnePhysique.nomPersonne => [1..1]
-             OperateurSaisie.operateurSaisie.personnePhysique.nomPersonne.nom => [1..1]
-             OperateurSaisie.operateurSaisie.personnePhysique.nomPersonne.prenom => [0..1]
-             OperateurSaisie.operateurSaisie.personnePhysique.nomPersonne.civilite => [0..1]
-             OperateurSaisie.operateurSaisie.personnePhysique.nomPersonne.titre => [0..1]
-             OperateurSaisie.operateurSaisie.structure => [0..1]
-             OperateurSaisie.operateurSaisie.structure.identifiant => [0..*]
-             OperateurSaisie.operateurSaisie.structure.nom => [0..1]
-             OperateurSaisie.operateurSaisie.structure.coordonneesTelecom => [0..*]
-             OperateurSaisie.operateurSaisie.structure.adresse => [0..*]
-             OperateurSaisie.operateurSaisie.structure.cadreExercice => [0..1]
         } 
 
-        class ParticipantDocument{
+        class Participant{
 
-             ParticipantDocument => [None..None]
-             ParticipantDocument.typeParticipation => [1..1]
-             ParticipantDocument.roleFonctionnel => [0..1]
-             ParticipantDocument.roleFonctionnel.precision => [0..1]
-             ParticipantDocument.dateDebutEtOuFinParticipation => [1..1]
-             ParticipantDocument.identificationParticipant => [1..1]
-             ParticipantDocument.identificationParticipant.ProfessionnelNonProfessionnel => [1..1]
-             ParticipantDocument.identificationParticipant.identifiantParticipant => [1..1]
-             ParticipantDocument.identificationParticipant.professionSavoirfaireRole => [0..1]
-             ParticipantDocument.identificationParticipant.adresse => [0..*]
-             ParticipantDocument.identificationParticipant.coordonneesTelecomStructure => [0..*]
-             ParticipantDocument.identificationParticipant.personnePhysique => [0..1]
-             ParticipantDocument.identificationParticipant.personnePhysique.nomPersonne => [1..1]
-             ParticipantDocument.identificationParticipant.personnePhysique.nomPersonne.nom => [1..1]
-             ParticipantDocument.identificationParticipant.personnePhysique.nomPersonne.prenom => [0..1]
-             ParticipantDocument.identificationParticipant.personnePhysique.nomPersonne.civilite => [0..1]
-             ParticipantDocument.identificationParticipant.personnePhysique.nomPersonne.titre => [0..1]
-             ParticipantDocument.identificationParticipant.structureResponsable => [0..1]
-             ParticipantDocument.identificationParticipant.structureResponsable.identifiantStructure => [0..*]
-             ParticipantDocument.identificationParticipant.structureResponsable.nomStructure => [0..1]
-             ParticipantDocument.identificationParticipant.structureResponsable.coordonneesTelecomStructure => [0..*]
-             ParticipantDocument.identificationParticipant.structureResponsable.adresseStructure => [0..*]
+             Participant => [None..None]
+             Participant.typeParticipation => [1..1]
+             Participant.roleFonctionnel => [0..1]
+             Participant.dateDebutEtOuFinParticipation => [1..1]
+             Participant.participant => [1..1]
         } 
 
-        class PatientDocument{
+        class Patient{
 
-             PatientDocument => [None..None]
-             PatientDocument.identifiantPatient => [1..1]
-             PatientDocument.adresse => [0..*]
-             PatientDocument.coordonneesTelecom => [0..*]
-             PatientDocument.personnePhysique => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.noms => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.noms.nomNaissance => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.noms.nomUtilise => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.prenom => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.prenom.listePrenoms => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.prenom.premierPrenom => [0..1]
-             PatientDocument.personnePhysique.nomsPrenom.prenom.premierNomUtilise => [0..1]
-             PatientDocument.personnePhysique.sexe => [1..1]
-             PatientDocument.personnePhysique.dateNaissance => [1..1]
-             PatientDocument.personnePhysique.dateDeces => [0..1]
-             PatientDocument.personnePhysique.grossesseMultiple => [0..1]
-             PatientDocument.personnePhysique.numeroOrdreNaissance => [0..1]
-             PatientDocument.personnePhysique.representantPatient => [0..*]
-             PatientDocument.personnePhysique.representantPatient.adresse => [0..*]
-             PatientDocument.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms => [1..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.nom => [1..3]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.prenom => [0..*]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.identifiant => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.nom => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.lieuNaissance => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.lieuNaissance.lieu => [1..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.lieuNaissance.lieu.nomLieuNaissance => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.lieuNaissance.lieu.adresseEtCodeOfficielGeographique => [0..1]
-             PatientDocument.personnePhysique.representantPatient.personneRepresentantPatient.structureRepresentatntPatient.lieuNaissance.lieu.adresseEtCodeOfficielGeographique.CodeOfficielGeographique => [0..1]
+             Patient => [None..None]
+             Patient.identifiantPatient => [1..*]
+             Patient.adresse => [0..*]
+             Patient.coordonneesTelecom => [0..*]
+             Patient.personnePhysique => [1..1]
+             Patient.personnePhysique.nomsPrenoms => [1..1]
+             Patient.personnePhysique.nomsPrenoms.noms => [1..*]
+             Patient.personnePhysique.nomsPrenoms.noms.nomNaissance => [0..1]
+             Patient.personnePhysique.nomsPrenoms.noms.nomUtilise => [0..1]
+             Patient.personnePhysique.nomsPrenoms.prenoms => [1..*]
+             Patient.personnePhysique.nomsPrenoms.prenoms.listePrenoms => [0..1]
+             Patient.personnePhysique.nomsPrenoms.prenoms.premierPrenom => [0..1]
+             Patient.personnePhysique.nomsPrenoms.prenoms.prenomUtilise => [0..1]
+             Patient.personnePhysique.sexe => [1..1]
+             Patient.personnePhysique.dateNaissance => [1..1]
+             Patient.personnePhysique.indicateurDeces => [0..1]
+             Patient.personnePhysique.dateDeces => [0..1]
+             Patient.personnePhysique.grossesseMultiple => [0..1]
+             Patient.personnePhysique.numeroOrdreNaissance => [0..1]
+             Patient.personnePhysique.representantPatient => [0..*]
+             Patient.personnePhysique.representantPatient.adresse => [0..*]
+             Patient.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms => [1..1]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.nom => [1..3]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.prenom => [0..*]
+             Patient.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
+             Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
+             Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant.nom => [0..1]
+             Patient.personnePhysique.lieuNaissance => [0..1]
+             Patient.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
+             Patient.personnePhysique.lieuNaissance.adresseEtCodeOfficielGeographique => [0..1]
+             Patient.personnePhysique.lieuNaissance.CodeOfficielGeographique => [0..1]
         } 
 
-        class ProfessionnelAuteurDocument{
+        class PersonneStructure{
 
-             ProfessionnelAuteurDocument => [None..None]
-             ProfessionnelAuteurDocument.identificationAuteur => [1..*]
-             ProfessionnelAuteurDocument.identificationAuteur.identifiant => [0..*]
-             ProfessionnelAuteurDocument.identificationAuteur.professionSavoirFaireRole => [0..1]
-             ProfessionnelAuteurDocument.identificationAuteur.adresse => [0..*]
-             ProfessionnelAuteurDocument.identificationAuteur.coordonneesTelecom => [0..*]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur => [1..1]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur.nomAuteur => [1..1]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur.nomAuteur.nom => [1..1]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur.nomAuteur.prenom => [0..1]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur.nomAuteur.civilite => [0..1]
-             ProfessionnelAuteurDocument.identificationAuteur.identiteAuteur.nomAuteur.titre => [0..1]
-             ProfessionnelAuteurDocument.identificationAuteur.structure => [1..1]
-             ProfessionnelAuteurDocument.identificationAuteur.structure.identifiantStructure => [0..1]
-             ProfessionnelAuteurDocument.identificationAuteur.structure.nomStructure => [0..1]
+             PersonneStructure => [None..None]
+             PersonneStructure.personne => [0..1]
+             PersonneStructure.personne.identifiantPersonne => [0..1]
+             PersonneStructure.personne.professionRole => [0..1]
+             PersonneStructure.personne.lien => [0..1]
+             PersonneStructure.personne.adresse => [0..*]
+             PersonneStructure.personne.coordonneesTelecom => [0..*]
+             PersonneStructure.personne.IdentitePersonne => [0..1]
+             PersonneStructure.personne.IdentitePersonne.nomPersonne => [1..*]
+             PersonneStructure.personne.IdentitePersonne.prenomPersonne => [0..*]
+             PersonneStructure.personne.IdentitePersonne.civilite => [0..1]
+             PersonneStructure.personne.IdentitePersonne.titre => [0..1]
+             PersonneStructure.structure => [0..1]
+             PersonneStructure.structure.identifiantStructure => [0..1]
+             PersonneStructure.structure.nomStructure => [0..1]
+             PersonneStructure.structure.adresse => [0..*]
+             PersonneStructure.structure.coordonneesTelecom => [0..*]
+             PersonneStructure.structure.secteurActivite => [0..1]
         } 
 
-        class ProfessionnelDocument{
+        class PersonneStructureAuteur{
 
-             ProfessionnelDocument => [None..None]
-             ProfessionnelDocument.identifiant => [1..1]
-             ProfessionnelDocument.professionSavoirFaireRole => [0..1]
-             ProfessionnelDocument.adresse => [0..*]
-             ProfessionnelDocument.coordonneesTelecom => [0..*]
-             ProfessionnelDocument.personnePhysique => [0..1]
-             ProfessionnelDocument.personnePhysique.identitePersonne => [1..1]
-             ProfessionnelDocument.personnePhysique.identitePersonne.nomPersonne => [1..1]
-             ProfessionnelDocument.personnePhysique.identitePersonne.prenomPersonne => [0..1]
-             ProfessionnelDocument.personnePhysique.identitePersonne.civilite => [0..1]
-             ProfessionnelDocument.personnePhysique.identitePersonne.titre => [0..1]
-             ProfessionnelDocument.structure => [0..1]
-             ProfessionnelDocument.structure.identifiantStructure => [0..*]
-             ProfessionnelDocument.structure.nomStructure => [0..1]
-             ProfessionnelDocument.structure.coordonneesTelecomStructure => [0..*]
-             ProfessionnelDocument.structure.adresseStructure => [0..*]
-             ProfessionnelDocument.structure.cadreExercice => [0..1]
+             PersonneStructureAuteur => [None..None]
+             PersonneStructureAuteur.personne => [0..1]
+             PersonneStructureAuteur.personne.identifiantPersonne => [1..*]
+             PersonneStructureAuteur.personne.professionRole => [0..1]
+             PersonneStructureAuteur.personne.adresse => [0..*]
+             PersonneStructureAuteur.personne.coordonneesTelecom => [0..*]
+             PersonneStructureAuteur.personne.IdentitePersonne => [0..1]
+             PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne => [1..*]
+             PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne => [0..*]
+             PersonneStructureAuteur.personne.IdentitePersonne.civilite => [0..1]
+             PersonneStructureAuteur.personne.IdentitePersonne.titre => [0..1]
+             PersonneStructureAuteur.structure => [0..1]
+             PersonneStructureAuteur.structure.identifiantStructure => [0..1]
+             PersonneStructureAuteur.structure.nomStructure => [0..1]
+             PersonneStructureAuteur.structure.adresse => [0..*]
+             PersonneStructureAuteur.structure.coordonneesTelecom => [0..*]
+             PersonneStructureAuteur.structure.secteurActivite => [0..1]
         } 
 
-        class ResponsableDocument{
+        class Responsable{
 
-             ResponsableDocument => [None..None]
-             ResponsableDocument.dateHeureAttestationValidite => [1..1]
-             ResponsableDocument.ProfessionnelResponsableDocument => [1..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.identifiant => [1..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.professionSavoirfaireRole => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.adresse => [0..*]
-             ResponsableDocument.ProfessionnelResponsableDocument.coordonneesTelecomStructure => [0..*]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique.nomPersonne => [1..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique.nomPersonne.nom => [1..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique.nomPersonne.prenom => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique.nomPersonne.civilite => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.personnePhysique.nomPersonne.titre => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable.identifiantStructure => [0..*]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable.nomStructure => [0..1]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable.coordonneesTelecomStructure => [0..*]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable.adresseStructure => [0..*]
-             ResponsableDocument.ProfessionnelResponsableDocument.structureResponsable.cadreExercice => [0..1]
+             Responsable => [None..None]
+             Responsable.dateHeureAttestationValidite => [1..1]
+             Responsable.Responsable => [1..1]
         } 
 
-        class StructureConservationDocument{
+        class StructureConservation{
 
-             StructureConservationDocument => [None..None]
-             StructureConservationDocument.identifiantStructure => [1..1]
-             StructureConservationDocument.nomStructure => [0..1]
-             StructureConservationDocument.coordonneesTelecomStructure => [0..1]
-             StructureConservationDocument.adresseStructure => [0..1]
+             StructureConservation => [None..None]
+             StructureConservation.structure => [0..1]
+             StructureConservation.structure.identifiantStructure => [0..1]
+             StructureConservation.structure.nomStructure => [0..1]
+             StructureConservation.structure.adresse => [0..*]
+             StructureConservation.structure.coordonneesTelecom => [0..*]
+             StructureConservation.structure.secteurActivite => [0..1]
         } 
 
-        class SystemeDocument{
+        class Systeme{
 
-             SystemeDocument => [None..None]
-             SystemeDocument.identificationAuteur => [1..1]
-             SystemeDocument.identificationAuteur.identifiantAuteur => [1..*]
-             SystemeDocument.identificationAuteur.professionSavoirFaireRole => [0..1]
-             SystemeDocument.identificationAuteur.systeme => [1..1]
-             SystemeDocument.identificationAuteur.systeme.nomModeleSysteme => [1..1]
-             SystemeDocument.identificationAuteur.systeme.nomSysteme => [1..1]
-             SystemeDocument.identificationAuteur.structure => [1..1]
-             SystemeDocument.identificationAuteur.structure.identifiantStructure => [0..1]
-             SystemeDocument.identificationAuteur.structure.nomStructure => [0..1]
+             Systeme => [None..None]
+             Systeme.identificationAuteur => [1..1]
+             Systeme.identificationAuteur.identifiantAuteur => [1..*]
+             Systeme.identificationAuteur.professionSavoirFaireRole => [1..1]
+             Systeme.identificationAuteur.systeme => [1..1]
+             Systeme.identificationAuteur.systeme.nomModeleSysteme => [1..1]
+             Systeme.identificationAuteur.systeme.nomSysteme => [1..1]
+             Systeme.identificationAuteur.structure => [1..1]
+             Systeme.identificationAuteur.structure.identifiantStructure => [1..1]
+             Systeme.identificationAuteur.structure.nomStructure => [1..1]
+             Systeme.identificationAuteur.structure.adresse => [0..*]
+             Systeme.identificationAuteur.structure.coordonneesTelecom => [0..*]
         } 
 
-        class ValidateurDocument{
+        class Validateur{
 
-             ValidateurDocument => [None..None]
-             ValidateurDocument.dateHeureAttestationValidite => [1..1]
-             ValidateurDocument.ProfessionnelValidateurDocument => [1..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.identifiant => [1..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.professionSavoirfaireRole => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.adresse => [0..*]
-             ValidateurDocument.ProfessionnelValidateurDocument.coordonneesTelecomStructure => [0..*]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique.nomPersonne => [1..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique.nomPersonne.nom => [1..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique.nomPersonne.prenom => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique.nomPersonne.civilite => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.personnePhysique.nomPersonne.titre => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS.identifiantStructure => [0..*]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS.nomStructure => [0..1]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS.coordonneesTelecomStructure => [0..*]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS.adresseStructure => [0..*]
-             ValidateurDocument.ProfessionnelValidateurDocument.structurePS.cadreExercice => [0..1]
+             Validateur => [None..None]
+             Validateur.dateHeureAttestationValidite => [1..1]
+             Validateur.Validateur => [1..1]
         } 
 
         class FrCompositionDocument{
@@ -396,6 +255,7 @@ package IG #DDDDDD{
              Composition.meta.profile => [1..None]
              Composition.meta.profile:canonical => [1..1]
              Composition.extension => [1..None]
+             Composition.extension:versionNumber => <&plus>[None..None]
              Composition.extension:data-enterer => <&plus>[1..1]
              Composition.identifier => [1..None]
              Composition.status => [None..None]
@@ -1164,15 +1024,15 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> AuteurDocument
+    class095a1b43effec73955e31e790438de49 --> Auteur
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ConsentementDocument
+    class095a1b43effec73955e31e790438de49 --> Consentement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> DestinatairePrevuDocument
+    class095a1b43effec73955e31e790438de49 --> DestinatairePrevu
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1184,15 +1044,11 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> EvenementDocumente
+    class095a1b43effec73955e31e790438de49 --> Evenement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> InformateurDocument
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> NonProfessionnelDocument
+    class095a1b43effec73955e31e790438de49 --> Informateur
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1200,35 +1056,35 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ParticipantDocument
+    class095a1b43effec73955e31e790438de49 --> Participant
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> PatientDocument
+    class095a1b43effec73955e31e790438de49 --> Patient
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ProfessionnelAuteurDocument
+    class095a1b43effec73955e31e790438de49 --> PersonneStructure
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ProfessionnelDocument
+    class095a1b43effec73955e31e790438de49 --> PersonneStructureAuteur
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ResponsableDocument
+    class095a1b43effec73955e31e790438de49 --> Responsable
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> StructureConservationDocument
+    class095a1b43effec73955e31e790438de49 --> StructureConservation
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> SystemeDocument
+    class095a1b43effec73955e31e790438de49 --> Systeme
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> ValidateurDocument
+    class095a1b43effec73955e31e790438de49 --> Validateur
 
  class "clinicaldocument" as  class36bd288d6c6ad8dffc41b949ebb77249 
 
