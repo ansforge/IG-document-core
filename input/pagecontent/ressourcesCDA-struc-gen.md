@@ -39,13 +39,9 @@ Le prologue d'un document CDA R2 comporte :
 * Une ligne complémentaire si une feuille de style personnalisée est couplée au document CDA (non préconisé en France).
 
 ##### Encodage du document XML
-<<<<<<< HEAD
 
-L’encodage spécifié dans le prologue du document, est obligatoirement UTF-8. C’est l’encodage par défaut pour un document XML.
-
-=======
 L’encodage spécifié dans le prologue du document est obligatoirement UTF-8. C’est l’encodage par défaut pour un document XML.
->>>>>>> 38f0c8ca3a039cc19cc222248426329d4a6e54d0
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 ```
@@ -355,13 +351,8 @@ CDA permet de référencer des éléments du bloc narratif d'une section à part
 Ce référencement se fait :
 
 * Dans le bloc narratif :
-<<<<<<< HEAD
-  * La balise `<content>`, élément optionnel du bloc narratif de la section, permet de délimiter la zone de texte à référencer. 
-  * L'attribut ID de l'élément `<content>` est affecté d'un index de valeur unique dans le document, qui permet le référencement de la zone balisée.
-=======
-    - La balise `<content>`, élément optionnel du bloc narratif de la section, permet de délimiter la zone de texte à référencer. 
-    - L'attribut `ID` de l'élément `<content>` est affecté d'un index de valeur unique dans le document, qui permet le référencement de la zone balisée.
->>>>>>> 38f0c8ca3a039cc19cc222248426329d4a6e54d0
+  * La balise `<content>`, élément optionnel du bloc narratif de la section, permet de délimiter la zone de texte à référencer.
+  * L'attribut `ID` de l'élément `<content>` est affecté d'un index de valeur unique dans le document, qui permet le référencement de la zone balisée.
 
 * Dans l’`entry` : Le composant `<originalText/reference>` permet de référencer explicitement la zone du bloc narratif référencée par `<content>` en pointant sur la valeur de l'index `ID` associé.
 
@@ -402,12 +393,8 @@ On considère que l’élément SOURCE est l'élément contenant la relation ent
 </div>
 
 ###### L’attribut typeCode d’un entryRelationship
-<<<<<<< HEAD
 
-Les valeurs utilisées pour caractériser un élément entryRelationship avec l'attribut typeCode sont :
-=======
 Les valeurs utilisées pour caractériser un élément `entryRelationship` avec l'attribut `typeCode` sont :
->>>>>>> 38f0c8ca3a039cc19cc222248426329d4a6e54d0
 
 |-------|----------------------------------------------|
 | XRCPT | SOURCE résume TARGET                        |
@@ -422,26 +409,17 @@ Les valeurs utilisées pour caractériser un élément `entryRelationship` avec 
 | SUBJ  | TARGET est le sujet de SOURCE             |
 
 ###### L’attribut inversionInd d’un entryRelationship
-<<<<<<< HEAD
 
-L'attribut inversionInd (valeur booléenne) permet d’inverser la relation décrite par typeCode.Si l’on omet l’attribut InversionInd, alors on considère que inversionInd="false" (valeur par défaut).
-Exemples :
-
-* si typeCode=‘RSON’ et inversionInd="false", alors TARGET est la raison de SOURCE.
-* si typeCode=‘RSON’ et inversionInd="true", alors SOURCE est la raison de TARGET.
-
-##### nullFlavor
-
-Lorsqu’une donnée est obligatoire mais que l’on ne connaît pas la valeur de cette donnée lors de l’élaboration du document, il est possible d’utiliser un attribut nullFlavor qui permet d'indiquer la raison pour laquelle la valeur ne peut être fournie.
-=======
 L'attribut `inversionInd` (valeur booléenne) permet d’inverser la relation décrite par `typeCode`. Si l’on omet l’attribut `inversionInd`, alors on considère que `inversionInd="false"` (valeur par défaut).
+
 Exemples :
+
 * si `typeCode="RSON"` et `inversionInd="false"", alors TARGET est la raison de SOURCE.
 * si `typeCode="RSON"` et `inversionInd="true"`, alors SOURCE est la raison de TARGET.
 
 ##### nullFlavor
+
 Lorsqu’une donnée est obligatoire mais que l’on ne connaît pas la valeur de cette donnée lors de l’élaboration du document, il est possible d’utiliser un attribut `nullFlavor` qui permet d'indiquer la raison pour laquelle la valeur ne peut être fournie.
->>>>>>> 38f0c8ca3a039cc19cc222248426329d4a6e54d0
 Par exemple, la date de début d’un problème est obligatoire (cardinalité [1..1]) mais le médecin ne la connait pas au moment de la rédaction du document. Dans ce cas, on peut utiliser un nullFlavor :
 `<low nullFlavor='UNK'>`
 Dans certains cas, l'utilisation de la valeur nullFlavor n’est pas autorisée pour obliger à fournir une valeur ayant une signification précise dans le contexte. Dans ce cas, les spécifications doivent préciser que l’utilisation du nullFLavor est interdite.

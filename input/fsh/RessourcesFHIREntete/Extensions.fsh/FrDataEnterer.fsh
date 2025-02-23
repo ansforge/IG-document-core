@@ -2,7 +2,7 @@ Extension: DataEnterer
 Id: fr-data-enterer-extension
 Title: "DataEnterer"
 Description: "Extension permettant d'ajouter un opérateur de saisie dans la Composition."
-* ^context.type = #fhirpath
+* ^context.type = #element
 * ^context.expression = "Composition"
 * . ^short = "Opérateur de saisie"
 

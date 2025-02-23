@@ -79,7 +79,7 @@ Le Centre de terminologies de Santé (CGTS) de l'ANS est l'entité définissant 
 
 ##### Terminologies et jeux de valeurs
 
-Les spécifications précisent, pour chaque donnée codée (code + displayName + codeSystem), s’il convient d’utiliser la **terminologie complète** ou un jeu de valeurs constitué des valeurs spécifiques au contexte clinique à décrire.
+Les spécifications précisent, pour chaque donnée codée (code + displayName + codeSystem), s’il convient d’utiliser la **terminologie complète** ou un **jeu de valeurs** constitué des valeurs spécifiques au contexte clinique à décrire.
 
 Un jeu de valeurs peut être constitué à partir de terminologies différentes (internationales ou nationales) ou à partir de valeurs créées par l’ANS (terminologie TA_ASIP) lorsqu’une valeur n’existe dans aucune terminologie existante.
 

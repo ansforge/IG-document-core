@@ -149,7 +149,7 @@ Usage: #definition
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservationDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"
 * group[=].element[+].code = #EnteteDocument.structureConservationDocument
-* group[=].element[=].display = " Structure chargée de la conservation du document"
+* group[=].element[=].display = "Structure chargée de la conservation du document"
 * group[=].element[=].target.code = #custodian
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent

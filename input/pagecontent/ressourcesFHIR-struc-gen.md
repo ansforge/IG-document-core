@@ -162,6 +162,7 @@ Les parties narratives d'un document FHIR peuvent être contenues dans Compositi
 De plus, bien que le destinataire du document doive être en mesure d'afficher le contenu de Composition.section.text, il peut choisir d'afficher ou d'ignorer Composition.text, en particulier lorsqu'il est capable d'analyser les champs structurés de la composition.
 
 **En résumé :**
+
 Le producteur du document FHIR :
 
 * DOIT enregistrer la partie narrative de chaque section dans Composition.section.text.
