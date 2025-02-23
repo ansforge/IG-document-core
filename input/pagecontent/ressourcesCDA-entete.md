@@ -46,7 +46,7 @@ ClinicalDocument hérite de : [https://hl7.org/cda/stds/core/2.0.1-sd/StructureD
 Le CI-SIS restreint la liste des valeurs possibles de nullFlavor sur les éléments d’entête aux valeurs suivantes :
 
 | Valeur|Signification|
-|-------|-----------|
+|-------|-------------|
 | UNK   |Inconnu                      |
 | NASK  |  Non demandé                |
 | ASKU  |  Demandé mais non connu     |
@@ -64,6 +64,7 @@ Exemple :
 | Élément XML         | Utilisé dans l'élément |
 |---------------------|----------------------|
 | **assignedEntity**  | dataEnterer<br>informant<br>legalAuthenticator<br>authenticator<br>documentationOf/serviceEvent/performer<br> componentOf/encompassingEncounter/responsibleParty<br>componentOf/encompassingEncounter/encounterParticipant |
-| **addr**           |  voir Structuration minimale |
-| **telecom**        |  voir Structuration minimale |
-| **time**          |  voir Structuration minimale |
+| **addr**           | recordTarget/patientRole/addr<br>recordTarget/patientRole/patient/guardian/addr<br>recordTarget/patientRole/patient/birthPlace/place/addr<br>author/assignedAuthor/addr<br>dataEnterer/assignedEntity/addr<br>informant/assignedEntity/addr<br>informant/relatedEntity/addr<br>custodian/assignedCustodian/representedCustodianOrganization/addr<br>informationRecipient/intendedRecipient/addr<br>informationRecipient/intendedRecipient/receivedOrganization/addr<br>legalAuthenticator/assignedEntity/addr<br>legalAuthenticator/assignedEntity/representedOrganization/addr<br>participant/associatedEntity/addr<br>documentationOf/serviceEvent/performer/assignedEntity/addr<br>documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/addr<br>componentOf/encompassingEncounter/location/healthCareFacility/location/addr |
+| **telecom**        | recordTarget/patientRole/telecom<br>recordTarget/patientRole/patient/guardian/telecom<br>author/assignedAuthor/telecom<br>dataEnterer/assignedEntity/telecom<br>informant/assignedEntity/telecom<br>informant/relatedEntity/telecom<br>custodian/assignedCustodian/representedCustodianOrganization/telecom<br>informationRecipient/intendedRecipient/telecom<br>informationRecipient/intendedRecipient/receivedOrganization/telecom<br>legalAuthenticator/assignedEntity/telecom<br>legalAuthenticator/assignedEntity/representedOrganization/telecom<br>participant/associatedEntity/telecom<br>documentationOf/serviceEvent/performer/assignedEntity/telecom<br>documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/telecom|
+| **time**          | author/time<br>dataEnterer/time<br>legalAuthenticator/time<br>authenticator/time<br>participant/time<br>documentationOf/serviceEvent/performer/time<br>componentOf/encompassingEncounter/encounterParticipant/time |
+| **effectiveTime**      | documentationOf/serviceEvent/effectiveTime<br>componentOf/encompassingEncounter/effectiveTime|
