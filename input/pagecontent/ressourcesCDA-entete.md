@@ -45,13 +45,13 @@ ClinicalDocument hérite de : [https://hl7.org/cda/stds/core/2.0.1-sd/StructureD
 (1) L’attribut nullFlavor est utilisé dans un élément requis (card [1..1] ou [1..*]) lorsque le contenu de cet élément ne peut être renseigné. Cet attribut prend alors pour valeur un code donnant la raison de l'impossibilité de renseigner cet élément obligatoire.
 Le CI-SIS restreint la liste des valeurs possibles de nullFlavor sur les éléments d’entête aux valeurs suivantes :
 
-| Valeur|Signification|
-|-------|-------------|
-| UNK   |Inconnu                      |
-| NASK  |  Non demandé                |
-| ASKU  |  Demandé mais non connu     |
-| NAV   | Temporairement indisponible |
-|MSK    | Masqué                      |
+| Valeur   | Signification  |
+|----------|--------------|
+| UNK      |  Inconnu                 |
+| NASK     |  Non demandé             |
+| ASKU     |  Demandé mais non connu     |
+| NAV      |  Temporairement indisponible |
+| MSK      |  Masqué                      |
 
 Exemple :
 
