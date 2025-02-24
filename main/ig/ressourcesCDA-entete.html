@@ -72,7 +72,7 @@
 
 
 
-  <img alt=" flag" src="assets/images/zwe.svg" height="16" title=""/>
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
 
 
             </span>
@@ -236,83 +236,298 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#structure-générale-de-lentête-cda" id="markdown-toc-structure-générale-de-lentête-cda">Structure générale de l’entête CDA</a></li>
+  <li><a href="#descriptions-des-sous-éléments-transverses" id="markdown-toc-descriptions-des-sous-éléments-transverses">Descriptions des sous-éléments transverses</a></li>
+</ul>
+
 </div>
-<!-- Liste des éléments -->
-<blockquote>
-  <p><strong>Note :</strong><br />
-Ce guide de référence Structuration minimale des documents de santé décrit les éléments communs (en
-tête CDA) aux documents de santé persistants partagés ou échangés dans le contexte français.</p>
-  <h3 id="liste-des-définitions-principales">Liste des définitions principales</h3>
-</blockquote>
+<p>Ce guide présente les spécifications de l’entête CDA applicables à l’ensemble des documents de santé persistants partagés ou échangés au format CDA dans le contexte français.</p>
+
+<h3 id="structure-générale-de-lentête-cda">Structure générale de l’entête CDA</h3>
+
+<p>Les données de l’entête d’un document CDA sont véhiculées dans les éléments XML entre la racine ClinicalDocument et l’élément component (non inclus) comme indiqué dans la figure ci-dessous (extrait du schéma XML CDA R2) :</p>
+
+<div style="text-align: center;">
+<img src="SchemaXMLCDAR2.png" alt="schéma XML CDA R2" style="width: 45%; display: block; margin: 0 auto;" />
+</div>
+
+<p>Le tableau ci-dessous liste, dans l’ordre du schéma CDA, les éléments XML de l’entête avec leurs cardinalités fixées par le CI-SIS et les objets qu’ils contiennent et décrivent.</p>
+
+<p>ClinicalDocument hérite de : <a href="https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ClinicalDocument.html">https://hl7.org/cda/stds/core/2.0.1-sd/StructureDefinition-ClinicalDocument.html</a></p>
 
 <table>
   <thead>
     <tr>
-      <th><strong>Liens vers les définitions</strong></th>
+      <th>Élément XML</th>
+      <th>Élément XML</th>
+      <th>Card.CI-SIS</th>
+      <th>Objet décrit</th>
+      <th>nullFlavor (1)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="StructureDefinition-fr-core-assigned-entity.html#tabs-snap">assignedEntity</a></td>
+      <td><strong>ClinicalDocument</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-associated-entity.html#tabs-snap">associatedEntity</a></td>
+      <td> </td>
+      <td><strong>realmCode</strong></td>
+      <td>[1..1]</td>
+      <td>Périmètre d’utilisation : France</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
+      <td> </td>
+      <td><strong>typeId</strong></td>
+      <td>[1..1]</td>
+      <td>Référence au standard CDA R2</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>templateId</strong></td>
+      <td>[3..*]</td>
+      <td>Déclarations de conformité</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>id</strong></td>
+      <td>[1..1]</td>
+      <td>Identifiant unique du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>code</strong></td>
+      <td>[1..1]</td>
+      <td>Type de document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>title</strong></td>
+      <td>[0..1]</td>
+      <td>Titre du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>effectiveTime</strong></td>
+      <td>[1..1]</td>
+      <td>Date et heure de création du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>confidentialityCode</strong></td>
+      <td>[1..1]</td>
+      <td>Niveau de confidentialité du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>languageCode</strong></td>
+      <td>[1..1]</td>
+      <td>Langue principale du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>setId</strong></td>
+      <td>[0..1]</td>
+      <td>Identifiant du lot de versions du même document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>versionNumber</strong></td>
+      <td>[1..1]</td>
+      <td>Numéro de version du document</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><strong>copyTime</strong></td>
+      <td>[0..1]</td>
+      <td><em>Date et heure de remise - Élément obsolète à ne pas utiliser.</em></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-record-target.html#tabs-snap">recordTarget</a></td>
+      <td>[1..1]</td>
+      <td>Patient/Usager concerné par le document</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-author.html#tabs-snap">author</a></td>
+      <td>[1..*]</td>
+      <td>Professionnel patient/usager ou système, auteur du document ou structure de rattachement</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-data-enterer.html#tabs-snap">dataEnterer</a></td>
+      <td>[0..1]</td>
+      <td>Opérateur de saisie</td>
+      <td> </td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-assigned-author.html#tabs-snap">assignedAuthor</a></td>
-    </tr>
-    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-informant.html#tabs-snap">informant</a></td>
+      <td>[0..*]</td>
+      <td>Informateur (informant), ayant fourni des informations aux actes en rapport avec le document</td>
+      <td> </td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-related-entity.html#tabs-snap">relatedEntity</a></td>
-    </tr>
-    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-custodian.html">custodian</a></td>
+      <td>[1..1]</td>
+      <td>Structure conservant le document et garantissant son cycle de vie</td>
+      <td> </td>
     </tr>
     <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-information-recipient.html#tabs-snap">informationRecipient</a></td>
+      <td>[0..*]</td>
+      <td>Destinataire prévu du document</td>
+      <td> </td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-assigned-custodian.html#tabs-snap">assignedCustodian</a></td>
-    </tr>
-    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-legal-authenticator.html#tabs-snap">legalAuthenticator</a></td>
+      <td>[1..1]</td>
+      <td>Professionnel ou patient/usager ou système responsable du document</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-participant.html#tabs-snap">participant</a></td>
-    </tr>
-    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-authenticator.html#tabs-snap">authenticator</a></td>
+      <td>[0..*]</td>
+      <td>Professionnel attestant la validité du document**</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-authorization.html#tabs-snap">authorization</a></td>
+      <td> </td>
+      <td><a href="StructureDefinition-fr-core-participant.html#tabs-snap">participant</a></td>
+      <td>[0..*]</td>
+      <td>Participant, différent de l’auteur, du responsable, de l’opérateur de saisie, de l’informateur ou du destinataire</td>
+      <td> </td>
     </tr>
     <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-inFulfillment-of.html#tabs-snap">inFulfillmentOf</a></td>
+      <td>[0..*]</td>
+      <td>Prescription</td>
+      <td> </td>
     </tr>
     <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-documentation-of.html#tabs-snap">documentationOf</a></td>
+      <td>[1..*]</td>
+      <td>Événement documenté et notamment le cadre d’exercice</td>
+      <td>nullFlavor interdit</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-fr-core-performer.html#tabs-snap">performer</a></td>
-    </tr>
-    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-related-document.html#tabs-snap">relatedDocument</a></td>
+      <td>[0..1]</td>
+      <td>Document de référence (à remplacer, transformé, …)</td>
+      <td> </td>
     </tr>
     <tr>
+      <td> </td>
+      <td><a href="StructureDefinition-fr-core-authorization.html#tabs-snap">authorization</a></td>
+      <td>[0..*]</td>
+      <td>Consentement associé au document</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
       <td><a href="StructureDefinition-fr-core-component-of.html#tabs-snap">componentOf</a></td>
+      <td>[1..1]</td>
+      <td>Prise en charge du patient/usager et notamment la date et le secteur d’activité.</td>
+      <td>nullFlavor interdit</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>(1) L’attribut nullFlavor est utilisé dans un élément requis (card [1..1] ou [1..*]) lorsque le contenu de cet élément ne peut être renseigné. Cet attribut prend alors pour valeur un code donnant la raison de l’impossibilité de renseigner cet élément obligatoire.
+Le CI-SIS restreint la liste des valeurs possibles de nullFlavor sur les éléments d’entête aux valeurs suivantes :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Valeur</th>
+      <th>Signification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UNK</td>
+      <td>Inconnu</td>
+    </tr>
+    <tr>
+      <td>NASK</td>
+      <td>Non demandé</td>
+    </tr>
+    <tr>
+      <td>ASKU</td>
+      <td>Demandé mais non connu</td>
+    </tr>
+    <tr>
+      <td>NAV</td>
+      <td>Temporairement indisponible</td>
+    </tr>
+    <tr>
+      <td>MSK</td>
+      <td>Masqué</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Exemple :</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;telecom</span> <span class="na">nullFlavor=</span><span class="s">"UNK"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3 id="descriptions-des-sous-éléments-transverses">Descriptions des sous-éléments transverses</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Élément XML</th>
+      <th>Utilisé dans l’élément</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>assignedEntity</strong></td>
+      <td>dataEnterer<br />informant<br />legalAuthenticator<br />authenticator<br />documentationOf/serviceEvent/performer<br /> componentOf/encompassingEncounter/responsibleParty<br />componentOf/encompassingEncounter/encounterParticipant</td>
+    </tr>
+    <tr>
+      <td><strong>addr</strong></td>
+      <td>recordTarget/patientRole/addr<br />recordTarget/patientRole/patient/guardian/addr<br />recordTarget/patientRole/patient/birthPlace/place/addr<br />author/assignedAuthor/addr<br />dataEnterer/assignedEntity/addr<br />informant/assignedEntity/addr<br />informant/relatedEntity/addr<br />custodian/assignedCustodian/representedCustodianOrganization/addr<br />informationRecipient/intendedRecipient/addr<br />informationRecipient/intendedRecipient/receivedOrganization/addr<br />legalAuthenticator/assignedEntity/addr<br />legalAuthenticator/assignedEntity/representedOrganization/addr<br />participant/associatedEntity/addr<br />documentationOf/serviceEvent/performer/assignedEntity/addr<br />documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/addr<br />componentOf/encompassingEncounter/location/healthCareFacility/location/addr</td>
+    </tr>
+    <tr>
+      <td><strong>telecom</strong></td>
+      <td>recordTarget/patientRole/telecom<br />recordTarget/patientRole/patient/guardian/telecom<br />author/assignedAuthor/telecom<br />dataEnterer/assignedEntity/telecom<br />informant/assignedEntity/telecom<br />informant/relatedEntity/telecom<br />custodian/assignedCustodian/representedCustodianOrganization/telecom<br />informationRecipient/intendedRecipient/telecom<br />informationRecipient/intendedRecipient/receivedOrganization/telecom<br />legalAuthenticator/assignedEntity/telecom<br />legalAuthenticator/assignedEntity/representedOrganization/telecom<br />participant/associatedEntity/telecom<br />documentationOf/serviceEvent/performer/assignedEntity/telecom<br />documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/telecom</td>
+    </tr>
+    <tr>
+      <td><strong>time</strong></td>
+      <td>author/time<br />dataEnterer/time<br />legalAuthenticator/time<br />authenticator/time<br />participant/time<br />documentationOf/serviceEvent/performer/time<br />componentOf/encompassingEncounter/encounterParticipant/time</td>
+    </tr>
+    <tr>
+      <td><strong>effectiveTime</strong></td>
+      <td>documentationOf/serviceEvent/effectiveTime<br />componentOf/encompassingEncounter/effectiveTime</td>
     </tr>
   </tbody>
 </table>
@@ -358,7 +573,7 @@ tête CDA) aux documents de santé persistants partagés ou échangés dans le c
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 20, 2025 17:13+0000">2025-02-20</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 09:51+0000">2025-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
