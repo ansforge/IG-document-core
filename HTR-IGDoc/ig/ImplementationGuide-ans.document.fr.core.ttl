@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-02-23T14:02:58+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-24T10:33:29+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1042,7 +1042,7 @@
          fhir:reference [ fhir:v "StructureDefinition/Auteur" ]
        ] ;
        fhir:name [ fhir:v "Auteur du document (humain ou système)" ] ;
-       fhir:description [ fhir:v "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée.\n\n  Voici les cas d'usage des documents et leurs auteurs :\n\n  <table>\n    <tr>\n      <th>Cas d'usage</th>\n      <th>Auteur(s) du document</th>\n      <th>Structure de l'auteur</th>\n    </tr>\n    <tr>\n      <td>Création d'un document par un professionnel sur son logiciel professionnel</td>\n      <td>Professionnel</td>\n      <td>Structure</td>\n    </tr>\n    <tr>\n      <td>Création d'un document patient par un professionnel sur son logiciel professionnel pour le compte du patient</td>\n      <td>Professionnel</td>\n      <td>Structure</td>\n    </tr>\n    <tr>\n      <td>Création d'un document patient par le patient</td>\n      <td>Patient</td>\n      <td>non utilisé</td>\n    </tr>\n    <tr>\n      <td>Création d'un document par un système (dispositif, automate, …) de structure (ES, …)</td>\n      <td>Système de structure</td>\n      <td>Structure</td>\n    </tr>\n    <tr>\n      <td>Création d'un document par un Service numérique référencé (SNR)</td>\n      <td>SNR</td>\n      <td>Editeur</td>\n    </tr>\n    <tr>\n      <td>Création d'un document par le DP</td>\n      <td>CNOP/DP</td>\n      <td>CNOP</td>\n    </tr>\n  </table>" ] ;
+       fhir:description [ fhir:v "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v "false"^^xsd:boolean
@@ -1091,25 +1091,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-author-time" ]
-       ] ;
-       fhir:name [ fhir:v "Author Time" ] ;
-       fhir:description [ fhir:v "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v "false"^^xsd:boolean
-       ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "StructureDefinition:logical"
          ]
        ] ) ;
@@ -1143,6 +1124,25 @@
          fhir:v "false"^^xsd:boolean
        ] ;
        fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-author-time" ]
+       ] ;
+       fhir:name [ fhir:v "AuthorTime" ] ;
+       fhir:description [ fhir:v "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
