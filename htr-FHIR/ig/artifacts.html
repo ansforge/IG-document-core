@@ -108,6 +108,12 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="exigencesSpecifiques.html">Exigences spécifiques</a>
+      </li>
+      <li>
         <a href="ressourcesCDA-struc-gen.html">CDA</a>
       </li>
       <li>
@@ -156,25 +162,46 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/fhir">Serveur Multi-terminologies / FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/ansforge/TestContenuCDA-3-0">testContenuCDA</a>
+      </li>
+      <li>
         <a href="securite.html">Sécurité</a>
       </li>
       <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/fhir/R4/index.html">Standard FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
         <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
       </li>
     </ul>
   </li>
@@ -198,7 +225,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-fr-core-assigned-author.html">next&gt;</a>
+          | <a href="StructureDefinition-AssociationPrescription.html">next&gt;</a>
 
           </span>
 
@@ -232,7 +259,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Structures: Logical Models</a>
+         <a href="#1">Modèle logique métier</a>
+      </li>
+      <li>
+         <a href="#2">Eléments CDA</a>
+      </li>
+      <li>
+         <a href="#3">Ressources FHIR</a>
+      </li>
+      <li>
+         <a href="#4">Extensions FHIR</a>
+      </li>
+      <li>
+         <a href="#5">Concept Maps</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Concept Maps</a>
       </li>
    </ul>
 </div>
@@ -241,8 +283,192 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
-   <h3>Structures: Logical Models </h3>
-    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+   <h3>Modèle logique métier </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AssociationPrescription.html"
+                  title="StructureDefinition/AssociationPrescription">Association du document à une prescription</a>
+            </td>
+            <td>
+<p>Association à une prescription à l’origine de l’acte dont résulte le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AssociationPriseEncharge.html"
+                  title="StructureDefinition/AssociationPriseEncharge">Association du document à une prise en charge</a>
+            </td>
+            <td>
+<p>Permet d’associer le document à une prise en charge du patient/usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Auteur.html"
+                  title="StructureDefinition/Auteur">Auteur du document (humain ou système)</a>
+            </td>
+            <td>
+<p>Auteur du document : ce peut être un professionnel, un patient/usager ou un système.</p>
+<ul>
+  <li>Pour un professionnel ou un système, la structure de rattachement doit être précisée.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Participant.html"
+                  title="StructureDefinition/Participant">Autres personnes / structures impliquées</a>
+            </td>
+            <td>
+<p>Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Consentement.html"
+                  title="StructureDefinition/Consentement">Consentement associé au document</a>
+            </td>
+            <td>
+<p>Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DestinatairePrevu.html"
+                  title="StructureDefinition/DestinatairePrevu">Destinataire prévu du document</a>
+            </td>
+            <td>
+<p>Personne déclarée comme destinataire prévu du document.</p>
+<ul>
+  <li>Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).
+ Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DocumentReference.html"
+                  title="StructureDefinition/DocumentReference">Document de référence</a>
+            </td>
+            <td>
+<p>Référence un document existant (à remplacer ou transformé).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Informateur.html"
+                  title="StructureDefinition/Informateur">Informateur</a>
+            </td>
+            <td>
+<p>Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-EnteteDocument.html"
+                  title="StructureDefinition/EnteteDocument">Modèle logique métier de l'en-tête</a>
+            </td>
+            <td>
+<p>Eléments de l’entête d’un document contenant les données les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-OperateurSaisie.html"
+                  title="StructureDefinition/OperateurSaisie">Opérateur de saisie</a>
+            </td>
+            <td>
+<p>Opérateur de saisie de la totalité ou d’une partie du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Patient.html"
+                  title="StructureDefinition/Patient">Patient / Usager</a>
+            </td>
+            <td>
+<p>Patient/Usager concerné par le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PersonneStructure.html"
+                  title="StructureDefinition/PersonneStructure">Personne et/ou Structure</a>
+            </td>
+            <td>
+<p>Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-PersonneStructureAuteur.html"
+                  title="StructureDefinition/PersonneStructureAuteur">Personne et/ou Structure (Auteur)</a>
+            </td>
+            <td>
+<p>Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Responsable.html"
+                  title="StructureDefinition/Responsable">Responsable du document</a>
+            </td>
+            <td>
+<p>Représente le responsable du document, qui est :</p>
+<ul>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel.</li>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …).</li>
+  <li>soit le patient/usager responsable du document d’expression personnelle</li>
+  <li>soit le SNR responsable du document produit via ce SNR.</li>
+  <li>Soit le Dossier Pharmaceutique (DP) responsable des documents qu’il produit</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-StructureConservation.html"
+                  title="StructureDefinition/StructureConservation">Structure chargée de la conservation du document</a>
+            </td>
+            <td>
+<p>Structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Systeme.html"
+                  title="StructureDefinition/Systeme">Système</a>
+            </td>
+            <td>
+<p>Système auteur du document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Validateur.html"
+                  title="StructureDefinition/Validateur">Validateur du document</a>
+            </td>
+            <td>
+<p>Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N’est pas utilisé dans un document d’expression personnelle du patient/usager et un document produit par un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Evenement.html"
+                  title="StructureDefinition/Evenement">Évènement documenté</a>
+            </td>
+            <td>
+<p>Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Eléments CDA </h3>
+    
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
@@ -329,6 +555,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-clinical-document.html"
+                  title="StructureDefinition/fr-core-clinical-document">clinicalDocument</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête CDA ‘ClinicalDocument’ est l’élément racine d’un document médical.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-component-of.html"
                   title="StructureDefinition/fr-core-component-of">componentOf</a>
             </td>
@@ -392,15 +627,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-core-inFulfillment-of.html"
-                  title="StructureDefinition/fr-core-inFulfillment-of">inFulfillmentOf</a>
-            </td>
-            <td>
-<p>L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-fr-core-informant.html"
                   title="StructureDefinition/fr-core-informant">informant</a>
             </td>
@@ -415,6 +641,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>L’élément de l’en-tête du CDA informationRecipient permet d’enregistrer une personne déclarée comme destinataire prévu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-core-inFulfillment-of.html"
+                  title="StructureDefinition/fr-core-inFulfillment-of">inFulfillmentOf</a>
+            </td>
+            <td>
+<p>L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription.</p>
 </td>
          </tr>
          <tr>
@@ -555,6 +790,146 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          </tr>
       </tbody>
    </table>
+   <a name="3"> </a>
+   <h3>Ressources FHIR </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-bundle-document.html"
+                  title="StructureDefinition/fr-bundle-document">FrBundleDocument</a>
+            </td>
+            <td>
+<p>FrBundleDocument est utilisé pour représenter l’en-tête et le corps d’un document .</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-Composition-document.html"
+                  title="StructureDefinition/fr-Composition-document">FrCompositionDocument</a>
+            </td>
+            <td>
+<p>Clinical document utilisé pour représenter un document FHIR.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-device-document.html"
+                  title="StructureDefinition/fr-device-document">FrDeviceDocument</a>
+            </td>
+            <td>
+<p>Système</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-Organization-document.html"
+                  title="StructureDefinition/fr-Organization-document">FrOrganizationDocument</a>
+            </td>
+            <td>
+<p>Structure pour le compte de laquelle intervient le professionnel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-patient-fhir-document.html"
+                  title="StructureDefinition/fr-patient-fhir-document">FrPatientFHIRDocument</a>
+            </td>
+            <td>
+<p>Patient concerné par le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-practitioner-document.html"
+                  title="StructureDefinition/fr-practitioner-document">FrPractitionerDocument</a>
+            </td>
+            <td>
+<p>Auteur du document</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-practitionerRole-document.html"
+                  title="StructureDefinition/fr-practitionerRole-document">FrPractitionerRoleDocument</a>
+            </td>
+            <td>
+<p>Auteur du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-human-name-document.html"
+                  title="StructureDefinition/fr-human-name-document">HumanNameDocument</a>
+            </td>
+            <td>
+<p>Nom du professionnel de santé.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Extensions FHIR </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-author-time.html"
+                  title="StructureDefinition/fr-author-time">AuthorTime</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un horodatage (TS) à l’élément author d’une Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-data-enterer-extension.html"
+                  title="StructureDefinition/fr-data-enterer-extension">DataEnterer</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un opérateur de saisie dans la Composition.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Concept Maps </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingmodelemetierCDAFHIR.html"
+                  title="ConceptMap/mappingmodelemetierCDAFHIR">Mapping du modèle logique métier entre CDA et FHIR</a>
+            </td>
+            <td>
+<p>Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Concept Maps </h3>
+    <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-MappingGenderFHIRANS.html"
+                  title="ConceptMap/MappingGenderFHIRANS">Mapping entre ValueSet FHIR et ValueSet ANS pour le genre</a>
+            </td>
+            <td>
+<p>Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR et ceux du ValueSet ANS pour le genre.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 
 </div>
@@ -585,7 +960,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-fr-core-assigned-author.html">next&gt;</a>
+                <a href="StructureDefinition-AssociationPrescription.html">next&gt;</a>
 
               </td>
             </tr>
@@ -595,7 +970,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 12:53+0000">2025-02-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 13:33+0000">2025-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

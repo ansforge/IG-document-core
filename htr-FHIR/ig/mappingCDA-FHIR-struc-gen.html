@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.3"}
-    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.5"}
+    h3,h4,h5,h6{--heading-prefix:"2.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -108,6 +108,12 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="exigencesSpecifiques.html">Exigences spécifiques</a>
+      </li>
+      <li>
         <a href="ressourcesCDA-struc-gen.html">CDA</a>
       </li>
       <li>
@@ -156,25 +162,46 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/fhir">Serveur Multi-terminologies / FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/ansforge/TestContenuCDA-3-0">testContenuCDA</a>
+      </li>
+      <li>
         <a href="securite.html">Sécurité</a>
       </li>
       <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/fhir/R4/index.html">Standard FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
         <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
       </li>
     </ul>
   </li>
@@ -236,9 +263,300 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#principe-général" id="markdown-toc-principe-général">Principe général</a></li>
+  <li><a href="#conversion-cda--fhir" id="markdown-toc-conversion-cda--fhir">Conversion CDA / FHIR</a></li>
+</ul>
+
 </div>
+<h3 id="principe-général">Principe général</h3>
+
+<p>Le mapping CDA / FHIR présenté ici s’appuie sur l’IG <a href="https://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/mapping.html">FHIR Clinical Documents</a> réalisé par HL7.</p>
+
+<p>Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant de toute syntaxe.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Donnée métier</th>
+      <th>Élément CDA</th>
+      <th>Card</th>
+      <th>Élément FHIR</th>
+      <th>Card</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Document</strong></td>
+      <td>ClinicalDocument</td>
+      <td> </td>
+      <td>Bundle</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>Entête du document</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Identifiant unique du document</td>
+      <td>id</td>
+      <td>[1..1]</td>
+      <td>Bundle.identifier</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><strong>Bundle.entry 1 de type Composition</strong></td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Modèle du document et version du modèle</td>
+      <td>templateId / extension</td>
+      <td>[1..1]</td>
+      <td>Composition.meta.profile</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Type de document</td>
+      <td>code</td>
+      <td>[1..1]</td>
+      <td>Composition.type</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Titre du document</td>
+      <td>title</td>
+      <td>[1..1]</td>
+      <td>Composition.title</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Date de création</td>
+      <td>effectiveTime</td>
+      <td>[1..1]</td>
+      <td>Composition.date</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Niveau de confidentialité</td>
+      <td>confidentialityCode</td>
+      <td>[1..1]</td>
+      <td>Composition.confidentiality</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Langue</td>
+      <td>languageCode</td>
+      <td>[1..1]</td>
+      <td>Composition.language</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Identifiant lot de versions</td>
+      <td>setId</td>
+      <td>[1..1]</td>
+      <td>Composition.identifier</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Version du document</td>
+      <td>versionNumber</td>
+      <td>[1..1]</td>
+      <td>Composition.extension:R5-Composition-version</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Statut du document</td>
+      <td> </td>
+      <td> </td>
+      <td>Composition.status</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Patient / Usager</td>
+      <td>recordTarget</td>
+      <td>[1..1]</td>
+      <td>Composition.subject</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Auteur</td>
+      <td>author</td>
+      <td>[1..*]</td>
+      <td>Composition.author</td>
+      <td>[1..*]</td>
+    </tr>
+    <tr>
+      <td>Opérateur de saisie</td>
+      <td>dataEnterer</td>
+      <td>[0..1]</td>
+      <td>Composition.extension:data-enterer</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td>Informateur</td>
+      <td>informant</td>
+      <td>[0..*]</td>
+      <td>Composition.extension:informant</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Informateur : Personne de confiance, Personne à prévenir en cas d’urgence, Aidant, Aidé</td>
+      <td>informant</td>
+      <td>[0..*]</td>
+      <td>Composition.subject (ressource Patient / Patient.contact)</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Structure chargée de la conservation du document</td>
+      <td>custodian</td>
+      <td>[1..1]</td>
+      <td>Composition.custodian</td>
+      <td>[1..1]</td>
+    </tr>
+    <tr>
+      <td>Destinataire prévu du document</td>
+      <td>informationRecipient</td>
+      <td>[0..*]</td>
+      <td>Composition.extension:informationRecipient</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Responsable du document</td>
+      <td>legalAuthenticator</td>
+      <td>[1..1]</td>
+      <td>Composition.attester</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Professionnel attestant la validité du contenu du document</td>
+      <td>authenticator</td>
+      <td>[0..*]</td>
+      <td>Composition.attester</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Autres personnes / structures impliquées</td>
+      <td>participant</td>
+      <td>[0..*]</td>
+      <td>Composition.extension:participant</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Médecin traitant</td>
+      <td>participant</td>
+      <td> </td>
+      <td>Composition.subject (ressource Patient / Patient.generalPractitioner)</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Association du document à une prescription</td>
+      <td>inFulfillmentOf</td>
+      <td>[0..*]</td>
+      <td>Composition.extension:order</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Évènement documenté</td>
+      <td>documentationOf</td>
+      <td>[1..*]</td>
+      <td>Composition.event</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Document de référence</td>
+      <td>relatedDocument</td>
+      <td>[0..1]</td>
+      <td>Composition.relatesTo</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Consentement associé au document</td>
+      <td>authorization</td>
+      <td>[0..*]</td>
+      <td>Composition.extension:consent</td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td>Association du document à une prise en charge</td>
+      <td>componentOf</td>
+      <td>[1..1]</td>
+      <td>Composition.encounter</td>
+      <td>[0..1]</td>
+    </tr>
+    <tr>
+      <td><strong>Corps du document</strong></td>
+      <td>component / structuredBody ou nonXMLBody</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Sections</td>
+      <td>section</td>
+      <td>[1..*]</td>
+      <td>Composition.section</td>
+      <td>[1..*]</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><strong>Bundle.entry suivantes</strong></td>
+      <td>[0..*]</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>ressources référencées dans la Composition</td>
+      <td>[0..*]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Le mapping présenté est un principe général</strong> qui permet de faire le lien entre les données métier, les informations CDA et les informations FHIR. Ce mapping ne montre pas la complexité des mappings possibles pour le corps d’un document structuré (CDA R2 N3) avec la multitude de sections et d’entrées existant en CDA.</p>
+
+<ul>
+  <li>Le mapping détaillé de l’entête est fourni dans le menu <a href="mappingCDA-FHIR-entete.html">Entête d’un document / Mapping CDA/FHIR</a>.</li>
+  <li>Le mapping détaillé de sections et entrées est fourni dans le menu <a href="mappingCDA-FHIR-corps.html">Corps d’un document / Mapping CDA/FHIR</a>.</li>
+</ul>
+
+<p><strong>Mapping d’un CDA R2 niveau 1</strong> : le corps d’un CDA R2 niveau 1 (<code class="language-plaintext highlighter-rouge">&lt;NonXMLBody&gt;</code>) est repris en FHIR dans une unique <strong>Composition.section</strong> contenant une <strong>Composition.section.entry</strong> (de type Binary) qui fait référence au PDF.</p>
+
+<p><strong>Mapping d’un CDA R2 niveau 3</strong> : le corps d’un CDA R2 niveau 3 (<code class="language-plaintext highlighter-rouge">&lt;structuredBody&gt;</code>) est composé de sections qui sont reprises en FHIR dans des <strong>Composition.section</strong>.</p>
+
+<h3 id="conversion-cda--fhir">Conversion CDA / FHIR</h3>
+
+<p>La conversion d’un document CDA vers FHIR (ou inversement) est possible et peut être envisagée dans certains cas d’usage.</p>
+
+<p>Le mapping présenté doit permettre de développer des outils de conversion automatiques.</p>
+
+<p>Il convient cependant de noter quelques remarques préalables.</p>
+
+<p><strong>Conversion par modèle et pas par type de modèle</strong> :</p>
+
+<p>Si l’entête CDA peut assez simplement être convertie dans la ressource Composition (et les ressources associées), la conversion des sections et entrées est beaucoup complexe et doit se faire modèle par modèle et pas par type de section ou type d’entrée.</p>
+
+<p>Par exemple, un outil de conversion ne doit pas convertir toutes les entrées CDA de type Observation de la même manière. L’outil de conversion doit convertir spécifiquement chaque entrée de type observation. Par exemple, un convertisseur pour FR-Criticite, un autre pour FR-Certitude, etc…</p>
+
+<p><strong>Parties narratives</strong> (pour consultation par un humain) :</p>
+
+<p>En FHIR, seule la section de 1er niveau ne peut contenir une partie narrative. En CDA, chaque section et sous-section peut contenir une partie narrative. Lorsqu’il n’y pas de sous-section, la conversion de la partie narrative sera simple (section CDA section FHIR). En revanche, s’il y a des sous-sections avec des parties narratives, les convertisseurs devront prévoir une solution permettant de reprendre correctement ses parties narratives.</p>
+
+<p><strong>Eléments narratifs référencés dans la partie structurée</strong> :</p>
+
+<p>FHIR et CDA permettent d’établir des liens (via des références) entre du texte de la partie narrative et des éléments spécifiques dans la partie structurée d’un document. Si l’on effectue une conversion entre CDA et FHIR (dans les 2 sens), ces liens doivent également être convertis. Cependant, cette conversion est compliquée par le fait que la granularité à laquelle les liens peuvent être fait est différente entre les deux spécifications. En CDA, les liens ne peuvent être mis que sur un ou deux types d’éléments. En FHIR, les liens peuvent être mis à n’importe quel niveau. La conversion de CDA vers FHIR sera possible, mais il y aura une perte d’information lors de la conversion de FHIR vers CDA.</p>
+
+<p><strong>Syntaxe de la partie narrative</strong> :</p>
+
+<p>CDA définit sa propre syntaxe XML pour le contenu des parties narratives, vaguement basée sur HTML. FHIR utilise un ensemble limité de XHTML qui est un peu plus expressif que le balisage CDA. Les conversions de FHIR vers CDA devront tenir compte de ces contraintes.</p>
 
 
 
@@ -281,7 +599,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 12:53+0000">2025-02-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 13:33+0000">2025-02-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
