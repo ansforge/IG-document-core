@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.2"}
-    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.4"}
+    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -108,6 +108,12 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="exigencesSpecifiques.html">Exigences spécifiques</a>
+      </li>
+      <li>
         <a href="ressourcesCDA-struc-gen.html">CDA</a>
       </li>
       <li>
@@ -156,25 +162,46 @@
       </li>
     </ul>
   </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/fhir">Serveur Multi-terminologies / FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/ansforge/TestContenuCDA-3-0">testContenuCDA</a>
+      </li>
+      <li>
         <a href="securite.html">Sécurité</a>
       </li>
       <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/fhir/R4/index.html">Standard FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
         <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
       </li>
     </ul>
   </li>
@@ -236,9 +263,242 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#standard-fhir" id="markdown-toc-standard-fhir">Standard FHIR®</a></li>
+  <li><a href="#structure-dun-document-fhir" id="markdown-toc-structure-dun-document-fhir">Structure d’un document FHIR</a></li>
+  <li><a href="#spécifications-françaises-des-documents-fhir" id="markdown-toc-spécifications-françaises-des-documents-fhir">Spécifications françaises des documents FHIR</a></li>
+  <li><a href="#conformité-des-documents-fhir" id="markdown-toc-conformité-des-documents-fhir">Conformité des documents FHIR</a></li>
+  <li><a href="#visualisation-dun-document-fhir" id="markdown-toc-visualisation-dun-document-fhir">Visualisation d’un document FHIR</a></li>
+</ul>
+
 </div>
+<h3 id="standard-fhir">Standard FHIR®</h3>
+<p>FHIR® est un standard d’échange de données de santé publié par HL7®
+Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://hl7.org/fhir/R4/index.html</a>.</p>
+
+<p>Les ressources FHIR peuvent être utilisées pour créer des documents sous la forme d’une composition : un ensemble cohérent d’informations rédigées et/ou attestées par des humains, des organisations ou des dispositifs et enregistrées dans des ressources.</p>
+
+<p>Les documents FHIR peuvent être échangés entre les systèmes et conservés dans des plateformes de partage.</p>
+
+<p>Les documents au format FHIR doivent respecter les spécifications <a href="https://hl7.org/fhir/R4/documents.html">FHIR Document (R4)</a>.</p>
+
+<p>Un guide d’implémentation <a href="https://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/">FHIR Clinical Documents</a> produit par HL7 vient en support du standard.</p>
+
+<p>Un document FHIR, par sa conception, permet de respecter les exigences spécifiques aux documents dématérialisés énoncées au paragraphe “Exigences spécifiques aux documents dématérialisés”.</p>
+
+<p>Le standard FHIR permet de coupler dans un même document :</p>
+
+<ul>
+  <li>le <strong>contenu lisible par un humain</strong>, sans médiation et présenté dans son contexte avec toute la clarté requise,</li>
+  <li>les <strong>données codées et structurées</strong> dont dérivent ce contenu, directement intégrables dans les bases de données des SIS consommateurs des professionnels qui le souhaitent.</li>
+</ul>
+
+<h3 id="structure-dun-document-fhir">Structure d’un document FHIR</h3>
+
+<p>D’un point de vue technique, un <strong>document FHIR</strong> est un <strong>Bundle</strong> de type “document” contenant une première ressource Composition suivie d’autres ressources référencées dans la Composition. La Composition est similaire à un index, mais contient également des informations d’entête clés.</p>
+
+<p>Le Bundle rassemble tout le contenu du document dans un seul document XML ou JSON qui peut être signé et géré selon les besoins.</p>
+
+<p>Un document conforme au standard FHIR se compose :</p>
+
+<ul>
+  <li>d’un <strong>Bundle</strong> contenant
+    <ul>
+      <li>des éléments propres au Bundle : Identifiant unique du document, Date de création du Bundle</li>
+      <li>une ressource <strong>Composition</strong> contenant :
+        <ul>
+          <li>des éléments propres à la Composition : Modèle du document et version du modèle, type de document, Identifiant du lot de version et Numéro de version, titre, langue, etc…</li>
+          <li>les <strong>références des ressources</strong> utilisées avec au minimum :
+            <ul>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.subject">Composition.subject</a>   Patient / usager</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.encounter">Composition.encounter</a>   Association du document à une prise en charge</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.author">Composition.author</a>   Auteur du document</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.attester.party">Composition.attester.party</a>   Responsable du document et Personne attestant la validité du contenu du document</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.custodian">Composition.custodian</a>   Structure chargée de la conservation du document</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.event.detail">Composition.event.detail</a>   Evènement documenté</li>
+              <li><a href="https://hl7.org/fhir/R4/composition-definitions.html#Composition.section.author">Composition.section</a>    Sections</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>les <strong>ressources référencées</strong> dans la Composition</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="lentête-dun-document-fhir">L’entête d’un document FHIR</h4>
+
+<p>Les éléments du <strong>Bundle</strong> et de la <strong>Composition</strong> rassemblent les informations générales et nécessaires à la gestion du document (cela correspond à l’entête d’un document CDA). Ces informations permettent de relier le document au contexte dans lequel il a été produit, de le classer dans les catégories adéquates et de gérer son évolution et son accessibilité dans la durée. La structure de base Bundle/Composition est identique quel que soit le type de document et quel que soit le degré de structuration choisi.</p>
+
+<p>Les éléments du <strong>Bundle</strong> et de la <strong>Composition</strong> portent sur :</p>
+
+<ul>
+  <li><strong>La qualification du document</strong> : identifiant globalement unique, type, modèles, date de création, titre, langue, niveau de confidentialité, etc. ;</li>
+  <li><strong>La qualification de l’évènement ou des évènements documentés</strong> : code évènement, horodatage, cadre d’exercice, modalité d’exercice, lieu d’exercice, etc. ;</li>
+  <li><strong>Les participants</strong> : patient/usager, auteur, responsable, structure chargée de conservation du document, valideurs, destinataires prévus, autres participants, etc.</li>
+</ul>
+
+<h4 id="le-corps-dun-document-fhir">Le corps d’un document FHIR</h4>
+
+<p>La ressource <strong>Composition</strong> contient les différentes sections du document dans des ressources Composition.section (l’ensemble de ces ressources <strong>Composition.section</strong> correspond au corps d’un document CDA).</p>
+
+<p>Une Composition.section peut contenir :</p>
+
+<ul>
+  <li><strong>Un document non structuré</strong> (PDF ou TEXT), encodé en base 64 : Pour encapsuler un document non structuré, utiliser une ressource Composition contenant <strong>une seule Composition.section</strong> avec une <strong>Composition.section.entry</strong> qui fait référence à la ressource de type <a href="https://hl7.org/fhir/R4/binary.html">Binary</a> portant le document non structuré encodé en B64. La ressource <a href="https://hl7.org/fhir/R4/binary.html">Binary</a> précisera le mediaType (“application/pdf” ou “text/plain”) dans Binary.contentType et portera le document encodé en B64 dans Binary.data.</li>
+</ul>
+
+<p>Exemple :</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;Binary&gt;</span>
+    <span class="nt">&lt;contentType</span> <span class="na">value=</span><span class="s">"application/pdf"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;language</span> <span class="na">value=</span><span class="s">"fr"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">value=</span><span class="s">"/9j/4...KAP//Z"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- document encodé en B64 --&gt;</span>
+    <span class="nt">&lt;title</span> <span class="na">value=</span><span class="s">"Document PDF"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/Binary&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>Des données structurées</strong> : La section est organisée en structures de données afin de permettre les traitements informatiques.
+ Chacune de ces sections possède un code (élément <strong>section.code</strong>), un titre (élément <strong>section.title</strong>) et un bloc narratif (élément <strong>section.text</strong>). En outre une section peut contenir des sous-sections (élément <strong>section.section</strong>) et des entrées (élément <strong>section.entry</strong>) fournissant les données du SI producteur à l’aide desquelles a été construit le bloc narratif. Ces données sont codées et structurées, importables et intégrables dans la base de données des SI consommateurs du document.</p>
+
+    <p>Une section DOIT contenir au moins un texte ou une entrée ou une sous-section. Par exemple, une section peut n’avoir que la partie narrative (Composition.section.text) et pas de sous-section, ni d’entrée.</p>
+  </li>
+</ul>
+
+<p>Une section ne peut avoir un section.emptyReason que si elle est vide.</p>
+
+<p>Les sous-sections FHIR ne peuvent pas contenir de partie narrative. Toute la partie narrative est dans la section de 1er niveau.</p>
+
+<p><strong>Les entrées</strong> des sections <strong>sont des références à d’autres ressources</strong> qui contiennent les données de l’entrée.</p>
+
+<p>Les sections peuvent être slicées pour les préciser. Par exemple, dans un <a href="https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html">CR-BIO</a> (ex HL7 Europe Laboratory Report), on pourra avoir les sections suivantes :</p>
+<ul>
+  <li><a href="https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-no-subsections">section:lab-no-subsections</a> : section avec des entrées et sans sous-section</li>
+  <li><a href="https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:lab-subsections">section:lab-subsections</a> : section avec des sous-sections</li>
+  <li><a href="https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab-definitions.html#Composition.section:annotations">section:annotations</a> : section Commentaire</li>
+</ul>
+
+<p>Les entrées peuvent aussi être profilées : Par exemple, dans un <a href="https://hl7.eu/fhir/laboratory/StructureDefinition-Composition-eu-lab.html">CR-BIO</a> (ex HL7 Europe Laboratory Report), on pourra avoir les entrées suivantes :</p>
+
+<ul>
+  <li><a href="https://hl7.eu/fhir/laboratory/0.1.0/StructureDefinition-Observation-resultslab-eu-lab.html">ObservationResultsLaboratoryEu</a> : entrée Résultats d’examen biologique</li>
+</ul>
+
+<h3 id="spécifications-françaises-des-documents-fhir">Spécifications françaises des documents FHIR</h3>
+
+<p>Les spécifications françaises des documents FHIR définies dans le CI-SIS :</p>
+
+<ul>
+  <li>s’appuient sur le standard FHIR,</li>
+  <li>s’appuient sur le guide d’implémentation <a href="https://build.fhir.org/ig/HL7/fhir-clinical-document/index.html">FHIR Clinical Documents</a></li>
+  <li>portent les exigences complémentaires et spécifiques au contexte français.</li>
+</ul>
+
+<h4 id="rattachement-dune-section-et-dune-entrée-à-une-personne">Rattachement d’une section et d’une entrée à une personne</h4>
+
+<p>La norme FHIR permet d’indiquer de façon optionnelle le rattachement d’une section et/ou d’une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.</p>
+
+<ul>
+  <li>Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l’élément <strong>Composition.section.focus</strong>.</li>
+  <li>Dans une entrée, la personne concernée par les informations de l’entrée, si elle est différente du patient/usager, est indiquée dans l’élément <strong>subject</strong>.</li>
+</ul>
+
+<p>Chaque entrée d’un document peut avoir un <strong>subject</strong>. Si l’entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l’élément <strong>Composition.section.focus</strong> de la section. Si la section ne contient pas d’élément <strong>Composition.section.focus</strong>, la section concerne la personne indiquée dans l’élément <strong>subject</strong> du document.
+ C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.</p>
+
+<h3 id="conformité-des-documents-fhir">Conformité des documents FHIR</h3>
+
+<p>Les documents au format FHIR définis dans le CI-SIS doivent être conformes :</p>
+
+<ul>
+  <li>aux exigences françaises de l’entête</li>
+  <li>aux exigences d’un modèle spécifique défini dans un volet du CI-SIS</li>
+</ul>
+
+<h4 id="conformité-aux-exigences-françaises-de-lentête">Conformité aux exigences françaises de l’entête</h4>
+
+<p><span style="background-color:yellow">A compléter</span></p>
+
+<h4 id="conformité-à-un-modèle-de-document-spécifique-défini-dans-le-ci-sis">Conformité à un modèle de document spécifique défini dans le CI-SIS</h4>
+
+<p><span style="background-color:yellow">A compléter</span></p>
+
+<h4 id="vérification-de-la-conformité-dun-document-fhir">Vérification de la conformité d’un document FHIR</h4>
+
+<p>L’ANS met à disposition des outils permettant de vérifier la conformité des documents FHIR.
+Voir <a href="https://interop.esante.gouv.fr/ig/documentation/tests.html">https://interop.esante.gouv.fr/ig/documentation/tests.html</a></p>
+
+<h5 id="lespace-de-tests">L’espace de tests</h5>
+
+<p>L’espace de test est composé de deux outils :</p>
+
+<ul>
+  <li><strong>EVSClient</strong>, qui permet de vérifier la conformité : des documents CDA et FHIR, des archives IHE_XDM.ZIP utilisées pour les échanges, des ressources FHIR…</li>
+  <li><strong>Gazelle</strong> Test Management, qui permet de tester des scénarios complets avec plusieurs interactions d’échanges de données.</li>
+</ul>
+
+<p>Ces outils sont accessibles <strong>en ligne</strong> sur le site <a href="https://interop.esante.gouv.fr/">https://interop.esante.gouv.fr/</a> et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.</p>
+
+<p>Attention : l’espace de tests ne doit pas être utilisé pour vérifier la conformité de documents de production (produits pour un patient réel).</p>
+
+<h5 id="matchbox">Matchbox</h5>
+
+<p>Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil.</p>
+
+<h5 id="hapi-fhir">HAPI FHIR</h5>
+
+<p>Ce serveur FHIR open source est particulièrement utile pour importer des profils et tester la validité des ressources générées contre les profils.</p>
+
+<h3 id="visualisation-dun-document-fhir">Visualisation d’un document FHIR</h3>
+
+<p><a href="https://hl7.org/fhir/R4/narrative.html">FHIR core narrative guidance</a> stipulent que la partie narrative d’une ressource “DOIT refléter tout le contenu de la ressource nécessaire à la compréhension par un humain des informations de cette ressource”.</p>
+
+<p>De plus, pour assurer la compréhension sans ambiguïté de la partie narrative d’un document :</p>
+
+<ol>
+  <li>Le contenu narratif d’un document FHIR DOIT être visualisable via un navigateur Web standard.</li>
+  <li>La visualisation d’un document FHIR par un humain NE DOIT PAS nécessiter la transmission d’une feuille de style spécifique par l’expéditeur. La visualisation d’un document FHIR DOIT être possible avec une seule feuille de style ou des outils d’affichage grand public.</li>
+  <li>Les exigences pour la visualisation par un humain ne concernent que le contenu narratif du document FHIR. Le document FHIR peut contenir des informations supplémentaires pour le traitement automatique uniquement et n’ont pas vocation à être restituées à l’affichage.</li>
+</ol>
+
+<p>Comme les données de l’entête d’un document CDA, les métadonnées du document (par exemple, nom et date de naissance du patient, participants) doivent pouvoir être affichées.</p>
+
+<p>Les parties narratives d’un document FHIR peuvent être contenues dans Composition.text et dans Composition.section.text. Il est recommandé de transmettre les métadonnées dans Composition.text et les contenus narratifs dans Composition.section.text.</p>
+
+<p>De plus, bien que le destinataire du document doive être en mesure d’afficher le contenu de Composition.section.text, il peut choisir d’afficher ou d’ignorer Composition.text, en particulier lorsqu’il est capable d’analyser les champs structurés de la composition.</p>
+
+<p><strong>En résumé :</strong></p>
+
+<p>Le producteur du document FHIR :</p>
+
+<ul>
+  <li>DOIT enregistrer la partie narrative de chaque section dans Composition.section.text.</li>
+  <li>DEVRAIT enregistrer les métadonnées du document (par exemple, le patient) dans Composition.text.</li>
+  <li>NE DEVRAIT PAS enregistrer de manière redondante des informations destinées à l’affichage à la fois dans Composition.text et Composition.section.text.</li>
+  <li>PEUT inclure des informations narratives qui ne sont dérivées de données structurées.</li>
+  <li>PEUT inclure une liste des sections du document dans Composition.text</li>
+</ul>
+
+<p>Le consommateur d’un document FHIR :</p>
+
+<ul>
+  <li>DOIT afficher, au minimum, Composition.title, Composition.section.title et Composition.section.text.</li>
+  <li>PEUT afficher Composition.text</li>
+  <li>PEUT afficher des informations supplémentaires (telles que le nom du patient et sa date de naissance) dérivées de champs structurés de la Composition.</li>
+</ul>
+
+<p>Les bonnes pratiques recommandent que les éléments suivants soient affichés :</p>
+
+<ul>
+  <li>Titre du document</li>
+  <li>Dates du document</li>
+  <li>Types et dates des évènements documentés</li>
+  <li>Identifiant, nom, rôle, adresse, télécom et date de participation des participants et organisations</li>
+  <li>Données d’identification du patient/usager</li>
+</ul>
 
 
 
@@ -281,7 +541,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 09:51+0000">2025-02-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 25, 2025 09:09+0000">2025-02-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
