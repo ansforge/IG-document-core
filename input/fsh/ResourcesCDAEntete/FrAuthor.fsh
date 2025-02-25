@@ -14,8 +14,8 @@ Description: "L'élément de l'en-tête du CDA author permet d’enregistrer un 
 * functionCode ^short = "Rôle fonctionnel de l'auteur. A utiliser uniquement si l'auteur est un professionnel."
 * functionCode.code from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS (required)
 * functionCode.nullFlavor 0..0
-* functionCode.code 1..1 // Rendre le code en obligatoire si functionCode existe
-* functionCode.codeSystem 1..1 // Rendre le codeSystem en obligatoire si functionCode existe
+* functionCode.code 1..1
+* functionCode.codeSystem 1..1
 * functionCode.codeSystemVersion 0..0
 * functionCode.sdtcValueSet 0..0
 * functionCode.sdtcValueSetVersion 0..0
@@ -23,4 +23,4 @@ Description: "L'élément de l'en-tête du CDA author permet d’enregistrer un 
 * time ^short = "Horodatage de la participation de l’auteur"
 * time.value 1..1
 * assignedAuthor ^short = "Identification de l’auteur"
-* assignedAuthor only fr-core-assigned-author // Déclare une référence obligatoire vers FrAssignedAuthor
+* assignedAuthor only fr-core-assigned-author

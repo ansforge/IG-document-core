@@ -12,5 +12,5 @@ Description: "L'élément de l'en-tête du CDA performer permet de représenter 
 * functionCode ^short = "Rôle fonctionnel"
 * time ^short = "Date et heure de participation"
 * assignedEntity ^short = "Exécutant"
-* assignedEntity only fr-core-assigned-entity // assignedEntity est de type fr-core-assigned-entity
+* assignedEntity only fr-core-assigned-entity
 * assignedEntity.code from https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS (required)

@@ -11,5 +11,5 @@ Description: "L'élément de l'en-tête du CDA encounterParticipant permet de re
 * typeCode ^short = "Code issu du JDV_J140_EncounterParticipationType_CISIS (1.2.250.1.213.1.1.5.528)."
 * typeCode from https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS
 * time ^short = "Date de début et/ou de fin de la participation"
-* assignedEntity 1..1 // Rendre assignedEntity obligatoire
+* assignedEntity 1..1
 * assignedEntity ^short = "Professionnel impliqué"

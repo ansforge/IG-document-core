@@ -11,13 +11,13 @@ Description: "L'élément de l'en-tête du CDA patient permet de représenter un
 * typeId.displayable 0..0
 * determinerCode 0..0
 * name ^short = "Noms et prénoms."
-* name 1..1 // Rendre le name obligatoire
+* name 1..1
 * name.nullFlavor 0..0
 * administrativeGenderCode ^short = "Sexe."
-* administrativeGenderCode 1..1 // Rendre le administrativeGenderCode obligatoire
+* administrativeGenderCode 1..1
 * administrativeGenderCode from https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS
 * birthTime ^short = "Date de naissance."
-* birthTime 1..1 // Rendre le birthTime obligatoire
+* birthTime 1..1
 * sdtcDeceasedInd ^short = "Patient décédé ou pas ?"
 * sdtcDeceasedTime ^short = "Date de décès."
 * sdtcMultipleBirthInd ^short = "Patient né d'une grossesse multiple."

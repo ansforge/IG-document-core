@@ -23,5 +23,5 @@ Description: "L'élément de l'en-tête du CDA patientRole permet de décrire le
 * addr ^short = "Adresse géopostale."
 * telecom ^short = "Coordonnées télécom."
 * patient 1..1
-* patient only fr-core-patient // patient est de type fr-core-patient
+* patient only fr-core-patient
 * patient ^short = "Personne physique."

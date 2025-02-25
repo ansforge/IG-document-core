@@ -23,7 +23,7 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
   * ^short = "Identifiant du lot de versions du même document."
 * versionNumber 1..1 
   * ^short = "Numéro de version du document."
-* copyTime 0..0 //Elément obsolète à ne pas utiliser
+* copyTime 0..0
 * recordTarget 1..1
 * recordTarget only fr-core-record-target
   * ^short = "Patient/Usager concerné par le document."
