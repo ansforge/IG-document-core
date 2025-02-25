@@ -6,12 +6,12 @@ Title: "serviceEvent"
 Description: "L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
 L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." 
 * ^status = #draft
-* nullFlavor 0..0 // Interdire l’attribut @nullFlavor
-* typeId.nullFlavor 0..0 // Interdire l’attribut @nullFlavor dans typeId
-* typeId.assigningAuthorityName 0..0	// Interdire l’attribut @assigningAuthorityName dans typeId
-* typeId.displayable 0..0 // Interdire l’attribut @displayable dans typeId
-* classCode 0..0 // Interdire l’attribut classCode
-* moodCode 0..0 // Interdire l’attribut moodCode
+* nullFlavor 0..0
+* typeId.nullFlavor 0..0
+* typeId.assigningAuthorityName 0..0
+* typeId.displayable 0..0
+* classCode 0..0
+* moodCode 0..0
 * id ^short = "Identifiant de l’évènement documenté : Obligatoire pour :
 - les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
 - la demande d'acte d'imagerie pour porter l'Order Placer Number
@@ -27,7 +27,7 @@ Pour les documents des professionnels :
 - Pour un document au format CDA R2 N3, se reporter au volet de contenus correspondant.
 - Pour certains documents au format CDA R2 N1, la valeur est fixée (voir tableau qui suit).
 - Dans les autres cas, utiliser une valeur issue d'une terminologie internationale (ex : CIM10 pour les actes) ou nationale (ex : CCAM pour les actes).
-Pour les documents d’expression personnelle du patient/usager :
+- Pour les documents d’expression personnelle du patient/usager :
 - valeur fixée"
 * code.code 1..1
 * code.codeSystem 1..1
@@ -47,8 +47,7 @@ Pour les documents d’expression personnelle du patient/usager :
 * code.translation.qualifier ^short = "Précise que le translation concerne :
 - la modalité d'imagerie (obligatoire)
 - la région anatomique (obligatoire)"
-//*lab:status ajouter une extension
-* effectiveTime.nullFlavor 0..0 // Interdire nullFlavor dans effectiveTime du serviceEvent pour l’évènement documenté principal 
+* effectiveTime.nullFlavor 0..0 
 * effectiveTime ^short = "Date/heure de début et de fin de l'évènement documenté :
 Précisée à la minute minimum avec précision du décalage par rapport au temps universel (UTC)"
 * effectiveTime.low 1..1
@@ -59,7 +58,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 * effectiveTime.width 0..0
 * effectiveTime.operator 0..0
 * performer 0..1
-* performer.nullFlavor 0..0 // Interdire nullFlavor dans performer du serviceEvent pour l’évènement documenté principal 
+* performer.nullFlavor 0..0
 * performer only fr-core-performer
 * performer ^short = "Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire."
 * performer.typeCode = #PRF

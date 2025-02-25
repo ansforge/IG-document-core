@@ -11,7 +11,7 @@ Description: "L'élément de l'en-tête du CDA representedCustodianOrganization 
 * typeId.assigningAuthorityName 0..0 
 * typeId.displayable 0..0
 * id ^short = "Identifiant de la structure."
-* id 1..1 // modifier la cardinalité de l'élément id 1..* ==> 1..1
+* id 1..1
   * root ^short = "- Pour une structure sanitaire ou médico-sociale : valeur fixée à '1.2.250.1.71.4.2.2' 
 - Pour le DMP hébergeant les documents d'expression personnelle du patient ou les documents produits par un système via un SNR : 
 valeur fixée à '1.2.250.1.213.4.1'"

@@ -16,5 +16,5 @@ Description: "L'élément de l'en-tête du CDA authenticator permet de représen
 * signatureCode.sdtcValueSetVersion 0..0
 * time ^short = "Date/heure de l'attestation de validité" 
 * time.value ^short = "Date et heure à laquelle le PS atteste la validité des informations portées sur le document. Précisée à la seconde avec précision du décalage par rapport au temps universel (UTC)"
-* assignedEntity only fr-core-assigned-entity // assignedEntity est de type fr-core-assigned-entity
+* assignedEntity only fr-core-assigned-entity
 * assignedEntity ^short = "Entité attestant la validité"

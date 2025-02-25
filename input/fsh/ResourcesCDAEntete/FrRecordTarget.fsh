@@ -12,4 +12,4 @@ Description: "L'élément de l'en-tête du CDA recordTarget permet de représent
 * typeCode 0..0
 * contextControlCode 0..0
 * patientRole ^short = "Description du patient/usager."
-* patientRole only fr-core-patient-role // patient est de type fr-core-patient-role
+* patientRole only fr-core-patient-role

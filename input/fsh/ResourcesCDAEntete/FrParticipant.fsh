@@ -11,7 +11,7 @@ Description: "L'élément de l'en-tête du CDA participant permet de représente
 * contextControlCode 0..0
 * typeCode ^short = "Type de participation"
 * functionCode ^short = "Rôle fonctionnel"
-* time 1..1 // Rendre time obligatoire
+* time 1..1
 * time ^short = "Date de début et/ou de fin de la participation"
 * time.low 0..1
 * time.high 0..1
@@ -23,11 +23,11 @@ Description: "L'élément de l'en-tête du CDA participant permet de représente
 * functionCode.code ^short = "Code issu du JDV_J47_FunctionCode_CISIS (1.2.250.1.213.1.1.5.124)"
 * functionCode.code from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS (required)
 * functionCode.nullFlavor 0..0
-* functionCode.code 1..1 // Rendre le code en obligatoire si functionCode existe
-* functionCode.codeSystem 1..1 // Rendre le codeSystem en obligatoire si functionCode existe
+* functionCode.code 1..1
+* functionCode.codeSystem 1..1
 * functionCode.codeSystemVersion 0..0
 * functionCode.sdtcValueSet 0..0
 * functionCode.sdtcValueSetVersion 0..0
 * functionCode.originalText ^short = "Précision sur le rôle fonctionnel du participant" 
-* associatedEntity only fr-core-associated-entity // associatedEntity est de type fr-core-associated-entity
+* associatedEntity only fr-core-associated-entity
 * associatedEntity ^short = "Identification du participant"

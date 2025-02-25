@@ -12,7 +12,7 @@ Description: "L'élément de l'en-tête du CDA dataEnterer contient les informat
 * typeCode 0..0
 * contextControlCode 0..0
 * time ^short = "Horodatage de la participation de l’opérateur."
-* time 1..1 // rendre time obligatoire
+* time 1..1
   * value ^short = "Date et heure à laquelle l’opérateur a participé à l’élaboration du document."
 * assignedEntity ^short = "Personne physique."
 * assignedEntity only fr-core-assigned-entity

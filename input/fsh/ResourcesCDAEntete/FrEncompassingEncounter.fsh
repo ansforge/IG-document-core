@@ -28,14 +28,14 @@ Description: "L'élément de l'en-tête du CDA encompassingEncounter permet de d
   * nullFlavor 0..0
   * assigningAuthorityName 0..0
   * displayable 0..0
-* encounterParticipant only fr-core-encounter-participant //encounterParticipant est de type fr-core-encounter-participant
+* encounterParticipant only fr-core-encounter-participant
 * encounterParticipant ^short = "Personne impliquée dans la prise en charge"
 * location  ^short = "Lieu de la prise en charge"
-* location 1..1 // Rendre location obligatoire
+* location 1..1
 * location.nullFlavor 0..0
 * location.typeCode 0..0
 * location.typeId 0..1
   * nullFlavor 0..0
   * assigningAuthorityName 0..0
   * displayable 0..0
-* location.healthCareFacility only fr-core-health-care-facility // healthCareFacility est de type fr-core-health-care-facility
+* location.healthCareFacility only fr-core-health-care-facility

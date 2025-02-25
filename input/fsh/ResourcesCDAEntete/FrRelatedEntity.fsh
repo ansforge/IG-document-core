@@ -22,7 +22,7 @@ Description: "L'élément de l'en-tête du CDA relatedEntity permet de décrire 
 * code.sdtcValueSetVersion 0..0
 * addr ^short = "Adresse géopostale."
 * telecom ^short = "Coordonnées télécom."
-* telecom 1..* // rendre l'élément telecom obligatoire 1..* au lieu de 0..*
+* telecom 1..*
 * relatedPerson ^short = "Personne physique."
-* relatedPerson 1..1 // rendre l'élément relatedPerson obligatoire 1..1 au lieu de 0..1
+* relatedPerson 1..1
 * relatedPerson only fr-core-person

@@ -12,7 +12,7 @@ Description: "L'élément de l'en-tête du CDA healthCareFacility permet de repr
 * typeId.displayable 0..0
 * id 0..0
 * sdtcIdentifiedBy 0..0
-* code 1..1 // Rendre le code obligatoire
+* code 1..1
 * code ^short = "Secteur d'activité : Valeur issue du JDV_J02_XdsHealthcareFacilityTypeCode_CISIS (1.2.250.1.213.1.1.5.466)."
 * code from https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS
   * code 1..1 
