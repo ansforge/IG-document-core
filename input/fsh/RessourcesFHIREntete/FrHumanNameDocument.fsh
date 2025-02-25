@@ -1,6 +1,6 @@
 // StructureDefinition for OrganizationDocument
 Profile: HumanNameDocument
-Parent: HumanName
+Parent: https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name
 Id: fr-human-name-document
 Title: "HumanNameDocument"
 Description: "Nom du professionnel de santé."
