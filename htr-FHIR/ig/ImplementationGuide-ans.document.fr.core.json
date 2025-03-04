@@ -3,14 +3,14 @@
   "id" : "ans.document.fr.core",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><a name=\"ans.document.fr.core-fr-FR\"> </a><h2>ExampleIG</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><a name=\"ans.document.fr.core-fr-FR\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core",
   "version" : "0.1.0",
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-02-24T13:36:50+00:00",
+  "date" : "2025-03-04T16:07:16+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -65,7 +65,13 @@
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
-    "version" : "2.1.0"
+    "version" : "2.0.1"
+  },
+  {
+    "id" : "ans_fhir_fr_annuaire",
+    "uri" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire",
+    "packageId" : "ans.fhir.fr.annuaire",
+    "version" : "1.0.1"
   }],
   "definition" : {
     "extension" : [{
@@ -828,7 +834,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-author-time"
       },
-      "name" : "AuthorTime",
+      "name" : "AuthorTimeExtension",
       "description" : "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.",
       "exampleBoolean" : false,
       "groupingId" : "Extensions FHIR"
@@ -888,6 +894,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-consent-extension"
+      },
+      "name" : "ConsentExtension",
+      "description" : "Extension permettant d'ajouter un consentement associé au document dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
@@ -919,7 +938,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-data-enterer-extension"
       },
-      "name" : "DataEnterer",
+      "name" : "DataEntererExtension",
       "description" : "Extension permettant d'ajouter un opérateur de saisie dans la Composition.",
       "exampleBoolean" : false,
       "groupingId" : "Extensions FHIR"
@@ -998,7 +1017,7 @@
         "reference" : "StructureDefinition/fr-bundle-document"
       },
       "name" : "FrBundleDocument",
-      "description" : "FrBundleDocument est utilisé pour représenter l'en-tête et le corps d'un document .",
+      "description" : "FrBundleDocument permet d’assembler les éléments de l’en-tête et du corps d’un document.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1008,12 +1027,48 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-Composition-document"
+        "reference" : "StructureDefinition/fr-composition-document"
       },
       "name" : "FrCompositionDocument",
       "description" : "Clinical document utilisé pour représenter un document FHIR.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-core-vs-categorie-etablissement"
+      },
+      "name" : "FRCoreValueSetCategorieEtablissement",
+      "description" : "ValueSet : CategorieEtablissement",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-core-vs-contact-role"
+      },
+      "name" : "FRCoreValueSetContactRole",
+      "description" : "ValueSet : ContactRole",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-core-participation-type"
+      },
+      "name" : "FRCoreValueSetParticipationType",
+      "description" : "ValueSet : ParticipationType(destinataire)",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1024,7 +1079,7 @@
         "reference" : "StructureDefinition/fr-device-document"
       },
       "name" : "FrDeviceDocument",
-      "description" : "Système",
+      "description" : "Ce profil représente un système.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1034,10 +1089,48 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-Organization-document"
+        "reference" : "StructureDefinition/fr-encounter-document"
+      },
+      "name" : "FrEncounterDocument",
+      "description" : "Ce profil représente l'association du document à une prise en charge.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-location-document"
+      },
+      "name" : "FrLocationDocument",
+      "description" : "Ce profil représente la structure de prise en charge.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-core-vs-name-qualifier"
+      },
+      "name" : "FRNameQualifier",
+      "description" : "ValueSet : Qualifier",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-organization-document"
       },
       "name" : "FrOrganizationDocument",
-      "description" : "Structure pour le compte de laquelle intervient le professionnel.",
+      "description" : "Ce profil représente la structure pour le compte de laquelle intervient le professionnel.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1050,7 +1143,7 @@
         "reference" : "StructureDefinition/fr-patient-fhir-document"
       },
       "name" : "FrPatientFHIRDocument",
-      "description" : "Patient concerné par le document.",
+      "description" : "Ce profil représente  le patient concerné par le document.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1063,7 +1156,7 @@
         "reference" : "StructureDefinition/fr-practitioner-document"
       },
       "name" : "FrPractitionerDocument",
-      "description" : "Auteur du document",
+      "description" : "Ce profil représente les professionnels de santé.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1076,7 +1169,7 @@
         "reference" : "StructureDefinition/fr-practitionerRole-document"
       },
       "name" : "FrPractitionerRoleDocument",
-      "description" : "Auteur du document.",
+      "description" : "Ce profil représente les professionnels de santé et leurs rôles en FHIR.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1102,7 +1195,7 @@
         "reference" : "StructureDefinition/fr-human-name-document"
       },
       "name" : "HumanNameDocument",
-      "description" : "Nom du professionnel de santé.",
+      "description" : "Ce profil représente le nom du professionnel de santé.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR"
     },
@@ -1118,6 +1211,19 @@
       "description" : "L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources CDA"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-informant-extension"
+      },
+      "name" : "InformantExtension",
+      "description" : "Extension permettant d'ajouter des informateur dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
     },
     {
       "extension" : [{
@@ -1144,6 +1250,19 @@
       "description" : "L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources CDA"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-information-recipient-extension"
+      },
+      "name" : "InformationRecipientExtension",
+      "description" : "Extension permettant d'ajouter des destinataires prévus du document dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
     },
     {
       "extension" : [{
@@ -1192,7 +1311,7 @@
       "reference" : {
         "reference" : "ConceptMap/mappingmodelemetierCDAFHIR"
       },
-      "name" : "Mapping du modèle logique métier entre CDA et FHIR",
+      "name" : "MappingModeleMetierCDAFHIR",
       "description" : "Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.",
       "exampleBoolean" : false,
       "groupingId" : "Mapping"
@@ -1203,10 +1322,10 @@
         "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "ConceptMap/MappingGenderFHIRANS"
+        "reference" : "ConceptMap/MappingAdministrativeGender"
       },
-      "name" : "Mapping entre ValueSet FHIR et ValueSet ANS pour le genre",
-      "description" : "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR et ceux du ValueSet ANS pour le genre.",
+      "name" : "MappingValueSetAdministrativeGender",
+      "description" : "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS.",
       "exampleBoolean" : false
     },
     {
@@ -1264,6 +1383,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-order-extension"
+      },
+      "name" : "OrderExtension",
+      "description" : "Extension permettant d'ajouter une association du document à une prescription dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
@@ -1286,6 +1418,19 @@
       "description" : "L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources CDA"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-participant-extension"
+      },
+      "name" : "ParticipantExtension",
+      "description" : "Extension permettant d'ajouter des participants dans la Composition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
     },
     {
       "extension" : [{
@@ -1364,6 +1509,19 @@
       "description" : "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).",
       "exampleBoolean" : false,
       "groupingId" : "Modèles logiques"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-qualifier-extension"
+      },
+      "name" : "QualifierExtension",
+      "description" : "Extension permettant d'ajouter un qualifier dans les noms et prénoms du patient.\n - name.family : \n    - qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent. \n    - qualifier='CL' pour le nom utilisé (RNIV).\n - name.given : \n    - qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.\n    - qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.  \n    - qualifier='CL' pour pour le prénom utilisé (RNIV).",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR"
     },
     {
       "extension" : [{
@@ -1590,15 +1748,6 @@
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "modelesLogiquesMetier-entete.html"
-          }],
-          "nameUrl" : "modelesLogiquesMetier-entete.html",
-          "title" : "Modèle logique métier",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "ressourcesCDA-entete.html"
           }],
           "nameUrl" : "ressourcesCDA-entete.html",
@@ -1612,15 +1761,6 @@
           }],
           "nameUrl" : "ressourcesFHIR-entete.html",
           "title" : "FHIR",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "mappingCDA-FHIR-entete.html"
-          }],
-          "nameUrl" : "mappingCDA-FHIR-entete.html",
-          "title" : "Mapping CDA / FHIR",
           "generation" : "markdown"
         }]
       },

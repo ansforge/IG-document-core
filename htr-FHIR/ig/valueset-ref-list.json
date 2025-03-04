@@ -1,6 +1,58 @@
 {
   "codeSystems" : [
     {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-participation-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRCoreParticipationTypeDestinataire",
+      "title" : "FRCoreValueSetParticipationType",
+      "description" : "ValueSet : ParticipationType(destinataire)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-information-recipient-extension.html" : "InformationRecipientExtension"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-categorie-etablissement",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRCoreValueSetCategorieEtablissement",
+      "title" : "FRCoreValueSetCategorieEtablissement",
+      "description" : "ValueSet : CategorieEtablissement",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-location-document.html" : "FrLocationDocument"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-contact-role",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRCoreValueSetContactRole",
+      "title" : "FRCoreValueSetContactRole",
+      "description" : "ValueSet : ContactRole",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-name-qualifier",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRNameQualifier",
+      "title" : "FRNameQualifier",
+      "description" : "ValueSet : Qualifier",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-EntityNamePartQualifierR2"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-qualifier-extension.html" : "QualifierExtension"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS",
       "version" : "1.4.0",
       "status" : "active",
@@ -18,12 +70,12 @@
       "sources" : ["1.2.250.1.213.1.1.5.461"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
-      "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument",
-      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
       "StructureDefinition-fr-core-associated-entity.html" : "associatedEntity",
+      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument",
+      "StructureDefinition-fr-core-legal-authenticator.html" : "legalAuthenticator",
       "StructureDefinition-fr-core-performer.html" : "performer",
-      "StructureDefinition-fr-device-document.html" : "FrDeviceDocument"
+      "StructureDefinition-fr-core-assigned-author.html" : "assignedAuthor",
+      "StructureDefinition-fr-practitioner-document.html" : "FrPractitionerDocument"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
@@ -40,6 +92,7 @@
       "sources" : ["1.2.250.1.213.1.1.5.466"],
       "uses" : {
       },
+      "StructureDefinition-fr-location-document.html" : "FrLocationDocument",
       "StructureDefinition-fr-core-health-care-facility.html" : "healthCareFacility"
     },
     {
@@ -57,8 +110,8 @@
       "sources" : ["1.2.250.1.213.1.1.5.467"],
       "uses" : {
       },
-      "StructureDefinition-fr-Organization-document.html" : "FrOrganizationDocument",
-      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization"
+      "StructureDefinition-fr-core-represented-organization.html" : "representedOrganization",
+      "StructureDefinition-fr-organization-document.html" : "FrOrganizationDocument"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS",
@@ -75,6 +128,7 @@
       "sources" : ["1.2.250.1.213.3.3.16"],
       "uses" : {
       },
+      "StructureDefinition-fr-patient-fhir-document.html" : "FrPatientFHIRDocument",
       "StructureDefinition-fr-core-related-entity.html" : "relatedEntity"
     },
     {
@@ -91,7 +145,8 @@
       "sources" : ["1.2.250.1.213.1.1.5.528"],
       "uses" : {
       },
-      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant"
+      "StructureDefinition-fr-core-encounter-participant.html" : "encounterParticipant",
+      "StructureDefinition-fr-encounter-document.html" : "FrEncounterDocument"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS",
@@ -143,6 +198,22 @@
       "StructureDefinition-fr-core-patient.html" : "patient"
     },
     {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS",
+      "version" : "1.4.0",
+      "status" : "active",
+      "name" : "JDV_J144-ParticipationType-CISIS",
+      "title" : null,
+      "description" : "Type de participation CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.591"],
+      "sources" : ["1.2.250.1.213.1.1.5.591"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-participant-extension.html" : "ParticipantExtension"
+    },
+    {
       "url" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS",
       "version" : "1.4.0",
       "status" : "active",
@@ -192,9 +263,10 @@
       "sources" : ["1.2.250.1.213.1.1.5.124"],
       "uses" : {
       },
+      "StructureDefinition-fr-participant-extension.html" : "ParticipantExtension",
+      "StructureDefinition-fr-core-participant.html" : "participant",
       "StructureDefinition-fr-core-author.html" : "author",
-      "StructureDefinition-fr-practitionerRole-document.html" : "FrPractitionerRoleDocument",
-      "StructureDefinition-fr-core-participant.html" : "participant"
+      "StructureDefinition-fr-practitionerRole-document.html" : "FrPractitionerRoleDocument"
     }
   ]
 }

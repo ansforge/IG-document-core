@@ -130,7 +130,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="modelesLogiquesMetier-entete.html">Modèle logique métier</a>
+        <a href="StructureDefinition-EnteteDocument.html">Modèle logique métier</a>
       </li>
       <li>
         <a href="ressourcesCDA-entete.html">CDA</a>
@@ -139,7 +139,7 @@
         <a href="ressourcesFHIR-entete.html">FHIR</a>
       </li>
       <li>
-        <a href="mappingCDA-FHIR-entete.html">Mapping CDA / FHIR</a>
+        <a href="ConceptMap-mappingmodelemetierCDAFHIR.html">Mapping CDA / FHIR</a>
       </li>
     </ul>
   </li>
@@ -274,7 +274,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#5">Concept Maps</a>
       </li>
       <li>
-         <a href="#6">Terminology: Concept Maps</a>
+         <a href="#6">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Concept Maps</a>
       </li>
    </ul>
 </div>
@@ -802,13 +805,13 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-bundle-document">FrBundleDocument</a>
             </td>
             <td>
-<p>FrBundleDocument est utilisé pour représenter l’en-tête et le corps d’un document .</p>
+<p>FrBundleDocument permet d’assembler les éléments de l’en-tête et du corps d’un document.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-Composition-document.html"
-                  title="StructureDefinition/fr-Composition-document">FrCompositionDocument</a>
+               <a href="StructureDefinition-fr-composition-document.html"
+                  title="StructureDefinition/fr-composition-document">FrCompositionDocument</a>
             </td>
             <td>
 <p>Clinical document utilisé pour représenter un document FHIR.</p>
@@ -820,16 +823,34 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-device-document">FrDeviceDocument</a>
             </td>
             <td>
-<p>Système</p>
+<p>Ce profil représente un système.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-Organization-document.html"
-                  title="StructureDefinition/fr-Organization-document">FrOrganizationDocument</a>
+               <a href="StructureDefinition-fr-encounter-document.html"
+                  title="StructureDefinition/fr-encounter-document">FrEncounterDocument</a>
             </td>
             <td>
-<p>Structure pour le compte de laquelle intervient le professionnel.</p>
+<p>Ce profil représente l’association du document à une prise en charge.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-location-document.html"
+                  title="StructureDefinition/fr-location-document">FrLocationDocument</a>
+            </td>
+            <td>
+<p>Ce profil représente la structure de prise en charge.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-organization-document.html"
+                  title="StructureDefinition/fr-organization-document">FrOrganizationDocument</a>
+            </td>
+            <td>
+<p>Ce profil représente la structure pour le compte de laquelle intervient le professionnel.</p>
 </td>
          </tr>
          <tr>
@@ -838,7 +859,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-patient-fhir-document">FrPatientFHIRDocument</a>
             </td>
             <td>
-<p>Patient concerné par le document.</p>
+<p>Ce profil représente  le patient concerné par le document.</p>
 </td>
          </tr>
          <tr>
@@ -847,7 +868,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-practitioner-document">FrPractitionerDocument</a>
             </td>
             <td>
-<p>Auteur du document</p>
+<p>Ce profil représente les professionnels de santé.</p>
 </td>
          </tr>
          <tr>
@@ -856,7 +877,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-practitionerRole-document">FrPractitionerRoleDocument</a>
             </td>
             <td>
-<p>Auteur du document.</p>
+<p>Ce profil représente les professionnels de santé et leurs rôles en FHIR.</p>
 </td>
          </tr>
          <tr>
@@ -865,7 +886,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-human-name-document">HumanNameDocument</a>
             </td>
             <td>
-<p>Nom du professionnel de santé.</p>
+<p>Ce profil représente le nom du professionnel de santé.</p>
 </td>
          </tr>
       </tbody>
@@ -879,7 +900,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-author-time.html"
-                  title="StructureDefinition/fr-author-time">AuthorTime</a>
+                  title="StructureDefinition/fr-author-time">AuthorTimeExtension</a>
             </td>
             <td>
 <p>Extension permettant d’ajouter un horodatage (TS) à l’élément author d’une Composition.</p>
@@ -887,11 +908,80 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-fr-consent-extension.html"
+                  title="StructureDefinition/fr-consent-extension">ConsentExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un consentement associé au document dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-fr-data-enterer-extension.html"
-                  title="StructureDefinition/fr-data-enterer-extension">DataEnterer</a>
+                  title="StructureDefinition/fr-data-enterer-extension">DataEntererExtension</a>
             </td>
             <td>
 <p>Extension permettant d’ajouter un opérateur de saisie dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-informant-extension.html"
+                  title="StructureDefinition/fr-informant-extension">InformantExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter des informateur dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-information-recipient-extension.html"
+                  title="StructureDefinition/fr-information-recipient-extension">InformationRecipientExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter des destinataires prévus du document dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-order-extension.html"
+                  title="StructureDefinition/fr-order-extension">OrderExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter une association du document à une prescription dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-participant-extension.html"
+                  title="StructureDefinition/fr-participant-extension">ParticipantExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter des participants dans la Composition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-qualifier-extension.html"
+                  title="StructureDefinition/fr-qualifier-extension">QualifierExtension</a>
+            </td>
+            <td>
+<p>Extension permettant d’ajouter un qualifier dans les noms et prénoms du patient.</p>
+<ul>
+  <li>name.family :
+    <ul>
+      <li>qualifier=’BR’ pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent.</li>
+      <li>qualifier=’CL’ pour le nom utilisé (RNIV).</li>
+    </ul>
+  </li>
+  <li>name.given :
+    <ul>
+      <li>qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.</li>
+      <li>qualifier=’BR’ pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.</li>
+      <li>qualifier=’CL’ pour pour le prénom utilisé (RNIV).</li>
+    </ul>
+  </li>
+</ul>
 </td>
          </tr>
       </tbody>
@@ -905,7 +995,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          <tr>
             <td style="column-width:30%">
                <a href="ConceptMap-mappingmodelemetierCDAFHIR.html"
-                  title="ConceptMap/mappingmodelemetierCDAFHIR">Mapping du modèle logique métier entre CDA et FHIR</a>
+                  title="ConceptMap/mappingmodelemetierCDAFHIR">MappingModeleMetierCDAFHIR</a>
             </td>
             <td>
 <p>Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.</p>
@@ -914,6 +1004,50 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
       </tbody>
    </table>
    <a name="6"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-core-vs-categorie-etablissement.html"
+                  title="ValueSet/fr-core-vs-categorie-etablissement">FRCoreValueSetCategorieEtablissement</a>
+            </td>
+            <td>
+<p>ValueSet : CategorieEtablissement</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-core-vs-contact-role.html"
+                  title="ValueSet/fr-core-vs-contact-role">FRCoreValueSetContactRole</a>
+            </td>
+            <td>
+<p>ValueSet : ContactRole</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-core-participation-type.html"
+                  title="ValueSet/fr-core-participation-type">FRCoreValueSetParticipationType</a>
+            </td>
+            <td>
+<p>ValueSet : ParticipationType(destinataire)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-core-vs-name-qualifier.html"
+                  title="ValueSet/fr-core-vs-name-qualifier">FRNameQualifier</a>
+            </td>
+            <td>
+<p>ValueSet : Qualifier</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
    <h3>Terminology: Concept Maps </h3>
     <p>These define transformations to convert between codes by systems conforming with this implementation guide.</p>
 <table class="grid">
@@ -921,11 +1055,11 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ConceptMap-MappingGenderFHIRANS.html"
-                  title="ConceptMap/MappingGenderFHIRANS">Mapping entre ValueSet FHIR et ValueSet ANS pour le genre</a>
+               <a href="ConceptMap-MappingAdministrativeGender.html"
+                  title="ConceptMap/MappingAdministrativeGender">MappingValueSetAdministrativeGender</a>
             </td>
             <td>
-<p>Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR et ceux du ValueSet ANS pour le genre.</p>
+<p>Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS.</p>
 </td>
          </tr>
       </tbody>
@@ -970,7 +1104,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 24, 2025 13:37+0000">2025-02-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 4, 2025 16:08+0000">2025-03-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

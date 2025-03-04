@@ -115,7 +115,7 @@ ICCBA DIs for other devices:
 ","Serial number assigned by the manufacturer","The serial number assigned by the organization when the device was manufactured.","Alphanumeric Maximum 20.","","","","","","","","",,,,,"",,,,"Device.serialNumber",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playedRole[typeCode=MANU].id","FiveWs.what[x]"
 "Device.deviceName","Device.deviceName","","","",0,*,"","","","BackboneElement {[]} {[]}
-","Nom du modèle du système","This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.","","","","","","","","","",,,,,"",,,,"Device.deviceName",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","The name of the device as given by the manufacturer","This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.","","","","","","","","","",,,,,"",,,,"Device.deviceName",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Device.deviceName.id","Device.deviceName.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -131,10 +131,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
 "Device.deviceName.name","Device.deviceName.name","","Σ
 ","",1,1,"","","","string {[]} {[]}
-","The name of the device","The name of the device.","","","","","","","","","",,,,,"",,,,"Device.deviceName.name",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Nom du modèle du système","The name of the device.","","","","","","","","","",,,,,"",,,,"Device.deviceName.name",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Device.deviceName.type","Device.deviceName.type","","","",1,1,"","","","code {[]} {[]}
-","udi-label-name | user-friendly-name | patient-reported-name | manufacturer-name | model-name | other","The type of deviceName.
+","Nom du système","The type of deviceName.
 UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | ModelName.","","","","","","","","","",,"required","The type of name the device is referred by.","http://hl7.org/fhir/ValueSet/device-nametype|4.0.1","",,,,"Device.deviceName.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playedRole[typeCode=MANU].code","FiveWs.what[x]"
 "Device.modelNumber","Device.modelNumber","","","",0,1,"","","","string {[]} {[]}
@@ -144,7 +144,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
 ","The part number of the device","The part number of the device.","Alphanumeric Maximum 20.","","","","","","","","",,,,,"",,,,"Device.partNumber",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playedRole[typeCode=MANU].id","FiveWs.what[x]"
 "Device.type","Device.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Nom du système","The kind or type of device.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS","",,,,"Device.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Profession / savoir-faire ou rôle","The kind or type of device.","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS","",,,,"Device.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Device.specialization","Device.specialization","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication","The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.","","","","","","","","","",,,,,"",,,,"Device.specialization",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -220,7 +220,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Device.patient","Device.patient","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
 ","Patient to whom Device is affixed","Patient information, If the device is affixed to a person.","","If the device is implanted in a patient, then need to associate the device to the patient.","","","","","","","",,,,,"",,,,"Device.patient",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playedRole[typeCode=USED].scoper.playedRole[typeCode=PAT]","FiveWs.subject[x]","FiveWs.subject"
-"Device.owner","Device.owner","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Organization-document]]}
+"Device.owner","Device.owner","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document]]}
 ","Organization responsible for device","An organization that is responsible for the provision and ongoing maintenance of the device.","","","","","","","","","",,,,,"",,,,"Device.owner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".playedRole[typeCode=OWN].scoper","FiveWs.source"
 "Device.contact","Device.contact","","","",0,*,"","","","ContactPoint {[]} {[]}
