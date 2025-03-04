@@ -1,15 +1,15 @@
-Instance: MappingGenderFHIRANS
+Instance: MappingAdministrativeGender
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping entre ValueSet FHIR et ValueSet ANS pour le genre"
-Description: "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR et ceux du ValueSet ANS pour le genre."
+Title: "MappingValueSetAdministrativeGender"
+Description: "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS."
 
 * name = "GenderMappingFHIRtoANS"
 * status = #active
 * experimental = false
 
 * group[+].source = "http://hl7.org/fhir/administrative-gender"
-* group[=].target = "$JDV_J143_AdministrativeGender"
+* group[=].target = "https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS"
 
 * group[=].element[+].code = #male
 * group[=].element[=].target.code = #M

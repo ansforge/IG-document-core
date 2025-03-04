@@ -9,7 +9,7 @@ Profile: FrBundleDocument
 Parent: Bundle
 Id: fr-bundle-document
 Title: "FrBundleDocument"
-Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le corps d'un document ."
+Description: "FrBundleDocument permet d’assembler les éléments de l’en-tête et du corps d’un document."
 * . ^short = "Bundle Document"
 * . ^definition = "Bundle Document."
 * obeys bdle-document-1
@@ -34,7 +34,7 @@ Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le c
 * entry contains composition 1..1
 * entry[composition].resource only FrCompositionDocument
 // Définition de l'entrée patient
-* entry contains patient 0..1
+* entry contains patient 1..1
 * entry[patient].resource only FrPatientFHIRDocument
 // Définition de l'entrée practitionerRole
 * entry contains practitionerRole 1..*
@@ -48,3 +48,9 @@ Description: "FrBundleDocument est utilisé pour représenter l'en-tête et le c
 // Définition de l'entrée device
 * entry contains device 1..*
 * entry[device].resource only FrDeviceDocument
+// Définition de l'entrée encounter
+* entry contains encounter 1..*
+* entry[encounter].resource only FrEncounterDocument
+// Définition de l'entrée location
+* entry contains location 1..*
+* entry[location].resource only FrLocationDocument

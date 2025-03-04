@@ -1,6 +1,6 @@
-Extension: AuthorTime
+Extension: AuthorTimeExtension
 Id: fr-author-time
-Title: "AuthorTime"
+Title: "AuthorTimeExtension"
 Description: "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition."
 * ^context.type = #element
 * ^context.expression = "Composition.author"

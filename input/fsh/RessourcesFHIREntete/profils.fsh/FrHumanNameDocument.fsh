@@ -3,7 +3,7 @@ Profile: HumanNameDocument
 Parent: https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name
 Id: fr-human-name-document
 Title: "HumanNameDocument"
-Description: "Nom du professionnel de santé."
+Description: "Ce profil représente le nom du professionnel de santé."
 * ^status = #draft 
 * use 0..0
 * text 0..0
@@ -12,7 +12,7 @@ Description: "Nom du professionnel de santé."
 * given 0..1
 * prefix ^short = "Civilité"
 * prefix 0..1
-* prefix from https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS
+* prefix from $JDV_J245-Civilite-CISIS (required)
 * suffix 0..1
 * suffix ^short = "Titre"
-* suffix from https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS
+* suffix from $JDV_J246-Titre-CISIS (required)

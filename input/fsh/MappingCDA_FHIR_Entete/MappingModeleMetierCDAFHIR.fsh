@@ -2,7 +2,7 @@ Instance: mappingmodelemetierCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
 * name = "MappingModeleMetierCDAFHIR"
-* title = "Mapping du modèle logique métier entre CDA et FHIR"
+* title = "MappingModeleMetierCDAFHIR"
 * status = #draft
 * experimental = false
 * description = """Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR."""
@@ -61,7 +61,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping 1 : CDA 2 FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Composition-document"
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
 * group[=].element[+].code = #ClinicalDocument.templateId
 * group[=].element[=].display = ""
 * group[=].element[=].target.code = #Composition.meta.profile
@@ -108,7 +108,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping patient2CDA2FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PatientDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target"
 * group[=].element[+].code = #EnteteDocument.patientDocument
 * group[=].element[=].display = "Patient / Usager"
@@ -123,7 +123,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 // Groupe Mapping auteur2CDA2FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AuteurDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author"
 * group[=].element[+].code = #EnteteDocument.auteurDocument
 * group[=].element[=].display = "Auteur du document"
@@ -138,7 +138,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 // Groupe Mapping informateur2CDA2FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/InformateurDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant"
 * group[=].element[+].code = #EnteteDocument.informateurDocument
 * group[=].element[=].display = "Informateur"
@@ -146,7 +146,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent			
 // Groupe Mapping structureConservationDocument2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservationDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"
 * group[=].element[+].code = #EnteteDocument.structureConservationDocument
 * group[=].element[=].display = "Structure chargée de la conservation du document"
@@ -154,7 +154,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping destinataireDocumentt2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevuDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient"
 * group[=].element[+].code = #EnteteDocument.destinataireDocument
 * group[=].element[=].display = "Destinataire prévu du document"
@@ -162,7 +162,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping responsableDocuement2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/ResponsableDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator"
 * group[=].element[+].code = #EnteteDocument.responsableDocuement
 * group[=].element[=].display = "Responsable du docuement"
@@ -170,7 +170,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping validateurDocument2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/ValidateurDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator"
 * group[=].element[+].code = #EnteteDocument.validateurDocument
 * group[=].element[=].display = "Validateur du document"
@@ -186,7 +186,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping participant2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/ParticipantDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant"
 * group[=].element[+].code = #EnteteDocument.participant
 * group[=].element[=].display = "Autres personnes / structures impliquées"
@@ -202,7 +202,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping evenementDocumente2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EvenementDocumente"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of"
 * group[=].element[+].code = #EnteteDocument.evenementDocumente
 * group[=].element[=].display = "Évènement documenté"
@@ -218,7 +218,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 // Groupe Mapping consentementAssocieAuDocument2CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/ConsentementDocument"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization"
 * group[=].element[+].code = #EnteteDocument.consentementAssocieAuDocument	
 * group[=].element[=].display = "Consentement associé au document"
