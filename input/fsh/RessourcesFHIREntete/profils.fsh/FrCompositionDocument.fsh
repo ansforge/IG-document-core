@@ -3,7 +3,7 @@ Profile: FrCompositionDocument
 Parent:  http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: fr-composition-document
 Title: "FrCompositionDocument"
-Description: "Clinical document utilisé pour représenter un document FHIR."
+Description: "Ce profil est  utilisé pour représenter un document FHIR."
 * . ^short = "Clinical document"
 * . ^definition = "Clinical document."
 //Composition.meta.profile : templateId

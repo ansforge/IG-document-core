@@ -9,7 +9,7 @@ Profile: FrBundleDocument
 Parent: Bundle
 Id: fr-bundle-document
 Title: "FrBundleDocument"
-Description: "FrBundleDocument permet d’assembler les éléments de l’en-tête et du corps d’un document."
+Description: "Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document."
 * . ^short = "Bundle Document"
 * . ^definition = "Bundle Document."
 * obeys bdle-document-1
