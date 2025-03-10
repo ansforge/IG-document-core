@@ -256,9 +256,6 @@ package IG #DDDDDD{
              Bundle.timestamp => [1..None]
              Bundle.entry => [8..None]
              Bundle.entry.fullUrl => [1..None]
-             Bundle.entry.search => [None..0]
-             Bundle.entry.request => [None..0]
-             Bundle.entry.response => [None..0]
              Bundle.entry:composition => [1..1]
              Bundle.entry:composition.resource => [None..None]
              Bundle.entry:patient => [1..1]
@@ -946,14 +943,17 @@ package IG #DDDDDD{
              Encounter.type => [None..1]
              Encounter.participant => [None..None]
              Encounter.participant:Responsable => [0..1]
+             Encounter.participant:Responsable.type => [None..None]
              Encounter.participant:Responsable.type.coding.system => [None..None]
              Encounter.participant:Responsable.type.coding.code => [None..None]
              Encounter.participant:Responsable.type.coding.display => [None..None]
              Encounter.participant:Responsable.individual => [1..None]
              Encounter.participant:Personne-Impliquee => [0..*]
+             Encounter.participant:Personne-Impliquee.type => [None..None]
              Encounter.participant:Personne-Impliquee.type.coding => [None..None]
              Encounter.participant:Personne-Impliquee.individual => [1..None]
              Encounter.period => [1..None]
+             Encounter.hospitalization.dischargeDisposition => [None..None]
              Encounter.hospitalization.dischargeDisposition.coding.system => [None..None]
              Encounter.location => [1..1]
              Encounter.location.location => [None..None]
@@ -961,13 +961,10 @@ package IG #DDDDDD{
 
         class HumanNameDocument{
 
-             HumanName.use => [None..0]
-             HumanName.text => [None..0]
              HumanName.family => [1..None]
              HumanName.given => [None..1]
              HumanName.prefix => [None..None]
              HumanName.suffix => [None..1]
-             HumanName.period => [None..0]
         } 
 
         class FrLocationDocument{
@@ -982,7 +979,7 @@ package IG #DDDDDD{
         class FrOrganizationDocument{
 
              Organization.identifier => [None..None]
-             Organization.type => [None..1]
+             Organization.type:CadreExercice => [0..1]
         } 
 
         class FrPatientFHIRDocument{
@@ -1002,8 +999,6 @@ package IG #DDDDDD{
 
              Practitioner.identifier => [1..None]
              Practitioner.name => [1..1]
-             Practitioner.telecom => [None..None]
-             Practitioner.address => [None..None]
              Practitioner.qualification:Profession-SavoirFaire-Rôle => [0..1]
              Practitioner.qualification:Profession-SavoirFaire-Rôle.code => [None..None]
         } 
@@ -1025,12 +1020,9 @@ package IG #DDDDDD{
      FrCompositionDocument -[#black,dashed,thickness=2]-> OrderExtension
      FrCompositionDocument -[#black,dashed,thickness=2]-> ConsentExtension
      FrCompositionDocument -[#black,dashed,thickness=2]-> AuthorTimeExtension
-     FrPatientFHIRDocument -[#black,dashed,thickness=2]-> QualifierExtension
-     FrPatientFHIRDocument -[#black,dashed,thickness=2]-> QualifierExtension
 
         class AuthorTimeExtension{
 
-          Extension.id => [None..0]
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
@@ -1129,31 +1121,21 @@ package IG #DDDDDD{
           Extension.extension:function.value[x].coding => [None..None]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
-        } 
-        class QualifierExtension{
-
-          Extension.extension => [None..0]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..None]
          }
      }
      package valueset #PaleVioletRed{
 
-        class FRCoreParticipationTypeDestinataire  
+        class FRValueSetParticipationType  
 
-     InformationRecipientExtension -[#black,dotted,thickness=2]-> FRCoreParticipationTypeDestinataire
+     InformationRecipientExtension -[#black,dotted,thickness=2]-> FRValueSetParticipationType
 
-        class FRCoreValueSetCategorieEtablissement  
+        class FRValueSetCategorieEtablissement  
 
-     FrLocationDocument -[#black,dotted,thickness=2]-> FRCoreValueSetCategorieEtablissement
+     FrLocationDocument -[#black,dotted,thickness=2]-> FRValueSetCategorieEtablissement
 
-        class FRCoreValueSetContactRole  
+        class FRValueSetPatientContactRole  
 
-     FrPatientFHIRDocument -[#black,dotted,thickness=2]-> FRCoreValueSetContactRole
-
-        class FRNameQualifier  
-
-     QualifierExtension -[#black,dotted,thickness=2]-> FRNameQualifier
+     FrPatientFHIRDocument -[#black,dotted,thickness=2]-> FRValueSetPatientContactRole
        }
 
 package "Ressources de base" #palegreen {

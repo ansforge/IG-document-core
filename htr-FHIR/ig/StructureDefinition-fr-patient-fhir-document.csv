@@ -327,20 +327,12 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.name.family.id","Patient.name.family.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "Patient.name.family.extension","Patient.name.family.extension","","","",1,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent.| qualifier='CL' pour le nom utilisé (RNIV).","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.name.family.extension:qualifier-family","Patient.name.family.extension","qualifier-family","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension]]} {[]}
-","QualifierExtension","Extension permettant d'ajouter un qualifier dans les noms et prénoms du patient.
- - name.family : 
-    - qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent. 
-    - qualifier='CL' pour le nom utilisé (RNIV).
- - name.given : 
-    - qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.
-    - qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.  
-    - qualifier='CL' pour pour le prénom utilisé (RNIV).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.name.family.extension:qualifier-family","Patient.name.family.extension","qualifier-family","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier]]} {[]}
+","LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.","Used to indicate additional information about the name part and how it should be used.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP.qualifier"
 "Patient.name.family.value","Patient.name.family.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
 "Patient.name.given","Patient.name.given","","first name
@@ -350,20 +342,13 @@ middle name","",0,*,"","","Y","string {[]} {[]}
 "Patient.name.given.id","Patient.name.given.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
 "Patient.name.given.extension","Patient.name.given.extension","","","",0,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.| qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.| 
+  qualifier='CL' pour pour le prénom utilisé (RNIV).","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.name.given.extension:qualifier-given","Patient.name.given.extension","qualifier-given","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension]]} {[]}
-","QualifierExtension","Extension permettant d'ajouter un qualifier dans les noms et prénoms du patient.
- - name.family : 
-    - qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent. 
-    - qualifier='CL' pour le nom utilisé (RNIV).
- - name.given : 
-    - qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.
-    - qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.  
-    - qualifier='CL' pour pour le prénom utilisé (RNIV).","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Patient.name.given.extension:qualifier-given","Patient.name.given.extension","qualifier-given","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier]]} {[]}
+","LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN | VV","A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.","Used to indicate additional information about the name part and how it should be used.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","ENXP.qualifier"
 "Patient.name.given.value","Patient.name.given.value","","","",0,1,"","","","string {[]} {[]}
 ","Primitive value for string","The actual value","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
 "Patient.name.prefix","Patient.name.prefix","","","",0,1,"","","Y","string {[]} {[]}
@@ -501,7 +486,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",,"open","Patient.contact.relationship",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","code","n/a","NK1-7, NK1-3"
 "Patient.contact.relationship:Role","Patient.contact.relationship","Role","","",0,1,"","","","CodeableConcept {[]} {[]}
-","The nature of the relationship. Rôle de la personne. Ex : personne de confiance, aidant ...","The nature of the relationship between the patient and the contact person.","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-contact-role","",,,,"Patient.contact.relationship",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","The nature of the relationship. Rôle de la personne. Ex : personne de confiance, aidant ...","The nature of the relationship between the patient and the contact person.","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role","",,,,"Patient.contact.relationship",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","code","n/a","NK1-7, NK1-3"
 "Patient.contact.relationship:RelationType","Patient.contact.relationship","RelationType","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","The nature of the relationship. Relation de la personne. Ex : Mère, époux, enfant ...","The nature of the relationship between the patient and the contact person.","","Used to determine which contact person is the most relevant to approach, depending on circumstances.","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS","",,,,"Patient.contact.relationship",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

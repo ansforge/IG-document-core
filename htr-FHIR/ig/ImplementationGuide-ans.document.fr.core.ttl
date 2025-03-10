@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-03-06T10:23:19+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-03-10T13:00:25+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1403,6 +1403,60 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-categorie-etablissement> ;
+         fhir:reference [ fhir:v "ValueSet/fr-doc-vs-categorie-etablissement" ]
+       ] ;
+       fhir:name [ fhir:v "Fr ValueSet Categorie Etablissement" ] ;
+       fhir:description [ fhir:v "Catégorie d'établissement" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-participation-type> ;
+         fhir:reference [ fhir:v "ValueSet/fr-doc-participation-type" ]
+       ] ;
+       fhir:name [ fhir:v "FR ValueSet Participation Type" ] ;
+       fhir:description [ fhir:v "Type de participation : destinataire" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role> ;
+         fhir:reference [ fhir:v "ValueSet/fr-doc-vs-patient-contact-role" ]
+       ] ;
+       fhir:name [ fhir:v "FR ValueSet Patient Contact Role" ] ;
+       fhir:description [ fhir:v "Rôle joué par la personne" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1430,66 +1484,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-composition-document" ]
        ] ;
        fhir:name [ fhir:v "FrCompositionDocument" ] ;
-       fhir:description [ fhir:v "Ce profil est  utilisé pour représenter un document FHIR." ] ;
+       fhir:description [ fhir:v "Ce profil est utilisé pour représenter un document médical." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-categorie-etablissement> ;
-         fhir:reference [ fhir:v "ValueSet/fr-core-vs-categorie-etablissement" ]
-       ] ;
-       fhir:name [ fhir:v "FRCoreValueSetCategorieEtablissement" ] ;
-       fhir:description [ fhir:v "ValueSet : CategorieEtablissement" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-contact-role> ;
-         fhir:reference [ fhir:v "ValueSet/fr-core-vs-contact-role" ]
-       ] ;
-       fhir:name [ fhir:v "FRCoreValueSetContactRole" ] ;
-       fhir:description [ fhir:v "ValueSet : ContactRole" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-participation-type> ;
-         fhir:reference [ fhir:v "ValueSet/fr-core-participation-type" ]
-       ] ;
-       fhir:name [ fhir:v "FRCoreValueSetParticipationType" ] ;
-       fhir:description [ fhir:v "ValueSet : ParticipationType(destinataire)" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1552,24 +1552,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-core-vs-name-qualifier> ;
-         fhir:reference [ fhir:v "ValueSet/fr-core-vs-name-qualifier" ]
-       ] ;
-       fhir:name [ fhir:v "FRNameQualifier" ] ;
-       fhir:description [ fhir:v "ValueSet : Qualifier" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1597,7 +1579,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-patient-fhir-document" ]
        ] ;
        fhir:name [ fhir:v "FrPatientFHIRDocument" ] ;
-       fhir:description [ fhir:v "Ce profil représente  le patient concerné par le document." ] ;
+       fhir:description [ fhir:v "Ce profil représente le patient concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1635,7 +1617,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-practitionerRole-document" ]
        ] ;
        fhir:name [ fhir:v "FrPractitionerRoleDocument" ] ;
-       fhir:description [ fhir:v "Ce profil représente les professionnels de santé et leurs rôles en FHIR." ] ;
+       fhir:description [ fhir:v "Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1711,7 +1693,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-informant-extension" ]
        ] ;
        fhir:name [ fhir:v "InformantExtension" ] ;
-       fhir:description [ fhir:v "Extension permettant d'ajouter des informateur dans la Composition." ] ;
+       fhir:description [ fhir:v "Extension permettant d'ajouter des informateurs dans la Composition." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -2134,25 +2116,6 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-qualifier-extension" ]
-       ] ;
-       fhir:name [ fhir:v "QualifierExtension" ] ;
-       fhir:description [ fhir:v "Extension permettant d'ajouter un qualifier dans les noms et prénoms du patient.\n - name.family : \n    - qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent. \n    - qualifier='CL' pour le nom utilisé (RNIV).\n - name.given : \n    - qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.\n    - qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.  \n    - qualifier='CL' pour pour le prénom utilisé (RNIV)." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

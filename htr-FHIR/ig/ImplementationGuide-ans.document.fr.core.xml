@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-03-06T10:23:19+00:00"/>
+  <date value="2025-03-10T13:00:25+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -814,6 +814,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-doc-vs-categorie-etablissement"/>
+      </reference>
+      <name value="Fr ValueSet Categorie Etablissement"/>
+      <description value="Catégorie d'établissement"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-doc-participation-type"/>
+      </reference>
+      <name value="FR ValueSet Participation Type"/>
+      <description value="Type de participation : destinataire"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/fr-doc-vs-patient-contact-role"/>
+      </reference>
+      <name value="FR ValueSet Patient Contact Role"/>
+      <description value="Rôle joué par la personne"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -832,42 +865,9 @@
         <reference value="StructureDefinition/fr-composition-document"/>
       </reference>
       <name value="FrCompositionDocument"/>
-      <description value="Ce profil est  utilisé pour représenter un document FHIR."/>
+      <description value="Ce profil est utilisé pour représenter un document médical."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-core-vs-categorie-etablissement"/>
-      </reference>
-      <name value="FRCoreValueSetCategorieEtablissement"/>
-      <description value="ValueSet : CategorieEtablissement"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-core-vs-contact-role"/>
-      </reference>
-      <name value="FRCoreValueSetContactRole"/>
-      <description value="ValueSet : ContactRole"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-core-participation-type"/>
-      </reference>
-      <name value="FRCoreValueSetParticipationType"/>
-      <description value="ValueSet : ParticipationType(destinataire)"/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -907,17 +907,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-core-vs-name-qualifier"/>
-      </reference>
-      <name value="FRNameQualifier"/>
-      <description value="ValueSet : Qualifier"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -936,7 +925,7 @@
         <reference value="StructureDefinition/fr-patient-fhir-document"/>
       </reference>
       <name value="FrPatientFHIRDocument"/>
-      <description value="Ce profil représente  le patient concerné par le document."/>
+      <description value="Ce profil représente le patient concerné par le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR"/>
     </resource>
@@ -960,7 +949,7 @@
         <reference value="StructureDefinition/fr-practitionerRole-document"/>
       </reference>
       <name value="FrPractitionerRoleDocument"/>
-      <description value="Ce profil représente les professionnels de santé et leurs rôles en FHIR."/>
+      <description value="Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR"/>
     </resource>
@@ -1008,7 +997,7 @@
         <reference value="StructureDefinition/fr-informant-extension"/>
       </reference>
       <name value="InformantExtension"/>
-      <description value="Extension permettant d'ajouter des informateur dans la Composition."/>
+      <description value="Extension permettant d'ajouter des informateurs dans la Composition."/>
       <exampleBoolean value="false"/>
       <groupingId value="Extensions FHIR"/>
     </resource>
@@ -1274,18 +1263,6 @@
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-qualifier-extension"/>
-      </reference>
-      <name value="QualifierExtension"/>
-      <description value="Extension permettant d'ajouter un qualifier dans les noms et prénoms du patient.&#xA; - name.family : &#xA;    - qualifier='BR' pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent. &#xA;    - qualifier='CL' pour le nom utilisé (RNIV).&#xA; - name.given : &#xA;    - qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.&#xA;    - qualifier='BR' pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.  &#xA;    - qualifier='CL' pour pour le prénom utilisé (RNIV)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Extensions FHIR"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

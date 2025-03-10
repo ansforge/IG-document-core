@@ -50,8 +50,8 @@
     <sch:title>f:Patient/f:name/f:family</sch:title>
     <sch:rule context="f:Patient/f:name/f:family">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -59,7 +59,7 @@
     <sch:title>f:Patient/f:name/f:given</sch:title>
     <sch:rule context="f:Patient/f:name/f:given">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-qualifier-extension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

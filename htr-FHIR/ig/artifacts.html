@@ -814,7 +814,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-composition-document">FrCompositionDocument</a>
             </td>
             <td>
-<p>Ce profil est  utilisé pour représenter un document FHIR.</p>
+<p>Ce profil est utilisé pour représenter un document médical.</p>
 </td>
          </tr>
          <tr>
@@ -859,7 +859,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-patient-fhir-document">FrPatientFHIRDocument</a>
             </td>
             <td>
-<p>Ce profil représente  le patient concerné par le document.</p>
+<p>Ce profil représente le patient concerné par le document.</p>
 </td>
          </tr>
          <tr>
@@ -877,7 +877,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-practitionerRole-document">FrPractitionerRoleDocument</a>
             </td>
             <td>
-<p>Ce profil représente les professionnels de santé et leurs rôles en FHIR.</p>
+<p>Ce profil représente les professionnels de santé et leurs rôles dans le cadre d’un document médical.</p>
 </td>
          </tr>
          <tr>
@@ -930,7 +930,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-informant-extension">InformantExtension</a>
             </td>
             <td>
-<p>Extension permettant d’ajouter des informateur dans la Composition.</p>
+<p>Extension permettant d’ajouter des informateurs dans la Composition.</p>
 </td>
          </tr>
          <tr>
@@ -960,30 +960,6 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Extension permettant d’ajouter des participants dans la Composition.</p>
 </td>
          </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-fr-qualifier-extension.html"
-                  title="StructureDefinition/fr-qualifier-extension">QualifierExtension</a>
-            </td>
-            <td>
-<p>Extension permettant d’ajouter un qualifier dans les noms et prénoms du patient.</p>
-<ul>
-  <li>name.family :
-    <ul>
-      <li>qualifier=’BR’ pour le nom de naissance (ou nom de famille) : obligatoire si le matricule INS est présent.</li>
-      <li>qualifier=’CL’ pour le nom utilisé (RNIV).</li>
-    </ul>
-  </li>
-  <li>name.given :
-    <ul>
-      <li>qualifier non utilisé pour la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.</li>
-      <li>qualifier=’BR’ pour le premier prénom extrait de la liste des prénoms de l’acte de naissance : obligatoire si le matricule INS est présent.</li>
-      <li>qualifier=’CL’ pour pour le prénom utilisé (RNIV).</li>
-    </ul>
-  </li>
-</ul>
-</td>
-         </tr>
       </tbody>
    </table>
    <a name="5"> </a>
@@ -1011,38 +987,29 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-fr-core-vs-categorie-etablissement.html"
-                  title="ValueSet/fr-core-vs-categorie-etablissement">FRCoreValueSetCategorieEtablissement</a>
+               <a href="ValueSet-fr-doc-participation-type.html"
+                  title="ValueSet/fr-doc-participation-type">FR ValueSet Participation Type</a>
             </td>
             <td>
-<p>ValueSet : CategorieEtablissement</p>
+<p>Type de participation : destinataire</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-fr-core-vs-contact-role.html"
-                  title="ValueSet/fr-core-vs-contact-role">FRCoreValueSetContactRole</a>
+               <a href="ValueSet-fr-doc-vs-patient-contact-role.html"
+                  title="ValueSet/fr-doc-vs-patient-contact-role">FR ValueSet Patient Contact Role</a>
             </td>
             <td>
-<p>ValueSet : ContactRole</p>
+<p>Rôle joué par la personne</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-fr-core-participation-type.html"
-                  title="ValueSet/fr-core-participation-type">FRCoreValueSetParticipationType</a>
+               <a href="ValueSet-fr-doc-vs-categorie-etablissement.html"
+                  title="ValueSet/fr-doc-vs-categorie-etablissement">Fr ValueSet Categorie Etablissement</a>
             </td>
             <td>
-<p>ValueSet : ParticipationType(destinataire)</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-fr-core-vs-name-qualifier.html"
-                  title="ValueSet/fr-core-vs-name-qualifier">FRNameQualifier</a>
-            </td>
-            <td>
-<p>ValueSet : Qualifier</p>
+<p>Catégorie d’établissement</p>
 </td>
          </tr>
       </tbody>
@@ -1104,7 +1071,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 6, 2025 10:24+0000">2025-03-06</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 10, 2025 13:01+0000">2025-03-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
