@@ -1,3 +1,5 @@
+//Cette extension permet d'enregistrer, dans la ressource Composition, toute personne ou structure impliquée dans les événements décrits par le document et qui n'a pas été mentionnée ailleurs. 
+//Aucune extension du HL7 FHIR ne permet d’enregistrer cet élément.
 Extension: ParticipantExtension
 Id: fr-participant-extension
 Title: "ParticipantExtension"

@@ -1,10 +1,9 @@
+// StructureDefinition for LocationDocument
 Profile: FrLocationDocument
 Parent: Location
 Id: fr-location-document
 Title: "FrLocationDocument"
 Description: "Ce profil représente la structure de prise en charge."
-* ^status = #draft 
-
 // Slicing : type 
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.code"
@@ -18,4 +17,4 @@ Description: "Ce profil représente la structure de prise en charge."
 // Catégorie d'établissement
 * type contains CategorieEtablissement 0..1
 * type[CategorieEtablissement] ^short = "Catégorie d'établissement"
-* type[CategorieEtablissement].coding from FRCoreValueSetCategorieEtablissement (required)
+* type[CategorieEtablissement].coding from FRValueSetCategorieEtablissement (required)

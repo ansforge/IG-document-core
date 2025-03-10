@@ -1,7 +1,9 @@
+//Cette extension est utilisée pour associer un informateur, la personne ayant fourni des informations concernant le document, à la ressource Composition. 
+//Aucune extension du HL7 FHIR ne permet d’enregistrer cet élément.
 Extension: InformantExtension
 Id: fr-informant-extension
 Title: "InformantExtension"
-Description: "Extension permettant d'ajouter des informateur dans la Composition."
+Description: "Extension permettant d'ajouter des informateurs dans la Composition."
 * ^context.type = #element
 * ^context.expression = "Composition"
 * . ^short = "Informateur"

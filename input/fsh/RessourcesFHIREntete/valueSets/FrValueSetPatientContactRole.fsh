@@ -1,13 +1,8 @@
-ValueSet: FRCoreValueSetContactRole
-Id: fr-core-vs-contact-role
-Title: "FRCoreValueSetContactRole"
-Description: "ValueSet : ContactRole"
+ValueSet: FRValueSetPatientContactRole
+Id: fr-doc-vs-patient-contact-role
+Title: "FR ValueSet Patient Contact Role"
+Description: "Rôle joué par la personne"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-
-* ^extension.url = "http://hl7.org/fhir/StructureDefinition/valueset-warning"
-* ^extension.valueMarkdown = "Types are for general categories of identifiers. See [the identifier registry](identifier-registry.html) for a list of common identifier systems"
-
-//* include codes from system http://terminology.hl7.org/CodeSystem/v3-RoleClass
 
 // Ajout de codes spécifiques
 * include http://terminology.hl7.org/CodeSystem/v3-RoleClass#ECON // pour une personne à prévenir en cas d'urgence"

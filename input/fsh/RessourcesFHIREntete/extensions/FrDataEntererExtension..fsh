@@ -1,3 +1,6 @@
+//Cette extension est utilisée pour associer un opérateur de saisie à la ressource Composition. 
+//Elle contient les informations relatives à l'opérateur qui a saisi tout ou une partie du contenu du document.
+//Aucune extension du HL7 FHIR ne permet d’enregistrer cet élément.
 Extension: DataEntererExtension
 Id: fr-data-enterer-extension
 Title: "DataEntererExtension"

@@ -1,16 +1,12 @@
 // StructureDefinition for PractitionerDocument
 Profile: FrPractitionerDocument
-Parent: https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner
+Parent: AsPractitionerProfile
 Id: fr-practitioner-document
 Title: "FrPractitionerDocument"
 Description: "Ce profil représente les professionnels de santé."
-* ^status = #draft 
 * identifier 1..* 
-* address 0..*
-  * ^short = "Adresse"
-* telecom 0..*
-  * ^short = "Coordonnées télécom"
-* name 1..1 
+* name 1..1
+* name ^short = "Identité de la personne physique" 
 * name only fr-human-name-document
 
 // slice : ProfessionSavoirFaireRôle

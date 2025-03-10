@@ -1,10 +1,9 @@
 // StructureDefinition for PractitionerRoleDocument
 Profile: FrPractitionerRoleDocument
-Parent: https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole
+Parent: AsPractitionerRoleProfile
 Id: fr-practitionerRole-document
 Title: "FrPractitionerRoleDocument"
-Description: "Ce profil représente les professionnels de santé et leurs rôles en FHIR."
-* ^status = #draft 
+Description: "Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical."
 
 // slice : Rôle fonctionnel du professionnel de santé
 * code contains RoleFonctionnel 0..1
