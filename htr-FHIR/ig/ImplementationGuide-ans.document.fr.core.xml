@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-03-10T13:00:25+00:00"/>
+  <date value="2025-03-11T15:29:00+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -814,6 +814,18 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-related-person-document"/>
+      </reference>
+      <name value="Fr RelatedPerson Document"/>
+      <description value="Ce profil représente l'informateur non professionnel."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources FHIR"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -828,7 +840,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/fr-doc-participation-type"/>
+        <reference value="ValueSet/fr-doc-vs-participation-type"/>
       </reference>
       <name value="FR ValueSet Participation Type"/>
       <description value="Type de participation : destinataire"/>
@@ -1080,7 +1092,7 @@
       <reference>
         <reference value="ConceptMap/mappingmodelemetierCDAFHIR"/>
       </reference>
-      <name value="MappingModeleMetierCDAFHIR"/>
+      <name value="Mapping du modèle logique métier de l'en-tête : CDA, FHIR"/>
       <description value="Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR."/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
@@ -1090,11 +1102,57 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/MappingAdministrativeGender"/>
+        <reference value="ConceptMap/mappingAuteurCDAFHIR"/>
       </reference>
-      <name value="MappingValueSetAdministrativeGender"/>
-      <description value="Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS."/>
+      <name value="Mapping du modèle métier Auteur : CDA et FHIR"/>
+      <description value="Mapping du modèle métier Auteur entre CDA et FHIR."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingInformateurCDAFHIR"/>
+      </reference>
+      <name value="Mapping du modèle métier Informateur : CDA et FHIR"/>
+      <description value="Mapping du modèle métier Informateur entre CDA et FHIR."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingOperateurSaisieCDAFHIR"/>
+      </reference>
+      <name value="Mapping du modèle métier Opérateur de saisie : CDA et FHIR"/>
+      <description value="Mapping du modèle métier Opérateur de saisie entre CDA et FHIR."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPatientCDAFHIR"/>
+      </reference>
+      <name value="Mapping du modèle métier Patient : CDA et FHIR"/>
+      <description value="Mapping du modèle métier Patient entre CDA et FHIR."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingAdministrativeGender"/>
+      </reference>
+      <name value="Mapping ValueSet AdministrativeGender"/>
+      <description value="Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1480,6 +1538,14 @@
           </extension>
           <nameUrl value="ressourcesFHIR-entete.html"/>
           <title value="FHIR"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-entete.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-entete.html"/>
+          <title value="Mapping CDA / FHIR"/>
           <generation value="markdown"/>
         </page>
       </page>

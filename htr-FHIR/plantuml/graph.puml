@@ -1008,6 +1008,14 @@ package IG #DDDDDD{
              PractitionerRole.practitioner => [None..None]
              PractitionerRole.organization => [None..None]
              PractitionerRole.code:RoleFonctionnel => [0..1]
+        } 
+
+        class FrRelatedPersonDocument{
+
+             RelatedPerson.relationship => [None..1]
+             RelatedPerson.name => [1..1]
+             RelatedPerson.telecom => [None..None]
+             RelatedPerson.address => [None..None]
          }
 
      }
@@ -1391,5 +1399,9 @@ package "Ressources de base" #palegreen {
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole" as  class409d7284b1fcd82a5ca90685afaba163 
 
     class409d7284b1fcd82a5ca90685afaba163 --> FrPractitionerRoleDocument
+
+ class "RelatedPerson" as  class98b511f7440508b3a0a3700b6fc3c7c5 
+
+    class98b511f7440508b3a0a3700b6fc3c7c5 --> FrRelatedPersonDocument
 }
 @enduml

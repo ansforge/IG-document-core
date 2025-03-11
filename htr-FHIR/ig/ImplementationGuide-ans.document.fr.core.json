@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-03-10T13:00:25+00:00",
+  "date" : "2025-03-11T15:29:00+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -1011,6 +1011,19 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-related-person-document"
+      },
+      "name" : "Fr RelatedPerson Document",
+      "description" : "Ce profil représente l'informateur non professionnel.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1026,7 +1039,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/fr-doc-participation-type"
+        "reference" : "ValueSet/fr-doc-vs-participation-type"
       },
       "name" : "FR ValueSet Participation Type",
       "description" : "Type de participation : destinataire",
@@ -1299,7 +1312,7 @@
       "reference" : {
         "reference" : "ConceptMap/mappingmodelemetierCDAFHIR"
       },
-      "name" : "MappingModeleMetierCDAFHIR",
+      "name" : "Mapping du modèle logique métier de l'en-tête : CDA, FHIR",
       "description" : "Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR.",
       "exampleBoolean" : false,
       "groupingId" : "Mapping"
@@ -1310,11 +1323,61 @@
         "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "ConceptMap/MappingAdministrativeGender"
+        "reference" : "ConceptMap/mappingAuteurCDAFHIR"
       },
-      "name" : "MappingValueSetAdministrativeGender",
-      "description" : "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS.",
+      "name" : "Mapping du modèle métier Auteur : CDA et FHIR",
+      "description" : "Mapping du modèle métier Auteur entre CDA et FHIR.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingInformateurCDAFHIR"
+      },
+      "name" : "Mapping du modèle métier Informateur : CDA et FHIR",
+      "description" : "Mapping du modèle métier Informateur entre CDA et FHIR.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingOperateurSaisieCDAFHIR"
+      },
+      "name" : "Mapping du modèle métier Opérateur de saisie : CDA et FHIR",
+      "description" : "Mapping du modèle métier Opérateur de saisie entre CDA et FHIR.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPatientCDAFHIR"
+      },
+      "name" : "Mapping du modèle métier Patient : CDA et FHIR",
+      "description" : "Mapping du modèle métier Patient entre CDA et FHIR.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingAdministrativeGender"
+      },
+      "name" : "Mapping ValueSet AdministrativeGender",
+      "description" : "Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping"
     },
     {
       "extension" : [{
@@ -1736,6 +1799,15 @@
           }],
           "nameUrl" : "ressourcesFHIR-entete.html",
           "title" : "FHIR",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mappingCDA-FHIR-entete.html"
+          }],
+          "nameUrl" : "mappingCDA-FHIR-entete.html",
+          "title" : "Mapping CDA / FHIR",
           "generation" : "markdown"
         }]
       },

@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-03-10T13:00:25+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-03-11T15:29:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1403,6 +1403,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-related-person-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-related-person-document" ]
+       ] ;
+       fhir:name [ fhir:v "Fr RelatedPerson Document" ] ;
+       fhir:description [ fhir:v "Ce profil représente l'informateur non professionnel." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "ValueSet"
          ]
        ] ) ;
@@ -1425,8 +1444,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-participation-type> ;
-         fhir:reference [ fhir:v "ValueSet/fr-doc-participation-type" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-participation-type> ;
+         fhir:reference [ fhir:v "ValueSet/fr-doc-vs-participation-type" ]
        ] ;
        fhir:name [ fhir:v "FR ValueSet Participation Type" ] ;
        fhir:description [ fhir:v "Type de participation : destinataire" ] ;
@@ -1825,7 +1844,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingmodelemetierCDAFHIR> ;
          fhir:reference [ fhir:v "ConceptMap/mappingmodelemetierCDAFHIR" ]
        ] ;
-       fhir:name [ fhir:v "MappingModeleMetierCDAFHIR" ] ;
+       fhir:name [ fhir:v "Mapping du modèle logique métier de l'en-tête : CDA, FHIR" ] ;
        fhir:description [ fhir:v "Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1841,15 +1860,89 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/MappingAdministrativeGender> ;
-         fhir:reference [ fhir:v "ConceptMap/MappingAdministrativeGender" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAuteurCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingAuteurCDAFHIR" ]
        ] ;
-       fhir:name [ fhir:v "MappingValueSetAdministrativeGender" ] ;
-       fhir:description [ fhir:v "Ce ConceptMap établit la correspondance entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS." ] ;
+       fhir:name [ fhir:v "Mapping du modèle métier Auteur : CDA et FHIR" ] ;
+       fhir:description [ fhir:v "Mapping du modèle métier Auteur entre CDA et FHIR." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingInformateurCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingInformateurCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping du modèle métier Informateur : CDA et FHIR" ] ;
+       fhir:description [ fhir:v "Mapping du modèle métier Informateur entre CDA et FHIR." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingOperateurSaisieCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingOperateurSaisieCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping du modèle métier Opérateur de saisie : CDA et FHIR" ] ;
+       fhir:description [ fhir:v "Mapping du modèle métier Opérateur de saisie entre CDA et FHIR." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPatientCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPatientCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping du modèle métier Patient : CDA et FHIR" ] ;
+       fhir:description [ fhir:v "Mapping du modèle métier Patient entre CDA et FHIR." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAdministrativeGender> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingAdministrativeGender" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping ValueSet AdministrativeGender" ] ;
+       fhir:description [ fhir:v "Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2480,6 +2573,20 @@
              fhir:v "ressourcesFHIR-entete.html"^^xsd:anyURI
            ] ;
            fhir:title [ fhir:v "FHIR" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:url ;
+               fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI
+           ] ;
+           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
