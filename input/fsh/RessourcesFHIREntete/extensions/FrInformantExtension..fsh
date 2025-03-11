@@ -21,5 +21,5 @@ Description: "Extension permettant d'ajouter des informateurs dans la Compositio
 * extension[party]
 * extension[party] ^short = "Informateur"
 //* extension[party].value[x] only Reference
-* extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+* extension[party].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientFHIRDocument)
 * extension[party].valueReference 1..1

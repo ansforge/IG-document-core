@@ -7,7 +7,7 @@ Description: "Ce profil représente l'informateur non professionnel."
 
 * relationship 0..1
 * relationship ^short = "Lien de la personne avec le patient/usager"
-* relationship from $JDV_J11_RelationPatient-CISIS (required)
+* relationship from $JDV_J11_RelationPatient_CISIS (required)
 * address ^short = "Adresse"
 * telecom ^short = "Coordonnées télécom"
 * name 1..1

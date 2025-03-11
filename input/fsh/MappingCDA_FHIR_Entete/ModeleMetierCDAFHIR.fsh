@@ -1,11 +1,13 @@
 Instance: mappingmodelemetierCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-* name = "MappingModeleMetierCDAFHIR"
-* title = "MappingModeleMetierCDAFHIR"
+Title: "Mapping du modèle logique métier de l'en-tête : CDA, FHIR"
+Description: """Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR."""
+
+* name = "Mapping du modèle logique métier de l'en-tête : CDA, FHIR"
 * status = #draft
 * experimental = false
-* description = """Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR."""
+
 // Mapp : Identifiant unique du document Modèle métier to FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document"
