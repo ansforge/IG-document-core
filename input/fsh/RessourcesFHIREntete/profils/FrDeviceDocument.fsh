@@ -2,7 +2,7 @@
 Profile: FrDeviceDocument
 Parent: Device
 Id: fr-device-document
-Title: "FrDeviceDocument"
+Title: "Fr Device Document"
 Description: "Ce profil représente un système."
 * identifier 1..*
 * type ^short = "Profession / savoir-faire ou rôle"

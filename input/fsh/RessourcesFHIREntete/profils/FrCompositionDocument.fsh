@@ -1,8 +1,8 @@
 // StructureDefinition for composition-document
 Profile: FrCompositionDocument
-Parent: clinicaldocument
+Parent: clinical-document-composition
 Id: fr-composition-document
-Title: "FrCompositionDocument"
+Title: "Fr Composition Document"
 Description: "Ce profil est utilisé pour représenter un document médical."
 * . ^short = "Clinical document"
 * . ^definition = "Clinical document."
@@ -11,19 +11,46 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #open
 * meta.profile ^slicing.description = "Modèle du document et version du modèle"
-* meta.profile contains canonical 1..1
+* meta.profile contains canonical 0..1
 * meta.profile[canonical] = Canonical(fr-composition-document)
 
-* extension contains $composition-version  named version 1..1
-* extension[version] ^short = "Version du document"
-* extension[version] obeys comp-1
+* extension[R5-Composition-version] 1..1
+* extension[R5-Composition-version] ^short = "Version du document"
+* extension[R5-Composition-version] obeys comp-1
 
-* extension contains fr-data-enterer-extension named data-enterer-extension 1..1
-* extension contains fr-informant-extension named informant-extension 0..*
-* extension contains fr-information-recipient-extension named informationRecipient-extension 0..*
-* extension contains fr-participant-extension named participant-extension 0..*
-* extension contains fr-order-extension named order-extension 0..*
-* extension contains fr-consent-extension named consent-extension 0..*
+// data-enterer-extension
+* extension[data-enterer].extension[type] 1..1
+* extension[data-enterer].extension[type] ^short = "Type de participation : opérateur de saisie"
+* extension[data-enterer].extension[time] 1..1
+* extension[data-enterer].extension[time] ^short = "Date de la saisie"
+* extension[data-enterer].extension[party] ^short = "Opérateur"
+* extension[data-enterer].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+
+// informant-extension
+* extension[informant].extension[type] 1..1 
+* extension[informant].extension[type] ^short = "Type de participation : Informateur"
+* extension[informant].extension[party] ^short = "Informateur"
+* extension[informant].extension[party].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientFHIRDocument)
+
+// information-recipient-extension
+* extension[information-recipient].extension[type] 1..1 
+* extension[information-recipient].extension[type] ^short = "Type de participation : destinataire"
+* extension[information-recipient].extension[type].valueCodeableConcept from FRValueSetParticipationType
+* extension[information-recipient].extension[party] ^short = "Destinataire"
+* extension[information-recipient].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+
+// participant-extension
+* extension[participant].extension[type] 1..1 
+* extension[participant].extension[type] ^short = "Type de participation"
+* extension[participant].extension[type].valueCodeableConcept from $JDV_J144-ParticipationType-CISIS (required)
+* extension[participant].extension[function] 0..1 
+* extension[participant].extension[function] ^short = "Précision sur le rôle fonctionnel"
+* extension[participant].extension[function].valueCodeableConcept from $JDV_J47-FunctionCode-CISIS (required)
+* extension[participant].extension[time] 1..1 
+* extension[participant].extension[time] ^short = "Date de début et/ou de fin de la participation"
+* extension[participant].extension[party] ^short = "Identification du participant"
+* extension[participant].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+* extension[participant].extension[party] obeys comp-3
 
 * identifier ^short = "Identifiant lot de versions"
 * identifier 1..1 MS
@@ -34,7 +61,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * type ^short = "Type de document"
 * title MS
 * title ^short = "Titre du document CDA"
-* title ^definition = "Les volets de contenus du CI-SIS fixent parfois le titre du document.Dans les autres cas, le titre provient soit de la saisie directe par le professionnel ou le patient/usager, soit d’une valeur par défaut générée par le logiciel et modifiable par le professionnel ou le patient/usager."
+* title ^definition = "Les volets de contenus du CI-SIS fixent parfois le titre du document. Dans les autres cas, le titre provient soit de la saisie directe par le professionnel ou le patient/usager, soit d’une valeur par défaut générée par le logiciel et modifiable par le professionnel ou le patient/usager."
 * subject 1.. MS
 * subject ^short = "Patient / Usager"
 * subject only Reference(FrPatientFHIRDocument)
@@ -45,28 +72,24 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * confidentiality ^short = "Niveau de confidentialité"
 * author MS
 * author ^short = "Auteur du document"
-* author ^definition = "author permet d’enregistrer un auteur du document.Un document peut avoir un ou plusieurs auteurs."
+* author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
 * author only Reference(FrPractitionerRoleDocument or FrPatientFHIRDocument or FrDeviceDocument)
 * author.extension contains fr-author-time named time 1..1
 
-// Slicing de attester basé sur le mode (legal/professional)
-* attester ^slicing.discriminator.type = #value
-* attester ^slicing.discriminator.path = "mode"
-* attester ^slicing.rules = #open
 // Responsable du document : legalAuthenticator
-* attester contains legal 1..1
-* attester[legal].mode = #legal
-* attester[legal].time 1..1
-* attester[legal].party 1..1 
-* attester[legal].party only Reference(FrPractitionerRoleDocument)
-* attester[legal] ^short = "Responsable du document"
+* attester[legal_attester] 1..1
+* attester[legal_attester].mode = #legal
+* attester[legal_attester].time 1..1
+* attester[legal_attester].party 1..1 
+* attester[legal_attester].party only Reference(FrPractitionerRoleDocument)
+* attester[legal_attester] ^short = "Responsable du document"
+
 // Professionnel attestant la validité du contenu du document : authenticator
-* attester contains professional 0..*
-* attester[professional].mode = #professional
-* attester[professional].time 1..1
-* attester[legal].party 1..1 
-* attester[professional].party only Reference(FrPractitionerRoleDocument)
-* attester[professional] ^short = "Professionnel attestant la validité du contenu du document"
+* attester[professional_attester].mode = #professional
+* attester[professional_attester].time 1..1
+* attester[professional_attester].party 1..1 
+* attester[professional_attester].party only Reference(FrPractitionerRoleDocument)
+* attester[professional_attester] ^short = "Professionnel attestant la validité du contenu du document"
 
 * event 1..*
   * obeys comp-2
@@ -75,8 +98,8 @@ Description: "Ce profil est utilisé pour représenter un document médical."
   * code ^slicing.discriminator.path = "coding.code"
   * code ^slicing.rules = #open
 // Code de l’évènement documenté
-  * code contains CodeEvenement 0..1
-  * code[CodeEvenement] ^short = "Code de l’évènement documenté"
+  * code contains codeEvenement 0..1
+  * code[codeEvenement] ^short = "Code de l’évènement documenté"
 
 // translation (obligatoire pour : un CR d’imagerie et un CR d’examen de l’enfant )
   * code contains translation 0..*
@@ -87,12 +110,19 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * event.period ^short = "Date et heure de l’évènement documenté"
 
 * relatesTo 1..*
+* relatesTo ^short = "Document de référence"
 * relatesTo.target[x] only Identifier or Reference(FrCompositionDocument)
 * relatesTo.targetIdentifier.type 1..1
 * relatesTo.targetIdentifier.system 1..1
 * relatesTo.targetIdentifier.value 1..1
 
+* relatesTo[replaced_document] 0..1
+* relatesTo[replaced_document].code = #replaces
+* relatesTo contains transformed_document 0..1 
+* relatesTo[transformed_document].code = #transforms
+
 * custodian 1..1
+* custodian ^short = "Structure chargée de la conservation du document"
 * custodian only Reference(FrOrganizationDocument)
 * encounter 1..1 MS
 * encounter only Reference(FrEncounterDocument)
@@ -104,6 +134,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * section ^slicing.rules = #open
   * ^definition = "La ressource Composition est structurée en différentes sections."
 
+/// INVARIANTS
 Invariant:  comp-1
 Description: "La valeur de l'extension versionNumber doit être un entier."
 Expression:  "value.matches('^1[0-9]{9}$')"
@@ -113,3 +144,8 @@ Invariant: comp-2
 Description: "L'exécutant de l’évènement et la date et heure de l’évènement sont obligatoires dans l'acte principal."
 Severity: #error
 Expression: "detail.exists() implies period.exists()"
+
+Invariant: comp-3
+Description: "La valeur du PractitionerRole.code dans l'extension[party]' doit être 'PROV' ou 'AGNT'."
+Expression: "valueReference.reference.resolve().code.coding.code = 'PROV' or valueReference.reference.resolve().code.coding.code = 'AGNT'"
+Severity: #error

@@ -1,8 +1,8 @@
 // StructureDefinition for EncounterDocument
 Profile: FrEncounterDocument
-Parent: Encounter
+Parent: FRCoreEncounterProfile
 Id: fr-encounter-document
-Title: "FrEncounterDocument"
+Title: "Fr Encounter Document"
 Description: "Ce profil représente l'association du document à une prise en charge."
 * type 0..1
 * type ^short = "Type de prise en charge"
@@ -16,26 +16,24 @@ Description: "Ce profil représente l'association du document à une prise en ch
 * participant ^slicing.discriminator.path = "type"
 * participant ^slicing.rules = #open
 
-// Premier participant : Responsable de la prise en charge : responsibleParty
-* participant contains Responsable 0..1
-* participant[Responsable] ^short = "Responsable de la prise en charge"
-* participant[Responsable].type ^short = "Type de participation"
-* participant[Responsable].type.coding.code = #DIS
-* participant[Responsable].type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
-* participant[Responsable].type.coding.display = "Responsable de la sortie"
-* participant[Responsable].individual 1..1
-* participant[Responsable].individual ^short = "Entité responsable de la prise en charge"
-* participant[Responsable].individual only Reference(FrPractitionerRoleDocument)
+// Responsable de la prise en charge : responsibleParty
+* participant contains responsibleParty 0..1
+* participant[responsibleParty] ^short = "Responsable de la prise en charge"
+* participant[responsibleParty].type ^short = "Type de participation"
+* participant[responsibleParty].type.coding.code = #DIS
+* participant[responsibleParty].type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+* participant[responsibleParty].individual 1..1
+* participant[responsibleParty].individual ^short = "Entité responsable de la prise en charge"
+* participant[responsibleParty].individual only Reference(FrPractitionerRoleDocument)
 
-
-// Deuxième participant : Personne impliquée dans la prise en charge : encounterParticipant
-* participant contains Personne-Impliquee 0..*
-* participant[Personne-Impliquee] ^short = "Personne impliquée dans la prise en charge"
-* participant[Personne-Impliquee].type ^short = "Type de participation"
-* participant[Personne-Impliquee].type.coding from $JDV_J140-EncounterParticipationType-CISIS (required)
-* participant[Personne-Impliquee].individual 1..1
-* participant[Personne-Impliquee].individual ^short = "Professionnel impliqué"
-* participant[Personne-Impliquee].individual only Reference(FrPractitionerRoleDocument)
+// Personne impliquée dans la prise en charge : encounterParticipant
+* participant contains encounterParticipant 0..*
+* participant[encounterParticipant] ^short = "Personne impliquée dans la prise en charge"
+* participant[encounterParticipant].type ^short = "Type de participation"
+* participant[encounterParticipant].type from $JDV_J140-EncounterParticipationType-CISIS (required)
+* participant[encounterParticipant].individual 1..1
+* participant[encounterParticipant].individual ^short = "Professionnel impliqué"
+* participant[encounterParticipant].individual only Reference(FrPractitionerRoleDocument)
 
 * location 1..1 
 * location ^short = "Lieu de la prise en charge"

@@ -1,10 +1,12 @@
 Instance: mappingPatientCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Patient : CDA et FHIR"
-Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
+Title: "Mapping du modèle métier Patient/CDA/FHIR"
+Description: """Ce ConceptMap présente deux groupes de mapping : 
+ - Groupe Mapping 1 : entre le modèle métier du Patient/Usager et l'élément CDA recordTarget
+ - Groupe Mapping 2 : entre l'élément CDA recordTarget et FrPatientDocument en FHIR"""
 
-* name = "Mapping du modèle métier Patient : CDA et FHIR"
+* name = "Mapping du modèle métier Patient/CDA/FHIR"
 * status = #draft
 * experimental = false
 
@@ -30,13 +32,11 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family										
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.noms.nomNaissance										
-* group[=].element[=].target.code = #PrecordTarget.patientRole.patient.name.family										
+* group[=].element[=].target.code = #PrecordTarget.patientRole.patient.name.family@qualifier='BR'									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.family@qualifier = 'BR'"
 * group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.noms.nomUtilise										
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family									
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.family@qualifier = 'CL'"				
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='CL'									
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given										
 * group[=].element[=].target.equivalence = #equivalent	
@@ -44,13 +44,11 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given									
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms.premierPrenom										
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given									
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='BR'									
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.given@qualifier = 'BR'"
 * group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms.prenomUtilise										
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given									
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.given@qualifier = 'CL'"					
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='CL'									
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Patient.sexe								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.administrativeGenderCode									
 * group[=].element[=].target.equivalence = #equivalent	
@@ -130,12 +128,10 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[+].code = #recordTarget.patientRole.patient.name.family										
 * group[=].element[=].target.code = #Patient.name.family										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #recordTarget.patientRole.patient.name.family
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.family@qualifier = 'BR'"
+* group[=].element[+].code = #recordTarget.patientRole.patient.name.family@qualifier='BR'
 * group[=].element[=].target.code = #Patient.name:officialname.family										
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #recordTarget.patientRole.patient.name.family
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.family@qualifier = 'CL'"										
+* group[=].element[+].code = #recordTarget.patientRole.patient.name.family@qualifier='CL'									
 * group[=].element[=].target.code = #Patient.name:usualname.family										
 * group[=].element[=].target.equivalence = #equivalent				
 * group[=].element[+].code = #recordTarget.patientRole.patient.name.given									
@@ -144,12 +140,10 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[+].code = #recordTarget.patientRole.patient.name.given										
 * group[=].element[=].target.code = #Patient.name:officialname.birth-list-given-name									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #recordTarget.patientRole.patient.name.given
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.given@qualifier = 'BR'"										
+* group[=].element[+].code = #recordTarget.patientRole.patient.name.given@qualifier='BR'										
 * group[=].element[=].target.code = #Patient.name:officialname.given									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #recordTarget.patientRole.patient.name.given
-* group[=].element[=].target.comment = "recordTarget.patientRole.patient.name.given@qualifier = 'CL'"										
+* group[=].element[+].code = #recordTarget.patientRole.patient.name.given@qualifier='CL'										
 * group[=].element[=].target.code = #Patient.name:usualname.given									
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #recordTarget.patientRole.patient.administrativeGenderCode								
@@ -170,9 +164,8 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[+].code = #recordTarget.patientRole.patient.sdtc:multipleBirthOrderNumber								
 * group[=].element[=].target.code = #Patient.multipleBirthInteger										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #recordTarget.patientRole.patient.guardian
-* group[=].element[=].target.comment = "Patient.contact.relationship:Role = 'GUARD'" 							
-* group[=].element[=].target.code = #Patient.contact.relationship:Role										
+* group[=].element[+].code = #recordTarget.patientRole.patient.guardian							
+* group[=].element[=].target.code = #Patient.contact.relationship:Role='GUARD'										
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #recordTarget.patientRole.patient.guardian.addr								
 * group[=].element[=].target.code = #Patient.contact.address										
@@ -201,7 +194,6 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[+].code = #recordTarget.patientRole.patient.birthPlace 				
 * group[=].element[=].target.code = #Patient.extension:birthPlace									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * group[=].element[+].code = #recordTarget.patientRole.patient.birthPlace.place				
 * group[=].element[=].target.code = #Patient.extension:birthPlace.value[FRCoreAddressProfile]									
 * group[=].element[=].target.equivalence = #equivalent
@@ -211,4 +203,3 @@ Description: """Mapping du modèle métier Patient entre CDA et FHIR."""
 * group[=].element[+].code = #recordTarget.patientRole.patient.birthPlace.place.country					
 * group[=].element[=].target.code = #Patient.extension:birthPlace.value[FRCoreAddressProfile].extension:inseeCode									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code"

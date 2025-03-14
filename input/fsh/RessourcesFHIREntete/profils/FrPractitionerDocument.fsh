@@ -2,7 +2,7 @@
 Profile: FrPractitionerDocument
 Parent: AsPractitionerProfile
 Id: fr-practitioner-document
-Title: "FrPractitionerDocument"
+Title: "Fr Practitioner Document"
 Description: "Ce profil représente les professionnels de santé."
 * identifier 1..* 
 * name 1..1
@@ -10,7 +10,7 @@ Description: "Ce profil représente les professionnels de santé."
 * name only fr-human-name-document
 
 // slice : ProfessionSavoirFaireRôle
-* qualification contains Profession-SavoirFaire-Rôle 0..1
-* qualification[Profession-SavoirFaire-Rôle].code 1..1
-* qualification[Profession-SavoirFaire-Rôle].code from $JDV_J01-XdsAuthorSpecialty-CISIS (required)
-* qualification[Profession-SavoirFaire-Rôle].code ^short = "Profession / savoir-faire ou rôle"
+* qualification contains professionSavoirFaireRole 0..1
+* qualification[professionSavoirFaireRole].code.coding 1..1
+* qualification[professionSavoirFaireRole].code.coding from $JDV_J01-XdsAuthorSpecialty-CISIS (required)
+* qualification[professionSavoirFaireRole].code.coding ^short = "Profession / savoir-faire ou rôle"

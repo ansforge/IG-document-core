@@ -1,5 +1,4 @@
 // Extensions
-Alias: $composition-version = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 Alias: $qualifier = http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier
 
 // JDV
@@ -13,3 +12,4 @@ Alias: $JDV_J47-FunctionCode-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J47-Func
 Alias: $JDV_J02-XdsHealthcareFacilityTypeCode-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS
 Alias: $TRE_R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $JDV_J140-EncounterParticipationType-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS
+Alias: $JDV_J141-RoleClass-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS

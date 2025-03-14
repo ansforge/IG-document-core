@@ -1,20 +1,20 @@
 // StructureDefinition for LocationDocument
 Profile: FrLocationDocument
-Parent: Location
+Parent: FRCoreLocationProfile
 Id: fr-location-document
-Title: "FrLocationDocument"
+Title: "Fr Location Document"
 Description: "Ce profil représente la structure de prise en charge."
+
 // Slicing : type 
-* type ^slicing.discriminator.type = #value
-* type ^slicing.discriminator.path = "coding.code"
-* type ^slicing.rules = #open
+* type.coding ^slicing.discriminator.type = #value
+* type.coding ^slicing.discriminator.path = "coding.code"
+* type.coding ^slicing.rules = #open
+* type.coding ^short = " Structure de prise en charge : healthCareFacility"
 
-// Secteur d'activité
-* type contains SecteurActivite 1..1
-* type[SecteurActivite] ^short = "Secteur d'activité"
-* type[SecteurActivite].coding from $JDV_J02-XdsHealthcareFacilityTypeCode-CISIS (required)
+* type.coding contains code 1..1
+* type.coding[code] ^short = "Secteur d'activité"
+* type.coding[code].code from $JDV_J02-XdsHealthcareFacilityTypeCode-CISIS (required)
 
-// Catégorie d'établissement
-* type contains CategorieEtablissement 0..1
-* type[CategorieEtablissement] ^short = "Catégorie d'établissement"
-* type[CategorieEtablissement].coding from FRValueSetCategorieEtablissement (required)
+* type.coding contains translation 0..1
+* type.coding[translation] ^short = "Catégorie d'établissement"
+* type.coding[translation].code from FRValueSetCategorieEtablissement (required)

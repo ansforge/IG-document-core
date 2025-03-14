@@ -1,26 +1,16 @@
 Instance: mappingmodelemetierCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping du modèle logique métier de l'en-tête : CDA, FHIR"
-Description: """Mapping entre les éléments du modèle logique métier utilisés en CDA et leurs équivalents en FHIR."""
+Title: "Mapping du modèle logique métier de l'en-tête /CDA / FHIR"
+Description: """Ce ConceptMap présente trois groupes de mapping :
+ - Groupe Mapping 1 : entre le modèle logique métier de l'en-tête et les éléments CDA
+ - Groupe Mapping 2 et Groupe Mapping 3 : entre les éléments CDA et les éléments FHIR"""
 
-* name = "Mapping du modèle logique métier de l'en-tête : CDA, FHIR"
+* name = "Mapping du modèle logique métier de l'en-tête/CDA/FHIR"
 * status = #draft
 * experimental = false
 
-// Mapp : Identifiant unique du document Modèle métier to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document"
-* group[=].element[+].code = #EnteteDocument.identifiantUniqueDocument
-* group[=].element[=].target.code = #Bundle.identifier
-* group[=].element[=].target.equivalence = #equivalent
-// Mapp : Identifiant unique du document CDA to FHIR 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document"
-* group[=].element[+].code = #ClinicalDocument.id
-* group[=].element[=].target.code = #Bundle.identifier
-* group[=].element[=].target.equivalence = #equivalent
-// Groupe Mapping 1 : Modèle métier 2 CDA
+// Groupe Mapping 1 : Modèle métier to CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
 * group[=].element[+].code = #EnteteDocument.identifiantUniqueDocument
@@ -95,7 +85,15 @@ Description: """Mapping entre les éléments du modèle logique métier utilisé
 * group[=].element[+].code = #EnteteDocument.associationPriseEncharge
 * group[=].element[=].target.code = #ClinicalDocument.componentOf
 * group[=].element[=].target.equivalence = #equivalent
-// Groupe Mapping 1 : CDA 2 FHIR
+
+// Groupe Mapping 2 : Identifiant unique du document CDA to FHIR 
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document"
+* group[=].element[+].code = #ClinicalDocument.id
+* group[=].element[=].target.code = #Bundle.identifier
+* group[=].element[=].target.equivalence = #equivalent
+
+// Groupe Mapping 3 : CDA to FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
 * group[=].element[+].code = #ClinicalDocument.templateId
@@ -134,19 +132,19 @@ Description: """Mapping entre les éléments du modèle logique métier utilisé
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole)"	
 * group[=].element[+].code = #ClinicalDocument.dataEnterer
-* group[=].element[=].target.code = #Composition.data-enterer-extension
+* group[=].element[=].target.code = #Composition.DataEntererExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-data-enterer-extension"
 * group[=].element[+].code = #ClinicalDocument.informant
-* group[=].element[=].target.code = #Composition.informant-extension
+* group[=].element[=].target.code = #Composition.extension:InformantExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-informant-extension"
 * group[=].element[+].code = #ClinicalDocument.custodian
 * group[=].element[=].target.code = #Composition.custodian
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(Organization)"
+* group[=].element[=].target.comment = "Composition.custodian.resolve().ofType(Organization)"
 * group[=].element[+].code = #ClinicalDocument.informationRecipient
-* group[=].element[=].target.code = #Composition.information-recipient-extension
+* group[=].element[=].target.code = #Composition.extension:InformationRecipientExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-information-recipient-extension"
 * group[=].element[+].code = #ClinicalDocument.legalAuthenticator
@@ -158,11 +156,11 @@ Description: """Mapping entre les éléments du modèle logique métier utilisé
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "attester.mode = 'professional'"
 * group[=].element[+].code = #ClinicalDocument.participant
-* group[=].element[=].target.code = #Composition.participant-extension
+* group[=].element[=].target.code = #Composition.extension:ParticipantExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-participant-extension"
 * group[=].element[+].code = #ClinicalDocument.inFulfillmentOf
-* group[=].element[=].target.code = #Composition.order-extension
+* group[=].element[=].target.code = #Composition.extension:OrderExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-order-extension"
 * group[=].element[+].code = #ClinicalDocument.documentationOf
@@ -172,7 +170,7 @@ Description: """Mapping entre les éléments du modèle logique métier utilisé
 * group[=].element[=].target.code = #Composition.relatesTo
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ClinicalDocument.authorization
-* group[=].element[=].target.code = #Composition.consent-extension
+* group[=].element[=].target.code = #Composition.extension:ConsentExtension
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-consent-extension"
 * group[=].element[=].target.equivalence = #equivalent
