@@ -73,11 +73,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:birthPlace","Patient.extension","birthPlace","","",0,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-birthPlace]]} {[]}
-","Place of Birth for patient","The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Place of Birth for patient","The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension:birthPlace.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Patient.extension:birthPlace.id","Patient.extension.id","","","",0,1,"","","","id {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
 "Patient.extension:birthPlace.extension","Patient.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -224,7 +224,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.identifier:NDP.assigner","Patient.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper","CX.4 / (CX.4,CX.9,CX.10)"
-"Patient.identifier:PI","Patient.identifier","PI","","",0,1,"","","Y","Identifier {[]} {[]}
+"Patient.identifier:PI","Patient.identifier","PI","","",0,*,"","","Y","Identifier {[]} {[]}
 ","Hospital assigned patient identifier | IPP","An identifier for this patient.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","id",".id","FiveWs.identifier","PID-3"
 "Patient.identifier:PI.id","Patient.identifier.id","","","",0,1,"","","","string {[]} {[]}
@@ -539,7 +539,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a ""fly-in/fly-out"" worker that has the onsite GP also included with his home GP to remain aware of medical issues.
 
 Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.","","","","","","","","",,,,,"",,,,"Patient.generalPractitioner",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","subjectOf.CareEvent.performer.AssignedEntity","n/a","PD1-4"
+pat-gp-1:Le generalPractitioner doit être un PractitionerRole contenant un code[typeCode] fixé à 'INF'. {resolve().code.coding.where(code='INF').exists()}pat-gp-2:Le generalPractitioner doit être un PractitionerRole contenant un un code[functionCode] fixé à 'PCP'. {resolve().code.coding.where(code='PCP').exists()}pat-gp-3:Le generalPractitioner doit être un PractitionerRole contenant un un code[classCode] fixé à 'PROV'. {resolve().code.coding.where(code='PROV').exists()}","subjectOf.CareEvent.performer.AssignedEntity","n/a","PD1-4"
 "Patient.managingOrganization","Patient.managingOrganization","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization]]}
 ","Organization that is the custodian of the patient record","Organization that is the custodian of the patient record.","There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).","Need to know who recognizes this patient record, manages and updates it.","","","","","","","",,,,,"",,,,"Patient.managingOrganization",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","scoper",".providerOrganization"
