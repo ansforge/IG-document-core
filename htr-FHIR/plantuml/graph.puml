@@ -54,7 +54,7 @@ package IG #DDDDDD{
         class DestinatairePrevu{
 
              DestinatairePrevu => [None..None]
-             DestinatairePrevu.Destinataire => [0..*]
+             DestinatairePrevu.destinataire => [0..*]
         } 
 
         class DocumentReference{
@@ -211,8 +211,8 @@ package IG #DDDDDD{
         class Responsable{
 
              Responsable => [None..None]
-             Responsable.dateHeureAttestationValidite => [1..1]
-             Responsable.Responsable => [1..1]
+             Responsable.dateHeureAttestationPriseResponsabilite => [1..1]
+             Responsable.responsable => [1..1]
         } 
 
         class StructureConservation{
@@ -223,7 +223,6 @@ package IG #DDDDDD{
              StructureConservation.structure.nomStructure => [0..1]
              StructureConservation.structure.adresse => [0..*]
              StructureConservation.structure.coordonneesTelecom => [0..*]
-             StructureConservation.structure.secteurActivite => [0..1]
         } 
 
         class Systeme{
@@ -246,7 +245,7 @@ package IG #DDDDDD{
 
              Validateur => [None..None]
              Validateur.dateHeureAttestationValidite => [1..1]
-             Validateur.Validateur => [1..1]
+             Validateur.validateur => [1..1]
         } 
 
         class FrBundleDocument{
@@ -254,7 +253,7 @@ package IG #DDDDDD{
              Bundle.identifier => [1..None]
              Bundle.type => [None..None]
              Bundle.timestamp => [1..None]
-             Bundle.entry => [9..None]
+             Bundle.entry => [8..None]
              Bundle.entry.fullUrl => [1..None]
              Bundle.entry:composition => [1..1]
              Bundle.entry:composition.resource => [None..None]
@@ -266,7 +265,7 @@ package IG #DDDDDD{
              Bundle.entry:practitioner.resource => [None..None]
              Bundle.entry:organization => [1..*]
              Bundle.entry:organization.resource => [None..None]
-             Bundle.entry:device => [1..*]
+             Bundle.entry:device => [0..1]
              Bundle.entry:device.resource => [None..None]
              Bundle.entry:encounter => [1..*]
              Bundle.entry:encounter.resource => [None..None]
@@ -1001,11 +1000,13 @@ package IG #DDDDDD{
 
         class FrPatientFHIRDocument{
 
-             Patient.name => [None..None]
-             Patient.name.family.extension => [1..None]
-             Patient.name.family.extension:qualifier-family => <&plus>[1..1]
-             Patient.name.given.extension => [None..None]
-             Patient.name.given.extension:qualifier-given => <&plus>[0..1]
+             Patient.name:usualName => [None..None]
+             Patient.name:usualName.family => [None..None]
+             Patient.name:usualName.given => [None..1]
+             Patient.name:officialName => [None..None]
+             Patient.name:officialName.extension:birth-list-given-name => <&plus>[None..None]
+             Patient.name:officialName.family => [None..None]
+             Patient.name:officialName.given => [None..None]
              Patient.contact.relationship:Role => [None..None]
              Patient.contact.relationship:RelationType => [None..None]
              Patient.contact.name => [1..None]
@@ -1016,8 +1017,8 @@ package IG #DDDDDD{
 
              Practitioner.identifier => [1..None]
              Practitioner.name => [1..1]
-             Practitioner.qualification:professionSavoirFaireRole => [0..1]
-             Practitioner.qualification:professionSavoirFaireRole.code.coding => [1..1]
+             Practitioner.qualification:savoirFaire => [None..None]
+             Practitioner.qualification:savoirFaire.code.coding:savoirFaire => [None..None]
         } 
 
         class FrPractitionerRoleDocument{
@@ -1066,6 +1067,10 @@ package IG #DDDDDD{
         class FRValueSetPatientContactRole  
 
      FrPatientFHIRDocument -[#black,dotted,thickness=2]-> FRValueSetPatientContactRole
+
+        class FRValueSetSavoirFaireRole  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireRole
        }
 
 package "Ressources de base" #palegreen {
@@ -1310,9 +1315,9 @@ package "Ressources de base" #palegreen {
 
     class02104d9d29574b85b8bdd491de969f0d --> FrOrganizationDocument
 
- class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" as  classcb72a5551de902d7716887df67489a97 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins" as  class4183c8825d56dc7b36e75f7f711f8b6b 
 
-    classcb72a5551de902d7716887df67489a97 --> FrPatientFHIRDocument
+    class4183c8825d56dc7b36e75f7f711f8b6b --> FrPatientFHIRDocument
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner" as  class8e95a74d3099b6c1bdd4ef690920bb75 
 

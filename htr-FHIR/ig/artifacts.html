@@ -265,7 +265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#2">Eléments CDA</a>
       </li>
       <li>
-         <a href="#3">Ressources FHIR</a>
+         <a href="#3">Profils FHIR</a>
       </li>
       <li>
          <a href="#4">Data Type Profiles</a>
@@ -794,7 +794,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
       </tbody>
    </table>
    <a name="3"> </a>
-   <h3>Ressources FHIR </h3>
+   <h3>Profils FHIR </h3>
     
 <table class="grid">
       <col style="width:20%"/>
@@ -823,7 +823,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
                   title="StructureDefinition/fr-device-document">Fr Device Document</a>
             </td>
             <td>
-<p>Ce profil représente un système.</p>
+<p>Ce profil représente le système auteur du document.</p>
 </td>
          </tr>
          <tr>
@@ -856,7 +856,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-patient-fhir-document.html"
-                  title="StructureDefinition/fr-patient-fhir-document">Fr PatientFHIR Document</a>
+                  title="StructureDefinition/fr-patient-fhir-document">Fr Patient FHIR Document</a>
             </td>
             <td>
 <p>Ce profil représente le patient concerné par le document.</p>
@@ -900,7 +900,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-fr-human-name-document.html"
-                  title="StructureDefinition/fr-human-name-document">HumanNameDocument</a>
+                  title="StructureDefinition/fr-human-name-document">Human Name Document</a>
             </td>
             <td>
 <p>Ce profil représente le nom du professionnel de santé.</p>
@@ -939,8 +939,35 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
             <td>
 <p>Ce ConceptMap présente trois groupes de mapping :</p>
 <ul>
-  <li>Groupe Mapping 1 : entre le modèle logique métier de l’en-tête et les éléments CDA</li>
-  <li>Groupe Mapping 2 et Groupe Mapping 3 : entre les éléments CDA et les éléments FHIR</li>
+  <li>Groupe Mapping 1 : entre le modèle logique métier de l’en-tête et l’élément CDA clinicalDocument</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA clinicalDocument et le profil FHIR FrBundleDocument</li>
+  <li>Groupe Mapping 3 : entre l’élément CDA clinicalDocument et le profil FHIR FrCompositionDocument</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingAssociationPrescriptionCDAFHIR.html"
+                  title="ConceptMap/mappingAssociationPrescriptionCDAFHIR">Mapping du modèle métier AssociationPrescription/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de l’association du document à une prescription et l’élément CDA inFulfillmentOf</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA inFulfillmentOf et l’extension FHIR OrderExtension</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingAssociationPriseEnchargeCDAFHIR.html"
+                  title="ConceptMap/mappingAssociationPriseEnchargeCDAFHIR">Mapping du modèle métier AssociationPriseEncharge/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de l’association du document à une prise en charge et l’élément CDA componentOf</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA componentOf et l’élément FHIR Composition.encounter(Encounter)</li>
 </ul>
 </td>
          </tr>
@@ -953,7 +980,59 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
   <li>Groupe Mapping 1 : entre le modèle métier de l’auteur et l’élément CDA author</li>
-  <li>Groupe Mapping 2 : entre l’élément CDA author et Composition.author en FHIR</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA author et l’élément FHIR Composition.author</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingConsentementCDAFHIR.html"
+                  title="ConceptMap/mappingConsentementCDAFHIR">Mapping du modèle métier Consentement/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du consentement associé au document et l’élément CDA authorization</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA authorization et l’extension FHIR ConsentExtension</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingDestinatairePrevuCDAFHIR.html"
+                  title="ConceptMap/mappingDestinatairePrevuCDAFHIR">Mapping du modèle métier DestinatairePrevu/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du destinataire prévu du document et l’élément CDA informationRecipient</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA informationRecipient et l’extension FHIR InformationRecipientExtension</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingDocumentReferenceCDAFHIR.html"
+                  title="ConceptMap/mappingDocumentReferenceCDAFHIR">Mapping du modèle métier DocumentReference/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du document de référence et l’élément CDA relatedDocument</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA relatedDocument et l’élément FHIR Composition.relatesTo</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingEvenementCDAFHIR.html"
+                  title="ConceptMap/mappingEvenementCDAFHIR">Mapping du modèle métier Evenement/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier Evenement et l’élément CDA documentationOf</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA documentationOf et l’élément FHIR Composition.event</li>
 </ul>
 </td>
          </tr>
@@ -966,20 +1045,33 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
   <li>Groupe Mapping 1 : entre le modèle métier de l’informateur et l’élément CDA informant</li>
-  <li>Groupe Mapping 2 : entre l’élément CDA informant et InformantExtension en FHIR</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA informant et l’extension FHIR InformantExtension</li>
 </ul>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
                <a href="ConceptMap-mappingOperateurSaisieCDAFHIR.html"
-                  title="ConceptMap/mappingOperateurSaisieCDAFHIR">Mapping du modèle métier Opérateur de saisie : CDA et FHIR</a>
+                  title="ConceptMap/mappingOperateurSaisieCDAFHIR">Mapping du modèle métier Opérateur de saisie/CDA/FHIR</a>
             </td>
             <td>
 <p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-  <li>Groupe Mapping 1 : entre le modèle logique métier de l’opérateur de saisieet et l’élément CDA dataEnterer</li>
-  <li>Groupe Mapping 2 : entre l’élément CDA dataEnterer et DataEntererExtension en FHIR</li>
+  <li>Groupe Mapping 1 : entre le modèle logique métier de l’opérateur de saisie et l’élément CDA dataEnterer</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA dataEnterer et l’extension FHIR DataEntererExtension</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingParticipantCDAFHIR.html"
+                  title="ConceptMap/mappingParticipantCDAFHIR">Mapping du modèle métier Participant/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du participant et l’élément CDA participant</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA participant et l’extension FHIR ParticipantExtension</li>
 </ul>
 </td>
          </tr>
@@ -992,7 +1084,99 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
   <li>Groupe Mapping 1 : entre le modèle métier du Patient/Usager et l’élément CDA recordTarget</li>
-  <li>Groupe Mapping 2 : entre l’élément CDA recordTarget et FrPatientDocument en FHIR</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA recordTarget et le profil FHIR FrPatientDocument</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureAssignedEntityFHIR">Mapping du modèle métier PersonneStructure/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure et l’élément CDA assignedEntity</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA assignedEntity et le profil FHIR FrPractitionerRoleDocument</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureRelatedEntityFHIR">Mapping du modèle métier PersonneStructure/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure et l’élément CDA relatedEntity</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA relatedEntity et le profil FHIR FrRelatedPersonDocument</li>
+  <li>Groupe Mapping 3 : entre l’élément CDA relatedEntity et l’élément FHIR Patient.contact</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureAuteurFHIR">Mapping du modèle métier PersonneStructureAuteur/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure (Auteur) et l’élément CDA assignedAuthor</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA assignedAuthor et le profil FHIR FrPractitionerRoleDocument</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingResponsableCDAFHIR.html"
+                  title="ConceptMap/mappingResponsableCDAFHIR">Mapping du modèle métier Responsable/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du responsable du document et l’élément CDA legalAuthenticator</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA legalAuthenticator et l’élément FHIR Composition.attester</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingStructureConservationCDAFHIR.html"
+                  title="ConceptMap/mappingStructureConservationCDAFHIR">Mapping du modèle métier StructureConservation/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier de la structure chargée de la conservation du document et l’élément CDA custodian</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA custodian et l’élément FHIR Composition.custodian</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingSystemeFHIR.html"
+                  title="ConceptMap/mappingSystemeFHIR">Mapping du modèle métier Systeme/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du systeme et l’élément CDA assignedAuthor</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA assignedAuthor et le profil FHIR FrDeviceDocument</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingValidateurCDAFHIR.html"
+                  title="ConceptMap/mappingValidateurCDAFHIR">Mapping du modèle métier Validateur/CDA/FHIR</a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Groupe Mapping 1 : entre le modèle métier du validateur du document et l’élément CDA authenticator</li>
+  <li>Groupe Mapping 2 : entre l’élément CDA authenticator et l’élément FHIR Composition.attester</li>
 </ul>
 </td>
          </tr>
@@ -1040,6 +1224,15 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 <p>Catégorie d’établissement</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-fr-doc-vs-savoir-faire-role.html"
+                  title="ValueSet/fr-doc-vs-savoir-faire-role">Fr ValueSet Savoir-faire / Role</a>
+            </td>
+            <td>
+<p>Savoir-faire / rôle</p>
+</td>
+         </tr>
       </tbody>
    </table>
 </div>
@@ -1082,7 +1275,7 @@ L’occurrence de documentationOf/serviceEvent contenant les données de l’év
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 14, 2025 15:48+0000">2025-03-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 25, 2025 13:53+0000">2025-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

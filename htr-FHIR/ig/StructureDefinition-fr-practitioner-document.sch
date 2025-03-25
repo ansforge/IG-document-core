@@ -69,11 +69,4 @@
       <sch:assert test="count(f:extension[@url = 'academicYear']) &lt;= 1">extension with URL = 'academicYear': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:Practitioner/f:qualification/f:code</sch:title>
-    <sch:rule context="f:Practitioner/f:qualification/f:code">
-      <sch:assert test="count(f:coding) &gt;= 1">coding: minimum cardinality of 'coding' is 1</sch:assert>
-      <sch:assert test="count(f:coding) &lt;= 1">coding: maximum cardinality of 'coding' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
 </sch:schema>

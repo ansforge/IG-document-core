@@ -317,7 +317,7 @@
         
           Draft
           
-            as of 2025-03-14
+            as of 2025-03-25
           
         
       </td>
@@ -410,11 +410,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>Diplome.dateDebut</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>Diplome.dateFin</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issuer</td><td>Diplome.lieuFormation</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (exercicePro)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (savoirFaire)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (professionSavoirFaireRole)</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>Diplome.numeroDiplome</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>Diplome.codeDiplome</td> </tr>
 </table>
 <a name="as-practitioner-role-to-mos-professionnel"> </a><h3>Mappings for AsPractitionerProfile to MOS - Professionnel (https://mos.esante.gouv.fr)</h3><table class="grid">
  <tr><td colspan="3"><b>FrPractitionerDocument</b></td></tr>
@@ -601,10 +596,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>DR.1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>DR.2</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (professionSavoirFaireRole)</td><td>CER?</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;communication</td><td>PID-15, NK1-20, LAN-2</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
@@ -824,18 +815,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start</td><td>./low</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end</td><td>./high</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issuer</td><td>.playingEntity.playingRole[classCode=QUAL].scoper</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (professionSavoirFaireRole)</td><td>.playingEntity.playingRole[classCode=QUAL].code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.playingEntity.playingRole[classCode=QUAL].id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>.playingEntity.playingRole[classCode=QUAL].code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>.playingEntity.playingRole[classCode=QUAL].effectiveTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issuer</td><td>.playingEntity.playingRole[classCode=QUAL].scoper</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;communication</td><td>./languageCommunication</td> </tr>
 </table>
 <a name="servd"> </a><h3>Mappings for ServD (<a href="http://www.omg.org/spec/ServD/1.0/">http://www.omg.org/spec/ServD/1.0/</a>)</h3><table class="grid">
@@ -878,9 +857,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./Qualifications.Value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./Qualifications.StartDate and ./Qualifications.EndDate</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;qualification (savoirFaire)</td><td>./Qualifications</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./Qualifications.Value</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./Qualifications.StartDate and ./Qualifications.EndDate</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;qualification (professionSavoirFaireRole)</td><td>./Qualifications</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>./Qualifications.Value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td>./Qualifications.StartDate and ./Qualifications.EndDate</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;communication</td><td>./Languages.LanguageSpokenCode</td> </tr>
@@ -941,7 +917,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 14, 2025 15:48+0000">2025-03-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 25, 2025 13:53+0000">2025-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
