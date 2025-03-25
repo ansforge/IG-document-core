@@ -93,17 +93,18 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 
 * event 1..*
   * obeys comp-2
-// Slicing : code
+
+// Slicing : Code de l’évènement documenté
   * code ^slicing.discriminator.type = #value
   * code ^slicing.discriminator.path = "coding.code"
   * code ^slicing.rules = #open
-// Code de l’évènement documenté
+
   * code contains codeEvenement 0..1
   * code[codeEvenement] ^short = "Code de l’évènement documenté"
-
-// translation (obligatoire pour : un CR d’imagerie et un CR d’examen de l’enfant )
+  
+  // Slicing : Translation
   * code contains translation 0..*
-  * code[translation] ^short = "translation : obligatoire pour : un CR d’imagerie et un CR d’examen de l’enfant"
+  * code[translation] ^short = "translation : un ensemble d’équivalents de l'élément 'code' dans d’autres terminologies"
 
 * event.detail 0..1
 * event.detail only Reference(FrPractitionerRoleDocument)
@@ -118,6 +119,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 
 * relatesTo[replaced_document] 0..1
 * relatesTo[replaced_document].code = #replaces
+
 * relatesTo contains transformed_document 0..1 
 * relatesTo[transformed_document].code = #transforms
 
@@ -147,5 +149,5 @@ Expression: "detail.exists() implies period.exists()"
 
 Invariant: comp-3
 Description: "La valeur du PractitionerRole.code dans l'extension[party]' doit être 'PROV' ou 'AGNT'."
-Expression: "valueReference.reference.resolve().code.coding.code = 'PROV' or valueReference.reference.resolve().code.coding.code = 'AGNT'"
+Expression: "value.resolve().code.coding.code.contains('PROV') or value.resolve().code.coding.code.contains('AGNT')"
 Severity: #error

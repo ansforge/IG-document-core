@@ -1,0 +1,69 @@
+Instance: mappingEvenementCDAFHIR					
+InstanceOf: ConceptMap					
+Usage: #definition					
+Title: "Mapping du modèle métier Evenement/CDA/FHIR"
+Description: """Ce ConceptMap présente deux groupes de mapping : 
+ - Groupe Mapping 1 : entre le modèle métier Evenement et l'élément CDA documentationOf
+ - Groupe Mapping 2 : entre l'élément CDA documentationOf et l'élément FHIR Composition.event"""
+
+* name = "Mapping du modèle métier Evenement/CDA/FHIR"
+* status = #draft
+* experimental = false
+
+// Groupe Mapping 1 : modèle métier to CDA
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of"									
+* group[=].element[+].code = #Evenement								
+* group[=].element[=].target.code = #documentationOf
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.identifiantEvenement						
+* group[=].element[=].target.code = #documentationOf.serviceEvent.id
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.codeEvenement							
+* group[=].element[=].target.code = #documentationOf.serviceEvent.code
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.dateHeureEvenement							
+* group[=].element[=].target.code = #documentationOf.serviceEvent.effectiveTime
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.executantEvenement							
+* group[=].element[=].target.code = #documentationOf.serviceEvent.performer@typeCode="PRF"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.executantEvenement.roleFonctionnel							
+* group[=].element[=].target.code = #documentationOf.serviceEvent.performer.functionCode
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.executantEvenement.dateHeureParticipation								
+* group[=].element[=].target.code = #documentationOf.serviceEvent.performer.time
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Evenement.executantEvenement.executant							
+* group[=].element[=].target.code = #documentationOf.serviceEvent.performer.assignedEntity
+* group[=].element[=].target.equivalence = #equivalent
+
+// Groupe Mapping 2 : CDA to FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"									
+* group[=].element[+].code = #documentationOf								
+* group[=].element[=].target.code = #Composition.event
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #documentationOf.serviceEvent.id										
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "Cette donnée est fournie dans un autre élément : Composition.relatesTo"		
+* group[=].element[+].code = #documentationOf.serviceEvent.code							
+* group[=].element[=].target.code = #Composition.event.code
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #documentationOf.serviceEvent.effectiveTime						
+* group[=].element[=].target.code = #Composition.event.period
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #documentationOf.serviceEvent.performer@typeCode="PRF"							
+* group[=].element[=].target.code = #Composition.event.detail
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Composition.event.detail.resolve().ofType(PractitionerRole)"
+* group[=].element[+].code = #documentationOf.serviceEvent.performer.functionCode							
+* group[=].element[=].target.code = #Composition.event.detail.PractitionerRole.code
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #documentationOf.serviceEvent.performer.time								
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "Mapped in Composition.event.period "	
+* group[=].element[+].code = #documentationOf.serviceEvent.performer.assignedEntity							
+* group[=].element[=].target.code = #Composition.event.detail.PractitionerRole.Practitioner
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Composition.event.detail.resolve().ofType(PractitionerRole).Practitioner.resolve()"

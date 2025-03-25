@@ -3,7 +3,7 @@ Profile: FrDeviceDocument
 Parent: Device
 Id: fr-device-document
 Title: "Fr Device Document"
-Description: "Ce profil représente un système."
+Description: "Ce profil représente le système auteur du document."
 * identifier 1..*
 * type ^short = "Profession / savoir-faire ou rôle"
 * type from $JDV_J01-XdsAuthorSpecialty-CISIS (required)

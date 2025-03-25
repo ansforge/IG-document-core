@@ -26,6 +26,7 @@ Description: "Ce profil représente l'association du document à une prise en ch
 * participant[responsibleParty].individual ^short = "Entité responsable de la prise en charge"
 * participant[responsibleParty].individual only Reference(FrPractitionerRoleDocument)
 
+
 // Personne impliquée dans la prise en charge : encounterParticipant
 * participant contains encounterParticipant 0..*
 * participant[encounterParticipant] ^short = "Personne impliquée dans la prise en charge"

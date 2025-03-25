@@ -4,6 +4,7 @@ Invariant:  bdle-document-1
 Description: "Un Bundle DOIT inclure une et une seule ressource Composition."
 Expression: "entry.resource.ofType(Composition).count() = 1"
 Severity:    #error
+
 // PROFILE
 Profile: FrBundleDocument
 Parent: Bundle
@@ -14,7 +15,7 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 * . ^definition = "Bundle Document."
 * obeys bdle-document-1
 * identifier 1..
-* type = #document (exactly)
+* type = #document
 * timestamp 1..1
 
 * entry MS
@@ -50,7 +51,7 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 * entry[organization].resource only FrOrganizationDocument
 
 // Définition de l'entrée device
-* entry contains device 1..*
+* entry contains device 0..1
 * entry[device].resource only FrDeviceDocument
 
 // Définition de l'entrée encounter

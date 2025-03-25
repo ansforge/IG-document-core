@@ -9,8 +9,6 @@ Description: "Ce profil représente les professionnels de santé."
 * name ^short = "Identité de la personne physique" 
 * name only fr-human-name-document
 
-// slice : ProfessionSavoirFaireRôle
-* qualification contains professionSavoirFaireRole 0..1
-* qualification[professionSavoirFaireRole].code.coding 1..1
-* qualification[professionSavoirFaireRole].code.coding from $JDV_J01-XdsAuthorSpecialty-CISIS (required)
-* qualification[professionSavoirFaireRole].code.coding ^short = "Profession / savoir-faire ou rôle"
+// Savoir-faire / rôle
+* qualification[savoirFaire].code.coding[savoirFaire] ^definition = " Savoir-faire / rôle"
+* qualification[savoirFaire].code.coding[savoirFaire] from FRValueSetSavoirFaireRole (required)

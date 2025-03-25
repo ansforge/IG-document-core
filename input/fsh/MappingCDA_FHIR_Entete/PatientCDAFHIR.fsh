@@ -4,13 +4,13 @@ Usage: #definition
 Title: "Mapping du modèle métier Patient/CDA/FHIR"
 Description: """Ce ConceptMap présente deux groupes de mapping : 
  - Groupe Mapping 1 : entre le modèle métier du Patient/Usager et l'élément CDA recordTarget
- - Groupe Mapping 2 : entre l'élément CDA recordTarget et FrPatientDocument en FHIR"""
+ - Groupe Mapping 2 : entre l'élément CDA recordTarget et le profil FHIR FrPatientDocument"""
 
 * name = "Mapping du modèle métier Patient/CDA/FHIR"
 * status = #draft
 * experimental = false
 
-// Mapping modèle métier / FHIR
+// Groupe Mapping 1 : modèle métier to CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target"									
 * group[=].element[+].code = #Patient								
@@ -107,7 +107,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place.country										
 * group[=].element[=].target.equivalence = #equivalent
 
-// Mapping CDA/FHIR
+// Groupe Mapping 2 : CDA to FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document"									
 * group[=].element[+].code = #recordTarget.patientRole							

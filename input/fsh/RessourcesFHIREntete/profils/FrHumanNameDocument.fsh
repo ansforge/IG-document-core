@@ -2,7 +2,7 @@
 Profile: HumanNameDocument
 Parent: FRCoreHumanNameProfile
 Id: fr-human-name-document
-Title: "HumanNameDocument"
+Title: "Human Name Document"
 Description: "Ce profil représente le nom du professionnel de santé."
 * family 1..1
 * given 0..1

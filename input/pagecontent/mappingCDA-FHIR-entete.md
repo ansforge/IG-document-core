@@ -1,5 +1,5 @@
 
-Liste des ConceptMap décrivant la correspondance entre les éléments du modèle métier, du CDA, de FHIR et des ValueSets.
+Liste des ConceptMap détaillant le mapping entre les éléments du modèle métier, du CDA et de FHIR.
 
 {% sql {
     "query" : " select name as Name, Description, Web from Resources WHERE Type = 'ConceptMap' and Description like 'Ce ConceptMap%' ",
