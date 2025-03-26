@@ -9,5 +9,5 @@ Description: "Représente le responsable du document, qui est :
  - soit le SNR responsable du document produit via ce SNR. 
  - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit" 
 Characteristics: #can-be-target
-* dateHeureAttestationValidite 1..1 dateTime "Date/Heure de la prise de responsabilité."		 			 			 		
-* Responsable 1..1 PersonneStructure "Responsable du document."		 		
+* dateHeureAttestationPriseResponsabilite 1..1 dateTime "Date/Heure de la prise de responsabilité."		 			 			 		
+* responsable 1..1 PersonneStructure "Responsable du document."		 		
