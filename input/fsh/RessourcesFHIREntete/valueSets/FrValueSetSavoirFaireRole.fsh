@@ -1,7 +1,7 @@
 ValueSet: FRValueSetSavoirFaireRole
 Id: fr-doc-vs-savoir-faire-role
 Title: "Fr ValueSet Savoir-faire / Role"
-Description: " Savoir-faire / rôle"
+Description: "Savoir-faire / rôle"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 
 * include codes from system $TRE_G13-OrientationParticuliere
