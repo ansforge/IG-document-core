@@ -1018,7 +1018,24 @@ package IG #DDDDDD{
              Practitioner.identifier => [1..None]
              Practitioner.name => [1..1]
              Practitioner.qualification:savoirFaire => [None..None]
-             Practitioner.qualification:savoirFaire.code.coding:savoirFaire => [None..None]
+             Practitioner.qualification:savoirFaire/professionMedecin => [0..1]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:role => [0..1]
+             Practitioner.qualification:role.code.coding => [None..None]
         } 
 
         class FrPractitionerRoleDocument{
@@ -1068,9 +1085,41 @@ package IG #DDDDDD{
 
      FrPatientFHIRDocument -[#black,dotted,thickness=2]-> FRValueSetPatientContactRole
 
-        class FRValueSetSavoirFaireRole  
+        class FRValueSetSavoirFaireProfessionMedecin  
 
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireRole
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionMedecin
+
+        class FRValueSetTypeSavoirFaireProfessionMedecin  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionMedecin
+
+        class FRValueSetSavoirFaireProfessionPharmacien  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionPharmacien
+
+        class FRValueSetTypeSavoirFaireProfessionPharmacien  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionPharmacien
+
+        class FRValueSetSavoirFaireProfessionChirurgienDentiste  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionChirurgienDentiste
+
+        class FRValueSetTypeSavoirFaireProfessionChirurgienDentiste  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionChirurgienDentiste
+
+        class FRValueSetSavoirFaireProfessionInfirmier  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionInfirmier
+
+        class FRValueSetTypeSavoirFaireProfessionInfirmier  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionInfirmier
+
+        class FRValueSetRolePriseCharge  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetRolePriseCharge
        }
 
 package "Ressources de base" #palegreen {
