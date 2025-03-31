@@ -27,3 +27,4 @@ Alias: $TRE_R45-FonctionQualifiee = https://mos.esante.gouv.fr/NOS/TRE_R45-Fonct
 Alias: $TRE_R97-DroitExerciceCompl = https://mos.esante.gouv.fr/NOS/TRE_R97-DroitExerciceCompl/FHIR/TRE-R97-DroitExerciceCompl
 Alias: $TRE_G05-SousSectionTableauCNOP = https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP
 Alias: $TRE_R85-RolePriseCharge = https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge
+Alias: $TRE_R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
