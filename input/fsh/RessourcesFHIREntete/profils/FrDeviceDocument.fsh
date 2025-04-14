@@ -1,6 +1,6 @@
 // StructureDefinition for DeviceDocument
 Profile: FrDeviceDocument
-Parent: Device
+Parent: AsDeviceProfile
 Id: fr-device-document
 Title: "Fr Device Document"
 Description: "Ce profil représente le système auteur du document."

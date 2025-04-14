@@ -4,8 +4,7 @@ Parent: clinical-document-composition
 Id: fr-composition-document
 Title: "Fr Composition Document"
 Description: "Ce profil est utilisé pour représenter un document médical."
-* . ^short = "Clinical document"
-* . ^definition = "Clinical document."
+
 //Composition.meta.profile : templateId
 * meta.profile ^slicing.discriminator.type = #value
 * meta.profile ^slicing.discriminator.path = "$this"

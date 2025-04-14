@@ -11,8 +11,6 @@ Parent: Bundle
 Id: fr-bundle-document
 Title: "Fr Bundle Document"
 Description: "Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document."
-* . ^short = "Bundle Document"
-* . ^definition = "Bundle Document."
 * obeys bdle-document-1
 * identifier 1..
 * type = #document
@@ -63,5 +61,5 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 * entry[location].resource only FrLocationDocument
 
 // Définition de l'entrée relatedPerson
-* entry contains  relatedPerson 1..*
+* entry contains  relatedPerson 0..*
 * entry[relatedPerson].resource only FrRelatedPersonDocument
