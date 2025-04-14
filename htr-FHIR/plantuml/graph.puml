@@ -253,7 +253,7 @@ package IG #DDDDDD{
              Bundle.identifier => [1..None]
              Bundle.type => [None..None]
              Bundle.timestamp => [1..None]
-             Bundle.entry => [8..None]
+             Bundle.entry => [7..None]
              Bundle.entry.fullUrl => [1..None]
              Bundle.entry:composition => [1..1]
              Bundle.entry:composition.resource => [None..None]
@@ -271,13 +271,12 @@ package IG #DDDDDD{
              Bundle.entry:encounter.resource => [None..None]
              Bundle.entry:location => [1..*]
              Bundle.entry:location.resource => [None..None]
-             Bundle.entry:relatedPerson => [1..*]
+             Bundle.entry:relatedPerson => [0..*]
              Bundle.entry:relatedPerson.resource => [None..None]
         } 
 
         class FrCompositionDocument{
 
-             Composition => [None..None]
              Composition.meta.profile => [None..None]
              Composition.meta.profile:canonical => [0..1]
              Composition.extension => [1..None]
@@ -1344,9 +1343,9 @@ package "Ressources de base" #palegreen {
 
     class21fc45b6eacaebf264ceab7c3130a980 --> FrServiceEvent
 
- class "Device" as  classe0ac20adce6ffee48c7151b070aa5737 
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-device" as  class258a7cfbd366b829153b76133f2929f3 
 
-    classe0ac20adce6ffee48c7151b070aa5737 --> FrDeviceDocument
+    class258a7cfbd366b829153b76133f2929f3 --> FrDeviceDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" as  class67c94c9a57029ce118810d8d7e718509 
 
