@@ -1,0 +1,160 @@
+# Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
+
+id: ans.document.fr.core
+canonical: https://interop.esante.gouv.fr/ig/document/core # the last part of canonical and id must be the same
+name: ExampleIG # Should be an acronym
+title: ANS IG document core
+publisher:
+  name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
+  url: https://esante.gouv.fr
+status: draft
+version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build # le release label doit être conforme au cycle de vie de la doctrine du ci-sis
+jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
+
+parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
+  shownav: 'true'
+
+dependencies:
+    hl7.cda.uv.core: 2.0.0-sd
+    ans.fr.nos: 1.4.0
+    hl7.fhir.fr.core: 2.1.0
+    hl7.fhir.extensions.r5: 4.0.1
+  
+pages:
+    index.md:
+        title: Accueil
+    structureGenerale.md:
+        title: Structure générale document
+        introduction.md:
+            title: Introduction
+        exigencesSpecifiques.md:
+            title: Exigences spécifiques
+        ressourcesCDA-struc-gen.md:
+            title: CDA
+        ressourcesFHIR-struc-gen.md:
+            title: FHIR
+        mappingCDA-FHIR-struc-gen.md:
+            title: Mapping CDA / FHIR
+    enteteDocument.md: 
+        title: Entête document
+        ressourcesCDA-entete.md:
+            title: CDA
+        ressourcesFHIR-entete.md:
+            title: FHIR
+        mappingCDA-FHIR-entete.md:
+            title: Mapping CDA / FHIR
+    corpsDocument.md:
+        title: Corps d'un document  
+        modelesLogiquesMetier-corps.md:
+            title: Modèle logique métier
+        ressourcesCDA-corps.md:
+            title: CDA
+        ressourcesFHIR-corps.md:
+            title: FHIR
+        mappingCDA-FHIR-corps.md:
+            title: Mapping CDA / FHIR
+    autres_ressources.md:
+        title: Autres Ressources
+        securite.md:
+            title: Sécurité
+        downloads.md:
+            title: Téléchargements et usages      
+
+menu:
+    Accueil: index.html
+    Structure générale document:
+        Introduction: introduction.html
+        Exigences spécifiques: exigencesSpecifiques.html
+        CDA: ressourcesCDA-struc-gen.html
+        FHIR: ressourcesFHIR-struc-gen.html
+        Mapping CDA / FHIR: mappingCDA-FHIR-struc-gen.html
+    Entête document:
+        Modèle logique métier: StructureDefinition-EnteteDocument.html
+        CDA: ressourcesCDA-entete.html
+        FHIR: ressourcesFHIR-entete.html
+        Mapping CDA / FHIR: mappingCDA-FHIR-entete.html
+    Corps d'un document:
+        Modèle logique métier: modelesLogiquesMetier-corps.html
+        CDA: ressourcesCDA-corps.html
+        FHIR: ressourcesFHIR-corps.html
+        Mapping CDA / FHIR: mappingCDA-FHIR-corps.html
+    Ressources de conformité: artifacts.html
+    Autres ressources:
+        "Espace de publication du CI-SIS" : new-tab https://esante.gouv.fr/offres-services/ci-sis/espace-publication
+        "Serveur Multi-terminologies": new-tab https://smt.esante.gouv.fr/
+        "Serveur Multi-terminologies / FHIR": new-tab https://smt.esante.gouv.fr/fhir
+        "IG terminologies et jeux de valeurs du CI-SIS": new-tab https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html 
+        "Espace de tests du CI-SIS": new-tab https://interop.esante.gouv.fr/
+        "testContenuCDA": new-tab https://github.com/ansforge/TestContenuCDA-3-0
+        Sécurité: securite.html
+        "Standard CDA": new-tab https://hl7.org/cda/stds/online-navigation/index.html
+        "Standard FHIR": new-tab https://hl7.org/fhir/R4/index.html
+        "Documentation des guides d'implémentation de l'ANS": new-tab https://interop.esante.gouv.fr/ig/documentation/index.html 
+        Téléchargements et usage: downloads.html
+        
+groups:
+  Modèles logiques:
+    name: Modèle logique métier
+    #description: Modèle logique métier
+    resources:
+      - EnteteDocument	
+      - Patient
+      - Auteur
+      - PersonneStructure
+      - PersonneStructureAuteur
+      - Systeme
+      - Informateur
+      - StructureConservation
+      - DestinatairePrevu
+      - Responsable
+      - Validateur
+      - OperateurSaisie
+      - Participant
+      - AssociationPrescription
+      - Evenement
+      - DocumentReference
+      - Consentement
+      - AssociationPriseEncharge
+
+  Ressources CDA:
+    name: Eléments CDA
+    #description: Profils CDA
+    resources:
+      - StructureDefinition/fr-core-clinical-document
+      - StructureDefinition/fr-core-assigned-entity
+      - StructureDefinition/fr-core-associated-entity
+      - StructureDefinition/fr-core-record-target
+      - StructureDefinition/fr-core-author
+      - StructureDefinition/fr-core-data-enterer
+      - StructureDefinition/fr-core-assigned-author
+      - StructureDefinition/fr-core-informant
+      - StructureDefinition/fr-core-related-entity
+      - StructureDefinition/fr-core-custodian
+      - StructureDefinition/fr-core-information-recipient
+      - StructureDefinition/fr-core-assigned-custodian
+      - StructureDefinition/fr-core-legal-authenticator
+      - StructureDefinition/fr-core-authorization
+      - StructureDefinition/fr-core-inFulfillment-of
+      - StructureDefinition/fr-core-documentation-of
+      - StructureDefinition/fr-core-performer
+      - StructureDefinition/fr-core-related-document
+      - StructureDefinition/fr-core-component-of
+      - StructureDefinition/fr-core-intended-recipient
+      - StructureDefinition/fr-core-patient-role
+      - StructureDefinition/fr-core-person
+      - StructureDefinition/fr-core-authenticator
+      - StructureDefinition/fr-core-authoring-device
+      - StructureDefinition/fr-core-participant
+      - StructureDefinition/fr-core-patient
+      - StructureDefinition/fr-core-represented-custodian-organization
+      - StructureDefinition/fr-core-represented-organization
+      - StructureDefinition/fr-core-service-event
+      - StructureDefinition/fr-core-order
+      - StructureDefinition/fr-core-parent-document
+      - FrName
+      - StructureDefinition/fr-core-encompassing-encounter
+      - StructureDefinition/fr-core-encounter-participant
+      - StructureDefinition/fr-core-health-care-facility
