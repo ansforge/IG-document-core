@@ -14,7 +14,7 @@ Characteristics: #can-be-target
       * nomNaissance 0..1 string "Nom de naissance (ou nom de famille) du patient/usager. 
       - Obligatoire si le matricule INS est présent."
       * nomUtilise 0..1 string "Nom utilisé du patient/usager."
-    * prenoms 1..* BackboneElement "Prénoms du patient/usager."
+    * prenoms 1..* Base "Prénoms du patient/usager."
       * listePrenoms 0..1 string "Liste des prénoms de l'acte de naissance.Obligatoire si le matricule INS est présent."
       * premierPrenom 0..1 string "Premier prénom de l'acte de naissance.Obligatoire si le matricule INS est présent"
       * prenomUtilise 0..1 string  "Prénom utilisé."
@@ -24,17 +24,17 @@ Characteristics: #can-be-target
   * dateDeces 0..1 dateTime "Date et heure du décès du patient/usager."
   * grossesseMultiple 0..1 boolean "Patient/usager né d'une grossesse multiple."
   * numeroOrdreNaissance 0..1 string "Numéro d’ordre de naissance."
-  * representantPatient 0..* BackboneElement "Représentant du patient/usager."
+  * representantPatient 0..* Base "Représentant du patient/usager."
     * adresse 0..* Address "Adresse géopostale."
     * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom."
-    * personneRepresentantPatient 0..1 BackboneElement "Personne représentant le patient/usager."
-      * nomsPrenoms 1..1 BackboneElement "Noms et Prénoms du représentant."
+    * personneRepresentantPatient 0..1 Base "Personne représentant le patient/usager."
+      * nomsPrenoms 1..1 Base "Noms et Prénoms du représentant."
         * nom 1..3 string "Nom du représentant."
         * prenom 0..* string "Prénom du représentant."
-    * structureRepresentantPatient 0..1 BackboneElement "Structure représentant le patient/usager."
+    * structureRepresentantPatient 0..1 Base "Structure représentant le patient/usager."
       * identifiant 0..1 Identifier "Identifiant de la structure."
-        * nom 0..1 string "Nom de la structure."
-  * lieuNaissance 0..1 BackboneElement "Lieu de naissance.
+      * nom 0..1 string "Nom de la structure."
+  * lieuNaissance 0..1 Base "Lieu de naissance.
   - Obligatoire si le matricule INS est présent pour porter le code officiel géographique (COG) du lieu de naissance.
   - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager."
     * nomLieuNaissance 0..1 string "Nom du lieu de naissance du patient/usager."
