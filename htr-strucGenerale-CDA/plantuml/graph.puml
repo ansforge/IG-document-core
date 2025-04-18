@@ -9,7 +9,7 @@ package IG #DDDDDD{
 
         class Auteur{
 
-             Auteur => [None..None]
+             Auteur => [1..None]
              Auteur.roleFonctionnel => [0..1]
              Auteur.horodatageParticipation => [1..1]
              Auteur.auteur[x] => [1..1]
@@ -31,16 +31,47 @@ package IG #DDDDDD{
 
         class DocumentDeReference{
 
-             DocumentDeReference => [None..None]
+             DocumentDeReference => [None..1]
              DocumentDeReference.typeReference => [1..1]
              DocumentDeReference.identifiantUniqueDocument => [1..1]
         } 
 
+        class EnteteDocument{
+
+             EnteteDocument => [1..1]
+             EnteteDocument.identifiantUniqueDocument => [1..1]
+             EnteteDocument.modeleDocument => [1..1]
+             EnteteDocument.typeDocument => [1..1]
+             EnteteDocument.titreDocument => [1..1]
+             EnteteDocument.dateDeCreationDocument => [1..1]
+             EnteteDocument.niveauConfidentialiteDocument => [1..1]
+             EnteteDocument.languePrincipaleDocument => [1..1]
+             EnteteDocument.identifiantLotDeVersionsDocument => [1..1]
+             EnteteDocument.versionDocument => [1..1]
+             EnteteDocument.statutDocument => [1..1]
+             EnteteDocument.patient => [1..1]
+             EnteteDocument.auteur => [1..*]
+             EnteteDocument.operateurSaisie => [0..1]
+             EnteteDocument.informateur => [0..*]
+             EnteteDocument.structureConservation => [1..1]
+             EnteteDocument.destinataire => [0..*]
+             EnteteDocument.responsable => [1..1]
+             EnteteDocument.validateur => [0..*]
+             EnteteDocument.participant => [0..*]
+             EnteteDocument.prescription => [0..*]
+             EnteteDocument.evenement => [1..*]
+             EnteteDocument.documentDeReference => [0..1]
+             EnteteDocument.consentementAssocie => [0..*]
+             EnteteDocument.priseEncharge => [1..1]
+        } 
+
         class Evenement{
 
-             Evenement => [None..None]
+             Evenement => [1..None]
              Evenement.identifiantEvenement => [0..*]
              Evenement.codeEvenement => [0..1]
+             Evenement.codeEvenement.id => [None..0]
+             Evenement.codeEvenement.extension => [None..0]
              Evenement.codeEvenement.translation => [0..*]
              Evenement.dateHeureEvenement => [0..1]
              Evenement.executantEvenement => [1..1]
@@ -55,39 +86,9 @@ package IG #DDDDDD{
              Informateur.informateur => [1..1]
         } 
 
-        class ModeleMetierEntete{
-
-             ModeleMetierEntete => [None..None]
-             ModeleMetierEntete.EnteteDocument => [1..1]
-             ModeleMetierEntete.identifiantUniqueDocument => [1..1]
-             ModeleMetierEntete.modeleDocument => [1..1]
-             ModeleMetierEntete.typeDocument => [1..1]
-             ModeleMetierEntete.titreDocument => [1..1]
-             ModeleMetierEntete.dateDeCreationDocument => [1..1]
-             ModeleMetierEntete.niveauConfidentialiteDocument => [1..1]
-             ModeleMetierEntete.languePrincipaleDocument => [1..1]
-             ModeleMetierEntete.identifiantLotDeVersionsDocument => [1..1]
-             ModeleMetierEntete.versionDocument => [1..1]
-             ModeleMetierEntete.statutDocument => [1..1]
-             ModeleMetierEntete.patient => [1..1]
-             ModeleMetierEntete.auteur => [1..*]
-             ModeleMetierEntete.operateurSaisie => [0..1]
-             ModeleMetierEntete.informateur => [0..*]
-             ModeleMetierEntete.structureConservation => [1..1]
-             ModeleMetierEntete.destinataire => [0..*]
-             ModeleMetierEntete.responsable => [1..1]
-             ModeleMetierEntete.validateur => [0..*]
-             ModeleMetierEntete.participant => [0..*]
-             ModeleMetierEntete.prescription => [0..*]
-             ModeleMetierEntete.evenement => [1..*]
-             ModeleMetierEntete.documentDeReference => [0..1]
-             ModeleMetierEntete.consentementAssocie => [0..*]
-             ModeleMetierEntete.priseEncharge => [1..1]
-        } 
-
         class OperateurSaisie{
 
-             OperateurSaisie => [None..None]
+             OperateurSaisie => [None..1]
              OperateurSaisie.dateSaisie => [1..1]
              OperateurSaisie.operateurSaisie => [1..1]
         } 
@@ -103,19 +104,19 @@ package IG #DDDDDD{
 
         class Patient{
 
-             Patient => [None..None]
+             Patient => [1..1]
              Patient.identifiantPatient => [1..*]
              Patient.adresse => [0..*]
              Patient.coordonneesTelecom => [0..*]
              Patient.personnePhysique => [1..1]
-             Patient.personnePhysique.nomsPrenoms => [1..1]
-             Patient.personnePhysique.nomsPrenoms.noms => [1..*]
-             Patient.personnePhysique.nomsPrenoms.noms.nomNaissance => [0..1]
-             Patient.personnePhysique.nomsPrenoms.noms.nomUtilise => [0..1]
-             Patient.personnePhysique.nomsPrenoms.prenoms => [1..*]
-             Patient.personnePhysique.nomsPrenoms.prenoms.listePrenoms => [0..1]
-             Patient.personnePhysique.nomsPrenoms.prenoms.premierPrenom => [0..1]
-             Patient.personnePhysique.nomsPrenoms.prenoms.prenomUtilise => [0..1]
+             Patient.personnePhysique.nomsPrenomsPatient => [1..1]
+             Patient.personnePhysique.nomsPrenomsPatient.nom => [1..*]
+             Patient.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
+             Patient.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
+             Patient.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
+             Patient.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
+             Patient.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
+             Patient.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
              Patient.personnePhysique.sexe => [1..1]
              Patient.personnePhysique.dateNaissance => [1..1]
              Patient.personnePhysique.indicateurDeces => [0..1]
@@ -126,16 +127,16 @@ package IG #DDDDDD{
              Patient.personnePhysique.representantPatient.adresse => [0..*]
              Patient.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
              Patient.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms => [1..1]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.nom => [1..3]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenoms.prenom => [0..*]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
+             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
              Patient.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
              Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
-             Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant.nom => [0..1]
+             Patient.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
              Patient.personnePhysique.lieuNaissance => [0..1]
              Patient.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
-             Patient.personnePhysique.lieuNaissance.adresseEtCodeOfficielGeographique => [0..1]
-             Patient.personnePhysique.lieuNaissance.CodeOfficielGeographique => [0..1]
+             Patient.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
+             Patient.personnePhysique.lieuNaissance.CodeOfficielGeographiqueLieuNaissance => [0..1]
         } 
 
         class PersonneStructure{
@@ -168,7 +169,7 @@ package IG #DDDDDD{
              PersonneStructureAuteur.personne.professionRole => [0..1]
              PersonneStructureAuteur.personne.adresse => [0..*]
              PersonneStructureAuteur.personne.coordonneesTelecom => [0..*]
-             PersonneStructureAuteur.personne.IdentitePersonne => [0..1]
+             PersonneStructureAuteur.personne.IdentitePersonne => [1..1]
              PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne => [1..*]
              PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne => [0..*]
              PersonneStructureAuteur.personne.IdentitePersonne.civilite => [0..1]
@@ -190,7 +191,7 @@ package IG #DDDDDD{
 
         class PriseEncharge{
 
-             PriseEncharge => [None..None]
+             PriseEncharge => [1..1]
              PriseEncharge.identifiantPriseEnCharge => [0..*]
              PriseEncharge.typePriseEnCharge => [0..1]
              PriseEncharge.dateDebutFinPriseEnCharge => [1..1]
@@ -211,14 +212,14 @@ package IG #DDDDDD{
 
         class Responsable{
 
-             Responsable => [None..None]
+             Responsable => [1..1]
              Responsable.dateHeureAttestationValidite => [1..1]
              Responsable.Responsable => [1..1]
         } 
 
         class StructureConservation{
 
-             StructureConservation => [None..None]
+             StructureConservation => [1..1]
              StructureConservation.structure => [0..1]
              StructureConservation.structure.identifiantStructure => [0..1]
              StructureConservation.structure.nomStructure => [0..1]
@@ -227,20 +228,20 @@ package IG #DDDDDD{
              StructureConservation.structure.secteurActivite => [0..1]
         } 
 
-        class Systeme{
+        class SystemeStructureAuteur{
 
-             Systeme => [None..None]
-             Systeme.identificationAuteur => [1..1]
-             Systeme.identificationAuteur.identifiantAuteur => [1..*]
-             Systeme.identificationAuteur.professionSavoirFaireRole => [1..1]
-             Systeme.identificationAuteur.systeme => [1..1]
-             Systeme.identificationAuteur.systeme.nomModeleSysteme => [1..1]
-             Systeme.identificationAuteur.systeme.nomSysteme => [1..1]
-             Systeme.identificationAuteur.structure => [1..1]
-             Systeme.identificationAuteur.structure.identifiantStructure => [1..1]
-             Systeme.identificationAuteur.structure.nomStructure => [1..1]
-             Systeme.identificationAuteur.structure.adresse => [0..*]
-             Systeme.identificationAuteur.structure.coordonneesTelecom => [0..*]
+             SystemeStructureAuteur => [None..None]
+             SystemeStructureAuteur.systeme => [1..1]
+             SystemeStructureAuteur.systeme.identifiantSysteme => [1..*]
+             SystemeStructureAuteur.systeme.typeSysteme => [1..1]
+             SystemeStructureAuteur.systeme.nomModeleSysteme => [1..1]
+             SystemeStructureAuteur.systeme.nomSysteme => [1..1]
+             SystemeStructureAuteur.structure => [1..1]
+             SystemeStructureAuteur.structure.identifiantStructure => [1..1]
+             SystemeStructureAuteur.structure.nomStructure => [1..1]
+             SystemeStructureAuteur.structure.adresse => [0..*]
+             SystemeStructureAuteur.structure.coordonneesTelecom => [0..*]
+             SystemeStructureAuteur.structure.secteurActivite => [0..1]
         } 
 
         class Validateur{
@@ -884,15 +885,15 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> EnteteDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Evenement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Informateur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> ModeleMetierEntete
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -932,7 +933,7 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> Systeme
+    class095a1b43effec73955e31e790438de49 --> SystemeStructureAuteur
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
