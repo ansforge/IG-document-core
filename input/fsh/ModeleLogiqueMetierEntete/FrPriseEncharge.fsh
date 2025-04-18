@@ -3,7 +3,8 @@ Logical: PriseEncharge
 Title: "Modèle métier - Association du document à une prise en charge"	
 //Id: fr-association-prise-en-charge.			
 Description: "Permet d'associer le document à une prise en charge du patient/usager." 	
-Characteristics: #can-be-target	 		
+Characteristics: #can-be-target	 	
+* . 1..1	
 * identifiantPriseEnCharge  0..* Identifier "Identifiant de la prise en charge."	
 * typePriseEnCharge 0..1 CodeableConcept "Type de prise en charge."
 * dateDebutFinPriseEnCharge 1..1 dateTime "Date de début et de fin de la prise en charge."

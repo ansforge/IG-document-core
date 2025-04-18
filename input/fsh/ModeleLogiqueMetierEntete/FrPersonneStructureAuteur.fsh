@@ -13,7 +13,7 @@ Characteristics: #can-be-target
   - Obligatoire pour un professionnel."
   * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom.
   - Obligatoire pour un professionnel."
-  * IdentitePersonne 0..1 Base "Identité de la personne"	
+  * IdentitePersonne 1..1 Base "Identité de la personne"	
     * nomPersonne 1..* Base "Nom de la personne"	
     * prenomPersonne 0..* string "Prénom de la personne"	
     * civilite 0..1 CodeableConcept "Civilité"
