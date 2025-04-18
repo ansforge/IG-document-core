@@ -2,7 +2,7 @@
 Logical: ModeleMetierEntete							
 Title: "Modèle logique métier de l'en-tête"				
 Description: "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."										
-* EnteteDocument 1..1 Basegit "En-tête du document"
+* EnteteDocument 1..1 Base "En-tête du document"
   * identifiantUniqueDocument 1..1 Identifier "Identifiant unique du document."
   * modeleDocument 1..1 Identifier "Modèle du document et version du modèle."
   * typeDocument 1..1 CodeableConcept "Type de document."	

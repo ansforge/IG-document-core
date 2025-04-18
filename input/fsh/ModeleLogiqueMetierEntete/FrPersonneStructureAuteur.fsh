@@ -1,9 +1,16 @@
 //  Logical Model : personne-structure-auteur			
 Logical: PersonneStructureAuteur		
+<<<<<<< HEAD
 Title: "Modèle métier - Personne et/ou Structure (Auteur)"			
 Description: "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." 
 Characteristics: #can-be-target 			 			 		
 * personne 0..1 Base "Personne"		 		
+=======
+Title: "Personne et/ou Structure (Auteur)"			
+Description: "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." 
+Characteristics: #can-be-target 			 			 		
+* personne 0..1 BackboneElement "Personne"		 		
+>>>>>>> 4e8ae5f420640288e32126de3a116807cfc44015
   * identifiantPersonne 1..* Identifier "Identifiant de la personne."				
   * professionRole 0..1 CodeableConcept "
 - Profession pour les professionnels.
@@ -13,12 +20,21 @@ Characteristics: #can-be-target
   - Obligatoire pour un professionnel."
   * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom.
   - Obligatoire pour un professionnel."
+<<<<<<< HEAD
   * IdentitePersonne 0..1 Base "Identité de la personne"	
     * nomPersonne 1..* Base "Nom de la personne"	
     * prenomPersonne 0..* string "Prénom de la personne"	
     * civilite 0..1 CodeableConcept "Civilité"
     * titre 0..1 CodeableConcept "Titre"
 * structure 0..1 Base "Structure" 
+=======
+  * IdentitePersonne 0..1 BackboneElement "Identité de la personne"	
+    * nomPersonne 1..* BackboneElement "Nom de la personne"	
+    * prenomPersonne 0..* string "Prénom de la personne"	
+    * civilite 0..1 CodeableConcept "Civilité"
+    * titre 0..1 CodeableConcept "Titre"
+* structure 0..1 BackboneElement "Structure" 
+>>>>>>> 4e8ae5f420640288e32126de3a116807cfc44015
   * identifiantStructure 0..1 Identifier "Identifiant de la structure.
   - Obligatoire pour un professionnel."
   * nomStructure 0..1 string "Nom de la structure.
