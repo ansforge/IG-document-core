@@ -1,6 +1,6 @@
 //  Logical Model : participant-document		
 Logical: Participant		
-Title: "Autres personnes / structures impliquées"	
+Title: "Modèle métier - Autres personnes / structures impliquées"	
 //Id: fr-participant-document			
 Description: "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." 	
 Characteristics: #can-be-target	

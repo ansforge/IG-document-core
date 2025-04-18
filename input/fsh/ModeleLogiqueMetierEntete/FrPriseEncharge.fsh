@@ -1,6 +1,6 @@
 //  Logical Model : association-prise-en-charge		
-Logical: AssociationPriseEncharge		
-Title: "Association du document à une prise en charge"	
+Logical: PriseEncharge		
+Title: "Modèle métier - Association du document à une prise en charge"	
 //Id: fr-association-prise-en-charge.			
 Description: "Permet d'associer le document à une prise en charge du patient/usager." 	
 Characteristics: #can-be-target	 		

@@ -2,7 +2,7 @@
 Profile: FrInformationRecipient
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/InformationRecipient
 Id: fr-core-information-recipient
-Title: "informationRecipient"
+Title: "CDA - informationRecipient"
 Description: "L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document." 
 * ^status = #draft
 * nullFlavor 0..0

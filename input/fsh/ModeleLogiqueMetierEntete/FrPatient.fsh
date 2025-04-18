@@ -1,6 +1,6 @@
 	//  Logical Model : patient	
 Logical: Patient						
-Title: "Patient / Usager"				
+Title: "Modèle métier - Patient / Usager"				
 Description:  """Patient/Usager concerné par le document."""
 Characteristics: #can-be-target							
 * identifiantPatient 1..* Identifier "Identifiant du patient / usager.
@@ -8,9 +8,9 @@ Characteristics: #can-be-target
 - Occurrence(s) suivante(s) (optionnelles) : Identifiant connu pour le patient/usager dans le système d’information du producteur du document (IPP, NIP, etc.)."""				
 * adresse 0..* Address "Adresse géopostale du patient/usager."				
 * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …)."		 		
-* personnePhysique  1..1 BackboneElement "Eléments permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc..."				
-  * nomsPrenoms 1..1 BackboneElement  "Noms et prénoms du patient/usager."
-    * noms 1..* BackboneElement "Noms du patient/usager."	 
+* personnePhysique  1..1 Base "Eléments permettant de décrire l’identité du patient/usager, son sexe, sa date et son lieu de naissance, son (ses) représentant(s), etc..."			
+  * nomsPrenoms 1..1 Base  "Noms et prénoms du patient/usager."
+    * noms 1..* Base "Noms du patient/usager."	 
       * nomNaissance 0..1 string "Nom de naissance (ou nom de famille) du patient/usager. 
       - Obligatoire si le matricule INS est présent."
       * nomUtilise 0..1 string "Nom utilisé du patient/usager."

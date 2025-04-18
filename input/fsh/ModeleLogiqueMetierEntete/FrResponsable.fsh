@@ -1,6 +1,6 @@
 //  Logical Model : responsable-document			
 Logical: Responsable		
-Title: "Responsable du document"	
+Title: "Modèle métier - Responsable du document"	
 //Id: fr-responsable-document			
 Description: "Représente le responsable du document, qui est : 
  - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. 

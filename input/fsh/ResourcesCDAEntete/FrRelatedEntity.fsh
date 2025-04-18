@@ -2,7 +2,7 @@
 Profile: FrRelatedEntity
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/RelatedEntity
 Id: fr-core-related-entity
-Title: "relatedEntity"
+Title: "CDA - relatedEntity"
 Description: "L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."
 * ^status = #draft
 * nullFlavor 0..0

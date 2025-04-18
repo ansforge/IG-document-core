@@ -1,6 +1,6 @@
 //  Logical Model : structure-conservation-document			
 Logical: StructureConservation			
-Title: "Structure chargée de la conservation du document"	
+Title: "Modèle métier - Structure chargée de la conservation du document"	
 //Id: fr-structure-conservation-document			
 Description: "Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie." 	
 Characteristics: #can-be-target	

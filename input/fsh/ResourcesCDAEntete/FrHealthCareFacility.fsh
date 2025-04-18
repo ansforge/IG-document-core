@@ -2,7 +2,7 @@
 Profile: FrHealthCareFacility 
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/HealthCareFacility
 Id: fr-core-health-care-facility 
-Title: "healthCareFacility"
+Title: "CDA - healthCareFacility"
 Description: "L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)." 
 * ^status = #draft
 * classCode 0..0

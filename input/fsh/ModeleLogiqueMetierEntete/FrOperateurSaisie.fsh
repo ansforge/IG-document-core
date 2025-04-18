@@ -1,6 +1,6 @@
 //  Logical Model : operateur-saisie		
 Logical: OperateurSaisie			
-Title: "Opérateur de saisie"	
+Title: "Modèle métier - Opérateur de saisie"	
 //Id: fr-operateur-saisie			
 Description: "Opérateur de saisie de la totalité ou d'une partie du contenu du document." 	
 Characteristics: #can-be-target	

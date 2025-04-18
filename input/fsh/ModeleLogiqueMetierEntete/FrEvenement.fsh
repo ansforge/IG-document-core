@@ -1,6 +1,6 @@
 //  Logical Model : evenement-documente				
 Logical: Evenement	
-Title: "Évènement documenté"	
+Title: "Modèle métier - Évènement documenté"	
 //Id: fr-evenement-documente			
 Description: "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." 	
 Characteristics: #can-be-target	

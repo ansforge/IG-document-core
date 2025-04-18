@@ -2,7 +2,7 @@
 Profile: FrServiceEvent
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent
 Id: fr-core-service-event
-Title: "serviceEvent"
+Title: "CDA - serviceEvent"
 Description: "L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. 
 L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." 
 * ^status = #draft

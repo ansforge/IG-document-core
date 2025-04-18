@@ -1,6 +1,6 @@
 //  Logical Model : auteur			
 Logical: Auteur
-Title: "Auteur du document (humain ou système)"
+Title: "Modèle métier - Auteur du document (humain ou système)"
 Description: """Auteur du document : ce peut être un professionnel, un patient/usager ou un système. 
 - Pour un professionnel ou un système, la structure de rattachement doit être précisée."""
 * roleFonctionnel 0..1 CodeableConcept "Rôle fonctionnel de l’auteur. A utiliser uniquement si l'auteur est un professionnel."

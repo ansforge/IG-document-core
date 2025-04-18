@@ -2,7 +2,7 @@
 Profile: FrCustodian
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Custodian
 Id: fr-core-custodian
-Title: "custodian"
+Title: "CDA - custodian"
 Description: "L'élément de l'en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document."
 * ^status = #draft
 * nullFlavor 0..0

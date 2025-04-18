@@ -414,7 +414,7 @@ L'attribut `inversionInd` (valeur booléenne) permet d’inverser la relation d�
 
 Exemples :
 
-* si `typeCode="RSON"` et `inversionInd="false"", alors TARGET est la raison de SOURCE.
+* si `typeCode="RSON"` et `inversionInd="false"`, alors TARGET est la raison de SOURCE.
 * si `typeCode="RSON"` et `inversionInd="true"`, alors SOURCE est la raison de TARGET.
 
 ##### nullFlavor

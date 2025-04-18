@@ -2,7 +2,7 @@
 Profile: FrOrder
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Order
 Id: fr-core-order
-Title: "order"
+Title: "CDA - order"
 Description: "L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document." 
 * ^status = #draft
 * nullFlavor 0..0

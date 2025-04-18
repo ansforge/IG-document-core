@@ -2,7 +2,7 @@
 Profile: FrAssignedCustodian
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssignedCustodian
 Id: fr-core-assigned-custodian
-Title: "assignedCustodian"
+Title: "CDA - assignedCustodian"
 Description: "L'élément de l'en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document."
 * ^status = #draft
 * typeId.nullFlavor 0..0 

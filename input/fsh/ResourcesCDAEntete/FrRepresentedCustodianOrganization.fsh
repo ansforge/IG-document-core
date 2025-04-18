@@ -2,7 +2,7 @@
 Profile: FrRepresentedCustodianOrganization
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/CustodianOrganization
 Id: fr-core-represented-custodian-organization
-Title: "representedCustodianOrganization"
+Title: "CDA - representedCustodianOrganization"
 Description: "L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."
 * ^status = #draft
 * classCode 0..0

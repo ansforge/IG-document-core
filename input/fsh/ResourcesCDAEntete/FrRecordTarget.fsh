@@ -2,7 +2,7 @@
 Profile: FrRecordTarget
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget
 Id: fr-core-record-target
-Title: "recordTarget"
+Title: "CDA - recordTarget"
 Description: "L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document."
 * ^status = #draft
 * nullFlavor 0..0

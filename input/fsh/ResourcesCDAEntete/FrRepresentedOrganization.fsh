@@ -2,7 +2,7 @@
 Profile: FrRepresentedOrganization
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Organization
 Id: fr-core-represented-organization
-Title: "representedOrganization"
+Title: "CDA - representedOrganization"
 Description: "L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."
 * ^status = #draft
 * classCode 0..0 

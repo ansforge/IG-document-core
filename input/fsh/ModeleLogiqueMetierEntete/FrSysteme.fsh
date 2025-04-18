@@ -1,6 +1,6 @@
 //  Logical Model : auteur-systeme	
 Logical: Systeme		
-Title: "Système"	
+Title: "Modèle métier - Système"	
 //Id: fr-auteur-systeme	
 Description:  "Système auteur du document" 	
 Characteristics: #can-be-target		
