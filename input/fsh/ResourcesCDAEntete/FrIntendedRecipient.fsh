@@ -2,11 +2,7 @@
 Profile: FrIntendedRecipient
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/IntendedRecipient
 Id: fr-core-intended-recipient
-<<<<<<< HEAD
 Title: "CDA - intendedRecipient"
-=======
-Title: "intendedRecipient"
->>>>>>> 4e8ae5f420640288e32126de3a116807cfc44015
 Description: "L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document." 
 * ^status = #draft
 * typeId.nullFlavor 0..0
