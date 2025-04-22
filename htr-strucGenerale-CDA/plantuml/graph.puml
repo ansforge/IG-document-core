@@ -74,7 +74,7 @@ package IG #DDDDDD{
              Evenement.codeEvenement.extension => [None..0]
              Evenement.codeEvenement.translation => [0..*]
              Evenement.dateHeureEvenement => [0..1]
-             Evenement.executantEvenement => [1..1]
+             Evenement.executantEvenement => [0..1]
              Evenement.executantEvenement.roleFonctionnel => [0..1]
              Evenement.executantEvenement.dateHeureParticipation => [0..1]
              Evenement.executantEvenement.executant => [1..1]
@@ -158,7 +158,7 @@ package IG #DDDDDD{
              PersonneStructure.structure.nomStructure => [0..1]
              PersonneStructure.structure.adresse => [0..*]
              PersonneStructure.structure.coordonneesTelecom => [0..*]
-             PersonneStructure.structure.secteurActivite => [0..1]
+             PersonneStructure.structure.cadreExercice => [0..1]
         } 
 
         class PersonneStructureAuteur{
@@ -185,7 +185,7 @@ package IG #DDDDDD{
         class Prescription{
 
              Prescription => [None..None]
-             Prescription.identifiantPrescription => [0..1]
+             Prescription.identifiantPrescription => [1..1]
              Prescription.accessionNumber => [0..1]
         } 
 
@@ -205,9 +205,10 @@ package IG #DDDDDD{
              PriseEncharge.lieuPriseEnCharge.structure => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.nomStructure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.adresse => [0..*]
+             PriseEncharge.lieuPriseEnCharge.structure.adresse => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
              PriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [0..1]
+             PriseEncharge.lieuPriseEnCharge.structure.typeStructure => [0..1]
         } 
 
         class Responsable{
@@ -220,12 +221,11 @@ package IG #DDDDDD{
         class StructureConservation{
 
              StructureConservation => [1..1]
-             StructureConservation.structure => [0..1]
-             StructureConservation.structure.identifiantStructure => [0..1]
+             StructureConservation.structure => [1..1]
+             StructureConservation.structure.identifiantStructure => [1..1]
              StructureConservation.structure.nomStructure => [0..1]
-             StructureConservation.structure.adresse => [0..*]
-             StructureConservation.structure.coordonneesTelecom => [0..*]
-             StructureConservation.structure.secteurActivite => [0..1]
+             StructureConservation.structure.coordonneesTelecom => [0..1]
+             StructureConservation.structure.adresse => [0..1]
         } 
 
         class SystemeStructureAuteur{

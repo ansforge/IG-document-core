@@ -79,11 +79,31 @@ https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/SystemeStruc
 "EnteteDocument","EnteteDocument.priseEncharge","EnteteDocument.priseEncharge","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge {[]} {[]}
 ","Association du document à une prise en charge.","Association du document à une prise en charge.","","","","","","","","","",,,,,"",,,,"EnteteDocument.priseEncharge",1,1,"",""
 "Evenement","Evenement","Evenement","","","",1,*,"","","","null {[]} {[]}
-","Modèle métier - Évènement documenté","Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+","Modèle métier - Évènement documenté","Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "Evenement","Evenement.identifiantEvenement","Evenement.identifiantEvenement","","","",0,*,"","","","Identifier {[]} {[]}
-","Identifiant de l’évènement documenté .","Identifiant de l’évènement documenté .","","","","","","","","","",,,,,"",,,,"Evenement.identifiantEvenement",0,*,"",""
+","Identifiant de l’évènement documenté. 
+ Obligatoire pour :
+  - une demande d'acte d'imagerie pour porter l'Order Placer Number.
+  - un CR d’imagerie pour porter le studyInstanceUID.
+ Fourni si connu pour :
+  - une prescription pour porter l'identifiant EPU de la prescription.","Identifiant de l’évènement documenté. 
+ Obligatoire pour :
+  - une demande d'acte d'imagerie pour porter l'Order Placer Number.
+  - un CR d’imagerie pour porter le studyInstanceUID.
+ Fourni si connu pour :
+  - une prescription pour porter l'identifiant EPU de la prescription.","","","","","","","","","",,,,,"",,,,"Evenement.identifiantEvenement",0,*,"",""
 "Evenement","Evenement.codeEvenement","Evenement.codeEvenement","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Code de l’évènement documenté (obligatoire pour une Demande d'actes d'imagerie, un CR d’imagerie, CR d’examen de l’enfant et un document d’expression personnelle du patient/usager).","Code de l’évènement documenté (obligatoire pour une Demande d'actes d'imagerie, un CR d’imagerie, CR d’examen de l’enfant et un document d’expression personnelle du patient/usager).","","","","","","","","","",,,,,"",,,,"Evenement.codeEvenement",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Code de l’évènement documenté.  
+ Obligatoire pour :
+  - une demande d'actes d'imagerie (code LOINC ='55115-0' 'Demande d’actes d’imagerie')
+  - un CR d’imagerie (code LOINC de l'acte d'imagerie),
+  - un CR d’examen de l’enfant (code SNOMED CT ='11429006' 'consultation'),
+  - un document d’expression personnelle du patient/usager (code TRE_A00 'EXP_PATIENT' 'Expression personnelle du patient').","Code de l’évènement documenté.  
+ Obligatoire pour :
+  - une demande d'actes d'imagerie (code LOINC ='55115-0' 'Demande d’actes d’imagerie')
+  - un CR d’imagerie (code LOINC de l'acte d'imagerie),
+  - un CR d’examen de l’enfant (code SNOMED CT ='11429006' 'consultation'),
+  - un document d’expression personnelle du patient/usager (code TRE_A00 'EXP_PATIENT' 'Expression personnelle du patient').","","","","","","","","","",,,,,"",,,,"Evenement.codeEvenement",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Evenement","Evenement.codeEvenement.id","Evenement.codeEvenement.id","","","",0,0,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -98,17 +118,33 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Evenement","Evenement.codeEvenement.translation","Evenement.codeEvenement.translation","","","",0,*,"","","","CodeableConcept {[]} {[]}
-","Translation (obligatoire pour un CR d’imagerie et un CR d’examen de l’enfant).","Translation (obligatoire pour un CR d’imagerie et un CR d’examen de l’enfant).","","","","","","","","","",,,,,"",,,,"Evenement.codeEvenement.translation",0,*,"",""
+","Translation. 
+ Obligatoire pour : 
+  - un CR d’imagerie pour indiquer
+   - 1..* la (ou les) modalité(s) d'acquisition,
+   - 1..* la (ou les) région(s) anatomique(s)
+  - un CR d’examen de l’enfant pour indiquer l'examen (jdv-examen-enfant-obligatoire-cisis).","Translation. 
+ Obligatoire pour : 
+  - un CR d’imagerie pour indiquer
+   - 1..* la (ou les) modalité(s) d'acquisition,
+   - 1..* la (ou les) région(s) anatomique(s)
+  - un CR d’examen de l’enfant pour indiquer l'examen (jdv-examen-enfant-obligatoire-cisis).","","","","","","","","","",,,,,"",,,,"Evenement.codeEvenement.translation",0,*,"",""
 "Evenement","Evenement.dateHeureEvenement","Evenement.dateHeureEvenement","","","",0,1,"","","","dateTime {[]} {[]}
-","Date et heure de l’évènement documenté.","Date et heure de l’évènement documenté.","","","","","","","","","",,,,,"",,,,"Evenement.dateHeureEvenement",0,1,"",""
-"Evenement","Evenement.executantEvenement","Evenement.executantEvenement","","","",1,1,"","","","Base {[]} {[]}
-","Exécutant.","Exécutant.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement",1,1,"",""
+","Date et heure de début et de fin de l’évènement documenté. 
+  Date de début obligatoire pour l'évènement documenté principal.","Date et heure de début et de fin de l’évènement documenté. 
+  Date de début obligatoire pour l'évènement documenté principal.","","","","","","","","","",,,,,"",,,,"Evenement.dateHeureEvenement",0,1,"",""
+"Evenement","Evenement.executantEvenement","Evenement.executantEvenement","","","",0,1,"","","","Base {[]} {[]}
+","Exécutant. 
+  Obligatoire pour l'évènement documenté principal.","Exécutant. 
+  Obligatoire pour l'évènement documenté principal.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement",0,1,"",""
 "Evenement","Evenement.executantEvenement.roleFonctionnel","Evenement.executantEvenement.roleFonctionnel","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Rôle fonctionnel.","Rôle fonctionnel.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement.roleFonctionnel",0,1,"",""
 "Evenement","Evenement.executantEvenement.dateHeureParticipation","Evenement.executantEvenement.dateHeureParticipation","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date et heure de participation.","Date et heure de participation.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement.dateHeureParticipation",0,1,"",""
 "Evenement","Evenement.executantEvenement.executant","Evenement.executantEvenement.executant","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure {[]} {[]}
-","Exécutant.","Exécutant.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement.executant",1,1,"",""
+","Exécutant. 
+  Le cadre d'exercice est obligatoire pour l'évènement documenté principal.","Exécutant. 
+  Le cadre d'exercice est obligatoire pour l'évènement documenté principal.","","","","","","","","","",,,,,"",,,,"Evenement.executantEvenement.executant",1,1,"",""
 "Informateur","Informateur","Informateur","","","",0,*,"","","","null {[]} {[]}
 ","Modèle métier - Informateur","Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "Informateur","Informateur.informateur","Informateur.informateur","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure {[]} {[]}
@@ -247,8 +283,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Adresse géopostale","Adresse géopostale","","","","","","","","","",,,,,"",,,,"PersonneStructure.structure.adresse",0,*,"",""
 "PersonneStructure","PersonneStructure.structure.coordonneesTelecom","PersonneStructure.structure.coordonneesTelecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","Coordonnées télécom","Coordonnées télécom","","","","","","","","","",,,,,"",,,,"PersonneStructure.structure.coordonneesTelecom",0,*,"",""
-"PersonneStructure","PersonneStructure.structure.secteurActivite","PersonneStructure.structure.secteurActivite","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Secteur d'activité","Secteur d'activité","","","","","","","","","",,,,,"",,,,"PersonneStructure.structure.secteurActivite",0,1,"",""
+"PersonneStructure","PersonneStructure.structure.cadreExercice","PersonneStructure.structure.cadreExercice","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Cadre d'exercice","Cadre d'exercice","","","","","","","","","",,,,,"",,,,"PersonneStructure.structure.cadreExercice",0,1,"",""
 "PersonneStructureAuteur","PersonneStructureAuteur","PersonneStructureAuteur","","","",0,*,"","","","null {[]} {[]}
 ","Modèle métier - Personne et/ou Structure (Auteur)","Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "PersonneStructureAuteur","PersonneStructureAuteur.personne","PersonneStructureAuteur.personne","","","",0,1,"","","","Base {[]} {[]}
@@ -299,12 +335,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Secteur d'activité","Secteur d'activité","","","","","","","","","",,,,,"",,,,"PersonneStructureAuteur.structure.secteurActivite",0,1,"",""
 "Prescription","Prescription","Prescription","","","",0,*,"","","","null {[]} {[]}
 ","Modèle métier - Association du document à une prescription","Association à une prescription à l’origine de l’acte dont résulte le document.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"Prescription","Prescription.identifiantPrescription","Prescription.identifiantPrescription","","","",0,1,"","","","Identifier {[]} {[]}
-","Identifiant de la prescription.","Identifiant de la prescription.","","","","","","","","","",,,,,"",,,,"Prescription.identifiantPrescription",0,1,"",""
+"Prescription","Prescription.identifiantPrescription","Prescription.identifiantPrescription","","","",1,1,"","","","Identifier {[]} {[]}
+","Identifiant de la prescription.","Identifiant de la prescription.","","","","","","","","","",,,,,"",,,,"Prescription.identifiantPrescription",1,1,"",""
 "Prescription","Prescription.accessionNumber","Prescription.accessionNumber","","","",0,1,"","","","Identifier {[]} {[]}
 ","Accession Number (Spécifique à l’imagerie).","Accession Number (Spécifique à l’imagerie).","","","","","","","","","",,,,,"",,,,"Prescription.accessionNumber",0,1,"",""
 "PriseEncharge","PriseEncharge","PriseEncharge","","","",1,1,"","","","null {[]} {[]}
-","Modèle métier - Association du document à une prise en charge","Permet d'associer le document à une prise en charge du patient/usager.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+","Modèle métier - Association du document à une prise en charge","Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.
+ - Exemples :
+   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.
+   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.
+ - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "PriseEncharge","PriseEncharge.identifiantPriseEnCharge","PriseEncharge.identifiantPriseEnCharge","","","",0,*,"","","","Identifier {[]} {[]}
 ","Identifiant de la prise en charge.","Identifiant de la prise en charge.","","","","","","","","","",,,,,"",,,,"PriseEncharge.identifiantPriseEnCharge",0,*,"",""
 "PriseEncharge","PriseEncharge.typePriseEnCharge","PriseEncharge.typePriseEnCharge","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -331,12 +371,14 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Identifiant de la structure","Identifiant de la structure","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.identifiantStructure",0,1,"",""
 "PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.nomStructure","PriseEncharge.lieuPriseEnCharge.structure.nomStructure","","","",0,1,"","","","string {[]} {[]}
 ","Nom de la structure","Nom de la structure","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.nomStructure",0,1,"",""
-"PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.adresse","PriseEncharge.lieuPriseEnCharge.structure.adresse","","","",0,*,"","","","Address {[]} {[]}
-","Adresse géopostale","Adresse géopostale","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.adresse",0,*,"",""
+"PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.adresse","PriseEncharge.lieuPriseEnCharge.structure.adresse","","","",0,1,"","","","Address {[]} {[]}
+","Adresse géopostale","Adresse géopostale","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.adresse",0,1,"",""
 "PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom","PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom","","","",0,*,"","","","ContactPoint {[]} {[]}
 ","Coordonnées télécom","Coordonnées télécom","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom",0,*,"",""
 "PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.secteurActivite","PriseEncharge.lieuPriseEnCharge.structure.secteurActivite","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Secteur d'activité","Secteur d'activité","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.secteurActivite",0,1,"",""
+"PriseEncharge","PriseEncharge.lieuPriseEnCharge.structure.typeStructure","PriseEncharge.lieuPriseEnCharge.structure.typeStructure","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type de structure","Type de structure","","","","","","","","","",,,,,"",,,,"PriseEncharge.lieuPriseEnCharge.structure.typeStructure",0,1,"",""
 "Responsable","Responsable","Responsable","","","",1,1,"","","","null {[]} {[]}
 ","Modèle métier - Responsable du document","Représente le responsable du document, qui est : 
  - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. 
@@ -350,18 +392,16 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Responsable du document.","Responsable du document.","","","","","","","","","",,,,,"",,,,"Responsable.Responsable",1,1,"",""
 "StructureConservation","StructureConservation","StructureConservation","","","",1,1,"","","","null {[]} {[]}
 ","Modèle métier - Structure chargée de la conservation du document","Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"StructureConservation","StructureConservation.structure","StructureConservation.structure","","","",0,1,"","","","Base {[]} {[]}
-","Structure","Structure","","","","","","","","","",,,,,"",,,,"StructureConservation.structure",0,1,"",""
-"StructureConservation","StructureConservation.structure.identifiantStructure","StructureConservation.structure.identifiantStructure","","","",0,1,"","","","Identifier {[]} {[]}
-","Identifiant de la structure","Identifiant de la structure","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.identifiantStructure",0,1,"",""
+"StructureConservation","StructureConservation.structure","StructureConservation.structure","","","",1,1,"","","","Base {[]} {[]}
+","Structure","Structure","","","","","","","","","",,,,,"",,,,"StructureConservation.structure",1,1,"",""
+"StructureConservation","StructureConservation.structure.identifiantStructure","StructureConservation.structure.identifiantStructure","","","",1,1,"","","","Identifier {[]} {[]}
+","Identifiant de la structure","Identifiant de la structure","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.identifiantStructure",1,1,"",""
 "StructureConservation","StructureConservation.structure.nomStructure","StructureConservation.structure.nomStructure","","","",0,1,"","","","string {[]} {[]}
 ","Nom de la structure","Nom de la structure","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.nomStructure",0,1,"",""
-"StructureConservation","StructureConservation.structure.adresse","StructureConservation.structure.adresse","","","",0,*,"","","","Address {[]} {[]}
-","Adresse géopostale","Adresse géopostale","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.adresse",0,*,"",""
-"StructureConservation","StructureConservation.structure.coordonneesTelecom","StructureConservation.structure.coordonneesTelecom","","","",0,*,"","","","ContactPoint {[]} {[]}
-","Coordonnées télécom","Coordonnées télécom","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.coordonneesTelecom",0,*,"",""
-"StructureConservation","StructureConservation.structure.secteurActivite","StructureConservation.structure.secteurActivite","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Secteur d'activité","Secteur d'activité","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.secteurActivite",0,1,"",""
+"StructureConservation","StructureConservation.structure.coordonneesTelecom","StructureConservation.structure.coordonneesTelecom","","","",0,1,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom","Coordonnées télécom","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.coordonneesTelecom",0,1,"",""
+"StructureConservation","StructureConservation.structure.adresse","StructureConservation.structure.adresse","","","",0,1,"","","","Address {[]} {[]}
+","Adresse géopostale","Adresse géopostale","","","","","","","","","",,,,,"",,,,"StructureConservation.structure.adresse",0,1,"",""
 "SystemeStructureAuteur","SystemeStructureAuteur","SystemeStructureAuteur","","","",0,*,"","","","null {[]} {[]}
 ","Modèle métier - Système / Structure","Système auteur du document","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "SystemeStructureAuteur","SystemeStructureAuteur.systeme","SystemeStructureAuteur.systeme","","","",1,1,"","","","Base {[]} {[]}
