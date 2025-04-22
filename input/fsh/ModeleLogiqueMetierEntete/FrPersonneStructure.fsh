@@ -22,4 +22,4 @@ Characteristics: #can-be-target
   * nomStructure 0..1 string "Nom de la structure"
   * adresse 0..* Address "Adresse géopostale"
   * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom"
-  * secteurActivite 0..1 CodeableConcept "Secteur d'activité"
+  * cadreExercice 0..1 CodeableConcept "Cadre d'exercice"

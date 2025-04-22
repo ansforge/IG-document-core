@@ -2,8 +2,11 @@
 Logical: PriseEncharge		
 Title: "Modèle métier - Association du document à une prise en charge"	
 //Id: fr-association-prise-en-charge.			
-Description: "Permet d'associer le document à une prise en charge du patient/usager." 	
-Characteristics: #can-be-target	 	
+Description: "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.
+ - Exemples :
+   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.
+   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.
+ - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité." 	 	
 * . 1..1	
 * identifiantPriseEnCharge  0..* Identifier "Identifiant de la prise en charge."	
 * typePriseEnCharge 0..1 CodeableConcept "Type de prise en charge."
@@ -18,6 +21,7 @@ Characteristics: #can-be-target
   * structure 0..1 Base "Structure" 
     * identifiantStructure 0..1 Identifier "Identifiant de la structure"
     * nomStructure 0..1 string "Nom de la structure"
-    * adresse 0..* Address "Adresse géopostale"
+    * adresse 0..1 Address "Adresse géopostale"
     * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom"
     * secteurActivite 0..1 CodeableConcept "Secteur d'activité"
+    * typeStructure 0..1 CodeableConcept "Type de structure"
