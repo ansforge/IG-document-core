@@ -29,7 +29,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * extension[informant].extension[type] 1..1 
 * extension[informant].extension[type] ^short = "Type de participation : Informateur"
 * extension[informant].extension[party] ^short = "Informateur"
-* extension[informant].extension[party].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientFHIRDocument)
+* extension[informant].extension[party].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 
 // information-recipient-extension
 * extension[information-recipient].extension[type] 1..1 
@@ -51,6 +51,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * extension[participant].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
 * extension[participant].extension[party] obeys comp-3
 
+* language 1..1 MS
 * identifier ^short = "Identifiant lot de versions"
 * identifier 1..1 MS
 * status MS
@@ -63,7 +64,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * title ^definition = "Les volets de contenus du CI-SIS fixent parfois le titre du document. Dans les autres cas, le titre provient soit de la saisie directe par le professionnel ou le patient/usager, soit d’une valeur par défaut générée par le logiciel et modifiable par le professionnel ou le patient/usager."
 * subject 1.. MS
 * subject ^short = "Patient / Usager"
-* subject only Reference(FrPatientFHIRDocument)
+* subject only Reference(FrPatientINSDocument or FrPatientDocument)
 * subject.reference 1.. MS
 * date MS
 * date ^short = "Date de création"
@@ -72,7 +73,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
-* author only Reference(FrPractitionerRoleDocument or FrPatientFHIRDocument or FrDeviceDocument)
+* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
 * author.extension contains fr-author-time named time 1..1
 
 // Responsable du document : legalAuthenticator

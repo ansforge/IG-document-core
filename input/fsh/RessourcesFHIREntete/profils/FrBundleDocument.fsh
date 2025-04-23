@@ -34,7 +34,7 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 
 // Définition de l'entrée patient
 * entry contains patient 1..1
-* entry[patient].resource only FrPatientFHIRDocument
+* entry[patient].resource only FrPatientINSDocument or FrPatientDocument
 
 // Définition de l'entrée practitionerRole
 * entry contains practitionerRole 1..*

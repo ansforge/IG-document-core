@@ -1,8 +1,8 @@
-// StructureDefinition for Patient
-Profile: FrPatientFHIRDocument
+// StructureDefinition for Patient INS Document
+Profile: FrPatientINSDocument
 Parent: FRCorePatientINSProfile
-Id: fr-patient-fhir-document
-Title: "Fr Patient FHIR Document"
+Id: fr-patient-ins-document
+Title: "Fr Patient INS Document"
 Description: "Ce profil représente le patient concerné par le document."
 
 * name[officialName].family ^short = "Nom de naissance"
