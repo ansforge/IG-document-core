@@ -20,11 +20,11 @@ ClinicalDocument hérite de : [https://hl7.org/cda/stds/core/2.0.1-sd/StructureD
 |                     | **templateId**        | [3..*]     | Déclarations de conformité                           | nullFlavor interdit |
 |                     | **id**                | [1..1]     | Identifiant unique du document                       | nullFlavor interdit |
 |                     | **code**              | [1..1]     | Type de document                                     | nullFlavor interdit |
-|                     | **title**             | [0..1]     | Titre du document                                    | nullFlavor interdit |
+|                     | **title**             | [1..1]     | Titre du document                                    | nullFlavor interdit |
 |                     | **effectiveTime**     | [1..1]     | Date et heure de création du document               | nullFlavor interdit |
 |                     | **confidentialityCode** | [1..1]   | Niveau de confidentialité du document               | nullFlavor interdit |
 |                     | **languageCode**      | [1..1]     | Langue principale du document                       | nullFlavor interdit |
-|                     | **setId**             | [0..1]     | Identifiant du lot de versions du même document     | nullFlavor interdit |
+|                     | **setId**             | [1..1]     | Identifiant du lot de versions du même document     | nullFlavor interdit |
 |                     | **versionNumber**     | [1..1]     | Numéro de version du document                       | nullFlavor interdit |
 |                     | **copyTime**          | [0..1]     | *Date et heure de remise - Élément obsolète à ne pas utiliser.* | |
 |                     | [recordTarget](StructureDefinition-fr-core-record-target.html#tabs-snap)      | [1..1]     | Patient/Usager concerné par le document             | nullFlavor interdit |

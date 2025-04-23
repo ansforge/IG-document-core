@@ -2,7 +2,7 @@
 Profile: FrAssociatedEntity
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AssociatedEntity
 Id: fr-core-associated-entity
-Title: "associatedEntity"
+Title: "CDA - associatedEntity"
 Description: "L'élément de l'en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."
 * ^status = #draft
 * nullFlavor 0..0

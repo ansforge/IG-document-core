@@ -14,27 +14,27 @@ Il est adapté pour intégrer le modèle métier (1ère colonne), indépendant d
 | Type de document | code | [1..1] | Composition.type | [1..1] |
 | Titre du document | title | [1..1] | Composition.title | [1..1] |
 | Date de création | effectiveTime | [1..1] | Composition.date | [1..1] |
-| Niveau de confidentialité | confidentialityCode | [1..1] | Composition.confidentiality | [0..1] |
-| Langue | languageCode | [1..1] | Composition.language | [0..1] |
-| Identifiant lot de versions | setId | [1..1] | Composition.identifier | [0..1] |
-| Version du document | versionNumber | [1..1] | Composition.extension:R5-Composition-version | [0..1] |
+| Niveau de confidentialité | confidentialityCode | [1..1] | Composition.confidentiality | [1..1] |
+| Langue | languageCode | [1..1] | Composition.language | [1..1] |
+| Identifiant lot de versions | setId | [1..1] | Composition.identifier | [1..1] |
+| Version du document | versionNumber | [1..1] | Composition.extension:R5-Composition-version | [1..1] |
 | Statut du document | |  | Composition.status | [1..1] |
-| Patient / Usager | recordTarget | [1..1] | Composition.subject | [0..1] |
+| Patient / Usager | recordTarget | [1..1] | Composition.subject | [1..1] |
 | Auteur | author | [1..*] | Composition.author | [1..*]  |
 | Opérateur de saisie | dataEnterer | [0..1] | Composition.extension:data-enterer | [0..1]|
 | Informateur | informant | [0..*] | Composition.extension:informant | [0..*]|
 | Informateur : Personne de confiance, Personne à prévenir en cas d'urgence, Aidant, Aidé | informant | [0..*] | Composition.subject (ressource Patient / Patient.contact) | [0..*] |
 | Structure chargée de la conservation du document | custodian | [1..1] | Composition.custodian |[1..1] |
 | Destinataire prévu du document | informationRecipient | [0..*] | Composition.extension:informationRecipient | [0..*] |
-| Responsable du document | legalAuthenticator | [1..1] | Composition.attester | [0..*] |
-| Professionnel attestant la validité du contenu du document | authenticator | [0..*] | Composition.attester | [0..*] |
+| Responsable du document | legalAuthenticator | [1..1] | Composition.attester (legal) | [1..1] |
+| Professionnel attestant la validité du contenu du document | authenticator | [0..*] | Composition.attester (professional) | [0..*] |
 | Autres personnes / structures impliquées | participant | [0..*] | Composition.extension:participant | [0..*] |
-| Médecin traitant | participant | | Composition.subject (ressource Patient / Patient.generalPractitioner) | [0..*] |
+| Médecin traitant | participant | [0..*] | Composition.subject (ressource Patient / Patient.generalPractitioner) | [0..*] |
 | Association du document à une prescription | inFulfillmentOf | [0..*] | Composition.extension:order | [0..*] |
-| Évènement documenté | documentationOf | [1..*] | Composition.event | [0..*] |
-| Document de référence | relatedDocument | [0..1] | Composition.relatesTo | [0..*] |
+| Évènement documenté | documentationOf | [1..*] | Composition.event | [1..*] |
+| Document de référence | relatedDocument | [0..1] | Composition.relatesTo | [0..1] |
 | Consentement associé au document | authorization | [0..*] | Composition.extension:consent |  [0..*]|
-| Association du document à une prise en charge | componentOf | [1..1] | Composition.encounter | [0..1] |
+| Association du document à une prise en charge | componentOf | [1..1] | Composition.encounter | [1..1] |
 | **Corps du document** | component / structuredBody ou nonXMLBody | | | |
 | Sections | section | [1..*] | Composition.section | [1..*] |
 | | | | **Bundle.entry suivantes** | [0..*] |

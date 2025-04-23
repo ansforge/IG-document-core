@@ -1,6 +1,6 @@
 //  Logical Model				destinataire-prevu-document			
 Logical: DestinatairePrevu			
-Title: "Destinataire prévu du document"	
+Title: "Modèle métier - Destinataire prévu du document"	
 //Id: fr-destinataire-prevu-document			
 Description: "Personne déclarée comme destinataire prévu du document.
 - Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).

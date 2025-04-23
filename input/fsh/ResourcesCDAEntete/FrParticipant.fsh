@@ -2,7 +2,7 @@
 Profile: FrParticipant
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Participant1
 Id: fr-core-participant
-Title: "participant"
+Title: "CDA - participant"
 Description: "L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."
 * ^status = #draft
 * typeId.nullFlavor 0..0

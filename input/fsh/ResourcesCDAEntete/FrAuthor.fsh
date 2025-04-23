@@ -2,7 +2,7 @@
 Profile: FrAuthor
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Author
 Id: fr-core-author
-Title: "author"
+Title: "CDA - author"
 Description: "L'élément de l'en-tête du CDA author permet d’enregistrer un auteur du document."
 * ^status = #draft
 * nullFlavor 0..0 

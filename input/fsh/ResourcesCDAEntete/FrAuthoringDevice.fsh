@@ -2,7 +2,7 @@
 Profile: FrAuthoringDevice
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/AuthoringDevice
 Id: fr-core-authoring-device
-Title: "authoringDevice"
+Title: "CDA - authoringDevice"
 Description: "L'élément de l'en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système."
 * ^status = #draft
 * typeId.nullFlavor 0..0

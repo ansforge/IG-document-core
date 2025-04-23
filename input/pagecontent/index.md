@@ -56,11 +56,15 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
 
 ### Propriété intellectuelle
 
+<!-- Ces lignes ont été commentées car la propriété intellectuelle est déjà définie dans l'IG des terminologies de l'ANS et dans l'ip-statements généré automatiquement.
+
 Ressources sémantiques largement utilisées dans les documents et non publiées dans le SMT :
 
 * [LOINC](https://loinc.org/) : LOINC is copyright © 1994-2025, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. Pour plus d'information sur la licence, voir : [http://loinc.org/license](http://loinc.org/license)
 * [HL7 Terminology (THO)](https://terminology.hl7.org/index.html) : THO is copyright ©1989+ Health Level Seven International. Pour plus d'information sur la licence, voir : [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
-* {% include ip-statements.xhtml %}
+-->
+
+{% include ip-statements.xhtml %}
 
 ### Dépendances
 

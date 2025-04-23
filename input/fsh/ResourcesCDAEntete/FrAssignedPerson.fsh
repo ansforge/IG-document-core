@@ -2,7 +2,7 @@
 Profile: FrAssignedPerson
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Person
 Id: fr-core-person
-Title: "assignedPerson"
+Title: "CDA - assignedPerson"
 Description: "L'élément de l'en-tête du CDA assignedPerson permet de décrire une personne physique."
 * ^status = #draft
 * nullFlavor 0..0

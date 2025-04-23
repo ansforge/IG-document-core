@@ -2,7 +2,7 @@
 Profile: FrLegalAuthenticator
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator
 Id: fr-core-legal-authenticator
-Title: "legalAuthenticator"
+Title: "CDA - legalAuthenticator"
 Description: "L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."
 * ^status = #draft
 * nullFlavor 0..0

@@ -2,7 +2,7 @@
 Profile: FrParentDocument
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/ParentDocument
 Id: fr-core-parent-document
-Title: "parentDocument"
+Title: "CDA - parentDocument"
 Description: "L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence." 
 * ^status = #draft
 * nullFlavor 0..0

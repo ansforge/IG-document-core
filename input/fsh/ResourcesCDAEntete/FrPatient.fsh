@@ -2,7 +2,7 @@
 Profile: FrPatient
 Parent: http://hl7.org/cda/stds/core/StructureDefinition/Patient
 Id: fr-core-patient
-Title: "patient"
+Title: "CDA - patient"
 Description: "L'élément de l'en-tête du CDA patient permet de représenter une personne physique."
 * ^status = #draft
 * nullFlavor 0..0
