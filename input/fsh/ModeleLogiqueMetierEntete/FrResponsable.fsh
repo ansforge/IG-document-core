@@ -10,5 +10,5 @@ Description: "Représente le responsable du document, qui est :
  - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"
 Characteristics: #can-be-target
 * . 1..1 
-* dateHeureAttestationValidite 1..1 dateTime "Date/Heure de la prise de responsabilité."		 			 			 		
-* Responsable 1..1 PersonneStructure "Responsable du document."		 		
+* dateHeurePriseResponsabilite 1..1 dateTime "Date/Heure de la prise de responsabilité."		 			 			 		
+* responsable 1..1 PersonneStructure "Responsable du document."		 		
