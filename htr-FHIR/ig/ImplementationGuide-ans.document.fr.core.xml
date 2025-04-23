@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-04-14T15:21:44+00:00"/>
+  <date value="2025-04-23T09:31:53+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -63,7 +63,7 @@
   <dependsOn id="ans_fhir_fr_annuaire">
     <uri value="https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"/>
     <packageId value="ans.fhir.fr.annuaire"/>
-    <version value="1.1.0-snapshot-6"/>
+    <version value="1.1.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_fhir_clinical_document">
     <uri value="http://hl7.org/fhir/uv/fhir-clinical-document/ImplementationGuide/hl7.fhir.uv.fhir-clinical-document"/>
@@ -280,7 +280,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.4.1"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -515,7 +515,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-assigned-author"/>
       </reference>
-      <name value="assignedAuthor"/>
+      <name value="CDA - assignedAuthor"/>
       <description value="L'élément de l'en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -527,7 +527,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-assigned-custodian"/>
       </reference>
-      <name value="assignedCustodian"/>
+      <name value="CDA - assignedCustodian"/>
       <description value="L'élément de l'en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -539,7 +539,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-assigned-entity"/>
       </reference>
-      <name value="assignedEntity"/>
+      <name value="CDA - assignedEntity"/>
       <description value="L'élément de l'en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -551,7 +551,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-person"/>
       </reference>
-      <name value="assignedPerson"/>
+      <name value="CDA - assignedPerson"/>
       <description value="L'élément de l'en-tête du CDA assignedPerson permet de décrire une personne physique."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -563,7 +563,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-associated-entity"/>
       </reference>
-      <name value="associatedEntity"/>
+      <name value="CDA - associatedEntity"/>
       <description value="L'élément de l'en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -573,45 +573,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AssociationPrescription"/>
-      </reference>
-      <name value="Association du document à une prescription"/>
-      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/AssociationPriseEncharge"/>
-      </reference>
-      <name value="Association du document à une prise en charge"/>
-      <description value="Permet d'associer le document à une prise en charge du patient/usager."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Auteur"/>
-      </reference>
-      <name value="Auteur du document (humain ou système)"/>
-      <description value="Auteur du document : ce peut être un professionnel, un patient/usager ou un système. &#xA;- Pour un professionnel ou un système, la structure de rattachement doit être précisée."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/fr-core-authenticator"/>
       </reference>
-      <name value="authenticator"/>
+      <name value="CDA - authenticator"/>
       <description value="L'élément de l'en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -623,7 +587,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-author"/>
       </reference>
-      <name value="author"/>
+      <name value="CDA - author"/>
       <description value="L'élément de l'en-tête du CDA author permet d’enregistrer un auteur du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -635,7 +599,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-authoring-device"/>
       </reference>
-      <name value="authoringDevice"/>
+      <name value="CDA - authoringDevice"/>
       <description value="L'élément de l'en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -647,7 +611,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-authorization"/>
       </reference>
-      <name value="authorization"/>
+      <name value="CDA - authorization"/>
       <description value="L'élément de l'en-tête du CDA authorization permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -657,21 +621,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Participant"/>
-      </reference>
-      <name value="Autres personnes / structures impliquées"/>
-      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/fr-core-clinical-document"/>
       </reference>
-      <name value="clinicalDocument"/>
+      <name value="CDA - clinicalDocument"/>
       <description value="L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -683,7 +635,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-component-of"/>
       </reference>
-      <name value="componentOf"/>
+      <name value="CDA - componentOf"/>
       <description value="L'élément de l'en-tête du CDA componentOf permet d'associer le document à une prise en charge du patient/usager."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -693,21 +645,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Consentement"/>
-      </reference>
-      <name value="Consentement associé au document"/>
-      <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/fr-core-custodian"/>
       </reference>
-      <name value="custodian"/>
+      <name value="CDA - custodian"/>
       <description value="L'élément de l'en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -719,7 +659,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-data-enterer"/>
       </reference>
-      <name value="dataEnterer"/>
+      <name value="CDA - dataEnterer"/>
       <description value="L'élément de l'en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -729,33 +669,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DestinatairePrevu"/>
-      </reference>
-      <name value="Destinataire prévu du document"/>
-      <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DocumentReference"/>
-      </reference>
-      <name value="Document de référence"/>
-      <description value="Référence un document existant (à remplacer ou transformé)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/fr-core-documentation-of"/>
       </reference>
-      <name value="documentationOf"/>
+      <name value="CDA - documentationOf"/>
       <description value="L'élément de l'en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -767,7 +683,7 @@
       <reference>
         <reference value="StructureDefinition/fr-core-encompassing-encounter"/>
       </reference>
-      <name value="encompassingEncounter"/>
+      <name value="CDA - encompassingEncounter"/>
       <description value="L'élément de l'en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
@@ -779,8 +695,236 @@
       <reference>
         <reference value="StructureDefinition/fr-core-encounter-participant"/>
       </reference>
-      <name value="encounterParticipant"/>
+      <name value="CDA - encounterParticipant"/>
       <description value="L'élément de l'en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel ayant donné son avis quant à la prise en charge."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-health-care-facility"/>
+      </reference>
+      <name value="CDA - healthCareFacility"/>
+      <description value="L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-informant"/>
+      </reference>
+      <name value="CDA - informant"/>
+      <description value="L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-information-recipient"/>
+      </reference>
+      <name value="CDA - informationRecipient"/>
+      <description value="L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-inFulfillment-of"/>
+      </reference>
+      <name value="CDA - inFulfillmentOf"/>
+      <description value="L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-intended-recipient"/>
+      </reference>
+      <name value="CDA - intendedRecipient"/>
+      <description value="L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-legal-authenticator"/>
+      </reference>
+      <name value="CDA - legalAuthenticator"/>
+      <description value="L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-name"/>
+      </reference>
+      <name value="CDA - name"/>
+      <description value="L'élément de l'en-tête du CDA name correspond au nom d'une personne physique."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-order"/>
+      </reference>
+      <name value="CDA - order"/>
+      <description value="L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-parent-document"/>
+      </reference>
+      <name value="CDA - parentDocument"/>
+      <description value="L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-participant"/>
+      </reference>
+      <name value="CDA - participant"/>
+      <description value="L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-patient"/>
+      </reference>
+      <name value="CDA - patient"/>
+      <description value="L'élément de l'en-tête du CDA patient permet de représenter une personne physique."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-patient-role"/>
+      </reference>
+      <name value="CDA - patientRole"/>
+      <description value="L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-performer"/>
+      </reference>
+      <name value="CDA - performer"/>
+      <description value="L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-record-target"/>
+      </reference>
+      <name value="CDA - recordTarget"/>
+      <description value="L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-related-document"/>
+      </reference>
+      <name value="CDA - relatedDocument"/>
+      <description value="L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-related-entity"/>
+      </reference>
+      <name value="CDA - relatedEntity"/>
+      <description value="L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-represented-custodian-organization"/>
+      </reference>
+      <name value="CDA - representedCustodianOrganization"/>
+      <description value="L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-represented-organization"/>
+      </reference>
+      <name value="CDA - representedOrganization"/>
+      <description value="L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-core-service-event"/>
+      </reference>
+      <name value="CDA - serviceEvent"/>
+      <description value="L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. &#xA;L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
     </resource>
@@ -873,9 +1017,21 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-patient-fhir-document"/>
+        <reference value="StructureDefinition/fr-patient-document"/>
       </reference>
-      <name value="Fr Patient FHIR Document"/>
+      <name value="Fr Patient Document"/>
+      <description value="Ce profil représente le patient concerné par le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Ressources FHIR"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-patient-ins-document"/>
+      </reference>
+      <name value="Fr Patient INS Document"/>
       <description value="Ce profil représente le patient concerné par le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR"/>
@@ -1050,18 +1206,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-health-care-facility"/>
-      </reference>
-      <name value="healthCareFacility"/>
-      <description value="L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:complex-type"/>
       </extension>
       <reference>
@@ -1071,78 +1215,6 @@
       <description value="Ce profil représente le nom du professionnel de santé."/>
       <exampleBoolean value="false"/>
       <groupingId value="Data Type FHIR"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-informant"/>
-      </reference>
-      <name value="informant"/>
-      <description value="L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Informateur"/>
-      </reference>
-      <name value="Informateur"/>
-      <description value="Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-information-recipient"/>
-      </reference>
-      <name value="informationRecipient"/>
-      <description value="L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-inFulfillment-of"/>
-      </reference>
-      <name value="inFulfillmentOf"/>
-      <description value="L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-intended-recipient"/>
-      </reference>
-      <name value="intendedRecipient"/>
-      <description value="L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-legal-authenticator"/>
-      </reference>
-      <name value="legalAuthenticator"/>
-      <description value="L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1392,7 +1464,7 @@
         <reference value="StructureDefinition/EnteteDocument"/>
       </reference>
       <name value="Modèle logique métier de l'en-tête"/>
-      <description value="Eléments de l'entête d'un document contenant les données les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc..."/>
+      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
     </resource>
@@ -1401,12 +1473,96 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-name"/>
+        <reference value="StructureDefinition/Prescription"/>
       </reference>
-      <name value="name"/>
-      <description value="L'élément de l'en-tête du CDA name correspond au nom d'une personne physique."/>
+      <name value="Modèle métier - Association du document à une prescription"/>
+      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PriseEncharge"/>
+      </reference>
+      <name value="Modèle métier - Association du document à une prise en charge"/>
+      <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Auteur"/>
+      </reference>
+      <name value="Modèle métier - Auteur du document (humain ou système)"/>
+      <description value="Auteur du document : ce peut être un professionnel, un patient/usager ou un système. &#xA;- Pour un professionnel ou un système, la structure de rattachement doit être précisée."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Participant"/>
+      </reference>
+      <name value="Modèle métier - Autres personnes / structures impliquées"/>
+      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Consentement"/>
+      </reference>
+      <name value="Modèle métier - Consentement associé au document"/>
+      <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DestinatairePrevu"/>
+      </reference>
+      <name value="Modèle métier - Destinataire prévu du document"/>
+      <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DocumentDeReference"/>
+      </reference>
+      <name value="Modèle métier - Document de référence"/>
+      <description value="Référence un document existant (à remplacer ou transformé)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Informateur"/>
+      </reference>
+      <name value="Modèle métier - Informateur"/>
+      <description value="Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1415,7 +1571,7 @@
       <reference>
         <reference value="StructureDefinition/OperateurSaisie"/>
       </reference>
-      <name value="Opérateur de saisie"/>
+      <name value="Modèle métier - Opérateur de saisie"/>
       <description value="Opérateur de saisie de la totalité ou d'une partie du contenu du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1425,57 +1581,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-order"/>
-      </reference>
-      <name value="order"/>
-      <description value="L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-parent-document"/>
-      </reference>
-      <name value="parentDocument"/>
-      <description value="L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-participant"/>
-      </reference>
-      <name value="participant"/>
-      <description value="L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-patient"/>
-      </reference>
-      <name value="patient"/>
-      <description value="L'élément de l'en-tête du CDA patient permet de représenter une personne physique."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/Patient"/>
       </reference>
-      <name value="Patient / Usager"/>
+      <name value="Modèle métier - Patient / Usager"/>
       <description value="Patient/Usager concerné par le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1485,33 +1593,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-patient-role"/>
-      </reference>
-      <name value="patientRole"/>
-      <description value="L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-performer"/>
-      </reference>
-      <name value="performer"/>
-      <description value="L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/PersonneStructure"/>
       </reference>
-      <name value="Personne et/ou Structure"/>
+      <name value="Modèle métier - Personne et/ou Structure"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1523,7 +1607,7 @@
       <reference>
         <reference value="StructureDefinition/PersonneStructureAuteur"/>
       </reference>
-      <name value="Personne et/ou Structure (Auteur)"/>
+      <name value="Modèle métier - Personne et/ou Structure (Auteur)"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1533,69 +1617,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-record-target"/>
-      </reference>
-      <name value="recordTarget"/>
-      <description value="L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-related-document"/>
-      </reference>
-      <name value="relatedDocument"/>
-      <description value="L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-related-entity"/>
-      </reference>
-      <name value="relatedEntity"/>
-      <description value="L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-represented-custodian-organization"/>
-      </reference>
-      <name value="representedCustodianOrganization"/>
-      <description value="L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-core-represented-organization"/>
-      </reference>
-      <name value="representedOrganization"/>
-      <description value="L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/Responsable"/>
       </reference>
-      <name value="Responsable du document"/>
+      <name value="Modèle métier - Responsable du document"/>
       <description value="Représente le responsable du document, qui est : &#xA; - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. &#xA; - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). &#xA; - soit le patient/usager responsable du document d'expression personnelle &#xA; - soit le SNR responsable du document produit via ce SNR. &#xA; - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1605,21 +1629,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-service-event"/>
-      </reference>
-      <name value="serviceEvent"/>
-      <description value="L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. &#xA;L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/StructureConservation"/>
       </reference>
-      <name value="Structure chargée de la conservation du document"/>
+      <name value="Modèle métier - Structure chargée de la conservation du document"/>
       <description value="Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1629,9 +1641,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Systeme"/>
+        <reference value="StructureDefinition/SystemeStructureAuteur"/>
       </reference>
-      <name value="Système"/>
+      <name value="Modèle métier - Système / Structure"/>
       <description value="Système auteur du document"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1643,7 +1655,7 @@
       <reference>
         <reference value="StructureDefinition/Validateur"/>
       </reference>
-      <name value="Validateur du document"/>
+      <name value="Modèle métier - Validateur du document"/>
       <description value="Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1655,8 +1667,8 @@
       <reference>
         <reference value="StructureDefinition/Evenement"/>
       </reference>
-      <name value="Évènement documenté"/>
-      <description value="Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
+      <name value="Modèle métier - Évènement documenté"/>
+      <description value="Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
     </resource>

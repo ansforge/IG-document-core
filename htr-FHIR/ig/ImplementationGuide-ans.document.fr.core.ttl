@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-14T15:21:44+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-23T09:31:53+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -98,7 +98,7 @@
        fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
      ] ;
      fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
-     fhir:version [ fhir:v "1.1.0-snapshot-6" ]
+     fhir:version [ fhir:v "1.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_uv_fhir_clinical_document" ] ;
      fhir:uri [
@@ -503,7 +503,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.4.1"
+         fhir:v "hl7.fhir.uv.tools.r4#0.5.0"
        ]
      ] [
        fhir:extension ( [
@@ -927,7 +927,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-assigned-author" ]
        ] ;
-       fhir:name [ fhir:v "assignedAuthor" ] ;
+       fhir:name [ fhir:v "CDA - assignedAuthor" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -946,7 +946,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-custodian> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-assigned-custodian" ]
        ] ;
-       fhir:name [ fhir:v "assignedCustodian" ] ;
+       fhir:name [ fhir:v "CDA - assignedCustodian" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -965,7 +965,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-entity> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-assigned-entity" ]
        ] ;
-       fhir:name [ fhir:v "assignedEntity" ] ;
+       fhir:name [ fhir:v "CDA - assignedEntity" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -984,7 +984,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-person> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-person" ]
        ] ;
-       fhir:name [ fhir:v "assignedPerson" ] ;
+       fhir:name [ fhir:v "CDA - assignedPerson" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA assignedPerson permet de décrire une personne physique." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1003,7 +1003,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-associated-entity> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-associated-entity" ]
        ] ;
-       fhir:name [ fhir:v "associatedEntity" ] ;
+       fhir:name [ fhir:v "CDA - associatedEntity" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1019,67 +1019,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AssociationPrescription> ;
-         fhir:reference [ fhir:v "StructureDefinition/AssociationPrescription" ]
-       ] ;
-       fhir:name [ fhir:v "Association du document à une prescription" ] ;
-       fhir:description [ fhir:v "Association à une prescription à l’origine de l’acte dont résulte le document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AssociationPriseEncharge> ;
-         fhir:reference [ fhir:v "StructureDefinition/AssociationPriseEncharge" ]
-       ] ;
-       fhir:name [ fhir:v "Association du document à une prise en charge" ] ;
-       fhir:description [ fhir:v "Permet d'associer le document à une prise en charge du patient/usager." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur> ;
-         fhir:reference [ fhir:v "StructureDefinition/Auteur" ]
-       ] ;
-       fhir:name [ fhir:v "Auteur du document (humain ou système)" ] ;
-       fhir:description [ fhir:v "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-authenticator" ]
        ] ;
-       fhir:name [ fhir:v "authenticator" ] ;
+       fhir:name [ fhir:v "CDA - authenticator" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1098,7 +1041,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-author" ]
        ] ;
-       fhir:name [ fhir:v "author" ] ;
+       fhir:name [ fhir:v "CDA - author" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA author permet d’enregistrer un auteur du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1117,7 +1060,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authoring-device> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-authoring-device" ]
        ] ;
-       fhir:name [ fhir:v "authoringDevice" ] ;
+       fhir:name [ fhir:v "CDA - authoringDevice" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1136,7 +1079,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-authorization" ]
        ] ;
-       fhir:name [ fhir:v "authorization" ] ;
+       fhir:name [ fhir:v "CDA - authorization" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA authorization permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1152,29 +1095,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant> ;
-         fhir:reference [ fhir:v "StructureDefinition/Participant" ]
-       ] ;
-       fhir:name [ fhir:v "Autres personnes / structures impliquées" ] ;
-       fhir:description [ fhir:v "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-clinical-document" ]
        ] ;
-       fhir:name [ fhir:v "clinicalDocument" ] ;
+       fhir:name [ fhir:v "CDA - clinicalDocument" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1193,7 +1117,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-component-of" ]
        ] ;
-       fhir:name [ fhir:v "componentOf" ] ;
+       fhir:name [ fhir:v "CDA - componentOf" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA componentOf permet d'associer le document à une prise en charge du patient/usager." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1209,29 +1133,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement> ;
-         fhir:reference [ fhir:v "StructureDefinition/Consentement" ]
-       ] ;
-       fhir:name [ fhir:v "Consentement associé au document" ] ;
-       fhir:description [ fhir:v "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-custodian" ]
        ] ;
-       fhir:name [ fhir:v "custodian" ] ;
+       fhir:name [ fhir:v "CDA - custodian" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1250,7 +1155,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-data-enterer> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-data-enterer" ]
        ] ;
-       fhir:name [ fhir:v "dataEnterer" ] ;
+       fhir:name [ fhir:v "CDA - dataEnterer" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1266,48 +1171,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu> ;
-         fhir:reference [ fhir:v "StructureDefinition/DestinatairePrevu" ]
-       ] ;
-       fhir:name [ fhir:v "Destinataire prévu du document" ] ;
-       fhir:description [ fhir:v "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentReference> ;
-         fhir:reference [ fhir:v "StructureDefinition/DocumentReference" ]
-       ] ;
-       fhir:name [ fhir:v "Document de référence" ] ;
-       fhir:description [ fhir:v "Référence un document existant (à remplacer ou transformé)." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-documentation-of" ]
        ] ;
-       fhir:name [ fhir:v "documentationOf" ] ;
+       fhir:name [ fhir:v "CDA - documentationOf" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1326,7 +1193,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-encompassing-encounter> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-encompassing-encounter" ]
        ] ;
-       fhir:name [ fhir:v "encompassingEncounter" ] ;
+       fhir:name [ fhir:v "CDA - encompassingEncounter" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1345,8 +1212,369 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-encounter-participant> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-encounter-participant" ]
        ] ;
-       fhir:name [ fhir:v "encounterParticipant" ] ;
+       fhir:name [ fhir:v "CDA - encounterParticipant" ] ;
        fhir:description [ fhir:v "L'élément de l'en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel ayant donné son avis quant à la prise en charge." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-health-care-facility> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-health-care-facility" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - healthCareFacility" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-informant" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - informant" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-information-recipient" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - informationRecipient" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-inFulfillment-of" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - inFulfillmentOf" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-intended-recipient> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-intended-recipient" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - intendedRecipient" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-legal-authenticator" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - legalAuthenticator" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-name" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - name" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA name correspond au nom d'une personne physique." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-order> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-order" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - order" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-parent-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-parent-document" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - parentDocument" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-participant" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - participant" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-patient" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - patient" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA patient permet de représenter une personne physique." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-patient-role> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-patient-role" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - patientRole" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-performer> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-performer" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - performer" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-record-target" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - recordTarget" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-related-document" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - relatedDocument" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-related-entity" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - relatedEntity" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-custodian-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-custodian-organization" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - representedCustodianOrganization" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-organization" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - representedOrganization" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-service-event> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-service-event" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - serviceEvent" ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nL'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1494,10 +1722,29 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-patient-fhir-document" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-patient-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Patient FHIR Document" ] ;
+       fhir:name [ fhir:v "Fr Patient Document" ] ;
+       fhir:description [ fhir:v "Ce profil représente le patient concerné par le document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-patient-ins-document" ]
+       ] ;
+       fhir:name [ fhir:v "Fr Patient INS Document" ] ;
        fhir:description [ fhir:v "Ce profil représente le patient concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1782,25 +2029,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-health-care-facility> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-health-care-facility" ]
-       ] ;
-       fhir:name [ fhir:v "healthCareFacility" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "StructureDefinition:complex-type"
          ]
        ] ) ;
@@ -1815,120 +2043,6 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Data Type FHIR" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-informant" ]
-       ] ;
-       fhir:name [ fhir:v "informant" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/Informateur" ]
-       ] ;
-       fhir:name [ fhir:v "Informateur" ] ;
-       fhir:description [ fhir:v "Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-information-recipient" ]
-       ] ;
-       fhir:name [ fhir:v "informationRecipient" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-inFulfillment-of" ]
-       ] ;
-       fhir:name [ fhir:v "inFulfillmentOf" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-intended-recipient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-intended-recipient" ]
-       ] ;
-       fhir:name [ fhir:v "intendedRecipient" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-legal-authenticator" ]
-       ] ;
-       fhir:name [ fhir:v "legalAuthenticator" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2322,7 +2436,7 @@
          fhir:reference [ fhir:v "StructureDefinition/EnteteDocument" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier de l'en-tête" ] ;
-       fhir:description [ fhir:v "Eléments de l'entête d'un document contenant les données les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc..." ] ;
+       fhir:description [ fhir:v "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -2337,16 +2451,149 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-name" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription> ;
+         fhir:reference [ fhir:v "StructureDefinition/Prescription" ]
        ] ;
-       fhir:name [ fhir:v "name" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA name correspond au nom d'une personne physique." ] ;
+       fhir:name [ fhir:v "Modèle métier - Association du document à une prescription" ] ;
+       fhir:description [ fhir:v "Association à une prescription à l’origine de l’acte dont résulte le document." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge> ;
+         fhir:reference [ fhir:v "StructureDefinition/PriseEncharge" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Association du document à une prise en charge" ] ;
+       fhir:description [ fhir:v "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.\n - Exemples :\n   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.\n   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.\n - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur> ;
+         fhir:reference [ fhir:v "StructureDefinition/Auteur" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Auteur du document (humain ou système)" ] ;
+       fhir:description [ fhir:v "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant> ;
+         fhir:reference [ fhir:v "StructureDefinition/Participant" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Autres personnes / structures impliquées" ] ;
+       fhir:description [ fhir:v "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement> ;
+         fhir:reference [ fhir:v "StructureDefinition/Consentement" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Consentement associé au document" ] ;
+       fhir:description [ fhir:v "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu> ;
+         fhir:reference [ fhir:v "StructureDefinition/DestinatairePrevu" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Destinataire prévu du document" ] ;
+       fhir:description [ fhir:v "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference> ;
+         fhir:reference [ fhir:v "StructureDefinition/DocumentDeReference" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Document de référence" ] ;
+       fhir:description [ fhir:v "Référence un document existant (à remplacer ou transformé)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur> ;
+         fhir:reference [ fhir:v "StructureDefinition/Informateur" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle métier - Informateur" ] ;
+       fhir:description [ fhir:v "Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2359,7 +2606,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/OperateurSaisie> ;
          fhir:reference [ fhir:v "StructureDefinition/OperateurSaisie" ]
        ] ;
-       fhir:name [ fhir:v "Opérateur de saisie" ] ;
+       fhir:name [ fhir:v "Modèle métier - Opérateur de saisie" ] ;
        fhir:description [ fhir:v "Opérateur de saisie de la totalité ou d'une partie du contenu du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2375,86 +2622,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-order> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-order" ]
-       ] ;
-       fhir:name [ fhir:v "order" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-parent-document> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-parent-document" ]
-       ] ;
-       fhir:name [ fhir:v "parentDocument" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-participant" ]
-       ] ;
-       fhir:name [ fhir:v "participant" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-patient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-patient" ]
-       ] ;
-       fhir:name [ fhir:v "patient" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA patient permet de représenter une personne physique." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient> ;
          fhir:reference [ fhir:v "StructureDefinition/Patient" ]
        ] ;
-       fhir:name [ fhir:v "Patient / Usager" ] ;
+       fhir:name [ fhir:v "Modèle métier - Patient / Usager" ] ;
        fhir:description [ fhir:v "Patient/Usager concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2470,48 +2641,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-patient-role> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-patient-role" ]
-       ] ;
-       fhir:name [ fhir:v "patientRole" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-performer> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-performer" ]
-       ] ;
-       fhir:name [ fhir:v "performer" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure> ;
          fhir:reference [ fhir:v "StructureDefinition/PersonneStructure" ]
        ] ;
-       fhir:name [ fhir:v "Personne et/ou Structure" ] ;
+       fhir:name [ fhir:v "Modèle métier - Personne et/ou Structure" ] ;
        fhir:description [ fhir:v "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2530,7 +2663,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructureAuteur> ;
          fhir:reference [ fhir:v "StructureDefinition/PersonneStructureAuteur" ]
        ] ;
-       fhir:name [ fhir:v "Personne et/ou Structure (Auteur)" ] ;
+       fhir:name [ fhir:v "Modèle métier - Personne et/ou Structure (Auteur)" ] ;
        fhir:description [ fhir:v "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2546,105 +2679,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-record-target" ]
-       ] ;
-       fhir:name [ fhir:v "recordTarget" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-related-document" ]
-       ] ;
-       fhir:name [ fhir:v "relatedDocument" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-related-entity" ]
-       ] ;
-       fhir:name [ fhir:v "relatedEntity" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-custodian-organization> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-custodian-organization" ]
-       ] ;
-       fhir:name [ fhir:v "representedCustodianOrganization" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-organization> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-represented-organization" ]
-       ] ;
-       fhir:name [ fhir:v "representedOrganization" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable> ;
          fhir:reference [ fhir:v "StructureDefinition/Responsable" ]
        ] ;
-       fhir:name [ fhir:v "Responsable du document" ] ;
+       fhir:name [ fhir:v "Modèle métier - Responsable du document" ] ;
        fhir:description [ fhir:v "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2660,29 +2698,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-service-event> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-service-event" ]
-       ] ;
-       fhir:name [ fhir:v "serviceEvent" ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. \nL'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation> ;
          fhir:reference [ fhir:v "StructureDefinition/StructureConservation" ]
        ] ;
-       fhir:name [ fhir:v "Structure chargée de la conservation du document" ] ;
+       fhir:name [ fhir:v "Modèle métier - Structure chargée de la conservation du document" ] ;
        fhir:description [ fhir:v "Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2698,10 +2717,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Systeme> ;
-         fhir:reference [ fhir:v "StructureDefinition/Systeme" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/SystemeStructureAuteur> ;
+         fhir:reference [ fhir:v "StructureDefinition/SystemeStructureAuteur" ]
        ] ;
-       fhir:name [ fhir:v "Système" ] ;
+       fhir:name [ fhir:v "Modèle métier - Système / Structure" ] ;
        fhir:description [ fhir:v "Système auteur du document" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2720,7 +2739,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur> ;
          fhir:reference [ fhir:v "StructureDefinition/Validateur" ]
        ] ;
-       fhir:name [ fhir:v "Validateur du document" ] ;
+       fhir:name [ fhir:v "Modèle métier - Validateur du document" ] ;
        fhir:description [ fhir:v "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2739,8 +2758,8 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement> ;
          fhir:reference [ fhir:v "StructureDefinition/Evenement" ]
        ] ;
-       fhir:name [ fhir:v "Évènement documenté" ] ;
-       fhir:description [ fhir:v "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document.Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." ] ;
+       fhir:name [ fhir:v "Modèle métier - Évènement documenté" ] ;
+       fhir:description [ fhir:v "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
