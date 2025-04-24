@@ -14,7 +14,6 @@
     <sch:rule context="f:HumanName">
       <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/humanname-assembly-order': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:family) &gt;= 1">family: minimum cardinality of 'family' is 1</sch:assert>
-      <sch:assert test="count(f:given) &lt;= 1">given: maximum cardinality of 'given' is 1</sch:assert>
       <sch:assert test="count(f:suffix) &lt;= 1">suffix: maximum cardinality of 'suffix' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

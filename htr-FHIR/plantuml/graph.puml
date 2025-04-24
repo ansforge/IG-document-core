@@ -981,7 +981,6 @@ package IG #DDDDDD{
         class HumanNameDocument{
 
              HumanName.family => [1..None]
-             HumanName.given => [None..1]
              HumanName.prefix => [None..None]
              HumanName.suffix => [None..1]
         } 
@@ -1025,6 +1024,8 @@ package IG #DDDDDD{
 
              Practitioner.identifier => [1..None]
              Practitioner.name => [1..1]
+             Practitioner.name.family => [1..None]
+             Practitioner.name.given => [None..1]
              Practitioner.qualification:savoirFaire => [None..None]
              Practitioner.qualification:savoirFaire/professionMedecin => [0..1]
              Practitioner.qualification:savoirFaire/professionMedecin.code.coding => [None..None]
@@ -1065,6 +1066,7 @@ package IG #DDDDDD{
              RelatedPerson.relationship:Role.coding.display => [None..None]
              RelatedPerson.relationship:RelationType => [None..1]
              RelatedPerson.name => [1..1]
+             RelatedPerson.name.given => [None..1]
          }
 
      }
