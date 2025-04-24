@@ -19,6 +19,7 @@ Description: "Ce profil représente le patient concerné par le document."
   * address 0..1
 // relationship
   * relationship[RelationType] from $JDV_J11_RelationPatient_CISIS  (required)
+// Le ValueSet doit être remplacé par le nouveau JDV : jdv-role-informateur-cisis (1.2.250.1.213.1.1.5.824)
   * relationship[Role] from FRValueSetPatientContactRole  (required)
 * generalPractitioner only Reference(FrPractitionerDocument)
 * generalPractitioner obeys pat-gp-1

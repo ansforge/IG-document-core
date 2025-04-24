@@ -8,6 +8,8 @@ Description: "Ce profil permet de décrire un professionnel de santé dans le ca
 * name 1..1
 * name ^short = "Identité de la personne physique" 
 * name only fr-human-name-document
+  * family 1..1
+  * given 0..1 
 
 // Savoir-faire / rôle
 * qualification[savoirFaire] ^short = "Le savoir-faire ou le rôle apporte des précisions sur certaines professions : 

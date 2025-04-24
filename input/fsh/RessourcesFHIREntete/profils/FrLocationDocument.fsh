@@ -17,4 +17,5 @@ Description: "Ce profil représente la structure de prise en charge."
 
 * type.coding contains translation 0..1
 * type.coding[translation] ^short = "Catégorie d'établissement"
+// Le ValueSet doit être remplacé par le nouveau JDV : jdv-j368-categorie-etablissement-cisis
 * type.coding[translation].code from FRValueSetCategorieEtablissement (required)

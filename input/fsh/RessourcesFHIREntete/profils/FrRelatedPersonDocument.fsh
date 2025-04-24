@@ -14,3 +14,5 @@ Description: "Ce profil représente l'informateur non professionnel."
 * name 1..1
 * name ^short = "Nom de la personne"
 * name only fr-human-name-document
+  * family 1..1
+  * given 0..1
