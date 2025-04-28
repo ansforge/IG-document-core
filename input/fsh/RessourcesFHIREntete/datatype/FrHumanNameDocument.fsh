@@ -7,6 +7,5 @@ Description: "Ce profil correspond au type de données HumanName utilisé dans l
 * family 1..
 * prefix ^short = "Civilité"
 * prefix from $JDV_J245-Civilite-CISIS (required)
-* suffix 0..1
 * suffix ^short = "Titre"
 * suffix from $JDV_J246-Titre-CISIS (required)
