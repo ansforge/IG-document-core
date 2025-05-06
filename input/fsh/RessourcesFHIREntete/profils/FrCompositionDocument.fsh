@@ -92,23 +92,21 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * attester[professional_attester] ^short = "Professionnel attestant la validité du contenu du document"
 
 * event 1..*
-  * obeys comp-2
-
-// Slicing : Code de l’évènement documenté
-  * code ^slicing.discriminator.type = #value
-  * code ^slicing.discriminator.path = "coding.code"
-  * code ^slicing.rules = #open
-
-  * code contains codeEvenement 0..1
-  * code[codeEvenement] ^short = "Code de l’évènement documenté"
-  
-  // Slicing : Translation
-  * code contains translation 0..*
-  * code[translation] ^short = "translation : un ensemble d’équivalents de l'élément 'code' dans d’autres terminologies"
-
 * event.detail 0..1
-* event.detail only Reference(FrPractitionerRoleDocument)
 * event.period ^short = "Date et heure de l’évènement documenté"
+* event.extension contains fr-performer-event named perfomer 0..1
+
+// Slicing event : évènement documenté principal 
+* event ^slicing.discriminator.type = #value
+* event ^slicing.discriminator.path = "$this"
+* event ^slicing.rules = #open
+
+* event contains principalEvent 1..1
+* event[principalEvent] ^short = "Evènement documenté principal"
+* event[principalEvent].period 1..1 
+* event[principalEvent].detail 0..1
+* event[principalEvent].extension[perfomer] 1..1 
+* event[principalEvent].extension[perfomer] ^short = "Exécutant de l'évènement documenté principal"
 
 * relatesTo 1..*
 * relatesTo ^short = "Document de référence"
@@ -141,11 +139,6 @@ Invariant:  comp-1
 Description: "La valeur de l'extension versionNumber doit être un entier."
 Expression:  "value.matches('^1[0-9]{9}$')"
 Severity:    #error
-
-Invariant: comp-2
-Description: "L'exécutant de l’évènement et la date et heure de l’évènement sont obligatoires dans l'acte principal."
-Severity: #error
-Expression: "detail.exists() implies period.exists()"
 
 Invariant: comp-3
 Description: "La valeur du PractitionerRole.code dans l'extension[party]' doit être 'PROV' ou 'AGNT'."
