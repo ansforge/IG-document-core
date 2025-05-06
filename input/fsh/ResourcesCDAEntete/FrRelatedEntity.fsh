@@ -9,6 +9,7 @@ Description: "L'élément de l'en-tête du CDA relatedEntity permet de décrire 
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
+// Remplacer le jdv CDARoleClassMutualRelationship par le nv jdv-role-informateur-cisis (1.2.250.1.213.1.1.5.824)
 * classCode ^short = "Rôle joué par la personne."
 * code ^short = "Lien de la personne avec le patient/usager."
 * code from https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS
