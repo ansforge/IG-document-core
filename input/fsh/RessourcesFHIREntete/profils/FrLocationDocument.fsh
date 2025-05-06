@@ -9,7 +9,7 @@ Description: "Ce profil représente la structure de prise en charge."
 * type.coding ^slicing.discriminator.type = #value
 * type.coding ^slicing.discriminator.path = "coding.code"
 * type.coding ^slicing.rules = #open
-* type.coding ^short = "Structure de prise en charge : healthCareFacility"
+* type.coding ^short = "Structure de prise en charge : healthcareFacility"
 
 * type.coding contains code 1..1
 * type.coding[code] ^short = "Secteur d'activité"
