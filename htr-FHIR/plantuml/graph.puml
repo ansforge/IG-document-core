@@ -337,11 +337,14 @@ package IG #DDDDDD{
              Composition.relatesTo:transformed_document => [0..1]
              Composition.relatesTo:transformed_document.code => [None..None]
              Composition.event => [1..None]
-             Composition.event.code => [None..None]
-             Composition.event.code:codeEvenement => [0..1]
-             Composition.event.code:translation => [0..*]
+             Composition.event.extension => [None..None]
+             Composition.event.extension:perfomer => <&plus>[0..1]
              Composition.event.period => [None..None]
              Composition.event.detail => [None..1]
+             Composition.event:principalEvent => [1..1]
+             Composition.event:principalEvent.extension => [1..None]
+             Composition.event:principalEvent.extension:perfomer => <&plus>[1..1]
+             Composition.event:principalEvent.period => [1..None]
              Composition.section => [None..None]
         } 
 
@@ -1073,12 +1076,21 @@ package IG #DDDDDD{
      package extension #paleturquoise {
 
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrAuthorTimeExtension
+     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
+     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
 
         class FrAuthorTimeExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrPerformerEvent{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
          }
      }
      package valueset #PaleVioletRed{
