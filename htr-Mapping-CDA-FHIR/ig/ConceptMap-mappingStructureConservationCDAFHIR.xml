@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingStructureConservationCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap mappingStructureConservationCDAFHIR</b></p><a name="mappingStructureConservationCDAFHIR"> </a><a name="hcmappingStructureConservationCDAFHIR"> </a><a name="mappingStructureConservationCDAFHIR-fr-FR"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-StructureConservation.html">Modèle métier - Structure chargée de la conservation du document</a> to <a href="StructureDefinition-fr-core-custodian.html">CDA - custodian</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>StructureConservation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian</td></tr><tr><td>StructureConservation.structure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian</td></tr><tr><td>StructureConservation.structure.identifiantStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian.representedCustodianOrganization.id</td></tr><tr><td>StructureConservation.structure.nomStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian.representedCustodianOrganization.name</td></tr><tr><td>StructureConservation.structure.adresse</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian.representedCustodianOrganization.addr</td></tr><tr><td>StructureConservation.structure.coordonneesTelecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian.representedCustodianOrganization.telecom</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-fr-core-custodian.html">CDA - custodian</a> to <a href="StructureDefinition-fr-composition-document.html">Fr Composition Document</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>custodian</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian</td><td>Composition.custodian.resolve().ofType(Organization)</td></tr><tr><td>custodian.assignedCustodian</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian.organization</td><td/></tr><tr><td>custodian.assignedCustodian.representedCustodianOrganization.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian.organization.identifier</td><td/></tr><tr><td>custodian.assignedCustodian.representedCustodianOrganization.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian.organization.name</td><td/></tr><tr><td>custodian.assignedCustodian.representedCustodianOrganization.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian.organization.address</td><td/></tr><tr><td>custodian.assignedCustodian.representedCustodianOrganization.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian.organization.telecom</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingStructureConservationCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping du modèle métier StructureConservation/CDA/FHIR"/>
+  <title value="Mapping du modèle métier StructureConservation/CDA/FHIR"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-05-14T14:13:57+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de la structure chargée de la conservation du document et l'élément CDA custodian&#xA; - Groupe Mapping 2 : entre l'élément CDA custodian et l'élément FHIR Composition.custodian"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"/>
+    <element>
+      <code value="StructureConservation"/>
+      <target>
+        <code value="custodian"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="StructureConservation.structure"/>
+      <target>
+        <code value="custodian.assignedCustodian"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="StructureConservation.structure.identifiantStructure"/>
+      <target>
+        <code value="custodian.assignedCustodian.representedCustodianOrganization.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="StructureConservation.structure.nomStructure"/>
+      <target>
+        <code value="custodian.assignedCustodian.representedCustodianOrganization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="StructureConservation.structure.adresse"/>
+      <target>
+        <code value="custodian.assignedCustodian.representedCustodianOrganization.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="StructureConservation.structure.coordonneesTelecom"/>
+      <target>
+        <code value="custodian.assignedCustodian.representedCustodianOrganization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="custodian"/>
+      <target>
+        <code value="Composition.custodian"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.custodian.resolve().ofType(Organization)"/>
+      </target>
+    </element>
+    <element>
+      <code value="custodian.assignedCustodian"/>
+      <target>
+        <code value="Composition.custodian.organization"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="custodian.assignedCustodian.representedCustodianOrganization.id"/>
+      <target>
+        <code value="Composition.custodian.organization.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="custodian.assignedCustodian.representedCustodianOrganization.name"/>
+      <target>
+        <code value="Composition.custodian.organization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="custodian.assignedCustodian.representedCustodianOrganization.addr"/>
+      <target>
+        <code value="Composition.custodian.organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="custodian.assignedCustodian.representedCustodianOrganization.telecom"/>
+      <target>
+        <code value="Composition.custodian.organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
