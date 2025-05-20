@@ -26,7 +26,7 @@ package IG #DDDDDD{
         class DestinatairePrevu{
 
              DestinatairePrevu => [None..None]
-             DestinatairePrevu.Destinataire => [0..*]
+             DestinatairePrevu.destinataire => [0..*]
         } 
 
         class DocumentDeReference{
@@ -248,7 +248,104 @@ package IG #DDDDDD{
 
              Validateur => [None..None]
              Validateur.dateHeureAttestationValidite => [1..1]
-             Validateur.Validateur => [1..1]
+             Validateur.validateur => [1..1]
+        } 
+
+        class FrBundleDocument{
+
+             Bundle.identifier => [1..None]
+             Bundle.type => [None..None]
+             Bundle.timestamp => [1..None]
+             Bundle.entry => [7..None]
+             Bundle.entry.fullUrl => [1..None]
+             Bundle.entry:composition => [1..1]
+             Bundle.entry:composition.resource => [None..None]
+             Bundle.entry:patient => [1..1]
+             Bundle.entry:patient.resource => [None..None]
+             Bundle.entry:practitionerRole => [1..*]
+             Bundle.entry:practitionerRole.resource => [None..None]
+             Bundle.entry:practitioner => [1..*]
+             Bundle.entry:practitioner.resource => [None..None]
+             Bundle.entry:organization => [1..*]
+             Bundle.entry:organization.resource => [None..None]
+             Bundle.entry:device => [0..1]
+             Bundle.entry:device.resource => [None..None]
+             Bundle.entry:encounter => [1..*]
+             Bundle.entry:encounter.resource => [None..None]
+             Bundle.entry:location => [1..*]
+             Bundle.entry:location.resource => [None..None]
+             Bundle.entry:relatedPerson => [0..*]
+             Bundle.entry:relatedPerson.resource => [None..None]
+        } 
+
+        class FrCompositionDocument{
+
+             Composition.meta.profile => [None..None]
+             Composition.meta.profile:canonical => [0..1]
+             Composition.language => [1..None]
+             Composition.extension => [1..None]
+             Composition.extension:R5-Composition-version => <&plus>[1..None]
+             Composition.extension:data-enterer => <&plus>[None..None]
+             Composition.extension:data-enterer.extension => <&plus>[3..None]
+             Composition.extension:data-enterer.extension:type => <&plus>[None..1]
+             Composition.extension:data-enterer.extension:time => <&plus>[1..None]
+             Composition.extension:data-enterer.extension:party => <&plus>[None..None]
+             Composition.extension:data-enterer.extension:party.value[x] => <&plus>[None..None]
+             Composition.extension:informant => <&plus>[None..None]
+             Composition.extension:informant.extension:type => <&plus>[None..1]
+             Composition.extension:informant.extension:party => <&plus>[None..None]
+             Composition.extension:informant.extension:party.value[x] => <&plus>[None..None]
+             Composition.extension:information-recipient => <&plus>[None..None]
+             Composition.extension:information-recipient.extension:type => <&plus>[None..1]
+             Composition.extension:information-recipient.extension:type.value[x] => <&plus>[None..None]
+             Composition.extension:information-recipient.extension:party => <&plus>[None..None]
+             Composition.extension:information-recipient.extension:party.value[x] => <&plus>[None..None]
+             Composition.extension:participant => <&plus>[None..None]
+             Composition.extension:participant.extension => <&plus>[3..None]
+             Composition.extension:participant.extension:type => <&plus>[None..1]
+             Composition.extension:participant.extension:type.value[x] => <&plus>[None..None]
+             Composition.extension:participant.extension:function => <&plus>[None..1]
+             Composition.extension:participant.extension:function.value[x] => <&plus>[None..None]
+             Composition.extension:participant.extension:time => <&plus>[1..None]
+             Composition.extension:participant.extension:party => <&plus>[None..None]
+             Composition.extension:participant.extension:party.value[x] => <&plus>[None..None]
+             Composition.identifier => [1..None]
+             Composition.status => [None..None]
+             Composition.type => [None..None]
+             Composition.subject => [None..None]
+             Composition.subject.reference => [1..None]
+             Composition.encounter => [1..None]
+             Composition.date => [None..None]
+             Composition.author => [None..None]
+             Composition.author.extension => [1..None]
+             Composition.author.extension:time => <&plus>[1..1]
+             Composition.title => [None..None]
+             Composition.confidentiality => [1..None]
+             Composition.attester => [1..None]
+             Composition.attester:legal_attester => [1..None]
+             Composition.attester:legal_attester.time => [1..None]
+             Composition.attester:legal_attester.party => [1..None]
+             Composition.attester:professional_attester => [None..None]
+             Composition.attester:professional_attester.time => [1..None]
+             Composition.attester:professional_attester.party => [1..None]
+             Composition.custodian => [None..None]
+             Composition.relatesTo => [1..None]
+             Composition.relatesTo.target[x] => [None..None]
+             Composition.relatesTo.target[x]:targetIdentifier => [None..None]
+             Composition.relatesTo.target[x]:targetIdentifier.type => [1..None]
+             Composition.relatesTo:replaced_document => [None..1]
+             Composition.relatesTo:transformed_document => [0..1]
+             Composition.relatesTo:transformed_document.code => [None..None]
+             Composition.event => [1..None]
+             Composition.event.extension => [None..None]
+             Composition.event.extension:perfomer => <&plus>[0..1]
+             Composition.event.period => [None..None]
+             Composition.event.detail => [None..1]
+             Composition.event:principalEvent => [1..1]
+             Composition.event:principalEvent.extension => [1..None]
+             Composition.event:principalEvent.extension:perfomer => <&plus>[1..1]
+             Composition.event:principalEvent.period => [1..None]
+             Composition.section => [None..None]
         } 
 
         class FrAssignedAuthor{
@@ -854,15 +951,192 @@ package IG #DDDDDD{
              ServiceEvent.performer => [None..1]
              ServiceEvent.performer.nullFlavor => [None..0]
              ServiceEvent.performer.typeCode => [None..None]
+        } 
+
+        class FrDeviceDocument{
+
+             Device.identifier => [1..None]
+             Device.deviceName.name => [None..None]
+             Device.deviceName.type => [None..None]
+             Device.type => [None..None]
+             Device.owner => [1..None]
+        } 
+
+        class FrEncounterDocument{
+
+             Encounter.type => [None..None]
+             Encounter.participant => [None..None]
+             Encounter.participant:responsibleParty => [0..1]
+             Encounter.participant:responsibleParty.type => [None..None]
+             Encounter.participant:responsibleParty.type.coding.system => [None..None]
+             Encounter.participant:responsibleParty.type.coding.code => [None..None]
+             Encounter.participant:responsibleParty.individual => [1..None]
+             Encounter.participant:encounterParticipant => [0..*]
+             Encounter.participant:encounterParticipant.type => [None..None]
+             Encounter.participant:encounterParticipant.individual => [1..None]
+             Encounter.period => [None..None]
+             Encounter.hospitalization.dischargeDisposition => [None..None]
+             Encounter.hospitalization.dischargeDisposition.coding.system => [None..None]
+             Encounter.location => [1..1]
+             Encounter.location.location => [None..None]
+        } 
+
+        class HumanNameDocument{
+
+             HumanName.family => [1..None]
+             HumanName.prefix => [None..None]
+             HumanName.suffix => [None..None]
+        } 
+
+        class FrLocationDocument{
+
+             Location.name => [None..None]
+             Location.type => [None..None]
+             Location.type.coding => [1..None]
+             Location.type.coding:secteurActivite => [1..1]
+             Location.type.coding:secteurActivite.code => [None..None]
+             Location.type.coding:categorieEtablissement => [0..1]
+             Location.type.coding:categorieEtablissement.code => [None..None]
+             Location.address => [None..None]
+        } 
+
+        class FrOrganizationDocument{
+
+             Organization.identifier => [None..None]
+             Organization.type:standardIndustryClassCode => [0..1]
+        } 
+
+        class FrPatientDocument{
+
+             Patient => [None..None]
+        } 
+
+        class FrPatientINSDocument{
+
+             Patient.name:usualName => [None..None]
+             Patient.name:usualName.family => [None..None]
+             Patient.name:usualName.given => [None..1]
+             Patient.name:officialName => [None..None]
+             Patient.name:officialName.extension:birth-list-given-name => <&plus>[None..None]
+             Patient.name:officialName.family => [None..None]
+             Patient.name:officialName.given => [None..None]
+             Patient.contact.relationship:Role => [None..None]
+             Patient.contact.relationship:RelationType => [None..None]
+             Patient.contact.name => [1..None]
+             Patient.generalPractitioner => [None..None]
+        } 
+
+        class FrPractitionerDocument{
+
+             Practitioner.identifier => [1..None]
+             Practitioner.name => [1..1]
+             Practitioner.name.family => [1..None]
+             Practitioner.name.given => [None..1]
+             Practitioner.qualification:savoirFaire => [None..None]
+             Practitioner.qualification:savoirFaire/professionMedecin => [0..1]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding => [None..None]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:savoirFaire => [0..1]
+             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:typeSavoirFaire => [0..1]
+             Practitioner.qualification:role => [0..1]
+             Practitioner.qualification:role.code.coding => [None..None]
+        } 
+
+        class FrPractitionerRoleDocument{
+
+             PractitionerRole.practitioner => [None..None]
+             PractitionerRole.organization => [None..None]
+             PractitionerRole.code:functionCode => [0..1]
+             PractitionerRole.code:functionCode.coding => [None..None]
+             PractitionerRole.code:classCode => [0..1]
+             PractitionerRole.code:classCode.coding.code => [None..None]
+             PractitionerRole.code:typeCode => [0..1]
+             PractitionerRole.code:typeCode.coding => [None..None]
+        } 
+
+        class FrRelatedPersonDocument{
+
+             RelatedPerson.relationship:Role => [None..None]
+             RelatedPerson.relationship:Role.coding.code => [None..None]
+             RelatedPerson.relationship:Role.coding.display => [None..None]
+             RelatedPerson.relationship:RelationType => [None..1]
+             RelatedPerson.name => [1..1]
+             RelatedPerson.name.given => [None..1]
          }
 
      }
      package extension #paleturquoise {
 
+     FrCompositionDocument -[#black,dashed,thickness=2]-> FrAuthorTimeExtension
+     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
+     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
 
+        class FrAuthorTimeExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrPerformerEvent{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
          }
      }
      package valueset #PaleVioletRed{
+
+        class FRValueSetParticipationType  
+
+     FrCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
+
+        class FRValueSetSavoirFaireProfessionMedecin  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionMedecin
+
+        class FRValueSetTypeSavoirFaireProfessionMedecin  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionMedecin
+
+        class FRValueSetSavoirFaireProfessionPharmacien  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionPharmacien
+
+        class FRValueSetTypeSavoirFaireProfessionPharmacien  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionPharmacien
+
+        class FRValueSetSavoirFaireProfessionChirurgienDentiste  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionChirurgienDentiste
+
+        class FRValueSetTypeSavoirFaireProfessionChirurgienDentiste  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionChirurgienDentiste
+
+        class FRValueSetSavoirFaireProfessionInfirmier  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionInfirmier
+
+        class FRValueSetTypeSavoirFaireProfessionInfirmier  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionInfirmier
+
+        class FRValueSetRolePriseCharge  
+
+     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetRolePriseCharge
        }
 
 package "Ressources de base" #palegreen {
@@ -938,6 +1212,14 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Validateur
+
+ class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
+
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
+
+ class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
+
+    classd9daa32262ad3cdcf2aad9f33da44536 --> FrCompositionDocument
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor" as  class58510d48686a6398080b7be0a9488a07 
 
@@ -1078,5 +1360,45 @@ package "Ressources de base" #palegreen {
  class "http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent" as  class21fc45b6eacaebf264ceab7c3130a980 
 
     class21fc45b6eacaebf264ceab7c3130a980 --> FrServiceEvent
+
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-device" as  class258a7cfbd366b829153b76133f2929f3 
+
+    class258a7cfbd366b829153b76133f2929f3 --> FrDeviceDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" as  class67c94c9a57029ce118810d8d7e718509 
+
+    class67c94c9a57029ce118810d8d7e718509 --> FrEncounterDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name" as  classab70be087e84d984395444c4643fb763 
+
+    classab70be087e84d984395444c4643fb763 --> HumanNameDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
+
+    class505b865d93b3b02ed3aff95e782d498a --> FrLocationDocument
+
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization" as  class02104d9d29574b85b8bdd491de969f0d 
+
+    class02104d9d29574b85b8bdd491de969f0d --> FrOrganizationDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" as  classcb72a5551de902d7716887df67489a97 
+
+    classcb72a5551de902d7716887df67489a97 --> FrPatientDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins" as  class4183c8825d56dc7b36e75f7f711f8b6b 
+
+    class4183c8825d56dc7b36e75f7f711f8b6b --> FrPatientINSDocument
+
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner" as  class8e95a74d3099b6c1bdd4ef690920bb75 
+
+    class8e95a74d3099b6c1bdd4ef690920bb75 --> FrPractitionerDocument
+
+ class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole" as  class409d7284b1fcd82a5ca90685afaba163 
+
+    class409d7284b1fcd82a5ca90685afaba163 --> FrPractitionerRoleDocument
+
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person" as  class73d64d75d9b8829a511eb36c46458829 
+
+    class73d64d75d9b8829a511eb36c46458829 --> FrRelatedPersonDocument
 }
 @enduml
