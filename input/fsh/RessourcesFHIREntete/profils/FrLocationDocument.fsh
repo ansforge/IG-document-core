@@ -14,7 +14,6 @@ Description: "Ce profil représente le lieu de la prise en charge."
 * type.coding ^slicing.discriminator.type = #value
 * type.coding ^slicing.discriminator.path = "coding.code"
 * type.coding ^slicing.rules = #open
-* type.coding ^short = "Structure de prise en charge : healthCareFacility"
 
 * type.coding contains secteurActivite 1..1
 * type.coding[secteurActivite] ^short = "Secteur d'activité"
