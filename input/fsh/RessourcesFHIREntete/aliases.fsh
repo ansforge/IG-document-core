@@ -13,6 +13,9 @@ Alias: $JDV_J02-XdsHealthcareFacilityTypeCode-CISIS = https://mos.esante.gouv.fr
 Alias: $TRE_R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $JDV_J140-EncounterParticipationType-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS
 Alias: $JDV_J141-RoleClass-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS
+Alias: $jdv-type-systeme-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis
+Alias: $jdv-j368-categorie-etablissement-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis
+Alias: $jdv-role-informateur-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis
 // TRE 
 Alias: $TRE_R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $TRE_G13-OrientationParticuliere = https://mos.esante.gouv.fr/NOS/TRE_G13-OrientationParticuliere/FHIR/TRE-G13-OrientationParticuliere
