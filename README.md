@@ -2,6 +2,8 @@
 
 ![Logo_LEF_CI-SIS](https://user-images.githubusercontent.com/48218773/227532484-eff82649-4e42-49c6-966a-dc3ea78cf59c.png)
 
+https://ansforge.github.io/IG-document-core/main/ig
+
 [A MODIFIER : adapter au lien du projet]
 
 [![Workflow Init](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml)
@@ -26,6 +28,8 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 * D'executer Sushi pour vérifier la grammaire
 * De faire les tests avec le validator_cli
 * De publier les pages : https://ansforge.github.io/{nom du repo}/ig/{nom de la branche}
+
+Exemple - https://ansforge.github.io/IG-document-core/main/ig
 
 # Notes
 
