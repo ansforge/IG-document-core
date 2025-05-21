@@ -23,7 +23,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[+].code = #EnteteDocument.typeDocument
 * group[=].element[=].target.code = #ClinicalDocument.code
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #EnteteDocument.titre
+* group[=].element[+].code = #EnteteDocument.titreDocument
 * group[=].element[=].target.code = #ClinicalDocument.title
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EnteteDocument.dateDeCreation
