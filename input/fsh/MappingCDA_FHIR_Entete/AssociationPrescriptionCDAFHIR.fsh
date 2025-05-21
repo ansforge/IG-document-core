@@ -13,7 +13,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 // Groupe Mapping 1 : modèle métier to CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AssociationPrescription"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of"									
-* group[=].element[+].code = #AssociationPrescription								
+* group[=].element[+].code = #Prescription								
 * group[=].element[=].target.code = #inFulfillmentOf
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #AssociationPrescription.identifiantPrescription							
