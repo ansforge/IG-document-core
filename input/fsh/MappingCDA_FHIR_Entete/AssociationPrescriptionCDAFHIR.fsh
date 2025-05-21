@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition					
 Title: "Mapping du modèle métier AssociationPrescription/CDA/FHIR"
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier de l'association du document à une prescription et l'élément CDA inFulfillmentOf
+ - Mapping 1 : entre le modèle métier "prescription" et l'élément CDA "inFulfillmentOf"
  - Groupe Mapping 2 : entre l'élément CDA inFulfillmentOf et l'extension FHIR OrderExtension"""
 
 * name = "Mapping du modèle métier AssociationPrescription/CDA/FHIR"
