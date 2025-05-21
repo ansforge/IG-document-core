@@ -1,7 +1,7 @@
 Instance: mappingAssociationPriseEnchargeCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition						
-Title: "Mapping du modèle métier AssociationPriseEncharge/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : "Prise en charge" "
 Description: """Ce ConceptMap présente deux groupes de mapping : 
  - Groupe Mapping 1 : entre le modèle métier de l'association du document à une prise en charge et l'élément CDA componentOf
  - Groupe Mapping 2 : entre l'élément CDA componentOf et l'élément FHIR Composition.encounter(Encounter)"""
