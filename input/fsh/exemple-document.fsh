@@ -59,19 +59,19 @@ Description: "Composition exemple pour un CR de Biologie"Usage: #example
 * extension[information-recipient].extension[party].valueReference = Reference(fr-practitioner-role-exemple1) "DR Marcel CAMPARINI" */
 
 
-* extension[InformantExtension].extension[type].valueCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-* extension[InformantExtension].extension[type].valueCodeableConcept.coding[0].code = #INF
+* extension[informant].extension[type].valueCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+* extension[informant].extension[type].valueCodeableConcept.coding[0].code = #INF
 //* extension[InformantExtension].extension[type].valueCodeableConcept.coding[0].display = "informant"
-* extension[InformantExtension].extension[party].valueReference = Reference(fr-patientExemple)
+* extension[informant].extension[party].valueReference = Reference(fr-patientExemple)
 
 
-* extension[ParticipantExtension].extension[type].valueCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-* extension[ParticipantExtension].extension[type].valueCodeableConcept.coding[0].code = #INF
+* extension[participant].extension[type].valueCodeableConcept.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
+* extension[participant].extension[type].valueCodeableConcept.coding[0].code = #INF
 //* extension[ParticipantExtension].extension[type].valueCodeableConcept.coding[0].display = "informant"
 * extension[participant].extension[time].valuePeriod.start = "2025-06-12T10:00:00+01:00"
 * extension[participant].extension[time].valuePeriod.end = "2025-06-12T14:00:00+01:00"
 
-* extension[ParticipantExtension].extension[party].valueReference = Reference(Practitioner/fr-practitioner-role-exemple2)
+* extension[participant].extension[party].valueReference = Reference(Practitioner/fr-practitioner-role-exemple2)
 
 * attester[legal_attester].mode = #legal
 * attester[legal_attester].time = "2024-06-12T15:00:00+01:00"
@@ -91,14 +91,10 @@ Description: "Composition exemple pour un CR de Biologie"Usage: #example
 * subject = Reference(fr-patientExemple)
 * date = "2025-06-12T14:00:00+01:00"
 * confidentiality = #N
-* section[0].title = "Reason for visit Narrative"
-* section[=].code = $LNC#29299-5 "Reason for visit Narrative"
-* section[=].text.status = #additional
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n              <table>\n\n                <thead>\n\n                  <tr>\n\n                    <td>Details</td>\n\n                    <td/>\n\n                  </tr>\n\n                </thead>\n\n                <tbody>\n\n                  <tr>\n\n                    <td>Acute Asthmatic attack. Was wheezing for days prior to admission.</td>\n\n                    <td/>\n\n                  </tr>\n\n                </tbody>\n\n              </table>\n\n            </div>"
 
 * encounter = Reference(encounter-exemple)
 * author = Reference(fr-practitioner-role-exemple1) "DR Marcel CAMPARINI"
-* author.extension[time].valueDateTime = "2024-06-12T13:45:00+01:00"
+* author.extension[time].valueDateTime = "2024-01-04T13:45:00+01:00"
 * title = "Compte rendu d'examens biologiques"
 
 * relatesTo[+].code = #replaces
@@ -109,12 +105,28 @@ Description: "Composition exemple pour un CR de Biologie"Usage: #example
 * relatesTo[=].targetIdentifier.value = "ABC123"
 
 * custodian = Reference(custodianOrganization) "Laboratoire des charmes"
-* confidentiality = #N
-/* * section[0].title = "Section vide"
-* section[=].code = $LNC#29299-5 "Reason for visit Narrative"
+* section[0].title = "Aucune donnée disponible"
+* section[=].code = $LNC#29299-5
 * section[=].text.status = #additional
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n              <table>\n\n                <thead>\n\n                  <tr>\n\n                    <td>Details</td>\n\n                    <td/>\n\n                  </tr>\n\n                </thead>\n\n                <tbody>\n\n                  <tr>\n\n                    <td>Acute Asthmatic attack. Was wheezing for days prior to admission.</td>\n\n                    <td/>\n\n                  </tr>\n\n                </tbody>\n\n              </table>\n\n            </div>"
- */
+* section[=].text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n    
+          <table>\n\n      
+               <thead>\n\n   
+                 <tr>\n\n     
+                       <td>Details</td>\n\n
+                       <td/>\n\n    
+                 </tr>\n\n  
+               </thead>\n\n 
+               <tbody>\n\n                                                                                      
+                 <tr>\n\n                    
+                     <td>Aucune donnée disponible (Section vide)</td>\n\n                    
+                     <td/>\n\n                  
+                 </tr>\n\n               
+               </tbody>\n\n             
+           </table>\n\n          
+</div>"
+* section[=].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#notasked "Not Asked"
+
 
 Instance: fr-patientExemple
 InstanceOf: FrPatientINSDocument
