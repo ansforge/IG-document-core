@@ -19,7 +19,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #Prescription.identifiantPrescription							
 * group[=].element[=].target.code = #inFulfillmentOf.order.id
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPrescription.accessionNumber								
+* group[=].element[+].code = #Prescription.accessionNumber								
 * group[=].element[=].target.code = #inFulfillmentOf.order.ps3-20:accessionNumber
 * group[=].element[=].target.equivalence = #equivalent
 
