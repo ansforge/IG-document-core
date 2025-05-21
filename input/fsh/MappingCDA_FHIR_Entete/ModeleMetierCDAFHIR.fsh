@@ -122,7 +122,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.code = #Composition.extension:R5-Composition-version
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = " http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"
-* group[=].element[+].code = #ClinicalDocument.documentationOf.serviceEvent.statusCode
+* group[=].element[+].code = #ClinicalDocument.documentationOf.serviceEvent.lab:statusCode
 * group[=].element[=].target.code = #Composition.status
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ClinicalDocument.recordTarget
