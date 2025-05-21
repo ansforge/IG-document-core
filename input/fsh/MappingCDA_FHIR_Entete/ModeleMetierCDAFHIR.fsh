@@ -35,7 +35,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[+].code = #EnteteDocument.languePrincipaleDocument
 * group[=].element[=].target.code = #ClinicalDocument.languageCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #EnteteDocument.identifiantDuLotDeVersions
+* group[=].element[+].code = #EnteteDocument.identifiantLotDeVersionsDocument
 * group[=].element[=].target.code = #ClinicalDocument.setId
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EnteteDocument.versionDocument
