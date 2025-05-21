@@ -42,7 +42,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.code = #ClinicalDocument.versionNumber
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EnteteDocument.StatutDocument
-* group[=].element[=].target.code = #ClinicalDocument.documentationOf.serviceEvent.statusCode
+* group[=].element[=].target.code = #ClinicalDocument.documentationOf.serviceEvent.lab:statusCode
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EnteteDocument.patient
 * group[=].element[=].target.code = #ClinicalDocument.recordTarget
