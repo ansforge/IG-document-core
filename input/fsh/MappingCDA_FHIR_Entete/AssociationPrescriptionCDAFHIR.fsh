@@ -6,7 +6,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
  - Mapping 1 : entre le modèle métier "prescription" et l'élément CDA "inFulfillmentOf"
  - Mapping 2 : entre l'élément CDA "inFulfillmentOf" et l'extension FHIR "OrderExtension""""
 
-* name = "Mapping du modèle métier AssociationPrescription/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : "Prescription""
 * status = #draft
 * experimental = false
 
