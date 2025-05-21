@@ -83,7 +83,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[+].code = #EnteteDocument.consentementAssocie
 * group[=].element[=].target.code = #ClinicalDocument.authorization
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #EnteteDocument.associationPriseEncharge
+* group[=].element[+].code = #EnteteDocument.priseEncharge
 * group[=].element[=].target.code = #ClinicalDocument.componentOf
 * group[=].element[=].target.equivalence = #equivalent
 
