@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping du modèle métier AssociationPrescription/CDA/FHIR"
 Description: """Ce ConceptMap présente deux groupes de mapping : 
  - Mapping 1 : entre le modèle métier "prescription" et l'élément CDA "inFulfillmentOf"
- - Groupe Mapping 2 : entre l'élément CDA inFulfillmentOf et l'extension FHIR OrderExtension"""
+ - Mapping 2 : entre l'élément CDA "inFulfillmentOf" et l'extension FHIR "OrderExtension""""
 
 * name = "Mapping du modèle métier AssociationPrescription/CDA/FHIR"
 * status = #draft
