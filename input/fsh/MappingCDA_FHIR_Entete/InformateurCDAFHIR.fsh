@@ -1,12 +1,12 @@
 Instance: mappingInformateurCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Informateur/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Informateur\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier de l'informateur et l'élément CDA informant
- - Groupe Mapping 2 : entre l'élément CDA informant et l'extension FHIR InformantExtension"""
+ - Mapping 1 : entre le modèle métier \"informateur\" et l'élément CDA \"informant\"
+ - Mapping 2 : entre l'élément CDA \"informant\" et l'extension FHIR \"InformantExtension\" """
 
-* name = "Mapping du modèle métier Informateur/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Informateur\""
 * status = #draft
 * experimental = false
 

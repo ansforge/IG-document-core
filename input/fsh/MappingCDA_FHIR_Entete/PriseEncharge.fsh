@@ -1,63 +1,66 @@
-Instance: mappingAssociationPriseEnchargeCDAFHIR					
+Instance: mappingPriseEnchargeCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition						
-Title: "Mapping Métier/CDA/FHIR : "Prise en charge" "
+Title: "Mapping Métier/CDA/FHIR : \"Prise en charge\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier de l'association du document à une prise en charge et l'élément CDA componentOf
- - Groupe Mapping 2 : entre l'élément CDA componentOf et l'élément FHIR Composition.encounter(Encounter)"""
+ - Mapping 1 : entre le modèle métier \"prise en charge\" et l'élément CDA \"componentOf\"
+ - Mapping 2 : entre l'élément CDA \"componentOf\" et l'élément FHIR \"Composition.encounter(Encounter)\" """
 
-* name = "Mapping du modèle métier AssociationPriseEncharge/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Prise en charge\""
 * status = #draft
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AssociationPriseEncharge"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of"									
-* group[=].element[+].code = #AssociationPriseEncharge								
+* group[=].element[+].code = #PriseEncharge								
 * group[=].element[=].target.code = #componentOf
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.identifiantPriseEnCharge							
+* group[=].element[+].code = #PriseEncharge.identifiantPriseEnCharge							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.id
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.typePriseEnCharge							
+* group[=].element[+].code = #PriseEncharge.typePriseEnCharge							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.code
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.dateDebutFinPriseEnCharge							
+* group[=].element[+].code = #PriseEncharge.dateDebutFinPriseEnCharge							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.typeSortie							
+* group[=].element[+].code = #PriseEncharge.typeSortie							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.dischargeDispositionCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.responsablePriseEnCharge							
+* group[=].element[+].code = #PriseEncharge.responsablePriseEnCharge							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.responsibleParty.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément responsablePriseEnCharge est de type PersonneStructure."
-* group[=].element[+].code = #AssociationPriseEncharge.personneImpliqueePriseEnCharge								
+* group[=].element[+].code = #PriseEncharge.personneImpliqueePriseEnCharge								
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.encounterParticipant
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation								
+* group[=].element[+].code = #PriseEncharge.personneImpliqueePriseEnCharge.typeParticipation								
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.encounterParticipant@typeCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation							
+* group[=].element[+].code = #PriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.encounterParticipant.time
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique							
+* group[=].element[+].code = #PriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.encounterParticipant.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément personneImpliqueePriseEnCharge est de type PersonneStructure. "
-* group[=].element[+].code = #AssociationPriseEncharge.lieuPriseEnCharge							
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.location
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.lieuPriseEnCharge.structure							
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge.structure							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.lieuPriseEnCharge.structure.secteurActivite				
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge.structure.secteurActivite				
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility.code
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.lieuPriseEnCharge.structure.nomStructure							
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement			
+* group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility.code.translation
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge.structure.nomStructure							
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility.location.name
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #AssociationPriseEncharge.lieuPriseEnCharge.structure.adresse						
+* group[=].element[+].code = #PriseEncharge.lieuPriseEnCharge.structure.adresse						
 * group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility.location.addr
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -105,6 +108,9 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #Encounter.location.Location
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #componentOf.encompassingEncounter.location.healthcareFacility.code				
+* group[=].element[=].target.code = #Encounter.location.Location.type
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #componentOf.encompassingEncounter.location.healthcareFacility.code.translation
 * group[=].element[=].target.code = #Encounter.location.Location.type
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #componentOf.encompassingEncounter.location.healthcareFacility.location.name							

@@ -1,12 +1,12 @@
 Instance: mappingDestinatairePrevuCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier DestinatairePrevu/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Destinataire prévu\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du destinataire prévu du document et l'élément CDA informationRecipient
- - Groupe Mapping 2 : entre l'élément CDA informationRecipient et l'extension FHIR InformationRecipientExtension"""
+ - Mapping 1 : entre le modèle métier \"destinataire\" et l'élément CDA \"informationRecipient\"
+ - Mapping 2 : entre l'élément CDA \"informationRecipient\" et l'extension FHIR \"InformationRecipientExtension\" """
 
-* name = "Mapping du modèle métier DestinatairePrevu/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Destinataire prévu\""
 * status = #draft
 * experimental = false
 

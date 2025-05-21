@@ -1,12 +1,12 @@
 Instance: mappingSystemeFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Systeme/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du systeme et l'élément CDA assignedAuthor
- - Groupe Mapping 2 : entre l'élément CDA assignedAuthor et le profil FHIR FrDeviceDocument"""
+ - Mapping 1 : entre le modèle métier \"SystemeStructureAuteur\" et l'élément CDA \"assignedAuthor\"
+ - Mapping 2 : entre l'élément CDA \"assignedAuthor\" et le profil FHIR \"FrDeviceDocument\" """
 
-* name = "Mapping du modèle métier Systeme/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\""
 * status = #draft
 * experimental = false
 

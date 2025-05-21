@@ -1,12 +1,12 @@
 Instance: mappingConsentementCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Consentement/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Consentement\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du consentement associé au document et l'élément CDA authorization
- - Groupe Mapping 2 : entre l'élément CDA authorization et l'extension FHIR ConsentExtension"""
+ - Mapping 1 : entre le modèle métier \"ConsentementAssocie\" et l'élément CDA \"authorization\"
+ - Mapping 2 : entre l'élément CDA \"authorization\" et l'extension FHIR \"ConsentExtension\" """
 
-* name = "Mapping du modèle métier Consentement/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Consentement\""
 * status = #draft
 * experimental = false
 

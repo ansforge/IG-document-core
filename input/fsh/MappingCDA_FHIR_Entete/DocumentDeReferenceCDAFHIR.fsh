@@ -1,25 +1,25 @@
-Instance: mappingDocumentReferenceCDAFHIR					
+Instance: mappingDocumentDeReferenceCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier DocumentReference/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"DocumentDeReference\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du document de référence et l'élément CDA relatedDocument
- - Groupe Mapping 2 : entre l'élément CDA relatedDocument et l'élément FHIR Composition.relatesTo"""
+ - Mapping 1 : entre le modèle métier \"documentDeReference\" et l'élément CDA \"relatedDocument\"
+ - Mapping 2 : entre l'élément CDA \"relatedDocument\" et l'élément FHIR \"Composition.relatesTo\" """
 
-* name = "Mapping du modèle métier DocumentReference/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"DocumentDeReference\""
 * status = #draft
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentReference"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document"									
-* group[=].element[+].code = #DocumentReference							
+* group[=].element[+].code = #DocumentDeReference							
 * group[=].element[=].target.code = #relatedDocument
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #DocumentReference.typeReference								
+* group[=].element[+].code = #DocumentDeReference.typeReference								
 * group[=].element[=].target.code = #relatedDocument@typeCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #DocumentReference.identifiantUniqueDocument								
+* group[=].element[+].code = #DocumentDeReference.identifiantUniqueDocument								
 * group[=].element[=].target.code = #relatedDocument.parentDocument.id
 * group[=].element[=].target.equivalence = #equivalent
 

@@ -1,12 +1,12 @@
 Instance: mappingEvenementCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Evenement/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Evènement documenté\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier Evenement et l'élément CDA documentationOf
- - Groupe Mapping 2 : entre l'élément CDA documentationOf et l'élément FHIR Composition.event"""
+ - Mapping 1 :entre le modèle métier \"evenement\" et l'élément CDA \"documentationOf\"
+ - Mapping 2 : entre l'élément CDA \"documentationOf\" et l'élément FHIR \"Composition.event\" """
 
-* name = "Mapping du modèle métier Evenement/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Evènement documenté\""
 * status = #draft
 * experimental = false
 

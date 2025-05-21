@@ -1,13 +1,13 @@
 Instance: mappingmodelemetierCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping du modèle logique métier de l'en-tête /CDA / FHIR"
+Title: "Mapping Métier/CDA/FHIR  : Entête d'un document"
 Description: """Ce ConceptMap présente trois groupes de mapping :
- - Groupe Mapping 1 : entre le modèle logique métier de l'en-tête et l'élément CDA clinicalDocument
- - Groupe Mapping 2 : entre l'élément CDA clinicalDocument et le profil FHIR FrBundleDocument
- - Groupe Mapping 3 : entre l'élément CDA clinicalDocument et le profil FHIR FrCompositionDocument"""
+ - Mapping 1 : entre le modèle métier \"EnteteDocument\" et l'élément CDA \"clinicalDocument\"
+ - Mapping 2 : entre l'élément CDA \"clinicalDocument\" et le profil FHIR \"FrBundleDocument\"
+ - Mapping 3 : entre l'élément CDA \"clinicalDocument\" et le profil FHIR \"FrCompositionDocument\" """
 
-* name = "Mapping du modèle logique métier de l'en-tête/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR  : Entête d'un document"
 * status = #draft
 * experimental = false
 
@@ -133,11 +133,11 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole)"	
 * group[=].element[+].code = #ClinicalDocument.dataEnterer
-* group[=].element[=].target.code = #Composition.DataEntererExtension
+* group[=].element[=].target.code = #Composition.extension:data-enterer
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension"
 * group[=].element[+].code = #ClinicalDocument.informant
-* group[=].element[=].target.code = #Composition.extension:InformantExtension
+* group[=].element[=].target.code = #Composition.extension:informant
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"
 * group[=].element[+].code = #ClinicalDocument.custodian
@@ -145,7 +145,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.custodian.resolve().ofType(Organization)"
 * group[=].element[+].code = #ClinicalDocument.informationRecipient
-* group[=].element[=].target.code = #Composition.extension:InformationRecipientExtension
+* group[=].element[=].target.code = #Composition.extension:informationRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension"
 * group[=].element[+].code = #ClinicalDocument.legalAuthenticator
@@ -157,11 +157,11 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "attester.mode = 'professional'"
 * group[=].element[+].code = #ClinicalDocument.participant
-* group[=].element[=].target.code = #Composition.extension:ParticipantExtension
+* group[=].element[=].target.code = #Composition.extension:participant
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension"
 * group[=].element[+].code = #ClinicalDocument.inFulfillmentOf
-* group[=].element[=].target.code = #Composition.extension:OrderExtension
+* group[=].element[=].target.code = #Composition.extension:order
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension"
 * group[=].element[+].code = #ClinicalDocument.documentationOf
@@ -171,7 +171,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.code = #Composition.relatesTo
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ClinicalDocument.authorization
-* group[=].element[=].target.code = #Composition.extension:ConsentExtension
+* group[=].element[=].target.code = #Composition.extension:consent
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension"
 * group[=].element[=].target.equivalence = #equivalent

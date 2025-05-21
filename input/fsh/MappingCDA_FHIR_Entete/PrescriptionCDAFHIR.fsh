@@ -1,12 +1,12 @@
-Instance: mappingAssociationPrescriptionCDAFHIR					
+Instance: mappingPrescriptionCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping Métier/CDA/FHIR : "Prescription" "
+Title: "Mapping Métier/CDA/FHIR : \"Prescription\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Mapping 1 : entre le modèle métier "prescription" et l'élément CDA "inFulfillmentOf"
- - Mapping 2 : entre l'élément CDA "inFulfillmentOf" et l'extension FHIR "OrderExtension""""
+ - Mapping 1 : entre le modèle métier \"prescription\" et l'élément CDA \"inFulfillmentOf\"
+ - Mapping 2 : entre l'élément CDA \"inFulfillmentOf\" et l'extension FHIR \"OrderExtension\" """
 
-* name = "Mapping Métier/CDA/FHIR : "Prescription""
+* name = "Mapping Métier/CDA/FHIR : \"Prescription\""
 * status = #draft
 * experimental = false
 

@@ -1,12 +1,12 @@
 Instance: mappingValidateurCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Validateur/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Validateur\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du validateur du document et l'élément CDA authenticator
- - Groupe Mapping 2 : entre l'élément CDA authenticator et l'élément FHIR Composition.attester"""
+ - Mapping 1 : entre le modèle métier \"validateur\" et l'élément CDA \"authenticator\"
+ - Mapping 2 : entre l'élément CDA \"authenticator\" et l'élément FHIR \"Composition.attester\" """
 
-* name = "Mapping du modèle métier Validateur/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Validateur\""
 * status = #draft
 * experimental = false
 

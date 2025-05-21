@@ -1,12 +1,12 @@
 Instance: mappingOperateurSaisieCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Opérateur de saisie/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\""
 Description: """Ce ConceptMap présente deux groupes de mapping :
- - Groupe Mapping 1 : entre le modèle logique métier de l'opérateur de saisie et l'élément CDA dataEnterer
- - Groupe Mapping 2 : entre l'élément CDA dataEnterer et l'extension FHIR DataEntererExtension"""
+ - Mapping 1 : entre le modèle métier \"operateurSaisie\" et l'élément CDA \"dataEnterer\"
+ - Mapping 2 : entre l'élément CDA \"dataEnterer\" et l'extension FHIR \"DataEntererExtension\" """
 
-* name = "Mapping du modèle métier Opérateur de saisie/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\""
 * status = #draft
 * experimental = false
 

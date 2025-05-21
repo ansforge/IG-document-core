@@ -1,12 +1,12 @@
 Instance: mappingPatientCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Patient/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Patient/Usager\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du Patient/Usager et l'élément CDA recordTarget
- - Groupe Mapping 2 : entre l'élément CDA recordTarget et le profil FHIR FrPatientDocument"""
+ - Mapping 1 : entre le modèle métier \"patient\" et l'élément CDA \"recordTarget\"
+ - Mapping 2 : entre l'élément CDA \"recordTarget\" et le profil FHIR \"FrPatientDocument\" """
 
-* name = "Mapping du modèle métier Patient/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Patient/Usager\""
 * status = #draft
 * experimental = false
 
@@ -25,86 +25,86 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #Patient.coordonneesTelecom								
 * group[=].element[=].target.code = #recordTarget.patientRole.telecom								
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms						
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient						
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name								
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.noms										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.nom									
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family										
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.noms.nomNaissance										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.nom.nomNaissance										
 * group[=].element[=].target.code = #PrecordTarget.patientRole.patient.name.family@qualifier='BR'									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.noms.nomUtilise										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.nom.nomUtilise										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='CL'									
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.prenom										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given										
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms.listePrenoms										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given									
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms.premierPrenom										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='BR'									
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.personnePhysique.nomsPrenoms.prenoms.prenomUtilise										
+* group[=].element[+].code = #Patient.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='CL'									
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Patient.sexe								
+* group[=].element[+].code = #Patient.personnePhysique.sexe								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.administrativeGenderCode									
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.dateNaissance									
+* group[=].element[+].code = #Patient.personnePhysique.dateNaissance								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.birthTime										
 * group[=].element[=].target.equivalence = #equivalent										
-* group[=].element[+].code = #Patient.indicateurDeces								
+* group[=].element[+].code = #Patient.personnePhysique.indicateurDeces								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.sdtc:deceasedInd											
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.dateDeces								
+* group[=].element[+].code = #Patient.personnePhysique.dateDeces								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.sdtc:deceasedTime										
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.grossesseMultiple								
+* group[=].element[+].code = #Patient.personnePhysique.grossesseMultiple								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.sdtc:multipleBirthInd										
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #Patient.numeroOrdreNaissance								
+* group[=].element[+].code = #Patient.personnePhysique.numeroOrdreNaissance								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.sdtc:multipleBirthOrderNumber										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient								
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.adresse								
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.adresse								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.addr										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.coordonneesTelecom								
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.coordonneesTelecom								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.telecom										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.personneRepresentantPatient.nomsPrenoms							
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient								
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianPerson.name										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.personneRepresentantPatient.nom						
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom					
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianPerson.family										
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.personneRepresentantPatient.prenom						
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom						
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianPerson.given									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.structureRepresentantPatient						
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.structureRepresentantPatient						
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianOrganization									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.structureRepresentantPatient.identifiant						
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant					
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianOrganization.id									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.representantPatient.structureRepresentantPatient.nom					
+* group[=].element[+].code = #Patient.personnePhysique.representantPatient.structureRepresentantPatient.nom					
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.guardian.guardianOrganization.name									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.lieuNaissance					
+* group[=].element[+].code = #Patient.personnePhysique.lieuNaissance				
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.lieuNaissance.adresseEtCodeOfficielGeographique					
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place									
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.lieuNaissance.nomLieuNaissance				
+* group[=].element[+].code = #Patient.personnePhysique.lieuNaissance.nomLieuNaissance				
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place.name									
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Patient.lieuNaissance.CodeOfficielGeographique					
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place.country										
+* group[=].element[+].code = #Patient.personnePhysique.lieuNaissance.adresseLieuNaissance					
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place.addr									
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Patient.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance				
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.birthPlace.place.addr.county									
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA to FHIR

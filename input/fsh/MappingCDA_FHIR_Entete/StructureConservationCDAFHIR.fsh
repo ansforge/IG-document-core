@@ -1,12 +1,12 @@
 Instance: mappingStructureConservationCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier StructureConservation/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier de la structure chargée de la conservation du document et l'élément CDA custodian
- - Groupe Mapping 2 : entre l'élément CDA custodian et l'élément FHIR Composition.custodian"""
+ - Mapping 1 : entre le modèle métier \"structureConservation\" et l'élément CDA \"custodian\"
+ - Mapping 2 : entre l'élément CDA \"custodian\" et l'élément FHIR \"Composition.custodian\" """
 
-* name = "Mapping du modèle métier StructureConservation/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\""
 * status = #draft
 * experimental = false
 

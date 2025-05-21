@@ -1,13 +1,13 @@
 Instance: mappingPersonneStructureRelatedEntityFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier PersonneStructure/CDA/FHIR"
-Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure et l'élément CDA relatedEntity
- - Groupe Mapping 2 : entre l'élément CDA relatedEntity et le profil FHIR FrRelatedPersonDocument
- - Groupe Mapping 3 : entre l'élément CDA relatedEntity et l'élément FHIR Patient.contact"""
+Title: "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\""
+Description: """Ce ConceptMap présente trois groupes de mapping: 
+ - Mapping 1 : entre le modèle métier \"PersonneStructure\" et l'élément CDA \"relatedEntity\"
+ - Mapping 2 : entre l'élément CDA \"relatedEntity\" et le profil FHIR \"FrRelatedPersonDocument\"
+ - Mapping 3 : entre l'élément CDA \"relatedEntity\" et l'élément FHIR \"Patient.contact\" """
 
-* name = "Mapping du modèle métier PersonneStructure/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\""
 * status = #draft
 * experimental = false
 

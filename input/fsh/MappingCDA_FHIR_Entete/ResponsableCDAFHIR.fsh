@@ -1,12 +1,12 @@
 Instance: mappingResponsableCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping du modèle métier Responsable/CDA/FHIR"
+Title: "Mapping Métier/CDA/FHIR : \"Responsable du document\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
- - Groupe Mapping 1 : entre le modèle métier du responsable du document et l'élément CDA legalAuthenticator
- - Groupe Mapping 2 : entre l'élément CDA legalAuthenticator et l'élément FHIR Composition.attester"""
+ - Mapping 1 : entre le modèle métier \"responsable\" et l'élément CDA \"legalAuthenticator\"
+ - Mapping 2 : entre l'élément CDA \"legalAuthenticator\" et l'élément FHIR \"Composition.attester\" """
 
-* name = "Mapping du modèle métier Responsable/CDA/FHIR"
+* name = "Mapping Métier/CDA/FHIR : \"Responsable du document\""
 * status = #draft
 * experimental = false
 
