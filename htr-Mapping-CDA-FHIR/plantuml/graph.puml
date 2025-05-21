@@ -136,7 +136,7 @@ package IG #DDDDDD{
              Patient.personnePhysique.lieuNaissance => [0..1]
              Patient.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
              Patient.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
-             Patient.personnePhysique.lieuNaissance.CodeOfficielGeographiqueLieuNaissance => [0..1]
+             Patient.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
         } 
 
         class PersonneStructure{
@@ -207,7 +207,8 @@ package IG #DDDDDD{
              PriseEncharge.lieuPriseEnCharge.structure.nomStructure => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.adresse => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
-             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [0..1]
+             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [1..1]
+             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement => [0..1]
              PriseEncharge.lieuPriseEnCharge.structure.typeStructure => [0..1]
         } 
 
@@ -990,11 +991,14 @@ package IG #DDDDDD{
 
         class FrLocationDocument{
 
+             Location.name => [None..None]
+             Location.type => [None..None]
              Location.type.coding => [1..None]
-             Location.type.coding:code => [1..1]
-             Location.type.coding:code.code => [None..None]
-             Location.type.coding:translation => [0..1]
-             Location.type.coding:translation.code => [None..None]
+             Location.type.coding:secteurActivite => [1..1]
+             Location.type.coding:secteurActivite.code => [None..None]
+             Location.type.coding:categorieEtablissement => [0..1]
+             Location.type.coding:categorieEtablissement.code => [None..None]
+             Location.address => [None..None]
         } 
 
         class FrOrganizationDocument{
@@ -1098,14 +1102,6 @@ package IG #DDDDDD{
         class FRValueSetParticipationType  
 
      FrCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
-
-        class FRValueSetCategorieEtablissement  
-
-     FrLocationDocument -[#black,dotted,thickness=2]-> FRValueSetCategorieEtablissement
-
-        class FRValueSetPatientContactRole  
-
-     FrPatientINSDocument -[#black,dotted,thickness=2]-> FRValueSetPatientContactRole
 
         class FRValueSetSavoirFaireProfessionMedecin  
 

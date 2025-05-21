@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-05-21T08:04:56+00:00"/>
+  <date value="2025-05-21T13:48:36+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -996,7 +996,7 @@
         <reference value="StructureDefinition/fr-location-document"/>
       </reference>
       <name value="Fr Location Document"/>
-      <description value="Ce profil représente la structure de prise en charge."/>
+      <description value="Ce profil représente le lieu de la prise en charge."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR"/>
     </resource>
@@ -1088,32 +1088,10 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/fr-doc-vs-categorie-etablissement"/>
-      </reference>
-      <name value="Fr ValueSet Categorie Etablissement"/>
-      <description value="Catégorie d'établissement"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
         <reference value="ValueSet/fr-doc-vs-participation-type"/>
       </reference>
       <name value="FR ValueSet Participation Type"/>
       <description value="Type de participation : destinataire"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-doc-vs-patient-contact-role"/>
-      </reference>
-      <name value="FR ValueSet Patient Contact Role"/>
-      <description value="Rôle joué par la personne"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1234,32 +1212,8 @@
       <reference>
         <reference value="ConceptMap/mappingmodelemetierCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle logique métier de l'en-tête /CDA / FHIR"/>
-      <description value="Ce ConceptMap présente trois groupes de mapping :&#xA; - Groupe Mapping 1 : entre le modèle logique métier de l'en-tête et l'élément CDA clinicalDocument&#xA; - Groupe Mapping 2 : entre l'élément CDA clinicalDocument et le profil FHIR FrBundleDocument&#xA; - Groupe Mapping 3 : entre l'élément CDA clinicalDocument et le profil FHIR FrCompositionDocument"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/mappingAssociationPrescriptionCDAFHIR"/>
-      </reference>
-      <name value="Mapping du modèle métier AssociationPrescription/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier &quot;prescription&quot; et l'élément CDA &quot;inFulfillmentOf&quot;&#xA; - Groupe Mapping 2 : entre l'élément CDA inFulfillmentOf et l'extension FHIR OrderExtension"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/mappingAssociationPriseEnchargeCDAFHIR"/>
-      </reference>
-      <name value="Mapping du modèle métier AssociationPriseEncharge/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de l'association du document à une prise en charge et l'élément CDA componentOf&#xA; - Groupe Mapping 2 : entre l'élément CDA componentOf et l'élément FHIR Composition.encounter(Encounter)"/>
+      <name value="Mapping Métier/CDA/FHIR  : Entête d'un document"/>
+      <description value="Ce ConceptMap présente trois groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;EnteteDocument\&quot; et l'élément CDA \&quot;clinicalDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrBundleDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrCompositionDocument\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1270,8 +1224,8 @@
       <reference>
         <reference value="ConceptMap/mappingAuteurCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Auteur/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de l'auteur et l'élément CDA author&#xA; - Groupe Mapping 2 : entre l'élément CDA author et l'élément FHIR Composition.author"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Auteur/CDA/FHIR&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;auteur\&quot; et l'élément CDA \&quot;author\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;author\&quot; et l'élément FHIR \&quot;Composition.author\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1282,8 +1236,8 @@
       <reference>
         <reference value="ConceptMap/mappingConsentementCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Consentement/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du consentement associé au document et l'élément CDA authorization&#xA; - Groupe Mapping 2 : entre l'élément CDA authorization et l'extension FHIR ConsentExtension"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Consentement&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;ConsentementAssocie\&quot; et l'élément CDA \&quot;authorization\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authorization\&quot; et l'extension FHIR \&quot;ConsentExtension\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1294,8 +1248,8 @@
       <reference>
         <reference value="ConceptMap/mappingDestinatairePrevuCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier DestinatairePrevu/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du destinataire prévu du document et l'élément CDA informationRecipient&#xA; - Groupe Mapping 2 : entre l'élément CDA informationRecipient et l'extension FHIR InformationRecipientExtension"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Destinataire prévu&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;destinataire\&quot; et l'élément CDA \&quot;informationRecipient\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informationRecipient\&quot; et l'extension FHIR \&quot;InformationRecipientExtension\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1304,10 +1258,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/mappingDocumentReferenceCDAFHIR"/>
+        <reference value="ConceptMap/mappingDocumentDeReferenceCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier DocumentReference/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du document de référence et l'élément CDA relatedDocument&#xA; - Groupe Mapping 2 : entre l'élément CDA relatedDocument et l'élément FHIR Composition.relatesTo"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;DocumentDeReference&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;documentDeReference\&quot; et l'élément CDA \&quot;relatedDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedDocument\&quot; et l'élément FHIR \&quot;Composition.relatesTo\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1318,8 +1272,8 @@
       <reference>
         <reference value="ConceptMap/mappingEvenementCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Evenement/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier Evenement et l'élément CDA documentationOf&#xA; - Groupe Mapping 2 : entre l'élément CDA documentationOf et l'élément FHIR Composition.event"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Evènement documenté&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 :entre le modèle métier \&quot;evenement\&quot; et l'élément CDA \&quot;documentationOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;documentationOf\&quot; et l'élément FHIR \&quot;Composition.event\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1330,8 +1284,8 @@
       <reference>
         <reference value="ConceptMap/mappingInformateurCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Informateur/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de l'informateur et l'élément CDA informant&#xA; - Groupe Mapping 2 : entre l'élément CDA informant et l'extension FHIR InformantExtension"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Informateur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;informateur\&quot; et l'élément CDA \&quot;informant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informant\&quot; et l'extension FHIR \&quot;InformantExtension\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1342,8 +1296,8 @@
       <reference>
         <reference value="ConceptMap/mappingOperateurSaisieCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Opérateur de saisie/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Groupe Mapping 1 : entre le modèle logique métier de l'opérateur de saisie et l'élément CDA dataEnterer&#xA; - Groupe Mapping 2 : entre l'élément CDA dataEnterer et l'extension FHIR DataEntererExtension"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;operateurSaisie\&quot; et l'élément CDA \&quot;dataEnterer\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;dataEnterer\&quot; et l'extension FHIR \&quot;DataEntererExtension\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1354,8 +1308,8 @@
       <reference>
         <reference value="ConceptMap/mappingParticipantCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Participant/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du participant et l'élément CDA participant&#xA; - Groupe Mapping 2 : entre l'élément CDA participant et l'extension FHIR ParticipantExtension"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Participant&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;participant\&quot; et l'élément CDA \&quot;participant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;participant\&quot; et l'extension FHIR \&quot;ParticipantExtension\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1366,8 +1320,8 @@
       <reference>
         <reference value="ConceptMap/mappingPatientCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Patient/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du Patient/Usager et l'élément CDA recordTarget&#xA; - Groupe Mapping 2 : entre l'élément CDA recordTarget et le profil FHIR FrPatientDocument"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;patient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;recordTarget\&quot; et le profil FHIR \&quot;FrPatientDocument\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1378,20 +1332,8 @@
       <reference>
         <reference value="ConceptMap/mappingPersonneStructureAssignedEntityFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier PersonneStructure/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure et l'élément CDA assignedEntity&#xA; - Groupe Mapping 2 : entre l'élément CDA assignedEntity et le profil FHIR FrPractitionerRoleDocument"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/mappingPersonneStructureRelatedEntityFHIR"/>
-      </reference>
-      <name value="Mapping du modèle métier PersonneStructure/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure et l'élément CDA relatedEntity&#xA; - Groupe Mapping 2 : entre l'élément CDA relatedEntity et le profil FHIR FrRelatedPersonDocument&#xA; - Groupe Mapping 3 : entre l'élément CDA relatedEntity et l'élément FHIR Patient.contact"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructure\&quot; et l'élément CDA \&quot;assignedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedEntity\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1402,8 +1344,44 @@
       <reference>
         <reference value="ConceptMap/mappingPersonneStructureAuteurFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier PersonneStructureAuteur/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de la personne et/ou structure (Auteur) et l'élément CDA assignedAuthor&#xA; - Groupe Mapping 2 : entre l'élément CDA assignedAuthor et le profil FHIR FrPractitionerRoleDocument"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPersonneStructureRelatedEntityFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;"/>
+      <description value="Ce ConceptMap présente trois groupes de mapping: &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructure\&quot; et l'élément CDA \&quot;relatedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedEntity\&quot; et le profil FHIR \&quot;FrRelatedPersonDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;relatedEntity\&quot; et l'élément FHIR \&quot;Patient.contact\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPrescriptionCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prescription\&quot; et l'élément CDA \&quot;inFulfillmentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;inFulfillmentOf\&quot; et l'extension FHIR \&quot;OrderExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPriseEnchargeCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Prise en charge&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prise en charge\&quot; et l'élément CDA \&quot;componentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;componentOf\&quot; et l'élément FHIR \&quot;Composition.encounter(Encounter)\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1414,8 +1392,8 @@
       <reference>
         <reference value="ConceptMap/mappingResponsableCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Responsable/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du responsable du document et l'élément CDA legalAuthenticator&#xA; - Groupe Mapping 2 : entre l'élément CDA legalAuthenticator et l'élément FHIR Composition.attester"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;responsable\&quot; et l'élément CDA \&quot;legalAuthenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;legalAuthenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1426,8 +1404,8 @@
       <reference>
         <reference value="ConceptMap/mappingStructureConservationCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier StructureConservation/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier de la structure chargée de la conservation du document et l'élément CDA custodian&#xA; - Groupe Mapping 2 : entre l'élément CDA custodian et l'élément FHIR Composition.custodian"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;structureConservation\&quot; et l'élément CDA \&quot;custodian\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;custodian\&quot; et l'élément FHIR \&quot;Composition.custodian\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1438,8 +1416,8 @@
       <reference>
         <reference value="ConceptMap/mappingSystemeFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Systeme/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du systeme et l'élément CDA assignedAuthor&#xA; - Groupe Mapping 2 : entre l'élément CDA assignedAuthor et le profil FHIR FrDeviceDocument"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;SystemeStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrDeviceDocument\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
@@ -1450,8 +1428,8 @@
       <reference>
         <reference value="ConceptMap/mappingValidateurCDAFHIR"/>
       </reference>
-      <name value="Mapping du modèle métier Validateur/CDA/FHIR"/>
-      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Groupe Mapping 1 : entre le modèle métier du validateur du document et l'élément CDA authenticator&#xA; - Groupe Mapping 2 : entre l'élément CDA authenticator et l'élément FHIR Composition.attester"/>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;validateur\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="Mapping"/>
     </resource>
