@@ -11,7 +11,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/AssociationPrescription"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of"									
 * group[=].element[+].code = #Prescription								
 * group[=].element[=].target.code = #inFulfillmentOf
