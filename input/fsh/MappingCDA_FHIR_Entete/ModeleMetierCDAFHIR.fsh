@@ -101,7 +101,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.code = #Composition.meta.profile
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ClinicalDocument.code
-* group[=].element[=].target.code = #Composition.code
+* group[=].element[=].target.code = #Composition.type
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ClinicalDocument.title
 * group[=].element[=].target.code = #Composition.title
