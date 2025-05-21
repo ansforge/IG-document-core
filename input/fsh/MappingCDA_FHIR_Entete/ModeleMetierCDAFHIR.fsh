@@ -71,7 +71,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[+].code = #EnteteDocument.participant
 * group[=].element[=].target.code = #ClinicalDocument.participant
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #EnteteDocument.associationPrescription
+* group[=].element[+].code = #EnteteDocument.prescription
 * group[=].element[=].target.code = #ClinicalDocument.inFulfillmentOf
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #EnteteDocument.evenement
