@@ -13,7 +13,7 @@ Description: "Eléments de l'entête d'un document contenant les informations g�
 * identifiantLotDeVersionsDocument  1..1 Identifier  "Identifiant du lot de versions du même document."		
 * versionDocument 1..1 string "Numéro de version du document."
 * statutDocument 1..1 code "Statut du document."
-* patient 1..1 Patient "Patient / Usager."
+* patient 1..1 PatientUsager "Patient / Usager."
 * auteur 1..* Auteur "Auteur du document."
 * operateurSaisie 0..1 OperateurSaisie "Opérateur de saisie."	
 * informateur 0..* Informateur "Informateur ayant fourni des informations utiles à la production du document."	
