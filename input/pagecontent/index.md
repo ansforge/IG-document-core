@@ -36,10 +36,10 @@ Ce guide d’implémentation FR Document Core est géré par l'Agence du Numéri
 
 ### Droits de propriété intellectuelle
 
-Certaines ressources de ce guide sont protégées par des droits de propriété intellectuelle.
-L'utilisation de ces ressources est soumise à l'acceptation et au respect des conditions précisées dans la licence d'utilisation de chacune d'entre elle.
-
 **Pour les ressources syntaxiques :**
+
+Certaines ressources syntaxiques de ce guide sont protégées par des droits de propriété intellectuelle.
+L'utilisation de ces ressources est soumise à l'acceptation et au respect des conditions précisées dans la licence d'utilisation de chacune d'entre elle.
 
 Les principales ressources syntaxiques utilisées dans le CI-SIS sont :
 
