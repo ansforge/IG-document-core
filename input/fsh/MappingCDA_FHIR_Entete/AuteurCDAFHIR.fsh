@@ -1,12 +1,12 @@
 Instance: mappingAuteurCDAFHIR					
 InstanceOf: ConceptMap					
 Usage: #definition					
-Title: "Mapping Métier/CDA/FHIR : \"Auteur/CDA/FHIR\""
+Title: "Mapping Métier/CDA/FHIR : \"Auteur\""
 Description: """Ce ConceptMap présente deux groupes de mapping : 
  - Mapping 1 : entre le modèle métier \"auteur\" et l'élément CDA \"author\"
  - Mapping 2 : entre l'élément CDA \"author\" et l'élément FHIR \"Composition.author\" """
 
-* name = "Mapping Métier/CDA/FHIR : \"Auteur/CDA/FHIR\""
+* name = "Mapping Métier/CDA/FHIR : \"Auteur\""
 * status = #draft
 * experimental = false
 

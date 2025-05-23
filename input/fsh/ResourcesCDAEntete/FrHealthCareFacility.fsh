@@ -26,6 +26,7 @@ Description: "L'élément de l'en-tête du CDA healthCareFacility permet de repr
   * translation 0..1
     * nullFlavor 0..0
     * code 1..1
+    * code from $jdv-j368-categorie-etablissement-cisis
     * codeSystem 1..1
     * displayName 1..1
     * codeSystemVersion 0..0

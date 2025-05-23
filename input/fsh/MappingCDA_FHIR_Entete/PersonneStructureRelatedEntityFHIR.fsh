@@ -2,7 +2,7 @@ Instance: mappingPersonneStructureRelatedEntityFHIR
 InstanceOf: ConceptMap					
 Usage: #definition					
 Title: "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\""
-Description: """Ce ConceptMap présente trois groupes de mapping: 
+Description: """Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: 
  - Mapping 1 : entre le modèle métier \"PersonneStructure\" et l'élément CDA \"relatedEntity\"
  - Mapping 2 : entre l'élément CDA \"relatedEntity\" et le profil FHIR \"FrRelatedPersonDocument\"
  - Mapping 3 : entre l'élément CDA \"relatedEntity\" et l'élément FHIR \"Patient.contact\" """

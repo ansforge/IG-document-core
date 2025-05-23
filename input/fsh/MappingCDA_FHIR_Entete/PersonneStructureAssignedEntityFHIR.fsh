@@ -2,7 +2,7 @@ Instance: mappingPersonneStructureAssignedEntityFHIR
 InstanceOf: ConceptMap					
 Usage: #definition					
 Title: "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\""
-Description: """Ce ConceptMap présente deux groupes de mapping : 
+Description: """Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : 
  - Mapping 1 : entre le modèle métier \"PersonneStructure\" et l'élément CDA \"assignedEntity\"
  - Mapping 2 : entre l'élément CDA \"assignedEntity\" et le profil FHIR \"FrPractitionerRoleDocument\" """
 
