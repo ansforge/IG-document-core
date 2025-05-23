@@ -102,41 +102,41 @@ package IG #DDDDDD{
              Participant.participant => [1..1]
         } 
 
-        class Patient{
+        class PatientUsager{
 
-             Patient => [1..1]
-             Patient.identifiantPatient => [1..*]
-             Patient.adresse => [0..*]
-             Patient.coordonneesTelecom => [0..*]
-             Patient.personnePhysique => [1..1]
-             Patient.personnePhysique.nomsPrenomsPatient => [1..1]
-             Patient.personnePhysique.nomsPrenomsPatient.nom => [1..*]
-             Patient.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
-             Patient.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
-             Patient.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
-             Patient.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
-             Patient.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
-             Patient.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
-             Patient.personnePhysique.sexe => [1..1]
-             Patient.personnePhysique.dateNaissance => [1..1]
-             Patient.personnePhysique.indicateurDeces => [0..1]
-             Patient.personnePhysique.dateDeces => [0..1]
-             Patient.personnePhysique.grossesseMultiple => [0..1]
-             Patient.personnePhysique.numeroOrdreNaissance => [0..1]
-             Patient.personnePhysique.representantPatient => [0..*]
-             Patient.personnePhysique.representantPatient.adresse => [0..*]
-             Patient.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
-             Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
-             Patient.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
-             Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
-             Patient.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
-             Patient.personnePhysique.lieuNaissance => [0..1]
-             Patient.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
-             Patient.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
-             Patient.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
+             PatientUsager => [1..1]
+             PatientUsager.identifiantPatient => [1..*]
+             PatientUsager.adresse => [0..*]
+             PatientUsager.coordonneesTelecom => [0..*]
+             PatientUsager.personnePhysique => [1..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient => [1..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.nom => [1..*]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
+             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
+             PatientUsager.personnePhysique.sexe => [1..1]
+             PatientUsager.personnePhysique.dateNaissance => [1..1]
+             PatientUsager.personnePhysique.indicateurDeces => [0..1]
+             PatientUsager.personnePhysique.dateDeces => [0..1]
+             PatientUsager.personnePhysique.grossesseMultiple => [0..1]
+             PatientUsager.personnePhysique.numeroOrdreNaissance => [0..1]
+             PatientUsager.personnePhysique.representantPatient => [0..*]
+             PatientUsager.personnePhysique.representantPatient.adresse => [0..*]
+             PatientUsager.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
+             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
+             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
+             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
+             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
+             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
+             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
+             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
+             PatientUsager.personnePhysique.lieuNaissance => [0..1]
+             PatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
+             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
+             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
         } 
 
         class PersonneStructure{
@@ -339,12 +339,12 @@ package IG #DDDDDD{
              Composition.relatesTo:transformed_document.code => [None..None]
              Composition.event => [1..None]
              Composition.event.extension => [None..None]
-             Composition.event.extension:perfomer => <&plus>[0..1]
+             Composition.event.extension:performer => <&plus>[0..1]
              Composition.event.period => [None..None]
              Composition.event.detail => [None..1]
              Composition.event:principalEvent => [1..1]
              Composition.event:principalEvent.extension => [1..None]
-             Composition.event:principalEvent.extension:perfomer => <&plus>[1..1]
+             Composition.event:principalEvent.extension:performer => <&plus>[1..1]
              Composition.event:principalEvent.period => [1..None]
              Composition.section => [None..None]
         } 
@@ -1180,7 +1180,7 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
-    class095a1b43effec73955e31e790438de49 --> Patient
+    class095a1b43effec73955e31e790438de49 --> PatientUsager
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
