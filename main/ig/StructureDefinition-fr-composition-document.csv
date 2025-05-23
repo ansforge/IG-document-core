@@ -434,7 +434,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "Composition.date","Composition.date","","","",1,1,"Y","","Y","dateTime {[]} {[]}
 ","Date de création","The composition editing time, when the composition was last logically changed by the author.","The Last Modified Date on the composition may be after the date of the document was attested without being changed.","dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging.","","","","","","","",,,,,"",,,,"Composition.date",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.occurrence[x]",".effectiveTime[type=""TS""]",".effectiveTime","DocumentReference.content.attachment.date, DocumentReference.created","FiveWs.done[x]"
-"Composition.author","Composition.author","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document]]}
+"Composition.author","Composition.author","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document]]}
 ","Auteur du document","author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs.","","Identifies who is responsible for the content.","","","","","","","",,,,,"",,,,"Composition.author",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.performer",".participation[typeCode=""AUT""].role[classCode=""ASSIGNED""]",".author.assignedAuthor","assignedAuthor.author","DocumentReference.agent","FiveWs.author"
 "Composition.author.id","Composition.author.id","","","",0,1,"","","","string {[]} {[]}
@@ -702,8 +702,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Composition.event.extension:perfomer","Composition.event.extension","perfomer","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
-","Exécutant de l’évènement documenté","Extension permettant d'ajouter un perfomer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Composition.event.extension:performer","Composition.event.extension","performer","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
+","Exécutant de l’évènement documenté","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Composition.event.modifierExtension","Composition.event.modifierExtension","","extensions
@@ -727,11 +727,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Composition.event:principalEvent.id","Composition.event.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Composition.event:principalEvent.extension","Composition.event.extension","","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
-","Exécutant de l’évènement documenté","Extension permettant d'ajouter un perfomer à l'élément event d'une Composition.","","","","","","","","","",,,,,"","value:url}
+","Exécutant de l’évènement documenté","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Composition.event:principalEvent.extension:perfomer","Composition.event.extension","perfomer","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
-","Exécutant de l'évènement documenté principal","Extension permettant d'ajouter un perfomer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Composition.event:principalEvent.extension:performer","Composition.event.extension","performer","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
+","Exécutant de l'évènement documenté principal","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Composition.event:principalEvent.modifierExtension","Composition.event.modifierExtension","","extensions

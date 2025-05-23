@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-23T08:30:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-23T15:44:19+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -911,6 +911,9 @@
      ] [
        fhir:id [ fhir:v "Extensions FHIR" ] ;
        fhir:name [ fhir:v "Extensions FHIR" ]
+     ] [
+       fhir:id [ fhir:v "Mapping" ] ;
+       fhir:name [ fhir:v "Concept Maps" ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
@@ -1761,11 +1764,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-performer-event" ]
        ] ;
        fhir:name [ fhir:v "Fr Performer Event" ] ;
-       fhir:description [ fhir:v "Extension permettant d'ajouter un perfomer à l'élément event d'une Composition." ] ;
+       fhir:description [ fhir:v "Extension permettant d'ajouter un performer à l'élément event d'une Composition." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
-       ]
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2027,6 +2031,386 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingmodelemetierCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingmodelemetierCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR  : Entête d'un document" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAuteurCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingAuteurCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Auteur\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingConsentementCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingConsentementCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Consentement\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDestinatairePrevuCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingDestinatairePrevuCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDocumentDeReferenceCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingDocumentDeReferenceCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingEvenementCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingEvenementCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Evènement documenté\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingInformateurCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingInformateurCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Informateur\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingOperateurSaisieCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingOperateurSaisieCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingParticipantCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingParticipantCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Participant\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPatientCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPatientCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Patient/Usager\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureAssignedEntityFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPersonneStructureAssignedEntityFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureAuteurFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPersonneStructureAuteurFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPersonneStructureRelatedEntityFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPrescriptionCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPrescriptionCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Prescription\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPriseEnchargeCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingPriseEnchargeCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Prise en charge\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingResponsableCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingResponsableCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Responsable du document\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingStructureConservationCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingStructureConservationCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingSystemeFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingSystemeFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingValidateurCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingValidateurCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Validateur\"" ] ;
+       fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAdministrativeGender> ;
+         fhir:reference [ fhir:v "ConceptMap/mappingAdministrativeGender" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping ValueSet AdministrativeGender" ] ;
+       fhir:description [ fhir:v "Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:logical"
          ]
        ] ) ;
@@ -2221,8 +2605,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient> ;
-         fhir:reference [ fhir:v "StructureDefinition/Patient" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PatientUsager> ;
+         fhir:reference [ fhir:v "StructureDefinition/PatientUsager" ]
        ] ;
        fhir:name [ fhir:v "Modèle métier - Patient / Usager" ] ;
        fhir:description [ fhir:v "Patient/Usager concerné par le document." ] ;
@@ -2532,7 +2916,7 @@
              a fhir:url ;
              fhir:v "mappingCDA-FHIR-entete.html"^^xsd:anyURI
            ] ;
-           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:title [ fhir:v "Mapping Métier/CDA/FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
@@ -2603,7 +2987,7 @@
              a fhir:url ;
              fhir:v "mappingCDA-FHIR-corps.html"^^xsd:anyURI
            ] ;
-           fhir:title [ fhir:v "Mapping CDA / FHIR" ] ;
+           fhir:title [ fhir:v "Mapping Métier/CDA/FHIR" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
