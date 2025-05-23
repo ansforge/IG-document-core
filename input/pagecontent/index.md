@@ -50,11 +50,12 @@ Les principales ressources syntaxiques utilisées dans le CI-SIS sont :
 
 **Pour les ressources sémantiques :**
 
+{% include ip-statements.xhtml %}
+
 Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://smt.esante.gouv.fr/) de l'ANS précisent la licence d'utilisation associée.
 
 Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner auprès de l'unité de production.
 
-### Propriété intellectuelle
 
 <!-- Ces lignes ont été commentées car la propriété intellectuelle est déjà définie dans l'IG des terminologies de l'ANS et dans l'ip-statements généré automatiquement.
 
@@ -64,7 +65,6 @@ Ressources sémantiques largement utilisées dans les documents et non publiées
 * [HL7 Terminology (THO)](https://terminology.hl7.org/index.html) : THO is copyright ©1989+ Health Level Seven International. Pour plus d'information sur la licence, voir : [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 -->
 
-{% include ip-statements.xhtml %}
 
 ### Dépendances
 
