@@ -1,5 +1,5 @@
 	//  Logical Model : patient	
-Logical: PatientMetier						
+Logical: PatientUsager				
 Title: "Modèle métier - Patient / Usager"				
 Description:  """Patient/Usager concerné par le document."""
 Characteristics: #can-be-target	
@@ -40,5 +40,5 @@ Characteristics: #can-be-target
   - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager."
     * nomLieuNaissance 0..1 string "Nom du lieu de naissance du patient/usager."
     * adresseLieuNaissance 0..1 Address "Adresse et code officiel géographique du lieu de naissance."
-    * CodeOfficielGeographiqueLieuNaissance 0..1 string "Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance.
-    - Le COG est obligatoire si le matricule INS est présent."		
+      * codeOfficielGeographiqueLieuNaissance 0..1 string "Code Officiel Géographique (COG) de la commune ou du pays du lieu de naissance.
+     - Le COG est obligatoire si le matricule INS est présent."		

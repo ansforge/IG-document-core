@@ -73,7 +73,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
-* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
+* author only Reference(FrPractitionerDocument or FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
 * author.extension contains fr-author-time named time 1..1
 
 // Responsable du document : legalAuthenticator
@@ -107,8 +107,6 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * event[principalEvent].detail 0..1
 * event[principalEvent].extension[performer] 1..1 
 * event[principalEvent].extension[performer] ^short = "Exécutant de l'évènement documenté principal"
-
-//* event contains secondaryEvent 0..*
 
 * relatesTo 1..*
 * relatesTo ^short = "Document de référence"

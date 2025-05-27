@@ -23,5 +23,6 @@ Description: "Association du document à une prise en charge du patient/usager p
     * nomStructure 0..1 string "Nom de la structure"
     * adresse 0..1 Address "Adresse géopostale"
     * coordonneesTelecom 0..* ContactPoint "Coordonnées télécom"
-    * secteurActivite 0..1 CodeableConcept "Secteur d'activité"
+    * secteurActivite 1..1 CodeableConcept "Secteur d'activité"
+      * categorieEtablissement 0..1 CodeableConcept "Catégorie d'établissement"
     * typeStructure 0..1 CodeableConcept "Type de structure"

@@ -47,7 +47,7 @@ pages:
         ressourcesFHIR-entete.md:
             title: FHIR
         mappingCDA-FHIR-entete.md:
-            title: Mapping CDA / FHIR
+            title: Mapping Métier/CDA/FHIR
     corpsDocument.md:
         title: Corps d'un document  
         modelesLogiquesMetier-corps.md:
@@ -57,16 +57,13 @@ pages:
         ressourcesFHIR-corps.md:
             title: FHIR
         mappingCDA-FHIR-corps.md:
-            title: Mapping CDA / FHIR
+            title: Mapping Métier/CDA/FHIR
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
-            title: Téléchargements et usages
-        #exemples.md:
-            #title : Exemple de document FHIR
-   
+            title: Téléchargements et usages      
 
 menu:
     Accueil: index.html
@@ -80,12 +77,12 @@ menu:
         Modèle logique métier: StructureDefinition-EnteteDocument.html
         CDA: ressourcesCDA-entete.html
         FHIR: ressourcesFHIR-entete.html
-        Mapping CDA / FHIR: mappingCDA-FHIR-entete.html
+        Mapping Métier/CDA/FHIR: mappingCDA-FHIR-entete.html
     Corps d'un document:
         Modèle logique métier: modelesLogiquesMetier-corps.html
         CDA: ressourcesCDA-corps.html
         FHIR: ressourcesFHIR-corps.html
-        Mapping CDA / FHIR: mappingCDA-FHIR-corps.html
+        Mapping Métier/CDA/FHIR: mappingCDA-FHIR-corps.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         "Espace de publication du CI-SIS" : new-tab https://esante.gouv.fr/offres-services/ci-sis/espace-publication
@@ -99,7 +96,6 @@ menu:
         "Standard FHIR": new-tab https://hl7.org/fhir/R4/index.html
         "Documentation des guides d'implémentation de l'ANS": new-tab https://interop.esante.gouv.fr/ig/documentation/index.html 
         Téléchargements et usage: downloads.html
-        #Exemples: exemples.html
         
 groups:
   Modèles logiques:
@@ -107,7 +103,7 @@ groups:
     #description: Modèle logique métier
     resources:
       - EnteteDocument	
-      - PatientMetier
+      - PatientUsager
       - Auteur
       - PersonneStructure
       - PersonneStructureAuteur
@@ -190,10 +186,34 @@ groups:
     name: Extensions FHIR
     resources:
       - StructureDefinition/fr-author-time
-
+      - StructureDefinition/fr-performer-event
+      
+  Mapping:
+    name: Concept Maps
+    resources:
+      - mappingmodelemetierCDAFHIR
+      - mappingPatientCDAFHIR
+      - mappingAuteurCDAFHIR
+      - mappingOperateurSaisieCDAFHIR	
+      - mappingInformateurCDAFHIR
+      - mappingStructureConservationCDAFHIR
+      - mappingDestinatairePrevuCDAFHIR
+      - mappingResponsableCDAFHIR
+      - mappingValidateurCDAFHIR
+      - mappingParticipantCDAFHIR
+      - mappingPrescriptionCDAFHIR
+      - mappingEvenementCDAFHIR
+      - mappingDocumentDeReferenceCDAFHIR
+      - mappingConsentementCDAFHIR
+      - mappingPriseEnchargeCDAFHIR
+      - mappingPersonneStructureAssignedEntityFHIR
+      - mappingPersonneStructureRelatedEntityFHIR
+      - mappingPersonneStructureAuteurFHIR
+      - mappingSystemeFHIR
+      - mappingAdministrativeGender
+      
   Exemple de document FHIR:
     name: Exemple de BIO-CR-BIO
     description: Exemples pour montrer un document clinique.
     resources:
       - clinical-document-bundle-BIO-CR-BIO
-      
