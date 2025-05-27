@@ -7,12 +7,151 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
+        class Acte{
+
+             Acte => [None..None]
+             Acte.identifiant => [1..*]
+             Acte.description => [1..1]
+             Acte.code => [1..1]
+             Acte.titre => [0..1]
+             Acte.statut => [1..1]
+             Acte.date => [0..1]
+             Acte.priorite => [0..1]
+             Acte.localisationAnatomique => [0..1]
+             Acte.voieDAbord => [0..1]
+             Acte.perfomer => [0..*]
+             Acte.auteur => [0..*]
+             Acte.informateur => [0..*]
+             Acte.participant => [0..*]
+             Acte.circonstances => [0..*]
+             Acte.reason => [0..*]
+             Acte.dispositifMedical => [0..*]
+             Acte.difficulte => [0..1]
+             Acte.scores => [0..*]
+        } 
+
+        class ActeSubstitution{
+
+             ActeSubstitution => [None..None]
+             ActeSubstitution.code => [1..1]
+             ActeSubstitution.statut => [1..1]
+        } 
+
+        class AllergieOuHypersensibilite{
+
+             AllergieOuHypersensibilite => [None..None]
+             AllergieOuHypersensibilite.identifiant => [1..*]
+             AllergieOuHypersensibilite.description => [1..1]
+             AllergieOuHypersensibilite.type => [1..1]
+             AllergieOuHypersensibilite.statut => [0..1]
+             AllergieOuHypersensibilite.date => [1..1]
+             AllergieOuHypersensibilite.participant => [0..1]
+             AllergieOuHypersensibilite.probleme => [0..*]
+             AllergieOuHypersensibilite.statutClique => [0..1]
+             AllergieOuHypersensibilite.certitude => [0..1]
+             AllergieOuHypersensibilite.criticite => [0..1]
+        } 
+
+        class AllergiesEtHypersensibilites{
+
+             AllergiesEtHypersensibilites => [None..None]
+             AllergiesEtHypersensibilites.titreSection => [1..None]
+             AllergiesEtHypersensibilites.allergieOuHypersensibilite => [1..*]
+        } 
+
+        class AntecedentFamilialObserve{
+
+             AntecedentFamilialObserve => [None..None]
+             AntecedentFamilialObserve.identifiant => [1..1]
+             AntecedentFamilialObserve.code => [1..1]
+             AntecedentFamilialObserve.descriptionNarrative => [1..1]
+             AntecedentFamilialObserve.statut => [1..1]
+             AntecedentFamilialObserve.horodatage => [0..1]
+             AntecedentFamilialObserve.resultat => [1..1]
+             AntecedentFamilialObserve.interpretation => [0..1]
+             AntecedentFamilialObserve.methode => [0..1]
+             AntecedentFamilialObserve.site => [0..1]
+             AntecedentFamilialObserve.auteur => [0..1]
+        } 
+
+        class AntecedentsFamiliaux{
+
+             AntecedentsFamiliaux => [None..None]
+             AntecedentsFamiliaux.antecedentsFamiliaux => [1..*]
+        } 
+
+        class AntecedentsFamiliauxEntry{
+
+             AntecedentsFamiliauxEntry => [None..None]
+             AntecedentsFamiliauxEntry.statut => [1..1]
+             AntecedentsFamiliauxEntry.identificationParent => [1..1]
+             AntecedentsFamiliauxEntry.participant => [0..*]
+             AntecedentsFamiliauxEntry.antecedentFamilialObserve => [1..*]
+        } 
+
+        class AntecedentsMedicaux{
+
+             AntecedentsMedicaux => [None..None]
+             AntecedentsMedicaux.titreSection => [1..None]
+             AntecedentsMedicaux.problemes => [1..*]
+        } 
+
         class Auteur{
 
              Auteur => [1..None]
              Auteur.roleFonctionnel => [0..1]
              Auteur.horodatageParticipation => [1..1]
              Auteur.auteur[x] => [1..1]
+        } 
+
+        class AuteurAPSR{
+
+             AuteurAPSR => [None..None]
+        } 
+
+        class CRBIOChapitre{
+
+             CRBIOChapitre => [None..None]
+             CRBIOChapitre.choice[x] => [1..*]
+        } 
+
+        class CRBIOSousChapitre{
+
+             CRBIOSousChapitre => [None..None]
+             CRBIOSousChapitre.resultatsExamensBiologieMedicale => [1..1]
+        } 
+
+        class Certitude{
+
+             Certitude => [None..None]
+             Certitude.identifiant => [1..1]
+             Certitude.code => [1..1]
+             Certitude.statut => [1..1]
+             Certitude.date => [1..1]
+             Certitude.descriptionNarrative => [1..1]
+             Certitude.valeur => [1..1]
+        } 
+
+        class CodesAbarres{
+
+             CodesAbarres => [None..None]
+             CodesAbarres.imageIllustrative => [0..*]
+        } 
+
+        class CommentaireER{
+
+             CommentaireER => [None..None]
+             CommentaireER.codeCommentaireER => [1..1]
+             CommentaireER.texteCommentaireER => [1..1]
+             CommentaireER.statutCommentaireER => [1..1]
+             CommentaireER.auteurCommentaireER => [0..1]
+        } 
+
+        class CommentaireNonCode{
+
+             CommentaireNonCode => [None..None]
+             CommentaireNonCode.sousSection => [None..0]
+             CommentaireNonCode.entree => [None..0]
         } 
 
         class Consentement{
@@ -23,10 +162,271 @@ package IG #DDDDDD{
              Consentement.statutConsentement => [1..1]
         } 
 
+        class CorpsDocument{
+
+             CorpsDocument => [None..None]
+             CorpsDocument.allergiesEtHypersensibilites => [0..*]
+             CorpsDocument.antecedentsFamiliaux => [0..*]
+             CorpsDocument.antecedentsMedicaux => [0..*]
+             CorpsDocument.codesAbarres => [0..*]
+             CorpsDocument.commentaireNonCode => [0..*]
+             CorpsDocument.cRBIOChapitre => [0..*]
+             CorpsDocument.cRBIOSousChapitre => [0..*]
+             CorpsDocument.dicomActeImagerie => [0..*]
+             CorpsDocument.dicomAddendum => [0..*]
+             CorpsDocument.dicomConclusions => [0..*]
+             CorpsDocument.dicomDemandeExamen => [0..*]
+             CorpsDocument.dicomExamenComparatif => [0..*]
+             CorpsDocument.dicomResultats => [0..*]
+             CorpsDocument.dicomMotifActe => [0..*]
+             CorpsDocument.dicomExpositionRadiations => [0..*]
+             CorpsDocument.dicomHistoriqueMedical => [0..*]
+             CorpsDocument.dicomInformationsCliniques => [0..*]
+             CorpsDocument.dicomObjectCatalog => [0..*]
+             CorpsDocument.directivesAnticipees => [0..*]
+             CorpsDocument.dispensationMedicaments => [0..*]
+             CorpsDocument.dispositifsMedicaux => [0..*]
+             CorpsDocument.documentPDFCopie => [0..*]
+             CorpsDocument.documentsAjoutes => [0..*]
+             CorpsDocument.educationPatient => [0..*]
+             CorpsDocument.effetsIndesirables => [0..*]
+             CorpsDocument.facteursDeRisqueProfessionnelsNonCode => [0..*]
+             CorpsDocument.fonctionsPhysiques => [0..*]
+             CorpsDocument.habitusModeDeVie => [0..*]
+             CorpsDocument.historiqueDesActes => [0..*]
+             CorpsDocument.historiqueDesGrossesses => [0..*]
+             CorpsDocument.planSoins => [0..*]
+             CorpsDocument.pointsDeVigilancesNonCode => [0..*]
+             CorpsDocument.prescriptionDispositifsMedicaux => [0..*]
+             CorpsDocument.prescriptionMedicaments => [0..*]
+             CorpsDocument.problemesActifs => [0..*]
+             CorpsDocument.raisonRecommandationNonCode => [0..*]
+             CorpsDocument.raisonRecommandation => [0..*]
+             CorpsDocument.resultatsLaboratoireBiologieSecondeIntention => [0..*]
+             CorpsDocument.resultatsEvenements => [0..*]
+             CorpsDocument.resultatsExamensNonCode => [0..*]
+             CorpsDocument.resultatsExamens => [0..*]
+             CorpsDocument.resultats => [0..*]
+             CorpsDocument.signesVitaux => [0..*]
+             CorpsDocument.statutDocument => [0..*]
+             CorpsDocument.statutFonctionnel => [0..*]
+             CorpsDocument.traitements => [0..*]
+             CorpsDocument.traitementSortie => [0..*]
+             CorpsDocument.traitementsAdministres => [0..*]
+             CorpsDocument.vaccinations => [0..*]
+        } 
+
+        class Criticite{
+
+             Criticite => [None..None]
+             Criticite.identifiant => [1..1]
+             Criticite.code => [1..1]
+             Criticite.statut => [1..1]
+             Criticite.date => [1..1]
+             Criticite.descriptionNarrative => [1..1]
+             Criticite.valeur => [1..1]
+        } 
+
+        class DICOMActeImagerie{
+
+             DICOMActeImagerie => [None..None]
+             DICOMActeImagerie.titreSection => [1..None]
+             DICOMActeImagerie.techniqueImagerie => [1..1]
+             DICOMActeImagerie.administrationProduits => [0..*]
+             DICOMActeImagerie.complications => [0..1]
+             DICOMActeImagerie.expositionsRadiations => [0..1]
+             DICOMActeImagerie.catalogueObjects => [1..1]
+        } 
+
+        class DICOMAddendum{
+
+             DICOMAddendum => [None..None]
+             DICOMAddendum.titreSection => [1..None]
+             DICOMAddendum.auteur => [1..1]
+        } 
+
+        class DICOMComplication{
+
+             DICOMComplication => [None..None]
+             DICOMComplication.titreSection => [1..None]
+             DICOMComplication.sousSection => [None..0]
+             DICOMComplication.entree => [None..0]
+        } 
+
+        class DICOMConclusions{
+
+             DICOMConclusions => [None..None]
+             DICOMConclusions.titreSection => [1..None]
+             DICOMConclusions.sousSection => [None..0]
+             DICOMConclusions.entree => [None..0]
+        } 
+
+        class DICOMDemandeExamen{
+
+             DICOMDemandeExamen => [None..None]
+             DICOMDemandeExamen.titreSection => [1..None]
+             DICOMDemandeExamen.sousSection => [None..0]
+             DICOMDemandeExamen.entree => [None..0]
+        } 
+
+        class DICOMExamenComparatif{
+
+             DICOMExamenComparatif => [None..None]
+             DICOMExamenComparatif.titreSection => [1..None]
+             DICOMExamenComparatif.sousSection => [None..0]
+             DICOMExamenComparatif.entree => [None..0]
+        } 
+
+        class DICOMExpositionRadiations{
+
+             DICOMExpositionRadiations => [None..None]
+             DICOMExpositionRadiations.titreSection => [1..None]
+             DICOMExpositionRadiations.sOPInstanceObservation => [0..*]
+             DICOMExpositionRadiations.expositionRayonnements => [1..1]
+             DICOMExpositionRadiations.observationGrossesse => [1..1]
+             DICOMExpositionRadiations.observationIndication => [0..1]
+             DICOMExpositionRadiations.quantite => [0..*]
+             DICOMExpositionRadiations.administrationRadiopharmaceutique => [0..1]
+        } 
+
+        class DICOMHistoriqueMedical{
+
+             DICOMHistoriqueMedical => [None..None]
+             DICOMHistoriqueMedical.titreSection => [1..None]
+             DICOMHistoriqueMedical.observationDICOM => [1..*]
+        } 
+
+        class DICOMInformationsCliniques{
+
+             DICOMInformationsCliniques => [None..None]
+             DICOMInformationsCliniques.titreSection => [1..None]
+             DICOMInformationsCliniques.demandeExamen => [1..1]
+             DICOMInformationsCliniques.historiqueMedical => [1..1]
+        } 
+
+        class DICOMMotifActe{
+
+             DICOMMotifActe => [None..None]
+             DICOMMotifActe.titreSection => [1..None]
+             DICOMMotifActe.sousSection => [None..0]
+             DICOMMotifActe.entree => [None..0]
+        } 
+
+        class DICOMObjectCatalog{
+
+             DICOMObjectCatalog => [None..None]
+             DICOMObjectCatalog.titreSection => [1..None]
+             DICOMObjectCatalog.examenImagerie => [0..*]
+        } 
+
+        class DICOMResultats{
+
+             DICOMResultats => [None..None]
+             DICOMResultats.titreSection => [1..None]
+             DICOMResultats.sousSection => [None..0]
+             DICOMResultats.entree => [None..0]
+        } 
+
+        class DemandeExamenOuSuivi{
+
+             DemandeExamenOuSuivi => [None..None]
+             DemandeExamenOuSuivi.identifiant => [1..1]
+             DemandeExamenOuSuivi.typeDemande => [1..1]
+             DemandeExamenOuSuivi.description => [1..1]
+             DemandeExamenOuSuivi.statutDemande => [1..1]
+             DemandeExamenOuSuivi.date => [1..1]
+             DemandeExamenOuSuivi.resultat => [0..1]
+             DemandeExamenOuSuivi.interpretation => [0..1]
+             DemandeExamenOuSuivi.methode => [0..1]
+             DemandeExamenOuSuivi.cible => [0..1]
+             DemandeExamenOuSuivi.auteur => [0..1]
+        } 
+
         class DestinatairePrevu{
 
              DestinatairePrevu => [None..None]
              DestinatairePrevu.destinataire => [0..*]
+        } 
+
+        class DirectiveAnticipee{
+
+             DirectiveAnticipee => [None..None]
+             DirectiveAnticipee.identifiant => [1..1]
+             DirectiveAnticipee.code => [1..1]
+             DirectiveAnticipee.description => [1..1]
+             DirectiveAnticipee.statut => [1..1]
+             DirectiveAnticipee.date => [1..1]
+             DirectiveAnticipee.valeurDirectiveIdentifiee => [0..1]
+             DirectiveAnticipee.reference => [0..1]
+             DirectiveAnticipee.documentEncapsule => [0..1]
+             DirectiveAnticipee.documentEncapsule.observationMedia => [1..1]
+             DirectiveAnticipee.documentEncapsule.observationMedia.identifiant => [0..1]
+             DirectiveAnticipee.documentEncapsule.observationMedia.documentEncapsuleEncode => [0..1]
+        } 
+
+        class DirectivesAnticipees{
+
+             DirectivesAnticipees => [None..None]
+             DirectivesAnticipees.titreSection => [1..None]
+             DirectivesAnticipees.directiveAnticipee => [0..*]
+        } 
+
+        class DispensationMedicaments{
+
+             DispensationMedicaments => [None..None]
+             DispensationMedicaments.titreSection => [1..None]
+             DispensationMedicaments.auteur => [1..1]
+             DispensationMedicaments.traitementDispense => [1..*]
+        } 
+
+        class DispositifMedical{
+
+             DispositifMedical => [None..None]
+             DispositifMedical.identifiant => [0..*]
+             DispositifMedical.type => [1..1]
+             DispositifMedical.type.code => [1..1]
+             DispositifMedical.type.code.autreCode => [0..*]
+        } 
+
+        class DispositifMedicalEntry{
+
+             DispositifMedicalEntry => [None..None]
+             DispositifMedicalEntry.identifiant => [1..*]
+             DispositifMedicalEntry.description => [1..1]
+             DispositifMedicalEntry.statut => [1..1]
+             DispositifMedicalEntry.date => [1..1]
+             DispositifMedicalEntry.renouvellement => [0..1]
+             DispositifMedicalEntry.quantite => [0..1]
+             DispositifMedicalEntry.duree => [0..1]
+             DispositifMedicalEntry.performer => [0..*]
+             DispositifMedicalEntry.auteur => [0..*]
+             DispositifMedicalEntry.dispositifMedical => [1..*]
+             DispositifMedicalEntry.affectionLongueDuree => [0..1]
+             DispositifMedicalEntry.accidentTravail => [0..1]
+             DispositifMedicalEntry.prevention => [0..1]
+             DispositifMedicalEntry.nonRemboursable => [0..1]
+        } 
+
+        class DispositifsMedicaux{
+
+             DispositifsMedicaux => [None..None]
+             DispositifsMedicaux.titreSection => [1..None]
+             DispositifsMedicaux.dispositifsMedicaux => [0..*]
+        } 
+
+        class DocumentAttache{
+
+             DocumentAttache => [None..None]
+             DocumentAttache.identifiant => [1..1]
+             DocumentAttache.code => [1..1]
+             DocumentAttache.statut => [1..1]
+             DocumentAttache.date => [0..1]
+             DocumentAttache.typeDocumentAttache => [1..1]
+             DocumentAttache.typeDocumentAttache.natureDocument => [1..1]
+             DocumentAttache.documentAttache => [1..1]
+             DocumentAttache.documentAttache.observationMedia => [1..1]
+             DocumentAttache.documentAttache.observationMedia.identifiant => [1..1]
+             DocumentAttache.documentAttache.observationMedia.documentAttacheEncode => [1..1]
         } 
 
         class DocumentDeReference{
@@ -34,6 +434,95 @@ package IG #DDDDDD{
              DocumentDeReference => [None..1]
              DocumentDeReference.typeReference => [1..1]
              DocumentDeReference.identifiantUniqueDocument => [1..1]
+        } 
+
+        class DocumentPDFCopie{
+
+             DocumentPDFCopie => [None..None]
+             DocumentPDFCopie.titreSection => [1..None]
+             DocumentPDFCopie.documentAttache => [1..1]
+        } 
+
+        class DocumentsAjoutes{
+
+             DocumentsAjoutes => [None..None]
+             DocumentsAjoutes.simpleObservation => [0..1]
+             DocumentsAjoutes.documentAttache => [1..*]
+        } 
+
+        class DoseAntigene{
+
+             DoseAntigene => [None..None]
+             DoseAntigene.identifiant => [1..1]
+             DoseAntigene.doseAntigene => [1..1]
+             DoseAntigene.antigene => [1..1]
+        } 
+
+        class EducationPatient{
+
+             EducationPatient => [None..None]
+             EducationPatient.acte => [0..*]
+             EducationPatient.observation => [0..*]
+             EducationPatient.reference => [0..*]
+        } 
+
+        class EffetIndesirable{
+
+             EffetIndesirable => [None..None]
+             EffetIndesirable.identifiant => [1..*]
+             EffetIndesirable.typeEffetIndesirable => [1..1]
+             EffetIndesirable.description => [1..1]
+             EffetIndesirable.statut => [1..1]
+             EffetIndesirable.dateDebutFin => [0..1]
+             EffetIndesirable.valeur => [1..1]
+             EffetIndesirable.traitement => [1..1]
+             EffetIndesirable.probleme => [0..*]
+             EffetIndesirable.imputabiliteEffetIndesirable => [0..1]
+             EffetIndesirable.graviteEffetIndesirable => [1..1]
+             EffetIndesirable.evolutionEffetIndesirable => [0..1]
+        } 
+
+        class EffetsIndesirables{
+
+             EffetsIndesirables => [None..None]
+             EffetsIndesirables.titreSection => [1..None]
+             EffetsIndesirables.effetIndesirable => [1..*]
+        } 
+
+        class EnRapportAvecALD{
+
+             EnRapportAvecALD => [None..None]
+             EnRapportAvecALD.identifiant => [1..1]
+             EnRapportAvecALD.code => [1..1]
+             EnRapportAvecALD.description => [1..1]
+             EnRapportAvecALD.statut => [1..1]
+             EnRapportAvecALD.horodatage => [0..1]
+             EnRapportAvecALD.resultat => [1..1]
+             EnRapportAvecALD.auteur => [0..1]
+        } 
+
+        class EnRapportAvecAccidentTravail{
+
+             EnRapportAvecAccidentTravail => [None..None]
+             EnRapportAvecAccidentTravail.identifiant => [1..1]
+             EnRapportAvecAccidentTravail.code => [1..1]
+             EnRapportAvecAccidentTravail.description => [1..1]
+             EnRapportAvecAccidentTravail.statut => [1..1]
+             EnRapportAvecAccidentTravail.horodatage => [0..1]
+             EnRapportAvecAccidentTravail.resultat => [1..1]
+             EnRapportAvecAccidentTravail.auteur => [0..1]
+        } 
+
+        class EnRapportAvecLaPrevention{
+
+             EnRapportAvecLaPrevention => [None..None]
+             EnRapportAvecLaPrevention.identifiant => [1..1]
+             EnRapportAvecLaPrevention.code => [1..1]
+             EnRapportAvecLaPrevention.description => [1..1]
+             EnRapportAvecLaPrevention.statut => [1..1]
+             EnRapportAvecLaPrevention.horodatage => [0..1]
+             EnRapportAvecLaPrevention.resultat => [1..1]
+             EnRapportAvecLaPrevention.auteur => [0..1]
         } 
 
         class EnteteDocument{
@@ -65,6 +554,51 @@ package IG #DDDDDD{
              EnteteDocument.priseEncharge => [1..1]
         } 
 
+        class Evaluation{
+
+             Evaluation => [None..None]
+             Evaluation.identifiant => [1..1]
+             Evaluation.typeEvaluation => [1..1]
+             Evaluation.description => [1..1]
+             Evaluation.statut => [1..1]
+             Evaluation.date => [1..1]
+             Evaluation.interpretation => [0..1]
+             Evaluation.evaluateur => [0..1]
+             Evaluation.auteurEvaluation => [0..1]
+             Evaluation.responsableEvaluation => [0..1]
+             Evaluation.evaluationComposant => [0..*]
+             Evaluation.statutEvaluation => [0..1]
+             Evaluation.commentaire => [0..*]
+             Evaluation.referenceInterne => [0..*]
+        } 
+
+        class EvaluationComposant{
+
+             EvaluationComposant => [None..None]
+             EvaluationComposant.identifiant => [1..1]
+             EvaluationComposant.codeEvaluation => [1..1]
+             EvaluationComposant.description => [1..1]
+             EvaluationComposant.statut => [1..1]
+             EvaluationComposant.horodatage => [1..1]
+             EvaluationComposant.resultat => [1..1]
+             EvaluationComposant.interpretation => [0..1]
+             EvaluationComposant.composantEvaluation => [0..*]
+             EvaluationComposant.commentaire => [0..*]
+        } 
+
+        class EvaluationComposantN2{
+
+             EvaluationComposantN2 => [None..None]
+             EvaluationComposantN2.identifiant => [1..1]
+             EvaluationComposantN2.codeEvaluation => [1..1]
+             EvaluationComposantN2.description => [1..1]
+             EvaluationComposantN2.statut => [1..1]
+             EvaluationComposantN2.horodatage => [1..1]
+             EvaluationComposantN2.resultat => [1..1]
+             EvaluationComposantN2.interpretation => [0..*]
+             EvaluationComposantN2.commentaire => [0..*]
+        } 
+
         class Evenement{
 
              Evenement => [1..None]
@@ -80,10 +614,445 @@ package IG #DDDDDD{
              Evenement.executantEvenement.executant => [1..1]
         } 
 
+        class EvolutionEffetIndesirable{
+
+             EvolutionEffetIndesirable => [None..None]
+             EvolutionEffetIndesirable.code => [1..1]
+             EvolutionEffetIndesirable.description => [1..1]
+             EvolutionEffetIndesirable.statut => [1..1]
+             EvolutionEffetIndesirable.evolution => [1..1]
+        } 
+
+        class FacteursDeRisqueProfessionnelsNonCode{
+
+             FacteursDeRisqueProfessionnelsNonCode => [None..None]
+             FacteursDeRisqueProfessionnelsNonCode.sousSection => [None..0]
+             FacteursDeRisqueProfessionnelsNonCode.entree => [None..0]
+        } 
+
+        class FonctionsPhysiques{
+
+             FonctionsPhysiques => [None..None]
+             FonctionsPhysiques.groupeQuestionnairesEvaluation => [0..*]
+             FonctionsPhysiques.evalutation => [0..*]
+        } 
+
+        class FrActe{
+
+             Procedure => [None..None]
+             Procedure.nullFlavor => [None..0]
+             Procedure.realmCode => [None..0]
+             Procedure.typeId => [None..0]
+             Procedure.templateId => [2..None]
+             Procedure.templateId:frActeCISIS => [1..1]
+             Procedure.templateId:frActeCISIS.nullFlavor => [None..0]
+             Procedure.templateId:frActeCISIS.assigningAuthorityName => [None..0]
+             Procedure.templateId:frActeCISIS.displayable => [None..0]
+             Procedure.templateId:frActeCISIS.root => [1..None]
+             Procedure.templateId:frActeCISIS.extension => [None..0]
+             Procedure.templateId:procedureEntryIHEPCC => [1..1]
+             Procedure.templateId:procedureEntryIHEPCC.nullFlavor => [None..0]
+             Procedure.templateId:procedureEntryIHEPCC.assigningAuthorityName => [None..0]
+             Procedure.templateId:procedureEntryIHEPCC.displayable => [None..0]
+             Procedure.templateId:procedureEntryIHEPCC.root => [1..None]
+             Procedure.templateId:procedureEntryIHEPCC.extension => [None..0]
+             Procedure.templateId:procedureActivityCCD => [0..1]
+             Procedure.templateId:procedureActivityCCD.nullFlavor => [None..0]
+             Procedure.templateId:procedureActivityCCD.assigningAuthorityName => [None..0]
+             Procedure.templateId:procedureActivityCCD.displayable => [None..0]
+             Procedure.templateId:procedureActivityCCD.root => [1..None]
+             Procedure.templateId:procedureActivityCCD.extension => [None..0]
+             Procedure.templateId:planOfCareActivityCCD => [0..1]
+             Procedure.templateId:planOfCareActivityCCD.nullFlavor => [None..0]
+             Procedure.templateId:planOfCareActivityCCD.assigningAuthorityName => [None..0]
+             Procedure.templateId:planOfCareActivityCCD.displayable => [None..0]
+             Procedure.templateId:planOfCareActivityCCD.root => [1..None]
+             Procedure.templateId:planOfCareActivityCCD.extension => [None..0]
+             Procedure.moodCode => [None..None]
+             Procedure.id => [1..None]
+             Procedure.code => [1..None]
+             Procedure.negationInd => [None..0]
+             Procedure.text => [1..None]
+             Procedure.statusCode => [1..None]
+             Procedure.effectiveTime => [None..None]
+             Procedure.priorityCode => [None..None]
+             Procedure.priorityCode.nullFlavor => [None..0]
+             Procedure.priorityCode.sdtcValueSet => [None..0]
+             Procedure.priorityCode.sdtcValueSetVersion => [None..0]
+             Procedure.priorityCode.originalText => [None..None]
+             Procedure.priorityCode.translation => [None..0]
+             Procedure.languageCode => [None..0]
+             Procedure.methodCode => [None..0]
+             Procedure.approachSiteCode => [None..None]
+             Procedure.approachSiteCode.nullFlavor => [None..0]
+             Procedure.approachSiteCode.sdtcValueSet => [None..0]
+             Procedure.approachSiteCode.sdtcValueSetVersion => [None..0]
+             Procedure.approachSiteCode.qualifier => [None..1]
+             Procedure.targetSiteCode => [None..None]
+             Procedure.targetSiteCode.nullFlavor => [None..0]
+             Procedure.targetSiteCode.sdtcValueSet => [None..0]
+             Procedure.targetSiteCode.sdtcValueSetVersion => [None..0]
+             Procedure.targetSiteCode.qualifier => [None..1]
+             Procedure.targetSiteCode.qualifier.nullFlavor => [None..0]
+             Procedure.targetSiteCode.qualifier.inverted => [None..0]
+             Procedure.targetSiteCode.qualifier.name => [1..None]
+             Procedure.targetSiteCode.qualifier.name.nullFlavor => [None..0]
+             Procedure.targetSiteCode.qualifier.name.code => [None..None]
+             Procedure.targetSiteCode.qualifier.name.codeSystem => [None..None]
+             Procedure.targetSiteCode.qualifier.name.codeSystemName => [None..None]
+             Procedure.targetSiteCode.qualifier.name.displayName => [None..None]
+             Procedure.targetSiteCode.qualifier.name.sdtcValueSet => [None..0]
+             Procedure.targetSiteCode.qualifier.name.sdtcValueSetVersion => [None..0]
+             Procedure.targetSiteCode.qualifier.name.originalText => [None..0]
+             Procedure.targetSiteCode.qualifier.value => [1..None]
+             Procedure.subject => [None..0]
+             Procedure.specimen => [None..0]
+             Procedure.entryRelationship => [None..None]
+             Procedure.entryRelationship:circonstances => [0..*]
+             Procedure.entryRelationship:motif => [0..*]
+             Procedure.entryRelationship:referenceDM => [0..*]
+             Procedure.entryRelationship:difficulte => [0..1]
+             Procedure.entryRelationship:scores => [0..*]
+             Procedure.reference => [None..0]
+             Procedure.precondition => [None..0]
+             Procedure.sdtcPrecondition2 => [None..0]
+             Procedure.sdtcInFulfillmentOf1 => [None..0]
+        } 
+
+        class FrActeSubstitution{
+
+             Act => [None..None]
+             Act.nullFlavor => [None..0]
+             Act.realmCode => [None..0]
+             Act.typeId => [None..0]
+             Act.templateId => [2..2]
+             Act.templateId.nullFlavor => [None..0]
+             Act.templateId.assigningAuthorityName => [None..0]
+             Act.templateId.displayable => [None..0]
+             Act.templateId.root => [1..None]
+             Act.templateId.extension => [None..0]
+             Act.templateId:frActeSubstitutionCISIS => [1..1]
+             Act.templateId:frActeSubstitutionCISIS.root => [None..None]
+             Act.templateId:iheSubstitutionAct => [1..1]
+             Act.templateId:iheSubstitutionAct.root => [None..None]
+             Act.classCode => [None..None]
+             Act.moodCode => [None..None]
+             Act.negationInd => [None..0]
+             Act.id => [None..0]
+             Act.code => [None..None]
+             Act.code.nullFlavor => [None..0]
+             Act.code.code => [None..None]
+             Act.code.codeSystem => [None..None]
+             Act.code.codeSystemName => [None..None]
+             Act.code.displayName => [None..None]
+             Act.code.sdtcValueSet => [None..0]
+             Act.code.sdtcValueSetVersion => [None..0]
+             Act.code.originalText => [None..0]
+             Act.code.qualifier => [None..0]
+             Act.code.translation => [None..0]
+             Act.text => [None..0]
+             Act.statusCode => [1..None]
+             Act.statusCode.nullFlavor => [None..0]
+             Act.statusCode.code => [None..None]
+             Act.statusCode.sdtcValueSet => [None..0]
+             Act.statusCode.sdtcValueSetVersion => [None..0]
+             Act.effectiveTime => [None..0]
+             Act.priorityCode => [None..0]
+             Act.languageCode => [None..0]
+             Act.subject => [None..0]
+             Act.specimen => [None..0]
+             Act.performer => [None..0]
+             Act.author => [None..0]
+             Act.informant => [None..0]
+             Act.participant => [None..0]
+             Act.entryRelationship => [None..0]
+             Act.reference => [None..0]
+             Act.precondition => [None..0]
+             Act.sdtcPrecondition2 => [None..0]
+             Act.sdtcInFulfillmentOf1 => [None..0]
+        } 
+
+        class FrAllergieOuHypersensibilite{
+
+             Observation => [None..None]
+             Observation.nullFlavor => [None..0]
+             Observation.realmCode => [None..0]
+             Observation.typeId => [None..0]
+             Observation.templateId => [5..None]
+             Observation.templateId:alertObservationCCD => [1..1]
+             Observation.templateId:alertObservationCCD.nullFlavor => [None..0]
+             Observation.templateId:alertObservationCCD.assigningAuthorityName => [None..0]
+             Observation.templateId:alertObservationCCD.displayable => [None..0]
+             Observation.templateId:alertObservationCCD.root => [1..None]
+             Observation.templateId:alertObservationCCD.extension => [None..0]
+             Observation.templateId:problemEntryIHEPCC => [1..1]
+             Observation.templateId:problemEntryIHEPCC.nullFlavor => [None..0]
+             Observation.templateId:problemEntryIHEPCC.assigningAuthorityName => [None..0]
+             Observation.templateId:problemEntryIHEPCC.displayable => [None..0]
+             Observation.templateId:problemEntryIHEPCC.root => [1..None]
+             Observation.templateId:problemEntryIHEPCC.extension => [None..0]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC => [1..1]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC.nullFlavor => [None..0]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC.assigningAuthorityName => [None..0]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC.displayable => [None..0]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC.root => [1..None]
+             Observation.templateId:allergiesAndIntolerancesEntryIHEPCC.extension => [None..0]
+             Observation.templateId:problemObservationCCD => [1..1]
+             Observation.templateId:problemObservationCCD.nullFlavor => [None..0]
+             Observation.templateId:problemObservationCCD.assigningAuthorityName => [None..0]
+             Observation.templateId:problemObservationCCD.displayable => [None..0]
+             Observation.templateId:problemObservationCCD.root => [1..None]
+             Observation.templateId:problemObservationCCD.extension => [None..0]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS => [1..1]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS.nullFlavor => [None..0]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS.assigningAuthorityName => [None..0]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS.displayable => [None..0]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS.root => [1..None]
+             Observation.templateId:frAllergieOuHypersensibiliteCISIS.extension => [None..0]
+             Observation.classCode => [None..None]
+             Observation.moodCode => [None..None]
+             Observation.id => [1..None]
+             Observation.code => [None..None]
+             Observation.derivationExpr => [None..0]
+             Observation.text => [1..None]
+             Observation.statusCode => [1..None]
+             Observation.statusCode.nullFlavor => [None..0]
+             Observation.statusCode.code => [None..None]
+             Observation.statusCode.sdtcValueSet => [None..0]
+             Observation.statusCode.sdtcValueSetVersion => [None..0]
+             Observation.effectiveTime => [1..None]
+             Observation.effectiveTime.nullFlavor => [None..0]
+             Observation.effectiveTime.value => [None..0]
+             Observation.effectiveTime.operator => [None..0]
+             Observation.effectiveTime.low => [1..None]
+             Observation.effectiveTime.center => [None..0]
+             Observation.effectiveTime.width => [None..0]
+             Observation.priorityCode => [None..0]
+             Observation.repeatNumber => [None..0]
+             Observation.languageCode => [None..0]
+             Observation.value => [1..1]
+             Observation.interpretationCode => [None..0]
+             Observation.methodCode => [None..0]
+             Observation.targetSiteCode => [None..0]
+             Observation.subject => [None..0]
+             Observation.specimen => [None..0]
+             Observation.performer => [None..0]
+             Observation.author => [None..0]
+             Observation.informant => [None..0]
+             Observation.participant => [None..1]
+             Observation.entryRelationship => [None..None]
+             Observation.entryRelationship:probleme => [0..*]
+             Observation.entryRelationship:statutClinique => [0..1]
+             Observation.entryRelationship:criticite => [0..1]
+             Observation.entryRelationship:certitude => [0..1]
+             Observation.reference => [None..0]
+             Observation.precondition => [None..0]
+             Observation.sdtcPrecondition2 => [None..0]
+             Observation.referenceRange => [None..0]
+             Observation.sdtcInFulfillmentOf1 => [None..0]
+        } 
+
+        class GraviteEffetIndesirable{
+
+             GraviteEffetIndesirable => [None..None]
+             GraviteEffetIndesirable.code => [1..1]
+             GraviteEffetIndesirable.description => [1..1]
+             GraviteEffetIndesirable.statut => [1..1]
+             GraviteEffetIndesirable.niveauGravite => [1..1]
+        } 
+
+        class GroupDeQuestionnairesDevaluation{
+
+             GroupDeQuestionnairesDevaluation => [None..None]
+             GroupDeQuestionnairesDevaluation.identifiant => [1..*]
+             GroupDeQuestionnairesDevaluation.code => [1..1]
+             GroupDeQuestionnairesDevaluation.statut => [1..1]
+             GroupDeQuestionnairesDevaluation.horodatage => [1..1]
+             GroupDeQuestionnairesDevaluation.valeur => [1..1]
+             GroupDeQuestionnairesDevaluation.evaluation => [1..*]
+        } 
+
+        class HabitusModeDeVie{
+
+             HabitusModeDeVie => [None..None]
+             HabitusModeDeVie.titreSection => [1..None]
+             HabitusModeDeVie.habitusModeDeVieEntry => [0..*]
+        } 
+
+        class HabitusModeDeVieEntry{
+
+             HabitusModeDeVieEntry => [None..None]
+             HabitusModeDeVieEntry.identifiant => [1..1]
+             HabitusModeDeVieEntry.code => [1..1]
+             HabitusModeDeVieEntry.description => [1..1]
+             HabitusModeDeVieEntry.statut => [1..1]
+             HabitusModeDeVieEntry.horodatage => [0..1]
+             HabitusModeDeVieEntry.resultat => [1..1]
+        } 
+
+        class HistoriqueDesActes{
+
+             HistoriqueDesActes => [None..None]
+             HistoriqueDesActes.titreSection => [1..None]
+             HistoriqueDesActes.actes => [1..*]
+             HistoriqueDesActes.references => [1..*]
+        } 
+
+        class HistoriqueDesGrossesses{
+
+             HistoriqueDesGrossesses => [None..None]
+             HistoriqueDesGrossesses.titreSection => [1..None]
+             HistoriqueDesGrossesses.entry[x] => [1..*]
+        } 
+
+        class HistoriqueGrossesse{
+
+             HistoriqueGrossesse => [None..None]
+             HistoriqueGrossesse.identifiant => [1..1]
+             HistoriqueGrossesse.code => [1..1]
+             HistoriqueGrossesse.statut => [1..1]
+             HistoriqueGrossesse.periodeGrossesse => [1..1]
+             HistoriqueGrossesse.choice[x] => [1..*]
+        } 
+
+        class HorsAMM{
+
+             HorsAMM => [None..None]
+             HorsAMM.identifiant => [1..1]
+             HorsAMM.code => [1..1]
+             HorsAMM.description => [1..1]
+             HorsAMM.statut => [1..1]
+             HorsAMM.horodatage => [0..1]
+             HorsAMM.resultat => [1..1]
+             HorsAMM.auteur => [0..*]
+        } 
+
+        class ImageIllustrative{
+
+             ImageIllustrative => [None..None]
+             ImageIllustrative.identifiant => [0..*]
+             ImageIllustrative.langue => [0..1]
+             ImageIllustrative.imageEncodee => [1..1]
+             ImageIllustrative.imageEncodee.mediaType => [1..1]
+             ImageIllustrative.imageEncodee.representation => [1..1]
+             ImageIllustrative.subject => [0..*]
+             ImageIllustrative.specimen => [0..*]
+             ImageIllustrative.performer => [0..*]
+             ImageIllustrative.auteur => [0..*]
+             ImageIllustrative.informant => [0..*]
+             ImageIllustrative.participant => [0..*]
+             ImageIllustrative.entryRelationship => [0..*]
+             ImageIllustrative.reference => [0..*]
+             ImageIllustrative.precondition => [0..*]
+        } 
+
+        class ImputabiliteEffetIndesirable{
+
+             ImputabiliteEffetIndesirable => [None..None]
+             ImputabiliteEffetIndesirable.code => [1..1]
+             ImputabiliteEffetIndesirable.description => [1..1]
+             ImputabiliteEffetIndesirable.statut => [1..1]
+             ImputabiliteEffetIndesirable.niveauImputabilite => [1..1]
+        } 
+
+        class InformantAPSR{
+
+             InformantAPSR => [None..None]
+        } 
+
         class Informateur{
 
              Informateur => [None..None]
              Informateur.informateur => [1..1]
+        } 
+
+        class InstructionAuPatient{
+
+             InstructionAuPatient => [None..None]
+             InstructionAuPatient.identifiant => [1..1]
+             InstructionAuPatient.codeInstructionPatient => [1..1]
+             InstructionAuPatient.descriptionInstructionPatient => [1..1]
+             InstructionAuPatient.statutInstructionPatient => [1..1]
+             InstructionAuPatient.horodatageinstructionPatient => [0..1]
+             InstructionAuPatient.valeurInstructionPatient => [0..*]
+        } 
+
+        class InstructionsAuDispensateur{
+
+             InstructionsAuDispensateur => [None..None]
+             InstructionsAuDispensateur.identifiant => [1..1]
+             InstructionsAuDispensateur.codeInstructionsDispensateurt => [1..1]
+             InstructionsAuDispensateur.descriptionInstructionsDispensateur => [1..1]
+             InstructionsAuDispensateur.statutInstructionsDispensateur => [1..1]
+        } 
+
+        class InstructionsPatient{
+
+             InstructionsPatient => [None..None]
+             InstructionsPatient.identifiant => [1..1]
+             InstructionsPatient.codeInstructionsPatient => [1..1]
+             InstructionsPatient.descriptionInstructionsPatient => [1..1]
+             InstructionsPatient.statutInstructionsPatient => [1..1]
+             InstructionsPatient.instructionPatient => [0..*]
+        } 
+
+        class LaboratoireExecutant{
+
+             LaboratoireExecutant => [None..None]
+             LaboratoireExecutant.dateExecution => [1..1]
+             LaboratoireExecutant.executant => [1..1]
+        } 
+
+        class ModeleCDACorpsDocument{
+
+             ModeleCDACorpsDocument => [None..None]
+             ModeleCDACorpsDocument.EntreeFrActe => [0..*]
+             ModeleCDACorpsDocument.EntreeFrActeSubstitution => [0..*]
+             ModeleCDACorpsDocument.EntreeFrAllergieOuHypersensibilite => [0..*]
+        } 
+
+        class Naissance{
+
+             Naissance => [None..None]
+             Naissance.identifiant => [1..1]
+             Naissance.code => [1..1]
+             Naissance.statut => [1..1]
+             Naissance.periode => [1..1]
+             Naissance.resultat => [1..1]
+             Naissance.identificationNouveauNe => [1..1]
+             Naissance.observationNaissance => [1..*]
+        } 
+
+        class NonRemboursable{
+
+             NonRemboursable => [None..None]
+             NonRemboursable.identifiant => [1..1]
+             NonRemboursable.code => [1..1]
+             NonRemboursable.description => [1..1]
+             NonRemboursable.statut => [1..1]
+             NonRemboursable.horodatage => [0..1]
+             NonRemboursable.resultat => [1..1]
+             NonRemboursable.auteur => [0..*]
+        } 
+
+        class NotesDispensateur{
+
+             NotesDispensateur => [None..None]
+             NotesDispensateur.identifiant => [0..*]
+             NotesDispensateur.code => [1..1]
+             NotesDispensateur.description => [1..1]
+             NotesDispensateur.statut => [1..1]
+        } 
+
+        class ObservationGrossesse{
+
+             ObservationGrossesse => [None..None]
+             ObservationGrossesse.identifiant => [1..1]
+             ObservationGrossesse.code => [1..1]
+             ObservationGrossesse.description => [1..1]
+             ObservationGrossesse.statut => [1..1]
+             ObservationGrossesse.date => [1..1]
+             ObservationGrossesse.resultat => [1..1]
         } 
 
         class OperateurSaisie{
@@ -100,6 +1069,52 @@ package IG #DDDDDD{
              Participant.roleFonctionnel => [0..1]
              Participant.dateDebutEtOuFinParticipation => [1..1]
              Participant.participant => [1..1]
+        } 
+
+        class ParticipantAPSR{
+
+             ParticipantAPSR => [None..None]
+             ParticipantAPSR.periodeParticipation => [0..1]
+             ParticipantAPSR.participantRole => [1..1]
+             ParticipantAPSR.participantRole.IdentifiantParticipant => [0..*]
+             ParticipantAPSR.participantRole.adresses => [0..*]
+             ParticipantAPSR.participantRole.coordonneesTelecom => [0..*]
+             ParticipantAPSR.participantRole.identiteParticipant => [0..1]
+             ParticipantAPSR.participantRole.identiteParticipant.nom => [1..*]
+             ParticipantAPSR.participantRole.dispositifAutomatique => [0..1]
+             ParticipantAPSR.participantRole.dispositifAutomatique.categorie => [0..1]
+             ParticipantAPSR.participantRole.dispositifAutomatique.nomModele => [0..1]
+             ParticipantAPSR.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
+        } 
+
+        class ParticipantCorps{
+
+             ParticipantCorps => [None..None]
+             ParticipantCorps.dateEtHeureParticipation => [0..1]
+             ParticipantCorps.participantRole => [1..1]
+             ParticipantCorps.participantRole.IdentifiantParticipant => [0..*]
+             ParticipantCorps.participantRole.typeParticipant => [1..1]
+             ParticipantCorps.participantRole.adresses => [0..*]
+             ParticipantCorps.participantRole.coordonneesTelecom => [0..*]
+             ParticipantCorps.participantRole.identiteParticipant => [0..1]
+             ParticipantCorps.participantRole.identiteParticipant.ProfessionSpecialite => [0..1]
+             ParticipantCorps.participantRole.identiteParticipant.nom => [0..*]
+             ParticipantCorps.participantRole.identiteParticipant.description => [0..1]
+             ParticipantCorps.participantRole.dispositifAutomatique => [0..1]
+             ParticipantCorps.participantRole.dispositifAutomatique.categorie => [0..1]
+             ParticipantCorps.participantRole.dispositifAutomatique.nomModele => [0..1]
+             ParticipantCorps.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
+             ParticipantCorps.participantRole.Organisation => [0..1]
+             ParticipantCorps.participantRole.Organisation.identifiant => [0..1]
+             ParticipantCorps.participantRole.Organisation.code => [0..1]
+             ParticipantCorps.participantRole.Organisation.description => [0..1]
+        } 
+
+        class PatientSujetNonHumain{
+
+             PatientSujetNonHumain => [None..None]
+             PatientSujetNonHumain.sujet => [1..1]
+             PatientSujetNonHumain.adresse => [1..1]
         } 
 
         class PatientUsager{
@@ -137,6 +1152,20 @@ package IG #DDDDDD{
              PatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
              PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
              PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
+        } 
+
+        class Performer{
+
+             Performer => [None..None]
+             Performer.roleFonctionnel => [0..1]
+             Performer.dateExecution => [1..1]
+             Performer.executant => [1..1]
+        } 
+
+        class PeriodeDeRenouvellement{
+
+             PeriodeDeRenouvellement => [None..None]
+             PeriodeDeRenouvellement.periodeRenouvellement => [1..1]
         } 
 
         class PersonneStructure{
@@ -182,11 +1211,55 @@ package IG #DDDDDD{
              PersonneStructureAuteur.structure.secteurActivite => [0..1]
         } 
 
+        class PlanSoins{
+
+             PlanSoins => [None..None]
+             PlanSoins.titreSection => [1..None]
+             PlanSoins.actes => [0..*]
+             PlanSoins.demandeExamenOuSuivi => [0..*]
+             PlanSoins.traitement => [0..*]
+             PlanSoins.vaccinRecommande => [0..*]
+             PlanSoins.rencontre => [0..*]
+        } 
+
+        class PointsDeVigilancesNonCode{
+
+             PointsDeVigilancesNonCode => [None..None]
+             PointsDeVigilancesNonCode.titreSection => [1..None]
+             PointsDeVigilancesNonCode.sousSection => [None..0]
+             PointsDeVigilancesNonCode.entree => [None..0]
+        } 
+
         class Prescription{
 
              Prescription => [None..None]
              Prescription.identifiantPrescription => [1..1]
              Prescription.accessionNumber => [0..1]
+        } 
+
+        class PrescriptionDispositifsMedicaux{
+
+             PrescriptionDispositifsMedicaux => [None..None]
+             PrescriptionDispositifsMedicaux.auteur => [0..1]
+             PrescriptionDispositifsMedicaux.dispositifMedical => [1..*]
+        } 
+
+        class PrescriptionEntry{
+
+             PrescriptionEntry => [None..None]
+             PrescriptionEntry.identifiantPrescription => [1..1]
+             PrescriptionEntry.nombreRenouvellements => [0..1]
+             PrescriptionEntry.quantitePrescription => [0..1]
+             PrescriptionEntry.auteurPrescription => [0..1]
+             PrescriptionEntry.dispensateurPrescription => [0..*]
+             PrescriptionEntry.instructionsAuDispensateur => [0..1]
+        } 
+
+        class PrescriptionMedicaments{
+
+             PrescriptionMedicaments => [None..None]
+             PrescriptionMedicaments.auteur => [0..1]
+             PrescriptionMedicaments.traitementPrescrit => [1..*]
         } 
 
         class PriseEncharge{
@@ -212,11 +1285,307 @@ package IG #DDDDDD{
              PriseEncharge.lieuPriseEnCharge.structure.typeStructure => [0..1]
         } 
 
+        class Probleme{
+
+             Probleme => [None..None]
+             Probleme.identifiant => [1..1]
+             Probleme.type => [1..1]
+             Probleme.description => [1..1]
+             Probleme.problemeObserve => [1..1]
+             Probleme.statut => [1..1]
+             Probleme.dateProbleme => [1..1]
+             Probleme.statutProbleme => [0..1]
+             Probleme.severite => [0..1]
+             Probleme.certitude => [0..1]
+             Probleme.statutClinique => [0..1]
+             Probleme.reference => [0..*]
+             Probleme.reference.externalDocument => [1..1]
+             Probleme.reference.externalDocument.identifiant => [1..1]
+             Probleme.reference.externalDocument.text => [0..1]
+             Probleme.reference.externalDocument.text.reference => [1..*]
+             Probleme.commentaire => [0..1]
+        } 
+
+        class ProblemesActifs{
+
+             ProblemesActifs => [None..None]
+             ProblemesActifs.titreSection => [1..None]
+             ProblemesActifs.problemes => [1..*]
+        } 
+
+        class ProduitSante{
+
+             ProduitSante => [None..None]
+             ProduitSante.medicament => [1..1]
+             ProduitSante.medicament.codeProduit => [1..1]
+             ProduitSante.medicament.codeProduit.autreCodification => [0..*]
+             ProduitSante.medicament.nomProduit => [1..1]
+             ProduitSante.medicament.formeGalenique => [0..1]
+             ProduitSante.medicament.numeroLot => [0..1]
+             ProduitSante.medicament.dateExpiration => [0..1]
+             ProduitSante.medicament.conditionnement => [0..1]
+             ProduitSante.medicament.equivalentGenerique => [0..*]
+             ProduitSante.medicament.substanceActive => [0..*]
+        } 
+
+        class QuantiteProduit{
+
+             QuantiteProduit => [None..None]
+             QuantiteProduit.independant => [1..1]
+             QuantiteProduit.quantiteProduit => [1..1]
+        } 
+
+        class RaisonRecommandation{
+
+             RaisonRecommandation => [None..None]
+             RaisonRecommandation.observation => [1..1]
+             RaisonRecommandation.problemes => [1..*]
+        } 
+
+        class RaisonRecommandationNonCode{
+
+             RaisonRecommandationNonCode => [None..None]
+             RaisonRecommandationNonCode.sousSection => [None..0]
+             RaisonRecommandationNonCode.entree => [None..0]
+        } 
+
+        class RangVaccination{
+
+             RangVaccination => [None..None]
+             RangVaccination.identifiantRangVaccination => [0..*]
+             RangVaccination.codeRangVaccination => [1..1]
+             RangVaccination.derivationRangVaccination => [0..1]
+             RangVaccination.descriptionRangVaccination => [0..1]
+             RangVaccination.statutRangVaccination => [1..1]
+             RangVaccination.dateRangVaccination => [0..1]
+             RangVaccination.prioriteRangVaccination => [0..1]
+             RangVaccination.nombreRenouvellements => [0..1]
+             RangVaccination.languageRangVaccination => [0..1]
+             RangVaccination.rangVaccination => [1..1]
+        } 
+
+        class ReferenceInterne{
+
+             ReferenceInterne => [None..None]
+             ReferenceInterne.identifiant => [1..1]
+             ReferenceInterne.code => [1..1]
+        } 
+
+        class ReferenceItemPrescription{
+
+             ReferenceItemPrescription => [None..None]
+             ReferenceItemPrescription.identifiant => [1..1]
+             ReferenceItemPrescription.code => [1..1]
+             ReferenceItemPrescription.produitSante => [1..1]
+             ReferenceItemPrescription.auteur => [0..1]
+             ReferenceItemPrescription.traitementPrescrit => [0..1]
+             ReferenceItemPrescription.reference => [0..1]
+             ReferenceItemPrescription.reference.externalDocument => [1..1]
+             ReferenceItemPrescription.reference.externalDocument.identifiant => [1..1]
+        } 
+
+        class ReferencesExternes{
+
+             ReferencesExternes => [None..None]
+             ReferencesExternes.codeReferenceExterne => [1..1]
+             ReferencesExternes.blocNarratif => [1..1]
+             ReferencesExternes.reference => [1..*]
+             ReferencesExternes.reference.externalDocument => [1..1]
+             ReferencesExternes.reference.externalDocument.identifiant => [1..1]
+             ReferencesExternes.reference.externalDocument.text => [0..1]
+             ReferencesExternes.reference.externalDocument.text.reference => [0..1]
+        } 
+
+        class Rencontre{
+
+             Rencontre => [None..None]
+             Rencontre.identifiant => [1..*]
+             Rencontre.typeRencontre => [1..1]
+             Rencontre.description => [0..1]
+             Rencontre.dateRencontre => [0..1]
+             Rencontre.confirmationRencontre => [0..1]
+             Rencontre.executant => [0..*]
+             Rencontre.auteur => [0..*]
+             Rencontre.informateur => [0..*]
+             Rencontre.participant => [0..1]
+             Rencontre.autreParticipant => [0..1]
+        } 
+
         class Responsable{
 
              Responsable => [1..1]
              Responsable.dateHeurePriseResponsabilite => [1..1]
              Responsable.responsable => [1..1]
+        } 
+
+        class Resultats{
+
+             Resultats => [None..None]
+             Resultats.titreSection => [1..None]
+             Resultats.resultatsEntry => [0..*]
+        } 
+
+        class ResultatsEntry{
+
+             ResultatsEntry => [None..None]
+             ResultatsEntry.identifiant => [1..1]
+             ResultatsEntry.code => [1..1]
+             ResultatsEntry.statut => [1..1]
+             ResultatsEntry.date => [0..1]
+             ResultatsEntry.executant => [0..*]
+             ResultatsEntry.auteur => [0..*]
+             ResultatsEntry.resultat => [1..*]
+        } 
+
+        class ResultatsEvenements{
+
+             ResultatsEvenements => [None..None]
+             ResultatsEvenements.observation => [1..*]
+             ResultatsEvenements.transfertPatient => [0..*]
+             ResultatsEvenements.probleme => [0..*]
+        } 
+
+        class ResultatsExamens{
+
+             ResultatsExamens => [None..None]
+             ResultatsExamens.actes => [1..*]
+             ResultatsExamens.referencesExternes => [0..*]
+             ResultatsExamens.simpleObservation => [0..*]
+        } 
+
+        class ResultatsExamensBiologieMedicale{
+
+             ResultatsExamensBiologieMedicale => [None..None]
+             ResultatsExamensBiologieMedicale.code => [1..1]
+        } 
+
+        class ResultatsExamensNonCode{
+
+             ResultatsExamensNonCode => [None..None]
+             ResultatsExamensNonCode.sousSection => [None..0]
+             ResultatsExamensNonCode.entree => [None..0]
+        } 
+
+        class ResultatsLaboratoireBiologieSecondeIntention{
+
+             ResultatsLaboratoireBiologieSecondeIntention => [None..None]
+             ResultatsLaboratoireBiologieSecondeIntention.observation => [0..1]
+             ResultatsLaboratoireBiologieSecondeIntention.documentAttache => [1..*]
+        } 
+
+        class Section{
+
+             Section => [None..None]
+             Section.codeSection => [1..1]
+             Section.titreSection => [0..1]
+             Section.blocNarratif => [1..1]
+             Section.sousSection => [0..*]
+             Section.entree => [0..*]
+        } 
+
+        class Severite{
+
+             Severite => [None..None]
+             Severite.identifiantSeverite => [1..1]
+             Severite.codeSeverite => [1..1]
+             Severite.descriptionNarrative => [1..1]
+             Severite.statutSeverite => [1..1]
+             Severite.niveauSeverite => [1..1]
+        } 
+
+        class SigneVital{
+
+             SigneVital => [None..None]
+             SigneVital.identifiant => [1..1]
+             SigneVital.code => [1..1]
+             SigneVital.statut => [1..1]
+             SigneVital.date => [1..1]
+             SigneVital.auteur => [0..*]
+             SigneVital.signeVital => [1..*]
+        } 
+
+        class SigneVitalObserve{
+
+             SigneVitalObserve => [None..None]
+             SigneVitalObserve.identifiant => [1..1]
+             SigneVitalObserve.code => [1..1]
+             SigneVitalObserve.description => [1..1]
+             SigneVitalObserve.statut => [1..1]
+             SigneVitalObserve.date => [1..1]
+             SigneVitalObserve.observationEffectuee => [1..1]
+             SigneVitalObserve.interpretation => [0..1]
+             SigneVitalObserve.methodeUtilisee => [0..1]
+             SigneVitalObserve.siteObservation => [0..1]
+             SigneVitalObserve.auteur => [0..1]
+        } 
+
+        class SignesVitaux{
+
+             SignesVitaux => [None..None]
+             SignesVitaux.titreSection => [1..None]
+             SignesVitaux.signesVitauxEntry => [1..*]
+        } 
+
+        class SimpleObservation{
+
+             SimpleObservation => [None..None]
+             SimpleObservation.observationIdentifiant => [1..1]
+             SimpleObservation.observationCode => [1..1]
+             SimpleObservation.observationDescription => [1..1]
+             SimpleObservation.observationStatut => [1..1]
+             SimpleObservation.observationDate => [0..1]
+             SimpleObservation.observationNombreRenouvellements => [0..1]
+             SimpleObservation.observationResultat => [0..*]
+             SimpleObservation.observationInterpretation => [0..1]
+             SimpleObservation.observationMethode => [0..1]
+             SimpleObservation.observationLocalisationAnatomique => [0..1]
+             SimpleObservation.observationAuteur => [0..1]
+        } 
+
+        class Statut{
+
+             Statut => [None..None]
+             Statut.identifiant => [1..1]
+             Statut.code => [1..1]
+             Statut.description => [1..1]
+             Statut.statut => [1..1]
+             Statut.date => [1..1]
+             Statut.interpretation => [0..1]
+             Statut.auteur => [0..1]
+        } 
+
+        class StatutCliniquePatient{
+
+             StatutCliniquePatient => [None..None]
+             StatutCliniquePatient.codeStatutCliniquePatient => [1..1]
+             StatutCliniquePatient.descriptionNarrative => [1..1]
+             StatutCliniquePatient.statutEntree => [1..1]
+             StatutCliniquePatient.statutCliniquePatient => [1..1]
+        } 
+
+        class StatutDocument{
+
+             StatutDocument => [None..None]
+             StatutDocument.titreSection => [1..None]
+             StatutDocument.statutDocument => [1..1]
+        } 
+
+        class StatutFonctionnel{
+
+             StatutFonctionnel => [None..None]
+             StatutFonctionnel.titreSection => [1..None]
+             StatutFonctionnel.auteur => [0..*]
+             StatutFonctionnel.informateur => [0..*]
+             StatutFonctionnel.groupeQuestionnairesEvaluation => [0..*]
+        } 
+
+        class StatutProbleme{
+
+             StatutProbleme => [None..None]
+             StatutProbleme.codeStatutProbleme => [1..1]
+             StatutProbleme.descriptionNarrative => [1..1]
+             StatutProbleme.statutEntree => [1..1]
+             StatutProbleme.statutProbleme => [1..1]
         } 
 
         class StructureConservation{
@@ -227,6 +1596,34 @@ package IG #DDDDDD{
              StructureConservation.structure.nomStructure => [0..1]
              StructureConservation.structure.coordonneesTelecom => [0..1]
              StructureConservation.structure.adresse => [0..1]
+        } 
+
+        class Sujet{
+
+             Sujet => [None..None]
+             Sujet.lienPatient => [1..1]
+             Sujet.adresse => [0..*]
+             Sujet.telecom => [0..*]
+             Sujet.sujet => [0..*]
+             Sujet.sujet.identifiants => [0..*]
+             Sujet.sujet.nomPrenom => [0..*]
+             Sujet.sujet.nomPrenom.nom => [0..*]
+             Sujet.sujet.nomPrenom.prenom => [0..*]
+             Sujet.sujet.nomPrenom.civilite => [0..1]
+             Sujet.sujet.nomPrenom.titre => [0..1]
+             Sujet.sujet.sexeSujet => [0..1]
+             Sujet.sujet.dateNaissanceSujet => [0..1]
+             Sujet.sujet.sujetDecede => [0..1]
+             Sujet.sujet.dateHeureDeces => [0..1]
+             Sujet.sujet.naissanceMultiple => [0..1]
+             Sujet.sujet.rangNaissance => [0..1]
+        } 
+
+        class SujetNonHumain{
+
+             SujetNonHumain => [None..None]
+             SujetNonHumain.sujet => [1..1]
+             SujetNonHumain.adresse => [1..1]
         } 
 
         class SystemeStructureAuteur{
@@ -243,6 +1640,117 @@ package IG #DDDDDD{
              SystemeStructureAuteur.structure.adresse => [0..*]
              SystemeStructureAuteur.structure.coordonneesTelecom => [0..*]
              SystemeStructureAuteur.structure.secteurActivite => [0..1]
+        } 
+
+        class Traitement{
+
+             Traitement => [None..None]
+             Traitement.identifiant => [1..*]
+             Traitement.code => [0..1]
+             Traitement.note => [1..1]
+             Traitement.status => [1..1]
+             Traitement.occurancePeriod => [0..1]
+             Traitement.occuranceDateTim => [0..1]
+             Traitement.dosage => [0..1]
+             Traitement.dosage.route => [0..1]
+             Traitement.dosage.site => [0..*]
+             Traitement.dosage.dose => [0..1]
+             Traitement.dosage.rate[x] => [0..1]
+             Traitement.medicament => [1..1]
+             Traitement.reason => [0..*]
+             Traitement.prescription => [0..*]
+             Traitement.subordinateTreatment => [0..*]
+             Traitement.instructionsPatient => [0..1]
+             Traitement.precondition => [0..1]
+        } 
+
+        class TraitementDispense{
+
+             TraitementDispense => [None..None]
+             TraitementDispense.identifiant => [1..1]
+             TraitementDispense.code => [0..1]
+             TraitementDispense.description => [1..1]
+             TraitementDispense.quantite => [1..1]
+             TraitementDispense.medicamentDelivre => [1..1]
+             TraitementDispense.referencePrescription => [0..1]
+             TraitementDispense.traitement => [0..1]
+             TraitementDispense.instructionsPatient => [0..1]
+             TraitementDispense.notesDispensateur => [0..1]
+             TraitementDispense.substitution => [0..1]
+        } 
+
+        class TraitementSortie{
+
+             TraitementSortie => [None..None]
+             TraitementSortie.traitementSortie => [1..*]
+        } 
+
+        class TraitementSubordonne{
+
+             TraitementSubordonne => [None..None]
+             TraitementSubordonne.identifiantTraitement => [1..*]
+             TraitementSubordonne.descriptionTraitement => [1..1]
+             TraitementSubordonne.statutTraitement => [1..1]
+             TraitementSubordonne.doseAadministrer => [0..1]
+             TraitementSubordonne.rythmeAdministration => [0..1]
+             TraitementSubordonne.medicamentTraitement => [1..1]
+             TraitementSubordonne.preconditionTraitement => [0..*]
+        } 
+
+        class Traitements{
+
+             Traitements => [None..None]
+             Traitements.titreSection => [1..None]
+             Traitements.traitements => [1..*]
+        } 
+
+        class TraitementsAdministres{
+
+             TraitementsAdministres => [None..None]
+             TraitementsAdministres.traitementAdministre => [1..*]
+        } 
+
+        class VaccinRecommande{
+
+             VaccinRecommande => [None..None]
+             VaccinRecommande.identifiantVaccinRecommande => [1..1]
+             VaccinRecommande.codeVaccinRecommande => [1..1]
+             VaccinRecommande.descriptionNarrativeVaccinRecommande => [1..1]
+             VaccinRecommande.statutVaccinRecommande => [1..1]
+             VaccinRecommande.periodeVaccination => [1..1]
+             VaccinRecommande.voieAdministration => [0..1]
+             VaccinRecommande.regionAnatomique => [0..*]
+             VaccinRecommande.doseAdministree => [0..1]
+             VaccinRecommande.vaccin => [1..1]
+             VaccinRecommande.prescription => [0..1]
+             VaccinRecommande.rangVaccination => [0..1]
+             VaccinRecommande.commentaire => [0..1]
+        } 
+
+        class Vaccination{
+
+             Vaccination => [None..None]
+             Vaccination.identifiant => [1..1]
+             Vaccination.code => [1..1]
+             Vaccination.description => [1..1]
+             Vaccination.statut => [1..1]
+             Vaccination.dateVaccination => [1..1]
+             Vaccination.voieAadministration => [0..1]
+             Vaccination.regionAnatomique => [0..*]
+             Vaccination.doseVaccination => [0..1]
+             Vaccination.vaccin => [1..1]
+             Vaccination.prescription => [0..1]
+             Vaccination.rangVaccination => [0..1]
+             Vaccination.reaction => [0..*]
+             Vaccination.commentaire => [0..1]
+             Vaccination.DoseAntigene => [0..*]
+        } 
+
+        class Vaccinations{
+
+             Vaccinations => [None..None]
+             Vaccinations.titreSection => [1..None]
+             Vaccinations.vaccinations => [1..*]
         } 
 
         class Validateur{
@@ -1144,7 +2652,67 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> Acte
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ActeSubstitution
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> AllergieOuHypersensibilite
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> AllergiesEtHypersensibilites
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> AntecedentFamilialObserve
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> AntecedentsFamiliaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> AntecedentsFamiliauxEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> AntecedentsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Auteur
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur" as  classc10f54dc9fcb3e15793c71551b66006f 
+
+    classc10f54dc9fcb3e15793c71551b66006f --> AuteurAPSR
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> CRBIOChapitre
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> CRBIOSousChapitre
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Certitude
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> CodesAbarres
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> CommentaireER
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> CommentaireNonCode
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1152,11 +2720,135 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> CorpsDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Criticite
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMActeImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMAddendum
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMComplication
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMConclusions
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMDemandeExamen
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMExamenComparatif
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMExpositionRadiations
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMHistoriqueMedical
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMInformationsCliniques
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMMotifActe
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMObjectCatalog
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DICOMResultats
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DemandeExamenOuSuivi
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> DestinatairePrevu
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> DirectiveAnticipee
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DirectivesAnticipees
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DispensationMedicaments
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DispositifMedical
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DispositifMedicalEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DispositifsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DocumentAttache
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> DocumentDeReference
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DocumentPDFCopie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> DocumentsAjoutes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DoseAntigene
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> EducationPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EffetIndesirable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> EffetsIndesirables
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EnRapportAvecALD
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EnRapportAvecAccidentTravail
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EnRapportAvecLaPrevention
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1164,11 +2856,127 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> Evaluation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EvaluationComposant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EvaluationComposantN2
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Evenement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> EvolutionEffetIndesirable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> FacteursDeRisqueProfessionnelsNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> FonctionsPhysiques
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Procedure" as  classae5e4887c05970ed1e2f864f6c521475 
+
+    classae5e4887c05970ed1e2f864f6c521475 --> FrActe
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Act" as  class8d4d674a722f7198503e63f485151da9 
+
+    class8d4d674a722f7198503e63f485151da9 --> FrActeSubstitution
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Observation" as  class287dbca53f1e2132175be78f504e01fb 
+
+    class287dbca53f1e2132175be78f504e01fb --> FrAllergieOuHypersensibilite
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> GraviteEffetIndesirable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> GroupDeQuestionnairesDevaluation
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> HabitusModeDeVie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> HabitusModeDeVieEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> HistoriqueDesActes
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> HistoriqueDesGrossesses
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> HistoriqueGrossesse
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> HorsAMM
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ImageIllustrative
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ImputabiliteEffetIndesirable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur" as  class2889cb82fe64f1ee7902a0bd59c95f30 
+
+    class2889cb82fe64f1ee7902a0bd59c95f30 --> InformantAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Informateur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> InstructionAuPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> InstructionsAuDispensateur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> InstructionsPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> LaboratoireExecutant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ModeleCDACorpsDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Naissance
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> NonRemboursable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> NotesDispensateur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ObservationGrossesse
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1180,7 +2988,27 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> ParticipantAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ParticipantCorps
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> PatientSujetNonHumain
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> PatientUsager
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Performer
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> PeriodeDeRenouvellement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1190,9 +3018,29 @@ package "Ressources de base" #palegreen {
 
     class095a1b43effec73955e31e790438de49 --> PersonneStructureAuteur
 
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> PlanSoins
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> PointsDeVigilancesNonCode
+
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Prescription
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> PrescriptionDispositifsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> PrescriptionEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> PrescriptionMedicaments
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1200,7 +3048,123 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> Probleme
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> ProblemesActifs
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ProduitSante
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> QuantiteProduit
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> RaisonRecommandation
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> RaisonRecommandationNonCode
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> RangVaccination
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ReferenceInterne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ReferenceItemPrescription
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ReferencesExternes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Rencontre
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Responsable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> Resultats
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ResultatsEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> ResultatsEvenements
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> ResultatsExamens
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ResultatsExamensBiologieMedicale
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> ResultatsExamensNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> ResultatsLaboratoireBiologieSecondeIntention
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Section
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Severite
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> SigneVital
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> SigneVitalObserve
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> SignesVitaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> SimpleObservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Statut
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> StatutCliniquePatient
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> StatutDocument
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> StatutFonctionnel
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> StatutProbleme
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1208,7 +3172,51 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> Sujet
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> SujetNonHumain
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> SystemeStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Traitement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TraitementDispense
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> TraitementSortie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TraitementSubordonne
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> Traitements
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> TraitementsAdministres
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> VaccinRecommande
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> Vaccination
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
+
+    classe2eb9933e161ee98f021b2d27dc12810 --> Vaccinations
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
