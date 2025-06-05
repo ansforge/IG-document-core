@@ -6,4 +6,6 @@ Description: """Modèle loqigue métier de la section Traitements"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* traitements  1..* Traitement "Entrée Traitement"
+* sousSection 0..0
+* entree 1..*
+  * traitements  1..* Traitement "Entrée Traitement"

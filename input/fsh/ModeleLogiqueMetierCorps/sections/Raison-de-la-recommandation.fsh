@@ -5,5 +5,7 @@ Title: "Raison de la recommandation"
 Description: """Modèle logique métier de la section Raison de la recommandation"""
 Characteristics: #can-be-target
 
-* observation  1..1 SimpleObservation "Entrée Simple observation"
-* problemes  1..* Probleme "Entrée Problème"
+* sousSection 0..0
+* entree 1..*
+  * observation  1..1 SimpleObservation "Entrée Simple observation"
+  * problemes  1..* Probleme "Entrée Problème"

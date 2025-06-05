@@ -88,9 +88,9 @@ and problemObservationCCD 1..1 and frAllergieOuHypersensibiliteCISIS 1..1
 * priorityCode 0..0 
 * languageCode	0..0
 * repeatNumber 0..0
-* value 1..1 
-* value ^short = "L'élément <value> sera utilisé pour indiquer qu'il n'y a pas d'allergie/hypersensibilité ou que l'on ne sait pas à partir du jdv-absent-or-unknown-allergy-cisis (1.2.250.1.213.1.1.5.661). 
- - Type : CD"
+* value 1..1
+* value ^short = "L'élément <value> sera utilisé pour indiquer qu'il n'y a pas d'allergie/hypersensibilité ou que l'on ne sait pas à partir du jdv-absent-or-unknown-allergy-cisis (1.2.250.1.213.1.1.5.661)."
+* value only CD
 * interpretationCode 0..0
 * methodCode 0..0
 * targetSiteCode 0..0

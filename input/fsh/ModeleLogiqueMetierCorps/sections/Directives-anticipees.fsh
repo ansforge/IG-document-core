@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Directives anticipées"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* directiveAnticipee 0..* DirectiveAnticipee "Entrée Directive anticipée"
+* sousSection 0..0 
+* entree
+  * directiveAnticipee 0..* DirectiveAnticipee "Entrée Directive anticipée"

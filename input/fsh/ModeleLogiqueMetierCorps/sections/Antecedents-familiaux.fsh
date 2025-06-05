@@ -5,4 +5,6 @@ Title: "Antécédents familiaux"
 Description: """Modèle logique métier de la section Antécédents familiaux"""
 Characteristics: #can-be-target
 
-* antecedentsFamiliaux 1..* AntecedentsFamiliauxEntry "Entrée Antécédents familiaux"
+* sousSection 0..0
+* entree 1..*
+  * antecedentsFamiliaux 1..* AntecedentsFamiliauxEntry "Entrée Antécédents familiaux"

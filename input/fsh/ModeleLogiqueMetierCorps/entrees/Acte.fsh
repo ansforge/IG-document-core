@@ -29,7 +29,7 @@ Characteristics: #can-be-target
 * reason 0..* ReferenceInterne "Motif de l'acte"
 //deviceUsed
 * dispositifMedical  0..* DispositifMedical "Réference interne à un DispositifMedical"
-// reasonReference
+// équivalent FHIR : reasonReference ?
 * difficulte 0..1 SimpleObservation "Difficulté"
-// reasonReference
+// équivalent FHIR : reasonReference ?
 * scores 0..* SimpleObservation "Scores"

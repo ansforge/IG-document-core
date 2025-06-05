@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Problèmes actifs"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* problemes 1..* Probleme "Entrée Problème"
+* sousSection 0..0
+* entree 1..*
+  * problemes 1..* Probleme "Entrée Problème"

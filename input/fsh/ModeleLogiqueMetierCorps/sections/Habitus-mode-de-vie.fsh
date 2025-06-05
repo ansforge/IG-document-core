@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Habitus et modes de vie"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* habitusModeDeVieEntry 0..* HabitusModeDeVieEntry "Entrée Habitus, Mode de vie"
+* sousSection 0..0
+* entree
+  * habitusModeDeVieEntry 0..* HabitusModeDeVieEntry "Entrée Habitus, Mode de vie"

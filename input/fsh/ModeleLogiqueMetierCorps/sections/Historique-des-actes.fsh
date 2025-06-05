@@ -6,5 +6,7 @@ Description: """Modèle logique métier de la section Historique des actes"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* actes 1..* Acte "Entrée Acte"
-* references 1..* ReferencesExternes "Entrée Références externes"
+* sousSection 0..0
+* entree 1..*
+  * actes 1..* Acte "Entrée Acte"
+  * references 1..* ReferencesExternes "Entrée Références externes"

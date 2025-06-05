@@ -5,4 +5,6 @@ Title: "Traitements à la sortie"
 Description: """Modèle logique métier de la section Traitements à la sortie"""
 Characteristics: #can-be-target
 
-* traitementSortie 1..* Traitement "Entrée Traitement"
+* sousSection 0..0
+* entree 1..*
+  * traitementSortie 1..* Traitement "Entrée Traitement"

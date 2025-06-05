@@ -6,8 +6,11 @@ Description: """Modèle logique métier de la section DICOM Acte d'imagerie"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* techniqueImagerie 1..1 Base "Entrée technique d'imagerie"
-* administrationProduits 0..* Base "Entrée Administration de produits"
-* complications 0..1 DICOMComplication "Section Complications"
-* expositionsRadiations 0..1 Base "Section Expositions aux radiations"
-* catalogueObjects 1..1 Base "Section Catalogue d'objects"
+* sousSection
+  * complications 0..1 DICOMComplication "Section Complications"
+  * expositionsRadiations 0..1 DICOMExpositionRadiations "Section Expositions aux radiations"
+  * catalogueObjects 1..1 DICOMObjectCatalog "Section Catalogue d'objects"
+* entree
+  * techniqueImagerie 1..1 DICOMTechniqueImagerie "Entrée technique d'imagerie"
+  * administrationProduits 0..* DICOMAdministrationProduitDeSante "Entrée Administration de produits"
+

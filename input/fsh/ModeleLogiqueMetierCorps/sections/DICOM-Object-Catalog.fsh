@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section DICOM Object Catalog"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* examenImagerie 0..* Base "Entrée DICOM Historique Examen imagerie"
+* sousSection 0..0 
+* entree
+  * examenImagerie 0..* DICOMExamenImagerie "Entrée DICOM Historique Examen imagerie"

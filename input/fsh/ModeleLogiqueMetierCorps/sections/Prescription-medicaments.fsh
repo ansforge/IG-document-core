@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Prescription de médicamen
 Characteristics: #can-be-target
 
 * auteur 0..1 Auteur "Auteur de la prescription"
-* traitementPrescrit 1..* Base "Entrée Traitement prescrit"
+* sousSection 0..0
+* entree 1..*
+  * traitementPrescrit 1..* TraitementPrescrit "Entrée Traitement prescrit"

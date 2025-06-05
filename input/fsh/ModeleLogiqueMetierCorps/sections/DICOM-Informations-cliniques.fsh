@@ -6,5 +6,7 @@ Description: """Modèle logique métier de la section DICOM Informations cliniqu
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* demandeExamen 1..1 DICOMDemandeExamen "Sous-section DICOM Demande d'examen"
-* historiqueMedical 1..1 DICOMHistoriqueMedical "Sous-section DICOM Historique médical"
+* sousSection 
+  * demandeExamen 1..1 DICOMDemandeExamen "Sous-section DICOM Demande d'examen"
+  * historiqueMedical 1..1 DICOMHistoriqueMedical "Sous-section DICOM Historique médical"
+* entree 0..0 

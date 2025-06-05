@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Prescription de dispositif
 Characteristics: #can-be-target
 
 * auteur 0..1 Auteur "Auteur de la prescription"
-* dispositifMedical  1..* DispositifMedical "Entrée Dispositif médical prescrit"
+* sousSection 0..0
+* entree 1..*
+  * dispositifMedical  1..* DispositifMedical "Entrée Dispositif médical prescrit"

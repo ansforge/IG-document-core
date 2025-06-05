@@ -6,4 +6,6 @@ Description: """Modèle logique métier de la section Statut du document"""
 Characteristics: #can-be-target
 
 * titreSection 1..1 
-* statutDocument 1..1 Base "Entrée Statut du document"
+* sousSection 0..0
+* entree 1..1
+  * statutDocument 1..1 StatutDocumentEntry "Entrée Statut du document"
