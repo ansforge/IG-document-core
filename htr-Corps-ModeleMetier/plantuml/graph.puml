@@ -7,6 +7,18 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
+        class AccidentsTransfusionnels{
+
+             AccidentsTransfusionnels => [None..None]
+             AccidentsTransfusionnels.identifiant => [1..1]
+             AccidentsTransfusionnels.code => [1..1]
+             AccidentsTransfusionnels.description => [1..1]
+             AccidentsTransfusionnels.statut => [1..1]
+             AccidentsTransfusionnels.date => [1..1]
+             AccidentsTransfusionnels.valeur => [1..1]
+             AccidentsTransfusionnels.auteur => [0..1]
+        } 
+
         class Acte{
 
              Acte => [None..None]
@@ -37,6 +49,18 @@ package IG #DDDDDD{
              ActeSubstitution.statut => [1..1]
         } 
 
+        class AdministrationDeDerivesDuSang{
+
+             AdministrationDeDerivesDuSang => [None..None]
+             AdministrationDeDerivesDuSang.identifiant => [1..1]
+             AdministrationDeDerivesDuSang.code => [1..1]
+             AdministrationDeDerivesDuSang.description => [1..1]
+             AdministrationDeDerivesDuSang.statut => [1..1]
+             AdministrationDeDerivesDuSang.date => [1..1]
+             AdministrationDeDerivesDuSang.valeur => [1..1]
+             AdministrationDeDerivesDuSang.auteur => [0..1]
+        } 
+
         class AllergieOuHypersensibilite{
 
              AllergieOuHypersensibilite => [None..None]
@@ -56,7 +80,9 @@ package IG #DDDDDD{
 
              AllergiesEtHypersensibilites => [None..None]
              AllergiesEtHypersensibilites.titreSection => [1..None]
-             AllergiesEtHypersensibilites.allergieOuHypersensibilite => [1..*]
+             AllergiesEtHypersensibilites.sousSection => [None..0]
+             AllergiesEtHypersensibilites.entree => [1..None]
+             AllergiesEtHypersensibilites.entree.allergieOuHypersensibilite => [1..*]
         } 
 
         class AntecedentFamilialObserve{
@@ -77,7 +103,9 @@ package IG #DDDDDD{
         class AntecedentsFamiliaux{
 
              AntecedentsFamiliaux => [None..None]
-             AntecedentsFamiliaux.antecedentsFamiliaux => [1..*]
+             AntecedentsFamiliaux.sousSection => [None..0]
+             AntecedentsFamiliaux.entree => [1..None]
+             AntecedentsFamiliaux.entree.antecedentsFamiliaux => [1..*]
         } 
 
         class AntecedentsFamiliauxEntry{
@@ -93,7 +121,9 @@ package IG #DDDDDD{
 
              AntecedentsMedicaux => [None..None]
              AntecedentsMedicaux.titreSection => [1..None]
-             AntecedentsMedicaux.problemes => [1..*]
+             AntecedentsMedicaux.sousSection => [None..0]
+             AntecedentsMedicaux.entree => [1..None]
+             AntecedentsMedicaux.entree.problemes => [1..*]
         } 
 
         class Auteur{
@@ -109,16 +139,44 @@ package IG #DDDDDD{
              AuteurAPSR => [None..None]
         } 
 
+        class AutorisationSubstitution{
+
+             AutorisationSubstitution => [None..None]
+             AutorisationSubstitution.typeSubstitution => [1..1]
+             AutorisationSubstitution.statut => [1..1]
+        } 
+
+        class BatterieExamensDeBiologieMedicale{
+
+             BatterieExamensDeBiologieMedicale => [None..None]
+             BatterieExamensDeBiologieMedicale.identifiant => [0..1]
+             BatterieExamensDeBiologieMedicale.codeBatterieExamen => [0..1]
+             BatterieExamensDeBiologieMedicale.statut => [1..1]
+             BatterieExamensDeBiologieMedicale.dateExamen => [0..1]
+             BatterieExamensDeBiologieMedicale.choice[x] => [0..1]
+             BatterieExamensDeBiologieMedicale.laboratoireExecutant => [0..*]
+             BatterieExamensDeBiologieMedicale.auteur => [0..*]
+             BatterieExamensDeBiologieMedicale.participant => [0..*]
+             BatterieExamensDeBiologieMedicale.prelevement => [0..*]
+             BatterieExamensDeBiologieMedicale.resultatElementCliniquePertinent => [0..*]
+             BatterieExamensDeBiologieMedicale.imageIllustrative => [0..*]
+             BatterieExamensDeBiologieMedicale.commentaire => [0..*]
+        } 
+
         class CRBIOChapitre{
 
              CRBIOChapitre => [None..None]
+             CRBIOChapitre.sousSection => [None..0]
+             CRBIOChapitre.entree => [None..0]
              CRBIOChapitre.choice[x] => [1..*]
         } 
 
         class CRBIOSousChapitre{
 
              CRBIOSousChapitre => [None..None]
-             CRBIOSousChapitre.resultatsExamensBiologieMedicale => [1..1]
+             CRBIOSousChapitre.sousSection => [None..0]
+             CRBIOSousChapitre.entree => [1..1]
+             CRBIOSousChapitre.entree.resultatsExamensBiologieMedicale => [1..1]
         } 
 
         class Certitude{
@@ -135,7 +193,8 @@ package IG #DDDDDD{
         class CodesAbarres{
 
              CodesAbarres => [None..None]
-             CodesAbarres.imageIllustrative => [0..*]
+             CodesAbarres.sousSection => [None..0]
+             CodesAbarres.entree.imageIllustrative => [0..*]
         } 
 
         class CommentaireER{
@@ -231,18 +290,66 @@ package IG #DDDDDD{
 
              DICOMActeImagerie => [None..None]
              DICOMActeImagerie.titreSection => [1..None]
-             DICOMActeImagerie.techniqueImagerie => [1..1]
-             DICOMActeImagerie.administrationProduits => [0..*]
-             DICOMActeImagerie.complications => [0..1]
-             DICOMActeImagerie.expositionsRadiations => [0..1]
-             DICOMActeImagerie.catalogueObjects => [1..1]
+             DICOMActeImagerie.sousSection.complications => [0..1]
+             DICOMActeImagerie.sousSection.expositionsRadiations => [0..1]
+             DICOMActeImagerie.sousSection.catalogueObjects => [1..1]
+             DICOMActeImagerie.entree.techniqueImagerie => [1..1]
+             DICOMActeImagerie.entree.administrationProduits => [0..*]
         } 
 
         class DICOMAddendum{
 
              DICOMAddendum => [None..None]
              DICOMAddendum.titreSection => [1..None]
+             DICOMAddendum.sousSection => [None..0]
+             DICOMAddendum.entree => [None..0]
              DICOMAddendum.auteur => [1..1]
+        } 
+
+        class DICOMAdministrationProduitDeSante{
+
+             DICOMAdministrationProduitDeSante => [None..None]
+             DICOMAdministrationProduitDeSante.identifiant => [1..1]
+             DICOMAdministrationProduitDeSante.description => [0..1]
+             DICOMAdministrationProduitDeSante.statut => [1..1]
+             DICOMAdministrationProduitDeSante.voieAdministration => [0..1]
+             DICOMAdministrationProduitDeSante.dose => [0..1]
+             DICOMAdministrationProduitDeSante.rythme => [0..1]
+             DICOMAdministrationProduitDeSante.medicament => [1..1]
+             DICOMAdministrationProduitDeSante.medicament.produit => [1..1]
+             DICOMAdministrationProduitDeSante.medicament.produit.codeProduit => [0..1]
+             DICOMAdministrationProduitDeSante.medicament.produit.codeProduit.autreCodification => [0..1]
+             DICOMAdministrationProduitDeSante.medicament.produit.nomMarque => [0..1]
+             DICOMAdministrationProduitDeSante.medicament.produit.numeroLot => [0..1]
+        } 
+
+        class DICOMAdministrationRadiopharmaceutique{
+
+             DICOMAdministrationRadiopharmaceutique => [None..None]
+             DICOMAdministrationRadiopharmaceutique.typeTraitement => [1..1]
+             DICOMAdministrationRadiopharmaceutique.voieAdministration => [0..1]
+             DICOMAdministrationRadiopharmaceutique.dose => [0..1]
+             DICOMAdministrationRadiopharmaceutique.rythme => [0..1]
+             DICOMAdministrationRadiopharmaceutique.medicament => [1..1]
+             DICOMAdministrationRadiopharmaceutique.medicament.produit => [1..1]
+             DICOMAdministrationRadiopharmaceutique.medicament.produit.codeProduit => [0..1]
+             DICOMAdministrationRadiopharmaceutique.medicament.produit.codeProduit.autreCodification => [0..1]
+             DICOMAdministrationRadiopharmaceutique.medicament.produit.nomMarque => [0..1]
+             DICOMAdministrationRadiopharmaceutique.medicament.produit.numeroLot => [0..1]
+        } 
+
+        class DICOMCadresAafficher{
+
+             DICOMCadresAafficher => [None..None]
+             DICOMCadresAafficher.code => [1..1]
+             DICOMCadresAafficher.cadresReferences => [1..1]
+        } 
+
+        class DICOMCadresReferences{
+
+             DICOMCadresReferences => [None..None]
+             DICOMCadresReferences.code => [1..1]
+             DICOMCadresReferences.cadresAffiche => [1..1]
         } 
 
         class DICOMComplication{
@@ -277,31 +384,52 @@ package IG #DDDDDD{
              DICOMExamenComparatif.entree => [None..0]
         } 
 
+        class DICOMExamenImagerie{
+
+             DICOMExamenImagerie => [None..None]
+             DICOMExamenImagerie.identifiant => [1..*]
+             DICOMExamenImagerie.codeActe => [1..1]
+             DICOMExamenImagerie.description => [0..1]
+             DICOMExamenImagerie.dateActe => [0..1]
+             DICOMExamenImagerie.serieImagerie => [1..1]
+        } 
+
+        class DICOMExpositionPatient{
+
+             DICOMExpositionPatient => [None..None]
+             DICOMExpositionPatient.code => [1..1]
+             DICOMExpositionPatient.participant => [1..1]
+        } 
+
         class DICOMExpositionRadiations{
 
              DICOMExpositionRadiations => [None..None]
              DICOMExpositionRadiations.titreSection => [1..None]
-             DICOMExpositionRadiations.sOPInstanceObservation => [0..*]
-             DICOMExpositionRadiations.expositionRayonnements => [1..1]
-             DICOMExpositionRadiations.observationGrossesse => [1..1]
-             DICOMExpositionRadiations.observationIndication => [0..1]
-             DICOMExpositionRadiations.quantite => [0..*]
-             DICOMExpositionRadiations.administrationRadiopharmaceutique => [0..1]
+             DICOMExpositionRadiations.sousSection => [None..0]
+             DICOMExpositionRadiations.entree.sOPInstanceObservation => [0..*]
+             DICOMExpositionRadiations.entree.expositionRayonnements => [1..1]
+             DICOMExpositionRadiations.entree.observationGrossesse => [1..1]
+             DICOMExpositionRadiations.entree.observationIndication => [0..1]
+             DICOMExpositionRadiations.entree.quantite => [0..*]
+             DICOMExpositionRadiations.entree.administrationRadiopharmaceutique => [0..1]
         } 
 
         class DICOMHistoriqueMedical{
 
              DICOMHistoriqueMedical => [None..None]
              DICOMHistoriqueMedical.titreSection => [1..None]
-             DICOMHistoriqueMedical.observationDICOM => [1..*]
+             DICOMHistoriqueMedical.sousSection => [None..0]
+             DICOMHistoriqueMedical.entree => [1..None]
+             DICOMHistoriqueMedical.entree.observationDICOM => [1..*]
         } 
 
         class DICOMInformationsCliniques{
 
              DICOMInformationsCliniques => [None..None]
              DICOMInformationsCliniques.titreSection => [1..None]
-             DICOMInformationsCliniques.demandeExamen => [1..1]
-             DICOMInformationsCliniques.historiqueMedical => [1..1]
+             DICOMInformationsCliniques.sousSection.demandeExamen => [1..1]
+             DICOMInformationsCliniques.sousSection.historiqueMedical => [1..1]
+             DICOMInformationsCliniques.entree => [None..0]
         } 
 
         class DICOMMotifActe{
@@ -316,7 +444,81 @@ package IG #DDDDDD{
 
              DICOMObjectCatalog => [None..None]
              DICOMObjectCatalog.titreSection => [1..None]
-             DICOMObjectCatalog.examenImagerie => [0..*]
+             DICOMObjectCatalog.sousSection => [None..0]
+             DICOMObjectCatalog.entree.examenImagerie => [0..*]
+        } 
+
+        class DICOMObjectifsDeReference{
+
+             DICOMObjectifsDeReference => [None..None]
+             DICOMObjectifsDeReference.code => [1..1]
+             DICOMObjectifsDeReference.valeur => [1..1]
+        } 
+
+        class DICOMObservation{
+
+             DICOMObservation => [None..None]
+             DICOMObservation.identifiant => [1..1]
+             DICOMObservation.code => [1..1]
+             DICOMObservation.description => [0..1]
+             DICOMObservation.statut => [1..1]
+             DICOMObservation.date => [0..1]
+             DICOMObservation.valeur => [0..1]
+             DICOMObservation.localisationAnatomique => [0..1]
+             DICOMObservation.localisationAnatomique.precisionTopographique => [0..*]
+             DICOMObservation.localisationAnatomique.precisionTopographique.nom => [1..1]
+             DICOMObservation.localisationAnatomique.precisionTopographique.valeur => [1..1]
+             DICOMObservation.observation => [0..*]
+             DICOMObservation.quantite => [0..*]
+        } 
+
+        class DICOMObservationSubordonnee{
+
+             DICOMObservationSubordonnee => [None..None]
+             DICOMObservationSubordonnee.identifiant => [1..1]
+             DICOMObservationSubordonnee.code => [1..1]
+             DICOMObservationSubordonnee.description => [0..1]
+             DICOMObservationSubordonnee.statut => [1..1]
+             DICOMObservationSubordonnee.date => [0..1]
+             DICOMObservationSubordonnee.valeur => [0..1]
+             DICOMObservationSubordonnee.interpretation => [0..1]
+             DICOMObservationSubordonnee.methode => [0..1]
+             DICOMObservationSubordonnee.lateralite => [0..1]
+             DICOMObservationSubordonnee.lateralite.topographique => [0..1]
+             DICOMObservationSubordonnee.lateralite.topographique.nom => [1..1]
+             DICOMObservationSubordonnee.lateralite.topographique.valeur => [1..1]
+        } 
+
+        class DICOMQuantity{
+
+             DICOMQuantity => [None..None]
+             DICOMQuantity.identifiant => [1..1]
+             DICOMQuantity.code => [1..1]
+             DICOMQuantity.description => [0..1]
+             DICOMQuantity.statut => [1..1]
+             DICOMQuantity.date => [0..1]
+             DICOMQuantity.valeur => [1..1]
+             DICOMQuantity.lateralite => [0..1]
+             DICOMQuantity.lateralite.topographique => [0..1]
+             DICOMQuantity.lateralite.topographique.nom => [1..1]
+             DICOMQuantity.lateralite.topographique.valeur => [1..1]
+        } 
+
+        class DICOMQuantitySubordonnee{
+
+             DICOMQuantitySubordonnee => [None..None]
+             DICOMQuantitySubordonnee.identifiant => [1..1]
+             DICOMQuantitySubordonnee.code => [1..1]
+             DICOMQuantitySubordonnee.description => [0..1]
+             DICOMQuantitySubordonnee.statut => [1..1]
+             DICOMQuantitySubordonnee.date => [0..1]
+             DICOMQuantitySubordonnee.valeur => [1..1]
+             DICOMQuantitySubordonnee.interpretation => [0..1]
+             DICOMQuantitySubordonnee.methode => [0..1]
+             DICOMQuantitySubordonnee.lateralite => [0..1]
+             DICOMQuantitySubordonnee.lateralite.topographique => [0..1]
+             DICOMQuantitySubordonnee.lateralite.topographique.nom => [1..1]
+             DICOMQuantitySubordonnee.lateralite.topographique.valeur => [1..1]
         } 
 
         class DICOMResultats{
@@ -325,6 +527,56 @@ package IG #DDDDDD{
              DICOMResultats.titreSection => [1..None]
              DICOMResultats.sousSection => [None..0]
              DICOMResultats.entree => [None..0]
+        } 
+
+        class DICOMSOPInstanceObservation{
+
+             DICOMSOPInstanceObservation => [None..None]
+             DICOMSOPInstanceObservation.identifiant => [1..*]
+             DICOMSOPInstanceObservation.classeSOP => [1..1]
+             DICOMSOPInstanceObservation.description => [0..1]
+             DICOMSOPInstanceObservation.statut => [1..1]
+             DICOMSOPInstanceObservation.date => [0..1]
+             DICOMSOPInstanceObservation.observation => [0..*]
+             DICOMSOPInstanceObservation.objectifsReferences => [0..*]
+             DICOMSOPInstanceObservation.cadresReferences => [0..1]
+        } 
+
+        class DICOMSOPInstanceObservationSubordonnee{
+
+             DICOMSOPInstanceObservationSubordonnee => [None..None]
+             DICOMSOPInstanceObservationSubordonnee.identifiant => [1..*]
+             DICOMSOPInstanceObservationSubordonnee.classeSOP => [1..1]
+             DICOMSOPInstanceObservationSubordonnee.description => [0..1]
+             DICOMSOPInstanceObservationSubordonnee.statut => [1..1]
+             DICOMSOPInstanceObservationSubordonnee.date => [0..1]
+             DICOMSOPInstanceObservationSubordonnee.objectifsReferences => [0..1]
+             DICOMSOPInstanceObservationSubordonnee.cadresReferences => [0..1]
+        } 
+
+        class DICOMSerieImagerie{
+
+             DICOMSerieImagerie => [None..None]
+             DICOMSerieImagerie.identifiant => [1..*]
+             DICOMSerieImagerie.code => [1..1]
+             DICOMSerieImagerie.description => [0..1]
+             DICOMSerieImagerie.date => [0..1]
+             DICOMSerieImagerie.serieImagerie => [1..1]
+        } 
+
+        class DICOMTechniqueImagerie{
+
+             DICOMTechniqueImagerie => [None..None]
+             DICOMTechniqueImagerie.identifiant => [1..1]
+             DICOMTechniqueImagerie.codeActe => [1..1]
+             DICOMTechniqueImagerie.description => [0..1]
+             DICOMTechniqueImagerie.date => [0..1]
+             DICOMTechniqueImagerie.modaliteAcquisition => [1..*]
+             DICOMTechniqueImagerie.lateralite => [0..1]
+             DICOMTechniqueImagerie.lateralite.topographique => [0..1]
+             DICOMTechniqueImagerie.lateralite.topographique.nom => [1..1]
+             DICOMTechniqueImagerie.lateralite.topographique.valeur => [1..1]
+             DICOMTechniqueImagerie.participant => [0..1]
         } 
 
         class DemandeExamenOuSuivi{
@@ -368,15 +620,18 @@ package IG #DDDDDD{
 
              DirectivesAnticipees => [None..None]
              DirectivesAnticipees.titreSection => [1..None]
-             DirectivesAnticipees.directiveAnticipee => [0..*]
+             DirectivesAnticipees.sousSection => [None..0]
+             DirectivesAnticipees.entree.directiveAnticipee => [0..*]
         } 
 
         class DispensationMedicaments{
 
              DispensationMedicaments => [None..None]
              DispensationMedicaments.titreSection => [1..None]
+             DispensationMedicaments.sousSection => [None..0]
+             DispensationMedicaments.entree => [1..None]
+             DispensationMedicaments.entree.traitementDispense => [1..*]
              DispensationMedicaments.auteur => [1..1]
-             DispensationMedicaments.traitementDispense => [1..*]
         } 
 
         class DispositifMedical{
@@ -411,7 +666,8 @@ package IG #DDDDDD{
 
              DispositifsMedicaux => [None..None]
              DispositifsMedicaux.titreSection => [1..None]
-             DispositifsMedicaux.dispositifsMedicaux => [0..*]
+             DispositifsMedicaux.sousSection => [None..0]
+             DispositifsMedicaux.entree.dispositifsMedicaux => [0..*]
         } 
 
         class DocumentAttache{
@@ -440,14 +696,17 @@ package IG #DDDDDD{
 
              DocumentPDFCopie => [None..None]
              DocumentPDFCopie.titreSection => [1..None]
-             DocumentPDFCopie.documentAttache => [1..1]
+             DocumentPDFCopie.sousSection => [None..0]
+             DocumentPDFCopie.entree => [1..1]
+             DocumentPDFCopie.entree.documentAttache => [1..1]
         } 
 
         class DocumentsAjoutes{
 
              DocumentsAjoutes => [None..None]
-             DocumentsAjoutes.simpleObservation => [0..1]
-             DocumentsAjoutes.documentAttache => [1..*]
+             DocumentsAjoutes.sousSection => [None..0]
+             DocumentsAjoutes.entree.simpleObservation => [0..1]
+             DocumentsAjoutes.entree.documentAttache => [1..*]
         } 
 
         class DoseAntigene{
@@ -458,12 +717,22 @@ package IG #DDDDDD{
              DoseAntigene.antigene => [1..1]
         } 
 
+        class EchantillonPreleve{
+
+             EchantillonPreleve => [None..None]
+             EchantillonPreleve.identifiant => [1..1]
+             EchantillonPreleve.echantillon => [1..1]
+             EchantillonPreleve.echantillon.code => [1..1]
+             EchantillonPreleve.echantillon.quantite => [0..1]
+        } 
+
         class EducationPatient{
 
              EducationPatient => [None..None]
-             EducationPatient.acte => [0..*]
-             EducationPatient.observation => [0..*]
-             EducationPatient.reference => [0..*]
+             EducationPatient.sousSection => [None..0]
+             EducationPatient.entree.acte => [0..*]
+             EducationPatient.entree.observation => [0..*]
+             EducationPatient.entree.reference => [0..*]
         } 
 
         class EffetIndesirable{
@@ -486,7 +755,9 @@ package IG #DDDDDD{
 
              EffetsIndesirables => [None..None]
              EffetsIndesirables.titreSection => [1..None]
-             EffetsIndesirables.effetIndesirable => [1..*]
+             EffetsIndesirables.sousSection => [None..0]
+             EffetsIndesirables.entree => [1..None]
+             EffetsIndesirables.entree.effetIndesirable => [1..*]
         } 
 
         class EnRapportAvecALD{
@@ -614,6 +885,30 @@ package IG #DDDDDD{
              Evenement.executantEvenement.executant => [1..1]
         } 
 
+        class EvenementIndesirablePendantHospitalisation{
+
+             EvenementIndesirablePendantHospitalisation => [None..None]
+             EvenementIndesirablePendantHospitalisation.identifiant => [1..1]
+             EvenementIndesirablePendantHospitalisation.code => [1..1]
+             EvenementIndesirablePendantHospitalisation.description => [1..1]
+             EvenementIndesirablePendantHospitalisation.statut => [1..1]
+             EvenementIndesirablePendantHospitalisation.date => [1..1]
+             EvenementIndesirablePendantHospitalisation.valeur => [1..1]
+             EvenementIndesirablePendantHospitalisation.auteur => [0..1]
+        } 
+
+        class EvenementsIndesirablesSuiteAdministrationDerivesSang{
+
+             EvenementsIndesirablesSuiteAdministrationDerivesSang => [None..None]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.identifiant => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.code => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.description => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.statut => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.date => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.valeur => [1..1]
+             EvenementsIndesirablesSuiteAdministrationDerivesSang.auteur => [0..1]
+        } 
+
         class EvolutionEffetIndesirable{
 
              EvolutionEffetIndesirable => [None..None]
@@ -633,8 +928,9 @@ package IG #DDDDDD{
         class FonctionsPhysiques{
 
              FonctionsPhysiques => [None..None]
-             FonctionsPhysiques.groupeQuestionnairesEvaluation => [0..*]
-             FonctionsPhysiques.evalutation => [0..*]
+             FonctionsPhysiques.sousSection => [None..0]
+             FonctionsPhysiques.entree.groupeQuestionnairesEvaluation => [0..*]
+             FonctionsPhysiques.entree.evalutation => [0..*]
         } 
 
         class FrActe{
@@ -876,7 +1172,8 @@ package IG #DDDDDD{
 
              HabitusModeDeVie => [None..None]
              HabitusModeDeVie.titreSection => [1..None]
-             HabitusModeDeVie.habitusModeDeVieEntry => [0..*]
+             HabitusModeDeVie.sousSection => [None..0]
+             HabitusModeDeVie.entree.habitusModeDeVieEntry => [0..*]
         } 
 
         class HabitusModeDeVieEntry{
@@ -894,15 +1191,18 @@ package IG #DDDDDD{
 
              HistoriqueDesActes => [None..None]
              HistoriqueDesActes.titreSection => [1..None]
-             HistoriqueDesActes.actes => [1..*]
-             HistoriqueDesActes.references => [1..*]
+             HistoriqueDesActes.sousSection => [None..0]
+             HistoriqueDesActes.entree => [1..None]
+             HistoriqueDesActes.entree.actes => [1..*]
+             HistoriqueDesActes.entree.references => [1..*]
         } 
 
         class HistoriqueDesGrossesses{
 
              HistoriqueDesGrossesses => [None..None]
              HistoriqueDesGrossesses.titreSection => [1..None]
-             HistoriqueDesGrossesses.entry[x] => [1..*]
+             HistoriqueDesGrossesses.sousSection => [None..0]
+             HistoriqueDesGrossesses.entree[x] => [1..*]
         } 
 
         class HistoriqueGrossesse{
@@ -925,6 +1225,18 @@ package IG #DDDDDD{
              HorsAMM.horodatage => [0..1]
              HorsAMM.resultat => [1..1]
              HorsAMM.auteur => [0..*]
+        } 
+
+        class IdentificationDeMicroOrganismesMultiresistants{
+
+             IdentificationDeMicroOrganismesMultiresistants => [None..None]
+             IdentificationDeMicroOrganismesMultiresistants.identifiant => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.code => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.description => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.statut => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.date => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.valeur => [1..1]
+             IdentificationDeMicroOrganismesMultiresistants.auteur => [0..1]
         } 
 
         class ImageIllustrative{
@@ -996,11 +1308,59 @@ package IG #DDDDDD{
              InstructionsPatient.instructionPatient => [0..*]
         } 
 
+        class IsolatMicrobiologique{
+
+             IsolatMicrobiologique => [None..None]
+             IsolatMicrobiologique.identifiant => [0..1]
+             IsolatMicrobiologique.codeIsolat => [0..1]
+             IsolatMicrobiologique.statut => [1..1]
+             IsolatMicrobiologique.dateateResultat => [0..1]
+             IsolatMicrobiologique.choice[x] => [0..1]
+             IsolatMicrobiologique.isolatMicrobiologique => [1..1]
+             IsolatMicrobiologique.isolatMicrobiologique.isolat => [1..1]
+             IsolatMicrobiologique.isolatMicrobiologique.isolat.identifiant => [1..1]
+             IsolatMicrobiologique.isolatMicrobiologique.isolat.agent => [1..1]
+             IsolatMicrobiologique.isolatMicrobiologique.isolat.agent.code => [1..1]
+             IsolatMicrobiologique.laboratoireExecutant => [0..*]
+             IsolatMicrobiologique.auteur => [0..*]
+             IsolatMicrobiologique.valideur => [0..1]
+             IsolatMicrobiologique.responsable => [0..1]
+             IsolatMicrobiologique.dispositifAutomatique => [0..*]
+             IsolatMicrobiologique.batterieExamensDeBiologieMedicale => [0..*]
+             IsolatMicrobiologique.resultatElementCliniquePertinent => [0..*]
+             IsolatMicrobiologique.imageIllustrative => [0..*]
+             IsolatMicrobiologique.commentaire => [0..*]
+        } 
+
         class LaboratoireExecutant{
 
              LaboratoireExecutant => [None..None]
              LaboratoireExecutant.dateExecution => [1..1]
              LaboratoireExecutant.executant => [1..1]
+        } 
+
+        class ModaliteEntree{
+
+             ModaliteEntree => [None..None]
+             ModaliteEntree.identifiant => [1..1]
+             ModaliteEntree.code => [1..1]
+             ModaliteEntree.description => [1..1]
+             ModaliteEntree.statut => [1..1]
+             ModaliteEntree.date => [1..1]
+             ModaliteEntree.modaliteEntree => [1..1]
+             ModaliteEntree.auteur => [0..*]
+        } 
+
+        class ModaliteSortie{
+
+             ModaliteSortie => [None..None]
+             ModaliteSortie.identifiant => [1..1]
+             ModaliteSortie.code => [1..1]
+             ModaliteSortie.description => [1..1]
+             ModaliteSortie.statut => [1..1]
+             ModaliteSortie.date => [1..1]
+             ModaliteSortie.modaliteSortie => [1..1]
+             ModaliteSortie.auteur => [0..1]
         } 
 
         class ModeleCDACorpsDocument{
@@ -1215,11 +1575,12 @@ package IG #DDDDDD{
 
              PlanSoins => [None..None]
              PlanSoins.titreSection => [1..None]
-             PlanSoins.actes => [0..*]
-             PlanSoins.demandeExamenOuSuivi => [0..*]
-             PlanSoins.traitement => [0..*]
-             PlanSoins.vaccinRecommande => [0..*]
-             PlanSoins.rencontre => [0..*]
+             PlanSoins.sousSection => [None..0]
+             PlanSoins.entree.actes => [0..*]
+             PlanSoins.entree.demandeExamenOuSuivi => [0..*]
+             PlanSoins.entree.traitement => [0..*]
+             PlanSoins.entree.vaccinRecommande => [0..*]
+             PlanSoins.entree.rencontre => [0..*]
         } 
 
         class PointsDeVigilancesNonCode{
@@ -1228,6 +1589,19 @@ package IG #DDDDDD{
              PointsDeVigilancesNonCode.titreSection => [1..None]
              PointsDeVigilancesNonCode.sousSection => [None..0]
              PointsDeVigilancesNonCode.entree => [None..0]
+        } 
+
+        class Prelevement{
+
+             Prelevement => [None..None]
+             Prelevement.actePrelevement => [0..1]
+             Prelevement.datePrelevement => [1..1]
+             Prelevement.localisationPrelevement => [0..1]
+             Prelevement.perfomer => [0..1]
+             Prelevement.echantillonPreleve => [0..1]
+             Prelevement.dispositifUtilise => [0..*]
+             Prelevement.produitUtilise => [0..*]
+             Prelevement.dateReceptionEchantillon => [1..1]
         } 
 
         class Prescription{
@@ -1240,8 +1614,10 @@ package IG #DDDDDD{
         class PrescriptionDispositifsMedicaux{
 
              PrescriptionDispositifsMedicaux => [None..None]
+             PrescriptionDispositifsMedicaux.sousSection => [None..0]
+             PrescriptionDispositifsMedicaux.entree => [1..None]
+             PrescriptionDispositifsMedicaux.entree.dispositifMedical => [1..*]
              PrescriptionDispositifsMedicaux.auteur => [0..1]
-             PrescriptionDispositifsMedicaux.dispositifMedical => [1..*]
         } 
 
         class PrescriptionEntry{
@@ -1258,8 +1634,10 @@ package IG #DDDDDD{
         class PrescriptionMedicaments{
 
              PrescriptionMedicaments => [None..None]
+             PrescriptionMedicaments.sousSection => [None..0]
+             PrescriptionMedicaments.entree => [1..None]
+             PrescriptionMedicaments.entree.traitementPrescrit => [1..*]
              PrescriptionMedicaments.auteur => [0..1]
-             PrescriptionMedicaments.traitementPrescrit => [1..*]
         } 
 
         class PriseEncharge{
@@ -1310,7 +1688,9 @@ package IG #DDDDDD{
 
              ProblemesActifs => [None..None]
              ProblemesActifs.titreSection => [1..None]
-             ProblemesActifs.problemes => [1..*]
+             ProblemesActifs.sousSection => [None..0]
+             ProblemesActifs.entree => [1..None]
+             ProblemesActifs.entree.problemes => [1..*]
         } 
 
         class ProduitSante{
@@ -1338,8 +1718,10 @@ package IG #DDDDDD{
         class RaisonRecommandation{
 
              RaisonRecommandation => [None..None]
-             RaisonRecommandation.observation => [1..1]
-             RaisonRecommandation.problemes => [1..*]
+             RaisonRecommandation.sousSection => [None..0]
+             RaisonRecommandation.entree => [1..None]
+             RaisonRecommandation.entree.observation => [1..1]
+             RaisonRecommandation.entree.problemes => [1..*]
         } 
 
         class RaisonRecommandationNonCode{
@@ -1364,11 +1746,36 @@ package IG #DDDDDD{
              RangVaccination.rangVaccination => [1..1]
         } 
 
+        class RechercheDeMicroOrganismes{
+
+             RechercheDeMicroOrganismes => [None..None]
+             RechercheDeMicroOrganismes.identifiant => [1..1]
+             RechercheDeMicroOrganismes.code => [1..1]
+             RechercheDeMicroOrganismes.description => [1..1]
+             RechercheDeMicroOrganismes.statut => [1..1]
+             RechercheDeMicroOrganismes.date => [1..1]
+             RechercheDeMicroOrganismes.valeur => [1..1]
+             RechercheDeMicroOrganismes.auteur => [0..1]
+        } 
+
         class ReferenceInterne{
 
              ReferenceInterne => [None..None]
              ReferenceInterne.identifiant => [1..1]
              ReferenceInterne.code => [1..1]
+        } 
+
+        class ReferenceItemPlanTraitement{
+
+             ReferenceItemPlanTraitement => [None..None]
+             ReferenceItemPlanTraitement.identifiant => [1..1]
+             ReferenceItemPlanTraitement.code => [1..1]
+             ReferenceItemPlanTraitement.produitSante => [1..1]
+             ReferenceItemPlanTraitement.auteur => [0..1]
+             ReferenceItemPlanTraitement.traitementPrescrit => [1..1]
+             ReferenceItemPlanTraitement.reference => [0..1]
+             ReferenceItemPlanTraitement.reference.externalDocument => [1..1]
+             ReferenceItemPlanTraitement.reference.externalDocument.identifiant => [1..1]
         } 
 
         class ReferenceItemPrescription{
@@ -1418,11 +1825,34 @@ package IG #DDDDDD{
              Responsable.responsable => [1..1]
         } 
 
+        class ResultatExamensBiologieElementCliniquePertinent{
+
+             ResultatExamensBiologieElementCliniquePertinent => [None..None]
+             ResultatExamensBiologieElementCliniquePertinent.identifiant => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.codeIdentification => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.statut => [1..1]
+             ResultatExamensBiologieElementCliniquePertinent.dateResultat => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.valeurResultat => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.interpretation => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.methode => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.choice[x] => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.auteur => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.valideur => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.responsable => [0..1]
+             ResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.commentaire => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.prelevement => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs => [0..*]
+             ResultatExamensBiologieElementCliniquePertinent.intervallesReference => [0..1]
+        } 
+
         class Resultats{
 
              Resultats => [None..None]
              Resultats.titreSection => [1..None]
-             Resultats.resultatsEntry => [0..*]
+             Resultats.sousSection => [None..0]
+             Resultats.entree.resultatsEntry => [0..*]
         } 
 
         class ResultatsEntry{
@@ -1440,23 +1870,39 @@ package IG #DDDDDD{
         class ResultatsEvenements{
 
              ResultatsEvenements => [None..None]
-             ResultatsEvenements.observation => [1..*]
-             ResultatsEvenements.transfertPatient => [0..*]
-             ResultatsEvenements.probleme => [0..*]
+             ResultatsEvenements.sousSection => [None..0]
+             ResultatsEvenements.entree.observation => [1..*]
+             ResultatsEvenements.entree.transfertPatient => [0..*]
+             ResultatsEvenements.entree.probleme => [0..*]
         } 
 
         class ResultatsExamens{
 
              ResultatsExamens => [None..None]
-             ResultatsExamens.actes => [1..*]
-             ResultatsExamens.referencesExternes => [0..*]
-             ResultatsExamens.simpleObservation => [0..*]
+             ResultatsExamens.sousSection => [None..0]
+             ResultatsExamens.entree.actes => [1..*]
+             ResultatsExamens.entree.referencesExternes => [0..*]
+             ResultatsExamens.entree.simpleObservation => [0..*]
         } 
 
         class ResultatsExamensBiologieMedicale{
 
              ResultatsExamensBiologieMedicale => [None..None]
              ResultatsExamensBiologieMedicale.code => [1..1]
+             ResultatsExamensBiologieMedicale.statut => [1..1]
+             ResultatsExamensBiologieMedicale.dateResultat => [0..1]
+             ResultatsExamensBiologieMedicale.choice[x] => [0..1]
+             ResultatsExamensBiologieMedicale.laboratoireExecutant => [0..*]
+             ResultatsExamensBiologieMedicale.auteur => [0..*]
+             ResultatsExamensBiologieMedicale.valideur => [0..1]
+             ResultatsExamensBiologieMedicale.responsable => [0..1]
+             ResultatsExamensBiologieMedicale.dispositifAutomatique => [0..*]
+             ResultatsExamensBiologieMedicale.prelevement => [0..*]
+             ResultatsExamensBiologieMedicale.batterieExamensDeBiologieMedicale => [0..*]
+             ResultatsExamensBiologieMedicale.isolatMicrobiologique => [0..*]
+             ResultatsExamensBiologieMedicale.resultatElementCliniquePertinent => [0..*]
+             ResultatsExamensBiologieMedicale.imageIllustrative => [0..*]
+             ResultatsExamensBiologieMedicale.commentaire => [0..*]
         } 
 
         class ResultatsExamensNonCode{
@@ -1469,8 +1915,9 @@ package IG #DDDDDD{
         class ResultatsLaboratoireBiologieSecondeIntention{
 
              ResultatsLaboratoireBiologieSecondeIntention => [None..None]
-             ResultatsLaboratoireBiologieSecondeIntention.observation => [0..1]
-             ResultatsLaboratoireBiologieSecondeIntention.documentAttache => [1..*]
+             ResultatsLaboratoireBiologieSecondeIntention.sousSection => [None..0]
+             ResultatsLaboratoireBiologieSecondeIntention.entree.observation => [0..1]
+             ResultatsLaboratoireBiologieSecondeIntention.entree.documentAttache => [1..*]
         } 
 
         class Section{
@@ -1523,7 +1970,9 @@ package IG #DDDDDD{
 
              SignesVitaux => [None..None]
              SignesVitaux.titreSection => [1..None]
-             SignesVitaux.signesVitauxEntry => [1..*]
+             SignesVitaux.sousSection => [None..0]
+             SignesVitaux.entree => [1..None]
+             SignesVitaux.entree.signesVitauxEntry => [1..*]
         } 
 
         class SimpleObservation{
@@ -1567,16 +2016,31 @@ package IG #DDDDDD{
 
              StatutDocument => [None..None]
              StatutDocument.titreSection => [1..None]
-             StatutDocument.statutDocument => [1..1]
+             StatutDocument.sousSection => [None..0]
+             StatutDocument.entree => [1..1]
+             StatutDocument.entree.statutDocument => [1..1]
+        } 
+
+        class StatutDocumentEntry{
+
+             StatutDocumentEntry => [None..None]
+             StatutDocumentEntry.identifiant => [1..1]
+             StatutDocumentEntry.code => [1..1]
+             StatutDocumentEntry.description => [1..1]
+             StatutDocumentEntry.statut => [1..1]
+             StatutDocumentEntry.date => [1..1]
+             StatutDocumentEntry.statutDocument => [1..1]
+             StatutDocumentEntry.auteur => [0..1]
         } 
 
         class StatutFonctionnel{
 
              StatutFonctionnel => [None..None]
              StatutFonctionnel.titreSection => [1..None]
+             StatutFonctionnel.sousSection => [None..0]
+             StatutFonctionnel.entree.groupeQuestionnairesEvaluation => [0..*]
              StatutFonctionnel.auteur => [0..*]
              StatutFonctionnel.informateur => [0..*]
-             StatutFonctionnel.groupeQuestionnairesEvaluation => [0..*]
         } 
 
         class StatutProbleme{
@@ -1624,6 +2088,18 @@ package IG #DDDDDD{
              SujetNonHumain => [None..None]
              SujetNonHumain.sujet => [1..1]
              SujetNonHumain.adresse => [1..1]
+        } 
+
+        class SyntheseMedicaleSejour{
+
+             SyntheseMedicaleSejour => [None..None]
+             SyntheseMedicaleSejour.identifiant => [1..1]
+             SyntheseMedicaleSejour.code => [1..1]
+             SyntheseMedicaleSejour.description => [1..1]
+             SyntheseMedicaleSejour.statut => [1..1]
+             SyntheseMedicaleSejour.date => [1..1]
+             SyntheseMedicaleSejour.statutDocument => [1..1]
+             SyntheseMedicaleSejour.auteur => [0..*]
         } 
 
         class SystemeStructureAuteur{
@@ -1679,10 +2155,60 @@ package IG #DDDDDD{
              TraitementDispense.substitution => [0..1]
         } 
 
+        class TraitementPrescrit{
+
+             TraitementPrescrit => [None..None]
+             TraitementPrescrit.identifiant => [1..*]
+             TraitementPrescrit.code => [0..1]
+             TraitementPrescrit.description => [1..1]
+             TraitementPrescrit.status => [1..1]
+             TraitementPrescrit.dureeTraitement => [0..1]
+             TraitementPrescrit.frequenceAdministration => [0..1]
+             TraitementPrescrit.nombreRenouvellement => [0..1]
+             TraitementPrescrit.voieAdministration => [0..1]
+             TraitementPrescrit.regionAnatomique => [0..*]
+             TraitementPrescrit.dose => [0..1]
+             TraitementPrescrit.rythmeAdministration[x] => [0..1]
+             TraitementPrescrit.doseMaximale[x] => [0..*]
+             TraitementPrescrit.produitSante => [1..1]
+             TraitementPrescrit.prescripteur => [0..1]
+             TraitementPrescrit.auteur => [0..1]
+             TraitementPrescrit.motifTraitement => [0..*]
+             TraitementPrescrit.traitementPrescritSubordonnee => [0..*]
+             TraitementPrescrit.referenceItemPlanTraitement => [0..*]
+             TraitementPrescrit.instructionsPatient => [0..1]
+             TraitementPrescrit.instructionsDispensateur => [0..1]
+             TraitementPrescrit.quantiteProduit => [0..1]
+             TraitementPrescrit.autorisationSubstitution => [1..1]
+             TraitementPrescrit.periodeRenouvellement => [0..1]
+             TraitementPrescrit.enRapportAvecALD => [1..1]
+             TraitementPrescrit.enRapportAvecAccidentTravail => [1..1]
+             TraitementPrescrit.enRapportAvecPrevention => [1..1]
+             TraitementPrescrit.nonRemboursable => [1..1]
+             TraitementPrescrit.horsAMM => [1..1]
+             TraitementPrescrit.referencePrescription => [0..*]
+             TraitementPrescrit.precondition => [0..1]
+        } 
+
+        class TraitementPrescritSubordonne{
+
+             TraitementPrescritSubordonne => [None..None]
+             TraitementPrescritSubordonne.identifiant => [1..*]
+             TraitementPrescritSubordonne.description => [1..1]
+             TraitementPrescritSubordonne.status => [1..1]
+             TraitementPrescritSubordonne.frequenceAdministration => [0..1]
+             TraitementPrescritSubordonne.dose => [0..1]
+             TraitementPrescritSubordonne.rythmeAdministration[x] => [0..1]
+             TraitementPrescritSubordonne.produitSante => [1..1]
+             TraitementPrescritSubordonne.precondition => [0..*]
+        } 
+
         class TraitementSortie{
 
              TraitementSortie => [None..None]
-             TraitementSortie.traitementSortie => [1..*]
+             TraitementSortie.sousSection => [None..0]
+             TraitementSortie.entree => [1..None]
+             TraitementSortie.entree.traitementSortie => [1..*]
         } 
 
         class TraitementSubordonne{
@@ -1701,13 +2227,40 @@ package IG #DDDDDD{
 
              Traitements => [None..None]
              Traitements.titreSection => [1..None]
-             Traitements.traitements => [1..*]
+             Traitements.sousSection => [None..0]
+             Traitements.entree => [1..None]
+             Traitements.entree.traitements => [1..*]
         } 
 
         class TraitementsAdministres{
 
              TraitementsAdministres => [None..None]
-             TraitementsAdministres.traitementAdministre => [1..*]
+             TraitementsAdministres.sousSection => [None..0]
+             TraitementsAdministres.entree => [1..None]
+             TraitementsAdministres.entree.traitementAdministre => [1..*]
+        } 
+
+        class TransfertDuPatient{
+
+             TransfertDuPatient => [None..None]
+             TransfertDuPatient.identifiant => [1..1]
+             TransfertDuPatient.code => [1..1]
+             TransfertDuPatient.description => [1..1]
+             TransfertDuPatient.statut => [1..1]
+             TransfertDuPatient.dateTransfert => [0..1]
+             TransfertDuPatient.destination => [0..1]
+        } 
+
+        class TransfusionDeProduitsSanguins{
+
+             TransfusionDeProduitsSanguins => [None..None]
+             TransfusionDeProduitsSanguins.identifiant => [1..1]
+             TransfusionDeProduitsSanguins.code => [1..1]
+             TransfusionDeProduitsSanguins.description => [1..1]
+             TransfusionDeProduitsSanguins.statut => [1..1]
+             TransfusionDeProduitsSanguins.date => [1..1]
+             TransfusionDeProduitsSanguins.transfusionProduitSanguin => [1..1]
+             TransfusionDeProduitsSanguins.auteur => [0..1]
         } 
 
         class VaccinRecommande{
@@ -1750,7 +2303,9 @@ package IG #DDDDDD{
 
              Vaccinations => [None..None]
              Vaccinations.titreSection => [1..None]
-             Vaccinations.vaccinations => [1..*]
+             Vaccinations.sousSection => [None..0]
+             Vaccinations.entree => [1..None]
+             Vaccinations.entree.vaccinations => [1..*]
         } 
 
         class Validateur{
@@ -2652,11 +3207,19 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> AccidentsTransfusionnels
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Acte
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> ActeSubstitution
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> AdministrationDeDerivesDuSang
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2689,6 +3252,14 @@ package "Ressources de base" #palegreen {
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur" as  classc10f54dc9fcb3e15793c71551b66006f 
 
     classc10f54dc9fcb3e15793c71551b66006f --> AuteurAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> AutorisationSubstitution
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> BatterieExamensDeBiologieMedicale
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
@@ -2734,6 +3305,22 @@ package "Ressources de base" #palegreen {
 
     classe2eb9933e161ee98f021b2d27dc12810 --> DICOMAddendum
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMAdministrationProduitDeSante
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMAdministrationRadiopharmaceutique
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMCadresAafficher
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMCadresReferences
+
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> DICOMComplication
@@ -2749,6 +3336,14 @@ package "Ressources de base" #palegreen {
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> DICOMExamenComparatif
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMExamenImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMExpositionPatient
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
@@ -2770,9 +3365,45 @@ package "Ressources de base" #palegreen {
 
     classe2eb9933e161ee98f021b2d27dc12810 --> DICOMObjectCatalog
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMObjectifsDeReference
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMObservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMObservationSubordonnee
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMQuantity
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMQuantitySubordonnee
+
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> DICOMResultats
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMSOPInstanceObservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMSOPInstanceObservationSubordonnee
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMSerieImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> DICOMTechniqueImagerie
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2826,6 +3457,10 @@ package "Ressources de base" #palegreen {
 
     class095a1b43effec73955e31e790438de49 --> DoseAntigene
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EchantillonPreleve
+
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> EducationPatient
@@ -2869,6 +3504,14 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Evenement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EvenementIndesirablePendantHospitalisation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> EvenementsIndesirablesSuiteAdministrationDerivesSang
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2928,6 +3571,10 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> IdentificationDeMicroOrganismesMultiresistants
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> ImageIllustrative
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
@@ -2956,7 +3603,19 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> IsolatMicrobiologique
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> LaboratoireExecutant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ModaliteEntree
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ModaliteSortie
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -3028,6 +3687,10 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> Prelevement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> Prescription
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
@@ -3076,7 +3739,15 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> RechercheDeMicroOrganismes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> ReferenceInterne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ReferenceItemPlanTraitement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -3093,6 +3764,10 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Responsable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> ResultatExamensBiologieElementCliniquePertinent
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
@@ -3158,6 +3833,10 @@ package "Ressources de base" #palegreen {
 
     classe2eb9933e161ee98f021b2d27dc12810 --> StatutDocument
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> StatutDocumentEntry
+
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> StatutFonctionnel
@@ -3180,6 +3859,10 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> SyntheseMedicaleSejour
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> SystemeStructureAuteur
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
@@ -3189,6 +3872,14 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> TraitementDispense
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TraitementPrescrit
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TraitementPrescritSubordonne
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
@@ -3205,6 +3896,14 @@ package "Ressources de base" #palegreen {
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
 
     classe2eb9933e161ee98f021b2d27dc12810 --> TraitementsAdministres
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TransfertDuPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> TransfusionDeProduitsSanguins
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
