@@ -46,6 +46,12 @@ Usage: #example
 * entry[=].resource = locationExemple
 * entry[+].fullUrl = "https://exemple.com/DocumentReference/documentReferenceExample"
 * entry[=].resource = documentReferenceExample
+* entry[+].fullUrl = "https://exemple.com/Organization/organizationExemple"
+* entry[=].resource = organizationExemple
+* entry[+].fullUrl = "https://exemple.com/Organization/organizationExemple2"
+* entry[=].resource = organizationExemple2
+* entry[+].fullUrl = "https://exemple.com/Organization/organizationExemple3"
+* entry[=].resource = organizationExemple3
 
 Instance: clinical-document-composition-BIO-CR-BIO
 InstanceOf: FrCompositionDocument
@@ -172,29 +178,7 @@ Description: "Exemple de Composition pour un CR de Biologie"Usage: #inline
 // Section obligatoire
 * section[+].entry[+] = Reference(Binary)
 * section[=].title = "PDF"
-/* * section[0].title = "Section vide"
-* section[=].code = $LNC#29299-5
-* section[=].text.status = #additional
-* section[=].text.div = "
-<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n    
-          <table>\n\n      
-               <thead>\n\n   
-                 <tr>\n\n     
-                       <td>Details</td>\n\n
-                       <td/>\n\n    
-                 </tr>\n\n  
-               </thead>\n\n 
-               <tbody>\n\n                                                                                      
-                 <tr>\n\n                    
-                     <td>Aucune donnée disponible (Section vide)</td>\n\n                    
-                     <td/>\n\n                  
-                 </tr>\n\n               
-               </tbody>\n\n             
-           </table>\n\n          
-</div>"
-* section[=].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#notasked "Not Asked"
 
- */
 //***************Instances*********************//
 Instance: patientExemple
 InstanceOf: FrPatientINSDocument
