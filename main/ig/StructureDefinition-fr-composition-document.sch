@@ -97,8 +97,6 @@
       <sch:assert test="count(f:detail) &lt;= 1">detail: maximum cardinality of 'detail' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event']) &gt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event']) &lt;= 1">extension with URL = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:period) &gt;= 1">period: minimum cardinality of 'period' is 1</sch:assert>
       <sch:assert test="count(f:detail) &lt;= 1">detail: maximum cardinality of 'detail' is 1</sch:assert>
     </sch:rule>
