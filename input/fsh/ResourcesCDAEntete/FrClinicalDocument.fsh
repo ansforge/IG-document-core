@@ -7,6 +7,9 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
 * ^status = #draft
 * realmCode 1..1 
   * ^short = "Type de consentement Périmètre d’utilisation : France."
+
+* realmCode.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/xml-namespace"
+* realmCode.extension[0].valueUri = "urn:hl7-org:sdtc"
 * typeId 1..1 
   * ^short = "Référence au standard CDA R2."
 * templateId 3..* 
