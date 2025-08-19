@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-08-13T08:37:28+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-08-19T10:24:15+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1585,6 +1585,25 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-glycemie-mole> ;
+         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-glycemie-mole" ]
+       ] ;
+       fhir:name [ fhir:v "CR BIO Example" ] ;
+       fhir:description [ fhir:v "CR BIO Example" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -2730,18 +2749,6 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-glycemie-mole> ;
-         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-glycemie-mole" ]
-       ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
@@ -3031,9 +3038,6 @@
      ] ;
      fhir:parameter ( [
        fhir:code [ fhir:v "path-resource" ] ;
-       fhir:value [ fhir:v "input/Examples" ]
-     ] [
-       fhir:code [ fhir:v "path-resource" ] ;
        fhir:value [ fhir:v "input/capabilities" ]
      ] [
        fhir:code [ fhir:v "path-resource" ] ;
@@ -3056,6 +3060,9 @@
      ] [
        fhir:code [ fhir:v "path-resource" ] ;
        fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
      ] [
        fhir:code [ fhir:v "path-resource" ] ;
        fhir:value [ fhir:v "input/testing" ]
