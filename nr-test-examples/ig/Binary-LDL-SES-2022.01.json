@@ -353,7 +353,6 @@
     }
   }],
   "custodian" : {
-    "typeCode" : "CST",
     "assignedCustodian" : {
       "representedCustodianOrganization" : {
         "id" : [{
@@ -667,10 +666,7 @@
     }
   }],
   "documentationOf" : [{
-    "typeCode" : "DOC",
     "serviceEvent" : {
-      "classCode" : "ACT",
-      "moodCode" : "EVN",
       "code" : {
         "code" : "IMP",
         "codeSystem" : "2.16.840.1.113883.5.4",
@@ -2026,7 +2022,7 @@
           "title" : {
             "xmlText" : "Allergies identifiées pendant le séjour"
           },
-          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aucune allergie / intolérance identifiée pendant le séjour</div>",
+          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"NO-ALL\">Aucune allergie / hypersensibilité non allergiques, intolérances, idiosyncrasie identifiée pendant le séjour</div>",
           "entry" : [{
             "act" : {
               "classCode" : "ACT",
@@ -2104,9 +2100,13 @@
                     }
                   },
                   "value" : [{
+                    "code" : "no-known-allergies",
+                    "codeSystem" : "2.16.840.1.113883.5.1150.1",
+                    "codeSystemName" : "AbsentAndUnknownDataUvIps",
+                    "displayName" : "Pas d'allergie/hypersensibilité connue",
                     "originalText" : {
                       "reference" : {
-                        "value" : "#"
+                        "value" : "#NO-ALL"
                       }
                     }
                   }]

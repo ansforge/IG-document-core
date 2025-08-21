@@ -3,7 +3,7 @@
   <!--  
       **************************************************************************************************************
       Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
-      Auteur : ANS / PML
+      Auteur : ANS
 	  **************************************************************************************************************
       format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
       **************************************************************************************************************
@@ -26,6 +26,7 @@
       09/02/2022 : Mise à jour de la codification d'un DM avec EMDN
       11/04/2022 : Migration des terminologies et JDVs en SNOMED CT et mise en conformité LDL-EES_2022.01
       28/08/2023 : MAJ des JDV
+      21/08/2025 : MAJ de l'entrée FR-Allergie-ou-hypersensibilite (value)
       **************************************************************************************************************
     -->
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -184,7 +185,7 @@
     </relatedEntity>
   </informant>
   <!--  Organisation chargée de la conservation du document  -->
-  <custodian typeCode="CST">
+  <custodian>
     <assignedCustodian>
       <representedCustodianOrganization>
         <id extension="1750803447" root="1.2.250.1.71.4.2.2"/>
@@ -301,8 +302,8 @@
     </associatedEntity>
   </participant>
   <!--  Actes documentés -->
-  <documentationOf typeCode="DOC">
-    <serviceEvent classCode="ACT" moodCode="EVN">
+  <documentationOf>
+    <serviceEvent>
       <code code="IMP" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7:ActCode" displayName="Hospitalisation (établissement, y compris HAD)"/>
       <effectiveTime>
         <!--  Date de début d'hospitalisation  -->
@@ -1230,7 +1231,7 @@
           <id root="29085A50-9B57-48CB-9295-3DFCDD194069"/>
           <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies et hypersensibilités"/>
           <title>Allergies identifiées pendant le séjour</title>
-          <text>Aucune allergie / intolérance identifiée pendant le séjour</text>
+          <text>Aucune allergie / hypersensibilité non allergiques, intolérances, idiosyncrasie identifiée pendant le séjour</text>
           <!--  [1..1] Entrée FR-Liste-des-allergies-et-hypersensibilites  -->
           <entry>
             <act classCode="ACT" moodCode="EVN">
@@ -1275,9 +1276,9 @@
                     <low nullFlavor="UNK"/>
                   </effectiveTime>
                   <!--  Description clinique de l'allergie  -->
-                  <value xsi:type="CD">
+                  <value xsi:type="CD" code="no-known-allergies" codeSystem="2.16.840.1.113883.5.1150.1" codeSystemName="AbsentAndUnknownDataUvIps" displayName="Pas d'allergie/hypersensibilité connue">
                     <originalText>
-                      <reference value="#"/>
+                      <reference value="#NO-ALL"/>
                     </originalText>
                   </value>
                 </observation>

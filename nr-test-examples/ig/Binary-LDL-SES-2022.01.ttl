@@ -9,7 +9,7 @@
 #  
 #      **************************************************************************************************************
 #      Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
-#      Auteur : ANS / PML
+#      Auteur : ANS
 #	  **************************************************************************************************************
 #      format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
 #      **************************************************************************************************************
@@ -32,6 +32,7 @@
 #      09/02/2022 : Mise à jour de la codification d'un DM avec EMDN
 #      11/04/2022 : Migration des terminologies et JDVs en SNOMED CT et mise en conformité LDL-EES_2022.01
 #      28/08/2023 : MAJ des JDV
+#      21/08/2025 : MAJ de l'entrée FR-Allergie-ou-hypersensibilite (value)
 #      **************************************************************************************************************
 #   
 
@@ -364,7 +365,6 @@
      ]
   ] ) ; #  Personne à prévenir en cas d'urgence 
   fhir:custodian [
-     fhir:typeCode [ fhir:v "CST" ] ;
      fhir:assignedCustodian [
        fhir:representedCustodianOrganization [
          fhir:id ( [
@@ -654,10 +654,7 @@
      ]
   ] ) ; #  Medecin traitant
   fhir:documentationOf ( [
-     fhir:typeCode [ fhir:v "DOC" ] ;
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "ACT" ] ;
-       fhir:moodCode [ fhir:v "EVN" ] ;
        fhir:code [
          fhir:code [ fhir:v "IMP" ] ;
          fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.4" ] ;
@@ -1915,7 +1912,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Allergies identifiées pendant le séjour" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aucune allergie / intolérance identifiée pendant le séjour</div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"NO-ALL\">Aucune allergie / hypersensibilité non allergiques, intolérances, idiosyncrasie identifiée pendant le séjour</div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:act [
                fhir:classCode [ fhir:v "ACT" ] ;
@@ -1986,9 +1983,13 @@
                      ]
                    ] ; #  Date de l'allergie \/ intolérance 
                    fhir:value ( [
+                     fhir:code [ fhir:v "no-known-allergies" ] ;
+                     fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.1150.1" ] ;
+                     fhir:codeSystemName [ fhir:v "AbsentAndUnknownDataUvIps" ] ;
+                     fhir:displayName [ fhir:v "Pas d'allergie/hypersensibilité connue" ] ;
                      fhir:originalText [
                        fhir:reference [
-                         fhir:value [ fhir:v "#"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "#NO-ALL"^^xsd:anyURI ]
                        ]
                      ]
                    ] ) #  Description clinique de l'allergie 
