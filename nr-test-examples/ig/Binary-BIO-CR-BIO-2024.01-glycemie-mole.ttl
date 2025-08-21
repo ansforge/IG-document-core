@@ -8,14 +8,14 @@
 
 #  
 #	**********************************************************************************************************
-#    Document : Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)      
+#    Document : Compte-rendu d’examens de biologie médicale (BIO-CR-BIO_2024.01_Glycemie_mole)      
 #    Auteur : ANS
 #    **********************************************************************************************************
 #    format HL7 - CDA Release 2 niveau 3
 #    **********************************************************************************************************
 #    Historique :
-#    13/10/2022 : version 2022.01
-#    10/04/2024 : version 2024.01
+#    04/11/2024 : Création : version 2024.01
+#    20/08/2025 : correction reference copie du document et nom du fichier exemple
 #    **********************************************************************************************************
 #
 
@@ -1142,7 +1142,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Copie du document" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><img src=\"doc-1\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><span id=\"titre-copie-pdf\">Copie PDF du document</span></td></tr><tr><td><img src=\"copie-pdf\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:organizer [
                fhir:classCode [ fhir:v "CLUSTER" ] ;
@@ -1184,7 +1184,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#doc1"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#titre-copie-pdf"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -1202,7 +1202,7 @@
                  ]
                ] [
                  fhir:observationMedia [
-                   fhir:ID [ fhir:v "doc-1" ] ;
+                   fhir:ID [ fhir:v "copie-pdf" ] ;
                    fhir:classCode [ fhir:v "OBS" ] ;
                    fhir:moodCode [ fhir:v "EVN" ] ;
                    fhir:value [

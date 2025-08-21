@@ -8,7 +8,7 @@
 
 #  
 #	**********************************************************************************************************
-#    Document : Compte-rendu d’examens de biologie médicale - exemple Microbilogie (BIO-CR-BIO_2024.01)      
+#    Document : Compte-rendu d’examens de biologie médicale (BIO-CR-BIO_2024.01_Microbiologie_V1)      
 #    Auteur : ANS
 #    **********************************************************************************************************
 #    format HL7 - CDA Release 2 niveau 3
@@ -17,6 +17,7 @@
 #    13/10/2023 : version 2023.01
 #    17/10/2023 : Modification du code de la Section FR-Document-PDF-copie
 #    20/08/2024 : version 20/08/2024
+#    20/08/2025 : correction reference copie du document
 #    **********************************************************************************************************
 #
 # 
@@ -2065,7 +2066,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Copie du document" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><img src=\"doc-1\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><span id=\"titre-copie-pdf\">Copie PDF du document</span></td></tr><tr><td><img src=\"copie-pdf\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:organizer [
                fhir:classCode [ fhir:v "CLUSTER" ] ;
@@ -2107,7 +2108,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#doc1"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#titre-copie-pdf"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -2125,7 +2126,7 @@
                  ]
                ] [
                  fhir:observationMedia [
-                   fhir:ID [ fhir:v "doc-1" ] ;
+                   fhir:ID [ fhir:v "copie-pdf" ] ;
                    fhir:classCode [ fhir:v "OBS" ] ;
                    fhir:moodCode [ fhir:v "EVN" ] ;
                    fhir:value [
