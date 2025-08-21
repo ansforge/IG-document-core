@@ -1,7 +1,7 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 432, warn = 529, info = 379
+err = 426, warn = 529, info = 378
 $--
 Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https://interop.esante.gouv.fr/ig/document/core)
  Build Errors : 3 / 3 / 0
@@ -105,7 +105,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/BIO-CR-BIO-2024.01-Microbiologie-V1 : 65 / 42 / 68
  /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/BIO-CR-BIO-2024.01-glycemie-mole : 41 / 11 / 25
  /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/LDL-SES-2022.01 : 53 / 35 / 97
- /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/eDISP-MED-2024.01 : 47 / 15 / 53
+ /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/eDISP-MED-2024.01 : 41 / 15 / 52
  /home/runner/work/IG-document-core/IG-document-core/igSource/input/resources/eP-MED-DM-2024.01-PosoStruct : 77 / 42 / 136
 </table>
 == n/a ==
@@ -1183,7 +1183,6 @@ INFORMATION: Binary/LDL-SES-2022.01: ClinicalDocument: The CDA Template 2.16.840
 INFORMATION: Binary/LDL-SES-2022.01: ClinicalDocument: The CDA Template 1.2.250.1.213.1.1.1.1 is not known
 INFORMATION: Binary/LDL-SES-2022.01: ClinicalDocument: The CDA Template 1.2.250.1.213.1.1.1.29 / 2022.01 is not known
 == input/resources/eDISP-MED-2024.01.xml ==
-INFORMATION: /v3:ClinicalDocument/v3:participant/v3:time: xsi:type is unnecessary at this point
 ERROR: /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial: Undefined element 'formCode' at /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial
 ERROR: /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial: Undefined element 'expirationTime' at /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial
 ERROR: /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial: Undefined element 'asContent' at /v3:ClinicalDocument/v3:component/v3:structuredBody/v3:component/v3:section/v3:entry/v3:supply/v3:product/v3:manufacturedProduct/v3:manufacturedMaterial
@@ -1229,14 +1228,12 @@ ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.documentationOf[0].serviceEven
 ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.documentationOf[0].serviceEvent.performer[0].assignedEntity.assignedPerson.name[0].item[3]: Person.name.item.suffix: max allowed = 0, but found 1 (from https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-person|0.1.0)
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.componentOf.encompassingEncounter.code: The OID '2.16.840.1.113883.5.4' matches multiple resources (http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0(active), http://terminology.hl7.org/CodeSystem/v3-ActCode|8.0.1(active), http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12(active), https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode|1.5.0(active), https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode|1.4.0(active), https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode|1.3.0(active)); http://terminology.hl7.org/CodeSystem/v3-ActCode was chosen as the most appropriate
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.code: The OID '2.16.840.1.113883.6.1' matches multiple resources (http://loinc.org|3.1.0(active), http://loinc.org|, https://mos.esante.gouv.fr/NOS/TRE_A04-Loinc/FHIR/TRE-A04-Loinc|1.3.0(active)); http://loinc.org was chosen as the most appropriate
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.text.reference.value: The URL value '#med-001' is invalid because there is no matching target
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.quantity: The OID '2.16.840.1.113883.6.8' matches multiple resources (http://unitsofmeasure.org|3.0.1(active), http://unitsofmeasure.org|, https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure|1.3.0(active)); http://unitsofmeasure.org was chosen as the most appropriate
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.product.manufacturedProduct.manufacturedMaterial: The CDA Template 1.3.6.1.4.1.19376.1.9.1.3.1 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.product.manufacturedProduct: The CDA Template 2.16.840.1.113883.10.20.1.53 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.product.manufacturedProduct: The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.4.7.2 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.product.manufacturedProduct: The CDA Template 1.2.250.1.213.1.1.3.43 is not known
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[0].substanceAdministration.code: The OID '1.3.6.1.4.1.19376.1.9.2.2' is not known, so the code can't be validated
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[0].substanceAdministration.code.originalText.reference.value: The URL value '#med-001-item-prescription' is invalid because there is no matching target
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[0].substanceAdministration: The CDA Template 1.3.6.1.4.1.19376.1.9.1.3.11 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[0].substanceAdministration: The CDA Template 1.2.250.1.213.1.1.3.90 is not known
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[1].act.code: The OID '1.3.6.1.4.1.19376.1.5.3.2' is not known, so the code can't be validated
@@ -1247,7 +1244,6 @@ WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.com
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[2].act: The CDA Template 2.16.840.1.113883.10.20.1.43 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[2].act: The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.4.3.1 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[2].act: The CDA Template 1.2.250.1.213.1.1.3.207 is not known
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[3].substanceAdministration.text.reference.value: The URL value '#med-001-instructions-dosage' is invalid because there is no matching target
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[3].substanceAdministration.effectiveTime[1].comp[0].width: The OID '2.16.840.1.113883.6.8' matches multiple resources (http://unitsofmeasure.org|3.0.1(active), http://unitsofmeasure.org|, https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure|1.3.0(active)); http://unitsofmeasure.org was chosen as the most appropriate
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[3].substanceAdministration.effectiveTime[1].comp[1].period: The OID '2.16.840.1.113883.6.8' matches multiple resources (http://unitsofmeasure.org|3.0.1(active), http://unitsofmeasure.org|, https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure|1.3.0(active)); http://unitsofmeasure.org was chosen as the most appropriate
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply.entryRelationship[3].substanceAdministration.routeCode: The OID '0.4.0.127.0.16.1.1.2.1' is not known, so the code can't be validated
@@ -1266,15 +1262,12 @@ INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply: The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.4.7.3 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply: The CDA Template 1.3.6.1.4.1.19376.1.9.1.3.4 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[0].supply: The CDA Template 1.2.250.1.213.1.1.3.204 is not known
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.text.reference.value: The URL value '#med-002' is invalid because there is no matching target
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.quantity: The OID '2.16.840.1.113883.6.8' matches multiple resources (http://unitsofmeasure.org|3.0.1(active), http://unitsofmeasure.org|, https://mos.esante.gouv.fr/NOS/TRE_R247-UcumUniteMesure/FHIR/TRE-R247-UcumUniteMesure|1.3.0(active)); http://unitsofmeasure.org was chosen as the most appropriate
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.product.manufacturedProduct.manufacturedMaterial.code.originalText.reference.value: The URL value '#med-002' is invalid because there is no matching target
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.product.manufacturedProduct.manufacturedMaterial: The CDA Template 1.3.6.1.4.1.19376.1.9.1.3.1 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.product.manufacturedProduct: The CDA Template 2.16.840.1.113883.10.20.1.53 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.product.manufacturedProduct: The CDA Template 1.3.6.1.4.1.19376.1.5.3.1.4.7.2 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.product.manufacturedProduct: The CDA Template 1.2.250.1.213.1.1.3.43 is not known
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.entryRelationship[0].substanceAdministration.code: The OID '1.3.6.1.4.1.19376.1.9.2.2' is not known, so the code can't be validated
-ERROR: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.entryRelationship[0].substanceAdministration.code.originalText.reference.value: The URL value '#med-002-item-prescription' is invalid because there is no matching target
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.entryRelationship[0].substanceAdministration: The CDA Template 1.3.6.1.4.1.19376.1.9.1.3.11 is not known
 INFORMATION: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.entryRelationship[0].substanceAdministration: The CDA Template 1.2.250.1.213.1.1.3.90 is not known
 WARNING: Binary/eDISP-MED-2024.01: ClinicalDocument.component.structuredBody.component[0].section.entry[1].supply.entryRelationship[1].act.code: The OID '1.3.6.1.4.1.19376.1.5.3.2' is not known, so the code can't be validated

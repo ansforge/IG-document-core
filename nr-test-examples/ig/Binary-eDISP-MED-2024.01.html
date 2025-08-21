@@ -300,7 +300,8 @@
     format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
     **********************************************************************************************************
     Notes:
-    - 17/06/2024 : Création exemple
+    17/06/2024 : Création exemple
+    21/08/2025 : MAJ des références entre parties narratives et entrées
     **********************************************************************************************************
 --&gt;
 
@@ -504,7 +505,7 @@
     &lt;!-- [0..1] Participant : prescripteur --&gt;
     &lt;participant typeCode="REF"&gt;
         &lt;!-- Date de la prescription --&gt;
-        &lt;time xsi:type="IVL_TS"&gt;
+        &lt;time&gt;
             &lt;low value="20211201093000+0100"/&gt;
         &lt;/time&gt;       
         &lt;associatedEntity classCode="PROV"&gt;
@@ -771,10 +772,10 @@
                               &lt;/tr&gt;
                             &lt;/thead&gt;
                             &lt;tbody&gt;
-                              &lt;tr&gt;                                  
-                                &lt;td&gt;du 25/01/2023 au 27/01/2023&lt;/td&gt;
+                              &lt;tr ID="med-001"&gt;                                  
+                                &lt;td&gt;&lt;content ID="med-001-duree"&gt;du 25/01/2023 au 27/01/2023&lt;/content&gt;&lt;/td&gt;
                                 &lt;td&gt;&lt;content ID="med-001-delivre"&gt;PARACETAMOL VIATRIS 500 mg, comprimé plaquette(s) thermoformée(s) PVC-aluminium de 16 comprimé(s)&lt;/content&gt;&lt;/td&gt;
-                                &lt;td&gt;2 Boites&lt;/td&gt;
+                                &lt;td&gt;2 Boites&lt;/td&gt;                                  
                                 &lt;td&gt;&lt;content ID="med-001-frequence"&gt;4 fois/j à partir du 25/01/2021 pendant 2 jours&lt;/content&gt;&lt;/td&gt;
                                 &lt;td&gt;&lt;content ID="med-001-dose-min"&gt;1 cp&lt;/content&gt; à &lt;content ID="med-001-dose-max"&gt;1 cp&lt;/content&gt;&lt;/td&gt;
                                 &lt;td&gt;&lt;content ID="med-001-rate-min"&gt;1500 mg/j&lt;/content&gt; à &lt;content ID="med-001-rate-max"&gt;3000 mg/j&lt;/content&gt;&lt;/td&gt; 
@@ -807,7 +808,7 @@
                                 &lt;/tr&gt;
                             &lt;/thead&gt;
                             &lt;tbody&gt;
-                                &lt;tr&gt;                                  
+                                &lt;tr ID="med-002"&gt;                                  
                                     &lt;td&gt;du 25/01/2023 au 27/01/2023&lt;/td&gt;
                                     &lt;td&gt;&lt;content ID="med-002-delivre"&gt;Préparation magistrale :&lt;br/&gt;- 30g de diprosone&lt;br/&gt;- 70g de Cérat Frais de Galien&lt;/content&gt;&lt;/td&gt;
                                     &lt;td&gt;1 Récipient&lt;/td&gt;
@@ -887,7 +888,7 @@
                             &lt;!-- Conformité FR-Traitement-dispense(CI-SIS) --&gt;
                             &lt;templateId root="1.2.250.1.213.1.1.3.204"/&gt;
                             &lt;id root="AADC9C14-F1CA-4177-B2C8-A5178D5B3CA9"/&gt;
-                            &lt;text&gt;&lt;reference value="#med-001"&gt;&lt;/reference&gt;&lt;/text&gt;
+                            &lt;text&gt;&lt;reference value="#med-001"&gt;&lt;/reference&gt;&lt;/text&gt;  
                             &lt;!-- Unité issue de EDQM Packaging (30009000 "Boite")--&gt;
                             &lt;quantity value="2" unit="30009000"/&gt;                            
                             &lt;product&gt;
@@ -965,7 +966,6 @@
                                     &lt;id root="AADC9C14-F1CA-4177-B2C8-A5178D5B3CA0"/&gt;
                                     &lt;code code="PREItem" displayName="Prescription Item" 
                                         codeSystem="1.3.6.1.4.1.19376.1.9.2.2"  codeSystemName="IHE Pharmacy Item Type List"&gt;
-                                        &lt;originalText&gt;&lt;reference value="#med-001-item-prescription"&gt;&lt;/reference&gt;&lt;/originalText&gt;
                                     &lt;/code&gt;
                                     &lt;consumable&gt;
                                         &lt;manufacturedProduct&gt;
@@ -1074,7 +1074,7 @@
                                     &lt;!-- Mode d'administration "Normal" --&gt;
                                     &lt;templateId root="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/&gt;
                                     &lt;id root="4B007F00-973B-11ED-A8FC-0242AC120002"/&gt;
-                                    &lt;text&gt;&lt;reference value="#med-001-instructions-dosage"&gt;&lt;/reference&gt;&lt;/text&gt;
+                                    &lt;text&gt;&lt;reference value="#med-001-duree"&gt;&lt;/reference&gt;&lt;/text&gt;
                                     &lt;statusCode code="completed"/&gt;
                                     &lt;!-- Durée de traitement --&gt;
                                     &lt;effectiveTime xsi:type="IVL_TS"&gt;
@@ -1209,7 +1209,7 @@
                                         &lt;templateId root="1.3.6.1.4.1.19376.1.9.1.3.1"/&gt;
                                         &lt;!-- Code CIS du médicament --&gt;
                                         &lt;code nullFlavor="NA"&gt;
-                                            &lt;originalText&gt;&lt;reference value="#med-002"/&gt;&lt;/originalText&gt;
+                                            &lt;originalText&gt;&lt;reference value="#med-002-delivre"/&gt;&lt;/originalText&gt;
                                         &lt;/code&gt;
                                         &lt;!-- Nom de la marque --&gt;
                                         &lt;name nullFlavor="NA"/&gt;
@@ -1231,7 +1231,6 @@
                                     &lt;id root="BBDC9C14-F1CA-4177-B2C8-A5178D5B3DB1"/&gt;
                                     &lt;code code="PREItem" displayName="Prescription Item" 
                                         codeSystem="1.3.6.1.4.1.19376.1.9.2.2"  codeSystemName="IHE Pharmacy Item Type List"&gt;
-                                        &lt;originalText&gt;&lt;reference value="#med-002-item-prescription"/&gt;&lt;/originalText&gt;
                                     &lt;/code&gt;
                                     &lt;consumable&gt;
                                         &lt;manufacturedProduct&gt;
@@ -1383,7 +1382,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 08:17+0000">2025-08-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 09:26+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

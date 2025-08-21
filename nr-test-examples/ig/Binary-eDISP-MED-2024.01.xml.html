@@ -301,7 +301,8 @@
     format HL7 - CDA Release 2 - selon schéma XML (CDA.xsd) du standard ANSI/HL7 CDA, R2-2005 4/21/2005
     **********************************************************************************************************
     Notes:
-    - 17/06/2024 : Création exemple
+    17/06/2024 : Création exemple
+    21/08/2025 : MAJ des références entre parties narratives et entrées
     **********************************************************************************************************
  --&gt;
 &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument">ClinicalDocument</a> xmlns=&quot;urn:hl7-org:v3&quot;&gt;
@@ -773,8 +774,10 @@
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
-                &lt;tr&gt;
-                  &lt;td&gt;du 25/01/2023 au 27/01/2023&lt;/td&gt;
+                &lt;tr ID=&quot;med-001&quot;&gt;
+                  &lt;td&gt;
+                    &lt;content ID=&quot;med-001-duree&quot;&gt;du 25/01/2023 au 27/01/2023&lt;/content&gt;
+                  &lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID=&quot;med-001-delivre&quot;&gt;PARACETAMOL VIATRIS 500 mg, comprimé plaquette(s) thermoformée(s) PVC-aluminium de 16 comprimé(s)&lt;/content&gt;
                   &lt;/td&gt;
@@ -827,7 +830,7 @@
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
-                &lt;tr&gt;
+                &lt;tr ID=&quot;med-002&quot;&gt;
                   &lt;td&gt;du 25/01/2023 au 27/01/2023&lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID=&quot;med-002-delivre&quot;&gt;Préparation magistrale :
@@ -965,11 +968,7 @@
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;AADC9C14-F1CA-4177-B2C8-A5178D5B3CA0&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Prescription Item&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;IHE Pharmacy Item Type List&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;1.3.6.1.4.1.19376.1.9.2.2&quot;
-                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;PREItem&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-001-item-prescription&quot;/&gt;
-                    &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                  &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a>&gt;
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;PREItem&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable">consumable</a>&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable.manufacturedProduct">manufacturedProduct</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ManufacturedProduct.html#ManufacturedProduct.manufacturedMaterial">manufacturedMaterial</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;NA&quot;&gt;
@@ -1080,7 +1079,7 @@
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.templateId">templateId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;1.3.6.1.4.1.19376.1.5.3.1.4.7.1&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;4B007F00-973B-11ED-A8FC-0242AC120002&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-001-instructions-dosage&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-001-duree&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                   &lt;!--  Durée de traitement  --&gt;
@@ -1219,7 +1218,7 @@
                     &lt;!--  Code CIS du médicament  --&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Material.html#Material.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;NA&quot;&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">originalText</a>&gt;
-                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-002&quot;/&gt;
+                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-002-delivre&quot;/&gt;
                       &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">originalText</a>&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Material.html#Material.code">code</a>&gt;
                     &lt;!--  Nom de la marque  --&gt;
@@ -1238,11 +1237,7 @@
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;BBDC9C14-F1CA-4177-B2C8-A5178D5B3DB1&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Prescription Item&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;IHE Pharmacy Item Type List&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;1.3.6.1.4.1.19376.1.9.2.2&quot;
-                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;PREItem&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#med-002-item-prescription&quot;/&gt;
-                    &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                  &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a>&gt;
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;PREItem&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable">consumable</a>&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable.manufacturedProduct">manufacturedProduct</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ManufacturedProduct.html#ManufacturedProduct.manufacturedMaterial">manufacturedMaterial</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;NA&quot;&gt;
@@ -1390,7 +1385,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 08:17+0000">2025-08-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 09:26+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
