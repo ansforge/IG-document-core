@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6.100"}
-    h3,h4,h5,h6{--heading-prefix:"6.100"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.101"}
+    h3,h4,h5,h6{--heading-prefix:"6.101"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -304,7 +304,9 @@
     - 15/09/2023 : Nouvelle version 2023.01 : Ajout de la Section FR-Document-PDF-copie [0..1]
     - 17/10/2023 : Modification du code de la Section FR-Document-PDF-copie
     - 19/11/2024 : Nouvelle version 2024.01
-    
+    - 20/08/2025 : Suppresssion des attributs author@typeCode, author@contextControlCode, assignedAuthor@classCode, serviceEvent@lassCode
+                   Maj des codeSystemName en fonction de la nouvelle règle de nommage
+                   Maj des références parties narratives / entrées
     **********************************************************************************************************
 </span>
 {
@@ -627,15 +629,12 @@
   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.author">author</a>" : [
     <span style="font-style: italic; color: grey">//  Auteur du document </span>
     {
-      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.contextControlCode">contextControlCode</a>" : "OP",
-      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.typeCode">typeCode</a>" : "AUT",
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.time">time</a>" : <span style="font-style: italic; color: grey">//  [1..1] Horodatage de la validation par l'auteur </span>
       {
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TS.html#TS.value">value</a>" : "2023-12-01T09:30:00+01:00"
       },
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.assignedAuthor">assignedAuthor</a>" : <span style="font-style: italic; color: grey">//  [1..1] Identification de l'auteur </span>
       {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedAuthor.html#AssignedAuthor.classCode">classCode</a>" : "ASSIGNED",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedAuthor.html#AssignedAuthor.id">id</a>" : [
           <span style="font-style: italic; color: grey">//  [1..1] Identifiant de l'auteur (Id RPPS du PS obligatoire pour les PS) </span>
           {
@@ -1071,7 +1070,7 @@
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organization.html#Organization.standardIndustryClassCode">standardIndustryClassCode</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "AMBULATOIRE",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.9",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "practiceSettingCode",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TRE_A01_CadreExercice",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Ambulatoire"
         }
       }
@@ -1396,7 +1395,6 @@
     <span style="font-style: italic; color: grey">//  [1..1] Acte documenté : prescription </span>
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "ACT",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.id">id</a>" : [
           <span style="font-style: italic; color: grey">//  Identifiant de la prescription EPU : root=&quot;1.2.250.1.215.500.1.1&quot; + extension calculé selon la règle fournie dans les spécifications de la Cnam </span>
           {
@@ -1568,7 +1566,7 @@
                 {
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "AMBULATOIRE",
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.9",
-                  "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "practiceSettingCode",
+                  "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TRE_A01_CadreExercice",
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Ambulatoire"
                 }
               }
@@ -1579,77 +1577,70 @@
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1096",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Prescription bizone"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1097",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Prescription médicaments d'exception"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1098",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Ordonnance sécurisée"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1132",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Prescription grand appareillage"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1094",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Exécution à domicile"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1095",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Exécution en urgence"
         }
       }
     },
     {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">serviceEvent</a>" : {
-        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">classCode</a>" : "INFO",
         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">code</a>" : {
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "MED-1159",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Affection militaire"
         }
       }
@@ -1662,7 +1653,7 @@
   <span style="font-style: italic; color: grey">//  [0..1] Exécution à domicile </span>
   <span style="font-style: italic; color: grey">//  [0..1] Prescription en urgence </span>
   <span style="font-style: italic; color: grey">//  [0..1] Affection militaire </span>
-  <span style="font-style: italic; color: grey">//  Contexte de la prise en charge </span>
+  <span style="font-style: italic; color: grey">//  [1..1] Contexte de la prise en charge </span>
   {
     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ComponentOf.html#ComponentOf.encompassingEncounter">encompassingEncounter</a>" : {
       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EncompassingEncounter.html#EncompassingEncounter.code">code</a>" : {
@@ -1813,7 +1804,7 @@
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a>" : {
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "DRUG",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "2.16.840.1.113883.5.4",
-                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7:ActCode",
+                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_ActCode",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Médicament"
                   },
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>" : {
@@ -1847,11 +1838,11 @@
                   {
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "20053000",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "0.4.0.127.0.16.1.1.2.1",
-                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "EDQM",
+                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "StandardTermsEDQM",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Voie orale",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">originalText</a>" : {
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#voie-001"
+                        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#med-001-voie"
                       }
                     }
                   },
@@ -1916,7 +1907,7 @@
                             {
                               "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "MV00002306",
                               "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.2.59",
-                              "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "MV",
+                              "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "MEDICABASE",
                               "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Paracétamol 500 mg comprimé"
                             },
                             {
@@ -1963,7 +1954,7 @@
                         ],
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#med-001-ModeAdminProg-1"
+                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "med-001-ModeAdminProg-1"
                           }
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">statusCode</a>" : {
@@ -2122,7 +2113,7 @@
                         ],
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#med-001-ModeAdminProg-2"
+                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "med-001-ModeAdminProg-2"
                           }
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">statusCode</a>" : {
@@ -2374,7 +2365,7 @@
                         {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "N",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "2.16.840.1.113883.5.1070",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_substanceAdminSubstitution",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_SubstanceAdminSubstitution",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Aucune substitution permise",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>" : <span style="font-style: italic; color: grey">//  Motif de non substitution obligatoire si substitution non autorisée </span>
                           {
@@ -2415,7 +2406,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "MED-574",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec une ALD"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -2464,7 +2455,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-180",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec un accident du travail ou une maladie professionnelle"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -2513,7 +2504,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-295",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec la prévention"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -2562,7 +2553,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-181",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Non remboursable"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -2611,7 +2602,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-179",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Hors Autorisation de Mise sur le Marché (AMM)"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -2651,7 +2642,7 @@
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Precondition.html#Precondition.criterion">criterion</a>" : {
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Criterion.html#Criterion.text">text</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#precond-001"
+                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#med-001-precondition"
                           }
                         }
                       }
@@ -2697,7 +2688,7 @@
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a>" : {
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "DRUG",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "2.16.840.1.113883.5.4",
-                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7:ActCode",
+                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_ActCode",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Médicament"
                   },
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>" : {
@@ -2745,7 +2736,7 @@
                   {
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "20003000",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "0.4.0.127.0.16.1.1.2.1",
-                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "EDQM",
+                    "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "StandardTermsEDQM",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "Voie cutanée",
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">originalText</a>" : {
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
@@ -2753,19 +2744,10 @@
                       }
                     }
                   },
-                  "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.approachSiteCode">approachSiteCode</a>" : [
-                    <span style="font-style: italic; color: grey">//  [0..1] Région anatomique d'administration : uniquement si posologie structurée </span>
-                    <span style="font-style: italic; color: grey">//  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) </span>
-                    {
-                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.nullFlavor">nullFlavor</a>" : "OTH",
-                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>" : {
-                        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "med-002-region"
-                        }
-                      }
-                    }
-                  ],
-                  "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable">consumable</a>" : <span style="font-style: italic; color: grey">//  [0..1] Dose à administrer : uniquement si posologie structurée </span>
+                  "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable">consumable</a>" : <span style="font-style: italic; color: grey">//  [0..1] Région anatomique d'administration : uniquement si posologie structurée </span>
+                  <span style="font-style: italic; color: grey">//  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) </span>
+                  <span style="font-style: italic; color: grey">//  &lt;approachSiteCode&gt; &lt;/approachSiteCode&gt; </span>
+                  <span style="font-style: italic; color: grey">//  [0..1] Dose à administrer : uniquement si posologie structurée </span>
                   <span style="font-style: italic; color: grey">//  &lt;doseQuantity&gt; &lt;/doseQuantity&gt; </span>
                   <span style="font-style: italic; color: grey">//  [0..1] Rythme d'administration : uniquement si posologie structurée </span>
                   <span style="font-style: italic; color: grey">//  &lt;rateQuantity&gt;  &lt;/rateQuantity&gt; </span>
@@ -2929,7 +2911,7 @@
                         {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "N",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "2.16.840.1.113883.5.1070",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_substanceAdminSubstitution",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "HL7_SubstanceAdminSubstitution",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Aucune substitution permise",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>" : <span style="font-style: italic; color: grey">//  Motif de non substitution obligatoire si substitution non autorisée </span>
                           {
@@ -2970,7 +2952,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "MED-574",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec une ALD"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3019,7 +3001,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-180",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec un accident du travail ou une maladie professionnelle"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3068,7 +3050,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-295",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec la prévention"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3117,7 +3099,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-181",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Non remboursable"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3166,7 +3148,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-179",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Hors Autorisation de Mise sur le Marché (AMM)"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3203,7 +3185,7 @@
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Precondition.html#Precondition.criterion">criterion</a>" : {
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Criterion.html#Criterion.text">text</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#precond-002"
+                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#med-002-precondition"
                           }
                         }
                       }
@@ -3234,7 +3216,7 @@
             "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.title">title</a>" : {
               "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ST.html#ST.xmlText">xmlText</a>" : "Prescription de dispositifs médicaux"
             },
-            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.text">text</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dispositif médical&lt;/th&gt;&lt;th&gt;Durée de location LPP&lt;/th&gt;&lt;th&gt;Nombre de conditionnements&lt;/th&gt;&lt;th&gt;Nombre de renouvellements&lt;/th&gt;&lt;th&gt;En rapport ALD&lt;/th&gt;&lt;th&gt;En rapport AT/MP&lt;/th&gt;&lt;th&gt;En rapport Prévention&lt;/th&gt;&lt;th&gt;Non remboursable&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;  &lt;!-- Dispositif 1 --&gt;&lt;tr&gt;&lt;td id=\&quot;DM-001\&quot;&gt;Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702] &lt;/td&gt;&lt;td&gt;60 jours&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ALD\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ATMP\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-prev\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-non-remb\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;",
+            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.text">text</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dispositif médical&lt;/th&gt;&lt;th&gt;Durée de location LPP&lt;/th&gt;&lt;th&gt;Nombre de conditionnements&lt;/th&gt;&lt;th&gt;Nombre de renouvellements&lt;/th&gt;&lt;th&gt;En rapport ALD&lt;/th&gt;&lt;th&gt;En rapport AT/MP&lt;/th&gt;&lt;th&gt;En rapport Prévention&lt;/th&gt;&lt;th&gt;Non remboursable&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;  &lt;!-- Dispositif 1 --&gt;&lt;tr&gt;&lt;td id=\&quot;DM-001\&quot;&gt;&lt;span id=\&quot;DM-001-LPP\&quot;&gt;Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702]&lt;/span&gt;&lt;/td&gt;&lt;td&gt;60 jours&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ALD\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ATMP\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-prev\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-non-remb\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;",
             "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.entry">entry</a>" : [
               <span style="font-style: italic; color: grey">//  [1..*] Entrée FR-Dispositif-medical  </span>
               {
@@ -3260,7 +3242,7 @@
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">text</a>" : <span style="font-style: italic; color: grey">//  Référence vers la partie narrative de la section DM </span>
                   {
                     "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#DM001"
+                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#DM-001"
                     }
                   },
                   "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.effectiveTime">effectiveTime</a>" : [
@@ -3309,7 +3291,7 @@
                               <span style="font-style: italic; color: grey">//  Autre Code du DM </span>
                               {
                                 "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "1215702",
-                                "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.215.200.2.1",
+                                "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.215.300.4",
                                 "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "LPP",
                                 "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "lit médical, lit + 135 kg, forfait de livraison du lit et accessoires",
                                 "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>" : {
@@ -3353,7 +3335,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "MED-574",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec une ALD"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3402,7 +3384,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-180",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec un accident du travail ou une maladie professionnelle"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3451,7 +3433,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-295",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "En rapport avec la prévention"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3500,7 +3482,7 @@
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">code</a>" : "GEN-181",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">codeSystem</a>" : "1.2.250.1.213.1.1.4.322",
-                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "terminologie-cisis-fr",
+                          "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">codeSystemName</a>" : "TerminologieCISIS",
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">displayName</a>" : "Non remboursable"
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
@@ -3822,7 +3804,7 @@
                     {
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">code</a>" : "77386006",
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">codeSystem</a>" : "2.16.840.1.113883.6.96",
-                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "SNOMED CT",
+                      "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">codeSystemName</a>" : "SNOMED_CT",
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">displayName</a>" : "grossesse en cours"
                     }
                   ]
@@ -3851,7 +3833,7 @@
             "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.title">title</a>" : {
               "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ST.html#ST.xmlText">xmlText</a>" : "Copie du document"
             },
-            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.text">text</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=\&quot;doc-1\&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;",
+            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.text">text</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;span id=\&quot;titre-copie-pdf\&quot;&gt;Copie PDF du document&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=\&quot;copie-pdf\&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;",
             "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.entry">entry</a>" : [
               <span style="font-style: italic; color: grey">//  [1..1] Entrée FR-Document-attache : Copie PDF du document </span>
               {
@@ -3911,7 +3893,7 @@
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>" : {
                           "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a>" : {
-                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#doc1"
+                            "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">value</a>" : "#titre-copie-pdf"
                           }
                         },
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a>" : {
@@ -3932,7 +3914,7 @@
                     },
                     {
                       "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-OrganizerComponent.html#OrganizerComponent.observationMedia">observationMedia</a>" : {
-                        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.ID">ID</a>" : "doc-1",
+                        "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.ID">ID</a>" : "copie-pdf",
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.classCode">classCode</a>" : "OBS",
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.moodCode">moodCode</a>" : "EVN",
                         "<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.value">value</a>" : {
@@ -3997,7 +3979,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 09:26+0000">2025-08-21</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 21, 2025 15:52+0000">2025-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

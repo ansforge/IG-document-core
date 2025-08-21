@@ -18,7 +18,9 @@
 #    - 15/09/2023 : Nouvelle version 2023.01 : Ajout de la Section FR-Document-PDF-copie [0..1]
 #    - 17/10/2023 : Modification du code de la Section FR-Document-PDF-copie
 #    - 19/11/2024 : Nouvelle version 2024.01
-#    
+#    - 20/08/2025 : Suppresssion des attributs author@typeCode, author@contextControlCode, assignedAuthor@classCode, serviceEvent@lassCode
+#                   Maj des codeSystemName en fonction de la nouvelle règle de nommage
+#                   Maj des références parties narratives / entrées
 #    **********************************************************************************************************
 #
 
@@ -224,13 +226,10 @@
      ]
   ] ) ; #  Patient 
   fhir:author ( [
-     fhir:contextControlCode [ fhir:v "OP" ] ;
-     fhir:typeCode [ fhir:v "AUT" ] ;
      fhir:time [
        fhir:value [ fhir:v "2023-12-01T09:30:00+01:00"^^xsd:dateTime ]
      ] ; #  [1..1] Horodatage de la validation par l'auteur 
      fhir:assignedAuthor [
-       fhir:classCode [ fhir:v "ASSIGNED" ] ;
        fhir:id ( [
          fhir:extension [ fhir:v "801234567897" ] ;
          fhir:root [ fhir:v "1.2.250.1.71.4.2.1" ]
@@ -510,7 +509,7 @@
          fhir:standardIndustryClassCode [
            fhir:code [ fhir:v "AMBULATOIRE" ] ;
            fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.9" ] ;
-           fhir:codeSystemName [ fhir:v "practiceSettingCode" ] ;
+           fhir:codeSystemName [ fhir:v "TRE_A01_CadreExercice" ] ;
            fhir:displayName [ fhir:v "Ambulatoire" ]
          ]
        ] #  Etablissement de rattachement du PS 
@@ -716,7 +715,6 @@
   ] ) ; #  Participant : PS remplacé (obligatoire si prescription faite par un PS remplaçant) 
   fhir:documentationOf ( [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "ACT" ] ;
        fhir:id ( [
          fhir:extension [ fhir:v "01S2TBPZ2JCNZZYGHZ" ] ;
          fhir:root [ fhir:v "1.2.250.1.215.500.1.1" ]
@@ -827,7 +825,7 @@
              fhir:standardIndustryClassCode [
                fhir:code [ fhir:v "AMBULATOIRE" ] ;
                fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.9" ] ;
-               fhir:codeSystemName [ fhir:v "practiceSettingCode" ] ;
+               fhir:codeSystemName [ fhir:v "TRE_A01_CadreExercice" ] ;
                fhir:displayName [ fhir:v "Ambulatoire" ]
              ] #  Cadre d'exercice du PS 
            ] #  Organisme représenté 
@@ -836,71 +834,64 @@
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1096" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Prescription bizone" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1097" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Prescription médicaments d'exception" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1098" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Ordonnance sécurisée" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1132" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Prescription grand appareillage" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1094" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Exécution à domicile" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1095" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Exécution en urgence" ]
        ]
      ]
   ] [
      fhir:serviceEvent [
-       fhir:classCode [ fhir:v "INFO" ] ;
        fhir:code [
          fhir:code [ fhir:v "MED-1159" ] ;
          fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-         fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+         fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
          fhir:displayName [ fhir:v "Affection militaire" ]
        ]
      ]
@@ -931,7 +922,7 @@
          ]
        ]
      ]
-  ] ; #  Contexte de la prise en charge 
+  ] ; #  [1..1] Contexte de la prise en charge 
   fhir:component [
      fhir:structuredBody [
        fhir:component ( [
@@ -1015,7 +1006,7 @@
                fhir:code [
                  fhir:code [ fhir:v "DRUG" ] ;
                  fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.4" ] ;
-                 fhir:codeSystemName [ fhir:v "HL7:ActCode" ] ;
+                 fhir:codeSystemName [ fhir:v "HL7_ActCode" ] ;
                  fhir:displayName [ fhir:v "Médicament" ]
                ] ;
                fhir:text [
@@ -1040,11 +1031,11 @@
                fhir:routeCode [
                  fhir:code [ fhir:v "20053000" ] ;
                  fhir:codeSystem [ fhir:v "0.4.0.127.0.16.1.1.2.1" ] ;
-                 fhir:codeSystemName [ fhir:v "EDQM" ] ;
+                 fhir:codeSystemName [ fhir:v "StandardTermsEDQM" ] ;
                  fhir:displayName [ fhir:v "Voie orale" ] ;
                  fhir:originalText [
                    fhir:reference [
-                     fhir:value [ fhir:v "#voie-001"^^xsd:anyURI ]
+                     fhir:value [ fhir:v "#med-001-voie"^^xsd:anyURI ]
                    ]
                  ]
                ] ; #  [0..1] Voie d'administration : uniquement si posologie structurée ,  Voie d'administration : Terminologie EDQM - Standard terms \/ classe ROA (Voie d'administration) 
@@ -1086,7 +1077,7 @@
                        fhir:translation ( [
                          fhir:code [ fhir:v "MV00002306" ] ;
                          fhir:codeSystem [ fhir:v "1.2.250.1.213.2.59" ] ;
-                         fhir:codeSystemName [ fhir:v "MV" ] ;
+                         fhir:codeSystemName [ fhir:v "MEDICABASE" ] ;
                          fhir:displayName [ fhir:v "Paracétamol 500 mg comprimé" ]
                        ] [
                          fhir:code [ fhir:v "3400933516390" ] ;
@@ -1119,7 +1110,7 @@
                    ] ) ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#med-001-ModeAdminProg-1"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "med-001-ModeAdminProg-1"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -1241,7 +1232,7 @@
                    ] ) ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#med-001-ModeAdminProg-2"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "med-001-ModeAdminProg-2"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -1432,7 +1423,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "N" ] ;
                      fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.1070" ] ;
-                     fhir:codeSystemName [ fhir:v "HL7_substanceAdminSubstitution" ] ;
+                     fhir:codeSystemName [ fhir:v "HL7_SubstanceAdminSubstitution" ] ;
                      fhir:displayName [ fhir:v "Aucune substitution permise" ] ;
                      fhir:originalText [
                        fhir:reference [
@@ -1462,7 +1453,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "MED-574" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec une ALD" ]
                    ] ;
                    fhir:text [
@@ -1498,7 +1489,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-180" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec un accident du travail ou une maladie professionnelle" ]
                    ] ;
                    fhir:text [
@@ -1534,7 +1525,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-295" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec la prévention" ]
                    ] ;
                    fhir:text [
@@ -1570,7 +1561,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-181" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "Non remboursable" ]
                    ] ;
                    fhir:text [
@@ -1606,7 +1597,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-179" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "Hors Autorisation de Mise sur le Marché (AMM)" ]
                    ] ;
                    fhir:text [
@@ -1629,7 +1620,7 @@
                  fhir:criterion [
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#precond-001"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#med-001-precondition"^^xsd:anyURI ]
                      ]
                    ]
                  ]
@@ -1658,7 +1649,7 @@
                fhir:code [
                  fhir:code [ fhir:v "DRUG" ] ;
                  fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.4" ] ;
-                 fhir:codeSystemName [ fhir:v "HL7:ActCode" ] ;
+                 fhir:codeSystemName [ fhir:v "HL7_ActCode" ] ;
                  fhir:displayName [ fhir:v "Médicament" ]
                ] ;
                fhir:text [
@@ -1696,7 +1687,7 @@
                fhir:routeCode [
                  fhir:code [ fhir:v "20003000" ] ;
                  fhir:codeSystem [ fhir:v "0.4.0.127.0.16.1.1.2.1" ] ;
-                 fhir:codeSystemName [ fhir:v "EDQM" ] ;
+                 fhir:codeSystemName [ fhir:v "StandardTermsEDQM" ] ;
                  fhir:displayName [ fhir:v "Voie cutanée" ] ;
                  fhir:originalText [
                    fhir:reference [
@@ -1704,14 +1695,6 @@
                    ]
                  ]
                ] ; #  [0..1] Voie d'administration : uniquement si posologie structurée ,  Voie d'administration : Terminologie EDQM - Standard terms \/ classe ROA (Voie d'administration) 
-               fhir:approachSiteCode ( [
-                 fhir:nullFlavor [ fhir:v "OTH" ] ;
-                 fhir:originalText [
-                   fhir:reference [
-                     fhir:value [ fhir:v "med-002-region"^^xsd:anyURI ]
-                   ]
-                 ]
-               ] ) ; #  [0..1] Région anatomique d'administration : uniquement si posologie structurée ,  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) 
                fhir:consumable [
                  fhir:manufacturedProduct [
                    fhir:classCode [ fhir:v "MANU" ] ;
@@ -1741,7 +1724,7 @@
                      ] #  Nom de la marque 
                    ]
                  ]
-               ] ; #  [0..1] Dose à administrer : uniquement si posologie structurée ,  <doseQuantity> <\/doseQuantity> ,  [0..1] Rythme d'administration : uniquement si posologie structurée ,  <rateQuantity>  <\/rateQuantity> ,  [0..*] Dose maximale d'administration : uniquement si posologie structurée ,  <maxDoseQuantity> <\/maxDoseQuantity> ,  [1..1] Entrée FR-Produit-de-sante 
+               ] ; #  [0..1] Région anatomique d'administration : uniquement si posologie structurée ,  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) ,  <approachSiteCode> <\/approachSiteCode> ,  [0..1] Dose à administrer : uniquement si posologie structurée ,  <doseQuantity> <\/doseQuantity> ,  [0..1] Rythme d'administration : uniquement si posologie structurée ,  <rateQuantity>  <\/rateQuantity> ,  [0..*] Dose maximale d'administration : uniquement si posologie structurée ,  <maxDoseQuantity> <\/maxDoseQuantity> ,  [1..1] Entrée FR-Produit-de-sante 
                fhir:entryRelationship ( [
                  fhir:inversionInd [ fhir:v true ] ;
                  fhir:typeCode [ fhir:v "SUBJ" ] ;
@@ -1827,7 +1810,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "N" ] ;
                      fhir:codeSystem [ fhir:v "2.16.840.1.113883.5.1070" ] ;
-                     fhir:codeSystemName [ fhir:v "HL7_substanceAdminSubstitution" ] ;
+                     fhir:codeSystemName [ fhir:v "HL7_SubstanceAdminSubstitution" ] ;
                      fhir:displayName [ fhir:v "Aucune substitution permise" ] ;
                      fhir:originalText [
                        fhir:reference [
@@ -1857,7 +1840,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "MED-574" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec une ALD" ]
                    ] ;
                    fhir:text [
@@ -1893,7 +1876,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-180" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec un accident du travail ou une maladie professionnelle" ]
                    ] ;
                    fhir:text [
@@ -1929,7 +1912,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-295" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec la prévention" ]
                    ] ;
                    fhir:text [
@@ -1965,7 +1948,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-181" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "Non remboursable" ]
                    ] ;
                    fhir:text [
@@ -2001,7 +1984,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-179" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "Hors Autorisation de Mise sur le Marché (AMM)" ]
                    ] ;
                    fhir:text [
@@ -2024,7 +2007,7 @@
                  fhir:criterion [
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#precond-002"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#med-002-precondition"^^xsd:anyURI ]
                      ]
                    ]
                  ]
@@ -2049,7 +2032,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Prescription de dispositifs médicaux" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Dispositif médical</th><th>Durée de location LPP</th><th>Nombre de conditionnements</th><th>Nombre de renouvellements</th><th>En rapport ALD</th><th>En rapport AT/MP</th><th>En rapport Prévention</th><th>Non remboursable</th></tr></thead><tbody>  <!-- Dispositif 1 --><tr><td id=\"DM-001\">Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702] </td><td>60 jours</td><td>1</td><td>0</td><td><span id=\"DM-001-ALD\">Non</span></td><td><span id=\"DM-001-ATMP\">Non</span></td><td><span id=\"DM-001-prev\">Non</span></td><td><span id=\"DM-001-non-remb\">Non</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Dispositif médical</th><th>Durée de location LPP</th><th>Nombre de conditionnements</th><th>Nombre de renouvellements</th><th>En rapport ALD</th><th>En rapport AT/MP</th><th>En rapport Prévention</th><th>Non remboursable</th></tr></thead><tbody>  <!-- Dispositif 1 --><tr><td id=\"DM-001\"><span id=\"DM-001-LPP\">Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702]</span></td><td>60 jours</td><td>1</td><td>0</td><td><span id=\"DM-001-ALD\">Non</span></td><td><span id=\"DM-001-ATMP\">Non</span></td><td><span id=\"DM-001-prev\">Non</span></td><td><span id=\"DM-001-non-remb\">Non</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:supply [
                fhir:classCode [ fhir:v "SPLY" ] ;
@@ -2064,7 +2047,7 @@
                ] ) ; #  Identifiant de la fourniture du DM 
                fhir:text [
                  fhir:reference [
-                   fhir:value [ fhir:v "#DM001"^^xsd:anyURI ]
+                   fhir:value [ fhir:v "#DM-001"^^xsd:anyURI ]
                  ]
                ] ; #  Référence vers la partie narrative de la section DM 
                fhir:effectiveTime ( [
@@ -2101,7 +2084,7 @@
                        fhir:displayName [ fhir:v "LITS MÉDICAUX" ] ;
                        fhir:translation ( [
                          fhir:code [ fhir:v "1215702" ] ;
-                         fhir:codeSystem [ fhir:v "1.2.250.1.215.200.2.1" ] ;
+                         fhir:codeSystem [ fhir:v "1.2.250.1.215.300.4" ] ;
                          fhir:codeSystemName [ fhir:v "LPP" ] ;
                          fhir:displayName [ fhir:v "lit médical, lit + 135 kg, forfait de livraison du lit et accessoires" ] ;
                          fhir:originalText [
@@ -2132,7 +2115,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "MED-574" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec une ALD" ]
                    ] ;
                    fhir:text [
@@ -2168,7 +2151,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-180" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec un accident du travail ou une maladie professionnelle" ]
                    ] ;
                    fhir:text [
@@ -2204,7 +2187,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-295" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "En rapport avec la prévention" ]
                    ] ;
                    fhir:text [
@@ -2240,7 +2223,7 @@
                    fhir:code [
                      fhir:code [ fhir:v "GEN-181" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
-                     fhir:codeSystemName [ fhir:v "terminologie-cisis-fr" ] ;
+                     fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
                      fhir:displayName [ fhir:v "Non remboursable" ]
                    ] ;
                    fhir:text [
@@ -2473,7 +2456,7 @@
                fhir:value ( [
                  fhir:code [ fhir:v "77386006" ] ;
                  fhir:codeSystem [ fhir:v "2.16.840.1.113883.6.96" ] ;
-                 fhir:codeSystemName [ fhir:v "SNOMED CT" ] ;
+                 fhir:codeSystemName [ fhir:v "SNOMED_CT" ] ;
                  fhir:displayName [ fhir:v "grossesse en cours" ]
                ] )
              ]
@@ -2496,7 +2479,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Copie du document" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><img src=\"doc-1\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><span id=\"titre-copie-pdf\">Copie PDF du document</span></td></tr><tr><td><img src=\"copie-pdf\"/></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:organizer [
                fhir:classCode [ fhir:v "CLUSTER" ] ;
@@ -2538,7 +2521,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#doc1"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#titre-copie-pdf"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -2556,7 +2539,7 @@
                  ]
                ] [
                  fhir:observationMedia [
-                   fhir:ID [ fhir:v "doc-1" ] ;
+                   fhir:ID [ fhir:v "copie-pdf" ] ;
                    fhir:classCode [ fhir:v "OBS" ] ;
                    fhir:moodCode [ fhir:v "EVN" ] ;
                    fhir:value [
