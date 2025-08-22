@@ -56,3 +56,4 @@ Description: "L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément
   * ^short = "Consentement associé au document." 
 * componentOf 1..1 
   * ^short = "Prise en charge du patient/usager et notamment la date et le secteur d'activité."
+* obeys PerformerRequire

@@ -12,7 +12,7 @@ Description: "L'élément de l'en-tête du CDA relatedEntity permet de décrire 
 * classCode ^short = "Rôle joué par la personne."
 * classCode from $jdv-role-informateur-cisis
 * code ^short = "Lien de la personne avec le patient/usager."
-* code from https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS
+* code from https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS (required)
 * code.code 1..1
 * code.codeSystem 1..1
 * code.displayName 1..1

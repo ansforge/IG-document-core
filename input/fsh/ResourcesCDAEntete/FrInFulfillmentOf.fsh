@@ -8,6 +8,5 @@ Description: "L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * order only fr-core-order
 * order ^short = "Prescription"

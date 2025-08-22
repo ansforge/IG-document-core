@@ -10,6 +10,5 @@ Description: "L'élément de l'en-tête du CDA componentOf permet d'associer le 
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * encompassingEncounter only fr-core-encompassing-encounter	
 * encompassingEncounter	 ^short = "Prise en charge"

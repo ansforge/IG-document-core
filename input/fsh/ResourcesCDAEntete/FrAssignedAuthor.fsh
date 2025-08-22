@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA assignedAuthor contient les élé
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* classCode 0..0
 * sdtcIdentifiedBy 0..0
 * id ^short = "Identifiant de l’auteur : 
 - Obligatoire pour un professionnel 
@@ -58,3 +57,4 @@ Description: "L'élément de l'en-tête du CDA assignedAuthor contient les élé
 - Obligatoire pour un SNR 
 - Obligatoire pour le DP"
 * representedOrganization only fr-core-represented-organization
+

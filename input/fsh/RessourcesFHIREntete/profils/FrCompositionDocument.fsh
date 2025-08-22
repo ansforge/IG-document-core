@@ -73,7 +73,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
-* author only Reference(FrPractitionerDocument or FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
+* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
 * author.extension contains fr-author-time named time 1..1
 
 // Responsable du document : legalAuthenticator

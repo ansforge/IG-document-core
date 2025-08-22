@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA authenticator permet de représen
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * sdtcSignatureText 0..0
 * signatureCode ^short = "signatureCode signifie que le professionnel a validé les informations portées sur le document."
 * signatureCode.sdtcValueSet 0..0

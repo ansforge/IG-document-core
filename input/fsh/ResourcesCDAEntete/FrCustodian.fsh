@@ -9,6 +9,5 @@ Description: "L'élément de l'en-tête du CDA custodian permet de représenter 
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * assignedCustodian ^short = "Structure"
 * assignedCustodian only fr-core-assigned-custodian

@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA patientRole permet de décrire le
 * realmCode 0..0
 * typeId 0..0
 * templateId 0..0
-* classCode 0..0
 * sdtcIdentifiedBy 0..0
 * providerOrganization 0..0
 * id ^short = "Identifiant du patient."
