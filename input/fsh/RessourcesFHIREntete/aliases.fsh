@@ -16,18 +16,18 @@ Alias: $JDV_J141-RoleClass-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J141-RoleC
 Alias: $jdv-type-systeme-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis
 Alias: $jdv-j368-categorie-etablissement-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis
 Alias: $jdv-role-informateur-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis
+
 // TRE 
 Alias: $TRE_R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $TRE_G13-OrientationParticuliere = https://mos.esante.gouv.fr/NOS/TRE_G13-OrientationParticuliere/FHIR/TRE-G13-OrientationParticuliere
 Alias: $TRE_R359-SurspecialiteTransversale = https://mos.esante.gouv.fr/NOS/TRE_R359-SurspecialiteTransversale/FHIR/TRE-R359-SurspecialiteTransversale
+
 Alias: $TRE_R38-SpecialiteOrdinale = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
 Alias: $TRE_R39-Competence = https://mos.esante.gouv.fr/NOS/TRE_R39-Competence/FHIR/TRE-R39-Competence
-Alias: $TRE_R40-CompetenceExclusive = https://mos.esante.gouv.fr/NOS/TRE_R40-CompetenceExclusive/FHIR/TRE-R40-CompetenceExclusive
 Alias: $TRE_R42-DESCnonQualifiant = https://mos.esante.gouv.fr/NOS/TRE_R42-DESCnonQualifiant/FHIR/TRE-R42-DESCnonQualifiant
 Alias: $TRE_R43-CapaciteSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R43-CapaciteSavoirFaire/FHIR/TRE-R43-CapaciteSavoirFaire
 Alias: $TRE_R44-QualificationPAC = https://mos.esante.gouv.fr/NOS/TRE_R44-QualificationPAC/FHIR/TRE-R44-QualificationPAC
 Alias: $TRE_R45-FonctionQualifiee = https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee
-Alias: $TRE_R97-DroitExerciceCompl = https://mos.esante.gouv.fr/NOS/TRE_R97-DroitExerciceCompl/FHIR/TRE-R97-DroitExerciceCompl
 Alias: $TRE_G05-SousSectionTableauCNOP = https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP
 Alias: $TRE_R85-RolePriseCharge = https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge
 Alias: $TRE_R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
