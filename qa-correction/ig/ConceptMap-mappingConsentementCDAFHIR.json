@@ -1,0 +1,96 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingConsentementCDAFHIR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingConsentementCDAFHIR</b></p><a name=\"mappingConsentementCDAFHIR\"> </a><a name=\"hcmappingConsentementCDAFHIR\"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Consentement.html\">Modèle métier - Consentement associé au document</a> to <a href=\"StructureDefinition-fr-core-authorization.html\">CDA - authorization</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>Consentement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>authorization</td></tr><tr><td>Consentement.identifiantConsentement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>authorization.consent.id</td></tr><tr><td>Consentement.typeConsentement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>authorization.consent.code</td></tr><tr><td>Consentement.statutConsentement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>authorization.consent.statusCode=&quot;completed&quot;</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-fr-core-authorization.html\">CDA - authorization</a> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/StructureDefinition-consent-extension.html\">Consent Extension</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>authorization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ConsentExtension.ValueReference.Consent</td><td>ValueReference.resolve().ofType(Consent)</td></tr><tr><td>authorization.consent.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ConsentExtension.ValueReference.Consent.identifier</td><td/></tr><tr><td>authorization.consent.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ConsentExtension.ValueReference.Consent.category</td><td/></tr><tr><td>authorization.consent.statusCode=&quot;completed&quot;</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ConsentExtension.ValueReference.Consent.status:active</td><td/></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingConsentementCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2025-08-22T13:45:53+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization",
+    "element" : [{
+      "code" : "Consentement",
+      "target" : [{
+        "code" : "authorization",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Consentement.identifiantConsentement",
+      "target" : [{
+        "code" : "authorization.consent.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Consentement.typeConsentement",
+      "target" : [{
+        "code" : "authorization.consent.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Consentement.statutConsentement",
+      "target" : [{
+        "code" : "authorization.consent.statusCode=\"completed\"",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization",
+    "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension",
+    "element" : [{
+      "code" : "authorization",
+      "target" : [{
+        "code" : "extension:ConsentExtension.ValueReference.Consent",
+        "equivalence" : "equivalent",
+        "comment" : "ValueReference.resolve().ofType(Consent)"
+      }]
+    },
+    {
+      "code" : "authorization.consent.id",
+      "target" : [{
+        "code" : "extension:ConsentExtension.ValueReference.Consent.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "authorization.consent.code",
+      "target" : [{
+        "code" : "extension:ConsentExtension.ValueReference.Consent.category",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "authorization.consent.statusCode=\"completed\"",
+      "target" : [{
+        "code" : "extension:ConsentExtension.ValueReference.Consent.status:active",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
