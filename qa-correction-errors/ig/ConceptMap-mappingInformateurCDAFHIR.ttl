@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingInformateurCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mappingInformateurCDAFHIR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingInformateurCDAFHIR</b></p><a name=\"mappingInformateurCDAFHIR\"> </a><a name=\"hcmappingInformateurCDAFHIR\"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Informateur.html\">Modèle métier - Informateur</a> to <a href=\"StructureDefinition-fr-core-informant.html\">CDA - informant</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>Informateur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant</td><td/></tr><tr><td>Informateur.informateur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.assignedEntity</td><td>L'élément informateur est de type PersonneStructure.</td></tr><tr><td>Informateur.informateur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.relatedEntity</td><td>L'élément informateur est de type PersonneStructure.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-fr-core-informant.html\">CDA - informant</a> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/StructureDefinition-informant-extension.html\">Informant Extension</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>informant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:InformantExtension</td><td/></tr><tr><td>informant.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:InformantExtension.extension:party.ValueReference</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole or Patient)</td></tr><tr><td>informant.relatedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:InformantExtension.extension:party.ValueReference</td><td>extension:party.ValueReference.resolve().ofType(RelatedPerson)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingInformateurCDAFHIR"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "Mapping Métier/CDA/FHIR : \"Informateur\""] ; # 
+  fhir:title [ fhir:v "Mapping Métier/CDA/FHIR : \"Informateur\""] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-08-22T13:54:45+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\" "] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Informateur" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "informant" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Informateur.informateur" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "informant.assignedEntity" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "L'élément informateur est de type PersonneStructure." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Informateur.informateur" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "informant.relatedEntity" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "L'élément informateur est de type PersonneStructure." ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "informant" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:InformantExtension" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "informant.assignedEntity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:InformantExtension.extension:party.ValueReference" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "extension:party.ValueReference.resolve().ofType(PractitionerRole or Patient)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "informant.relatedEntity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:InformantExtension.extension:party.ValueReference" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "extension:party.ValueReference.resolve().ofType(RelatedPerson)" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
