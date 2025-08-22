@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6.100"}
-    h3,h4,h5,h6{--heading-prefix:"6.100"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.101"}
+    h3,h4,h5,h6{--heading-prefix:"6.101"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -227,7 +227,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="Binary-LDL-SES-2022.01.html">next&gt;</a>
+          | <a href="Binary-IPS-FR-2024.01.html">next&gt;</a>
 
           </span>
 
@@ -313,7 +313,9 @@
     - 15/09/2023 : Nouvelle version 2023.01 : Ajout de la Section FR-Document-PDF-copie [0..1]
     - 17/10/2023 : Modification du code de la Section FR-Document-PDF-copie
     - 19/11/2024 : Nouvelle version 2024.01
-    
+    - 20/08/2025 : Suppresssion des attributs author@typeCode, author@contextControlCode, assignedAuthor@classCode, serviceEvent@lassCode
+                   Maj des codeSystemName en fonction de la nouvelle règle de nommage
+                   Maj des références parties narratives / entrées
     **********************************************************************************************************
 
 
@@ -458,12 +460,9 @@
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AD.html#AD.item.city.xmlText">fhir:xmlText</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;DOMPREMY&quot; ]                 ]               ] )             ]           ]         ] #  Lieu de naissance du patient        ] #  Identité du patient      ]
   ] ) ; #  Patient 
   <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.author">fhir:author</a> ( [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.contextControlCode">fhir:contextControlCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;OP&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.typeCode">fhir:typeCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;AUT&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.time">fhir:time</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TS.html#TS.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-12-01T09:30:00+01:00&quot;^^xsd:dateTime ]     ] ; #  [1..1] Horodatage de la validation par l'auteur 
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Author.html#Author.assignedAuthor">fhir:assignedAuthor</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedAuthor.html#AssignedAuthor.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ASSIGNED&quot; ] ;
       ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-AssignedAuthor.html#AssignedAuthor.id">fhir:id</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.extension">fhir:extension</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;801234567897&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.root">fhir:root</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.71.4.2.1&quot; ]       ] ) ; #  [1..1] Identifiant de l'auteur (Id RPPS du PS obligatoire pour les PS) 
@@ -635,7 +634,7 @@
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organization.html#Organization.standardIndustryClassCode">fhir:standardIndustryClassCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;AMBULATOIRE&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.9&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;practiceSettingCode&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TRE_A01_CadreExercice&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ambulatoire&quot; ]         ]       ] #  Etablissement de rattachement du PS      ]
   ] ; #  Responsable du document 
   <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.participant">fhir:participant</a> ( [
@@ -760,7 +759,6 @@
   ] ) ; #  Participant : PS remplacé (obligatoire si prescription faite par un PS remplaçant) 
   <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.documentationOf">fhir:documentationOf</a> ( [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ACT&quot; ] ;
       ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.id">fhir:id</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.extension">fhir:extension</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;01S2TBPZ2JCNZZYGHZ&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.root">fhir:root</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.215.500.1.1&quot; ]       ] ) ; #  Identifiant de la prescription EPU : root=\&quot;1.2.250.1.215.500.1.1\&quot; + extension calculé selon la règle fournie dans les spécifications de la Cnam 
@@ -831,63 +829,56 @@
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organization.html#Organization.standardIndustryClassCode">fhir:standardIndustryClassCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;AMBULATOIRE&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.9&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;practiceSettingCode&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TRE_A01_CadreExercice&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ambulatoire&quot; ]             ] #  Cadre d'exercice du PS            ] #  Organisme représenté          ]       ] ) #  La personne ayant exécuté l'acte      ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1096&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Prescription bizone&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1097&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Prescription médicaments d'exception&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1098&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Ordonnance sécurisée&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1132&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Prescription grand appareillage&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1094&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Exécution à domicile&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1095&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Exécution en urgence&quot; ]       ]     ]
   ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-DocumentationOf.html#DocumentationOf.serviceEvent">fhir:serviceEvent</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFO&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ServiceEvent.html#ServiceEvent.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-1159&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Affection militaire&quot; ]       ]     ]
   ] ) ; #  [1..1] Acte documenté : prescription 
   <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.componentOf">fhir:componentOf</a> [
@@ -908,7 +899,7 @@
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SA07&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.71.4.2.4&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Cabinet individuel&quot; ]           ]         ]       ]     ]
-  ] ; #  Contexte de la prise en charge 
+  ] ; #  [1..1] Contexte de la prise en charge 
   <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument.component">fhir:component</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Component.html#Component.structuredBody">fhir:structuredBody</a> [
       ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-StructuredBody.html#StructuredBody.component">fhir:component</a> [
@@ -969,7 +960,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;DRUG&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.16.840.1.113883.5.4&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7:ActCode&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_ActCode&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Médicament&quot; ]               ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -986,11 +977,11 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.routeCode">fhir:routeCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;20053000&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.4.0.127.0.16.1.1.2.1&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EDQM&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StandardTermsEDQM&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Voie orale&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">fhir:originalText</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#voie-001&quot;^^xsd:anyURI ]                   ]                 ]               ] ; #  [0..1] Voie d'administration : uniquement si posologie structurée ,  Voie d'administration : Terminologie EDQM - Standard terms \/ classe ROA (Voie d'administration) 
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-001-voie&quot;^^xsd:anyURI ]                   ]                 ]               ] ; #  [0..1] Voie d'administration : uniquement si posologie structurée ,  Voie d'administration : Terminologie EDQM - Standard terms \/ classe ROA (Voie d'administration) 
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.maxDoseQuantity">fhir:maxDoseQuantity</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-RTO-PQ-PQ.html#RTO_PQ_PQ.numerator">fhir:numerator</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-PQ.html#PQ.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:v</a> &quot;4&quot;^^xsd:decimal ]                 ] ;
@@ -1020,7 +1011,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
                       ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.translation">fhir:translation</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MV00002306&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.2.59&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MV&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MEDICABASE&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Paracétamol 500 mg comprimé&quot; ]                       ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;3400933516390&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.2.3.2&quot; ] ;
@@ -1042,7 +1033,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.root">fhir:root</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;C93DE620-3722-11EC-8D3D-0242AC130003&quot; ]                   ] ) ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-001-ModeAdminProg-1&quot;^^xsd:anyURI ]                     ]                   ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;med-001-ModeAdminProg-1&quot;^^xsd:anyURI ]                     ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">fhir:statusCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CS.html#CS.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;completed&quot; ]                   ] ;
                   ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.effectiveTime">fhir:effectiveTime</a> [
@@ -1120,7 +1111,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.root">fhir:root</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;3FDCAA46-3723-11EC-8D3D-0242AC130003&quot; ]                   ] ) ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-001-ModeAdminProg-2&quot;^^xsd:anyURI ]                     ]                   ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;med-001-ModeAdminProg-2&quot;^^xsd:anyURI ]                     ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">fhir:statusCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CS.html#CS.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;completed&quot; ]                   ] ;
                   ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.effectiveTime">fhir:effectiveTime</a> [
@@ -1244,7 +1235,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;N&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.16.840.1.113883.5.1070&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_substanceAdminSubstitution&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_SubstanceAdminSubstitution&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Aucune substitution permise&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">fhir:originalText</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1264,7 +1255,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-574&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec une ALD&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1288,7 +1279,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-180&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec un accident du travail ou une maladie professionnelle&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1312,7 +1303,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-295&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec la prévention&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1336,7 +1327,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-181&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Non remboursable&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1360,7 +1351,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-179&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Hors Autorisation de Mise sur le Marché (AMM)&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1375,7 +1366,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Precondition.html#Precondition.criterion">fhir:criterion</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Criterion.html#Criterion.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#precond-001&quot;^^xsd:anyURI ]                     ]                   ]                 ]               ] ) #  Précondition              ]           ] [
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-001-precondition&quot;^^xsd:anyURI ]                     ]                   ]                 ]               ] ) #  Précondition              ]           ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Entry.html#Entry.substanceAdministration">fhir:substanceAdministration</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SBADM&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.moodCode">fhir:moodCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INT&quot; ] ;
@@ -1391,7 +1382,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;DRUG&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.16.840.1.113883.5.4&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7:ActCode&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_ActCode&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Médicament&quot; ]               ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1416,16 +1407,11 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.routeCode">fhir:routeCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;20003000&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.4.0.127.0.16.1.1.2.1&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;EDQM&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;StandardTermsEDQM&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Voie cutanée&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.originalText">fhir:originalText</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-002-voie&quot;^^xsd:anyURI ]                   ]                 ]               ] ; #  [0..1] Voie d'administration : uniquement si posologie structurée ,  Voie d'administration : Terminologie EDQM - Standard terms \/ classe ROA (Voie d'administration) 
-              ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.approachSiteCode">fhir:approachSiteCode</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.nullFlavor">fhir:nullFlavor</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;OTH&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">fhir:originalText</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;med-002-region&quot;^^xsd:anyURI ]                   ]                 ]               ] ) ; #  [0..1] Région anatomique d'administration : uniquement si posologie structurée ,  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) 
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable">fhir:consumable</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.consumable.manufacturedProduct">fhir:manufacturedProduct</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ManufacturedProduct.html#ManufacturedProduct.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MANU&quot; ] ;
@@ -1444,7 +1430,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-002&quot;^^xsd:anyURI ]                         ]                       ]                     ] ; #  Code CIS du médicament 
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Material.html#Material.name">fhir:name</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EN.html#EN.nullFlavor">fhir:nullFlavor</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;NA&quot; ]                     ] #  Nom de la marque                    ]                 ]               ] ; #  [0..1] Dose à administrer : uniquement si posologie structurée ,  &lt;doseQuantity&gt; &lt;\/doseQuantity&gt; ,  [0..1] Rythme d'administration : uniquement si posologie structurée ,  &lt;rateQuantity&gt;  &lt;\/rateQuantity&gt; ,  [0..*] Dose maximale d'administration : uniquement si posologie structurée ,  &lt;maxDoseQuantity&gt; &lt;\/maxDoseQuantity&gt; ,  [1..1] Entrée FR-Produit-de-sante 
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EN.html#EN.nullFlavor">fhir:nullFlavor</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;NA&quot; ]                     ] #  Nom de la marque                    ]                 ]               ] ; #  [0..1] Région anatomique d'administration : uniquement si posologie structurée ,  valeur issue du jdv-human-substance-administration-site-cisis (1.2.250.1.213.1.1.5.686) ,  &lt;approachSiteCode&gt; &lt;\/approachSiteCode&gt; ,  [0..1] Dose à administrer : uniquement si posologie structurée ,  &lt;doseQuantity&gt; &lt;\/doseQuantity&gt; ,  [0..1] Rythme d'administration : uniquement si posologie structurée ,  &lt;rateQuantity&gt;  &lt;\/rateQuantity&gt; ,  [0..*] Dose maximale d'administration : uniquement si posologie structurée ,  &lt;maxDoseQuantity&gt; &lt;\/maxDoseQuantity&gt; ,  [1..1] Entrée FR-Produit-de-sante 
               ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.entryRelationship">fhir:entryRelationship</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.inversionInd">fhir:inversionInd</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.typeCode">fhir:typeCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SUBJ&quot; ] ;
@@ -1504,7 +1490,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;N&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.16.840.1.113883.5.1070&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_substanceAdminSubstitution&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HL7_SubstanceAdminSubstitution&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Aucune substitution permise&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">fhir:originalText</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1524,7 +1510,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-574&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec une ALD&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1548,7 +1534,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-180&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec un accident du travail ou une maladie professionnelle&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1572,7 +1558,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-295&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec la prévention&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1596,7 +1582,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-181&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Non remboursable&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1620,7 +1606,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-179&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Hors Autorisation de Mise sur le Marché (AMM)&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1635,7 +1621,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Precondition.html#Precondition.criterion">fhir:criterion</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Criterion.html#Criterion.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#precond-002&quot;^^xsd:anyURI ]                     ]                   ]                 ]               ] ) #  Précondition              ]           ] ) #  [1..*] Entrée FR-Traitement-prescrit : paracétamol          ]       ] [
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#med-002-precondition&quot;^^xsd:anyURI ]                     ]                   ]                 ]               ] ) #  Précondition              ]           ] ) #  [1..*] Entrée FR-Traitement-prescrit : paracétamol          ]       ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-StructuredBody.html#StructuredBody.component.section">fhir:section</a> [
           ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.templateId">fhir:templateId</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.root">fhir:root</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.2.222&quot; ]           ] ) ;
@@ -1648,7 +1634,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &l
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Dispositifs médicaux&quot; ]           ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.title">fhir:title</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ST.html#ST.xmlText">fhir:xmlText</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Prescription de dispositifs médicaux&quot; ]           ] ;
-fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dispositif médical&lt;/th&gt;&lt;th&gt;Durée de location LPP&lt;/th&gt;&lt;th&gt;Nombre de conditionnements&lt;/th&gt;&lt;th&gt;Nombre de renouvellements&lt;/th&gt;&lt;th&gt;En rapport ALD&lt;/th&gt;&lt;th&gt;En rapport AT/MP&lt;/th&gt;&lt;th&gt;En rapport Prévention&lt;/th&gt;&lt;th&gt;Non remboursable&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;  &lt;!-- Dispositif 1 --&gt;&lt;tr&gt;&lt;td id=\&quot;DM-001\&quot;&gt;Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702] &lt;/td&gt;&lt;td&gt;60 jours&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ALD\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ATMP\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-prev\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-non-remb\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ;
+fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dispositif médical&lt;/th&gt;&lt;th&gt;Durée de location LPP&lt;/th&gt;&lt;th&gt;Nombre de conditionnements&lt;/th&gt;&lt;th&gt;Nombre de renouvellements&lt;/th&gt;&lt;th&gt;En rapport ALD&lt;/th&gt;&lt;th&gt;En rapport AT/MP&lt;/th&gt;&lt;th&gt;En rapport Prévention&lt;/th&gt;&lt;th&gt;Non remboursable&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;  &lt;!-- Dispositif 1 --&gt;&lt;tr&gt;&lt;td id=\&quot;DM-001\&quot;&gt;&lt;span id=\&quot;DM-001-LPP\&quot;&gt;Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702]&lt;/span&gt;&lt;/td&gt;&lt;td&gt;60 jours&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ALD\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-ATMP\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-prev\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span id=\&quot;DM-001-non-remb\&quot;&gt;Non&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ;
           ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.entry">fhir:entry</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Entry.html#Entry.supply">fhir:supply</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;SPLY&quot; ] ;
@@ -1660,7 +1646,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-II.html#II.nullFlavor">fhir:nullFlavor</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;UNK&quot; ]               ] ) ; #  Identifiant de la fourniture du DM 
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#DM001&quot;^^xsd:anyURI ]                 ]               ] ; #  Référence vers la partie narrative de la section DM 
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#DM-001&quot;^^xsd:anyURI ]                 ]               ] ; #  Référence vers la partie narrative de la section DM 
               ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.effectiveTime">fhir:effectiveTime</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVL-TS.html#IVL_TS.low">fhir:low</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-IVXB-TS.html#IVXB_TS.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-12-01&quot;^^xsd:date ]                 ] ;
@@ -1688,7 +1674,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;LITS MÉDICAUX&quot; ] ;
                       ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.translation">fhir:translation</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;1215702&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.215.200.2.1&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.215.300.4&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;LPP&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;lit médical, lit + 135 kg, forfait de livraison du lit et accessoires&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">fhir:originalText</a> [
@@ -1708,7 +1694,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;MED-574&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec une ALD&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1732,7 +1718,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-180&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec un accident du travail ou une maladie professionnelle&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1756,7 +1742,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-295&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;En rapport avec la prévention&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1780,7 +1766,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">fhir:code</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;GEN-181&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.2.250.1.213.1.1.4.322&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;terminologie-cisis-fr&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;TerminologieCISIS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Non remboursable&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
@@ -1934,7 +1920,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
               ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">fhir:value</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;77386006&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystem">fhir:codeSystem</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.16.840.1.113883.6.96&quot; ] ;
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;SNOMED CT&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;SNOMED_CT&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;grossesse en cours&quot; ]               ] )             ]           ] ) #  [1..*] Entrée FR-Observation-sur-la-grossesse : Patiente enceinte          ]       ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-StructuredBody.html#StructuredBody.component.section">fhir:section</a> [
           ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.templateId">fhir:templateId</a> [
@@ -1948,7 +1934,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CE.html#CE.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Copie du document&quot; ]           ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.title">fhir:title</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ST.html#ST.xmlText">fhir:xmlText</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Copie du document&quot; ]           ] ;
-fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=\&quot;doc-1\&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ;
+fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;table border=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;span id=\&quot;titre-copie-pdf\&quot;&gt;Copie PDF du document&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=\&quot;copie-pdf\&quot;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ;
           ( <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Section.html#Section.entry">fhir:entry</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Entry.html#Entry.organizer">fhir:organizer</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;CLUSTER&quot; ] ;
@@ -1981,7 +1967,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Type de document&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">fhir:reference</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#doc1&quot;^^xsd:anyURI ]                     ]                   ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-TEL.html#TEL.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:v</a> &quot;#titre-copie-pdf&quot;^^xsd:anyURI ]                     ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">fhir:statusCode</a> [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CS.html#CS.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;completed&quot; ]                   ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">fhir:effectiveTime</a> [
@@ -1992,7 +1978,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.codeSystemName">fhir:codeSystemName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;LOINC&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.displayName">fhir:displayName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Copie du document&quot; ]                   ] )                 ]               ] [
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-OrganizerComponent.html#OrganizerComponent.observationMedia">fhir:observationMedia</a> [
-<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.ID">fhir:ID</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;doc-1&quot; ] ;
+<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.ID">fhir:ID</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;copie-pdf&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.classCode">fhir:classCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;OBS&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.moodCode">fhir:moodCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;EVN&quot; ] ;
 <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ObservationMedia.html#ObservationMedia.value">fhir:value</a> [
@@ -2038,7 +2024,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="Binary-LDL-SES-2022.01.html">next&gt;</a>
+                <a href="Binary-IPS-FR-2024.01.html">next&gt;</a>
 
               </td>
             </tr>
@@ -2048,7 +2034,7 @@ fhir:text &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 22, 2025 11:40+0000">2025-08-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 22, 2025 13:02+0000">2025-08-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
