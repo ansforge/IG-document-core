@@ -219,10 +219,13 @@
     }
   }],
   "author" : [{
+    "contextControlCode" : "OP",
+    "typeCode" : "AUT",
     "time" : {
       "value" : "2023-12-01T09:30:00+01:00"
     },
     "assignedAuthor" : {
+      "classCode" : "ASSIGNED",
       "id" : [{
         "extension" : "801234567897",
         "root" : "1.2.250.1.71.4.2.1"
@@ -526,7 +529,7 @@
         "standardIndustryClassCode" : {
           "code" : "AMBULATOIRE",
           "codeSystem" : "1.2.250.1.213.1.1.4.9",
-          "codeSystemName" : "TRE_A01_CadreExercice",
+          "codeSystemName" : "practiceSettingCode",
           "displayName" : "Ambulatoire"
         }
       }
@@ -751,6 +754,7 @@
   }],
   "documentationOf" : [{
     "serviceEvent" : {
+      "classCode" : "ACT",
       "id" : [{
         "extension" : "01S2TBPZ2JCNZZYGHZ",
         "root" : "1.2.250.1.215.500.1.1"
@@ -870,7 +874,7 @@
             "standardIndustryClassCode" : {
               "code" : "AMBULATOIRE",
               "codeSystem" : "1.2.250.1.213.1.1.4.9",
-              "codeSystemName" : "TRE_A01_CadreExercice",
+              "codeSystemName" : "practiceSettingCode",
               "displayName" : "Ambulatoire"
             }
           }
@@ -880,70 +884,77 @@
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1096",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Prescription bizone"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1097",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Prescription médicaments d'exception"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1098",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Ordonnance sécurisée"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1132",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Prescription grand appareillage"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1094",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Exécution à domicile"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1095",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Exécution en urgence"
       }
     }
   },
   {
     "serviceEvent" : {
+      "classCode" : "INFO",
       "code" : {
         "code" : "MED-1159",
         "codeSystem" : "1.2.250.1.213.1.1.4.322",
-        "codeSystemName" : "TerminologieCISIS",
+        "codeSystemName" : "terminologie-cisis-fr",
         "displayName" : "Affection militaire"
       }
     }
@@ -1066,7 +1077,7 @@
               "code" : {
                 "code" : "DRUG",
                 "codeSystem" : "2.16.840.1.113883.5.4",
-                "codeSystemName" : "HL7_ActCode",
+                "codeSystemName" : "HL7:ActCode",
                 "displayName" : "Médicament"
               },
               "text" : {
@@ -1091,11 +1102,11 @@
               "routeCode" : {
                 "code" : "20053000",
                 "codeSystem" : "0.4.0.127.0.16.1.1.2.1",
-                "codeSystemName" : "StandardTermsEDQM",
+                "codeSystemName" : "EDQM",
                 "displayName" : "Voie orale",
                 "originalText" : {
                   "reference" : {
-                    "value" : "#med-001-voie"
+                    "value" : "#voie-001"
                   }
                 }
               },
@@ -1139,7 +1150,7 @@
                       "translation" : [{
                         "code" : "MV00002306",
                         "codeSystem" : "1.2.250.1.213.2.59",
-                        "codeSystemName" : "MEDICABASE",
+                        "codeSystemName" : "MV",
                         "displayName" : "Paracétamol 500 mg comprimé"
                       },
                       {
@@ -1173,7 +1184,7 @@
                   }],
                   "text" : {
                     "reference" : {
-                      "value" : "med-001-ModeAdminProg-1"
+                      "value" : "#med-001-ModeAdminProg-1"
                     }
                   },
                   "statusCode" : {
@@ -1299,7 +1310,7 @@
                   }],
                   "text" : {
                     "reference" : {
-                      "value" : "med-001-ModeAdminProg-2"
+                      "value" : "#med-001-ModeAdminProg-2"
                     }
                   },
                   "statusCode" : {
@@ -1503,7 +1514,7 @@
                   "code" : {
                     "code" : "N",
                     "codeSystem" : "2.16.840.1.113883.5.1070",
-                    "codeSystemName" : "HL7_SubstanceAdminSubstitution",
+                    "codeSystemName" : "HL7_substanceAdminSubstitution",
                     "displayName" : "Aucune substitution permise",
                     "originalText" : {
                       "reference" : {
@@ -1536,7 +1547,7 @@
                   "code" : {
                     "code" : "MED-574",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec une ALD"
                   },
                   "text" : {
@@ -1575,7 +1586,7 @@
                   "code" : {
                     "code" : "GEN-180",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec un accident du travail ou une maladie professionnelle"
                   },
                   "text" : {
@@ -1614,7 +1625,7 @@
                   "code" : {
                     "code" : "GEN-295",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec la prévention"
                   },
                   "text" : {
@@ -1653,7 +1664,7 @@
                   "code" : {
                     "code" : "GEN-181",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "Non remboursable"
                   },
                   "text" : {
@@ -1692,7 +1703,7 @@
                   "code" : {
                     "code" : "GEN-179",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "Hors Autorisation de Mise sur le Marché (AMM)"
                   },
                   "text" : {
@@ -1715,7 +1726,7 @@
                 "criterion" : {
                   "text" : {
                     "reference" : {
-                      "value" : "#med-001-precondition"
+                      "value" : "#precond-001"
                     }
                   }
                 }
@@ -1750,7 +1761,7 @@
               "code" : {
                 "code" : "DRUG",
                 "codeSystem" : "2.16.840.1.113883.5.4",
-                "codeSystemName" : "HL7_ActCode",
+                "codeSystemName" : "HL7:ActCode",
                 "displayName" : "Médicament"
               },
               "text" : {
@@ -1789,7 +1800,7 @@
               "routeCode" : {
                 "code" : "20003000",
                 "codeSystem" : "0.4.0.127.0.16.1.1.2.1",
-                "codeSystemName" : "StandardTermsEDQM",
+                "codeSystemName" : "EDQM",
                 "displayName" : "Voie cutanée",
                 "originalText" : {
                   "reference" : {
@@ -1797,6 +1808,14 @@
                   }
                 }
               },
+              "approachSiteCode" : [{
+                "nullFlavor" : "OTH",
+                "originalText" : {
+                  "reference" : {
+                    "value" : "med-002-region"
+                  }
+                }
+              }],
               "consumable" : {
                 "manufacturedProduct" : {
                   "classCode" : "MANU",
@@ -1923,7 +1942,7 @@
                   "code" : {
                     "code" : "N",
                     "codeSystem" : "2.16.840.1.113883.5.1070",
-                    "codeSystemName" : "HL7_SubstanceAdminSubstitution",
+                    "codeSystemName" : "HL7_substanceAdminSubstitution",
                     "displayName" : "Aucune substitution permise",
                     "originalText" : {
                       "reference" : {
@@ -1956,7 +1975,7 @@
                   "code" : {
                     "code" : "MED-574",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec une ALD"
                   },
                   "text" : {
@@ -1995,7 +2014,7 @@
                   "code" : {
                     "code" : "GEN-180",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec un accident du travail ou une maladie professionnelle"
                   },
                   "text" : {
@@ -2034,7 +2053,7 @@
                   "code" : {
                     "code" : "GEN-295",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec la prévention"
                   },
                   "text" : {
@@ -2073,7 +2092,7 @@
                   "code" : {
                     "code" : "GEN-181",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "Non remboursable"
                   },
                   "text" : {
@@ -2112,7 +2131,7 @@
                   "code" : {
                     "code" : "GEN-179",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "Hors Autorisation de Mise sur le Marché (AMM)"
                   },
                   "text" : {
@@ -2135,7 +2154,7 @@
                 "criterion" : {
                   "text" : {
                     "reference" : {
-                      "value" : "#med-002-precondition"
+                      "value" : "#precond-002"
                     }
                   }
                 }
@@ -2161,7 +2180,7 @@
           "title" : {
             "xmlText" : "Prescription de dispositifs médicaux"
           },
-          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Dispositif médical</th><th>Durée de location LPP</th><th>Nombre de conditionnements</th><th>Nombre de renouvellements</th><th>En rapport ALD</th><th>En rapport AT/MP</th><th>En rapport Prévention</th><th>Non remboursable</th></tr></thead><tbody>  <!-- Dispositif 1 --><tr><td id=\"DM-001\"><span id=\"DM-001-LPP\">Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702]</span></td><td>60 jours</td><td>1</td><td>0</td><td><span id=\"DM-001-ALD\">Non</span></td><td><span id=\"DM-001-ATMP\">Non</span></td><td><span id=\"DM-001-prev\">Non</span></td><td><span id=\"DM-001-non-remb\">Non</span></td></tr></tbody></table></div>",
+          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Dispositif médical</th><th>Durée de location LPP</th><th>Nombre de conditionnements</th><th>Nombre de renouvellements</th><th>En rapport ALD</th><th>En rapport AT/MP</th><th>En rapport Prévention</th><th>Non remboursable</th></tr></thead><tbody>  <!-- Dispositif 1 --><tr><td id=\"DM-001\">Lit médical, lit + 135 kg, forfait de livraison du lit et accessoires [LPP 1215702] </td><td>60 jours</td><td>1</td><td>0</td><td><span id=\"DM-001-ALD\">Non</span></td><td><span id=\"DM-001-ATMP\">Non</span></td><td><span id=\"DM-001-prev\">Non</span></td><td><span id=\"DM-001-non-remb\">Non</span></td></tr></tbody></table></div>",
           "entry" : [{
             "supply" : {
               "classCode" : "SPLY",
@@ -2177,7 +2196,7 @@
               }],
               "text" : {
                 "reference" : {
-                  "value" : "#DM-001"
+                  "value" : "#DM001"
                 }
               },
               "effectiveTime" : [{
@@ -2214,7 +2233,7 @@
                       "displayName" : "LITS MÉDICAUX",
                       "translation" : [{
                         "code" : "1215702",
-                        "codeSystem" : "1.2.250.1.215.300.4",
+                        "codeSystem" : "1.2.250.1.215.200.2.1",
                         "codeSystemName" : "LPP",
                         "displayName" : "lit médical, lit + 135 kg, forfait de livraison du lit et accessoires",
                         "originalText" : {
@@ -2247,7 +2266,7 @@
                   "code" : {
                     "code" : "MED-574",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec une ALD"
                   },
                   "text" : {
@@ -2286,7 +2305,7 @@
                   "code" : {
                     "code" : "GEN-180",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec un accident du travail ou une maladie professionnelle"
                   },
                   "text" : {
@@ -2325,7 +2344,7 @@
                   "code" : {
                     "code" : "GEN-295",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "En rapport avec la prévention"
                   },
                   "text" : {
@@ -2364,7 +2383,7 @@
                   "code" : {
                     "code" : "GEN-181",
                     "codeSystem" : "1.2.250.1.213.1.1.4.322",
-                    "codeSystemName" : "TerminologieCISIS",
+                    "codeSystemName" : "terminologie-cisis-fr",
                     "displayName" : "Non remboursable"
                   },
                   "text" : {
@@ -2618,7 +2637,7 @@
               "value" : [{
                 "code" : "77386006",
                 "codeSystem" : "2.16.840.1.113883.6.96",
-                "codeSystemName" : "SNOMED_CT",
+                "codeSystemName" : "SNOMED CT",
                 "displayName" : "grossesse en cours"
               }]
             }
@@ -2642,7 +2661,7 @@
           "title" : {
             "xmlText" : "Copie du document"
           },
-          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><span id=\"titre-copie-pdf\">Copie PDF du document</span></td></tr><tr><td><img src=\"copie-pdf\"/></td></tr></tbody></table></div>",
+          "text" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><tbody><tr><td><img src=\"doc-1\"/></td></tr></tbody></table></div>",
           "entry" : [{
             "organizer" : {
               "classCode" : "CLUSTER",
@@ -2686,7 +2705,7 @@
                   },
                   "text" : {
                     "reference" : {
-                      "value" : "#titre-copie-pdf"
+                      "value" : "#doc1"
                     }
                   },
                   "statusCode" : {
@@ -2705,7 +2724,7 @@
               },
               {
                 "observationMedia" : {
-                  "ID" : "copie-pdf",
+                  "ID" : "doc-1",
                   "classCode" : "OBS",
                   "moodCode" : "EVN",
                   "value" : {
