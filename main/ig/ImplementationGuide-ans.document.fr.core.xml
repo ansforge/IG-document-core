@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-08-01T08:11:50+00:00"/>
+  <date value="2025-08-22T10:16:53+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -43,17 +43,17 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.3.0-ballot"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_cda_uv_core">
     <uri value="http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core"/>
     <packageId value="hl7.cda.uv.core"/>
     <version value="2.0.0-sd"/>
   </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.4.0"/>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
@@ -90,6 +90,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -308,6 +316,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueCode value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
@@ -508,6 +524,28 @@
     <grouping id="Mapping">
       <name value="Concept Maps"/>
     </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-glycemie-mole"/>
+      </reference>
+      <name value="BIO-CR-BIO_2024.01_Glycemie_mole"/>
+      <description value="Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"/>
+      </reference>
+      <name value="BIO-CR-BIO_2024.01_Microbiologie_V1"/>
+      <description value="Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
@@ -930,6 +968,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eDISP-MED-2024.01"/>
+      </reference>
+      <name value="eDISP-MED-2024.01"/>
+      <description value="eDispensation de médicaments (eDISP-MED-2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoNonStruct"/>
+      </reference>
+      <name value="eP-MED-DM_2024.01_PosoNonStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoStruct"/>
+      </reference>
+      <name value="eP-MED-DM_2024.01_PosoStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -1133,17 +1204,6 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/fr-doc-vs-savoir-faire-profession-medecin"/>
-      </reference>
-      <name value="Fr ValueSet Savoir-faire Profession Medecin"/>
-      <description value="Savoir-faire pour la profession 10 (Médecin)"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
         <reference value="ValueSet/fr-doc-vs-savoir-faire-profession-pharmacien"/>
       </reference>
       <name value="Fr ValueSet Savoir-faire Profession Pharmacien"/>
@@ -1205,6 +1265,28 @@
       <description value="Ce profil correspond au type de données HumanName utilisé dans le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Data Type FHIR"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/IPS-FR-2024.01"/>
+      </reference>
+      <name value="IPS-FR"/>
+      <description value="Volet International Patient Summary - France (IPS-FR_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/LDL-SES-2022.01"/>
+      </reference>
+      <name value="LDL-SES_2022.01"/>
+      <description value="Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1822,6 +1904,14 @@
         </page>
       </page>
     </page>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="false"/>
+    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>

@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-08-01T08:11:50+00:00",
+  "date" : "2025-08-22T10:16:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -47,7 +47,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.3.0-ballot"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_cda_uv_core",
@@ -56,10 +56,10 @@
     "version" : "2.0.0-sd"
   },
   {
-    "id" : "ans_fr_nos",
-    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
-    "packageId" : "ans.fr.nos",
-    "version" : "1.4.0"
+    "id" : "ans_fr_terminologies",
+    "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
+    "packageId" : "ans.fr.terminologies",
+    "version" : "1.2.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -106,6 +106,17 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
       },
       {
         "url" : "value",
@@ -406,6 +417,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueCode" : "excludettl"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueCode" : "autoload-resources"
       },
       {
@@ -681,6 +703,30 @@
       "name" : "Concept Maps"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
+      },
+      "name" : "BIO-CR-BIO_2024.01_Glycemie_mole",
+      "description" : "Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
+      },
+      "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
+      "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
@@ -1138,6 +1184,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eDISP-MED-2024.01"
+      },
+      "name" : "eDISP-MED-2024.01",
+      "description" : "eDispensation de médicaments (eDISP-MED-2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
+      },
+      "name" : "eP-MED-DM_2024.01_PosoNonStruct",
+      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
+      },
+      "name" : "eP-MED-DM_2024.01_PosoStruct",
+      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1358,18 +1440,6 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-medecin"
-      },
-      "name" : "Fr ValueSet Savoir-faire Profession Medecin",
-      "description" : "Savoir-faire pour la profession 10 (Médecin)",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
         "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-pharmacien"
       },
       "name" : "Fr ValueSet Savoir-faire Profession Pharmacien",
@@ -1436,6 +1506,30 @@
       "description" : "Ce profil correspond au type de données HumanName utilisé dans le document.",
       "exampleBoolean" : false,
       "groupingId" : "Data Type FHIR"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/IPS-FR-2024.01"
+      },
+      "name" : "IPS-FR",
+      "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/LDL-SES-2022.01"
+      },
+      "name" : "LDL-SES_2022.01",
+      "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
     },
     {
       "extension" : [{
@@ -2112,6 +2206,14 @@
       }]
     },
     "parameter" : [{
+      "code" : "generate-turtle",
+      "value" : "false"
+    },
+    {
+      "code" : "generate-json",
+      "value" : "false"
+    },
+    {
       "code" : "path-resource",
       "value" : "input/capabilities"
     },
