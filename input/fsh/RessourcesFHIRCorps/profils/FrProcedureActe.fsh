@@ -1,13 +1,12 @@
 // StructureDefinition for Acte
-Profile: FrActe
+Profile: FrProcedureActe
 Parent: Procedure
 Id: fr-acte
-Title: "Procedure - Fr Acte"
-Description: "FrActe est un profil utilisé pour décrire un acte planifié ou réalisé."
+Title: "Procedure - Fr Procedure Acte"
+Description: "FrProcedureActe est un profil utilisé pour décrire un acte planifié ou réalisé."
 
-
-* text 1..1 MS
-* text ^short = "Description narrative"
+// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
+//* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..* MS
 * identifier ^short = "Identifiant"
@@ -31,14 +30,14 @@ utiliser le code='C25218', displayName='Intervention', codeSystem='2.16.840.1.11
 ou
 jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes chirurgicaux"
 
-* subject 1..1 MS
+* subject MS
 * subject only Reference(FrPatientINSDocument or FrPatientDocument)
 * subject ^short = "Patient concerné"
 
 * performed[x] MS
 * performed[x] ^short = "Date de l'acte"
 
-* extension contains FrPriorityExtension named priority 0..1
+* extension contains FrPriorityExtension named priority 0..1 MS
 
 * bodySite MS
 * bodySite ^slicing.discriminator.type = #pattern
@@ -47,7 +46,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 
 * bodySite contains
     ApproachSiteCode 0..* and
-    TargetSiteCode 0..*
+    TargetSiteCode 0..* 
 
 * bodySite[ApproachSiteCode] ^short = "Voie d’abord"
 * bodySite[ApproachSiteCode] only CodeableConcept
@@ -58,7 +57,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 * bodySite[TargetSiteCode] ^short = "Localisation anatomique"
 * bodySite[TargetSiteCode] only CodeableConcept
 * bodySite[TargetSiteCode].coding 1..1
-* bodySite[TargetSiteCode].coding.system = "http://snomed.info/sct"
+* bodySite[TargetSiteCode].coding.system = "http://snomed.info/sct" 
 
 * performer ^slicing.discriminator.type = #pattern
 * performer ^slicing.discriminator.path = "actor"
@@ -69,39 +68,30 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
     Intervenant 0..* and
     Informateur 0..* and
     Participant 0..*
-
+//performer
 * performer[Intervenant].actor only Reference(FrPractitionerRoleDocument)
+//informant
 * performer[Informateur].actor only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+//participant
 * performer[Participant].actor only Reference(FrPractitionerRoleDocument or FrDeviceDocument)
 
 * recorder MS
 * recorder ^short = "Auteur"
-* recorder only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* recorder only Reference(FrPractitionerRoleDocument or FrPractitionerDocument)
 
 //Réference interne à un DM (REFR)
 * usedReference MS
-* reasonReference ^short = "Réference interne à un DM"
-* usedReference only Reference(FrDeviceDocument)
+* usedReference ^short = "Réference interne à un DM"
+* usedReference only Reference(Device)
 // Motif de l'acte à créer (RSON)
 * reasonReference MS
 * reasonReference ^short = "Motif de l'acte"
-* reasonReference only Reference(FrSimpleObservation)
+* reasonReference only Reference(FrCondition)
 
 // Circonstances ayant décidé de l'acte à créer (COMP)
 * encounter MS
 * encounter ^short = "Circonstances ayant décidé de l'acte"
 * encounter only Reference(FrEncounter)
-/* 
-// supportingInfo utilisé dans la R5 de FHIR
-* supportingInfo MS
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "resolve()"
-* supportingInfo ^slicing.rules = #open
-* supportingInfo contains
-    Difficulte 0..1 and
-    Scores 0..*
-* supportingInfo[Difficulte] only Reference(Observation)
-* supportingInfo[Scores] only Reference(Observation) */
 
 // Difficulté Observation / Scores Observation
 * extension contains
@@ -109,4 +99,3 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
     FrScoreExtension named scores 0..* MS
 * extension[difficulte] ^short = "Référence vers une Observation représentant la difficulté"
 * extension[scores] ^short = "Références vers des Observations de scores associés" 
-

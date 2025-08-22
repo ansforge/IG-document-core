@@ -1,15 +1,11 @@
-// StructureDefinition for Simple observation
-Profile: FrSimpleObservation
-Parent: Observation
-Id: fr-simple-observation
-Title: "Observation - Fr Simple Observation"
-Description: "Observation utilisée pour représenter le motif d'un acte médical (ex: douleur, pathologie, antécédent déclencheur)."
+RuleSet: FrRuleSetSimpleObservation
+// Contraintes pour Observation - Fr Simple Observation
 
-// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
-//* ^extension[$imposeProfile].valueCanonical = Canonical()
+//* ^extension[$imposeProfile].valueCanonical = Canonical(FrSimpleObservation)
 
 * identifier 1..1 MS
 * identifier ^short = "Identifiant de l'observation"
+
 * status MS
 * status = #final
 * status ^short = "Statut de l'observation"
@@ -28,7 +24,13 @@ Description: "Observation utilisée pour représenter le motif d'un acte médica
 * value[x] ^short = "Valeur de l'observation"
 
 * performer 0..* MS
-* performer only Reference(FrPractitionerRoleDocument or FrOrganizationDocument or FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument)
+* performer only Reference(
+    FrPractitionerRoleDocument 
+    or FrOrganizationDocument 
+    or FrPractitionerRoleDocument 
+    or FrPatientINSDocument 
+    or FrPatientDocument
+)
 * performer ^short = "Auteur de l’observation"
 
 * interpretation 0..1 MS

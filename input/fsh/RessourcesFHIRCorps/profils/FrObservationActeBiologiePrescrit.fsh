@@ -1,14 +1,17 @@
-Profile: FrActeBiologiePrescrit
+Profile: FrObservationActeBiologiePrescrit
 Parent: Observation
 Id: fr-acte-biologie-prescrit
-Title: "Observation - Fr Acte biologie prescrit"
-Description: "FrActeBiologiePrescrit est un profil utilisé pour  décrire une ligne de prescription d’examen de biologie médicale."
+Title: "Observation - Fr Observation Acte biologie prescrit"
+Description: "FrObservationActeBiologiePrescrit est un profil utilisé pour  décrire une ligne de prescription d’examen de biologie médicale."
+
+// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
+//* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..1 MS
 * identifier ^short = "Identifiant de l'observation"
 
 * basedOn ^short = "Instructions au patient"
-* basedOn only Reference(FrPatientInstructions)
+//* basedOn only Reference(FrObservationPatientInstructions)
 
 * code MS
 * code ^short = """
@@ -42,7 +45,7 @@ Valeur fixée à nullFlavor='UNK'
 * method 0..1 MS
 * method ^short = "Méthode"
 
-
+* bodySite MS
 * bodySite ^short = "Localisation anatomique"
 * bodySite.coding 1..1
 * bodySite.coding.system = "http://snomed.info/sct"
@@ -64,23 +67,29 @@ Par exemple : dosage de médicament, précision à apporter sur la molécule / t
     EnRapportAvecAccidentTravail 1..1 and
     EnRapportAvecLaPrevention 1..1 and
     NonRemboursable 1..1 and
-    HorsNomenclature 1..1 and
-    Prelevement 1..1 and
-    PatientInstructions 0..1
+    HorsNomenclature 1..1
 
 * hasMember[Contexte] only Reference(FrObservationContexte)
 * hasMember[Contexte] ^short = "Contexte de l'acte de biologie prescrit"
+
 * hasMember[Renouvellement] only Reference(FrObservationRenouvellement)
 * hasMember[Renouvellement] ^short = "Renouvellement de l'acte"
-* hasMember[EnRapportAvecALD] only Reference(FrEnRapportAvecALD)
+
+* hasMember[EnRapportAvecALD] only Reference(FrObservationEnRapportAvecALD)
 * hasMember[EnRapportAvecALD] ^short = "En rapport avec ALD"
-* hasMember[EnRapportAvecAccidentTravail] only Reference(FrEnRapportAvecAccidentTravail)
-* hasMember[EnRapportAvecAccidentTravail] ^short = "En rapport avec la prévention"
-* hasMember[EnRapportAvecLaPrevention] only Reference(FrEnRapportAvecLaPrevention)
+
+* hasMember[EnRapportAvecAccidentTravail] only Reference(FrObservationEnRapportAvecAccidentTravail)
+* hasMember[EnRapportAvecAccidentTravail] ^short = "En rapport avec accident de travail"
+
+* hasMember[EnRapportAvecLaPrevention] only Reference(FrObservationEnRapportAvecLaPrevention)
+* hasMember[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
+
+* hasMember[NonRemboursable] ^short = "Non Remboursable"
+* hasMember[NonRemboursable] only Reference(FrObservationNonRemboursable)
+
 * hasMember[HorsNomenclature] ^short = "Hors Nomenclature"
-* hasMember[HorsNomenclature] only Reference(FrHorsNomenclature)
+* hasMember[HorsNomenclature] only Reference(FrObservationHorsNomenclature)
 
-
-* specimen only Reference(FrPrelevement)
-* specimen MS
+* specimen only Reference(FrSpecimen)
+* specimen 1..1 MS
 

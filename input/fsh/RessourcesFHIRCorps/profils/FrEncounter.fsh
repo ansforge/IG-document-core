@@ -1,45 +1,67 @@
 Profile: FrEncounter
 Parent: Encounter
 Id: fr-encounter
-Title: "Encounter - FR Encounter Profile"
+Title: "Encounter - Fr Encounter"
 Description: "FrEncounter est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir"
+
+// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
+//* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..* MS
 * identifier ^short = "Identifiant de la rencontre"
-* identifier ^definition = "Identifier(s) by which this encounter is known.Cet élément est multiévalué (pour ne pas bloquer les implémentations, car il arrive sur le terrain qu'il y ait plusieurs id pour une même admission, mais cette situation est considérée comme une anomalie)"
 
 * class MS
 * class ^short = "Type de rencontre :
 Valeur généralement issue du JDV_HL7_ActEncounterCode_CISIS (2.16.840.1.113883.1.11.13955) mais un autre JDV peut être utilisé pour certains documents spécifiques (dans ce cas, le JDV est fourni dans le volet concerné)."
 
+* status MS
+* status ^short = """
+Si rencontre réalisée : status='finished'
+Si rencontre planifiée : status='planned'
+Si rencontre prévue mais non confirmée : status='proposed'
+"""
+
+* period MS
+* period ^short = "Date début et fin de la rencontre
+Si la rencontre est réalisée ou planifiée : la date est obligatoire.
+Si la rencontre est prévue non confirmée : la date est facultative."
+
+* priority MS
+* priority ^short = """
+Si la rencontre est prévue non confirmée et qu'une confirmation est attendue :
+code='CS', display='callback for scheduling'
+Sinon, l'élément 'priority' n'est pas fourni.
+"""
+
 * subject only Reference(FrPatientINSDocument or FrPatientDocument)
 
-* participant ^short = "Liste des personnes impliquées dans la rencontre"
-* participant.individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
-//* appointment only Reference(FRCoreAppointmentProfile)
-* period 1..
-* account ..1
-* hospitalization.preAdmissionIdentifier ^short = "Pre-admission identifier | Identifiant de pré-admission"
+* participant MS
+* participant ^slicing.discriminator.type = #value
+* participant ^slicing.discriminator.path = "type.coding.code"
+* participant ^slicing.rules = #open
 
-* hospitalization.preAdmissionIdentifier.type 1..
-* hospitalization.preAdmissionIdentifier.type from FRCoreValueSetEncounterIdentifierType (extensible)
-* hospitalization.preAdmissionIdentifier.type ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* hospitalization.preAdmissionIdentifier.type ^binding.extension[=].valueString = "IdentifierType"
-* hospitalization.preAdmissionIdentifier.type ^binding.extension[+].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"
-* hospitalization.preAdmissionIdentifier.type ^binding.extension[=].valueBoolean = true
-* hospitalization.preAdmissionIdentifier.system 1..
-* hospitalization.preAdmissionIdentifier.system = "1.2.250.1.71.4.2.2+.n°FINESS" (exactly)
-* hospitalization.preAdmissionIdentifier.system ^definition = "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.\r\nLe namespace est défini à partir de la racine d'identification (gérée par l'ANS) de l'organisation où a lieu la rencontre , concaténée avec par exemple le FINESS de l'établissent (ou FINEJ ou SIRET ou SIREN), cf annexe française des types de données HL7 en France"
-* hospitalization.preAdmissionIdentifier.value 1..
-* hospitalization.preAdmissionIdentifier.assigner only Reference(FRCoreOrganizationProfile)
-* hospitalization.origin only Reference(FRCoreLocationProfile or FRCoreOrganizationProfile)
-* hospitalization.reAdmission ^short = "the resaon of re-admission of this hospitalization encounter | Raison de la ré-admission du patient."
-* hospitalization.destination only Reference(FRCoreLocationProfile or FRCoreOrganizationProfile)
-* hospitalization.dischargeDisposition from FRCoreValueSetEncounterDischargeDisposition (example)
-* location.location only Reference(FRCoreLocationProfile)
 
-* location.physicalType from FRCoreValueSetLocationPhysicalType (example)
+* participant contains author 0..* and informant 0..* and executant 0..*
 
-* serviceProvider only Reference(FRCoreOrganizationProfile)
+* participant[executant] ^short = "Exécutant : 
+Si la rencontre est réalisée :
+ au moins 1 exécutant doit être renseigné.
+Sinon : l'exécutant n'est pas obligatoire mais peut être renseigné"
+* participant[executant].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
+* participant[executant].type.coding.code = #PRF
+* participant[executant].type.coding.display = "Performer"
+* participant[executant].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
 
-* partOf only Reference(FRCoreEncounterProfile)
+* participant[author].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
+* participant[author].type.coding.code = #AUT
+* participant[author].type.coding.display = "Author"
+* participant[author].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
+
+* participant[informant].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
+* participant[informant].type.coding.code = #INF
+* participant[informant].type.coding.display = "Informant"
+* participant[informant].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
+
+* location 0..1 MS
+* location ^short = "Lieu d'exécution"
+* location.location only Reference(FrLocationDocument)

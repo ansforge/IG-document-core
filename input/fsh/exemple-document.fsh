@@ -244,7 +244,7 @@ Description: "Patient"
 * contact[0].relationship[RelationType].coding[0].system = "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"
 * contact[0].relationship[RelationType].coding[0].code = #SIS
 * contact[0].relationship[RelationType].coding[0].display = "Soeur"
-* contact[0].relationship[Role].coding[0].system = "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role"
+* contact[0].relationship[Role].coding[0].system = "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role"
 * contact[0].relationship[Role].coding[0].code = #ECON
 * contact[0].relationship[Role].coding[0].display = "Personne à prévenir en cas d'urgence"
 

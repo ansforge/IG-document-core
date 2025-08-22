@@ -62,4 +62,3 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 * performer only fr-core-performer
 * performer ^short = "Exécutant de l’évènement documenté : performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. En effet, si le document de santé est déposé dans un système d'information partagé alors l'élément documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/standardIndustryClassCode alimente la métadonnée XDS practiceSettingCode obligatoire."
 * performer.typeCode = #PRF
-* obeys PerformerRequire

@@ -31,12 +31,3 @@ Alias: $TRE_R97-DroitExerciceCompl = https://mos.esante.gouv.fr/NOS/TRE_R97-Droi
 Alias: $TRE_G05-SousSectionTableauCNOP = https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP
 Alias: $TRE_R85-RolePriseCharge = https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge
 Alias: $TRE_R04-TypeSavoirFaire = https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire
-
-// Code Systems
-Alias: $LNC = http://loinc.org
-Alias: $SCT = http://snomed.info/sct
-Alias: $system = http://example.org/system
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-
-//Value Sets
-Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope

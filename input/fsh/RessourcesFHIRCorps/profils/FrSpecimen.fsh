@@ -1,9 +1,12 @@
 // StructureDefinition for Prelevement
-Profile: FrPrelevement
+Profile: FrSpecimen
 Parent: Specimen
-Id: fr-prelevement
-Title: "Specimen - Fr Prelevement"
-Description: "FrPrelevement est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
+Id: fr-specimen
+Title: "Specimen - Fr Specimen"
+Description: "FrSpecimen est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
+
+// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
+//* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..1 MS
 * identifier ^short = """
@@ -12,7 +15,11 @@ L'un des identifiants est visible sur l'échantillon matériel (par exemple en c
 """
 
 * type 1..1 MS
-* type ^short = "Produit utilisé"
+* type ^short = "Échantillon prélevé (Si specimen provenant du corps du patient)"
+
+// à discuter avec Nicolas RISS si on doit mettre le JDV en required extensible ou bien preferred
+// Si specimen provenant du corps du patient :
+* type from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis (preferred)
 
 * status MS
 * status ^short = "Statut du specimen"
@@ -28,17 +35,24 @@ displayName='Prélèvement'
 codeSystem='2.16.840.1.113883.6.1'
 codeSystemName='LOINC'
 """
-* processing.procedure.coding.code  1..1 MS
+* processing.procedure.coding.code 1..1 MS
 
+* processing.additive ^short = "Produit utilisé"
+* processing.additive MS
+* processing.additive only Reference(Substance)
+
+// Si specimen extérieur au patient :
 * subject 1..1 MS
-* subject only Reference(FrPatientINSDocument or FrPatientDocument or FrDeviceDocument or FrLocationDocument or Group or Substance)
-* subject ^short = "Source de l’échantillon. Il s'agit d’un patient, d’un lieu, d’un échantillon d’une substance ou d’un dispositif"
+* subject only Reference(Substance)
+* subject ^short = "Source de l’échantillon(substance) : Si specimen extérieur au patient"
 
 * receivedTime MS
 * receivedTime ^short = "Date de réception de l'échantillon"
 
+* parent only Reference(FrSpecimen)
+
 * collection.collector only Reference(FrPractitionerRoleDocument or FrPractitionerDocument)
-* collection.collector ^short = "Qui a réceptionné le spécimen"
+* collection.collector ^short = "Organisation prélevante"
 * collection.collected[x] MS
 * collection.collected[x] ^short = """
 Date du prélèvement :
@@ -50,3 +64,8 @@ La date et heure de prélèvement doit être renseignée si elle est connue. En 
 * collection.bodySite only CodeableConcept
 * collection.bodySite.coding 1..1
 * collection.bodySite.coding.system = "http://snomed.info/sct"
+
+* container 0..* MS
+* container ^short = "Dispositif utilisé"
+* container.type 1..1 MS
+* container.type ^short = "Code du dispositif"
