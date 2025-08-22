@@ -2181,7 +2181,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "fr-composition-document","Composition.date","Composition.date","","","",1,1,"Y","","Y","dateTime {[]} {[]}
 ","Date de création","The composition editing time, when the composition was last logically changed by the author.","The Last Modified Date on the composition may be after the date of the document was attested without being changed.","dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging.","","","","","","","",,,,,"",,,,"Composition.date",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"fr-composition-document","Composition.author","Composition.author","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document]]}
+"fr-composition-document","Composition.author","Composition.author","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document]]}
 ","Auteur du document","author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs.","","Identifies who is responsible for the content.","","","","","","","",,,,,"",,,,"Composition.author",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-composition-document","Composition.author.id","Composition.author.id","","","",0,1,"","","","string {[]} {[]}
@@ -2521,7 +2521,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-assigned-author","AssignedAuthor.templateId","AssignedAuthor.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-assigned-author","AssignedAuthor.classCode","AssignedAuthor.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-assigned-author","AssignedAuthor.classCode","AssignedAuthor.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedAuthor.classCode",0,1,"",""
 "fr-core-assigned-author","AssignedAuthor.id","AssignedAuthor.id","","","",1,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant de l’auteur : 
@@ -2598,7 +2598,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-assigned-custodian","AssignedCustodian.templateId","AssignedCustodian.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-assigned-custodian","AssignedCustodian.classCode","AssignedCustodian.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-assigned-custodian","AssignedCustodian.classCode","AssignedCustodian.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedCustodian.classCode",0,1,"",""
 "fr-core-assigned-custodian","AssignedCustodian.representedCustodianOrganization","AssignedCustodian.representedCustodianOrganization","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CustodianOrganization {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-represented-custodian-organization]]} {[]}
 ","Structure","","","","","","","","","","",,,,,"",,,,"AssignedCustodian.representedCustodianOrganization",1,1,"",""
@@ -2622,7 +2622,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-assigned-entity","AssignedEntity.templateId","AssignedEntity.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-assigned-entity","AssignedEntity.classCode","AssignedEntity.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-assigned-entity","AssignedEntity.classCode","AssignedEntity.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedEntity.classCode",0,1,"",""
 "fr-core-assigned-entity","AssignedEntity.id","AssignedEntity.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du responsable","","","","","","","","","","",,,,,"",,,,"AssignedEntity.id",1,*,"",""
@@ -2756,7 +2756,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-authenticator","Authenticator.templateId","Authenticator.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-authenticator","Authenticator.typeCode","Authenticator.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-authenticator","Authenticator.typeCode","Authenticator.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""AUTHEN""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"Authenticator.typeCode",0,1,"",""
 "fr-core-authenticator","Authenticator.time","Authenticator.time","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/TS {[]} {[]}
 ","Date/heure de l'attestation de validité","","","","","","","","","","",,,,,"",,,,"Authenticator.time",1,1,"",""
@@ -2813,9 +2813,9 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-author","Author.templateId","Author.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-author","Author.typeCode","Author.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-author","Author.typeCode","Author.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""AUT""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"Author.typeCode",0,1,"",""
-"fr-core-author","Author.contextControlCode","Author.contextControlCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-author","Author.contextControlCode","Author.contextControlCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""OP""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAContextControl","",,,,"Author.contextControlCode",0,1,"",""
 "fr-core-author","Author.functionCode","Author.functionCode","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CE {[]} {[]}
 ","Rôle fonctionnel de l'auteur. A utiliser uniquement si l'auteur est un professionnel.","","","","","","","","","","",,,,,"",,,,"Author.functionCode",0,1,"",""
@@ -2869,7 +2869,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-authoring-device","AuthoringDevice.templateId","AuthoringDevice.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-authoring-device","AuthoringDevice.classCode","AuthoringDevice.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-authoring-device","AuthoringDevice.classCode","AuthoringDevice.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""DEV""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassDevice","",,,,"AuthoringDevice.classCode",0,1,"",""
 "fr-core-authoring-device","AuthoringDevice.determinerCode","AuthoringDevice.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"AuthoringDevice.determinerCode",0,1,"",""
@@ -2901,7 +2901,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-authorization","Authorization.templateId","Authorization.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-authorization","Authorization.typeCode","Authorization.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-authorization","Authorization.typeCode","Authorization.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""AUTH""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-ActRelationshipAuthorizedBy","",,,,"Authorization.typeCode",0,1,"",""
 "fr-core-authorization","Authorization.consent","Authorization.consent","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/Consent {[]} {[]}
 ","Consentement","","","","","","","","","","",,,,,"",,,,"Authorization.consent",1,1,"",""
@@ -2956,7 +2956,8 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 "fr-core-authorization","Authorization.consent.statusCode.translation","Authorization.consent.statusCode.translation","","","Translation",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CD {[]} {[]}
 ","","A set of other concept descriptors that translate this concept descriptor into other code systems.","","","","","","","","","",,,,,"",,,,"CD.translation",0,*,"",""
 "fr-core-clinical-document","ClinicalDocument","ClinicalDocument","","","",1,1,"","","","null {[]} {[]}
-","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","PerformerRequire:performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal {performer.exists()}
+"
 "fr-core-clinical-document","ClinicalDocument.nullFlavor","ClinicalDocument.nullFlavor","","","Exceptional Value Detail",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "fr-core-clinical-document","ClinicalDocument.classCode","ClinicalDocument.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
@@ -3049,7 +3050,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-component-of","ComponentOf.templateId","ComponentOf.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-component-of","ComponentOf.typeCode","ComponentOf.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-component-of","ComponentOf.typeCode","ComponentOf.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""COMP""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-ActRelationshipHasComponent","",,,,"ComponentOf.typeCode",0,1,"",""
 "fr-core-component-of","ComponentOf.encompassingEncounter","ComponentOf.encompassingEncounter","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/EncompassingEncounter {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-encompassing-encounter]]} {[]}
 ","Prise en charge","","","","","","","","","","",,,,,"",,,,"ComponentOf.encompassingEncounter",1,1,"",""
@@ -3073,7 +3074,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-custodian","Custodian.templateId","Custodian.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-custodian","Custodian.typeCode","Custodian.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-custodian","Custodian.typeCode","Custodian.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""CST""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"Custodian.typeCode",0,1,"",""
 "fr-core-custodian","Custodian.assignedCustodian","Custodian.assignedCustodian","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/AssignedCustodian {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-custodian]]} {[]}
 ","Structure","","","","","","","","","","",,,,,"",,,,"Custodian.assignedCustodian",1,1,"",""
@@ -3097,7 +3098,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-data-enterer","DataEnterer.templateId","DataEnterer.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-data-enterer","DataEnterer.typeCode","DataEnterer.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-data-enterer","DataEnterer.typeCode","DataEnterer.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ENT""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"DataEnterer.typeCode",0,1,"",""
 "fr-core-data-enterer","DataEnterer.contextControlCode","DataEnterer.contextControlCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""OP""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAContextControl","",,,,"DataEnterer.contextControlCode",0,1,"",""
@@ -3129,7 +3130,7 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-documentation-of","DocumentationOf.templateId","DocumentationOf.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-documentation-of","DocumentationOf.typeCode","DocumentationOf.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-documentation-of","DocumentationOf.typeCode","DocumentationOf.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""DOC""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActRelationshipType","",,,,"DocumentationOf.typeCode",0,1,"",""
 "fr-core-documentation-of","DocumentationOf.serviceEvent","DocumentationOf.serviceEvent","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-service-event]]} {[]}
 ","Évènement documenté","","","","","","","","","","",,,,,"",,,,"DocumentationOf.serviceEvent",1,1,"",""
@@ -3153,9 +3154,9 @@ cmp-2:A section can only have an emptyReason if it is empty {emptyReason.empty()
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-encompassing-encounter","EncompassingEncounter.templateId","EncompassingEncounter.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-encompassing-encounter","EncompassingEncounter.classCode","EncompassingEncounter.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-encompassing-encounter","EncompassingEncounter.classCode","EncompassingEncounter.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ENC""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActClass","",,,,"EncompassingEncounter.classCode",0,1,"",""
-"fr-core-encompassing-encounter","EncompassingEncounter.moodCode","EncompassingEncounter.moodCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-encompassing-encounter","EncompassingEncounter.moodCode","EncompassingEncounter.moodCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""EVN""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActMood","",,,,"EncompassingEncounter.moodCode",0,1,"",""
 "fr-core-encompassing-encounter","EncompassingEncounter.id","EncompassingEncounter.id","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant de la prise en charge","","","","","","","","","","",,,,,"",,,,"EncompassingEncounter.id",0,*,"",""
@@ -3289,7 +3290,7 @@ When the location is an organization, this is indicated by the presence of a sco
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-health-care-facility","HealthCareFacility.templateId","HealthCareFacility.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-health-care-facility","HealthCareFacility.classCode","HealthCareFacility.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-health-care-facility","HealthCareFacility.classCode","HealthCareFacility.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""SDLOC""/>","","","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassServiceDeliveryLocation","",,,,"HealthCareFacility.classCode",0,1,"",""
 "fr-core-health-care-facility","HealthCareFacility.id","HealthCareFacility.id","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"HealthCareFacility.id",0,*,"",""
@@ -3365,7 +3366,7 @@ When the location is an organization, this is indicated by the presence of a sco
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-inFulfillment-of","InFulfillmentOf.templateId","InFulfillmentOf.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-inFulfillment-of","InFulfillmentOf.typeCode","InFulfillmentOf.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-inFulfillment-of","InFulfillmentOf.typeCode","InFulfillmentOf.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""FLFS""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-ActRelationshipFulfills|2.0.0","",,,,"InFulfillmentOf.typeCode",0,1,"",""
 "fr-core-inFulfillment-of","InFulfillmentOf.order","InFulfillmentOf.order","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/Order {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-order]]} {[]}
 ","Prescription","","","","","","","","","","",,,,,"",,,,"InFulfillmentOf.order",1,1,"",""
@@ -3390,7 +3391,7 @@ When the location is an organization, this is indicated by the presence of a sco
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-informant","Informant.templateId","Informant.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-informant","Informant.typeCode","Informant.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-informant","Informant.typeCode","Informant.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INF""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"Informant.typeCode",0,1,"",""
 "fr-core-informant","Informant.contextControlCode","Informant.contextControlCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""OP""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAContextControl","",,,,"Informant.contextControlCode",0,1,"",""
@@ -3421,7 +3422,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-information-recipient","InformationRecipient.templateId","InformationRecipient.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-information-recipient","InformationRecipient.typeCode","InformationRecipient.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-information-recipient","InformationRecipient.typeCode","InformationRecipient.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""PRCP""/>","","","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-xInformationRecipient|2.0.0","",,,,"InformationRecipient.typeCode",0,1,"",""
 "fr-core-information-recipient","InformationRecipient.intendedRecipient","InformationRecipient.intendedRecipient","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IntendedRecipient {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-intended-recipient]]} {[]}
 ","Destinataire prévu du document.","","","","","","","","","","",,,,,"",,,,"InformationRecipient.intendedRecipient",1,1,"",""
@@ -3445,7 +3446,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-intended-recipient","IntendedRecipient.templateId","IntendedRecipient.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-intended-recipient","IntendedRecipient.classCode","IntendedRecipient.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-intended-recipient","IntendedRecipient.classCode","IntendedRecipient.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAInformationRecipientRole","",,,,"IntendedRecipient.classCode",0,1,"",""
 "fr-core-intended-recipient","IntendedRecipient.id","IntendedRecipient.id","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du destinataire prévu.","","","","","","","","","","",,,,,"",,,,"IntendedRecipient.id",0,*,"",""
@@ -3487,7 +3488,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-intended-recipient","IntendedRecipient.receivedOrganization.templateId","IntendedRecipient.receivedOrganization.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-intended-recipient","IntendedRecipient.receivedOrganization.classCode","IntendedRecipient.receivedOrganization.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-intended-recipient","IntendedRecipient.receivedOrganization.classCode","IntendedRecipient.receivedOrganization.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ORG""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassOrganization","",,,,"Organization.classCode",0,1,"",""
 "fr-core-intended-recipient","IntendedRecipient.receivedOrganization.determinerCode","IntendedRecipient.receivedOrganization.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"Organization.determinerCode",0,1,"",""
@@ -3570,7 +3571,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-legal-authenticator","LegalAuthenticator.templateId","LegalAuthenticator.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-legal-authenticator","LegalAuthenticator.typeCode","LegalAuthenticator.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-legal-authenticator","LegalAuthenticator.typeCode","LegalAuthenticator.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""LA""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"LegalAuthenticator.typeCode",0,1,"",""
 "fr-core-legal-authenticator","LegalAuthenticator.contextControlCode","LegalAuthenticator.contextControlCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""OP""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAContextControl","",,,,"LegalAuthenticator.contextControlCode",0,1,"",""
@@ -3627,7 +3628,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-legal-authenticator","LegalAuthenticator.assignedEntity.templateId","LegalAuthenticator.assignedEntity.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-legal-authenticator","LegalAuthenticator.assignedEntity.classCode","LegalAuthenticator.assignedEntity.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-legal-authenticator","LegalAuthenticator.assignedEntity.classCode","LegalAuthenticator.assignedEntity.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedEntity.classCode",0,1,"",""
 "fr-core-legal-authenticator","LegalAuthenticator.assignedEntity.id","LegalAuthenticator.assignedEntity.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du responsable","","","","","","","","","","",,,,,"",,,,"AssignedEntity.id",1,*,"",""
@@ -3691,29 +3692,29 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","","","","","","","","","","",,,,,"",,,,"AssignedEntity.sdtcPatient",0,1,"",""
 "fr-core-legal-authenticator","LegalAuthenticator.assignedEntity.sdtcPatient.id","LegalAuthenticator.assignedEntity.sdtcPatient.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"AssignedEntity.sdtcPatient.id",1,1,"",""
-"fr-core-name","fr-core-name","fr-core-name","","","",1,*,"","","","null {[]} {[]}
-","CDA - name","L'élément de l'en-tête du CDA name correspond au nom d'une personne physique.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","pn-no-ls:No PN name part may have a qualifier of LS. {(item.delimiter | item.family | item.given | item.prefix | item.suffix).where(qualifier.where($this = 'LS').exists()).empty()}
+"fr-core-name","PN","PN","","","",1,*,"","","","null {[]} {[]}
+","Base for all types and resources","A name for a person. A sequence of name parts, such as given name or family name, prefix, suffix, etc. Examples for person name values are ""Jim Bob Walton, Jr."", ""Adam Everyman"", etc. A person name may be as simple as a character string or may consist of several person name parts, such as, ""Jim"", ""Bob"", ""Walton"", and ""Jr."". PN differs from EN because the qualifier type cannot include LS (Legal Status).","","","","","","","","","",,,,,"",,,,"Base",0,*,"","pn-no-ls:No PN name part may have a qualifier of LS. {(item.delimiter | item.family | item.given | item.prefix | item.suffix).where(qualifier.where($this = 'LS').exists()).empty()}
 "
-"fr-core-name","fr-core-name.nullFlavor","fr-core-name.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-name","PN.nullFlavor","PN.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
-"fr-core-name","fr-core-name.use","fr-core-name.use","","","Use Code",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-name","PN.use","PN.use","","","Use Code",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","A set of codes advising a system or user which name in a set of like names to select for a given purpose. A name without specific use code might be a default name useful for any purpose, but a name with a specific use code would be preferred for that respective purpose","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAEntityNameUse","",,,,"EN.use",0,*,"",""
-"fr-core-name","fr-core-name.item","fr-core-name.item","","","",1,*,"","","","http://hl7.org/fhir/StructureDefinition/Base {[]} {[]}
+"fr-core-name","PN.item","PN.item","","","",1,*,"","","","http://hl7.org/fhir/StructureDefinition/Base {[]} {[]}
 ","","A series of items that constitute the name.","","","","","","","","","",,,,,"",,,,"EN.item",0,*,"","EN-1:Can only have only one of the possible item elements in each choice {(delimiter | family | given | prefix | suffix | xmlText).count() = 1}
 "
-"fr-core-name","fr-core-name.item.delimiter","fr-core-name.item.delimiter","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+"fr-core-name","PN.item.delimiter","PN.item.delimiter","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"EN.item.delimiter",0,*,"",""
-"fr-core-name","fr-core-name.item.family","fr-core-name.item.family","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"",""
-"fr-core-name","fr-core-name.item.given","fr-core-name.item.given","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
-"fr-core-name","fr-core-name.item.prefix","fr-core-name.item.prefix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.prefix",0,*,"",""
-"fr-core-name","fr-core-name.item.suffix","fr-core-name.item.suffix","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.suffix",0,*,"",""
-"fr-core-name","fr-core-name.item.xmlText","fr-core-name.item.xmlText","","","",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
+"fr-core-name","PN.item.family","PN.item.family","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Nom de famille ou nom d’usage","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"",""
+"fr-core-name","PN.item.given","PN.item.given","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Prénom","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
+"fr-core-name","PN.item.prefix","PN.item.prefix","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Civilité","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS","",,,,"EN.item.prefix",0,*,"",""
+"fr-core-name","PN.item.suffix","PN.item.suffix","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
+","Titre","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS","",,,,"EN.item.suffix",0,*,"",""
+"fr-core-name","PN.item.xmlText","PN.item.xmlText","","","",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
 ","Allows for mixed text content","","This element is represented in XML as textual content. The actual name ""xmlText"" will not appear in a CDA instance.","","","","","","","","",,,,,"",,,,"EN.item.xmlText",0,1,"",""
-"fr-core-name","fr-core-name.validTime","fr-core-name.validTime","","","Valid Time",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
+"fr-core-name","PN.validTime","PN.validTime","","","Valid Time",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
 ","","An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.","","","","","","","","","",,,,,"",,,,"EN.validTime",0,1,"",""
 "fr-core-order","Order","Order","","","",1,1,"","","","null {[]} {[]}
 ","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
@@ -3735,9 +3736,9 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-order","Order.templateId","Order.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-order","Order.classCode","Order.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-order","Order.classCode","Order.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ACT""/>","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActClass","",,,,"Order.classCode",0,1,"",""
-"fr-core-order","Order.moodCode","Order.moodCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-order","Order.moodCode","Order.moodCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""RQO""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActMoodIntent","",,,,"Order.moodCode",0,1,"",""
 "fr-core-order","Order.id","Order.id","","","",1,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant de la prescription, obligatoire pour :
@@ -3887,7 +3888,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-patient-role","PatientRole.templateId","PatientRole.templateId","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-patient-role","PatientRole.classCode","PatientRole.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-patient-role","PatientRole.classCode","PatientRole.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""PAT""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassRelationshipFormal","",,,,"PatientRole.classCode",0,1,"",""
 "fr-core-patient-role","PatientRole.id","PatientRole.id","","","",1,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du patient.","","","","","","","","","","",,,,,"",,,,"PatientRole.id",1,*,"",""
@@ -4038,7 +4039,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-performer","Performer1.assignedEntity.templateId","Performer1.assignedEntity.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-performer","Performer1.assignedEntity.classCode","Performer1.assignedEntity.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-performer","Performer1.assignedEntity.classCode","Performer1.assignedEntity.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedEntity.classCode",0,1,"",""
 "fr-core-performer","Performer1.assignedEntity.id","Performer1.assignedEntity.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du responsable","","","","","","","","","","",,,,,"",,,,"AssignedEntity.id",1,*,"",""
@@ -4103,7 +4104,8 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 "fr-core-performer","Performer1.assignedEntity.sdtcPatient.id","Performer1.assignedEntity.sdtcPatient.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"AssignedEntity.sdtcPatient.id",1,1,"",""
 "fr-core-person","Person","Person","","","",1,1,"","","","null {[]} {[]}
-","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","PersonFamilyRequired:L'élément name.family pour un professionnel doit être présent au moins une fois pour identifier la personne. {name.item.family.count() = 1}
+"
 "fr-core-person","Person.nullFlavor","Person.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "fr-core-person","Person.realmCode","Person.realmCode","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CS {[]} {[]}
@@ -4122,33 +4124,12 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-person","Person.templateId","Person.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-person","Person.classCode","Person.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-person","Person.classCode","Person.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""PSN""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassLivingSubject","",,,,"Person.classCode",0,1,"",""
 "fr-core-person","Person.determinerCode","Person.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"Person.determinerCode",0,1,"",""
-"fr-core-person","Person.name","Person.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name {[]} {[]}
+"fr-core-person","Person.name","Person.name","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/PN {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name]]} {[]}
 ","Identité de la personne physique responsable","","","","","","","","","","",,,,,"",,,,"Person.name",0,*,"",""
-"fr-core-person","Person.name.nullFlavor","Person.name.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
-","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
-"fr-core-person","Person.name.use","Person.name.use","","","Use Code",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
-","","A set of codes advising a system or user which name in a set of like names to select for a given purpose. A name without specific use code might be a default name useful for any purpose, but a name with a specific use code would be preferred for that respective purpose","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAEntityNameUse","",,,,"EN.use",0,*,"",""
-"fr-core-person","Person.name.item","Person.name.item","","","",1,*,"","","","http://hl7.org/fhir/StructureDefinition/Base {[]} {[]}
-","","A series of items that constitute the name.","","","","","","","","","",,,,,"",,,,"EN.item",0,*,"","EN-1:Can only have only one of the possible item elements in each choice {(delimiter | family | given | prefix | suffix | xmlText).count() = 1}
-"
-"fr-core-person","Person.name.item.delimiter","Person.name.item.delimiter","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","","","","","","","","","","","",,,,,"",,,,"EN.item.delimiter",0,*,"",""
-"fr-core-person","Person.name.item.family","Person.name.item.family","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","Nom de famille ou nom d’usage","","","","","","","","","","",,,,,"",,,,"EN.item.family",0,*,"",""
-"fr-core-person","Person.name.item.given","Person.name.item.given","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","Prénom","","","","","","","","","","",,,,,"",,,,"EN.item.given",0,*,"",""
-"fr-core-person","Person.name.item.prefix","Person.name.item.prefix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","Civilité","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS","",,,,"EN.item.prefix",0,*,"",""
-"fr-core-person","Person.name.item.suffix","Person.name.item.suffix","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ENXP {[]} {[]}
-","Titre","","","","","","","","","","",,"required","","https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS","",,,,"EN.item.suffix",0,*,"",""
-"fr-core-person","Person.name.item.xmlText","Person.name.item.xmlText","","","",0,0,"","","","string {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/st-simple]]} {[]}
-","Allows for mixed text content","","This element is represented in XML as textual content. The actual name ""xmlText"" will not appear in a CDA instance.","","","","","","","","",,,,,"",,,,"EN.item.xmlText",0,1,"",""
-"fr-core-person","Person.name.validTime","Person.name.validTime","","","Valid Time",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/IVL-TS {[]} {[]}
-","","An interval of time specifying the time during which the name is or was used for the entity. This accomodates the fact that people change names for people, places and things.","","","","","","","","","",,,,,"",,,,"EN.validTime",0,1,"",""
 "fr-core-person","Person.sdtcDesc","Person.sdtcDesc","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/ED {[]} {[]}
 ","","The desc extension allows multimedia depictions of patients, healthcare providers, or other individuals to be included in a CDA document.","","","","","","","","","",,,,,"",,,,"Person.sdtcDesc",0,1,"",""
 "fr-core-person","Person.sdtcAsPatientRelationship","Person.sdtcAsPatientRelationship","","","",0,0,"","","","http://hl7.org/cda/stds/core/StructureDefinition/InfrastructureRoot {[]} {[]}
@@ -4197,7 +4178,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-record-target","RecordTarget.templateId","RecordTarget.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-record-target","RecordTarget.typeCode","RecordTarget.typeCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-record-target","RecordTarget.typeCode","RecordTarget.typeCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""RCT""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAParticipationType","",,,,"RecordTarget.typeCode",0,1,"",""
 "fr-core-record-target","RecordTarget.contextControlCode","RecordTarget.contextControlCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""OP""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAContextControl","",,,,"RecordTarget.contextControlCode",0,1,"",""
@@ -4303,7 +4284,7 @@ Ou : Aidant du patient/usager. ou : Personne aidée","","","","","","","","","",
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-represented-custodian-organization","CustodianOrganization.templateId","CustodianOrganization.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-represented-custodian-organization","CustodianOrganization.classCode","CustodianOrganization.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-represented-custodian-organization","CustodianOrganization.classCode","CustodianOrganization.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ORG""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassOrganization","",,,,"CustodianOrganization.classCode",0,1,"",""
 "fr-core-represented-custodian-organization","CustodianOrganization.determinerCode","CustodianOrganization.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"CustodianOrganization.determinerCode",0,1,"",""
@@ -4352,7 +4333,7 @@ valeur fixée à '1.2.250.1.213.4.1'","A unique identifier that guarantees the g
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-represented-organization","Organization.templateId","Organization.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-represented-organization","Organization.classCode","Organization.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-represented-organization","Organization.classCode","Organization.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ORG""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityClassOrganization","",,,,"Organization.classCode",0,1,"",""
 "fr-core-represented-organization","Organization.determinerCode","Organization.determinerCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""INSTANCE""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-EntityDeterminer","",,,,"Organization.determinerCode",0,1,"",""
@@ -4406,8 +4387,7 @@ valeur fixée à '1.2.250.1.213.4.1'","A unique identifier that guarantees the g
 "fr-core-represented-organization","Organization.asOrganizationPartOf","Organization.asOrganizationPartOf","","","",0,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/OrganizationPartOf {[]} {[]}
 ","","","","","","","","","","","",,,,,"",,,,"Organization.asOrganizationPartOf",0,1,"",""
 "fr-core-service-event","ServiceEvent","ServiceEvent","","","",1,1,"","","","null {[]} {[]}
-","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","PerformerRequire:performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal {performer.exists()}
-"
+","Base for all types and resources","Defines the basic properties of every data value. This is an abstract type, meaning that no value can be just a data value without belonging to any concrete type. Every concrete type is a specialization of this general abstract DataValue type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-core-service-event","ServiceEvent.nullFlavor","ServiceEvent.nullFlavor","","","Exceptional Value Detail",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","If a value is an exceptional value (NULL-value), this specifies in what way and why proper information is missing.","","","","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDANullFlavor","",,,,"ANY.nullFlavor",0,1,"",""
 "fr-core-service-event","ServiceEvent.realmCode","ServiceEvent.realmCode","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/CS {[]} {[]}
@@ -4426,9 +4406,9 @@ valeur fixée à '1.2.250.1.213.4.1'","A unique identifier that guarantees the g
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-service-event","ServiceEvent.templateId","ServiceEvent.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-service-event","ServiceEvent.classCode","ServiceEvent.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-service-event","ServiceEvent.classCode","ServiceEvent.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ACT""/>","","","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActClass","",,,,"ServiceEvent.classCode",0,1,"",""
-"fr-core-service-event","ServiceEvent.moodCode","ServiceEvent.moodCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-service-event","ServiceEvent.moodCode","ServiceEvent.moodCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""EVN""/>","","","","",,"required","","http://hl7.org/cda/stds/core/ValueSet/CDAActMood","",,,,"ServiceEvent.moodCode",0,1,"",""
 "fr-core-service-event","ServiceEvent.id","ServiceEvent.id","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant de l’évènement documenté : Obligatoire pour :
@@ -4559,7 +4539,7 @@ Précisée à la minute minimum avec précision du décalage par rapport au temp
 ","","A character string as a unique identifier within the scope of the identifier root.","","","","","","","","","",,,,,"",,,,"II.extension",0,1,"",""
 "fr-core-service-event","ServiceEvent.performer.assignedEntity.templateId","ServiceEvent.performer.assignedEntity.templateId","","","",0,*,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","","When valued in an instance, this attribute signals the imposition of a set of template-defined constraints. The value of this attribute provides a unique identifier for the templates in question","","","","","","","","","",,,,,"",,,,"InfrastructureRoot.templateId",0,*,"",""
-"fr-core-service-event","ServiceEvent.performer.assignedEntity.classCode","ServiceEvent.performer.assignedEntity.classCode","","","",0,0,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
+"fr-core-service-event","ServiceEvent.performer.assignedEntity.classCode","ServiceEvent.performer.assignedEntity.classCode","","","",0,1,"","","","code {[CanonicalType[http://hl7.org/cda/stds/core/StructureDefinition/cs-simple]]} {[]}
 ","","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""ASSIGNED""/>","","","","",,"required","","http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity","",,,,"AssignedEntity.classCode",0,1,"",""
 "fr-core-service-event","ServiceEvent.performer.assignedEntity.id","ServiceEvent.performer.assignedEntity.id","","","",1,1,"","","","http://hl7.org/cda/stds/core/StructureDefinition/II {[]} {[]}
 ","Identifiant du responsable","","","","","","","","","","",,,,,"",,,,"AssignedEntity.id",1,*,"",""
@@ -9003,10 +8983,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","[Donnée restreinte] : Date de fin de l’activité (dateFinActivite).","The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"per-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"fr-practitionerRole-document","PractitionerRole.practitioner","PractitionerRole.practitioner","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document]]}
+"fr-practitionerRole-document","PractitionerRole.practitioner","PractitionerRole.practitioner","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document]]}
 ","Référence permettant de lier l’exercice professionnel et la situation d'exercice à un professionnel (Practitioner).","Practitioner that is able to provide the defined services for the organization.","","","","","","","","","",,,,,"",,,,"PractitionerRole.practitioner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"fr-practitionerRole-document","PractitionerRole.organization","PractitionerRole.organization","","","",0,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document]]}
+"fr-practitionerRole-document","PractitionerRole.organization","PractitionerRole.organization","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document]]}
 ","Référence vers l’EG ou EJ de rattachement de la situation d’exercice (Organization)","The organization where the Practitioner performs the roles associated.","","","","","","","","","",,,,,"",,,,"PractitionerRole.organization",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-practitionerRole-document","PractitionerRole.code","PractitionerRole.code","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
