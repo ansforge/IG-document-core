@@ -27,15 +27,6 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   ans.fhir.fr.annuaire: 1.1.0
   hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
-    hl7.cda.uv.core: 2.0.0-sd
-    ans.fr.nos: 1.4.0
-    hl7.fhir.fr.core: 2.1.0
-    hl7.fhir.extensions.r5: 4.0.1
-    ans.fhir.fr.annuaire: 1.1.0
-    hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
-    hl7.fhir.eu.eps: current
-    hl7.fhir.uv.ips: current   
-    hl7.fhir.eu.laboratory: 0.1.1
   
 pages:
     index.md:
@@ -188,27 +179,6 @@ groups:
       - StructureDefinition/fr-location-document
       - StructureDefinition/fr-related-person-document
 
-      - StructureDefinition/fr-document-reference
-      - StructureDefinition/fr-accidents-transfusionnels
-      - StructureDefinition/fr-acte
-      - StructureDefinition/fr-acte-biologie-prescrit
-      - StructureDefinition/fr-encounter
-      - StructureDefinition/fr-simple-observation
-      - StructureDefinition/fr-hors-nomenclature
-      - StructureDefinition/fr-non-remboursable
-      - StructureDefinition/fr-en-rapport-avec-ald
-      - StructureDefinition/fr-en-rapport-avec-accident-travail
-      - StructureDefinition/fr-en-rapport-avec-la-prevention
-      - StructureDefinition/fr-specimen
-      - StructureDefinition/fr-allergie-intolerance
-      - StructureDefinition/fr-condition
-      - StructureDefinition/fr-family-member-history
-      - StructureDefinition/fr-administration-de-derives-du-sang
-      - StructureDefinition/fr-observation-contexte
-      - StructureDefinition/fr-observation-difficulte
-      - StructureDefinition/fr-observation-renouvellement
-      - StructureDefinition/fr-batterie-examen-biologie-medicale
-
   Data Type FHIR:
     name: Data Type Profiles 
     resources:
@@ -243,10 +213,46 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
       - mappingAdministrativeGender
-      - CdaToFhirProcedureStatus
       
-  Exemple de document FHIR:
-    name: Exemple de BIO-CR-BIO
-    description: Exemples pour montrer un document clinique.
-    resources:
-      - clinical-document-bundle-BIO-CR-BIO
+resources:
+  Binary/BIO-CR-BIO-2024.01-glycemie-mole:
+    name: BIO-CR-BIO_2024.01_Glycemie_mole
+    description: Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+
+  Binary/BIO-CR-BIO-2024.01-Microbiologie-V1:
+    name: BIO-CR-BIO_2024.01_Microbiologie_V1
+    description: Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eDISP-MED-2024.01:
+    name: eDISP-MED-2024.01
+    description: eDispensation de médicaments (eDISP-MED-2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eP-MED-DM-2024.01-PosoStruct:
+    name: eP-MED-DM_2024.01_PosoStruct
+    description: ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eP-MED-DM-2024.01-PosoNonStruct:
+    name: eP-MED-DM_2024.01_PosoNonStruct
+    description: ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+#   Binary/IMG-CR-IMG-2024.01:
+#     name: IMG-CR-IMG
+#     description: Compte-rendu d'examen d'imagerie médicale (IMG_CR_IMG_2024.01)
+#     exampleBoolean: true
+#     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/IPS-FR-2024.01:
+    name: IPS-FR
+    description: Volet International Patient Summary - France (IPS-FR_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/LDL-SES-2022.01:
+    name: LDL-SES_2022.01
+    description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
