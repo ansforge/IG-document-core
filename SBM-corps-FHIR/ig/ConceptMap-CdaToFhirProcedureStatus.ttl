@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document/core/ConceptMap/CdaToFhirProcedureStatus> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CdaToFhirProcedureStatus"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts CdaToFhirProcedureStatus</b></p><a name=\"CdaToFhirProcedureStatus\"> </a><a name=\"hcCdaToFhirProcedureStatus\"> </a><p>Mapping from <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-ActStatus.html\">http://terminology.hl7.org/CodeSystem/v3-ActStatus</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-event-status.html\">http://hl7.org/fhir/event-status</a></p><br/><p><b>Group 1 </b>Mapping from <code>http://hl7.org/v3/ActStatus</code> to <code>http://hl7.org/fhir/procedure-status</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>completed</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>completed</td></tr><tr><td>active</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>in-progress</td></tr><tr><td>cancelled</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>not-done</td></tr><tr><td>aborted</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>stopped</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://example.org/ConceptMap/cda-to-fhir-procedure-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:title [ fhir:v "Mapping CDA status vers FHIR Procedure.status"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-08-25T15:49:50+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Correspondance entre les statuts CDA (statusCode) et FHIR (Procedure.status)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:source [
+     a fhir:uri ;
+     fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActStatus"^^xsd:anyURI
+  ] ; # 
+  fhir:target [
+     a fhir:uri ;
+     fhir:v "http://hl7.org/fhir/event-status"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.org/v3/ActStatus"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.org/fhir/procedure-status"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "completed" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "completed" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "active" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "in-progress" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cancelled" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "not-done" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "aborted" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "stopped" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="clinical-document-bundle-BIO-CR-BIO"/>
+  <meta>
+    <lastUpdated value="2025-05-07T13:28:17.000+00:00"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:1.2.250.1.213.1.1.1.55.12345.12"/>
+    <value value="2024.01"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2025-05-07T13:28:17.000+00:00"/>
+  <entry>
+    <fullUrl value="https://exemple.com/Composition/clinical-document-composition-BIO-CR-BIO"/>
+    <resource>
+      <Composition>
+        <id value="clinical-document-composition-BIO-CR-BIO"/>
+        <meta>
+          <lastUpdated value="2024-05-07T13:28:17.000+00:00"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/BIO-CR-BIO/2024.01"/>
+        </meta>
+        <language value="fr"/>
+        <text>
+          <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Composition_clinical-document-composition-BIO-CR-BIO"> </a><p><b>Compte rendu d'examens biologiques</b></p><p><b>Practitioner</b>: Dr. Marcel CAMPARINI</p><p><b>status</b>: final</p><p><b>patient</b>: DOMINIQUE MARIE-LOUISE PAT-TROIS</p><p><b>author</b>: DR Marcel CAMPARINI / Laboratoire des charmes</p><p><b>Personne à prévenir en cas d'urgence</b>: Sophie NESSI</p><p><b>Personne de confiance</b>: Sophie NESSI</p><p><b>Organisation chargée de la conservation du document</b>: Laboratoire des charmes</p><p><b>Responsable du document</b>: Dr. Marcel CAMPARINI</p><p><b>Biologiste ayant validé des résultats présents sur le compte rendu</b>: Dr. Jean DE SANTS / Dr. Thierry DIAZ</p><p><b>encounter</b>: ambulatoire (hors établissement), 2025-05-03 - 2024-05-07</p><p><b>confidentiality</b>: N</p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version">
+          <valueString value="1"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="INF"/>
+                <display value="informant"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="party">
+            <valueReference>
+              <reference value="Patient/patientExemple"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension">
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="REF"/>
+                <display value="Référent / Prescripteur"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="time">
+            <valuePeriod>
+              <start value="2025-06-12T10:00:00+01:00"/>
+              <end value="2025-06-12T14:00:00+01:00"/>
+            </valuePeriod>
+          </extension>
+          <extension url="party">
+            <valueReference>
+              <reference value="PractitionerRole/practitioner-role-exemple4"/>
+            </valueReference>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension">
+          <valueReference>
+            <reference value="ServiceRequest/orderExemple"/>
+          </valueReference>
+        </extension>
+        <identifier>
+          <value value="1.2.250.1.213.1.1.1.55.2024.5"/>
+        </identifier>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11502-2"/>
+            <display value="Compte rendu du laboratoire [Recherche] Patient ; Document"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patientExemple"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounterExemple"/>
+        </encounter>
+        <date value="2025-06-12T14:00:00+01:00"/>
+        <author>
+          <extension url="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time">
+            <valueDateTime value="2024-01-04T13:45:00+01:00"/>
+          </extension>
+          <reference value="PractitionerRole/practitioner-role-exemple1"/>
+          <display value="DR Marcel CAMPARINI"/>
+        </author>
+        <title value="Compte rendu d'examens biologiques"/>
+        <confidentiality value="N"/>
+        <attester>
+          <mode value="legal"/>
+          <time value="2024-01-04T15:00:00+01:00"/>
+          <party>
+            <reference value="PractitionerRole/practitioner-role-exemple1"/>
+          </party>
+        </attester>
+        <attester>
+          <mode value="professional"/>
+          <time value="2024-01-04T14:30:00+01:00"/>
+          <party>
+            <reference value="PractitionerRole/practitioner-role-exemple2"/>
+          </party>
+        </attester>
+        <attester>
+          <mode value="professional"/>
+          <time value="2024-01-04T14:30:00+01:00"/>
+          <party>
+            <reference value="PractitionerRole/practitioner-role-exemple3"/>
+          </party>
+        </attester>
+        <custodian>
+          <reference value="Organization/custodianOrganization"/>
+          <display value="Laboratoire des charmes"/>
+        </custodian>
+        <relatesTo>
+          <code value="appends"/>
+          <targetIdentifier>
+            <type>
+              <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                <code value="ACSN"/>
+                <display value="Accession ID"/>
+              </coding>
+            </type>
+            <system value="urn:oid:1.2.250.1.213.1.1.9"/>
+            <value value="202411111123"/>
+          </targetIdentifier>
+        </relatesTo>
+        <event>
+          <extension url="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event">
+            <valueReference>
+              <reference value="PractitionerRole/practitioner-role-exemple1"/>
+            </valueReference>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="18719-5"/>
+              <display value="Biochimie"/>
+            </coding>
+          </code>
+          <period>
+            <start value="2024-06-12T08:00:00+01:00"/>
+            <end value="2024-06-12T09:00:00+01:00"/>
+          </period>
+        </event>
+        <event>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="18725-2"/>
+              <display value="Microbiologie"/>
+            </coding>
+          </code>
+        </event>
+        <section>
+          <title value="PDF"/>
+          <entry>
+            <reference value="StructureDefinition/Binary"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Patient/patientExemple"/>
+    <resource>
+      <Patient>
+        <id value="patientExemple"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_patientExemple"> </a><p class="res-header-id"><b>Narratif généré : Patient patientExemple</b></p><a name="patientExemple"> </a><a name="hcpatientExemple"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-patient-ins-document.html">Fr Patient INS Document</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">DOMINIQUE MARIE-LOUISE PAT-TROIS  Female, Date de Naissance :1979-03-28 ( NIR définitif (use: official, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Statut connu du patient">Décédé :</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Noms alternatifs (voir plus bas)">Nom alternatif :</td><td colspan="3">DOMINIQUE MARIE-LOUISE PAT-TROIS (Official)</td></tr><tr><td style="background-color: #f3f5da" title="Moyens de contacter le Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 01 23 24 67 89(Home)</li><li>ph: 01 99 88 77 66(Work)</li><li>ph: 06 80 55 34 33(Mobile)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient contact">Contact :</td><td colspan="3"><ul><li>Sophie NESSI</li><li>Relations :<span title="Codes:{https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS SIS}">Soeur</span>, <span title="Codes:{https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role ECON}">Personne à prévenir en cas d'urgence</span></li><li>12 rue des Lilas, 75012 Paris</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient contact">Contact :</td><td colspan="3"><ul><li>Sophie NESSI</li><li>Relations :<span title="Codes:{https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS SIS}">Soeur</span>, <span title="Codes:{https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role NOK}">Personne de confiance</span></li><li>12 rue des Lilas, 75012 Paris</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements."><a href="http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html">Patient Birth Place</a></td><td colspan="3">Ambléon </td></tr><tr><td style="background-color: #f3f5da" title="Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection">FR Core Patient Ident Reliability Extension:</td><td colspan="3"><ul><li>identityStatus: <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI">FR Core CodeSystem v2-0445 VALI</a>: Identité validée</li></ul></td></tr></table></div>
+        </text>
+        <extension url="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability">
+          <extension url="identityStatus">
+            <valueCoding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"/>
+              <code value="VALI"/>
+            </valueCoding>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthPlace">
+          <valueAddress>
+            <extension url="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code">
+              <valueCoding>
+                <system value="https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune"/>
+                <code value="01006"/>
+              </valueCoding>
+            </extension>
+            <city value="Ambléon"/>
+          </valueAddress>
+        </extension>
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="INS-NIR"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.213.1.4.8"/>
+          <value value="123456789012244"/>
+        </identifier>
+        <name>
+          <extension url="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name">
+            <valueString value="DOMINIQUE MARIE-LOUISE"/>
+          </extension>
+          <use value="official"/>
+          <family value="PAT-TROIS"/>
+          <given value="DOMINIQUE MARIE-LOUISE"/>
+        </name>
+        <name>
+          <use value="usual"/>
+          <family value="PAT-TROIS"/>
+          <given value="DOMINIQUE MARIE-LOUISE"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 23 24 67 89"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 99 88 77 66"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="06 80 55 34 33"/>
+          <use value="mobile"/>
+          <rank value="2"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1979-03-28"/>
+        <deceasedBoolean value="false"/>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"/>
+              <code value="SIS"/>
+              <display value="Soeur"/>
+            </coding>
+          </relationship>
+          <relationship>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role"/>
+              <code value="ECON"/>
+              <display value="Personne à prévenir en cas d'urgence"/>
+            </coding>
+          </relationship>
+          <name>
+            <text value="Sophie NESSI"/>
+            <family value="NESSI"/>
+          </name>
+          <address>
+            <text value="12 rue des Lilas, 75012 Paris"/>
+          </address>
+        </contact>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"/>
+              <code value="SIS"/>
+              <display value="Soeur"/>
+            </coding>
+          </relationship>
+          <relationship>
+            <coding>
+              <system value="https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role"/>
+              <code value="NOK"/>
+              <display value="Personne de confiance"/>
+            </coding>
+          </relationship>
+          <name>
+            <text value="Sophie NESSI"/>
+            <family value="NESSI"/>
+          </name>
+          <address>
+            <text value="12 rue des Lilas, 75012 Paris"/>
+          </address>
+        </contact>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/PractitionerRole/practitioner-role-exemple1"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitioner-role-exemple1"/>
+        <meta>
+          <lastUpdated value="2013-05-05T16:13:03Z"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitioner-role-exemple1"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole practitioner-role-exemple1</b></p><a name="practitioner-role-exemple1"> </a><a name="hcpractitioner-role-exemple1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitionerRole-document.html">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple1">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/practitioner-exemple1"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organizationExemple"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="doctor"/>
+          </coding>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Practitioner/practitioner-exemple1"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-exemple1"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-exemple1"> </a><p class="res-header-id"><b>Narratif généré : Praticien practitioner-exemple1</b></p><a name="practitioner-exemple1"> </a><a name="hcpractitioner-exemple1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitioner-document.html">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Marcel CAMPARINI </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}">Biologie médicale (SM)</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="RPPS"/>
+              <display value="Numéro du professionnel de santé"/>
+            </coding>
+          </type>
+          <system value="https://rpps.esante.gouv.fr"/>
+          <value value="801234534765"/>
+        </identifier>
+        <name>
+          <family value="CAMPARINI"/>
+          <given value="Marcel"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 74 58 96 07"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <address>
+          <text value="8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT"/>
+        </address>
+        <qualification>
+          <code>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+              <code value="SM03"/>
+              <display value="Biologie médicale (SM)"/>
+            </coding>
+          </code>
+          <issuer>
+            <reference value="Organization/organizationExemple"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/PractitionerRole/practitioner-role-exemple2"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitioner-role-exemple2"/>
+        <meta>
+          <lastUpdated value="2013-05-05T16:13:03Z"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitioner-role-exemple2"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole practitioner-role-exemple2</b></p><a name="practitioner-role-exemple2"> </a><a name="hcpractitioner-role-exemple2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitionerRole-document.html">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple2">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/practitioner-exemple2"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organizationExemple"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="doctor"/>
+          </coding>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Practitioner/practitioner-exemple2"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-exemple2"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-exemple2"> </a><p class="res-header-id"><b>Narratif généré : Praticien practitioner-exemple2</b></p><a name="practitioner-exemple2"> </a><a name="hcpractitioner-exemple2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitioner-document.html">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234567898</p><p><b>name</b>: Jean DE SANTS </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}">Biologie médicale (SM)</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="RPPS"/>
+              <display value="Numéro du professionnel de santé"/>
+            </coding>
+          </type>
+          <system value="https://rpps.esante.gouv.fr"/>
+          <value value="801234567898"/>
+        </identifier>
+        <name>
+          <family value="DE SANTS"/>
+          <given value="Jean"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 74 58 96 07"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <address>
+          <text value="8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT"/>
+        </address>
+        <qualification>
+          <code>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+              <code value="SM03"/>
+              <display value="Biologie médicale (SM)"/>
+            </coding>
+          </code>
+          <issuer>
+            <reference value="Organization/organizationExemple"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/PractitionerRole/practitioner-role-exemple3"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitioner-role-exemple3"/>
+        <meta>
+          <lastUpdated value="2013-05-05T16:13:03Z"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitioner-role-exemple3"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole practitioner-role-exemple3</b></p><a name="practitioner-role-exemple3"> </a><a name="hcpractitioner-role-exemple3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitionerRole-document.html">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple3">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/practitioner-exemple3"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organizationExemple"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="doctor"/>
+          </coding>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Practitioner/practitioner-exemple3"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-exemple3"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-exemple3"> </a><p class="res-header-id"><b>Narratif généré : Praticien practitioner-exemple3</b></p><a name="practitioner-exemple3"> </a><a name="hcpractitioner-exemple3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitioner-document.html">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234567898</p><p><b>name</b>: Thierry DIAZ </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}">Biologie médicale (SM)</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="RPPS"/>
+              <display value="Numéro du professionnel de santé"/>
+            </coding>
+          </type>
+          <system value="https://rpps.esante.gouv.fr"/>
+          <value value="801234567898"/>
+        </identifier>
+        <name>
+          <family value="DIAZ"/>
+          <given value="Thierry"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 74 58 96 07"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <address>
+          <text value="8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT"/>
+        </address>
+        <qualification>
+          <code>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+              <code value="SM03"/>
+              <display value="Biologie médicale (SM)"/>
+            </coding>
+          </code>
+          <issuer>
+            <reference value="Organization/organizationExemple"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/PractitionerRole/practitioner-role-exemple4"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitioner-role-exemple4"/>
+        <meta>
+          <lastUpdated value="2013-05-05T16:13:03Z"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitioner-role-exemple4"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole practitioner-role-exemple4</b></p><a name="practitioner-role-exemple4"> </a><a name="hcpractitioner-role-exemple4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitionerRole-document.html">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple4">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/practitioner-exemple4"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organizationExemple"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="doctor"/>
+          </coding>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Practitioner/practitioner-exemple4"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-exemple4"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-exemple4"> </a><p class="res-header-id"><b>Narratif généré : Praticien practitioner-exemple4</b></p><a name="practitioner-exemple4"> </a><a name="hcpractitioner-exemple4"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitioner-document.html">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Eva BLUE </p><p><b>telecom</b>: ph: 01 47 15 00 00(Work)</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM19}">Gynécologie médicale (SM)</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple2">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="RPPS"/>
+              <display value="Numéro du professionnel de santé"/>
+            </coding>
+          </type>
+          <system value="https://rpps.esante.gouv.fr"/>
+          <value value="801234534765"/>
+        </identifier>
+        <name>
+          <family value="BLUE"/>
+          <given value="Eva"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 47 15 00 00"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <qualification>
+          <code>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+              <code value="SM19"/>
+              <display value="Gynécologie médicale (SM)"/>
+            </coding>
+          </code>
+          <issuer>
+            <reference value="Organization/organizationExemple2"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/PractitionerRole/practitioner-role-exemple5"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitioner-role-exemple5"/>
+        <meta>
+          <lastUpdated value="2013-05-05T16:13:03Z"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitioner-role-exemple5"> </a><p class="res-header-id"><b>Narratif généré : PractitionerRole practitioner-role-exemple5</b></p><a name="practitioner-role-exemple5"> </a><a name="hcpractitioner-role-exemple5"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitionerRole-document.html">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple5">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}">Nurse</span></p></div>
+        </text>
+        <practitioner>
+          <reference value="Practitioner/practitioner-exemple5"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organizationExemple"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="nurse"/>
+            <display value="Nurse"/>
+          </coding>
+        </code>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Practitioner/practitioner-exemple5"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-exemple5"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-exemple5"> </a><p class="res-header-id"><b>Narratif généré : Praticien practitioner-exemple5</b></p><a name="practitioner-exemple5"> </a><a name="hcpractitioner-exemple5"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-practitioner-document.html">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Roberta BLEEDER </p><p><b>telecom</b>: ph: 01 49 15 45 78(Work)</p><p><b>address</b>: 12 Rue du renard, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 60}">Infirmier</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple3">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="RPPS"/>
+              <display value="Numéro du professionnel de santé"/>
+            </coding>
+          </type>
+          <system value="https://rpps.esante.gouv.fr"/>
+          <value value="801234534765"/>
+        </identifier>
+        <name>
+          <family value="BLEEDER"/>
+          <given value="Roberta"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 49 15 45 78"/>
+          <use value="work"/>
+          <rank value="1"/>
+        </telecom>
+        <address>
+          <text value="12 Rue du renard, 92100 BOULOGNE-BILLANCOURT"/>
+        </address>
+        <qualification>
+          <code>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"/>
+              <code value="60"/>
+              <display value="Infirmier"/>
+            </coding>
+          </code>
+          <issuer>
+            <reference value="Organization/organizationExemple3"/>
+          </issuer>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Encounter/encounterExemple"/>
+    <resource>
+      <Encounter>
+        <id value="encounterExemple"/>
+        <meta>
+          <lastUpdated value="2024-05-07T11:28:17.000+00:00"/>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounterExemple"> </a><p class="res-header-id"><b>Narratif généré : Venue encounterExemple</b></p><a name="encounterExemple"> </a><a name="hcencounterExemple"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2024-05-07 11:28:17+0000</p><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-encounter-document.html">Fr Encounter Document</a></p></div><p><b>identifier</b>: Visit Number/801234534765</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/6.5.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode AMB</a>: ambulatoire (hors établissement)</p><p><b>type</b>: <span title="Codes:{https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type U}">ambulatoire (hors établissement)</span></p><p><b>subject</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Patient_patientExemple">DOMINIQUE MARIE-LOUISE</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType DIS}">Responsable de la sortie</span></td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#PractitionerRole_practitioner-role-exemple1">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table><p><b>period</b>: 2024-05-03 13:28:17+0000 --&gt; 2024-05-07 11:28:17+0000</p><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Location_locationExemple">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td><td>Completed</td><td>2024-05-03 13:28:17+0000 --&gt; 2024-05-07 11:28:17+0000</td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"/>
+              <code value="VN"/>
+              <display value="Visit Number"/>
+            </coding>
+          </type>
+          <system value="urn:uuid:1.2.250.1.71.4.2.1"/>
+          <value value="801234534765"/>
+        </identifier>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatoire (hors établissement)"/>
+        </class>
+        <type>
+          <coding>
+            <system value="https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type"/>
+            <code value="U"/>
+            <display value="Emergency|Caractère d’urgence aigue du problème quel que soit le service d’entrée"/>
+          </coding>
+          <text value="ambulatoire (hors établissement)"/>
+        </type>
+        <subject>
+          <reference value="Patient/patientExemple"/>
+          <display value="DOMINIQUE MARIE-LOUISE"/>
+        </subject>
+        <participant>
+          <type>
+            <coding>
+              <system value="https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"/>
+              <code value="DIS"/>
+            </coding>
+          </type>
+          <individual>
+            <reference value="PractitionerRole/practitioner-role-exemple1"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2024-05-03T13:28:17.000+00:00"/>
+          <end value="2024-05-07T11:28:17.000+00:00"/>
+        </period>
+        <location>
+          <location>
+            <reference value="Location/locationExemple"/>
+          </location>
+          <status value="completed"/>
+          <period>
+            <start value="2024-05-03T13:28:17.000+00:00"/>
+            <end value="2024-05-07T11:28:17.000+00:00"/>
+          </period>
+        </location>
+      </Encounter>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/ServiceRequest/orderExemple"/>
+    <resource>
+      <ServiceRequest>
+        <id value="orderExemple"/>
+        <meta>
+          <lastUpdated value="2024-05-07T11:28:17.000+00:00"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_orderExemple"> </a><p class="res-header-id"><b>Narratif généré : DemandeService orderExemple</b></p><a name="orderExemple"> </a><a name="hcorderExemple"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2024-05-07 11:28:17+0000</p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.213.1.1.9</code>/2024123456789</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title="Codes:">Discharge to home</span></p><p><b>subject</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Patient_patientExemple">DOMINIQUE MARIE-LOUISE</a></p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:1.2.250.1.213.1.1.9"/>
+          <value value="2024123456789"/>
+        </identifier>
+        <status value="active"/>
+        <intent value="order"/>
+        <code>
+          <text value="Discharge to home"/>
+        </code>
+        <subject>
+          <reference value="Patient/patientExemple"/>
+          <display value="DOMINIQUE MARIE-LOUISE"/>
+        </subject>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Organization/custodianOrganization"/>
+    <resource>
+      <Organization>
+        <id value="custodianOrganization"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_custodianOrganization"> </a><p class="res-header-id"><b>Narratif généré : Organisation custodianOrganization</b></p><a name="custodianOrganization"> </a><a name="hccustodianOrganization"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-organization-document.html">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Laboratoire des charmes</p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="IDNST"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="1120459876"/>
+        </identifier>
+        <name value="Laboratoire des charmes"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 74 58 96 07"/>
+          <use value="work"/>
+        </telecom>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Location/locationExemple"/>
+    <resource>
+      <Location>
+        <id value="locationExemple"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Location_locationExemple"> </a><p class="res-header-id"><b>Narratif généré : Localisation locationExemple</b></p><a name="locationExemple"> </a><a name="hclocationExemple"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-location-document.html">Fr Location Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1120459876</p><p><b>name</b>: Laboratoire des charmes</p><p><b>type</b>: <span title="Codes:{https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS SA25}, {https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 611}">Laboratoire de biologie médicale</span></p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><p><b>managingOrganization</b>: <a href="Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_custodianOrganization">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"/>
+              <code value="IDNST"/>
+              <display value="Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="1120459876"/>
+        </identifier>
+        <name value="Laboratoire des charmes"/>
+        <type>
+          <coding>
+            <system value="https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS"/>
+            <code value="SA25"/>
+            <display value="Laboratoire de biologie médicale"/>
+          </coding>
+          <coding>
+            <system value="https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"/>
+            <code value="611"/>
+            <display value="Laboratoire de Biologie Médicale"/>
+          </coding>
+        </type>
+        <address>
+          <text value="8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT"/>
+        </address>
+        <managingOrganization>
+          <reference value="Organization/custodianOrganization"/>
+        </managingOrganization>
+      </Location>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/DocumentReference/documentReferenceExample"/>
+    <resource>
+      <DocumentReference>
+        <id value="documentReferenceExample"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="DocumentReference_documentReferenceExample"> </a><p class="res-header-id"><b>Narratif généré : RéférenceDocument documentReferenceExample</b></p><a name="documentReferenceExample"> </a><a name="hcdocumentReferenceExample"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:{http://loinc.org 55107-7}">Clinical note</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style="display: none">*</td><td>application/pdf</td><td>Binary/ExampleBinary</td><td>Résultat PDF</td><td>2025-05-01 10:00:00+0100</td></tr></table></blockquote></div>
+        </text>
+        <status value="current"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="55107-7"/>
+            <display value="Clinical note"/>
+          </coding>
+        </type>
+        <content>
+          <attachment>
+            <contentType value="application/pdf"/>
+            <url value="Binary/ExampleBinary"/>
+            <title value="Résultat PDF"/>
+            <creation value="2025-05-01T10:00:00+01:00"/>
+          </attachment>
+        </content>
+      </DocumentReference>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Organization/organizationExemple"/>
+    <resource>
+      <Organization>
+        <id value="organizationExemple"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organizationExemple"> </a><p class="res-header-id"><b>Narratif généré : Organisation organizationExemple</b></p><a name="organizationExemple"> </a><a name="hcorganizationExemple"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-organization-document.html">Fr Organization Document</a></p></div><p><b>identifier</b>: <a href="http://terminology.hl7.org/5.5.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:2.16.840.1.113883.19.5</p><p><b>name</b>: Laboratoire des charmes</p></div>
+        </text>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:2.16.840.1.113883.19.5"/>
+        </identifier>
+        <name value="Laboratoire des charmes"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Organization/organizationExemple2"/>
+    <resource>
+      <Organization>
+        <id value="organizationExemple2"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organizationExemple2"> </a><p class="res-header-id"><b>Narratif généré : Organisation organizationExemple2</b></p><a name="organizationExemple2"> </a><a name="hcorganizationExemple2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-organization-document.html">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Cabinet du DR BLUE</p><p><b>telecom</b>: ph: 01 45 37 86 53(Work)</p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="IDNST"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="1120459876"/>
+        </identifier>
+        <name value="Cabinet du DR BLUE"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 45 37 86 53"/>
+          <use value="work"/>
+        </telecom>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://exemple.com/Organization/organizationExemple3"/>
+    <resource>
+      <Organization>
+        <id value="organizationExemple3"/>
+        <meta>
+          <profile value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organizationExemple3"> </a><p class="res-header-id"><b>Narratif généré : Organisation organizationExemple3</b></p><a name="organizationExemple3"> </a><a name="hcorganizationExemple3"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-fr-organization-document.html">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Cabinet d'infirmières de BB</p><p><b>telecom</b>: ph: 01 38 47 54 39(Work)</p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"/>
+              <code value="IDNST"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.250.1.71.4.2.2"/>
+          <value value="1120459876"/>
+        </identifier>
+        <name value="Cabinet d'infirmières de BB"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="01 38 47 54 39"/>
+          <use value="work"/>
+        </telecom>
+      </Organization>
+    </resource>
+  </entry>
+</Bundle>

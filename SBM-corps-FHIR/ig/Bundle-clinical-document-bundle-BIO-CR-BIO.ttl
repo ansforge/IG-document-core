@@ -1,0 +1,1068 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document/core/Bundle/clinical-document-bundle-BIO-CR-BIO> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "clinical-document-bundle-BIO-CR-BIO"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-05-07T13:28:17.000+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.213.1.1.1.55.12345.12"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2024.01" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2025-05-07T13:28:17.000+00:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Composition/clinical-document-composition-BIO-CR-BIO"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Composition/clinical-document-composition-BIO-CR-BIO> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Patient/patientExemple"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Patient/patientExemple> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/PractitionerRole/practitioner-role-exemple1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/PractitionerRole/practitioner-role-exemple1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Practitioner/practitioner-exemple1"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Practitioner/practitioner-exemple1> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/PractitionerRole/practitioner-role-exemple2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/PractitionerRole/practitioner-role-exemple2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Practitioner/practitioner-exemple2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Practitioner/practitioner-exemple2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/PractitionerRole/practitioner-role-exemple3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/PractitionerRole/practitioner-role-exemple3> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Practitioner/practitioner-exemple3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Practitioner/practitioner-exemple3> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/PractitionerRole/practitioner-role-exemple4"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/PractitionerRole/practitioner-role-exemple4> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Practitioner/practitioner-exemple4"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Practitioner/practitioner-exemple4> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/PractitionerRole/practitioner-role-exemple5"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/PractitionerRole/practitioner-role-exemple5> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Practitioner/practitioner-exemple5"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Practitioner/practitioner-exemple5> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Encounter/encounterExemple"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Encounter/encounterExemple> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/ServiceRequest/orderExemple"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/ServiceRequest/orderExemple> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Organization/custodianOrganization"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Organization/custodianOrganization> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Location/locationExemple"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Location/locationExemple> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/DocumentReference/documentReferenceExample"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/DocumentReference/documentReferenceExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Organization/organizationExemple"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Organization/organizationExemple> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Organization/organizationExemple2"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Organization/organizationExemple2> )
+  ] [
+     fhir:fullUrl [ fhir:v "https://exemple.com/Organization/organizationExemple3"^^xsd:anyURI ] ;
+     fhir:resource ( <https://exemple.com/Organization/organizationExemple3> )
+  ] ) . # 
+
+<https://exemple.com/Composition/clinical-document-composition-BIO-CR-BIO> a fhir:Composition ;
+  fhir:id [ fhir:v "clinical-document-composition-BIO-CR-BIO"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-05-07T13:28:17.000+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document>
+     ] [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/BIO-CR-BIO/2024.01"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/BIO-CR-BIO/2024.01>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "fr"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "additional" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_clinical-document-composition-BIO-CR-BIO\"> </a><p><b>Compte rendu d'examens biologiques</b></p><p><b>Practitioner</b>: Dr. Marcel CAMPARINI</p><p><b>status</b>: final</p><p><b>patient</b>: DOMINIQUE MARIE-LOUISE PAT-TROIS</p><p><b>author</b>: DR Marcel CAMPARINI / Laboratoire des charmes</p><p><b>Personne à prévenir en cas d'urgence</b>: Sophie NESSI</p><p><b>Personne de confiance</b>: Sophie NESSI</p><p><b>Organisation chargée de la conservation du document</b>: Laboratoire des charmes</p><p><b>Responsable du document</b>: Dr. Marcel CAMPARINI</p><p><b>Biologiste ayant validé des résultats présents sur le compte rendu</b>: Dr. Jean DE SANTS / Dr. Thierry DIAZ</p><p><b>encounter</b>: ambulatoire (hors établissement), 2025-05-03 - 2024-05-07</p><p><b>confidentiality</b>: N</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:string ;
+       fhir:v "1"
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "INF" ] ;
+           fhir:display [ fhir:v "informant" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "party"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/Patient/patientExemple> ;
+         fhir:reference [ fhir:v "Patient/patientExemple" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "REF" ] ;
+           fhir:display [ fhir:v "Référent / Prescripteur" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2025-06-12T10:00:00+01:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2025-06-12T14:00:00+01:00"^^xsd:dateTime ]
+       ]
+     ] [
+       fhir:url [ fhir:v "party"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple4> ;
+         fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple4" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/ServiceRequest/orderExemple> ;
+       fhir:reference [ fhir:v "ServiceRequest/orderExemple" ]
+     ]
+  ] ) ; # 
+  fhir:identifier [
+     fhir:value [ fhir:v "1.2.250.1.213.1.1.1.55.2024.5" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Compte rendu du laboratoire [Recherche] Patient ; Document" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Patient/patientExemple> ;
+     fhir:reference [ fhir:v "Patient/patientExemple" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Encounter/encounterExemple> ;
+     fhir:reference [ fhir:v "Encounter/encounterExemple" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-06-12T14:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple1> ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2024-01-04T13:45:00+01:00"^^xsd:dateTime
+       ]
+     ] ) ;
+     fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple1" ] ;
+     fhir:display [ fhir:v "DR Marcel CAMPARINI" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Compte rendu d'examens biologiques"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2024-01-04T15:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple1> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple1" ]
+     ]
+  ] [
+     fhir:mode [ fhir:v "professional" ] ;
+     fhir:time [ fhir:v "2024-01-04T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple2> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple2" ]
+     ]
+  ] [
+     fhir:mode [ fhir:v "professional" ] ;
+     fhir:time [ fhir:v "2024-01-04T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple3> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple3" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/custodianOrganization> ;
+     fhir:reference [ fhir:v "Organization/custodianOrganization" ] ;
+     fhir:display [ fhir:v "Laboratoire des charmes" ]
+  ] ; # 
+  fhir:relatesTo ( [
+     fhir:code [ fhir:v "appends" ] ;
+     fhir:target [
+       a fhir:Identifier ;
+       fhir:type [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "ACSN" ] ;
+           fhir:display [ fhir:v "Accession ID" ]
+         ] )
+       ] ;
+       fhir:system [ fhir:v "urn:oid:1.2.250.1.213.1.1.9"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "202411111123" ]
+     ]
+  ] ) ; # 
+  fhir:event ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple1> ;
+         fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple1" ]
+       ]
+     ] ) ;
+     fhir:code ( [
+       fhir:coding ( [
+         a loinc:18719-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "18719-5" ] ;
+         fhir:display [ fhir:v "Biochimie" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-06-12T08:00:00+01:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2024-06-12T09:00:00+01:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:code ( [
+       fhir:coding ( [
+         a loinc:18725-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "18725-2" ] ;
+         fhir:display [ fhir:v "Microbiologie" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "PDF" ] ;
+     fhir:entry ( [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Binary> ;
+       fhir:reference [ fhir:v "StructureDefinition/Binary" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Patient/patientExemple> a fhir:Patient ;
+  fhir:id [ fhir:v "patientExemple"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patientExemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Patient patientExemple</b></p><a name=\"patientExemple\"> </a><a name=\"hcpatientExemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-patient-ins-document.html\">Fr Patient INS Document</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">DOMINIQUE MARIE-LOUISE PAT-TROIS  Female, Date de Naissance :1979-03-28 ( NIR définitif (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Statut connu du patient\">Décédé :</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Noms alternatifs (voir plus bas)\">Nom alternatif :</td><td colspan=\"3\">DOMINIQUE MARIE-LOUISE PAT-TROIS (Official)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Moyens de contacter le Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 01 23 24 67 89(Home)</li><li>ph: 01 99 88 77 66(Work)</li><li>ph: 06 80 55 34 33(Mobile)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact :</td><td colspan=\"3\"><ul><li>Sophie NESSI</li><li>Relations :<span title=\"Codes:{https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS SIS}\">Soeur</span>, <span title=\"Codes:{https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role ECON}\">Personne à prévenir en cas d'urgence</span></li><li>12 rue des Lilas, 75012 Paris</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact :</td><td colspan=\"3\"><ul><li>Sophie NESSI</li><li>Relations :<span title=\"Codes:{https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS SIS}\">Soeur</span>, <span title=\"Codes:{https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role NOK}\">Personne de confiance</span></li><li>12 rue des Lilas, 75012 Paris</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\">Ambléon </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Reliabilility of the patient's identity | Précision sur le degré de fiabilité de l'identité du patient (si provisoire, validé... avec la justification : quelle type de pièce d'identité ?) avec la méthode de collection\">FR Core Patient Ident Reliability Extension:</td><td colspan=\"3\"><ul><li>identityStatus: <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-v2-0445.html#fr-core-cs-v2-0445-VALI\">FR Core CodeSystem v2-0445 VALI</a>: Identité validée</li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "identityStatus"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0445"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "VALI" ]
+       ]
+     ] ) ;
+     fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-identity-reliability"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Address ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-address-insee-code"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R13-Commune/FHIR/TRE-R13-Commune"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "01006" ]
+         ]
+       ] ) ;
+       fhir:city [ fhir:v "Ambléon" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INS-NIR" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.213.1.4.8"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456789012244" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-birth-list-given-name"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "DOMINIQUE MARIE-LOUISE"
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "PAT-TROIS" ] ;
+     fhir:given ( [ fhir:v "DOMINIQUE MARIE-LOUISE" ] )
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:family [ fhir:v "PAT-TROIS" ] ;
+     fhir:given ( [ fhir:v "DOMINIQUE MARIE-LOUISE" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 23 24 67 89" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 99 88 77 66" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "06 80 55 34 33" ] ;
+     fhir:use [ fhir:v "mobile" ] ;
+     fhir:rank [ fhir:v "2"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1979-03-28"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SIS" ] ;
+         fhir:display [ fhir:v "Soeur" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-patient-contact-role"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "ECON" ] ;
+         fhir:display [ fhir:v "Personne à prévenir en cas d'urgence" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:text [ fhir:v "Sophie NESSI" ] ;
+       fhir:family [ fhir:v "NESSI" ]
+     ] ;
+     fhir:address [
+       fhir:text [ fhir:v "12 rue des Lilas, 75012 Paris" ]
+     ]
+  ] [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SIS" ] ;
+         fhir:display [ fhir:v "Soeur" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-patient-contact-role"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NOK" ] ;
+         fhir:display [ fhir:v "Personne de confiance" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:text [ fhir:v "Sophie NESSI" ] ;
+       fhir:family [ fhir:v "NESSI" ]
+     ] ;
+     fhir:address [
+       fhir:text [ fhir:v "12 rue des Lilas, 75012 Paris" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/PractitionerRole/practitioner-role-exemple1> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitioner-role-exemple1"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-05T16:13:03Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitioner-role-exemple1\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole practitioner-role-exemple1</b></p><a name=\"practitioner-role-exemple1\"> </a><a name=\"hcpractitioner-role-exemple1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitionerRole-document.html\">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple1\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Practitioner/practitioner-exemple1> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-exemple1" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+     fhir:reference [ fhir:v "Organization/organizationExemple" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "doctor" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Practitioner/practitioner-exemple1> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-exemple1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-exemple1\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-exemple1</b></p><a name=\"practitioner-exemple1\"> </a><a name=\"hcpractitioner-exemple1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitioner-document.html\">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Marcel CAMPARINI </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}\">Biologie médicale (SM)</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "Numéro du professionnel de santé" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234534765" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "CAMPARINI" ] ;
+     fhir:given ( [ fhir:v "Marcel" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 74 58 96 07" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SM03" ] ;
+         fhir:display [ fhir:v "Biologie médicale (SM)" ]
+       ] )
+     ] ;
+     fhir:issuer [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+       fhir:reference [ fhir:v "Organization/organizationExemple" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/PractitionerRole/practitioner-role-exemple2> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitioner-role-exemple2"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-05T16:13:03Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitioner-role-exemple2\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole practitioner-role-exemple2</b></p><a name=\"practitioner-role-exemple2\"> </a><a name=\"hcpractitioner-role-exemple2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitionerRole-document.html\">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple2\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Practitioner/practitioner-exemple2> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-exemple2" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+     fhir:reference [ fhir:v "Organization/organizationExemple" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "doctor" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Practitioner/practitioner-exemple2> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-exemple2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-exemple2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-exemple2</b></p><a name=\"practitioner-exemple2\"> </a><a name=\"hcpractitioner-exemple2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitioner-document.html\">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234567898</p><p><b>name</b>: Jean DE SANTS </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}\">Biologie médicale (SM)</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "Numéro du professionnel de santé" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234567898" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "DE SANTS" ] ;
+     fhir:given ( [ fhir:v "Jean" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 74 58 96 07" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SM03" ] ;
+         fhir:display [ fhir:v "Biologie médicale (SM)" ]
+       ] )
+     ] ;
+     fhir:issuer [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+       fhir:reference [ fhir:v "Organization/organizationExemple" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/PractitionerRole/practitioner-role-exemple3> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitioner-role-exemple3"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-05T16:13:03Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitioner-role-exemple3\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole practitioner-role-exemple3</b></p><a name=\"practitioner-role-exemple3\"> </a><a name=\"hcpractitioner-role-exemple3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitionerRole-document.html\">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple3\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Practitioner/practitioner-exemple3> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-exemple3" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+     fhir:reference [ fhir:v "Organization/organizationExemple" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "doctor" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Practitioner/practitioner-exemple3> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-exemple3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-exemple3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-exemple3</b></p><a name=\"practitioner-exemple3\"> </a><a name=\"hcpractitioner-exemple3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitioner-document.html\">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234567898</p><p><b>name</b>: Thierry DIAZ </p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM03}\">Biologie médicale (SM)</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "Numéro du professionnel de santé" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234567898" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "DIAZ" ] ;
+     fhir:given ( [ fhir:v "Thierry" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 74 58 96 07" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SM03" ] ;
+         fhir:display [ fhir:v "Biologie médicale (SM)" ]
+       ] )
+     ] ;
+     fhir:issuer [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+       fhir:reference [ fhir:v "Organization/organizationExemple" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/PractitionerRole/practitioner-role-exemple4> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitioner-role-exemple4"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-05T16:13:03Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitioner-role-exemple4\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole practitioner-role-exemple4</b></p><a name=\"practitioner-role-exemple4\"> </a><a name=\"hcpractitioner-role-exemple4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitionerRole-document.html\">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple4\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Practitioner/practitioner-exemple4> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-exemple4" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+     fhir:reference [ fhir:v "Organization/organizationExemple" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "doctor" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Practitioner/practitioner-exemple4> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-exemple4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-exemple4\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-exemple4</b></p><a name=\"practitioner-exemple4\"> </a><a name=\"hcpractitioner-exemple4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitioner-document.html\">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Eva BLUE </p><p><b>telecom</b>: ph: 01 47 15 00 00(Work)</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM19}\">Gynécologie médicale (SM)</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple2\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "Numéro du professionnel de santé" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234534765" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "BLUE" ] ;
+     fhir:given ( [ fhir:v "Eva" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 47 15 00 00" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SM19" ] ;
+         fhir:display [ fhir:v "Gynécologie médicale (SM)" ]
+       ] )
+     ] ;
+     fhir:issuer [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple2> ;
+       fhir:reference [ fhir:v "Organization/organizationExemple2" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/PractitionerRole/practitioner-role-exemple5> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitioner-role-exemple5"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2013-05-05T16:13:03Z"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitioner-role-exemple5\"> </a><p class=\"res-header-id\"><b>Narratif généré : PractitionerRole practitioner-role-exemple5</b></p><a name=\"practitioner-role-exemple5\"> </a><a name=\"hcpractitioner-role-exemple5\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2013-05-05 16:13:03+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitionerRole-document.html\">Fr PractitionerRole Document</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Practitioner_practitioner-exemple5\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>organization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role nurse}\">Nurse</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Practitioner/practitioner-exemple5> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-exemple5" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple> ;
+     fhir:reference [ fhir:v "Organization/organizationExemple" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "nurse" ] ;
+       fhir:display [ fhir:v "Nurse" ]
+     ] )
+  ] ) . # 
+
+<https://exemple.com/Practitioner/practitioner-exemple5> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-exemple5"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-exemple5\"> </a><p class=\"res-header-id\"><b>Narratif généré : Praticien practitioner-exemple5</b></p><a name=\"practitioner-exemple5\"> </a><a name=\"hcpractitioner-exemple5\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-practitioner-document.html\">Fr Practitioner Document</a></p></div><p><b>identifier</b>: Numéro du professionnel de santé/801234534765</p><p><b>name</b>: Roberta BLEEDER </p><p><b>telecom</b>: ph: 01 49 15 45 78(Work)</p><p><b>address</b>: 12 Rue du renard, 92100 BOULOGNE-BILLANCOURT</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante 60}\">Infirmier</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_organizationExemple3\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RPPS" ] ;
+         fhir:display [ fhir:v "Numéro du professionnel de santé" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "https://rpps.esante.gouv.fr"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234534765" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "BLEEDER" ] ;
+     fhir:given ( [ fhir:v "Roberta" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 49 15 45 78" ] ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "12 Rue du renard, 92100 BOULOGNE-BILLANCOURT" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "60" ] ;
+         fhir:display [ fhir:v "Infirmier" ]
+       ] )
+     ] ;
+     fhir:issuer [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/organizationExemple3> ;
+       fhir:reference [ fhir:v "Organization/organizationExemple3" ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/Encounter/encounterExemple> a fhir:Encounter ;
+  fhir:id [ fhir:v "encounterExemple"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-05-07T11:28:17.000+00:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_encounterExemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Venue encounterExemple</b></p><a name=\"encounterExemple\"> </a><a name=\"hcencounterExemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2024-05-07 11:28:17+0000</p><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-encounter-document.html\">Fr Encounter Document</a></p></div><p><b>identifier</b>: Visit Number/801234534765</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: ambulatoire (hors établissement)</p><p><b>type</b>: <span title=\"Codes:{https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type U}\">ambulatoire (hors établissement)</span></p><p><b>subject</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Patient_patientExemple\">DOMINIQUE MARIE-LOUISE</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType DIS}\">Responsable de la sortie</span></td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#PractitionerRole_practitioner-role-exemple1\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td></tr></table><p><b>period</b>: 2024-05-03 13:28:17+0000 --&gt; 2024-05-07 11:28:17+0000</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Location_locationExemple\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></td><td>Completed</td><td>2024-05-03 13:28:17+0000 --&gt; 2024-05-07 11:28:17+0000</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "VN" ] ;
+         fhir:display [ fhir:v "Visit Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:uuid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "801234534765" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatoire (hors établissement)" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "U" ] ;
+       fhir:display [ fhir:v "Emergency|Caractère d’urgence aigue du problème quel que soit le service d’entrée" ]
+     ] ) ;
+     fhir:text [ fhir:v "ambulatoire (hors établissement)" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Patient/patientExemple> ;
+     fhir:reference [ fhir:v "Patient/patientExemple" ] ;
+     fhir:display [ fhir:v "DOMINIQUE MARIE-LOUISE" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DIS" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/PractitionerRole/practitioner-role-exemple1> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitioner-role-exemple1" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-05-03T13:28:17.000+00:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-05-07T11:28:17.000+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/Location/locationExemple> ;
+       fhir:reference [ fhir:v "Location/locationExemple" ]
+     ] ;
+     fhir:status [ fhir:v "completed" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-05-03T13:28:17.000+00:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2024-05-07T11:28:17.000+00:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/ServiceRequest/orderExemple> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "orderExemple"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2024-05-07T11:28:17.000+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_orderExemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : DemandeService orderExemple</b></p><a name=\"orderExemple\"> </a><a name=\"hcorderExemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2024-05-07 11:28:17+0000</p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.213.1.1.9</code>/2024123456789</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:\">Discharge to home</span></p><p><b>subject</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Patient_patientExemple\">DOMINIQUE MARIE-LOUISE</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.213.1.1.9"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2024123456789" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Discharge to home" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Patient/patientExemple> ;
+     fhir:reference [ fhir:v "Patient/patientExemple" ] ;
+     fhir:display [ fhir:v "DOMINIQUE MARIE-LOUISE" ]
+  ] . # 
+
+<https://exemple.com/Organization/custodianOrganization> a fhir:Organization ;
+  fhir:id [ fhir:v "custodianOrganization"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_custodianOrganization\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation custodianOrganization</b></p><a name=\"custodianOrganization\"> </a><a name=\"hccustodianOrganization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-organization-document.html\">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Laboratoire des charmes</p><p><b>telecom</b>: ph: 01 74 58 96 07(Work)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1120459876" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Laboratoire des charmes"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 74 58 96 07" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<https://exemple.com/Location/locationExemple> a fhir:Location ;
+  fhir:id [ fhir:v "locationExemple"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_locationExemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Localisation locationExemple</b></p><a name=\"locationExemple\"> </a><a name=\"hclocationExemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-location-document.html\">Fr Location Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS/1120459876</p><p><b>name</b>: Laboratoire des charmes</p><p><b>type</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS SA25}, {https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement 611}\">Laboratoire de biologie médicale</span></p><p><b>address</b>: 8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT</p><p><b>managingOrganization</b>: <a href=\"Bundle-clinical-document-bundle-BIO-CR-BIO.html#Organization_custodianOrganization\">Bundle : identifier = urn:oid:1.2.250.1.213.1.1.1.55.12345.12#2024.01; type = document; timestamp = 2025-05-07 13:28:17+0000</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-identifier-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ] ;
+         fhir:display [ fhir:v "Identification nationale de structure définie par l’ASIP-SANTE dans le CI_SIS" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1120459876" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Laboratoire des charmes"] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SA25" ] ;
+       fhir:display [ fhir:v "Laboratoire de biologie médicale" ]
+     ] [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "611" ] ;
+       fhir:display [ fhir:v "Laboratoire de Biologie Médicale" ]
+     ] )
+  ] ) ; # 
+  fhir:address [
+     fhir:text [ fhir:v "8 Rue Frédéric Bastia, 92100 BOULOGNE-BILLANCOURT" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <https://interop.esante.gouv.fr/ig/document/core/Organization/custodianOrganization> ;
+     fhir:reference [ fhir:v "Organization/custodianOrganization" ]
+  ] . # 
+
+<https://exemple.com/DocumentReference/documentReferenceExample> a fhir:DocumentReference ;
+  fhir:id [ fhir:v "documentReferenceExample"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_documentReferenceExample\"> </a><p class=\"res-header-id\"><b>Narratif généré : RéférenceDocument documentReferenceExample</b></p><a name=\"documentReferenceExample\"> </a><a name=\"hcdocumentReferenceExample\"> </a><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 55107-7}\">Clinical note</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td>Binary/ExampleBinary</td><td>Résultat PDF</td><td>2025-05-01 10:00:00+0100</td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:55107-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "55107-7" ] ;
+       fhir:display [ fhir:v "Clinical note" ]
+     ] )
+  ] ; # 
+  fhir:content ( [
+     fhir:attachment [
+       fhir:contentType [ fhir:v "application/pdf" ] ;
+       fhir:url [ fhir:v "Binary/ExampleBinary"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Résultat PDF" ] ;
+       fhir:creation [ fhir:v "2025-05-01T10:00:00+01:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+<https://exemple.com/Organization/organizationExemple> a fhir:Organization ;
+  fhir:id [ fhir:v "organizationExemple"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organizationExemple\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation organizationExemple</b></p><a name=\"organizationExemple\"> </a><a name=\"hcorganizationExemple\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-organization-document.html\">Fr Organization Document</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.5.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:2.16.840.1.113883.19.5</p><p><b>name</b>: Laboratoire des charmes</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:2.16.840.1.113883.19.5" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Laboratoire des charmes"] . # 
+
+<https://exemple.com/Organization/organizationExemple2> a fhir:Organization ;
+  fhir:id [ fhir:v "organizationExemple2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organizationExemple2\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation organizationExemple2</b></p><a name=\"organizationExemple2\"> </a><a name=\"hcorganizationExemple2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-organization-document.html\">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Cabinet du DR BLUE</p><p><b>telecom</b>: ph: 01 45 37 86 53(Work)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1120459876" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Cabinet du DR BLUE"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 45 37 86 53" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<https://exemple.com/Organization/organizationExemple3> a fhir:Organization ;
+  fhir:id [ fhir:v "organizationExemple3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organizationExemple3\"> </a><p class=\"res-header-id\"><b>Narratif généré : Organisation organizationExemple3</b></p><a name=\"organizationExemple3\"> </a><a name=\"hcorganizationExemple3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-fr-organization-document.html\">Fr Organization Document</a></p></div><p><b>identifier</b>: Identification nationale de structure définie par l’ANS dans le CI_SIS/1120459876</p><p><b>name</b>: Cabinet d'infirmières de BB</p><p><b>telecom</b>: ph: 01 38 47 54 39(Work)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IDNST" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1120459876" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Cabinet d'infirmières de BB"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "01 38 47 54 39" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

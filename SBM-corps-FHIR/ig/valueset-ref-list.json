@@ -1,0 +1,853 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/adverse-event-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AdverseEventOutcome",
+      "title" : "AdverseEventOutcome",
+      "description" : "TODO (and should this be required?).",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.836"],
+      "sources" : ["2.16.840.1.113883.4.642.3.836"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-effet-indesirable.html" : "AdverseEvent - Effet indésirable"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ActPriority",
+      "title" : "ActPriority",
+      "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
+      "oids" : ["2.16.840.1.113883.1.11.16866"],
+      "sources" : ["2.16.840.1.113883.1.11.16866"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-priority-extension.html" : "Extension - Priorité"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-actor-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetActorType",
+      "title" : "ValueSet - Types d'acteurs",
+      "description" : "Jeu de valeurs pour les types d'acteurs.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-actor-extension.html" : "Extension - Actor"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-body-site",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetBodySite",
+      "title" : "Body Site SNOMED CT",
+      "description" : "ValueSet pour les localisations anatomiques",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-body-site-extension.html" : "Extension - Body Site Extension"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-participation-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetParticipationType",
+      "title" : "FR ValueSet Participation Type",
+      "description" : "Type de participation : destinataire",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-composition-document.html" : "Fr Composition Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-role-prise-charge",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetRolePriseCharge",
+      "title" : "Fr ValueSet RolePriseCharge",
+      "description" : "Pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle).",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-chirurgien-dentiste",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetSavoirFaireProfessionChirurgienDentiste",
+      "title" : "Fr ValueSet Savoir-faire Profession Chirurgien-Dentiste",
+      "description" : "Savoir-faire pour la profession 40 (Chirurgien-Dentiste)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-infirmier",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetSavoirFaireProfessionInfirmier",
+      "title" : "Fr ValueSet Savoir-faire Profession Infirmier",
+      "description" : "Savoir-faire pour la profession 60 (Infirmier)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-pharmacien",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetSavoirFaireProfessionPharmacien",
+      "title" : "Fr ValueSet Savoir-faire Profession Pharmacien",
+      "description" : "Savoir-faire pour la profession 21 (Pharmacien)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP",
+        "https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetTypeSavoirFaireProfessionChirurgienDentiste",
+      "title" : "Fr ValueSet Type Savoir-faire Profession Chirurgien-Dentiste",
+      "description" : "Type Savoir-faire pour la profession 40 (Chirurgien-Dentiste)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-infirmier",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetTypeSavoirFaireProfessionInfirmier",
+      "title" : "Fr ValueSet Type Savoir-faire Profession Infirmier",
+      "description" : "Type Savoir-faire pour la profession 60 (Infirmier)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-medecin",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetTypeSavoirFaireProfessionMedecin",
+      "title" : "Fr ValueSet Type Savoir-faire Profession Medecin",
+      "description" : "Type Savoir-faire pour la profession 10 (Médecin)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-pharmacien",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FRValueSetTypeSavoirFaireProfessionPharmacien",
+      "title" : "Fr ValueSet Type Savoir-faire Profession Pharmacien",
+      "description" : "Type Savoir-faire pour la profession 21 (Pharmacien)",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitioner-document.html" : "Fr Practitioner Document"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-performer-functions",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetPerformerFunctionParticipant",
+      "title" : "Fonctions du participant",
+      "description" : "",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-batterie-examen-biologie-medicale.html" : "Observation - Fr Observation Batterie Examen Biologie Medicale",
+      "StructureDefinition-fr-resultats-examens-de-biologie-element-clinique-pertinent.html" : "Observation - Fr Observation Resultats Examens De Biologie Element Clinique Pertinent"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-request-intent",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetRequestIntent",
+      "title" : "Intentions restreintes pour ServiceRequest",
+      "description" : "Restriction de ServiceRequest.intent aux codes : proposal, plan et order",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-service-request-demande-d-examen-ou-de-suivi.html" : "ServiceRequest - Fr Sevice Request Demande d'examen ou de Suivi"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-value-set-condition-verification-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetConditionVerificationStatus",
+      "title" : "Statuts de vérification d'une condition (restreint)",
+      "description" : "Jeu de valeurs français restreint pour Condition.verificationStatus, incluant uniquement confirmed, unconfirmed, et refuted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-allergie-intolerance.html" : "AllergyIntolerance - Fr AllergyIntolerance",
+      "StructureDefinition-fr-condition.html" : "Condition - Fr condition"
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-operator-function-media",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetOperatorFunctionMedia",
+      "title" : "Valeurs pour les rôles liés aux médias",
+      "description" : "Contient uniquement Auteur, Performer et Participant pour distinguer les rôles dans une Image Illustrative.",
+      "systems" : [
+        "https://interop.esante.gouv.fr/ig/document/core/CodeSystem/fr-cs-operator-function-media"
+      ]
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS",
+      "version" : "20250721120000",
+      "status" : "active",
+      "name" : "JDV_J01_XdsAuthorSpecialty_CISIS",
+      "title" : null,
+      "description" : "XDS authorSpecialty CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_A02-ProfessionSavFaire-CISIS/FHIR/TRE-A02-ProfessionSavFaire-CISIS",
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+        "https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/FHIR/TRE-R95-UsagerTitre",
+        "https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/FHIR/TRE-R94-ProfessionSocial"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.461"],
+      "sources" : ["1.2.250.1.213.1.1.5.461"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-legal-authenticator.html" : "CDA - legalAuthenticator",
+      "StructureDefinition-fr-core-performer.html" : "CDA - performer",
+      "StructureDefinition-fr-core-associated-entity.html" : "CDA - associatedEntity",
+      "StructureDefinition-fr-core-assigned-author.html" : "CDA - assignedAuthor"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
+      "version" : "20250523120000",
+      "status" : "active",
+      "name" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS",
+      "title" : null,
+      "description" : "XDS healthcareFacilityTypeCode CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+        "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.466"],
+      "sources" : ["1.2.250.1.213.1.1.5.466"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-location-document.html" : "Fr Location Document",
+      "StructureDefinition-fr-core-health-care-facility.html" : "CDA - healthCareFacility"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J04-XdsPracticeSettingCode-CISIS/FHIR/JDV-J04-XdsPracticeSettingCode-CISIS",
+      "version" : "20240927120000",
+      "status" : "active",
+      "name" : "JDV_J04_XdsPracticeSettingCode_CISIS",
+      "title" : null,
+      "description" : "XDS practiceSettingCode CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A01-CadreExercice/FHIR/TRE-A01-CadreExercice",
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.467"],
+      "sources" : ["1.2.250.1.213.1.1.5.467"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-represented-organization.html" : "CDA - representedOrganization",
+      "StructureDefinition-fr-organization-document.html" : "Fr Organization Document"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS",
+      "version" : "20200424120000",
+      "status" : "active",
+      "name" : "JDV_J11_RelationPatient_CISIS",
+      "title" : null,
+      "description" : "Relation par rapport au patient - CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
+        "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique"
+      ],
+      "oids" : ["1.2.250.1.213.3.3.16"],
+      "sources" : ["1.2.250.1.213.3.3.16"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-patient-ins-document.html" : "Fr Patient INS Document",
+      "StructureDefinition-fr-related-person-document.html" : "Fr RelatedPerson Document",
+      "StructureDefinition-fr-core-related-entity.html" : "CDA - relatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J140-EncounterParticipationType-CISIS/FHIR/JDV-J140-EncounterParticipationType-CISIS",
+      "version" : "20210326120000",
+      "status" : "active",
+      "name" : "JDV_J140_EncounterParticipationType_CISIS",
+      "title" : null,
+      "description" : "JDV_J140-EncounterParticipationType-CISIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.528"],
+      "sources" : ["1.2.250.1.213.1.1.5.528"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encounter-participant.html" : "CDA - encounterParticipant",
+      "StructureDefinition-fr-encounter-document.html" : "Fr Encounter Document"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J141-RoleClass-CISIS/FHIR/JDV-J141-RoleClass-CISIS",
+      "version" : "20210326120000",
+      "status" : "active",
+      "name" : "JDV_J141_RoleClass_CISIS",
+      "title" : null,
+      "description" : "RoleClassAssociative CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.588"],
+      "sources" : ["1.2.250.1.213.1.1.5.588"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitionerRole-document.html" : "Fr PractitionerRole Document",
+      "StructureDefinition-fr-core-associated-entity.html" : "CDA - associatedEntity"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J142-TypeRencontre-CISIS/FHIR/JDV-J142-TypeRencontre-CISIS",
+      "version" : "20210326120000",
+      "status" : "active",
+      "name" : "JDV_J142_TypeRencontre_CISIS",
+      "title" : null,
+      "description" : "Type de prise en charge CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R304-HL7v3ActCode/FHIR/TRE-R304-HL7v3ActCode",
+        "https://mos.esante.gouv.fr/NOS/TRE_R305-TypeRencontre/FHIR/TRE-R305-TypeRencontre"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.589"],
+      "sources" : ["1.2.250.1.213.1.1.5.589"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-encompassing-encounter.html" : "CDA - encompassingEncounter"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J143-AdministrativeGender-CISIS/FHIR/JDV-J143-AdministrativeGender-CISIS",
+      "version" : "20210326120000",
+      "status" : "active",
+      "name" : "JDV_J143_AdministrativeGender_CISIS",
+      "title" : null,
+      "description" : "Sexe administratif CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R303-HL7v3AdministrativeGender/FHIR/TRE-R303-HL7v3AdministrativeGender"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.590"],
+      "sources" : ["1.2.250.1.213.1.1.5.590"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-patient.html" : "CDA - patient"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J144-ParticipationType-CISIS/FHIR/JDV-J144-ParticipationType-CISIS",
+      "version" : "20210326120000",
+      "status" : "active",
+      "name" : "JDV_J144_ParticipationType_CISIS",
+      "title" : null,
+      "description" : "Type de participation CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.591"],
+      "sources" : ["1.2.250.1.213.1.1.5.591"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-practitionerRole-document.html" : "Fr PractitionerRole Document",
+      "StructureDefinition-fr-composition-document.html" : "Fr Composition Document"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS",
+      "version" : "20230331120000",
+      "status" : "active",
+      "name" : "JDV_J245_Civilite_CISIS",
+      "title" : null,
+      "description" : "Civilités CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.718"],
+      "sources" : ["1.2.250.1.213.1.1.5.718"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-name.html" : "CDA - name",
+      "StructureDefinition-fr-human-name-document.html" : "Human Name Document"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS",
+      "version" : "20240126120000",
+      "status" : "active",
+      "name" : "JDV_J246_Titre_CISIS",
+      "title" : null,
+      "description" : "Civilités CI-SIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.719"],
+      "sources" : ["1.2.250.1.213.1.1.5.719"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-name.html" : "CDA - name",
+      "StructureDefinition-fr-human-name-document.html" : "Human Name Document"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS",
+      "version" : "20250523120000",
+      "status" : "active",
+      "name" : "JDV_J47_FunctionCode_CISIS",
+      "title" : null,
+      "description" : "Rôles fonctionnels",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_R258-RelationPriseCharge/FHIR/TRE-R258-RelationPriseCharge",
+        "https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.124"],
+      "sources" : ["1.2.250.1.213.1.1.5.124"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-core-participant.html" : "CDA - participant",
+      "StructureDefinition-fr-practitionerRole-document.html" : "Fr PractitionerRole Document",
+      "StructureDefinition-fr-composition-document.html" : "Fr Composition Document",
+      "StructureDefinition-fr-core-author.html" : "CDA - author"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-document-imagerie-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvCodeDocumentImagerieCisis",
+      "title" : "JDV Code Document Imagerie CISIS",
+      "description" : "JDV Code Document Imagerie CISIS",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.2.250.1.213.1.1.5.687"],
+      "sources" : ["1.2.250.1.213.1.1.5.687"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-procedure-technique-imagerie-DICOM.html" : "Procedure - Fr Procedure Technique Imagerie DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis",
+      "version" : "20250624152101",
+      "status" : "active",
+      "name" : "JdvCodeProblemeCisis",
+      "title" : "JDV Code Probleme CISIS",
+      "description" : "JDV Code Probleme CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.5.172"],
+      "sources" : ["1.2.250.1.213.1.1.5.172"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-family-member-history.html" : "FamilyMemberHistory - Fr FamilyMemberHistory",
+      "StructureDefinition-fr-condition.html" : "Condition - Fr condition"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-gravite-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvGraviteCisis",
+      "title" : "JDV Gravite CISIS",
+      "description" : "JDV Gravite CISIS",
+      "systems" : [
+        "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.787"],
+      "sources" : ["1.2.250.1.213.1.1.5.787"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-effet-indesirable.html" : "AdverseEvent - Effet indésirable"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvHealthStatusCodeCisis",
+      "title" : "JDV Health Status Code CISIS",
+      "description" : "JDV Health Status Code CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.4.2.283.1"],
+      "sources" : ["1.2.250.1.213.1.1.4.2.283.1"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-condition-clinical-status-extension.html" : "Extension - Statut clinique du patient"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "ObservationInterpretation",
+      "title" : "ObservationInterpretation",
+      "description" : "ObservationInterpretation",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.1.11.78"],
+      "sources" : ["2.16.840.1.113883.1.11.78"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-quantity-DICOM.html" : "Observation - Fr quantity DICOM",
+      "StructureDefinition-fr-observation-difficulte.html" : "Observation - Fr Difficulté de l'acte",
+      "StructureDefinition-fr-observation-renouvellement.html" : "Observation - Fr renouvellement de l'acte",
+      "StructureDefinition-fr-interpretation-extension.html" : "Extension - Interprétation",
+      "StructureDefinition-fr-non-remboursable.html" : "Observation - Fr Observation Non Remboursable",
+      "StructureDefinition-Fr-objectifs-de-reference-DICOM.html" : "Observation - Fr Objectifs De Reference DICOM",
+      "StructureDefinition-fr-en-rapport-avec-accident-travail.html" : "Observation - Fr Observation En rapport avec accident travail",
+      "StructureDefinition-fr-hors-nomenclature.html" : "Observation - Fr Observation Hors nomenclature",
+      "StructureDefinition-fr-accidents-transfusionnels.html" : "Observation - Fr Observation Accidents Transfusionnels",
+      "StructureDefinition-fr-en-rapport-avec-ald.html" : "Observation - Fr Observation En rapport avec ALD",
+      "StructureDefinition-fr-en-rapport-avec-la-prevention.html" : "Observation - Fr Observation En rapport avec la prévention",
+      "StructureDefinition-fr-observation-contexte.html" : "Observation - Fr Contexte de l'acte"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationMethod-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "ObservationMethod",
+      "title" : "ObservationMethod",
+      "description" : "ObservationMethod",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationMethod"],
+      "oids" : ["2.16.840.1.113883.1.11.14079"],
+      "sources" : ["2.16.840.1.113883.1.11.14079"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-quantity-DICOM.html" : "Observation - Fr quantity DICOM",
+      "StructureDefinition-fr-method-extension.html" : "Extension - Méthode",
+      "StructureDefinition-fr-observation-difficulte.html" : "Observation - Fr Difficulté de l'acte",
+      "StructureDefinition-fr-observation-renouvellement.html" : "Observation - Fr renouvellement de l'acte",
+      "StructureDefinition-fr-non-remboursable.html" : "Observation - Fr Observation Non Remboursable",
+      "StructureDefinition-Fr-objectifs-de-reference-DICOM.html" : "Observation - Fr Objectifs De Reference DICOM",
+      "StructureDefinition-fr-en-rapport-avec-accident-travail.html" : "Observation - Fr Observation En rapport avec accident travail",
+      "StructureDefinition-fr-hors-nomenclature.html" : "Observation - Fr Observation Hors nomenclature",
+      "StructureDefinition-fr-accidents-transfusionnels.html" : "Observation - Fr Observation Accidents Transfusionnels",
+      "StructureDefinition-fr-en-rapport-avec-ald.html" : "Observation - Fr Observation En rapport avec ALD",
+      "StructureDefinition-fr-en-rapport-avec-la-prevention.html" : "Observation - Fr Observation En rapport avec la prévention",
+      "StructureDefinition-fr-observation-contexte.html" : "Observation - Fr Contexte de l'acte"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis",
+      "version" : "20250624152101",
+      "status" : "active",
+      "name" : "ParticipationType",
+      "title" : "ParticipationType",
+      "description" : "ParticipationType",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["2.16.840.1.113883.1.11.10901"],
+      "sources" : ["2.16.840.1.113883.1.11.10901"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-encounter.html" : "Encounter - Fr Encounter"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis",
+      "version" : "20250624152059",
+      "status" : "active",
+      "name" : "PersonalRelationshipRoleType",
+      "title" : "PersonalRelationshipRoleType",
+      "description" : "PersonalRelationshipRoleType",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "oids" : ["2.16.840.1.113883.1.11.19563"],
+      "sources" : ["2.16.840.1.113883.1.11.19563"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-family-member-history.html" : "FamilyMemberHistory - Fr FamilyMemberHistory"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imagerie-objectif-reference-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvImagerieObjectifReferenceCisis",
+      "title" : "JDV Imagerie Objectif Reference CISIS",
+      "description" : "JDV Imagerie Objectif Reference CISIS",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.250.1.213.1.1.5.672"],
+      "sources" : ["1.2.250.1.213.1.1.5.672"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-objectifs-de-reference-DICOM.html" : "Observation - Fr Objectifs De Reference DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imputabilite-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvImputabiliteCisis",
+      "title" : "JDV Imputabilite CISIS",
+      "description" : "JDV Imputabilite CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.5.786"],
+      "sources" : ["1.2.250.1.213.1.1.5.786"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-effet-indesirable.html" : "AdverseEvent - Effet indésirable"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis",
+      "version" : "20250422120000",
+      "status" : "active",
+      "name" : "JdvJ368CategorieEtablissementCisis",
+      "title" : "Jdv J368 Categorie Etablissement Cisis",
+      "description" : "JDV à l'image de l'ensemble des valeurs actives de la terminologie TRE_R66-CategorieEtablissement",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.823"],
+      "sources" : ["1.2.250.1.213.1.1.5.823"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-location-document.html" : "Fr Location Document",
+      "StructureDefinition-fr-core-health-care-facility.html" : "CDA - healthCareFacility"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvLocalisationAnatomiqueCisis",
+      "title" : "JDV Localisation Anatomique CISIS",
+      "description" : "JDV Localisation Anatomique CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.5.694"],
+      "sources" : ["1.2.250.1.213.1.1.5.694"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-Observation-DICOM.html" : "Observation - Fr Observation DICOM",
+      "StructureDefinition-Fr-procedure-technique-imagerie-DICOM.html" : "Procedure - Fr Procedure Technique Imagerie DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvModaliteAcquisitionCisis",
+      "title" : "JDV Modalite Acquisition CISIS",
+      "description" : "JDV Modalite Acquisition CISIS",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.250.1.213.1.1.5.618"],
+      "sources" : ["1.2.250.1.213.1.1.5.618"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-imaging-study-examen-imagerie-DICOM.html" : "ImagingStudy - Fr Imaging Study Examen Imagerie DICOM",
+      "StructureDefinition-Fr-procedure-technique-imagerie-DICOM.html" : "Procedure - Fr Procedure Technique Imagerie DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvModaliteEntreeCisis",
+      "title" : "JDV Modalite Entree CISIS",
+      "description" : "JDV Modalite Entree CISIS",
+      "systems" : [
+        "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.73"],
+      "sources" : ["1.2.250.1.213.1.1.5.73"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-observation-modalite-entree.html" : "FR - Modalité d'entrée"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvOrigineEffetIndesirableCisis",
+      "title" : "JDV Origine Effet Indesirable CISIS",
+      "description" : "JDV Origine Effet Indesirable CISIS",
+      "systems" : [
+        "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.785"],
+      "sources" : ["1.2.250.1.213.1.1.5.785"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-effet-indesirable.html" : "AdverseEvent - Effet indésirable"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvParticipantAdditionnelResultatCisis",
+      "title" : "JDV Participant Additionnel Resultat CISIS",
+      "description" : "JDV Participant Additionnel Resultat CISIS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+      "oids" : ["1.2.250.1.213.1.1.5.138"],
+      "sources" : ["1.2.250.1.213.1.1.5.138"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-observation-isolat-microbiologique.html" : "FR - Isolat microbiologique",
+      "StructureDefinition-fr-batterie-examen-biologie-medicale.html" : "Observation - Fr Observation Batterie Examen Biologie Medicale",
+      "StructureDefinition-fr-resultats-examens-de-biologie-element-clinique-pertinent.html" : "Observation - Fr Observation Resultats Examens De Biologie Element Clinique Pertinent",
+      "StructureDefinition-fr-observation-evaluation.html" : "Observation - Évaluation"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-quantite-exposition-rayonnements-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvQuantiteExpositionRayonnementsCisis",
+      "title" : "JDV Quantite Exposition Rayonnements CISIS",
+      "description" : "JDV Quantite Exposition Rayonnements CISIS",
+      "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+      "oids" : ["1.2.250.1.213.1.1.5.620"],
+      "sources" : ["1.2.250.1.213.1.1.5.620"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-quantity-DICOM.html" : "Observation - Fr quantity DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvRoleInformateurCisis",
+      "title" : "Jdv Role Informateur CISIS",
+      "description" : "Jdv Role Informateur CISIS",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleClass"],
+      "oids" : ["1.2.250.1.213.1.1.5.824"],
+      "sources" : ["1.2.250.1.213.1.1.5.824"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-patient-ins-document.html" : "Fr Patient INS Document",
+      "StructureDefinition-fr-core-related-entity.html" : "CDA - relatedEntity"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvSeveriteObservationCisis",
+      "title" : "JDV Severite Observation CISIS",
+      "description" : "JDV Severite Observation CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.5.675"],
+      "sources" : ["1.2.250.1.213.1.1.5.675"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-condition.html" : "Condition - Fr condition"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvSocialHistoryCodeCisis",
+      "title" : "JDV Social History Code CISIS",
+      "description" : "JDV Social History Code CISIS",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["1.2.250.1.213.1.1.4.2.283.4"],
+      "sources" : ["1.2.250.1.213.1.1.4.2.283.4"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-observation-habitus-mode-de-vie.html" : "FR - Habitus / Mode de vie"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvSopClassCisis",
+      "title" : "JDV Sop Class CISIS",
+      "description" : "JDV Sop Class CISIS",
+      "systems" : [
+        "http://​dicom.​nema.​org/​medical/​dicom/​current/​output/​chtml/​part06/​chapter_A.html"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.689"],
+      "sources" : ["1.2.250.1.213.1.1.5.689"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-imaging-study-examen-imagerie-DICOM.html" : "ImagingStudy - Fr Imaging Study Examen Imagerie DICOM"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvSpecimenTypeCisis",
+      "title" : "JDV Specimen Type CISIS",
+      "description" : "JDV Specimen Type CISIS",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-SpecimenType",
+        "http://terminology.hl7.org/CodeSystem/v2-0487"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.819"],
+      "sources" : ["1.2.250.1.213.1.1.5.819"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-specimen.html" : "Specimen - Fr Specimen"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvTypeDirectiveAnticipeeCisis",
+      "title" : "JDV Type Directive Anticipee CISIS",
+      "description" : "JDV Type Directive Anticipee CISIS",
+      "systems" : [
+        "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+        "http://loinc.org",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.136"],
+      "sources" : ["1.2.250.1.213.1.1.5.136"],
+      "uses" : {
+      },
+      "StructureDefinition-Fr-directive-anticipee.html" : "Consent - Fr Directive Anticipée"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvTypeEvenementIndesirablePrevisibleCisis",
+      "title" : "JDV Type Evenement Indesirable Previsible CISIS",
+      "description" : "JDV Type Evenement Indesirable Previsible CISIS",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["1.2.250.1.213.1.1.5.794"],
+      "sources" : ["1.2.250.1.213.1.1.5.794"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-allergie-intolerance.html" : "AllergyIntolerance - Fr AllergyIntolerance"
+    },
+    {
+      "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis",
+      "version" : "20250624152100",
+      "status" : "active",
+      "name" : "JdvTypeSystemeCisis",
+      "title" : "Jdv Type Systeme CISIS",
+      "description" : "Jdv Type Systeme CISIS",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.825"],
+      "sources" : ["1.2.250.1.213.1.1.5.825"],
+      "uses" : {
+      },
+      "StructureDefinition-fr-device-document.html" : "Fr Device Document"
+    }
+  ]
+}
