@@ -9,7 +9,7 @@ Description: "Cette observation permet de décrire des examens de biologie médi
 
 * code ^short = "Code de la batterie d'examen"
 * code MS
-* code only CodeableConceptIPS
+// ajouter l'extension translation dans code
 * code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
 
 * code.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"

@@ -42,8 +42,11 @@ SOP parente du SOP subordonnée et faire un slicing sur instance  */
 
 * series.instance[parent] ^short = "Url permettant d’accéder aux images sur la Drim box source"
 * series.instance[parent].sopClass from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis (required)
-
 * series.instance[parent].number ^short = "Cadres référencés"
+
+* series.instance[subordonnee] ^short = "Url permettant d’accéder aux images sur la Drim box source"
+* series.instance[subordonnee].sopClass from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis (required)
+* series.instance[subordonnee].number ^short = "Cadres référencés"
 
 * series.endpoint ^short = "Référence WADO"
 * series.endpoint only Reference(FrEndpointWadoDICOM) // ==> Création du profil fsh FrEndpointWadoDICOM avec un parent Endpoint
@@ -52,8 +55,3 @@ SOP parente du SOP subordonnée et faire un slicing sur instance  */
 * reasonReference 0..1 MS
 * reasonReference ^short = "Objectifs de référence"
 * reasonReference only Reference(FrObjectifsDeReferenceDICOM) 
-
-
-
-
-

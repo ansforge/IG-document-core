@@ -13,7 +13,7 @@ Description: "Ce profil permet de décrire un résultat d'un élément d'un exam
 - 'aborted' dans le cas où l'élément d'examen n’a pu être et ne sera pas réalisé"
 * code ^short = "Code d'identification de l'analyse ou de l'observation"
 * code MS
-* code only CodeableConceptIPS
+// ajouter l'extension translation dans code
 * code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
 
 * code.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
