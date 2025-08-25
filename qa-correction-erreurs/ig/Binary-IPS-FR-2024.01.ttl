@@ -16,6 +16,7 @@
 #      Historique :
 #      02/04/2024 : Création IPS-FR_2023.01 (conforme IPS) 
 #      21/08/2025 : Maj des codeSystemName en fonction de la nouvelle règle de nommage
+#      25/08/2025 : Maj des références parties narratives / entrées
 #      **********************************************************************************************************
 #   
 
@@ -2706,7 +2707,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Allergies, hypersensibilités non allergiques, intolérances, idiosyncrasie" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Date</th><th>Type</th><th>Agent responsable</th><th>Statut</th><th>Criticité</th><th>Certitude</th><th>Réaction(s)</th><th>Sévérité réaction(s)</th><th>Commentaire</th></tr></thead><tbody><tr><td>04/12/2021</td><td><span id=\"allergie-01-type\">Allergie médicamenteuse</span></td><td><span id=\"allergie-01-agent\">Paracétamol</span></td><td><span id=\"allergie-statut-01\">Actif</span></td><td>Bas</td><td>Confirmé</td><td><span id=\"allergie-01-reaction-1\">Bronchospasme d'origine\n                      médicamenteuse</span><br/><span id=\"allergie-01-reaction-2\">Troubles allergiques ou d'hypersensibilité\n                      de la peau ou des muqueuses</span></td><td><span id=\"allergie-01-reaction-1-severite\">modéré</span><br/><span id=\"allergie-01-reaction-2-severite\">léger</span></td><td><span id=\"allergie-01-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Date</th><th>Type</th><th>Agent responsable</th><th>Statut</th><th>Criticité</th><th>Certitude</th><th>Réaction(s)</th><th>Sévérité réaction(s)</th><th>Commentaire</th></tr></thead><tbody><tr><td>04/12/2021</td><td><span id=\"allergie-01-type\">Allergie médicamenteuse</span></td><td><span id=\"allergie-01-agent\">Paracétamol</span></td><td><span id=\"allergie-01-statut\">Actif</span></td><td><span id=\"allergie-01-criticite\">Bas</span></td><td><span id=\"allergie-01-certitude\">Confirmé</span></td><td><span id=\"allergie-01-reaction-1\">Bronchospasme d'origine\n                      médicamenteuse</span><br/><span id=\"allergie-01-reaction-2\">Troubles allergiques ou d'hypersensibilité\n                      de la peau ou des muqueuses</span></td><td><span id=\"allergie-01-reaction-1-severite\">modéré</span><br/><span id=\"allergie-01-reaction-2-severite\">léger</span></td><td><span id=\"allergie-01-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:act [
                fhir:classCode [ fhir:v "ACT" ] ;
@@ -2777,7 +2778,7 @@
                    fhir:value ( [
                      fhir:originalText [
                        fhir:reference [
-                         fhir:value [ fhir:v "#"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "noref"^^xsd:anyURI ]
                        ]
                      ]
                    ] ) ; #  Description clinique de l'allergie \/ hypersensibilité : non renseigné 
@@ -2830,7 +2831,7 @@
                        ] ;
                        fhir:text [
                          fhir:reference [
-                           fhir:value [ fhir:v "#allergie-statut-01"^^xsd:anyURI ]
+                           fhir:value [ fhir:v "#allergie-01-statut"^^xsd:anyURI ]
                          ]
                        ] ;
                        fhir:statusCode [
@@ -2868,7 +2869,7 @@
                        ] ;
                        fhir:text [
                          fhir:reference [
-                           fhir:value [ fhir:v "#"^^xsd:anyURI ]
+                           fhir:value [ fhir:v "#allergie-01-criticite"^^xsd:anyURI ]
                          ]
                        ] ;
                        fhir:statusCode [
@@ -2909,7 +2910,7 @@
                        ] ;
                        fhir:text [
                          fhir:reference [
-                           fhir:value [ fhir:v "#"^^xsd:anyURI ]
+                           fhir:value [ fhir:v "#allergie-01-certitude"^^xsd:anyURI ]
                          ]
                        ] ;
                        fhir:statusCode [
@@ -3492,7 +3493,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Traitements" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Traitements au long cours :</span></p><table border=\"0\"><thead><tr><th>Date de début</th><th>Date de fin</th><th>Médicament</th><th>Fréquence</th><th>Dose prescrite</th><th>Rythme</th><th>Voie d'administration</th><th>Motif</th><th>Commentaire</th></tr></thead><tbody><tr><td>11/01/2024</td><td>-</td><td><span id=\"med-01\">LEVOTHYROX 75 microgrammes, comprimé sécable</span></td><td><span id=\"med-01-doseMin-1\">1 cp</span></td><td><span id=\"med-01-frequence\">1 fois/j</span></td><td><span id=\"med-01-rateMin\">-</span></td><td><span id=\"med-01-voie\">Voie orale</span></td><td><span id=\"med-01-motif\">Thyroïdite auto-immune</span></td><td><span id=\"med-01-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Traitements au long cours :</span></p><table border=\"0\"><thead><tr><th>Date de début</th><th>Date de fin</th><th>Médicament</th><th>Fréquence</th><th>Dose prescrite</th><th>Rythme</th><th>Voie d'administration</th><th>Motif</th><th>Commentaire</th></tr></thead><tbody><tr><td>11/01/2024</td><td>-</td><td><span id=\"med-01\">LEVOTHYROX 75 microgrammes, comprimé sécable</span></td><td><span id=\"med-01-doseMin-1\">1 cp</span><span id=\"med-01-doseMax-1\"/></td><td><span id=\"med-01-frequence\">1 fois/j</span></td><td><span id=\"med-01-rateMin\">-</span></td><td><span id=\"med-01-voie\">Voie orale</span></td><td><span id=\"med-01-motif\">Thyroïdite auto-immune</span></td><td><span id=\"med-01-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:typeCode [ fhir:v "DRIV" ] ;
              fhir:substanceAdministration [
@@ -3709,7 +3710,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Dispositifs médicaux" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Date début</th><th>Date fin</th><th>Type de DM</th><th>ID du DM</th><th>Commentaire</th></tr></thead><tbody><tr><td>11/08/2019</td><td/><td><span id=\"DM-01-categorie\">STIMULATEUR CARDIAQUE IMPLANTABLE TRIPLE CHAMBRE</span></td><td>inconnu</td><td><span id=\"DM-01-commentaire\">(texte libre)</span></td></tr><tr><td>11/08/2013</td><td/><td><span id=\"DM-02-categorie\">Autre DM : (texte libre)</span></td><td>inconnu</td><td><span id=\"DM-02-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\"><thead><tr><th>Date début</th><th>Date fin</th><th>Type de DM</th><th>ID du DM</th><th>Commentaire</th></tr></thead><tbody><tr id=\"DM-01\"><td>11/08/2019</td><td/><td><span id=\"DM-01-categorie\">STIMULATEUR CARDIAQUE IMPLANTABLE TRIPLE CHAMBRE</span></td><td>inconnu</td><td><span id=\"DM-01-commentaire\">(texte libre)</span></td></tr><tr id=\"DM-02\"><td>11/08/2013</td><td/><td><span id=\"DM-02-categorie\">Autre DM : (texte libre)</span></td><td>inconnu</td><td><span id=\"DM-02-commentaire\">(texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:supply [
                fhir:classCode [ fhir:v "SPLY" ] ;
@@ -3724,7 +3725,7 @@
                ] ) ; #  Identifiant de la fourniture du DM 
                fhir:text [
                  fhir:reference [
-                   fhir:value [ fhir:v "#DM-001"^^xsd:anyURI ]
+                   fhir:value [ fhir:v "#DM-01"^^xsd:anyURI ]
                  ]
                ] ; #  Référence vers la partie narrative de la section DM 
                fhir:effectiveTime ( [
@@ -3800,7 +3801,7 @@
                ] ) ; #  Identifiant de la fourniture du DM 
                fhir:text [
                  fhir:reference [
-                   fhir:value [ fhir:v "#DM-001"^^xsd:anyURI ]
+                   fhir:value [ fhir:v "#DM-02"^^xsd:anyURI ]
                  ]
                ] ; #  Référence vers la partie narrative de la section DM 
                fhir:effectiveTime ( [
@@ -4108,12 +4109,7 @@
                      fhir:code [ fhir:v "GEN-092.04.23" ] ;
                      fhir:codeSystem [ fhir:v "1.2.250.1.213.1.1.4.322" ] ;
                      fhir:codeSystemName [ fhir:v "TerminologieCISIS" ] ;
-                     fhir:displayName [ fhir:v "Autre statut fonctionnel" ] ;
-                     fhir:originalText [
-                       fhir:reference [
-                         fhir:value [ fhir:v "#statut-fonctionnel-03"^^xsd:anyURI ]
-                       ]
-                     ]
+                     fhir:displayName [ fhir:v "Autre statut fonctionnel" ]
                    ] ; #  Autre type de statut fonctionnel 
                    fhir:text [
                      fhir:reference [
@@ -5051,7 +5047,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#tetanos2-reac"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#vaccin-02-reaction"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -5069,7 +5065,7 @@
                      fhir:displayName [ fhir:v "Fièvre due à des médicaments" ] ;
                      fhir:originalText [
                        fhir:reference [
-                         fhir:value [ fhir:v "#tetanos2-reac"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "#vaccin-02-reaction"^^xsd:anyURI ]
                        ]
                      ]
                    ] )
@@ -5094,7 +5090,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#tetanos2-comment"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#vaccin-02-comment"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -5126,7 +5122,7 @@
                ] ;
                fhir:text [
                  fhir:reference [
-                   fhir:value [ fhir:v "#tetanos1"^^xsd:anyURI ]
+                   fhir:value [ fhir:v "#vaccin-01"^^xsd:anyURI ]
                  ]
                ] ;
                fhir:statusCode [
@@ -5301,7 +5297,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#tetanos1-reac"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#vaccin-01-reaction"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -5319,7 +5315,7 @@
                      fhir:displayName [ fhir:v "Fièvre due à des médicaments" ] ;
                      fhir:originalText [
                        fhir:reference [
-                         fhir:value [ fhir:v "#tetanos1-reac"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "#vaccin-01-reaction"^^xsd:anyURI ]
                        ]
                      ]
                    ] )
@@ -5344,7 +5340,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#tetanos1-comment"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#vaccin-01-comment"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -6351,7 +6347,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Directives anticipées" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Directives anticipées structurées :</span></p><table border=\"0\"><thead><tr><th>Directive</th><th>Précision</th><th>Date de la directive</th><th>Commentaire</th></tr></thead><tbody><tr><td><span id=\"maintien-artificiel-en-vie\">Maintient artificiel en\n                    vie</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-01-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"assistance-respiratoire\">Assistance respiratoire</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-02-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"alimentation-hydratation-artificielles\">Alimentation et\n                      hydratation artificielles</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-03-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"dialyse-renale\">Dialyse rénale</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-04-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"reanimation-cardiaque-respiratoire\">Réanimation cardiaque et\n                      respiratoire</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-05-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"intervention-chirurgicale\">Intervention\n                    chirurgicale</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-06-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"sedation-profonde\">Sédation profonde et continue associée à un\n                      traitement de la douleur</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-07-commentaire\">(Texte libre)</span></td></tr></tbody></table><p><span style=\"font-weight: small-caps\">Directives anticipées non structurées :</span></p><table border=\"0\"><thead><tr><th>Directives anticipées non structurées (pdf récupérées du DMP 01/04/2024)</th></tr></thead><tbody><tr><td><img src=\"directives-anticipees-pdf\"/></td></tr><tr><td>Commentaire : <span id=\"directive-08-commentaire\">(Texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Directives anticipées structurées :</span></p><table border=\"0\"><thead><tr><th>Directive</th><th>Précision</th><th>Date de la directive</th><th>Commentaire</th></tr></thead><tbody><tr><td><span id=\"maintien-artificiel-en-vie\">Maintient artificiel en\n                    vie</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-01-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"assistance-respiratoire\">Assistance respiratoire</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-02-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"alimentation-hydratation-artificielles\">Alimentation et\n                      hydratation artificielles</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-03-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"dialyse-renale\">Dialyse rénale</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-04-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"reanimation-cardiaque-respiratoire\">Réanimation cardiaque et\n                      respiratoire</span></td><td>Non autorisé</td><td>01/01/2018</td><td><span id=\"directive-05-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"intervention-chirurgicale\">Intervention\n                    chirurgicale</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-06-commentaire\">(Texte libre)</span></td></tr><tr><td><span id=\"sedation-profonde\">Sédation profonde et continue associée à un\n                      traitement de la douleur</span></td><td>Autorisé</td><td>01/01/2018</td><td><span id=\"directive-07-commentaire\">(Texte libre)</span></td></tr></tbody></table><p><span style=\"font-weight: small-caps\">Directives anticipées non structurées :</span></p><table border=\"0\"><thead><tr><th>Directives anticipées non structurées (pdf récupérées du DMP 01/04/2024)</th></tr></thead><tbody><tr><td id=\"directives-anticipees\"><img src=\"directives-anticipees-pdf\"/></td></tr><tr><td>Commentaire : <span id=\"directive-08-commentaire\">(Texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:observation [
                fhir:classCode [ fhir:v "OBS" ] ;
@@ -6873,7 +6869,7 @@
                ] ; #  valeur issue du jdv-type-directive-anticipee-cisis (1.2.250.1.213.1.1.5.136) 
                fhir:text [
                  fhir:reference [
-                   fhir:value [ fhir:v "#directives-anticipees-pdf"^^xsd:anyURI ]
+                   fhir:value [ fhir:v "#directives-anticipees"^^xsd:anyURI ]
                  ]
                ] ;
                fhir:statusCode [
@@ -6948,7 +6944,7 @@
            fhir:title [
              fhir:xmlText [ fhir:v "Résultats" ]
            ] ;
-           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Biologie :</span></p><table border=\"0\"><thead><tr><th>Date</th><th>Examen</th><th>Résultat</th><th>Interprétation</th><th>Valeur de référence</th><th>Commentaire</th></tr></thead><tbody><tr><td>29/03/2024</td><td><span id=\"resultat-biologie-01\">CRP</span></td><td> &lt;1.0 mg/L </td><td>Normal</td><td>&lt;6.0 mg/L </td><td><span id=\"resultat-biologie-01-commentaire\">(Texte libre)</span></td></tr></tbody></table><p><span style=\"font-weight: small-caps\">Imagerie :</span></p><table border=\"0\"><thead><tr><th>Date</th><th>Examen</th><th>Résultat</th><th>Localisation anatomique</th><th>Commentaire</th></tr></thead><tbody><tr><td>29/03/2024</td><td><span id=\"resultat-imagerie-02\">CT rachis dorsal avec contraste IV</span></td><td><span id=\"resultat-imagerie-02-resultat\">Pas d'embolie pulmonaire proximale</span></td><td><span id=\"resultat-imagerie-02-localisation\">Thorax entier</span></td><td><span id=\"resultat-imagerie-02-commentaire\">(Texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
+           fhir:text "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><span style=\"font-weight: small-caps\">Biologie :</span></p><table border=\"0\"><thead><tr><th>Date</th><th>Examen</th><th>Résultat</th><th>Interprétation</th><th>Valeur de référence</th><th>Commentaire</th></tr></thead><tbody><tr><td>29/03/2024</td><td><span id=\"resultat-biologie-01\">CRP</span></td><td> &lt;1.0 mg/L </td><td>Normal</td><td>&lt;6.0 mg/L </td><td><span id=\"resultat-biologie-01-commentaire\">(Texte libre)</span></td></tr></tbody></table><p><span style=\"font-weight: small-caps\">Imagerie :</span></p><table border=\"0\"><thead><tr><th>Date</th><th>Examen</th><th>Résultat</th><th>Localisation anatomique</th><th>Commentaire</th></tr></thead><tbody><tr><td>29/03/2024</td><td><span id=\"resultat-imagerie-01\">CT rachis dorsal avec contraste IV</span></td><td><span id=\"resultat-imagerie-01-resultat\">Pas d'embolie pulmonaire proximale</span></td><td><span id=\"resultat-imagerie-01-localisation\">Thorax entier</span></td><td><span id=\"resultat-imagerie-01-commentaire\">(Texte libre)</span></td></tr></tbody></table></div>"^^rdf:XMLLiteral ;
            fhir:entry ( [
              fhir:organizer [
                fhir:classCode [ fhir:v "CLUSTER" ] ;
@@ -7269,12 +7265,7 @@
                  fhir:code [ fhir:v "18748-4" ] ;
                  fhir:codeSystem [ fhir:v "2.16.840.1.113883.6.1" ] ;
                  fhir:codeSystemName [ fhir:v "LOINC" ] ;
-                 fhir:displayName [ fhir:v "Imagerie" ] ;
-                 fhir:originalText [
-                   fhir:reference [
-                     fhir:value [ fhir:v "#resultat-02"^^xsd:anyURI ]
-                   ]
-                 ]
+                 fhir:displayName [ fhir:v "Imagerie" ]
                ] ;
                fhir:statusCode [
                  fhir:code [ fhir:v "completed" ]
@@ -7509,7 +7500,7 @@
                    ] ;
                    fhir:text [
                      fhir:reference [
-                       fhir:value [ fhir:v "#resultat-imagerie-02"^^xsd:anyURI ]
+                       fhir:value [ fhir:v "#resultat-imagerie-01"^^xsd:anyURI ]
                      ]
                    ] ;
                    fhir:statusCode [
@@ -7521,7 +7512,7 @@
                    fhir:value ( [
                      fhir:originalText [
                        fhir:reference [
-                         fhir:value [ fhir:v "#resultat-imagerie-02-resultat"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "#resultat-imagerie-01-resultat"^^xsd:anyURI ]
                        ]
                      ]
                    ] ) ;
@@ -7533,7 +7524,7 @@
                      fhir:originalText [
                        fhir:mediaType [ fhir:v "text/xml" ] ;
                        fhir:reference [
-                         fhir:value [ fhir:v "#resultat-imagerie-02-localisation"^^xsd:anyURI ]
+                         fhir:value [ fhir:v "#resultat-imagerie-01-localisation"^^xsd:anyURI ]
                        ]
                      ]
                    ] ) ; #  [0..1] Localisation anatomique 
@@ -7558,7 +7549,7 @@
                        ] ;
                        fhir:text [
                          fhir:reference [
-                           fhir:value [ fhir:v "#resultat-imagerie-02-commentaire"^^xsd:anyURI ]
+                           fhir:value [ fhir:v "#resultat-imagerie-01-commentaire"^^xsd:anyURI ]
                          ]
                        ] ;
                        fhir:statusCode [

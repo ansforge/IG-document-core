@@ -10,6 +10,7 @@
       Historique :
       02/04/2024 : Création IPS-FR_2023.01 (conforme IPS) 
       21/08/2025 : Maj des codeSystemName en fonction de la nouvelle règle de nommage
+      25/08/2025 : Maj des références parties narratives / entrées
       **********************************************************************************************************
     -->
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1659,10 +1660,14 @@
                     <content ID="allergie-01-agent">Paracétamol</content>
                   </td>
                   <td>
-                    <content ID="allergie-statut-01">Actif</content>
+                    <content ID="allergie-01-statut">Actif</content>
                   </td>
-                  <td>Bas</td>
-                  <td>Confirmé</td>
+                  <td>
+                    <content ID="allergie-01-criticite">Bas</content>
+                  </td>
+                  <td>
+                    <content ID="allergie-01-certitude">Confirmé</content>
+                  </td>
                   <td>
                     <content ID="allergie-01-reaction-1">Bronchospasme d'origine
                       médicamenteuse</content>
@@ -1728,7 +1733,7 @@
                   <!--  Description clinique de l'allergie / hypersensibilité : non renseigné  -->
                   <value xsi:type="CD">
                     <originalText>
-                      <reference value="#"/>
+                      <reference value="noref"/>
                     </originalText>
                   </value>
                   <!--  Agent responsable de l'allergie / hypersensibilité  -->
@@ -1757,7 +1762,7 @@
                       <templateId root="1.2.250.1.213.1.1.3.30"/>
                       <code xsi:type="CD" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status"/>
                       <text xsi:type="ED">
-                        <reference value="#allergie-statut-01"/>
+                        <reference value="#allergie-01-statut"/>
                       </text>
                       <statusCode code="completed"/>
                       <!--  valeur du jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372)  -->
@@ -1776,7 +1781,7 @@
                       <id root="B6B00F3F-40A0-419F-847F-FDA1E0908EC8"/>
                       <code xsi:type="CD" code="82606-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Criticité"/>
                       <text xsi:type="ED">
-                        <reference value="#"/>
+                        <reference value="#allergie-01-criticite"/>
                       </text>
                       <statusCode code="completed"/>
                       <effectiveTime nullFlavor="NA"/>
@@ -1796,7 +1801,7 @@
                       <id root="BC6A2067-884F-4D55-8B27-E8C2BE276F29"/>
                       <code xsi:type="CD" code="66455-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Certitude"/>
                       <text xsi:type="ED">
-                        <reference value="#"/>
+                        <reference value="#allergie-01-certitude"/>
                       </text>
                       <statusCode code="completed"/>
                       <effectiveTime nullFlavor="NA"/>
@@ -2217,6 +2222,7 @@
                   </td>
                   <td>
                     <content ID="med-01-doseMin-1">1 cp</content>
+                    <content ID="med-01-doseMax-1"/>
                   </td>
                   <td>
                     <content ID="med-01-frequence">1 fois/j</content>
@@ -2386,7 +2392,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr ID="DM-01">
                   <td>11/08/2019</td>
                   <td/>
                   <td>
@@ -2397,7 +2403,7 @@
                     <content ID="DM-01-commentaire">(texte libre)</content>
                   </td>
                 </tr>
-                <tr>
+                <tr ID="DM-02">
                   <td>11/08/2013</td>
                   <td/>
                   <td>
@@ -2422,7 +2428,7 @@
               <id nullFlavor="UNK"/>
               <!--  Référence vers la partie narrative de la section DM  -->
               <text>
-                <reference value="#DM-001"/>
+                <reference value="#DM-01"/>
               </text>
               <!--  Date d'utilisation du DM  -->
               <effectiveTime xsi:type="IVL_TS">
@@ -2472,7 +2478,7 @@
               <id nullFlavor="UNK"/>
               <!--  Référence vers la partie narrative de la section DM  -->
               <text>
-                <reference value="#DM-001"/>
+                <reference value="#DM-02"/>
               </text>
               <!--  Date d'utilisation du DM  -->
               <effectiveTime xsi:type="IVL_TS">
@@ -2709,11 +2715,7 @@
                   <templateId root="1.2.250.1.213.1.1.3.25"/>
                   <id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFD"/>
                   <!--  Autre type de statut fonctionnel  -->
-                  <code xsi:type="CD" code="GEN-092.04.23" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS" displayName="Autre statut fonctionnel">
-                    <originalText>
-                      <reference value="#statut-fonctionnel-03"/>
-                    </originalText>
-                  </code>
+                  <code xsi:type="CD" code="GEN-092.04.23" codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS" displayName="Autre statut fonctionnel"/>
                   <text xsi:type="ED">
                     <reference value="#statut-fonctionnel-03"/>
                   </text>
@@ -3426,7 +3428,7 @@
                   <id root="F9E020E2-D219-43D4-8BF8-6B275E1F726D"/>
                   <code xsi:type="CD" code="418799008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="symptôme rapporté par le patient ou le répondant"/>
                   <text xsi:type="ED">
-                    <reference value="#tetanos2-reac"/>
+                    <reference value="#vaccin-02-reaction"/>
                   </text>
                   <statusCode code="completed"/>
                   <effectiveTime>
@@ -3434,7 +3436,7 @@
                   </effectiveTime>
                   <value xsi:type="CD" code="R50.2" codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI" displayName="Fièvre due à des médicaments">
                     <originalText>
-                      <reference value="#tetanos2-reac"/>
+                      <reference value="#vaccin-02-reaction"/>
                     </originalText>
                   </value>
                 </observation>
@@ -3450,7 +3452,7 @@
                   <templateId root="1.2.250.1.213.1.1.3.32"/>
                   <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Commentaire"/>
                   <text>
-                    <reference value="#tetanos2-comment"/>
+                    <reference value="#vaccin-02-comment"/>
                   </text>
                   <statusCode code="completed"/>
                 </act>
@@ -3469,7 +3471,7 @@
               <id root="41DAC707-7C96-47B7-B600-AC63D8002142"/>
               <code code="INITIMMUNIZ" codeSystem="2.16.840.1.113883.5.4" codeSystemName="HL7_ActCode" displayName="1ère série vaccinante"/>
               <text>
-                <reference value="#tetanos1"/>
+                <reference value="#vaccin-01"/>
               </text>
               <statusCode code="completed"/>
               <effectiveTime xsi:type="SXCM-TS" value="20090928094914+0100"/>
@@ -3558,7 +3560,7 @@
                   <id root="3374F9E9-6175-442E-929A-73B07F3D2484"/>
                   <code xsi:type="CD" code="418799008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="symptôme rapporté par le patient ou le répondant"/>
                   <text xsi:type="ED">
-                    <reference value="#tetanos1-reac"/>
+                    <reference value="#vaccin-01-reaction"/>
                   </text>
                   <statusCode code="completed"/>
                   <effectiveTime>
@@ -3566,7 +3568,7 @@
                   </effectiveTime>
                   <value xsi:type="CD" code="R50.2" codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI" displayName="Fièvre due à des médicaments">
                     <originalText>
-                      <reference value="#tetanos1-reac"/>
+                      <reference value="#vaccin-01-reaction"/>
                     </originalText>
                   </value>
                 </observation>
@@ -3582,7 +3584,7 @@
                   <templateId root="1.2.250.1.213.1.1.3.32"/>
                   <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Commentaire"/>
                   <text>
-                    <reference value="#tetanos1-comment"/>
+                    <reference value="#vaccin-01-comment"/>
                   </text>
                   <statusCode code="completed"/>
                 </act>
@@ -4482,7 +4484,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td ID="directives-anticipees">
                     <renderMultiMedia referencedObject="directives-anticipees-pdf"/>
                   </td>
                 </tr>
@@ -4803,7 +4805,7 @@
               <!--  valeur issue du jdv-type-directive-anticipee-cisis (1.2.250.1.213.1.1.5.136)  -->
               <code xsi:type="CD" code="42348-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Directives anticipées"/>
               <text xsi:type="ED">
-                <reference value="#directives-anticipees-pdf"/>
+                <reference value="#directives-anticipees"/>
               </text>
               <statusCode code="completed"/>
               <!--  Date du document Directives anticipées récupéré du DMP  -->
@@ -4892,16 +4894,16 @@
                 <tr>
                   <td>29/03/2024</td>
                   <td>
-                    <content ID="resultat-imagerie-02">CT rachis dorsal avec contraste IV</content>
+                    <content ID="resultat-imagerie-01">CT rachis dorsal avec contraste IV</content>
                   </td>
                   <td>
-                    <content ID="resultat-imagerie-02-resultat">Pas d'embolie pulmonaire proximale</content>
+                    <content ID="resultat-imagerie-01-resultat">Pas d'embolie pulmonaire proximale</content>
                   </td>
                   <td>
-                    <content ID="resultat-imagerie-02-localisation">Thorax entier</content>
+                    <content ID="resultat-imagerie-01-localisation">Thorax entier</content>
                   </td>
                   <td>
-                    <content ID="resultat-imagerie-02-commentaire">(Texte libre)</content>
+                    <content ID="resultat-imagerie-01-commentaire">(Texte libre)</content>
                   </td>
                 </tr>
               </tbody>
@@ -5050,11 +5052,7 @@
               <!--  Conformité FR-Resultats (CI-SIS)  -->
               <templateId root="1.2.250.1.213.1.1.3.208"/>
               <id root="D5C3639B-2A68-4C87-8019-CBD941B7B429"/>
-              <code code="18748-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imagerie">
-                <originalText>
-                  <reference value="#resultat-02"/>
-                </originalText>
-              </code>
+              <code code="18748-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Imagerie"/>
               <statusCode code="completed"/>
               <effectiveTime value="20240329"/>
               <!--  Laboratoire exécutant  -->
@@ -5150,19 +5148,19 @@
                   <id root="8D40D39D-3574-496A-91EA-B7BE236ABD1A"/>
                   <code xsi:type="CD" code="24979-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="CT rachis dorsal avec contraste IV"/>
                   <text xsi:type="ED">
-                    <reference value="#resultat-imagerie-02"/>
+                    <reference value="#resultat-imagerie-01"/>
                   </text>
                   <statusCode code="completed"/>
                   <effectiveTime value="20240329"/>
                   <value xsi:type="CD">
                     <originalText>
-                      <reference value="#resultat-imagerie-02-resultat"/>
+                      <reference value="#resultat-imagerie-01-resultat"/>
                     </originalText>
                   </value>
                   <!--  [0..1] Localisation anatomique  -->
                   <targetSiteCode code="302551006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT" displayName="thorax entier">
                     <originalText mediaType="text/xml">
-                      <reference value="#resultat-imagerie-02-localisation"/>
+                      <reference value="#resultat-imagerie-01-localisation"/>
                     </originalText>
                   </targetSiteCode>
                   <!--  Entrée FR-Commentaire-ER  -->
@@ -5176,7 +5174,7 @@
                       <templateId root="1.2.250.1.213.1.1.3.32"/>
                       <code code="48767-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Commentaire"/>
                       <text>
-                        <reference value="#resultat-imagerie-02-commentaire"/>
+                        <reference value="#resultat-imagerie-01-commentaire"/>
                       </text>
                       <statusCode code="completed"/>
                     </act>
