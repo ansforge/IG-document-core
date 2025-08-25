@@ -303,6 +303,7 @@
       Historique :
       02/04/2024 : Création IPS-FR_2023.01 (conforme IPS) 
       21/08/2025 : Maj des codeSystemName en fonction de la nouvelle règle de nommage
+      25/08/2025 : Maj des références parties narratives / entrées
       **********************************************************************************************************
     --&gt;
 &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ClinicalDocument.html#ClinicalDocument">ClinicalDocument</a> xmlns=&quot;urn:hl7-org:v3&quot;&gt;
@@ -2146,10 +2147,14 @@
                     &lt;content ID=&quot;allergie-01-agent&quot;&gt;Paracétamol&lt;/content&gt;
                   &lt;/td&gt;
                   &lt;td&gt;
-                    &lt;content ID=&quot;allergie-statut-01&quot;&gt;Actif&lt;/content&gt;
+                    &lt;content ID=&quot;allergie-01-statut&quot;&gt;Actif&lt;/content&gt;
                   &lt;/td&gt;
-                  &lt;td&gt;Bas&lt;/td&gt;
-                  &lt;td&gt;Confirmé&lt;/td&gt;
+                  &lt;td&gt;
+                    &lt;content ID=&quot;allergie-01-criticite&quot;&gt;Bas&lt;/content&gt;
+                  &lt;/td&gt;
+                  &lt;td&gt;
+                    &lt;content ID=&quot;allergie-01-certitude&quot;&gt;Confirmé&lt;/content&gt;
+                  &lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID=&quot;allergie-01-reaction-1&quot;&gt;Bronchospasme d'origine
                       médicamenteuse&lt;/content&gt;
@@ -2217,7 +2222,7 @@
                   &lt;!--  Description clinique de l'allergie / hypersensibilité : non renseigné  --&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a> xsi:type=&quot;CD&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#&quot;/&gt;
+                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;noref&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a>&gt;
                   &lt;!--  Agent responsable de l'allergie / hypersensibilité  --&gt;
@@ -2251,7 +2256,7 @@
                             <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot;
                             <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;33999-4&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#allergie-statut-01&quot;/&gt;
+                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#allergie-01-statut&quot;/&gt;
                       &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                       &lt;!--  valeur du jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372)  --&gt;
@@ -2275,7 +2280,7 @@
                             <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot;
                             <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;82606-5&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#&quot;/&gt;
+                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#allergie-01-criticite&quot;/&gt;
                       &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">effectiveTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;NA&quot;/&gt;
@@ -2300,7 +2305,7 @@
                             <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot;
                             <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;66455-7&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#&quot;/&gt;
+                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#allergie-01-certitude&quot;/&gt;
                       &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">effectiveTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;NA&quot;/&gt;
@@ -2768,6 +2773,7 @@
                   &lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID=&quot;med-01-doseMin-1&quot;&gt;1 cp&lt;/content&gt;
+                    &lt;content ID=&quot;med-01-doseMax-1&quot;/&gt;
                   &lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID=&quot;med-01-frequence&quot;&gt;1 fois/j&lt;/content&gt;
@@ -2946,7 +2952,7 @@
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
-                &lt;tr&gt;
+                &lt;tr ID=&quot;DM-01&quot;&gt;
                   &lt;td&gt;11/08/2019&lt;/td&gt;
                   &lt;td/&gt;
                   &lt;td&gt;
@@ -2957,7 +2963,7 @@
                     &lt;content ID=&quot;DM-01-commentaire&quot;&gt;(texte libre)&lt;/content&gt;
                   &lt;/td&gt;
                 &lt;/tr&gt;
-                &lt;tr&gt;
+                &lt;tr ID=&quot;DM-02&quot;&gt;
                   &lt;td&gt;11/08/2013&lt;/td&gt;
                   &lt;td/&gt;
                   &lt;td&gt;
@@ -2982,7 +2988,7 @@
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;UNK&quot;/&gt;
               &lt;!--  Référence vers la partie narrative de la section DM  --&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">text</a>&gt;
-                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#DM-001&quot;/&gt;
+                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#DM-01&quot;/&gt;
               &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">text</a>&gt;
               &lt;!--  Date d'utilisation du DM  --&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.effectiveTime">effectiveTime</a> xsi:type=&quot;IVL_TS&quot;&gt;
@@ -3035,7 +3041,7 @@
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">nullFlavor</a>=&quot;UNK&quot;/&gt;
               &lt;!--  Référence vers la partie narrative de la section DM  --&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">text</a>&gt;
-                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#DM-001&quot;/&gt;
+                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#DM-02&quot;/&gt;
               &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.text">text</a>&gt;
               &lt;!--  Date d'utilisation du DM  --&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Supply.html#Supply.effectiveTime">effectiveTime</a> xsi:type=&quot;IVL_TS&quot;&gt;
@@ -3293,12 +3299,8 @@
                   &lt;!--  Autre type de statut fonctionnel  --&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.id">xsi:type</a>=&quot;CD&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Autre statut fonctionnel&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;TerminologieCISIS&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;1.2.250.1.213.1.1.4.322&quot;
-                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;GEN-092.04.23&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#statut-fonctionnel-03&quot;/&gt;
-                    &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                  &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a>&gt;
-                  &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> xsi:type=&quot;ED&quot;&gt;
+                        <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;GEN-092.04.23&quot;/&gt;
+                  &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#statut-fonctionnel-03&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
@@ -4056,7 +4058,7 @@
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;symptôme rapporté par le patient ou le répondant&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;SNOMED_CT&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.96&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;418799008&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos2-reac&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-02-reaction&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">effectiveTime</a>&gt;
@@ -4066,7 +4068,7 @@
                          <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Fièvre due à des médicaments&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;CIM10FRPMSI&quot;
                          <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.3&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;R50.2&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos2-reac&quot;/&gt;
+                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-02-reaction&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a>&gt;
                 &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.observation">observation</a>&gt;
@@ -4083,7 +4085,7 @@
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Commentaire&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;48767-8&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos2-comment&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-02-comment&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                 &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.act">act</a>&gt;
@@ -4104,7 +4106,7 @@
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;1ère série vaccinante&quot;
                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;HL7_ActCode&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.5.4&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;INITIMMUNIZ&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>&gt;
-                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos1&quot;/&gt;
+                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-01&quot;/&gt;
               &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.text">text</a>&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.effectiveTime">effectiveTime</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-SubstanceAdministration.html#SubstanceAdministration.statusCode">xsi:type</a>=&quot;SXCM-TS&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;20090928094914+0100&quot;/&gt;
@@ -4206,7 +4208,7 @@
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;symptôme rapporté par le patient ou le répondant&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;SNOMED_CT&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.96&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;418799008&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos1-reac&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-01-reaction&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">effectiveTime</a>&gt;
@@ -4216,7 +4218,7 @@
                          <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Fièvre due à des médicaments&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;CIM10FRPMSI&quot;
                          <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.3&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;R50.2&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos1-reac&quot;/&gt;
+                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-01-reaction&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a>&gt;
                 &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.observation">observation</a>&gt;
@@ -4233,7 +4235,7 @@
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Commentaire&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;48767-8&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#tetanos1-comment&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#vaccin-01-comment&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                 &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.act">act</a>&gt;
@@ -5178,7 +5180,7 @@
               &lt;/thead&gt;
               &lt;tbody&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;
+                  &lt;td ID=&quot;directives-anticipees&quot;&gt;
                     &lt;renderMultiMedia
                                       referencedObject=&quot;directives-anticipees-pdf&quot;/&gt;
                   &lt;/td&gt;
@@ -5518,7 +5520,7 @@
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">code</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.id">xsi:type</a>=&quot;CD&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Directives anticipées&quot;
                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;42348-3&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#directives-anticipees-pdf&quot;/&gt;
+                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#directives-anticipees&quot;/&gt;
               &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
               &lt;!--  Date du document Directives anticipées récupéré du DMP  --&gt;
@@ -5611,16 +5613,16 @@
                 &lt;tr&gt;
                   &lt;td&gt;29/03/2024&lt;/td&gt;
                   &lt;td&gt;
-                    &lt;content ID=&quot;resultat-imagerie-02&quot;&gt;CT rachis dorsal avec contraste IV&lt;/content&gt;
+                    &lt;content ID=&quot;resultat-imagerie-01&quot;&gt;CT rachis dorsal avec contraste IV&lt;/content&gt;
                   &lt;/td&gt;
                   &lt;td&gt;
-                    &lt;content ID=&quot;resultat-imagerie-02-resultat&quot;&gt;Pas d'embolie pulmonaire proximale&lt;/content&gt;
+                    &lt;content ID=&quot;resultat-imagerie-01-resultat&quot;&gt;Pas d'embolie pulmonaire proximale&lt;/content&gt;
                   &lt;/td&gt;
                   &lt;td&gt;
-                    &lt;content ID=&quot;resultat-imagerie-02-localisation&quot;&gt;Thorax entier&lt;/content&gt;
+                    &lt;content ID=&quot;resultat-imagerie-01-localisation&quot;&gt;Thorax entier&lt;/content&gt;
                   &lt;/td&gt;
                   &lt;td&gt;
-                    &lt;content ID=&quot;resultat-imagerie-02-commentaire&quot;&gt;(Texte libre)&lt;/content&gt;
+                    &lt;content ID=&quot;resultat-imagerie-01-commentaire&quot;&gt;(Texte libre)&lt;/content&gt;
                   &lt;/td&gt;
                 &lt;/tr&gt;
               &lt;/tbody&gt;
@@ -5778,11 +5780,7 @@
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.templateId">templateId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;1.2.250.1.213.1.1.3.208&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">root</a>=&quot;D5C3639B-2A68-4C87-8019-CBD941B7B429&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Imagerie&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot;
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;18748-4&quot;&gt;
-                &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                  &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-02&quot;/&gt;
-                &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-              &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.code">code</a>&gt;
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;18748-4&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
               &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Organizer.html#Organizer.effectiveTime">effectiveTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;20240329&quot;/&gt;
               &lt;!--  Laboratoire exécutant  --&gt;
@@ -5886,13 +5884,13 @@
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;CT rachis dorsal avec contraste IV&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot;
                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;24979-7&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.code">xsi:type</a>=&quot;ED&quot;&gt;
-                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-02&quot;/&gt;
+                    &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-01&quot;/&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.text">text</a>&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">effectiveTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;20240329&quot;/&gt;
                   &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a> <a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.effectiveTime">xsi:type</a>=&quot;CD&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-02-resultat&quot;/&gt;
+                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-01-resultat&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.value">value</a>&gt;
                   &lt;!--  [0..1] Localisation anatomique  --&gt;
@@ -5900,7 +5898,7 @@
                                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;SNOMED_CT&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.96&quot;
                                   <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;302551006&quot;&gt;
                     &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">mediaType</a>=&quot;text/xml&quot;&gt;
-                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-02-localisation&quot;/&gt;
+                      &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-01-localisation&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-CD.html#CD.originalText">originalText</a>&gt;
                   &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Observation.html#Observation.targetSiteCode">targetSiteCode</a>&gt;
                   &lt;!--  Entrée FR-Commentaire-ER  --&gt;
@@ -5915,7 +5913,7 @@
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">displayName</a>=&quot;Commentaire&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystemName</a>=&quot;LOINC&quot;
                             <a href="http://hl7.org/fhir/R4/datatypes.html#string">codeSystem</a>=&quot;2.16.840.1.113883.6.1&quot; <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;48767-8&quot;/&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
-                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-02-commentaire&quot;/&gt;
+                        &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-ED.html#ED.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;#resultat-imagerie-01-commentaire&quot;/&gt;
                       &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.text">text</a>&gt;
                       &lt;<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-Act.html#Act.statusCode">statusCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a>=&quot;completed&quot;/&gt;
                     &lt;/<a href="http://hl7.org/cda/stds/core/2.0.0-sd/StructureDefinition-EntryRelationship.html#EntryRelationship.act">act</a>&gt;
@@ -6086,7 +6084,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 22, 2025 10:18+0000">2025-08-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 25, 2025 15:43+0000">2025-08-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
