@@ -8,7 +8,6 @@ Description: "L'élément de l'en-tête du CDA authorization permet de documente
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * consent ^short = "Consentement"
 * consent.id ^short = "Identifiant du consentement"
 * consent.code ^short = "Type de consentement"

@@ -13,7 +13,6 @@ Description: "L'élément de l'en-tête du CDA assignedEntity est utilisé dans 
 * code.codeSystemVersion 0..0
 * code.sdtcValueSet 0..0
 * code.sdtcValueSetVersion 0..0
-* classCode 0..0
 * id ^short = "Identifiant du responsable"
 * id 1..1
 * id.nullFlavor 0..0

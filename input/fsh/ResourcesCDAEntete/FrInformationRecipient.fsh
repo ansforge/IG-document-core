@@ -9,6 +9,5 @@ Description: "L'élément de l'en-tête du CDA informationRecipient permet d'enr
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * intendedRecipient ^short = "Destinataire prévu du document."
 * intendedRecipient only fr-core-intended-recipient

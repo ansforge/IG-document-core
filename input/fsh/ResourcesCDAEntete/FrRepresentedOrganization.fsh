@@ -5,7 +5,6 @@ Id: fr-core-represented-organization
 Title: "CDA - representedOrganization"
 Description: "L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."
 * ^status = #draft
-* classCode 0..0 
 * determinerCode 0..0
 * typeId.nullFlavor 0..0 
 * typeId.assigningAuthorityName 0..0

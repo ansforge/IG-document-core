@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA legalAuthenticator permet de repr
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * contextControlCode 0..0
 * sdtcSignatureText 0..0
 * time ^short = "Date et heure de la prise de responsabilité" 

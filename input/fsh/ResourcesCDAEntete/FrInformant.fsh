@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA informant permet d'identifier un 
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * contextControlCode 0..0
 * assignedEntity only fr-core-assigned-entity
 * assignedEntity ^short = "Professionnel / Structure / Patient/usager ayant fourni des informations relatives au document."
