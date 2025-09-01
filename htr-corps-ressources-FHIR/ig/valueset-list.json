@@ -1,6 +1,39 @@
 {
   "codeSystems" : [
     {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-actor-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetActorType",
+      "title" : "ValueSet - Types d'acteurs",
+      "description" : "Jeu de valeurs pour les types d'acteurs.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-code-produit",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetCodeProduit",
+      "title" : "Fr ValueSet Codes ATC ou CIS pour les vaccins",
+      "description" : "Ce jeu de valeurs contient les systèmes ATC et CIS (ANSM) utilisés pour coder les vaccins.",
+      "systems" : [
+        "https://smt.esante.gouv.fr/terminologie-bdpm/",
+        "https://smt.esante.gouv.fr/terminologie-atc"
+      ]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-medication-administration-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetMedicationAdministrationCategory",
+      "title" : "Fr ValueSet Catégories de médicament (actes ou absence)",
+      "description" : "Combinaison des JDVs pour acte ou situation et absence de médicament",
+      "systems" : [
+        "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      ]
+    },
+    {
       "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-participation-type",
       "version" : "0.1.0",
       "status" : "draft",
@@ -55,6 +88,15 @@
       ]
     },
     {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-resultat",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetTypeResultat",
+      "title" : "Fr ValueSet Type Resultat",
+      "description" : "ValueSet contenant les codes LOINC autorisés pour les types de résultats",
+      "systems" : ["http://loinc.org"]
+    },
+    {
       "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste",
       "version" : "0.1.0",
       "status" : "draft",
@@ -97,6 +139,41 @@
       "systems" : [
         "https://mos.esante.gouv.fr/NOS/TRE_R04-TypeSavoirFaire/FHIR/TRE-R04-TypeSavoirFaire"
       ]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-vac-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetVaccinationType",
+      "title" : "Fr ValueSet Type de vaccination",
+      "description" : "FR ValueSet Type de vaccination : \n\n - JDV_HL7_ActSubstanceAdministrationImmunizationCode_CISIS (2.16.840.1.113883.1.11.19709). Il permet d’indiquer si l’entrée concerne une vaccination. \nOU\n - JDV_AbsentOrUnknownImmunization_CISIS (1.2.250.1.213.1.1.5.666)",
+      "systems" : [
+        "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      ]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-vaccine-translation",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetVaccineTranslation",
+      "title" : "Fr ValueSet Vaccine-Translation pour les autres codifications",
+      "description" : "Systèmes autorisés pour les autres codifications (équivalent CDA translation).",
+      "systems" : [
+        "urn:oid:1.2.250.1.213.2.59",
+        "https://smt.esante.gouv.fr/terminologie-bdpm/",
+        "urn:oid:1.2.250.1.213.2.61",
+        "https://smt.esante.gouv.fr/terminologie-atc"
+      ]
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/document/core/ValueSet/vs-emdn",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "FrValueSetEDQM",
+      "title" : "Fr ValueSet EDQM - Standard terms",
+      "description" : "ValueSet basé sur le CodeSystem EDQM fourni par SMT",
+      "systems" : ["https://smt.esante.gouv.fr/terminologie-standardterms"]
     }
   ]
 }

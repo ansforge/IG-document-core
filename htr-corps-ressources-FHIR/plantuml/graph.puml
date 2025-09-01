@@ -279,6 +279,19 @@ package IG #DDDDDD{
              Bundle.entry:relatedPerson.resource => [None..None]
         } 
 
+        class FrCarePlanDocument{
+
+             CarePlan.identifier => [1..None]
+             CarePlan.category => [1..1]
+             CarePlan.category.coding => [1..1]
+             CarePlan.category.coding.system => [None..None]
+             CarePlan.category.coding.code => [None..None]
+             CarePlan.category.coding.display => [None..None]
+             CarePlan.author => [None..None]
+             CarePlan.activity.reference => [None..None]
+             CarePlan.activity.detail.product[x] => [None..None]
+        } 
+
         class FrCompositionDocument{
 
              Composition.meta.profile => [None..None]
@@ -933,6 +946,23 @@ package IG #DDDDDD{
              Device.owner => [1..None]
         } 
 
+        class FrDiagnosticReportDocument{
+
+             DiagnosticReport.identifier => [1..1]
+             DiagnosticReport.status => [None..None]
+             DiagnosticReport.code => [None..None]
+             DiagnosticReport.effective[x] => [1..None]
+             DiagnosticReport.performer => [None..None]
+             DiagnosticReport.performer.extension => [1..None]
+             DiagnosticReport.performer.extension:performerFunction => <&plus>[1..1]
+             DiagnosticReport.performer.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             DiagnosticReport.resultsInterpreter => [None..None]
+             DiagnosticReport.resultsInterpreter.extension => [1..None]
+             DiagnosticReport.resultsInterpreter.extension:performerFunction => <&plus>[1..1]
+             DiagnosticReport.resultsInterpreter.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             DiagnosticReport.result => [1..None]
+        } 
+
         class FrEncounterDocument{
 
              Encounter.type => [None..None]
@@ -952,6 +982,43 @@ package IG #DDDDDD{
              Encounter.location.location => [None..None]
         } 
 
+        class FrEncounterEvenementDocument{
+
+             Encounter.extension => [None..None]
+             Encounter.extension:caracteristique => <&plus>[0..*]
+             Encounter.extension:commentaire => <&plus>[0..*]
+             Encounter.extension:urlPiecesJointes => <&plus>[0..*]
+             Encounter.type => [None..None]
+             Encounter.type.extension:qualifier => <&plus>[0..*]
+             Encounter.reasonReference => [None..None]
+        } 
+
+        class FrHistoriqueGrossesseList{
+
+             List.identifier => [1..1]
+             List.status => [None..None]
+             List.code => [1..None]
+             List.code.coding.system => [None..None]
+             List.code.coding.code => [None..None]
+             List.code.coding.display => [None..None]
+             List.date => [1..None]
+             List.entry => [1..None]
+             List.entry.item => [None..None]
+        } 
+
+        class FrHistoriqueGrossesse{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.effective[x] => [1..None]
+             Observation.value[x] => [None..0]
+             Observation.hasMember => [1..None]
+        } 
+
         class HumanNameDocument{
 
              HumanName.family => [1..None]
@@ -969,6 +1036,324 @@ package IG #DDDDDD{
              Location.type.coding:categorieEtablissement => [0..1]
              Location.type.coding:categorieEtablissement.code => [None..None]
              Location.address => [None..None]
+        } 
+
+        class FrMedicationAdministrationDocument{
+
+             MedicationAdministration.text => [1..None]
+             MedicationAdministration.extension => [None..None]
+             MedicationAdministration.extension:Prescription => <&plus>[0..*]
+             MedicationAdministration.extension:precondition => <&plus>[0..1]
+             MedicationAdministration.identifier => [1..None]
+             MedicationAdministration.status => [None..None]
+             MedicationAdministration.category => [None..None]
+             MedicationAdministration.medication[x] => [None..None]
+             MedicationAdministration.effective[x] => [None..None]
+             MedicationAdministration.reasonReference => [None..None]
+             MedicationAdministration.dosage.extension => [None..None]
+             MedicationAdministration.dosage.extension:frequenceAdministration => <&plus>[0..1]
+             MedicationAdministration.dosage.extension:sequence => <&plus>[0..*]
+             MedicationAdministration.dosage.text => [None..None]
+             MedicationAdministration.dosage.site => [None..None]
+             MedicationAdministration.dosage.route => [None..None]
+             MedicationAdministration.dosage.dose => [None..None]
+             MedicationAdministration.dosage.rate[x] => [None..None]
+             MedicationAdministration.dosage.rate[x]:rateRatio => [0..1]
+             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
+        } 
+
+        class FrMedicationsCombinaisonDocument{
+
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.item[x]:itemReference => [0..1]
+        } 
+
+        class FrMedicationDispenseDocument{
+
+             MedicationDispense.text => [1..None]
+             MedicationDispense.identifier => [1..1]
+             MedicationDispense.medication[x] => [None..None]
+             MedicationDispense.supportingInformation => [None..1]
+             MedicationDispense.authorizingPrescription => [None..1]
+             MedicationDispense.type => [1..None]
+             MedicationDispense.type.coding => [None..None]
+             MedicationDispense.quantity => [1..None]
+             MedicationDispense.quantity.unit => [None..None]
+             MedicationDispense.dosageInstruction.text => [None..None]
+             MedicationDispense.dosageInstruction.additionalInstruction => [None..None]
+             MedicationDispense.dosageInstruction.patientInstruction => [None..None]
+             MedicationDispense.substitution => [None..None]
+             MedicationDispense.substitution.type => [1..None]
+        } 
+
+        class FrMedicationDocument{
+
+             Medication.extension => [1..None]
+             Medication.extension:productName => <&plus>[1..1]
+             Medication.extension:classification => <&plus>[0..*]
+             Medication.extension:conditionnement => <&plus>[0..*]
+             Medication.code => [1..None]
+             Medication.code.coding.extension:translation => <&plus>[0..*]
+             Medication.code.coding.extension:translation.value[x].coding.system => <&plus>[None..None]
+             Medication.form => [None..None]
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.item[x].extension => [1..None]
+             Medication.ingredient.item[x].extension:NomSubstance => <&plus>[1..1]
+             Medication.ingredient.strength => [None..None]
+             Medication.ingredient.strength.numerator => [1..None]
+             Medication.ingredient.strength.denominator => [1..None]
+             Medication.batch.lotNumber => [None..None]
+             Medication.batch.expirationDate => [None..None]
+        } 
+
+        class FrMedicationRequestDocument{
+
+             MedicationRequest.text => [1..None]
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:precondition => <&plus>[0..1]
+             MedicationRequest.identifier => [1..None]
+             MedicationRequest.identifier:referencePrescription => [1..*]
+             MedicationRequest.status => [None..None]
+             MedicationRequest.intent => [None..None]
+             MedicationRequest.category => [None..1]
+             MedicationRequest.category.coding => [1..1]
+             MedicationRequest.category.coding.system => [None..None]
+             MedicationRequest.category.coding.code => [None..None]
+             MedicationRequest.category.coding.display => [None..None]
+             MedicationRequest.doNotPerform => [None..None]
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.supportingInformation => [None..None]
+             MedicationRequest.supportingInformation.identifier => [None..None]
+             MedicationRequest.authoredOn => [None..None]
+             MedicationRequest.requester => [None..None]
+             MedicationRequest.requester.extension:author => <&plus>[0..1]
+             MedicationRequest.requester.extension:author.extension:type => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.performer => [None..None]
+             MedicationRequest.performer.extension:prescripteur => <&plus>[0..1]
+             MedicationRequest.performer.extension:prescripteur.extension:type => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.reasonReference => [None..None]
+             MedicationRequest.reasonReference:renouvellement => [0..1]
+             MedicationRequest.reasonReference:ald => [0..1]
+             MedicationRequest.reasonReference:accidentTravail => [0..1]
+             MedicationRequest.reasonReference:prevention => [0..1]
+             MedicationRequest.reasonReference:nonRemboursable => [0..1]
+             MedicationRequest.reasonReference:horsAMM => [0..1]
+             MedicationRequest.dosageInstruction => [None..None]
+             MedicationRequest.dosageInstruction.sequence => [None..None]
+             MedicationRequest.dosageInstruction.additionalInstruction => [None..None]
+             MedicationRequest.dosageInstruction.additionalInstruction.text => [None..None]
+             MedicationRequest.dosageInstruction.timing => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x] => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod => [0..1]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.start => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.end => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.frequency => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.period => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.periodUnit => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.when => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.offset => [None..None]
+             MedicationRequest.dosageInstruction.asNeeded[x] => [None..None]
+             MedicationRequest.dosageInstruction.site => [None..None]
+             MedicationRequest.dosageInstruction.route => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high => [1..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [1..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [1..None]
+             MedicationRequest.dispenseRequest => [None..None]
+             MedicationRequest.dispenseRequest.extension => [None..None]
+             MedicationRequest.dispenseRequest.extension:instructionsAuDispensateur => <&plus>[0..1]
+             MedicationRequest.dispenseRequest.numberOfRepeatsAllowed => [None..None]
+             MedicationRequest.dispenseRequest.quantity => [None..None]
+             MedicationRequest.substitution => [1..None]
+             MedicationRequest.substitution.allowed[x] => [None..None]
+             MedicationRequest.substitution.allowed[x]:allowedCodeableConcept => [0..1]
+        } 
+
+        class FrMedicationStatementDocument{
+
+             MedicationStatement.text => [1..None]
+             MedicationStatement.extension => [None..None]
+             MedicationStatement.extension:Prescription => <&plus>[0..*]
+             MedicationStatement.extension:precondition => <&plus>[0..1]
+             MedicationStatement.identifier => [1..None]
+             MedicationStatement.basedOn => [None..None]
+             MedicationStatement.partOf => [None..None]
+             MedicationStatement.status => [None..None]
+             MedicationStatement.category => [None..None]
+             MedicationStatement.medication[x] => [None..None]
+             MedicationStatement.effective[x] => [None..None]
+             MedicationStatement.reasonReference => [None..None]
+             MedicationStatement.dosage => [None..None]
+             MedicationStatement.dosage.extension:frequenceAdministration => <&plus>[0..1]
+             MedicationStatement.dosage.sequence => [None..None]
+             MedicationStatement.dosage.additionalInstruction => [None..None]
+             MedicationStatement.dosage.additionalInstruction.text => [None..None]
+             MedicationStatement.dosage.asNeeded[x] => [None..None]
+             MedicationStatement.dosage.site => [None..None]
+             MedicationStatement.dosage.route => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x] => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity => [0..1]
+        } 
+
+        class FrObservationGrossesseDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationNaissanceDocument{
+
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.focus => [1..1]
+             Observation.effective[x] => [1..None]
+             Observation.value[x] => [None..0]
+             Observation.hasMember => [1..None]
+        } 
+
+        class FrObservationRechercheMicroOrganismes{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationResultatDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.interpretation:observationRange => [0..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+             Observation.referenceRange => [None..None]
+        } 
+
+        class FrObservationStatutDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationStatut{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.value[x].coding.extension:qualifier => <&plus>[0..1]
+             Observation.value[x].coding.extension:qualifier.extension => <&plus>[2..None]
+             Observation.value[x].coding.extension:qualifier.extension:name => <&plus>[1..None]
+             Observation.value[x].coding.extension:qualifier.extension:name.value[x] => <&plus>[None..None]
+             Observation.value[x].coding.extension:qualifier.extension:value => <&plus>[1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationSurEchelleDouleur{
+
+             Observation.text => [1..None]
+             Observation.extension => [None..None]
+             Observation.extension:repeatNumber => <&plus>[0..1]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.effective[x] => [1..None]
+             Observation.effective[x]:effectiveDateTime => [1..1]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.bodySite => [None..None]
+        } 
+
+        class FrObservationSyntheseMedicaleSejourDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationTransfusionDeProduitsSanguins{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
         } 
 
         class FrOrganizationDocument{
@@ -1036,6 +1421,75 @@ package IG #DDDDDD{
              PractitionerRole.code:typeCode.coding => [None..None]
         } 
 
+        class FrProcedureTransportProfessionnel{
+
+             Procedure.text => [None..None]
+             Procedure.extension => [None..None]
+             Procedure.extension:precisionTransportProfessionnel => <&plus>[0..*]
+             Procedure.identifier => [1..1]
+             Procedure.code => [1..None]
+             Procedure.code.coding => [1..1]
+             Procedure.code.coding.extension:qualifier => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier.extension => <&plus>[2..None]
+             Procedure.code.coding.extension:qualifier.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier.extension:value => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier.extension:value.value[x].coding.system => <&plus>[None..None]
+             Procedure.code.coding.system => [1..None]
+             Procedure.code.coding.code => [1..None]
+             Procedure.performed[x] => [1..None]
+             Procedure.performed[x]:performedDateTime => [1..1]
+             Procedure.performer => [None..None]
+             Procedure.performer.extension => [None..None]
+             Procedure.performer.extension:transporteur => <&plus>[0..1]
+             Procedure.performer.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.location => [None..None]
+        } 
+
+        class FrProcedureTransportPatient{
+
+             Procedure.text => [None..None]
+             Procedure.extension => [None..None]
+             Procedure.extension:precisionTransportPatient => <&plus>[0..*]
+             Procedure.identifier => [1..1]
+             Procedure.code => [1..None]
+             Procedure.code.coding => [1..1]
+             Procedure.code.coding.extension:qualifier1 => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier1.extension => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier1.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier1.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier2 => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier2.extension => <&plus>[2..None]
+             Procedure.code.coding.extension:qualifier2.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier2.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier2.extension:value => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier2.extension:value.value[x].coding.system => <&plus>[None..None]
+             Procedure.code.coding.system => [1..None]
+             Procedure.code.coding.code => [1..None]
+             Procedure.performed[x] => [1..None]
+             Procedure.performed[x]:performedDateTime => [1..1]
+             Procedure.performer => [None..None]
+             Procedure.performer.extension => [None..None]
+             Procedure.performer.extension:transporteur => <&plus>[0..1]
+             Procedure.performer.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.location => [None..None]
+        } 
+
+        class FrReferencesExternesDocument{
+
+             DocumentReference.text => [1..None]
+             DocumentReference.identifier => [1..None]
+             DocumentReference.status => [None..None]
+             DocumentReference.type => [1..None]
+             DocumentReference.type.extension:dataAbsentReason => <&plus>[0..1]
+             DocumentReference.content => [None..None]
+             DocumentReference.content.attachment => [None..None]
+             DocumentReference.content.attachment.contentType => [1..None]
+             DocumentReference.content.attachment.url => [1..None]
+        } 
+
         class FrRelatedPersonDocument{
 
              RelatedPerson.relationship:Role => [None..None]
@@ -1044,6 +1498,87 @@ package IG #DDDDDD{
              RelatedPerson.relationship:RelationType => [None..1]
              RelatedPerson.name => [1..1]
              RelatedPerson.name.given => [None..1]
+        } 
+
+        class FrSigneVitalObserveDocument{
+
+             Observation => [None..None]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.effective[x] => [None..None]
+             Observation.performer => [None..1]
+             Observation.interpretation => [None..None]
+             Observation.bodySite => [None..None]
+             Observation.method => [None..None]
+             Observation.component.value[x] => [1..None]
+        } 
+
+        class FrSignesVitauxDocument{
+
+             Observation => [None..None]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.effective[x] => [None..None]
+             Observation.performer => [None..None]
+             Observation.hasMember => [None..None]
+        } 
+
+        class FrVaccinRecommandeDocument{
+
+             ImmunizationRecommendation.text => [1..None]
+             ImmunizationRecommendation.extension => [1..None]
+             ImmunizationRecommendation.extension:typeVaccination => <&plus>[1..1]
+             ImmunizationRecommendation.extension:typeVaccination.value[x].coding.system => <&plus>[None..None]
+             ImmunizationRecommendation.extension:prescription => <&plus>[0..1]
+             ImmunizationRecommendation.identifier => [1..1]
+             ImmunizationRecommendation.recommendation => [None..1]
+             ImmunizationRecommendation.recommendation.vaccineCode => [None..None]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation => <&plus>[0..*]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x].coding.system => <&plus>[None..None]
+             ImmunizationRecommendation.recommendation.forecastStatus => [None..None]
+             ImmunizationRecommendation.recommendation.dateCriterion => [1..1]
+             ImmunizationRecommendation.recommendation.dateCriterion.value => [None..None]
+             ImmunizationRecommendation.recommendation.description => [None..None]
+             ImmunizationRecommendation.recommendation.seriesDoses[x] => [None..None]
+             ImmunizationRecommendation.recommendation.seriesDoses[x]:seriesDosesPositiveInt => [0..1]
+             ImmunizationRecommendation.recommendation.supportingImmunization => [None..None]
+        } 
+
+        class FrVaccinationDocument{
+
+             Immunization.text => [1..None]
+             Immunization.extension => [2..None]
+             Immunization.extension:typeVaccination => <&plus>[1..1]
+             Immunization.extension:productName => <&plus>[1..1]
+             Immunization.extension:prescription => <&plus>[0..1]
+             Immunization.extension:doseAntigene => <&plus>[0..*]
+             Immunization.identifier => [1..1]
+             Immunization.status => [None..None]
+             Immunization.vaccineCode => [None..None]
+             Immunization.vaccineCode.extension:translation => <&plus>[0..*]
+             Immunization.vaccineCode.extension:translation.value[x].coding.system => <&plus>[None..None]
+             Immunization.occurrence[x] => [None..None]
+             Immunization.occurrence[x].extension => [None..None]
+             Immunization.occurrence[x].extension:dataAbsentReason => <&plus>[0..1]
+             Immunization.lotNumber => [None..None]
+             Immunization.expirationDate => [None..None]
+             Immunization.site => [None..None]
+             Immunization.route => [None..None]
+             Immunization.doseQuantity => [None..None]
+             Immunization.performer => [None..None]
+             Immunization.performer.actor.extension => [1..None]
+             Immunization.performer.actor.extension:author => <&plus>[1..1]
+             Immunization.performer.actor.extension:author.extension:type => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant => <&plus>[0..1]
+             Immunization.performer.actor.extension:executant.extension:type => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:type.value[x] => <&plus>[None..None]
+             Immunization.note => [None..1]
+             Immunization.reasonReference => [None..None]
+             Immunization.protocolApplied => [None..None]
+             Immunization.protocolApplied.doseNumber[x] => [None..None]
+             Immunization.protocolApplied.doseNumber[x]:doseNumberPositiveInt => [1..1]
          }
 
      }
@@ -1052,12 +1587,120 @@ package IG #DDDDDD{
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrAuthorTimeExtension
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrEvenementCaracteristiqueExtension
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrReferenceInterneExtension
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrAdministrationFrequency
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrSequenceExtension
+     FrMedicationDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrMedicationDocument -[#black,dashed,thickness=2]-> FrNomSubstance
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrDispenserInstructionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrAdministrationFrequency
+     FrObservationStatut -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrObservationSurEchelleDouleur -[#black,dashed,thickness=2]-> FrRepeatNumberExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrActorExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrVaccinationTypeExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrVaccinationTypeExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrDoseAntigeneExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrActorExtension
 
+        class FrActorExtension{
+
+          Extension.extension => [2..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:reference => [1..1]
+          Extension.extension:reference.extension => [None..0]
+          Extension.extension:reference.url => [None..None]
+          Extension.extension:reference.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrAdministrationFrequency{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrAuthorTimeExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrAutresPrecisionExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrDispenserInstructionExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
+        } 
+        class FrDocumentReferenceExterneExtension{
+
+          Extension.extension => [1..None]
+          Extension.extension:identifier => [1..1]
+          Extension.extension:identifier.extension => [None..0]
+          Extension.extension:identifier.url => [None..None]
+          Extension.extension:identifier.value[x] => [1..None]
+          Extension.extension:identifier.value[x]:valueIdentifier => [1..1]
+          Extension.extension:url => [0..1]
+          Extension.extension:url.extension => [None..0]
+          Extension.extension:url.url => [None..None]
+          Extension.extension:url.value[x] => [None..None]
+          Extension.extension:url.value[x]:valueUrl => [0..1]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrDoseAntigeneExtension{
+
+          Extension.extension => [2..None]
+          Extension.extension:doseQuantity => [1..1]
+          Extension.extension:doseQuantity.url => [None..None]
+          Extension.extension:consumable => [1..1]
+          Extension.extension:consumable.extension => [None..0]
+          Extension.extension:consumable.url => [None..None]
+          Extension.extension:consumable.value[x] => [None..None]
+          Extension.extension:consumable.value[x]:valueReference => [0..1]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrEvenementCaracteristiqueExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrNomSubstance{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
         } 
         class FrPerformerEvent{
 
@@ -1065,13 +1708,140 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
           Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrPreconditionExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrPrescriptionExtension{
+
+          Extension.extension => [1..None]
+          Extension.extension:dosage => [1..1]
+          Extension.extension:dosage.extension => [None..0]
+          Extension.extension:dosage.url => [None..None]
+          Extension.extension:dosage.value[x] => [None..None]
+          Extension.extension:dosage.value[x].text => [1..None]
+          Extension.extension:dosage.value[x].additionalInstruction => [1..1]
+          Extension.extension:dosage.value[x].additionalInstruction.text => [1..None]
+          Extension.extension:dosage.value[x].doseAndRate.dose[x] => [None..None]
+          Extension.extension:dosage.value[x].doseAndRate.dose[x]:doseQuantity => [0..1]
+          Extension.extension:repeatNumber => [0..1]
+          Extension.extension:prescripteur => [0..1]
+          Extension.extension:prescripteur.extension => [None..0]
+          Extension.extension:prescripteur.url => [None..None]
+          Extension.extension:prescripteur.value[x] => [None..None]
+          Extension.extension:dispensateur => [0..*]
+          Extension.extension:dispensateur.extension => [None..0]
+          Extension.extension:dispensateur.url => [None..None]
+          Extension.extension:dispensateur.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrQualifierExtension{
+
+          Extension.extension:name => [0..1]
+          Extension.extension:name.extension => [None..0]
+          Extension.extension:name.url => [None..None]
+          Extension.extension:name.value[x] => [None..None]
+          Extension.extension:value => [0..1]
+          Extension.extension:value.extension => [None..0]
+          Extension.extension:value.url => [None..None]
+          Extension.extension:value.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrReferenceInterneExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrRepeatNumberExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrSequenceExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrTranslationExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
+        } 
+        class FrTransportPatient{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrTransportProfessionnel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrVaccinationTypeExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
          }
      }
      package valueset #PaleVioletRed{
 
+        class FrValueSetActorType  
+
+     FrActorExtension -[#black,dotted,thickness=2]-> FrValueSetActorType
+
         class FRValueSetParticipationType  
 
      FrCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
+
+        class FrValueSetTypeResultat  
+
+     FrDiagnosticReportDocument -[#black,dotted,thickness=2]-> FrValueSetTypeResultat
+
+        class FrValueSetMedicationAdministrationCategory  
+
+     FrMedicationAdministrationDocument -[#black,dotted,thickness=2]-> FrValueSetMedicationAdministrationCategory
+
+        class FrValueSetEDQM  
+
+     FrMedicationAdministrationDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetEDQM  
+
+     FrMedicationDispenseDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetVaccineTranslation  
+
+     FrMedicationDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetEDQM  
+
+     FrMedicationDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetEDQM  
+
+     FrMedicationRequestDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetMedicationAdministrationCategory  
+
+     FrMedicationStatementDocument -[#black,dotted,thickness=2]-> FrValueSetMedicationAdministrationCategory
+
+        class FrValueSetEDQM  
+
+     FrMedicationStatementDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
 
         class FRValueSetTypeSavoirFaireProfessionMedecin  
 
@@ -1104,6 +1874,26 @@ package IG #DDDDDD{
         class FRValueSetRolePriseCharge  
 
      FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetRolePriseCharge
+
+        class FrValueSetCodeProduit  
+
+     FrVaccinRecommandeDocument -[#black,dotted,thickness=2]-> FrValueSetCodeProduit
+
+        class FrValueSetVaccineTranslation  
+
+     FrVaccinRecommandeDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetCodeProduit  
+
+     FrVaccinationDocument -[#black,dotted,thickness=2]-> FrValueSetCodeProduit
+
+        class FrValueSetVaccineTranslation  
+
+     FrVaccinationDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetVaccinationType  
+
+     FrVaccinationTypeExtension -[#black,dotted,thickness=2]-> FrValueSetVaccinationType
        }
 
 package "Ressources de base" #palegreen {
@@ -1183,6 +1973,10 @@ package "Ressources de base" #palegreen {
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
+
+ class "CarePlan" as  classc1c8e4b50c739ddc150dd233aa035d7a 
+
+    classc1c8e4b50c739ddc150dd233aa035d7a --> FrCarePlanDocument
 
  class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
 
@@ -1332,9 +2126,25 @@ package "Ressources de base" #palegreen {
 
     class258a7cfbd366b829153b76133f2929f3 --> FrDeviceDocument
 
+ class "DiagnosticReport" as  class4a13057f4409624a283d7471c591d19e 
+
+    class4a13057f4409624a283d7471c591d19e --> FrDiagnosticReportDocument
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" as  class67c94c9a57029ce118810d8d7e718509 
 
     class67c94c9a57029ce118810d8d7e718509 --> FrEncounterDocument
+
+ class "Encounter" as  classd1e9f9f891de8f9a655739a01fbf68f0 
+
+    classd1e9f9f891de8f9a655739a01fbf68f0 --> FrEncounterEvenementDocument
+
+ class "List" as  class4ee29ca12c7d126654bd0e5275de6135 
+
+    class4ee29ca12c7d126654bd0e5275de6135 --> FrHistoriqueGrossesseList
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrHistoriqueGrossesse
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name" as  classab70be087e84d984395444c4643fb763 
 
@@ -1343,6 +2153,66 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
     class505b865d93b3b02ed3aff95e782d498a --> FrLocationDocument
+
+ class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
+
+    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrMedicationAdministrationDocument
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationsCombinaisonDocument
+
+ class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
+
+    classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FrMedicationDispenseDocument
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationDocument
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrMedicationRequestDocument
+
+ class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
+
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationStatementDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationGrossesseDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationNaissanceDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationRechercheMicroOrganismes
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationResultatDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationStatutDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationStatut
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationSurEchelleDouleur
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationSyntheseMedicaleSejourDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationTransfusionDeProduitsSanguins
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization" as  class02104d9d29574b85b8bdd491de969f0d 
 
@@ -1364,8 +2234,36 @@ package "Ressources de base" #palegreen {
 
     class409d7284b1fcd82a5ca90685afaba163 --> FrPractitionerRoleDocument
 
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTransportProfessionnel
+
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTransportPatient
+
+ class "DocumentReference" as  classabc067272ee1964cc2c74c1c1a1854f5 
+
+    classabc067272ee1964cc2c74c1c1a1854f5 --> FrReferencesExternesDocument
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person" as  class73d64d75d9b8829a511eb36c46458829 
 
     class73d64d75d9b8829a511eb36c46458829 --> FrRelatedPersonDocument
+
+ class "vitalsigns" as  classbc3e6f566d4b627eb1169a15f6c63afa 
+
+    classbc3e6f566d4b627eb1169a15f6c63afa --> FrSigneVitalObserveDocument
+
+ class "vitalspanel" as  class48cc96dc575369fad67347d24c304310 
+
+    class48cc96dc575369fad67347d24c304310 --> FrSignesVitauxDocument
+
+ class "ImmunizationRecommendation" as  classf3209e303493c906899c832891d1dda7 
+
+    classf3209e303493c906899c832891d1dda7 --> FrVaccinRecommandeDocument
+
+ class "Immunization" as  classa3bca275063d357198e946211a06b816 
+
+    classa3bca275063d357198e946211a06b816 --> FrVaccinationDocument
 }
 @enduml
