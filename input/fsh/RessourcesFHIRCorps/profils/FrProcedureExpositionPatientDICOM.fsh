@@ -1,7 +1,7 @@
 Profile: FrProcedureExpositionPatientDICOM
 Parent: Procedure
-Id: Fr-procedure-exposition-patient-DICOM
-Title: "Procedure - Fr Procedure Exposition Patient DICOM"
+Id: fr-procedure-exposition-patient-dicom
+Title: "Procedure - Fr Exposition patient DICOM"
 Description: "FrProcedureExpositionPatientDICOM permet d'enregistrer l'identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements.
 Elle est obligatoire dans la norme DICOM Part 20."
 
@@ -14,12 +14,11 @@ Elle est obligatoire dans la norme DICOM Part 20."
 * code.coding.code = #121290
 * code.coding.display = "Exposition du patient aux rayonnements ionisants"
 
-* performer ^slicing.discriminator.type = #pattern
-* performer ^slicing.discriminator.path = "actor"
-* performer ^slicing.rules = #open
-
 * performer MS
-* performer contains Participant 1..1
-* performer[Participant].actor ^short = "Identité du professionnel de santé ayant donné
+* performer ^short = "Participant"
+* performer.actor.extension contains
+    FrActorExtension named Participant 1..1
+
+* performer.actor.extension[Participant] ^short = "Identité du professionnel de santé ayant donné
 l'autorisation de l'exposition du patient aux rayonnements"
-* performer[Participant].actor only Reference(FrPractitionerRoleDocument or Device)
+* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)

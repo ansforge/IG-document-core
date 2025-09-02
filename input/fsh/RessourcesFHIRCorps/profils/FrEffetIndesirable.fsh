@@ -1,7 +1,7 @@
 Profile: FrEffetIndesirable
 Parent: AdverseEvent
 Id: fr-effet-indesirable
-Title: "AdverseEvent - Effet indésirable"
+Title: "AdverseEvent - Fr Effet indésirable"
 Description: "FrEffetIndesirable permet de décrire un effet indésirable prévisible lié à un médicament"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -20,6 +20,7 @@ Description: "FrEffetIndesirable permet de décrire un effet indésirable prévi
 * suspectEntity 1..* MS
 
 // à mettre après le bon nom du profil FrMedicationAdministrationDocument
+* suspectEntity ^short = "Agent soupçonné d’être à l’origine de l’événement indésirable"
 * suspectEntity.instance 1..1 MS
 * suspectEntity.instance only Reference(MedicationAdministration)
 * suspectEntity.instance ^short = "Médicament, substance incriminée, posologie"

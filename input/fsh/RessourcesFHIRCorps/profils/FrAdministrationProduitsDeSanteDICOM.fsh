@@ -1,7 +1,7 @@
 Profile: FrAdministrationProduitsDeSanteDICOM
 Parent: MedicationAdministration
-Id: Fr-administration-produits-de-sante-DICOM
-Title: "MedicationAdministration - Fr Administration Produits De Santé DICOM"
+Id: fr-administration-produits-de-sante-dicom
+Title: "MedicationAdministration - Fr Administration produits de santé DICOM"
 Description: "FrAdministrationProduitsDeSanteDICOM permet d'enregistrer l’administration de produits (hors radiopharmaceutiques) : produit administré,
 dose administrée, voie d’administration, numéro de lot, autres informations liées à l’administration d’un produit"
 
@@ -11,12 +11,17 @@ dose administrée, voie d’administration, numéro de lot, autres informations 
 * status MS
 * status = #completed
 * dosage MS
+* dosage ^short = "Dosage"
 * dosage.route MS 
 * dosage.route ^short = "Voie d'administration : Terminologie utilisée : EDQM - Standard terms / classe ROA (Voie d'administration)"
 * dosage.dose MS
 * dosage.dose ^short = "Dose à administrer"
+* dosage.rateQuantity MS
 * dosage.rateQuantity ^short = "Rythme d'administration"
 
+* medication[x] MS
+* medication[x] ^short = "Produit de santé administré"
 * medicationReference MS
-* medicationReference ^short = "Médicament"
+* medicationReference ^short = "Référence au produit de santé administré"
+// a mettre le bon nom de profil FR FrMedication
 * medicationReference only Reference (Medication) //ou bien medicationCodeableConcept

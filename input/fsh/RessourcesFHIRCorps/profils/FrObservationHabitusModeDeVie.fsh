@@ -1,7 +1,7 @@
 Profile: FrObservationHabitusModeDeVie
 Parent: Observation
 Id: fr-observation-habitus-mode-de-vie
-Title: "FR - Habitus / Mode de vie"
+Title: "Observation - Fr Habitus / Mode de vie"
 Description: "Profil Observation décrivant les habitudes de vie du patient (Habitus / Mode de vie), dérivé de FrSimpleObservation."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -16,7 +16,6 @@ Description: "Profil Observation décrivant les habitudes de vie du patient (Hab
 * code MS
 * code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis (required)
 * code ^short = "Élément observé"
-
 * code.coding ^short = "Précision du code"
 * code.coding.extension contains FrQualifierExtension named qualifier 0..1 MS
 

@@ -1,7 +1,7 @@
 Profile: FrObservationGroupeDeQuestionnairesDevaluation
 Parent: Observation
 Id: fr-observation-groupe-questionnaires-evaluation
-Title: "FR - Groupe de questionnaires d'évaluation"
+Title: "Observation - Fr Groupe de questionnaires d'évaluation"
 Description: "FrObservationGroupeDeQuestionnairesDevaluation permet de rassembler des observations de questionnaires."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

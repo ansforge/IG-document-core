@@ -1,6 +1,6 @@
 Profile: FrEndpointWadoDICOM
 Parent: Endpoint
-Id: Fr-endpoint-wado-DICOM
+Id: fr-endpoint-wado-dicom
 Title: "endpoint - Fr Endpoint Wado DICOM"
 Description: "FrEndpointWadoDICOM permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID"
 

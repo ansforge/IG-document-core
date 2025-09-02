@@ -1,7 +1,7 @@
 Profile: FrObservationActeBiologiePrescrit
 Parent: Observation
 Id: fr-acte-biologie-prescrit
-Title: "Observation - Fr Observation Acte biologie prescrit"
+Title: "Observation - Fr Acte biologie prescrit"
 Description: "FrObservationActeBiologiePrescrit est un profil utilisé pour  décrire une ligne de prescription d’examen de biologie médicale."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -92,4 +92,4 @@ Par exemple : dosage de médicament, précision à apporter sur la molécule / t
 
 * specimen only Reference(FrSpecimen)
 * specimen 1..1 MS
-
+* specimen ^short = "Prélèvement"

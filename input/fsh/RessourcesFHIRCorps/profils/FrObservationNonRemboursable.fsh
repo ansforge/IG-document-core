@@ -1,7 +1,7 @@
 Profile: FrObservationNonRemboursable
 Parent: Observation
 Id: fr-non-remboursable
-Title: "Observation - Fr Observation Non Remboursable"
+Title: "Observation - Fr Non remboursable"
 Description: "Cette observation permet d'indiquer si le traitement auquel elle est associée est non remboursable."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -17,5 +17,16 @@ Résultat de l'observation : pourra prendre l'une des deux valeurs suivantes :
 value='true' : le traitement prescrit n'est pas remboursable
 value='false' : le traitement prescrit est remboursable
 """
+
+* performer MS
+* performer.extension contains FrActorExtension named author 0..*
+* performer.extension[author] ^short = "Auteur de l’observation"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(
+    FrPractitionerRoleDocument 
+    or FrOrganizationDocument 
+    or FrPractitionerRoleDocument 
+    or FrPatientINSDocument 
+    or FrPatientDocument)
 
 * insert FrRuleSetSimpleObservation

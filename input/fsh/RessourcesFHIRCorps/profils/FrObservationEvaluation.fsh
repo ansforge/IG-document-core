@@ -1,7 +1,7 @@
 Profile: FrObservationEvaluation
 Parent: Observation
 Id: fr-observation-evaluation
-Title: "Observation - Évaluation"
+Title: "Observation - Fr Évaluation"
 Description: "FrObservationEvaluation permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -14,23 +14,11 @@ Description: "FrObservationEvaluation permet de rapporter un résultat (score) r
 * category.coding.code = #survey (exactly)
 
 * code 1..1 MS
-* code ^short = "Type d'évaluation"
-// --- Définition d’un slicing sur code.coding ---
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #open
-* code.coding ^slicing.description = "Séparation du coding principal et de la translation"
-
-// --- Coding principal obligatoire ---
-* code.coding contains principal 1..1 MS
-* code.coding[principal] ^short = "Coding principal"
-* code.coding[principal] ^comment = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
+* code ^short = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
 Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOINC et décrire le type d'évaluation en texte libre."
 
-// --- Coding secondaire optionnel (translation) ---
-* code.coding contains translation 0..1 MS
-* code.coding[translation] ^short = "Translation du code"
-* code.coding[translation] ^comment = "Permet d'ajouter une traduction éventuelle du code principal"
+* code.extension contains FrTranslationExtension named translation 0..1
+* code.extension[translation] ^short = "Translation du code"
 
 * value[x] 1..1 MS
 * value[x] ^short = "Valeur de l'évaluation"
@@ -38,34 +26,31 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 * interpretation 0..1 MS
 * interpretation ^short = "Interprétation"
 
-// ----------------------
-// Slicing performer
-// ----------------------
-* performer ^slicing.discriminator.type = #type
-* performer ^slicing.discriminator.path = "$this"
-* performer ^slicing.rules = #open
-
 * performer MS
-* performer contains
-    Evaluateur 0..1 and
-    Auteur 0..1 and
-    Participant 0..1
+* performer.extension contains
+    FrActorExtension named Evaluateur 0..1 and
+    FrActorExtension named Auteur 0..1 and
+    FrActorExtension named Participant 0..1
 
-* performer[Evaluateur] only Reference(FrPractitionerRoleDocument)
-* performer[Evaluateur] ^short = "Evaluateur"
-* performer[Evaluateur].extension contains $event-performerFunction named performerFunction 0..1
-* performer[Evaluateur].extension[performerFunction].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
+// Evaluateur
+* performer.extension[Evaluateur] MS
+* performer.extension[Evaluateur] ^short = "Evaluateur"
+* performer.extension[Evaluateur].extension[type].valueCode = #PRF (exactly)
+* performer.extension[Evaluateur].extension[reference].valueReference only Reference(FrOrganizationDocument)
+* performer.extension[Evaluateur].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
-* performer[Auteur] only Reference(FrPractitionerRoleDocument)
-* performer[Auteur] ^short = "Auteur de l'évaluation"
-* performer[Auteur].extension contains $event-performerFunction named performerFunction 0..1
-* performer[Auteur].extension[performerFunction].valueCodeableConcept.coding.code = #AUT
+// auteur
+* performer.extension[Auteur] MS
+* performer.extension[Auteur] ^short = "Auteur de l'évaluation"
+* performer.extension[Auteur].extension[type].valueCode = #AUT (exactly)
+* performer.extension[Auteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
-* performer[Participant] only Reference(FrPractitionerRoleDocument)
-* performer[Participant] ^short = "Responsable de l'évaluation"
-* performer[Participant].extension contains $event-performerFunction named performerFunction 0..1
-* performer[Participant].extension[performerFunction].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
-* performer[Participant].extension[performerFunction].valueCodeableConcept.coding.code = #RESP
+// Participant
+* performer.extension[Participant] MS
+* performer.extension[Participant] ^short = "Responsable de l'évaluation"
+* performer.extension[Participant].extension[type].valueCode = #PART (exactly)
+* performer.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[Participant].extension[typeCode].valueCodeableConcept.coding.code = #RESP
 
 // ----------------------
 // Slicing component (N1 vs N2)
@@ -80,6 +65,7 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
     ComposantN1 0..* and
     ComposantN2 0..*
 
+* component[ComposantN1] ^short = "Composant N1 de l'évaluation"
 * component[ComposantN1].code 1..1 MS
 * component[ComposantN1].code ^short = "Code de l'évaluation"
 * component[ComposantN1].value[x] 1..1 MS
@@ -90,6 +76,7 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 * component[ComposantN1].extension[note] ^short = "Commentaire"
 * component[ComposantN1].extension[note].value[x] MS
 
+* component[ComposantN2] ^short = "Sous-composant N2 de l'évaluation"
 * component[ComposantN2].code 1..1 MS
 * component[ComposantN2].code ^short = "Code de l'évaluation"
 * component[ComposantN2].value[x] 1..1 MS

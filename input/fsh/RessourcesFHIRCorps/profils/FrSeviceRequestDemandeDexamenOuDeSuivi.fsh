@@ -1,7 +1,7 @@
 Profile: FrSeviceRequestDemandeDexamenOuDeSuivi
 Parent: ServiceRequest
 Id: fr-service-request-demande-d-examen-ou-de-suivi
-Title: "ServiceRequest - Fr Sevice Request Demande d'examen ou de Suivi"
+Title: "ServiceRequest - Fr Demande d'examen ou de Suivi"
 Description: "Ce profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -17,6 +17,7 @@ Si la demande est un objectif à atteindre : 'GOL = plan'
 * intent from FrValueSetRequestIntent (required)
 
 * code 1..1 MS
+* code ^short = "Type de la demande"
 * code.coding ^short = "Type de la demande : Si aucun code n'est trouvé dans des terminologies existantes, utiliser le code : GEN-092.04.20 'Autre demande d’examen ou de suivi'"
 //Si aucun code n'est trouvé dans des terminologies existantes, utiliser le code : GEN-092.04.20
 //* code.concept = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.04.20 "Autre demande d’examen ou de suivi"

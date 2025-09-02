@@ -1,7 +1,7 @@
 Profile: FrQuantityDICOM
 Parent: Observation
-Id: Fr-quantity-DICOM
-Title: "Observation - Fr quantity DICOM"
+Id: fr-quantity-dicom
+Title: "Observation - Fr Quantity DICOM"
 Description: "FrQuantityDICOM permet d'enregistrer les mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques en précisant : 
 le type de la mesure, la localisation anatomique / latéralité / topographie, la quantité, si la mesure quantitative est basée sur les données d’une image, une référence à l’image peut être précisée dans la partie narrative."
 
@@ -10,5 +10,11 @@ le type de la mesure, la localisation anatomique / latéralité / topographie, l
 
 * valueQuantity.code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-quantite-exposition-rayonnements-cisis (required)
 * valueQuantity.system = "http://dicom.nema.org/resources/ontology/DCM"
+
+// Participation d’un auteur
+* performer MS
+* performer.extension contains FrActorExtension named author 0..*
+* performer.extension[author] ^short = "Participation d'un auteur au document"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
 
 * insert FrRuleSetSimpleObservation

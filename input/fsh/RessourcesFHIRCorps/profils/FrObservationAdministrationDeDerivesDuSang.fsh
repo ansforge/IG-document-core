@@ -2,7 +2,7 @@
 Profile: FrObservationAdministrationDeDerivesDuSang
 Parent: Observation
 Id: fr-administration-de-derives-du-sang
-Title: "Observation - Fr Observation Administration de derivés du sang"
+Title: "Observation - Fr Administration de derivés du sang"
 Description: "FrObservationAdministrationDeDerivesDuSang est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -15,7 +15,7 @@ Description: "FrObservationAdministrationDeDerivesDuSang est un profil utilisé 
 * valueBoolean 1..1 MS
 * valueBoolean ^short = "Administration de dérivés du sang"
 
-// author
+/* // author
 * performer ^slicing.discriminator.type = #type
 * performer ^slicing.discriminator.path = "$this"
 * performer ^slicing.rules = #open
@@ -27,3 +27,16 @@ Description: "FrObservationAdministrationDeDerivesDuSang est un profil utilisé 
 * performer[auteur].extension[performerFunction] ^short = "Rôle fonctionnel de l'auteur :
 Si l'auteur est le patient/usager : ne pas utiliser l'élément performerFunction
 Si l'auteur n'est pas le patient :Valeur issue du https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS."
+* performer[auteur].extension[performerFunction].valueCodeableConcept from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS
+ */
+// Auteur
+* performer MS
+* performer.extension contains FrActorExtension named author 0..1
+* performer.extension[author] ^short = "Auteur"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[author].extension[reference] ^short = "Dans code[functionCode] de FrPractitionerRoleDocument on trouve le rôle fonctionnel de l'auteur :
+Si l'auteur est le patient/usager : ne pas utiliser l'élément code[functionCode]
+Si l'auteur n'est pas le patient :Valeur issue du https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS."
+
+* insert FrRuleSetSimpleObservation

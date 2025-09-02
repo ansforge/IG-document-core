@@ -2,7 +2,7 @@
 Profile: FrProcedureActe
 Parent: Procedure
 Id: fr-acte
-Title: "Procedure - Fr Procedure Acte"
+Title: "Procedure - Fr Acte"
 Description: "FrProcedureActe est un profil utilisé pour décrire un acte planifié ou réalisé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -12,14 +12,7 @@ Description: "FrProcedureActe est un profil utilisé pour décrire un acte plani
 * identifier ^short = "Identifiant"
 
 * status MS
-* status ^short = """
-Statut de l'acte : Statut FHIR mappé depuis le status CDA via ConceptMap 'CdaToFhirProcedureStatus'.
-Exemples :
-- CDA 'completed' → FHIR 'completed'
-- CDA 'aborted' → FHIR 'stopped'
-Voir ConceptMap associé.
-"""
-* status ^definition = "Voir ConceptMap CdaToFhirProcedureStatus pour la correspondance CDA → FHIR"
+* status ^short = "Statut de l'acte"
 
 * code 1..1 MS
 * code ^short = "Code d'acte :
@@ -40,6 +33,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 * extension contains FrPriorityExtension named priority 0..1 MS
 
 * bodySite MS
+* bodySite ^short = "Voie d'abord et localisation anatomique"
 * bodySite ^slicing.discriminator.type = #pattern
 * bodySite ^slicing.discriminator.path = "$this"
 * bodySite ^slicing.rules = #open
@@ -59,25 +53,33 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 * bodySite[TargetSiteCode].coding 1..1
 * bodySite[TargetSiteCode].coding.system = "http://snomed.info/sct" 
 
-* performer ^slicing.discriminator.type = #pattern
-* performer ^slicing.discriminator.path = "actor"
-* performer ^slicing.rules = #open
-
 * performer MS
-* performer contains
-    Intervenant 0..* and
-    Informateur 0..* and
-    Participant 0..*
+* performer.actor.extension contains
+    FrActorExtension named Intervenant 0..* and
+    FrActorExtension named Informateur 0..* and
+    FrActorExtension named Participant 0..*
+
 //performer
-* performer[Intervenant].actor only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[Intervenant] MS 
+* performer.actor.extension[Intervenant] ^short = "Intervenant"
+* performer.actor.extension[Intervenant].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[Intervenant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 //informant
-* performer[Informateur].actor only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* performer.actor.extension[Informateur] MS
+* performer.actor.extension[Informateur] ^short = "Informateur"
+* performer.actor.extension[Informateur].extension[type].valueCode = #INF (exactly)
+* performer.actor.extension[Informateur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 //participant
-* performer[Participant].actor only Reference(FrPractitionerRoleDocument or FrDeviceDocument)
+* performer.actor.extension[Participant] MS
+* performer.actor.extension[Participant] ^short = "Participant"
+* performer.actor.extension[Participant].extension[type].valueCode = #PART (exactly)
+* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)
 
 * recorder MS
+* recorder.extension contains FrActorExtension named author 0..1
 * recorder ^short = "Auteur"
-* recorder only Reference(FrPractitionerRoleDocument or FrPractitionerDocument)
+* recorder.extension[author].extension[type].valueCode = #AUT (exactly)
+* recorder.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Réference interne à un DM (REFR)
 * usedReference MS

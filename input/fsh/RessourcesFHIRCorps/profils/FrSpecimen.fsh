@@ -2,7 +2,7 @@
 Profile: FrSpecimen
 Parent: Specimen
 Id: fr-specimen
-Title: "Specimen - Fr Specimen"
+Title: "Specimen - Fr Prélèvement"
 Description: "FrSpecimen est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -36,6 +36,7 @@ codeSystem='2.16.840.1.113883.6.1'
 codeSystemName='LOINC'
 """
 * processing.procedure.coding.code 1..1 MS
+* processing.procedure.coding.code ^short = "Acte de prélèvement"
 
 * processing.additive ^short = "Produit utilisé"
 * processing.additive MS

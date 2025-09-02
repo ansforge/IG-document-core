@@ -1,7 +1,7 @@
 Profile: FrImagingStudyExamenImagerieDICOM
 Parent: ImagingStudy
-Id: Fr-imaging-study-examen-imagerie-DICOM
-Title: "ImagingStudy - Fr Imaging Study Examen Imagerie DICOM"
+Id: fr-imaging-study-examen-imagerie-dicom
+Title: "ImagingStudy - Fr Examen Imagerie DICOM"
 Description: "FrImagingStudyExamenImagerieDICOM (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.
 L’examen est composé d'une ou de plusieurs séries d’images médicales."
 

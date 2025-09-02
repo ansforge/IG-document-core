@@ -2,7 +2,7 @@
 Profile: FrCondition
 Parent: Condition
 Id: fr-condition
-Title: "Condition - Fr condition"
+Title: "Condition - Fr Condition (problème)"
 Description: "FrCondition est un profil utilisé pour décrire un problème du patient (une pathologie par exemple)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -16,7 +16,7 @@ Description: "FrCondition est un profil utilisé pour décrire un problème du p
 
 * verificationStatus MS
 * verificationStatus ^short = "Certitude"
-* verificationStatus from FrValueSetConditionVerificationStatus (required)
+* verificationStatus from FrValueSetConditionVerificationStatus
 //* verificationStatus from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis
 
 * category 1..1 MS
@@ -39,8 +39,10 @@ Si pas de problème ou pas d'information : JDV_AbsentOrUnknownProblem_CISIS (1.2
 * onsetPeriod.end ^short = "Date de fin du problème"
 
 * recorder MS
-* recorder ^short = "Auteur du problème"
-* recorder only Reference(FrPatientDocument or FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrRelatedPersonDocument)
+* recorder.extension contains FrActorExtension named author 0..1
+* recorder.extension[author] ^short = "Auteur du problème"
+* recorder.extension[author].extension[type].valueCode = #AUT (exactly)
+* recorder.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
 * bodySite MS
 * bodySite ^short = "Localisation anatomique"
@@ -49,6 +51,7 @@ Si pas de problème ou pas d'information : JDV_AbsentOrUnknownProblem_CISIS (1.2
 
 * abatement[x] 1..1 MS
 * abatement[x] ^short = "Date du problème"
+* abatementPeriod MS
 * abatementPeriod ^short = "Dates de début et de fin du problème"
 * abatementPeriod.start 1..1 MS
 * abatementPeriod.start ^short = "Date de début du problème"

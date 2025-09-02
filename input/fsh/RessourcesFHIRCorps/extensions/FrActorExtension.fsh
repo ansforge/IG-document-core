@@ -5,6 +5,7 @@ Description: "Extension pour représenter un acteur impliqué dans le document a
 
 * extension contains
     type 1..1 and
+    typeCode 0..1 and
     reference 1..1
 
 // Sous-extension type
@@ -12,6 +13,9 @@ Description: "Extension pour représenter un acteur impliqué dans le document a
 * extension[type].valueCode from FrValueSetActorType (required)
 * extension[type] ^short = "Type d'acteur (AUT, PRF, PART, INF)"
 
+* extension[typeCode].value[x] only CodeableConcept
+* extension[typeCode] ^short = "Type de participation"
+
 // Sous-extension reference
-* extension[reference].value[x] only Reference(FrPractitionerRoleDocument)
+* extension[reference].value[x] only Reference(FrPractitionerRoleDocument or Device or FrDeviceDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 * extension[reference] ^short = "Référence vers le rôle du praticien dans le document"

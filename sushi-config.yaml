@@ -22,11 +22,14 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
 
 dependencies:
   hl7.cda.uv.core: 2.0.0-sd
-  ans.fr.terminologies: latest
+  ans.fr.nos: 1.4.0
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.extensions.r5: 4.0.1
   ans.fhir.fr.annuaire: 1.1.0
   hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
+  hl7.fhir.eu.eps: current
+  hl7.fhir.uv.ips: current   
+  hl7.fhir.eu.laboratory: 0.1.1
   
 pages:
     index.md:
@@ -164,9 +167,9 @@ groups:
       - StructureDefinition/fr-core-encounter-participant
       - StructureDefinition/fr-core-health-care-facility
 
-  Ressources FHIR:
-    name: Profils FHIR
-    resources:
+  Ressources FHIR entête:
+      name: "Profils FHIR entête"
+      resources:
       - StructureDefinition/fr-bundle-document
       - StructureDefinition/fr-composition-document
       - StructureDefinition/fr-patient-document
@@ -178,18 +181,77 @@ groups:
       - StructureDefinition/fr-encounter-document
       - StructureDefinition/fr-location-document
       - StructureDefinition/fr-related-person-document
+
+  Ressources FHIR corps:
+      name: "Profils FHIR corps"
+      resources:
+      - StructureDefinition/fr-administration-produits-de-sante-dicom
+      - StructureDefinition/fr-administration-radiopharmaceutique-dicom
+      - StructureDefinition/fr-allergie-intolerance
+      - StructureDefinition/fr-condition
+      - StructureDefinition/fr-device-request-medicaldevice
+      - StructureDefinition/fr-device-use-statement-medicaldevice
+      - StructureDefinition/fr-directive-anticipee
+      - StructureDefinition/fr-document-reference
+      - StructureDefinition/fr-effet-indesirable
+      - StructureDefinition/fr-encounter
+      - StructureDefinition/fr-endpoint-wado-dicom
       - StructureDefinition/fr-family-member-history
+      - StructureDefinition/fr-imaging-study-examen-imagerie-dicom
+      - StructureDefinition/fr-media-image-illustrative
+      - StructureDefinition/fr-objectifs-de-reference-dicom
+      - StructureDefinition/fr-accidents-transfusionnels
+      - StructureDefinition/fr-acte-biologie-prescrit
+      - StructureDefinition/fr-administration-de-derives-du-sang
+      - StructureDefinition/fr-batterie-examen-biologie-medicale
+      - StructureDefinition/fr-batterie-examen-et-surveillance-prenataux
+      - StructureDefinition/fr-observation-contexte
+      - StructureDefinition/fr-observation-dicom
+      - StructureDefinition/fr-observation-difficulte
+      - StructureDefinition/fr-en-rapport-avec-ald
+      - StructureDefinition/fr-en-rapport-avec-accident-travail
+      - StructureDefinition/fr-en-rapport-avec-la-prevention
+      - StructureDefinition/fr-observation-evaluation
+      - StructureDefinition/fr-observation-groupe-questionnaires-evaluation
+      - StructureDefinition/fr-observation-habitus-mode-de-vie
+      - StructureDefinition/fr-hors-nomenclature
+      - StructureDefinition/fr-observation-isolat-microbiologique
+      - StructureDefinition/fr-observation-modalite-entree
+      - StructureDefinition/fr-resultats-examens-de-biologie-element-clinique-pertinent
+      - StructureDefinition/fr-procedure-exposition-patient-dicom
+      - StructureDefinition/fr-procedure-technique-imagerie-dicom
+      - StructureDefinition/fr-quantity-dicom
+      - StructureDefinition/fr-service-request-demande-d-examen-ou-de-suivi
+      - StructureDefinition/fr-acte
+      - StructureDefinition/fr-non-remboursable
+      - StructureDefinition/fr-specimen
+      - StructureDefinition/fr-observation-renouvellement
+
 
   Data Type FHIR:
     name: Data Type Profiles 
     resources:
       - StructureDefinition/fr-human-name-document
 
-  Extensions FHIR:
-    name: Extensions FHIR
+  Extensions FHIR entête:
+    name: Extensions FHIR entête
     resources:
       - StructureDefinition/fr-author-time
       - StructureDefinition/fr-performer-event
+     
+  Extensions FHIR corps:
+    name: Extensions FHIR corps
+    resources:
+      - StructureDefinition/fr-actor-extension
+      - StructureDefinition/fr-body-site-extension
+      - StructureDefinition/fr-difficulte-extension
+      - StructureDefinition/fr-interpretation-extension
+      - StructureDefinition/fr-method-extension
+      - StructureDefinition/fr-priority-extension
+      - StructureDefinition/fr-qualifier-extension
+      - StructureDefinition/fr-score-extension
+      - StructureDefinition/fr-condition-clinical-status-extension
+      - StructureDefinition/fr-translation-extension
       
   Mapping:
     name: Concept Maps
@@ -214,7 +276,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
       - mappingAdministrativeGender
-      
+
 resources:
   Binary/BIO-CR-BIO-2024.01-glycemie-mole:
     name: BIO-CR-BIO_2024.01_Glycemie_mole

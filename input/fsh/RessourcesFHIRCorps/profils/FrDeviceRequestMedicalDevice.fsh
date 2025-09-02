@@ -1,7 +1,7 @@
 Profile: FrDeviceRequestMedicalDevice
 Parent: DeviceRequest
 Id: fr-device-request-medicaldevice
-Title: "DeviceRequest - Medical Device"
+Title: "DeviceRequest - Dispositif médical"
 Description: "Représentation d'une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -16,6 +16,7 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 * occurrence[x] ^short = "Date d'utilisation ou de présence chez le patient"
 
 // Nombre de renouvellement(s) possible(s)
+* occurrenceTiming MS
 * occurrenceTiming.repeat.count MS
 * occurrenceTiming.repeat.count ^short = "Nombre de renouvellement(s) possible(s)"
 
@@ -28,14 +29,11 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 * parameter.valueQuantity MS
 * parameter.valueQuantity ^short = "Quantité"
 
-// Dispensateur
-* performer MS
-* performer ^short = "Dispensateur"
-
 // Prescripteur
 * requester MS
-* requester only Reference(Device or FrOrganizationDocument or FrPractitionerRoleDocument or FrPractitionerDocument)
 * requester ^short = "Prescripteur"
+* requester.extension contains FrActorExtension named prescripteur 0..1
+* requester.extension[prescripteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Dispositif médical
 * codeReference MS
@@ -43,7 +41,7 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 * codeReference ^short = "Dispositif médical"
 
 // Raison - Slicing
-* reasonReference ^slicing.discriminator.type = #pattern
+* reasonReference ^slicing.discriminator.type = #value 
 * reasonReference ^slicing.discriminator.path = "resolve().code"
 * reasonReference ^slicing.rules = #open
 * reasonReference MS
@@ -58,12 +56,16 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 
 * reasonReference[EnRapportAvecALD] only Reference(FrObservationEnRapportAvecALD)
 * reasonReference[EnRapportAvecALD] ^short = "En rapport avec une Affection Longue Durée (ALD)"
+* reasonReference[EnRapportAvecALD]  MS
 
 * reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationEnRapportAvecAccidentTravail)
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "En rapport avec accident travail"
+* reasonReference[EnRapportAvecAccidentTravail] MS
 
 * reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationEnRapportAvecLaPrevention)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
+* reasonReference[EnRapportAvecLaPrevention] MS
 
 * reasonReference[NonRemboursable] only Reference(FrObservationNonRemboursable)
 * reasonReference[NonRemboursable] ^short = "Non remboursable"
+* reasonReference[NonRemboursable] MS

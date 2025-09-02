@@ -1,41 +1,27 @@
 Profile: FrObservationBatterieExamEtSurveillancePrenataux
 Parent: Observation
 Id: fr-batterie-examen-et-surveillance-prenataux
-Title: "Observation - Fr Observation Batterie Examens Et Surveillance Prenataux"
+Title: "Observation - Fr Batterie examens et surveillance prénataux"
 Description: "Ce profil permet de lister les examens et surveillances prénataux."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * code MS
+* code ^short = "Type de l'observation"
 * code = $LNC#XX-ANTENATALTESTINGBATTERY "ANTENATAL TESTING AND SURVEILLANCE BATTERY"
-
 * effective[x] ^short = "Date de l'examen ou de la surveillance"
 
 // Auteur
-* performer ^slicing.discriminator.type = #type
-* performer ^slicing.discriminator.path = "$this"
-* performer ^slicing.rules = #open
+* performer MS
+* performer.extension contains FrActorExtension named author 0..*
+* performer.extension[author] ^short = "Auteur"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
-* performer contains
-    auteur 0..*
-
-* performer[auteur] only Reference(FrPractitionerRoleDocument)
-* performer[auteur].extension contains $event-performerFunction named performerFunction 0..*
-* performer[auteur].extension[performerFunction].valueCodeableConcept.coding.code = #AUT
-
+* component MS
 * component ^short = "Observations"
 * component.code MS
 * component.code ^short = "code du résultat"
 * component.value[x] MS
 * component.value[x] ^short = "valeur du résultat"
-
-/* 
-Exemple : 
-* component[0].code = http://loinc.org#2345-7 "Glucose [Mass/volume] in Blood"
-* component[0].valueQuantity.value = 0.92
-* component[0].valueQuantity.unit = "g/L"
-
-* component[1].code = http://loinc.org#29614-7 "Toxoplasma gondii Ab [Presence] in Serum"
-* component[1].valueCodeableConcept = http://snomed.info/sct#10828004 "Positive" 
-*/

@@ -36,31 +36,23 @@ Sinon, l'élément 'priority' n'est pas fourni.
 * subject only Reference(FrPatientINSDocument or FrPatientDocument)
 
 * participant MS
-* participant ^slicing.discriminator.type = #value
-* participant ^slicing.discriminator.path = "type.coding.code"
-* participant ^slicing.rules = #open
+* participant ^short = "Liste des participants impliqués dans la rencontre"
+* participant.individual.extension contains
+    FrActorExtension named executant 0..* and
+    FrActorExtension named author 0..* and
+    FrActorExtension named informant 0..*
 
-
-* participant contains author 0..* and informant 0..* and executant 0..*
-
-* participant[executant] ^short = "Exécutant : 
+* participant.individual.extension[executant] ^short = "Exécutant : 
 Si la rencontre est réalisée :
  au moins 1 exécutant doit être renseigné.
 Sinon : l'exécutant n'est pas obligatoire mais peut être renseigné"
-* participant[executant].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
-* participant[executant].type.coding.code = #PRF
-* participant[executant].type.coding.display = "Performer"
-* participant[executant].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
+* participant.individual.extension[executant].extension[type].valueCode = #PRF (exactly)
 
-* participant[author].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
-* participant[author].type.coding.code = #AUT
-* participant[author].type.coding.display = "Author"
-* participant[author].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
+* participant.individual.extension[author] ^short = "Author"
+* participant.individual.extension[author].extension[type].valueCode = #AUT (exactly)
 
-* participant[informant].type.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
-* participant[informant].type.coding.code = #INF
-* participant[informant].type.coding.display = "Informant"
-* participant[informant].individual only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument)
+* participant.individual.extension[informant] ^short = "Informant"
+* participant.individual.extension[informant].extension[type].valueCode = #INF (exactly)
 
 * location 0..1 MS
 * location ^short = "Lieu d'exécution"

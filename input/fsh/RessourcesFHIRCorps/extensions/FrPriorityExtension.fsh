@@ -3,4 +3,4 @@ Id: fr-priority-extension
 Title: "Extension - Priorité"
 Description: "Indique la priorité clinique de l’observation."
 * value[x] only CodeableConcept
-* valueCodeableConcept from http://terminology.hl7.org/ValueSet/v3-ActPriority
+* valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActPriority-cisis

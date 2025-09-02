@@ -1,7 +1,7 @@
 Profile: FrDirectiveAnticipee
 Parent: Consent
-Id: Fr-directive-anticipee
-Title: "Consent - Fr Directive Anticipée"
+Id: fr-directive-anticipee
+Title: "Consent - Fr Directive anticipée"
 Description: "FrDirectiveAnticipee permet  d’indiquer si les directives anticipées du patient.
 Article L1111-11 du Code de la Santé Publique : 
 « Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un 
@@ -34,6 +34,8 @@ Le type de la directive identifiée permet d’indiquer l’autorisation ou la n
 - si l’élément <<provision.code>> est 'Autre directive' : dans ce cas, l'élément <<provision.type>> n'est pas présent
 - si l’élément <<provision.code>> est 'Directives anticipées' : dans ce cas, l'élément <<provision.type>> n'est pas présent et un document encodé en B64 est encapsulé dans l'élément 'sourceAttachment'."
 
+* source[x] ^short = "Documents"
+* sourceReference MS
 * sourceReference ^short = "Référence à un document externe"
 * sourceReference only Reference(FrDocumentReference)
 

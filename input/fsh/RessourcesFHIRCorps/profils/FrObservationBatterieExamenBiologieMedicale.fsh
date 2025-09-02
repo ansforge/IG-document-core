@@ -1,7 +1,7 @@
 Profile: FrObservationBatterieExamenBiologieMedicale
 Parent: Observation
 Id: fr-batterie-examen-biologie-medicale
-Title: "Observation - Fr Observation Batterie Examen Biologie Medicale"
+Title: "Observation - Fr Batterie examen biologie médicale"
 Description: "Cette observation permet de décrire des examens de biologie médicale comprenant un ou plusieurs éléments porteurs de résultats et d'éventuels commentaires interprétant cet ensemble de résultats."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -9,44 +9,52 @@ Description: "Cette observation permet de décrire des examens de biologie médi
 
 * code ^short = "Code de la batterie d'examen"
 * code MS
-// ajouter l'extension translation dans code
 * code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
 
-* code.coding.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
-* code.coding.extension.valueCoding ^short = "Code d'identification d'attente national ou code de portée locale"
+* code.extension contains FrTranslationExtension named translation 0..1
+* code.extension[translation] ^short = "Code d'identification d'attente national ou code de portée locale"
 
 // Si specimen provenant du corps du patient ou extérieur au patient :
+* subject MS
+* subject ^short = "Sujet conerné"
 * subject  only Reference(FrPatientINSDocument or FrPatientDocument)
+
+* specimen MS
+* specimen ^short = "Prélèvement"
 * specimen only Reference(FrSpecimen)
 
-* performer ^slicing.discriminator.type = #type
-* performer ^slicing.discriminator.path = "$this"
-* performer ^slicing.rules = #open
+* performer MS
+* performer.extension contains
+    FrActorExtension named laboratoireExecutant 0..1 and
+    FrActorExtension named auteur 0..1 and
+    FrActorExtension named participant 0..1
 
-* performer contains
-    laboratoireExecutant 0..1 and
-    auteur 0..1 and
-    participant 0..1
+// auteur
+* performer.extension contains FrActorExtension named author 0..1
+* performer.extension[author] ^short = "Auteur"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Laboratoire sous-traitant
-* performer[laboratoireExecutant] only Reference(FrOrganizationDocument)
-
-* performer[laboratoireExecutant].extension contains $event-performerFunction named performerFunction 0..*
-* performer[laboratoireExecutant].extension[performerFunction].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
-
-// Auteur
-* performer[auteur] only Reference(FrPractitionerRoleDocument)
-* performer[auteur].extension contains $event-performerFunction named performerFunction 0..*
-* performer[auteur].extension[performerFunction].valueCodeableConcept.coding.code = #AUT
-
+* performer.extension[laboratoireExecutant] MS
+* performer.extension[laboratoireExecutant] ^short = "Laboratoire exécutant"
+* performer.extension[laboratoireExecutant].extension[type].valueCode = #PRF (exactly)
+* performer.extension[laboratoireExecutant].extension[reference].valueReference only Reference(FrOrganizationDocument)
+* performer.extension[laboratoireExecutant].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
 // Participant
-* performer[participant] only Reference(FrPractitionerRoleDocument)
+* performer.extension[participant] MS
+* performer.extension[participant] ^short = "Participant"
+* performer.extension[participant].extension[type].valueCode = #PART (exactly)
+* performer.extension[participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[participant].extension[typeCode].valueCodeableConcept from FrValueSetPerformerFunctionParticipant
 
-* performer[participant].extension contains $event-performerFunction named performerFunction 0..*
-* performer[participant].extension[performerFunction].valueCodeableConcept from FrValueSetPerformerFunctionParticipant
 // Image illustrative
+* derivedFrom MS
+* derivedFrom ^short = "Image illustrative"
 * derivedFrom only Reference(FrMediaImageIllustrative)
 
 // Résultat d'examens de biologie éléments clinique pertinent
+* hasMember MS
+* hasMember ^short = "Résultat d'examens de biologie éléments clinique pertinent"
 * hasMember only Reference(FrObservationResultatsExamensDeBiologieElementCliniquePertinent)

@@ -1,7 +1,7 @@
 Profile: FrProcedureTechniqueImagerieDICOM
 Parent: Procedure
-Id: Fr-procedure-technique-imagerie-DICOM
-Title: "Procedure - Fr Procedure Technique Imagerie DICOM"
+Id: fr-procedure-technique-imagerie-dicom
+Title: "Procedure - Fr Technique imagerie DICOM"
 Description: "FrProcedureTechniqueImagerieDICOM permet d'enregistrer les différents paramètres de l’acquisition d’image :
 acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte "
 
@@ -23,11 +23,8 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performed[x] ^short = "Date de l'acte"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/procedure-method named modaliteAcquisition 1..* MS
+* extension[modaliteAcquisition] ^short = "Modalité d'acquisition"
 * extension[modaliteAcquisition].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis
-
-* bodySite 1..1 MS
-* bodySite ^short = "Localisation anatomique"
-* bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
 
 // Modificateurs topographiques
 * extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named ModificateurTopographique 0..1 MS
@@ -35,10 +32,12 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 // Contraindre le contenu de l'extension (BodyStructure obligatoire)
 * extension[ModificateurTopographique].valueReference only Reference(BodyStructure)
 
-* performer ^slicing.discriminator.type = #pattern
-* performer ^slicing.discriminator.path = "actor"
-* performer ^slicing.rules = #open
+* bodySite 1..1 MS
+* bodySite ^short = "Localisation anatomique"
+* bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
+
 * performer MS
-* performer contains Participant 0..1
-* performer[Participant].actor ^short = "Participant"
-* performer[Participant].actor only Reference(FrPractitionerRoleDocument or Device)
+* performer ^short = "Participant"
+* performer.actor.extension contains
+    FrActorExtension named Participant 0..1
+* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)

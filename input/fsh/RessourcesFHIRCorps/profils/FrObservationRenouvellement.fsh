@@ -13,4 +13,10 @@ Description: "Observation utilisée pour représenter le renouvellement de l'act
 * valueCodeableConcept 1..1 MS
 * value[x] only CodeableConcept
 
+// Participation d’un auteur
+* performer MS
+* performer.extension contains FrActorExtension named author 0..*
+* performer.extension[author] ^short = "Participation d'un auteur au document"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+
 * insert FrRuleSetSimpleObservation
