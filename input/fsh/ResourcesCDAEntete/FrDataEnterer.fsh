@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA dataEnterer contient les informat
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * contextControlCode 0..0
 * time ^short = "Horodatage de la participation de l’opérateur."
 * time 1..1

@@ -8,7 +8,6 @@ Description: "L'élément de l'en-tête du CDA authoringDevice contient les info
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* classCode 0..0
 * determinerCode 0..0
 * manufacturerModelName ^short = "Nom du modèle du système."
 * manufacturerModelName 1..1

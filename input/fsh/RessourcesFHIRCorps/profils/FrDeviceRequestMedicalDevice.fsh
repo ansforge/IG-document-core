@@ -13,10 +13,9 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 
 // Date d'utilisation ou de présence chez le patient
 * occurrence[x] MS
-* occurrence[x] ^short = "Date d'utilisation ou de présence chez le patient"
-
 // Nombre de renouvellement(s) possible(s)
 * occurrenceTiming MS
+* occurrenceTiming ^short = "Date d'utilisation ou de présence chez le patient"
 * occurrenceTiming.repeat.count MS
 * occurrenceTiming.repeat.count ^short = "Nombre de renouvellement(s) possible(s)"
 

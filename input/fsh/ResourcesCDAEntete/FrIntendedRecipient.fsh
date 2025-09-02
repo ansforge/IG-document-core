@@ -8,7 +8,6 @@ Description: "L'élément de l'en-tête du CDA intendedRecipient permet d'enregi
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* classCode 0..0
 * id ^short = "Identifiant du destinataire prévu."
 * id.root = "1.2.250.1.71.4.2.1"
 * id.root 1..1

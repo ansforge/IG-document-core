@@ -9,7 +9,6 @@ Description: "L'élément de l'en-tête du CDA recordTarget permet de représent
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * contextControlCode 0..0
 * patientRole ^short = "Description du patient/usager."
 * patientRole only fr-core-patient-role

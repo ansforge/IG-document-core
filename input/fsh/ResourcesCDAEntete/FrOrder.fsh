@@ -9,8 +9,6 @@ Description: "L'élément de l'en-tête du CDA order permet de représenter la p
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* classCode 0..0
-* moodCode 0..0
 * id ^short = "Identifiant de la prescription, obligatoire pour :
 - un CR de biologie pour porter l’Order Placer Number (numéro de la prescription attribué par le prescripteur)
 - un CR d’imagerie pour porter l'Order Placer Number (numéro de la demande attribué par le demandeur), avec l'attribut @root contenant l'autorité d'affectation et l'attribut @extension contenant l'identifiant géré par cette autorité."

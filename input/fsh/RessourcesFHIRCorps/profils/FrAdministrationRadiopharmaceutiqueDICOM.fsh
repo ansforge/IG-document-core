@@ -19,6 +19,7 @@ produit administré, dose administrée, voie d’administration, numéro de lot,
 * dosage.route ^short = "Voie d'administration : Terminologie utilisée : EDQM - Standard terms / classe ROA (Voie d'administration)"
 * dosage.dose MS
 * dosage.dose ^short = "Dose à administrer"
+* dosage.dose.extension contains FrTranslationExtension named translation 0..1 MS
 * dosage.rateQuantity MS
 * dosage.rateQuantity ^short = "Rythme d'administration"
 

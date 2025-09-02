@@ -9,8 +9,6 @@ Description: "L'élément de l'en-tête du CDA author permet d’enregistrer un 
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
-* contextControlCode 0..0
 * functionCode ^short = "Rôle fonctionnel de l'auteur. A utiliser uniquement si l'auteur est un professionnel."
 * functionCode.code from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS (required)
 * functionCode.nullFlavor 0..0

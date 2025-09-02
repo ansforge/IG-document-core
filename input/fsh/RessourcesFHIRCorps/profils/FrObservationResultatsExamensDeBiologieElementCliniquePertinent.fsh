@@ -34,10 +34,9 @@ Description: "Ce profil permet de décrire un résultat d'un élément d'un exam
     FrActorExtension named participant 0..1
 
 // auteur
-* performer.extension contains FrActorExtension named author 0..1
-* performer.extension[author] ^short = "Auteur"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
-* performer.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[auteur] ^short = "Auteur"
+* performer.extension[auteur].extension[type].valueCode = #AUT (exactly)
+* performer.extension[auteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Laboratoire sous-traitant
 * performer.extension[laboratoireExecutant] MS

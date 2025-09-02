@@ -41,5 +41,5 @@ Description: "FrEffetIndesirable permet de décrire un effet indésirable prévi
 * seriousness ^short = "Gravité de l'effet indésirable"
 
 * outcome MS
-* outcome from http://hl7.org/fhir/ValueSet/adverse-event-outcome (required)
+* outcome from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-cisis (required)
 * outcome ^short = "Évolution de l'effet indésirable"

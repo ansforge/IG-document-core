@@ -28,7 +28,7 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 
 // Modificateurs topographiques
 * extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named ModificateurTopographique 0..1 MS
-
+* extension[ModificateurTopographique] ^short = "Modificateurs topographiques"
 // Contraindre le contenu de l'extension (BodyStructure obligatoire)
 * extension[ModificateurTopographique].valueReference only Reference(BodyStructure)
 
@@ -40,4 +40,6 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performer ^short = "Participant"
 * performer.actor.extension contains
     FrActorExtension named Participant 0..1
+* performer.actor.extension[Participant].extension[type].valueCode = #PART (exactly)
 * performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)
+* performer.actor.extension[Participant].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis

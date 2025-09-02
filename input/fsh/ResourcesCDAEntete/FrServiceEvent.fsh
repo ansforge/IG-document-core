@@ -10,8 +10,6 @@ L'occurrence de documentationOf/serviceEvent contenant les données de l’évè
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* classCode 0..0
-* moodCode 0..0
 * id ^short = "Identifiant de l’évènement documenté : Obligatoire pour :
 - les prescriptions pour porter l'identifiant EPU de la prescription (et faisant office d'Order Placer Number)
 - la demande d'acte d'imagerie pour porter l'Order Placer Number

@@ -19,8 +19,7 @@ Description: "Ce profil représente les professionnels de santé et leurs rôles
 * code contains typeCode 0..1
 * code[typeCode].coding from $JDV_J144-ParticipationType-CISIS (required)
 * code[typeCode] ^short = "Type de participation"
-
-* practitioner 1..1
+* practitioner 1..1 
 * practitioner only Reference(FrPractitionerDocument)
 * organization 1..1
 * organization only Reference(FrOrganizationDocument)

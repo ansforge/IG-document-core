@@ -9,8 +9,6 @@ Description: "L'élément de l'en-tête du CDA encompassingEncounter permet de d
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
 * sdtcAdmissionReferralSourceCode 0..0
-* classCode 0..0
-* moodCode 0..0
 * id ^short = "Identifiant de la prise en charge"
 * code ^short = "Type de prise en charge" 
 * code from https://mos.esante.gouv.fr/NOS/JDV_J142-TypeRencontre-CISIS/FHIR/JDV-J142-TypeRencontre-CISIS
