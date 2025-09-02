@@ -18,6 +18,3 @@ Description: "Liste contenant soit un événement de naissance, soit une observa
 * entry 1..*
 * entry ^short = "Références vers des observations de type grossesse ou naissance"
 * entry.item only Reference(FrObservationGrossesseDocument or FrObservationNaissanceDocument)
-
-
-

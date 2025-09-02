@@ -9,31 +9,12 @@ Description: "L'entrée Produit de santé permet de décrire un médicament ou u
 
 * code 1..1 MS
   * ^short = "Code du produit de santé"
+// créer un type CodeableConceptDocument ou bien utiliser extension : translation ?
 * code.coding.extension contains FrTranslationExtension named translation 0..*
 * code.coding.extension[translation] ^short = "Autres codifications (CIP, UCD, ATC, MV)"
 * code.coding.extension[translation].valueCodeableConcept.coding.system from FrValueSetVaccineTranslation (required) 
 
-
-// créer un type CodeableConceptDocument ou bien utiliser le coding pour les translations ?
-// Définition du slicing
-/*
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #open
-* code.coding ^slicing.description = "Slicing pour distinguer le code principal et les translations"
-
-* code.coding contains
-    code 1..1 and
-    translation 0..*
-
-// Slice code (code principal)
-* code.coding[code] ^short = "Code principal du vaccin"
-* code.coding[code].system from FRValueSetCodeProduit (required)
-
-// Slice translation (autres codifications)
-* code.coding[translation] ^short = "Autres codifications (CIP, UCD, ATC, MV)"
-* code.coding[translation].system from FRValueSetVaccineTranslation (required) 
-*/
+// créer un type CodeableConceptDocument ou bien utiliser extension : translation ?
 
 //Nom de marque du produit : Extension IHE
 * extension contains $ihe-ext-medication-productname named productName 1..1 MS

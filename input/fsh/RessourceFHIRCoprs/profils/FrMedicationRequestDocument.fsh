@@ -7,15 +7,22 @@ Description: "
  - Cette entrée de type substanceAdministration permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
+
 * doNotPerform = false
 * intent = #order
-* identifier 1..* MS
 
+* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.ordered = false
-* identifier contains referencePrescription 1..*
+
+* identifier contains
+    identifierEntree 1..* MS and
+    referencePrescription 1..* MS
+
+* identifier[identifierEntree] ^short = "Identifiant de l'entrée"
+* identifier[referencePrescription] ^short = "Référence de la prescription. Non utilisé dans une prescription."
 
 * category 0..1 MS
 * category.coding 1..1
@@ -43,7 +50,7 @@ Description: "
       * periodUnit MS
       * when MS
       * offset MS
-      // Nombre de renouvellement(s) possible(s) : ou bien : 	dispenseRequest.numberOfRepeatsAllowed
+      // Nombre de renouvellement(s) possible(s) // ou bien : 	dispenseRequest.numberOfRepeatsAllowed
       //* countMax MS 
         //* ^short = "Nombre de renouvellement(s) possible(s)"
   // Dosages conditionnels
@@ -90,16 +97,16 @@ Description: "
   * ^short = "Motif du traitement"
 * reasonReference only Reference(Condition or Observation)
 
-//  une copie du plan de traitement médicamenteux 
+//copie du plan de traitement médicamenteux
+* supportingInformation only Reference(MedicationRequest)
+  * ^short = "Référence à un item du plan de traitement. Une copie du plan de traitement médicamenteux."
+  * identifier MS
+    * ^short = "Identifiant de la ligne de traitement dans un plan de traitement."
 // ou bien basedOn lien vers le plan de traitement ?
 /*
 * basedOn 0..1 MS
 * basedOn only Reference(FrCarePlanDocument)
 */
-* supportingInformation only Reference(MedicationRequest)
-  * ^short = "Référence à un item du plan de traitement. Une copie du plan de traitement médicamenteux."
-  * identifier MS
-    * ^short = "Identifiant de la ligne de traitement dans un plan de traitement."
 
 //Instructions au patient
 // si codé : 
@@ -114,6 +121,7 @@ Description: "
   */
 * dispenseRequest MS
   * extension contains FrDispenserInstructionExtension named instructionsAuDispensateur 0..1 MS 
+    * ^short = "instructions au dispensateur"
   * quantity MS
     * ^short = "Quantité à dispenser" 
   * numberOfRepeatsAllowed MS 

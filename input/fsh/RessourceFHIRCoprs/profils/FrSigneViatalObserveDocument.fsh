@@ -27,9 +27,17 @@ Description: "
   * ^short = "Méthode utilisée pour l'observation"
 * bodySite MS 
   * ^short = "Site de l'observation"
+
 * performer 0..1 MS
-  * ^short = "Auteur de l'observation"
-* performer only Reference (FrPractitionerDocument or FrPractitionerRoleDocument)
+* performer.extension contains FrActorExtension named author 0..*
+* performer.extension[author] ^short = "Auteur de l’observation"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(
+    FrPractitionerRoleDocument
+    or FrOrganizationDocument
+    or FrPractitionerRoleDocument
+    or FrPatientINSDocument
+    )
 * component.value[x] only Quantity
 * component.valueQuantity 1..1 MS
   * ^short = "Observation effectuée. Terminologie utilisée : UCUM (2.16.840.1.113883.6.8)."

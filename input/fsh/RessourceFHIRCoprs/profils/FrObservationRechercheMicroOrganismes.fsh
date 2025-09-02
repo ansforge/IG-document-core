@@ -11,4 +11,14 @@ Description: "Cette entrée permet d'indiquer si une recherche de micro-organism
 * valueBoolean 1..1 MS
   * ^short = "Valeur de l’observation"
   
+* performer MS
+* performer.extension contains FrActorExtension named author 0..1
+* performer.extension[author] ^short = "Auteur de l’observation"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(
+    FrPractitionerRoleDocument
+    or FrOrganizationDocument
+    or FrPractitionerRoleDocument
+    or FrPatientINSDocument
+    )
 * insert FrRuleSetSimpleObservation

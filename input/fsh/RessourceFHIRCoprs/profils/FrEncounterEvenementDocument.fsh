@@ -56,4 +56,3 @@ Id: fr-transport-professionnel-extension
 Title: "Fr Transport professionnel"
 Description: "Extension permettant de référencer une procédure de transport du Professionnel depuis un Encounter."
 * valueReference only Reference(FrProcedureTransportProfessionnel)
-

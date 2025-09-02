@@ -1,6 +1,6 @@
 Extension: FrSequenceExtension
 Id: fr-sequence-extension
-Title: "FR Sequence"
+Title: "Fr Sequence"
 Description: "Dosages progressifs et fractionnés"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationAdministration"

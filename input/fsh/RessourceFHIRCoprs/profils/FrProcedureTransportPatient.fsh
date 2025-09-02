@@ -36,19 +36,21 @@ Description: "Cette entrée de type act permet de décrire le transport d'un pat
   * ^short = "Date du transport"	
 
 * performer MS
-* performer.extension contains
-    FrActorExtension named transporteur 0..1 
+* performer.actor.extension contains
+    FrActorExtension named transporteur 1..1
 
-// --- transporteur ---
-* performer.extension[transporteur] ^short = "Transporteur"
-* performer.extension[transporteur].extension[type].valueCode = #PRF (exactly)
-* performer.extension[transporteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+// transporteur
+* performer.actor.extension[transporteur] ^short = "Transporteur"
+* performer.actor.extension[transporteur].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[transporteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
+// Lieu de départ / Destination
 * location MS 
   * ^short = "Lieu de départ / Destination"
-* location only Reference(FrLocationDocument)
+* location.extension contains FrProcedureFromLocation named lieuDepart 0..1
+* location.extension contains FrProceduretoLocation named destination 0..1
 
 //Autres précision sur le trajet ou le transport du patient
-// ou bien Utilisation de l’élément note
 // Si les précisions sur le transport sont non codées ou non structurées, on peut les inclure directement dans Procedure.note
 * extension contains FrAutresPrecisionExtension named precisionTransportPatient 0..* MS

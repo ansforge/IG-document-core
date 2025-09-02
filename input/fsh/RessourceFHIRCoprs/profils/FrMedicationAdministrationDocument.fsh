@@ -50,7 +50,7 @@ Description: "
 
 // Médicament
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FrMedicationDocument)
+* medication[x] only CodeableConcept or Reference(FrMedicationDocument or FrMedicationsCombinaisonDocument)
 
 // Prescription : Utilisation de l'extension FrPrescription ou l'élément request qui fait référence (MedicationRequest) ?
 * extension contains FrPrescriptionExtension named Prescription 0..* MS 
@@ -64,8 +64,6 @@ Description: "
   * ^short = "Motif du traitement"
 * reasonReference only Reference(Condition or Observation)
 
-// Précondition ou bien utiliser l'extnexion FHIR note ??
+// Précondition ou bien utiliser l'extnexion FHIR "note" ??
 * extension contains FrPreconditionExtension named precondition 0..1
   * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."
-
-

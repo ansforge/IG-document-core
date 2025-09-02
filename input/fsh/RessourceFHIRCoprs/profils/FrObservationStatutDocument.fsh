@@ -14,4 +14,14 @@ Description: "Cette entrée permet d'indiquer le statut du document (son état d
   * ^short = "Statut du document"
 * valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-document-cisis (required)
 
+* performer MS
+* performer.extension contains FrActorExtension named author 0..1
+* performer.extension[author] ^short = "Auteur de l’observation"
+* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[reference].valueReference only Reference(
+    FrPractitionerRoleDocument
+    or FrOrganizationDocument
+    or FrPractitionerRoleDocument
+    or FrPatientINSDocument
+    )
 * insert FrRuleSetSimpleObservation

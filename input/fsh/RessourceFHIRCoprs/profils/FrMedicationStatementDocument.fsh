@@ -64,13 +64,12 @@ Description: "
 // Prescription : Utilisation de l'extension FrPrescription ou l'élément request qui fait référence (MedicationRequest) ?
 * extension contains FrPrescriptionExtension named Prescription 0..* MS 
 
-
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
 * reasonReference only Reference(Condition or Observation)
 
-// Précondition ou bien utiliser l'extnexion FHIR note ??
+// Ou bien utilisation de l'extnexion FHIR note ??
 * extension contains FrPreconditionExtension named precondition 0..1
 
 

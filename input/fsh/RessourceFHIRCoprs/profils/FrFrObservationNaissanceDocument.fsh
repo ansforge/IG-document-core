@@ -6,7 +6,6 @@ Title: "Observation - Fr Naissance"
 Description: "Cette entrée rassemble les observations relatives à une naissance.
  - Elle peut-être utilisée comme 'component'; d'une entrée FR-Historique-de-la-grossesse (1.3.6.1.4.1.19376.1.5.3.1.4.13.5.1)."
 
-
 * code 1..1 MS 
   * ^short = "Code de l'entrée."
 * code.coding.system = "http://snomed.info/sct/"
@@ -32,4 +31,3 @@ Invariant: child-relationship
 Description: "Le relationship de RelatedPerson doit être fixé à CHILD."
 Expression: "resolve().relationship.coding.where(code = 'CHILD').exists()"
 Severity: #error
-

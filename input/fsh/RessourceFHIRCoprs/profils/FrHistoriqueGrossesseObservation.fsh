@@ -18,13 +18,8 @@ Description: "Cette entrée permet de regrouper les observations relatives à un
 * effective[x] only dateTime
   * ^short = "Période de la grossesse"
 
-//* encounter only Reference(Encounter) 
-  * ^short = "Informations relatives aux naissances"
 * hasMember 1..* MS
   * ^short = "Informations relatives à la grossesse"
 * hasMember only Reference(FrObservationGrossesseDocument or FrObservationNaissanceDocument) 
 
 * value[x] 0..0
-
-
-
