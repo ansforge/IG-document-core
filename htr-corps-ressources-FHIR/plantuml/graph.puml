@@ -1113,7 +1113,8 @@ package IG #DDDDDD{
              MedicationRequest.text => [1..None]
              MedicationRequest.extension => [None..None]
              MedicationRequest.extension:precondition => <&plus>[0..1]
-             MedicationRequest.identifier => [1..None]
+             MedicationRequest.identifier => [2..None]
+             MedicationRequest.identifier:identifierEntree => [1..*]
              MedicationRequest.identifier:referencePrescription => [1..*]
              MedicationRequest.status => [None..None]
              MedicationRequest.intent => [None..None]
@@ -1131,10 +1132,14 @@ package IG #DDDDDD{
              MedicationRequest.requester.extension:author => <&plus>[0..1]
              MedicationRequest.requester.extension:author.extension:type => <&plus>[None..None]
              MedicationRequest.requester.extension:author.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:reference => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:reference.value[x] => <&plus>[None..None]
              MedicationRequest.performer => [None..None]
              MedicationRequest.performer.extension:prescripteur => <&plus>[0..1]
              MedicationRequest.performer.extension:prescripteur.extension:type => <&plus>[None..None]
              MedicationRequest.performer.extension:prescripteur.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:reference => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:reference.value[x] => <&plus>[None..None]
              MedicationRequest.reasonReference => [None..None]
              MedicationRequest.reasonReference:renouvellement => [0..1]
              MedicationRequest.reasonReference:ald => [0..1]
@@ -1243,6 +1248,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1257,6 +1267,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.interpretation:observationRange => [0..1]
@@ -1276,6 +1291,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1293,6 +1313,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.value[x].coding.extension:qualifier => <&plus>[0..1]
              Observation.value[x].coding.extension:qualifier.extension => <&plus>[2..None]
@@ -1333,6 +1358,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1350,6 +1380,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1440,11 +1475,25 @@ package IG #DDDDDD{
              Procedure.performed[x] => [1..None]
              Procedure.performed[x]:performedDateTime => [1..1]
              Procedure.performer => [None..None]
-             Procedure.performer.extension => [None..None]
-             Procedure.performer.extension:transporteur => <&plus>[0..1]
-             Procedure.performer.extension:transporteur.extension:type => <&plus>[None..None]
-             Procedure.performer.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension => [1..None]
+             Procedure.performer.actor.extension:transporteur => <&plus>[0..1]
+             Procedure.performer.actor.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne => <&plus>[1..1]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:reference.value[x] => <&plus>[None..None]
              Procedure.location => [None..None]
+             Procedure.location.extension:lieuDepart => <&plus>[0..1]
+             Procedure.location.extension:destination => <&plus>[0..1]
         } 
 
         class FrProcedureTransportPatient{
@@ -1470,11 +1519,17 @@ package IG #DDDDDD{
              Procedure.performed[x] => [1..None]
              Procedure.performed[x]:performedDateTime => [1..1]
              Procedure.performer => [None..None]
-             Procedure.performer.extension => [None..None]
-             Procedure.performer.extension:transporteur => <&plus>[0..1]
-             Procedure.performer.extension:transporteur.extension:type => <&plus>[None..None]
-             Procedure.performer.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension => [1..None]
+             Procedure.performer.actor.extension:transporteur => <&plus>[1..1]
+             Procedure.performer.actor.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference.value[x] => <&plus>[None..None]
              Procedure.location => [None..None]
+             Procedure.location.extension:lieuDepart => <&plus>[0..1]
+             Procedure.location.extension:destination => <&plus>[0..1]
         } 
 
         class FrReferencesExternesDocument{
@@ -1508,6 +1563,11 @@ package IG #DDDDDD{
              Observation.code => [None..None]
              Observation.effective[x] => [None..None]
              Observation.performer => [None..1]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.interpretation => [None..None]
              Observation.bodySite => [None..None]
              Observation.method => [None..None]
@@ -1520,7 +1580,12 @@ package IG #DDDDDD{
              Observation.identifier => [1..1]
              Observation.status => [None..None]
              Observation.effective[x] => [None..None]
-             Observation.performer => [None..None]
+             Observation.performer => [None..1]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.hasMember => [None..None]
         } 
 
@@ -1571,9 +1636,13 @@ package IG #DDDDDD{
              Immunization.performer.actor.extension:author => <&plus>[1..1]
              Immunization.performer.actor.extension:author.extension:type => <&plus>[None..None]
              Immunization.performer.actor.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:reference => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Immunization.performer.actor.extension:executant => <&plus>[0..1]
              Immunization.performer.actor.extension:executant.extension:type => <&plus>[None..None]
              Immunization.performer.actor.extension:executant.extension:type.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:reference => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:reference.value[x] => <&plus>[None..None]
              Immunization.note => [None..1]
              Immunization.reasonReference => [None..None]
              Immunization.protocolApplied => [None..None]
@@ -1603,15 +1672,28 @@ package IG #DDDDDD{
      FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
      FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
      FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrAdministrationFrequency
+     FrObservationRechercheMicroOrganismes -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationResultatDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationStatutDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationStatut -[#black,dashed,thickness=2]-> FrActorExtension
      FrObservationStatut -[#black,dashed,thickness=2]-> FrQualifierExtension
      FrObservationSurEchelleDouleur -[#black,dashed,thickness=2]-> FrRepeatNumberExtension
+     FrObservationSyntheseMedicaleSejourDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationTransfusionDeProduitsSanguins -[#black,dashed,thickness=2]-> FrActorExtension
      FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
      FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrQualifierExtension
      FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrProcedureFromLocation
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrProceduretoLocation
      FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
      FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
      FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
      FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrProcedureFromLocation
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrProceduretoLocation
+     FrSigneVitalObserveDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrSignesVitauxDocument -[#black,dashed,thickness=2]-> FrActorExtension
      FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrVaccinationTypeExtension
      FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
      FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
@@ -1629,6 +1711,10 @@ package IG #DDDDDD{
           Extension.extension:type.extension => [None..0]
           Extension.extension:type.url => [None..None]
           Extension.extension:type.value[x] => [None..None]
+          Extension.extension:typeCode => [0..1]
+          Extension.extension:typeCode.extension => [None..0]
+          Extension.extension:typeCode.url => [None..None]
+          Extension.extension:typeCode.value[x] => [None..None]
           Extension.extension:reference => [1..1]
           Extension.extension:reference.extension => [None..0]
           Extension.extension:reference.url => [None..None]
@@ -1736,6 +1822,36 @@ package IG #DDDDDD{
           Extension.extension:dispensateur.extension => [None..0]
           Extension.extension:dispensateur.url => [None..None]
           Extension.extension:dispensateur.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrProcedureFromLocation{
+
+          Extension.extension => [2..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:type.value[x].coding.code => [None..None]
+          Extension.extension:reference => [1..1]
+          Extension.extension:reference.extension => [None..0]
+          Extension.extension:reference.url => [None..None]
+          Extension.extension:reference.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrProceduretoLocation{
+
+          Extension.extension => [2..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:type.value[x].coding.code => [None..None]
+          Extension.extension:reference => [1..1]
+          Extension.extension:reference.extension => [None..0]
+          Extension.extension:reference.url => [None..None]
+          Extension.extension:reference.value[x] => [None..None]
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
         } 

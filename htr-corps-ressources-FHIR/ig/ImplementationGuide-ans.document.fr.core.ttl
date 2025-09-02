@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-09-01T13:19:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-02T15:19:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -941,14 +941,20 @@
        fhir:id [ fhir:v "Ressources CDA" ] ;
        fhir:name [ fhir:v "Eléments CDA" ]
      ] [
-       fhir:id [ fhir:v "Ressources FHIR" ] ;
-       fhir:name [ fhir:v "Profils FHIR" ]
+       fhir:id [ fhir:v "Ressources FHIR entête" ] ;
+       fhir:name [ fhir:v "Profils FHIR entête" ]
+     ] [
+       fhir:id [ fhir:v "Ressources FHIR corps" ] ;
+       fhir:name [ fhir:v "Profils FHIR corps" ]
      ] [
        fhir:id [ fhir:v "Data Type FHIR" ] ;
        fhir:name [ fhir:v "Data Type Profiles" ]
      ] [
-       fhir:id [ fhir:v "Extensions FHIR" ] ;
-       fhir:name [ fhir:v "Extensions FHIR" ]
+       fhir:id [ fhir:v "Extensions FHIR entête" ] ;
+       fhir:name [ fhir:v "Extensions FHIR entête" ]
+     ] [
+       fhir:id [ fhir:v "Extensions FHIR corps" ] ;
+       fhir:name [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:id [ fhir:v "Mapping" ] ;
        fhir:name [ fhir:v "Concept Maps" ]
@@ -1009,26 +1015,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-core-name" ]
-       ] ;
-       fhir:name [ fhir:v "CDA - " ] ;
-       fhir:description [ fhir:v "L'élément de l'en-tête du CDA  correspond au nom d'une personne physique." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Ressources CDA" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1456,6 +1443,25 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-name> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-core-name" ]
+       ] ;
+       fhir:name [ fhir:v "CDA - Name " ] ;
+       fhir:description [ fhir:v "L'élément de l'en-tête du CDA  correspond au nom d'une personne physique." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources CDA" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-order> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-core-order" ]
        ] ;
@@ -1693,7 +1699,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1712,7 +1718,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1750,7 +1756,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1798,6 +1804,25 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-actor-extension" ]
+       ] ;
+       fhir:name [ fhir:v "Extension - Actor" ] ;
+       fhir:description [ fhir:v "Extension pour représenter un acteur impliqué dans le document avec son type et sa référence." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-author-time" ]
        ] ;
@@ -1807,7 +1832,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1826,7 +1851,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1845,7 +1870,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1864,7 +1889,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1883,7 +1908,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1902,7 +1927,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1921,7 +1946,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1940,7 +1965,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1959,26 +1984,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-actor-extension" ]
-       ] ;
-       fhir:name [ fhir:v "Fr Extension - Actor" ] ;
-       fhir:description [ fhir:v "Extension pour représenter un acteur impliqué dans le document avec son type et sa référence." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1997,7 +2003,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2016,7 +2022,45 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-from-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-from-location" ]
+       ] ;
+       fhir:name [ fhir:v "Fr Lieu de départ du transport" ] ;
+       fhir:description [ fhir:v "Extension pour représenter le lieu de départ d’un transport (patient ou professionnel)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-to-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-to-location" ]
+       ] ;
+       fhir:name [ fhir:v "Fr Lieu de départ du transport" ] ;
+       fhir:description [ fhir:v "Extension pour représenter le lieu de destination d’un transport (patient ou professionnel)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2035,7 +2079,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2054,7 +2098,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2073,7 +2117,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2092,7 +2136,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2111,7 +2155,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2130,7 +2174,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2149,7 +2193,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2168,7 +2212,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2187,7 +2231,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2206,7 +2250,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2225,7 +2269,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2244,7 +2288,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2257,13 +2301,13 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-repeat-number-extension> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-repeat-number-extension" ]
        ] ;
-       fhir:name [ fhir:v "FR Repeat Number" ] ;
+       fhir:name [ fhir:v "Fr Repeat Number" ] ;
        fhir:description [ fhir:v "Numéro d'occurrence de l'acte ou de l'observation (équivalent CDA repeatNumber)" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2276,13 +2320,13 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-sequence-extension> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-sequence-extension" ]
        ] ;
-       fhir:name [ fhir:v "FR Sequence" ] ;
+       fhir:name [ fhir:v "Fr Sequence" ] ;
        fhir:description [ fhir:v "Dosages progressifs et fractionnés" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2301,7 +2345,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2320,7 +2364,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2339,7 +2383,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2358,7 +2402,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2666,7 +2710,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2685,7 +2729,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -2742,7 +2786,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3141,7 +3185,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3160,7 +3204,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3179,7 +3223,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3198,7 +3242,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3217,7 +3261,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3236,7 +3280,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3597,7 +3641,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3616,7 +3660,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3635,7 +3679,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3654,7 +3698,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3673,7 +3717,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3692,7 +3736,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3711,7 +3755,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3730,7 +3774,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3749,7 +3793,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3768,7 +3812,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3787,7 +3831,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3806,7 +3850,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3825,7 +3869,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3844,7 +3888,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Ressources FHIR" ]
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -3862,7 +3906,7 @@
          a fhir:boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
