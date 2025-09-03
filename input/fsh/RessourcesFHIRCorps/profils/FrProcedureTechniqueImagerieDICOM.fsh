@@ -16,7 +16,7 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-document-imagerie-cisis (required)
 
 * subject MS
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FrPatientINSDocument)
 * subject ^short = "Patient concerné"
 
 * performed[x] MS

@@ -23,5 +23,4 @@ dose administrée, voie d’administration, numéro de lot, autres informations 
 * medication[x] ^short = "Produit de santé administré"
 * medicationReference MS
 * medicationReference ^short = "Référence au produit de santé administré"
-// a mettre le bon nom de profil FR FrMedication
-* medicationReference only Reference (Medication) //ou bien medicationCodeableConcept
+* medicationReference only Reference (FrMedicationDocument) //ou bien medicationCodeableConcept

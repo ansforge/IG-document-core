@@ -87,10 +87,9 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 * hasMember MS
 * hasMember ^short = "Référence interne"
 
-// à mettre à jour le nom du profil FrObservationStatut
 * derivedFrom 0..1 MS
 * derivedFrom ^short = "Statut de l’évaluation"
-* derivedFrom only Reference(Observation)
+* derivedFrom only Reference(FrObservationStatut)
 
 // Commentaires
 * note ^short = "Commentaires (Annotations)"

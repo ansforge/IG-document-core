@@ -19,10 +19,9 @@ Description: "FrEffetIndesirable permet de décrire un effet indésirable prévi
 
 * suspectEntity 1..* MS
 
-// à mettre après le bon nom du profil FrMedicationAdministrationDocument
 * suspectEntity ^short = "Agent soupçonné d’être à l’origine de l’événement indésirable"
 * suspectEntity.instance 1..1 MS
-* suspectEntity.instance only Reference(MedicationAdministration)
+* suspectEntity.instance only Reference(FrMedicationAdministrationDocument)
 * suspectEntity.instance ^short = "Médicament, substance incriminée, posologie"
 
 * resultingCondition MS
