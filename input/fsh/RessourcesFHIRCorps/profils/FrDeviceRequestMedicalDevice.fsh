@@ -1,7 +1,7 @@
 Profile: FrDeviceRequestMedicalDevice
 Parent: DeviceRequest
 Id: fr-device-request-medicaldevice
-Title: "DeviceRequest - Fr Dispositif médical"
+Title: "DeviceRequest - Fr git add .Dispositif médical"
 Description: "Représentation d'une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
