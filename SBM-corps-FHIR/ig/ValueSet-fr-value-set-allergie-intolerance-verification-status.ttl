@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-value-set-allergie-intolerance-verification-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fr-value-set-allergie-intolerance-verification-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs fr-value-set-allergie-intolerance-verification-status</b></p><a name=\"fr-value-set-allergie-intolerance-verification-status\"> </a><a name=\"hcfr-value-set-allergie-intolerance-verification-status\"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut les codes sont définis dans <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html\"><code>http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html#allergyintolerance-verification-confirmed\">confirmed</a></td><td style=\"color: #cccccc\">Confirmed</td><td>The propensity for a reaction to the identified substance has been objectively verified (which may include clinical evidence by testing, rechallenge, or observation).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html#allergyintolerance-verification-unconfirmed\">unconfirmed</a></td><td style=\"color: #cccccc\">Unconfirmed</td><td>The propensity for a reaction to the identified substance has not been objectively verified.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html#allergyintolerance-verification-refuted\">refuted</a></td><td style=\"color: #cccccc\">Refuted</td><td>A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.</td></tr></table></li></ul><p>Ce jeu de valeur (ValueSet) exclut les codes selon les règles suivantes :</p><ul><li>Exclude les codes sont définis dans <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html\"><code>http://terminology.hl7.org/CodeSystem/allergyintolerance-verification</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-allergyintolerance-verification.html#allergyintolerance-verification-entered-in-error\">entered-in-error</a></td><td style=\"color: #cccccc\">Entered in Error</td><td>The statement was entered in error and is not valid.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-value-set-allergie-intolerance-verification-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FrValueSetAllergieIntoleranceVerificationStatus"] ; # 
+  fhir:title [ fhir:v "Statuts de vérification d'une allergie ou intolérance (restreint)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-09-03T12:41:15+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Jeu de valeurs français restreint pour AllergyIntolerance.verificationStatus, incluant uniquement confirmed, unconfirmed, et refuted."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "confirmed" ]
+       ] [
+         fhir:code [ fhir:v "unconfirmed" ]
+       ] [
+         fhir:code [ fhir:v "refuted" ]
+       ] )
+     ] ) ;
+     fhir:exclude ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "entered-in-error" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

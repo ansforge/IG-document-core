@@ -55,7 +55,7 @@
   fhir:name [ fhir:v "FrClinicalDocument"] ; # 
   fhir:title [ fhir:v "CDA - clinicalDocument"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-08-25T15:49:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-09-03T12:41:15+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -110,7 +110,7 @@
          fhir:key [ fhir:v "PerformerRequire" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal" ] ;
-         fhir:expression [ fhir:v "performer.count() >= 1" ] ;
+         fhir:expression [ fhir:v "documentationOf.serviceEvent.performer.count() >= 1" ] ;
          fhir:source [
            fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
            fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
@@ -816,7 +816,7 @@
          fhir:key [ fhir:v "PerformerRequire" ] ;
          fhir:severity [ fhir:v "error" ] ;
          fhir:human [ fhir:v "performer est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal" ] ;
-         fhir:expression [ fhir:v "performer.count() >= 1" ] ;
+         fhir:expression [ fhir:v "documentationOf.serviceEvent.performer.count() >= 1" ] ;
          fhir:source [
            fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
            fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>

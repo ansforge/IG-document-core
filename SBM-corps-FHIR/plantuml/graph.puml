@@ -80,156 +80,6 @@ package IG #DDDDDD{
              Evenement.executantEvenement.executant => [1..1]
         } 
 
-        class FrObservationDICOM{
-
-             Observation.extension => [None..None]
-             Observation.extension:ModificateurTopographique => <&plus>[0..1]
-             Observation.identifier => [1..1]
-             Observation.status => [None..None]
-             Observation.code => [None..None]
-             Observation.effective[x] => [None..None]
-             Observation.value[x] => [1..None]
-             Observation.bodySite => [None..None]
-             Observation.hasMember => [None..None]
-             Observation.derivedFrom => [None..None]
-        } 
-
-        class FrAdministrationProduitsDeSanteDICOM{
-
-             MedicationAdministration.status => [None..None]
-             MedicationAdministration.medication[x] => [None..None]
-             MedicationAdministration.medication[x]:medicationReference => [0..1]
-             MedicationAdministration.dosage => [None..None]
-             MedicationAdministration.dosage.route => [None..None]
-             MedicationAdministration.dosage.dose => [None..None]
-             MedicationAdministration.dosage.rate[x] => [None..None]
-             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
-        } 
-
-        class FrAdministrationRadiopharmaceutiqueDICOM{
-
-             MedicationAdministration.category => [1..None]
-             MedicationAdministration.category.coding.system => [None..None]
-             MedicationAdministration.category.coding.code => [None..None]
-             MedicationAdministration.category.coding.display => [None..None]
-             MedicationAdministration.medication[x] => [None..None]
-             MedicationAdministration.medication[x]:medicationReference => [0..1]
-             MedicationAdministration.dosage => [None..None]
-             MedicationAdministration.dosage.route => [None..None]
-             MedicationAdministration.dosage.dose => [None..None]
-             MedicationAdministration.dosage.rate[x] => [None..None]
-             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
-        } 
-
-        class FrDirectiveAnticipee{
-
-             Consent.status => [None..None]
-             Consent.scope => [None..None]
-             Consent.scope.coding.system => [None..None]
-             Consent.scope.coding.code => [None..None]
-             Consent.scope.coding.display => [None..None]
-             Consent.dateTime => [None..None]
-             Consent.source[x] => [None..None]
-             Consent.source[x]:sourceReference => [0..1]
-             Consent.source[x]:sourceAttachment => [0..1]
-             Consent.source[x]:sourceAttachment.data => [None..None]
-             Consent.source[x]:sourceAttachment.url => [None..None]
-             Consent.provision => [None..None]
-             Consent.provision.type => [None..None]
-             Consent.provision.code => [None..None]
-        } 
-
-        class FrEndpointWadoDICOM{
-
-             Endpoint.connectionType => [None..None]
-             Endpoint.connectionType.code => [None..None]
-             Endpoint.connectionType.display => [None..None]
-             Endpoint.payloadMimeType => [1..1]
-             Endpoint.address => [None..None]
-        } 
-
-        class FrImagingStudyExamenImagerieDICOM{
-
-             ImagingStudy.identifier => [1..None]
-             ImagingStudy.started => [None..None]
-             ImagingStudy.procedureCode => [1..1]
-             ImagingStudy.procedureCode.coding.system => [None..None]
-             ImagingStudy.procedureCode.coding.code => [None..None]
-             ImagingStudy.procedureCode.coding.display => [None..None]
-             ImagingStudy.reasonReference => [None..1]
-             ImagingStudy.series => [1..1]
-             ImagingStudy.series.uid => [None..None]
-             ImagingStudy.series.modality => [None..None]
-             ImagingStudy.series.endpoint => [None..None]
-             ImagingStudy.series.started => [None..None]
-             ImagingStudy.series.instance => [1..None]
-             ImagingStudy.series.instance:parent => [1..1]
-             ImagingStudy.series.instance:parent.sopClass => [None..None]
-             ImagingStudy.series.instance:parent.number => [None..None]
-             ImagingStudy.series.instance:subordonnee => [0..*]
-             ImagingStudy.series.instance:subordonnee.sopClass => [None..None]
-             ImagingStudy.series.instance:subordonnee.number => [None..None]
-        } 
-
-        class FrObjectifsDeReferenceDICOM{
-
-             Observation.identifier => [1..1]
-             Observation.status => [None..None]
-             Observation.code => [None..None]
-             Observation.subject => [1..None]
-             Observation.effective[x] => [1..None]
-             Observation.performer => [None..None]
-             Observation.value[x] => [1..None]
-             Observation.value[x]:valueCodeableConcept => [0..1]
-             Observation.interpretation => [None..1]
-             Observation.note => [None..None]
-             Observation.method => [None..None]
-        } 
-
-        class FrProcedureExpositionPatientDICOM{
-
-             Procedure.code => [1..None]
-             Procedure.code.coding.system => [None..None]
-             Procedure.code.coding.code => [None..None]
-             Procedure.code.coding.display => [None..None]
-             Procedure.performer => [1..None]
-             Procedure.performer:Participant => [1..1]
-             Procedure.performer:Participant.actor => [None..None]
-        } 
-
-        class FrProcedureTechniqueImagerieDICOM{
-
-             Procedure.extension => [1..None]
-             Procedure.extension:modaliteAcquisition => <&plus>[1..*]
-             Procedure.extension:modaliteAcquisition.value[x] => <&plus>[None..None]
-             Procedure.extension:ModificateurTopographique => <&plus>[0..1]
-             Procedure.identifier => [1..1]
-             Procedure.code => [1..None]
-             Procedure.subject => [None..None]
-             Procedure.performed[x] => [None..None]
-             Procedure.performer => [None..None]
-             Procedure.performer:Participant => [0..1]
-             Procedure.performer:Participant.actor => [None..None]
-             Procedure.bodySite => [1..1]
-        } 
-
-        class FrQuantityDICOM{
-
-             Observation.identifier => [1..1]
-             Observation.status => [None..None]
-             Observation.code => [None..None]
-             Observation.subject => [1..None]
-             Observation.effective[x] => [1..None]
-             Observation.performer => [None..None]
-             Observation.value[x] => [1..None]
-             Observation.value[x]:valueQuantity => [0..1]
-             Observation.value[x]:valueQuantity.system => [None..None]
-             Observation.value[x]:valueQuantity.code => [None..None]
-             Observation.interpretation => [None..1]
-             Observation.note => [None..None]
-             Observation.method => [None..None]
-        } 
-
         class Informateur{
 
              Informateur => [None..None]
@@ -410,8 +260,9 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
-             Observation.performer:auteur => [0..1]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..1]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -460,13 +311,27 @@ package IG #DDDDDD{
              Procedure.encounter => [None..None]
              Procedure.performed[x] => [None..None]
              Procedure.recorder => [None..None]
+             Procedure.recorder.extension:author => <&plus>[0..1]
+             Procedure.recorder.extension:author.extension:type => <&plus>[None..None]
+             Procedure.recorder.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Procedure.recorder.extension:author.extension:reference => <&plus>[None..None]
+             Procedure.recorder.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Procedure.performer => [None..None]
-             Procedure.performer:Intervenant => [0..*]
-             Procedure.performer:Intervenant.actor => [None..None]
-             Procedure.performer:Informateur => [0..*]
-             Procedure.performer:Informateur.actor => [None..None]
-             Procedure.performer:Participant => [0..*]
-             Procedure.performer:Participant.actor => [None..None]
+             Procedure.performer.actor.extension:Intervenant => <&plus>[0..*]
+             Procedure.performer.actor.extension:Intervenant.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:Intervenant.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Intervenant.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:Intervenant.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Informateur => <&plus>[0..*]
+             Procedure.performer.actor.extension:Informateur.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:Informateur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Informateur.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:Informateur.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant => <&plus>[0..*]
+             Procedure.performer.actor.extension:Participant.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:reference.value[x] => <&plus>[None..None]
              Procedure.reasonReference => [None..None]
              Procedure.bodySite => [None..None]
              Procedure.bodySite:ApproachSiteCode => [0..*]
@@ -481,11 +346,48 @@ package IG #DDDDDD{
         class FrObservationAdministrationDeDerivesDuSang{
 
              Observation.identifier => [1..1]
+             Observation.status => [None..None]
              Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
-             Observation.performer:auteur => [0..1]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..1]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrAdministrationProduitsDeSanteDICOM{
+
+             MedicationAdministration.status => [None..None]
+             MedicationAdministration.medication[x] => [None..None]
+             MedicationAdministration.medication[x]:medicationReference => [0..1]
+             MedicationAdministration.dosage => [None..None]
+             MedicationAdministration.dosage.route => [None..None]
+             MedicationAdministration.dosage.dose => [None..None]
+             MedicationAdministration.dosage.rate[x] => [None..None]
+             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
+        } 
+
+        class FrAdministrationRadiopharmaceutiqueDICOM{
+
+             MedicationAdministration.category => [1..None]
+             MedicationAdministration.category.coding.system => [None..None]
+             MedicationAdministration.category.coding.code => [None..None]
+             MedicationAdministration.category.coding.display => [None..None]
+             MedicationAdministration.medication[x] => [None..None]
+             MedicationAdministration.medication[x]:medicationReference => [0..1]
+             MedicationAdministration.dosage => [None..None]
+             MedicationAdministration.dosage.route => [None..None]
+             MedicationAdministration.dosage.dose => [None..None]
+             MedicationAdministration.dosage.dose.extension:translation => <&plus>[0..1]
+             MedicationAdministration.dosage.rate[x] => [None..None]
+             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
         } 
 
         class FrAllergyIntolerance{
@@ -495,6 +397,7 @@ package IG #DDDDDD{
              AllergyIntolerance.verificationStatus => [None..None]
              AllergyIntolerance.criticality => [None..None]
              AllergyIntolerance.code => [1..None]
+             AllergyIntolerance.patient => [None..None]
              AllergyIntolerance.onset[x] => [None..None]
              AllergyIntolerance.onset[x]:onsetPeriod => [0..1]
              AllergyIntolerance.onset[x]:onsetPeriod.start => [1..None]
@@ -508,22 +411,29 @@ package IG #DDDDDD{
         class FrObservationBatterieExamenBiologieMedicale{
 
              Observation.code => [None..None]
-             Observation.code.coding.extension.extension => [None..0]
-             Observation.code.coding.extension.url => [None..None]
-             Observation.code.coding.extension.value[x] => [None..None]
-             Observation.code.coding.extension.value[x]:valueCoding => [0..1]
+             Observation.code.extension:translation => <&plus>[0..1]
              Observation.code.text => [None..None]
              Observation.subject => [None..None]
              Observation.performer => [None..None]
-             Observation.performer:laboratoireExecutant => [0..1]
-             Observation.performer:laboratoireExecutant.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:laboratoireExecutant.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:auteur => [0..1]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:auteur.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:participant => [0..1]
-             Observation.performer:participant.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:participant.extension:performerFunction.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant => <&plus>[0..1]
+             Observation.performer.extension:laboratoireExecutant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur => <&plus>[0..1]
+             Observation.performer.extension:auteur.extension:type => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant => <&plus>[0..1]
+             Observation.performer.extension:participant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:reference.value[x] => <&plus>[None..None]
              Observation.specimen => [None..None]
              Observation.hasMember => [None..None]
              Observation.derivedFrom => [None..None]
@@ -534,9 +444,11 @@ package IG #DDDDDD{
              Observation.code => [None..None]
              Observation.effective[x] => [None..None]
              Observation.performer => [None..None]
-             Observation.performer:auteur => [0..*]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:auteur.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.component => [None..None]
              Observation.component.code => [None..None]
              Observation.component.value[x] => [None..None]
@@ -567,6 +479,19 @@ package IG #DDDDDD{
              Bundle.entry:location.resource => [None..None]
              Bundle.entry:relatedPerson => [0..*]
              Bundle.entry:relatedPerson.resource => [None..None]
+        } 
+
+        class FrCarePlanDocument{
+
+             CarePlan.identifier => [1..None]
+             CarePlan.category => [1..1]
+             CarePlan.category.coding => [1..1]
+             CarePlan.category.coding.system => [None..None]
+             CarePlan.category.coding.code => [None..None]
+             CarePlan.category.coding.display => [None..None]
+             CarePlan.author => [None..None]
+             CarePlan.activity.reference => [None..None]
+             CarePlan.activity.detail.product[x] => [None..None]
         } 
 
         class FrCompositionDocument{
@@ -654,14 +579,15 @@ package IG #DDDDDD{
              Condition.bodySite.coding.system => [None..None]
              Condition.subject => [None..None]
              Condition.onset[x] => [1..None]
-             Condition.onset[x]:onsetPeriod => [1..1]
-             Condition.onset[x]:onsetPeriod.start => [None..None]
-             Condition.onset[x]:onsetPeriod.end => [None..None]
-             Condition.abatement[x] => [1..None]
-             Condition.abatement[x]:abatementPeriod => [0..1]
-             Condition.abatement[x]:abatementPeriod.start => [1..None]
-             Condition.abatement[x]:abatementPeriod.end => [None..None]
+             Condition.onset[x]:onsetDateTime => [0..1]
+             Condition.abatement[x] => [None..None]
+             Condition.abatement[x]:abatementDateTime => [0..1]
              Condition.recorder => [None..None]
+             Condition.recorder.extension:author => <&plus>[0..1]
+             Condition.recorder.extension:author.extension:type => <&plus>[None..None]
+             Condition.recorder.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Condition.recorder.extension:author.extension:reference => <&plus>[None..None]
+             Condition.recorder.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Condition.evidence.detail => [None..None]
              Condition.note => [None..1]
         } 
@@ -673,7 +599,6 @@ package IG #DDDDDD{
              AssignedAuthor.typeId.nullFlavor => [None..0]
              AssignedAuthor.typeId.assigningAuthorityName => [None..0]
              AssignedAuthor.typeId.displayable => [None..0]
-             AssignedAuthor.classCode => [None..0]
              AssignedAuthor.id => [None..None]
              AssignedAuthor.id.nullFlavor => [None..0]
              AssignedAuthor.id.assigningAuthorityName => [None..0]
@@ -695,7 +620,6 @@ package IG #DDDDDD{
              AssignedCustodian.typeId.nullFlavor => [None..0]
              AssignedCustodian.typeId.assigningAuthorityName => [None..0]
              AssignedCustodian.typeId.displayable => [None..0]
-             AssignedCustodian.classCode => [None..0]
              AssignedCustodian.representedCustodianOrganization => [None..None]
         } 
 
@@ -706,7 +630,6 @@ package IG #DDDDDD{
              AssignedEntity.typeId.nullFlavor => [None..0]
              AssignedEntity.typeId.assigningAuthorityName => [None..0]
              AssignedEntity.typeId.displayable => [None..0]
-             AssignedEntity.classCode => [None..0]
              AssignedEntity.id => [None..1]
              AssignedEntity.id.nullFlavor => [None..0]
              AssignedEntity.id.assigningAuthorityName => [None..0]
@@ -752,7 +675,6 @@ package IG #DDDDDD{
              Authenticator.typeId.nullFlavor => [None..0]
              Authenticator.typeId.assigningAuthorityName => [None..0]
              Authenticator.typeId.displayable => [None..0]
-             Authenticator.typeCode => [None..0]
              Authenticator.time => [None..None]
              Authenticator.time.value => [None..None]
              Authenticator.signatureCode => [None..None]
@@ -769,8 +691,6 @@ package IG #DDDDDD{
              Author.typeId.nullFlavor => [None..0]
              Author.typeId.assigningAuthorityName => [None..0]
              Author.typeId.displayable => [None..0]
-             Author.typeCode => [None..0]
-             Author.contextControlCode => [None..0]
              Author.functionCode => [None..None]
              Author.functionCode.nullFlavor => [None..0]
              Author.functionCode.code => [1..None]
@@ -789,7 +709,6 @@ package IG #DDDDDD{
              AuthoringDevice.typeId.nullFlavor => [None..0]
              AuthoringDevice.typeId.assigningAuthorityName => [None..0]
              AuthoringDevice.typeId.displayable => [None..0]
-             AuthoringDevice.classCode => [None..0]
              AuthoringDevice.determinerCode => [None..0]
              AuthoringDevice.manufacturerModelName => [1..None]
              AuthoringDevice.softwareName => [1..None]
@@ -801,7 +720,6 @@ package IG #DDDDDD{
              Authorization.typeId.nullFlavor => [None..0]
              Authorization.typeId.assigningAuthorityName => [None..0]
              Authorization.typeId.displayable => [None..0]
-             Authorization.typeCode => [None..0]
              Authorization.consent => [None..None]
              Authorization.consent.id => [None..None]
              Authorization.consent.code => [1..None]
@@ -848,7 +766,6 @@ package IG #DDDDDD{
              ComponentOf.typeId.nullFlavor => [None..0]
              ComponentOf.typeId.assigningAuthorityName => [None..0]
              ComponentOf.typeId.displayable => [None..0]
-             ComponentOf.typeCode => [None..0]
              ComponentOf.encompassingEncounter => [None..None]
         } 
 
@@ -858,7 +775,6 @@ package IG #DDDDDD{
              Custodian.typeId.nullFlavor => [None..0]
              Custodian.typeId.assigningAuthorityName => [None..0]
              Custodian.typeId.displayable => [None..0]
-             Custodian.typeCode => [None..0]
              Custodian.assignedCustodian => [None..None]
         } 
 
@@ -868,7 +784,6 @@ package IG #DDDDDD{
              DataEnterer.typeId.nullFlavor => [None..0]
              DataEnterer.typeId.assigningAuthorityName => [None..0]
              DataEnterer.typeId.displayable => [None..0]
-             DataEnterer.typeCode => [None..0]
              DataEnterer.contextControlCode => [None..0]
              DataEnterer.time => [1..None]
              DataEnterer.time.value => [None..None]
@@ -881,7 +796,6 @@ package IG #DDDDDD{
              DocumentationOf.typeId.nullFlavor => [None..0]
              DocumentationOf.typeId.assigningAuthorityName => [None..0]
              DocumentationOf.typeId.displayable => [None..0]
-             DocumentationOf.typeCode => [None..0]
              DocumentationOf.serviceEvent => [None..None]
         } 
 
@@ -890,8 +804,6 @@ package IG #DDDDDD{
              EncompassingEncounter.typeId.nullFlavor => [None..0]
              EncompassingEncounter.typeId.assigningAuthorityName => [None..0]
              EncompassingEncounter.typeId.displayable => [None..0]
-             EncompassingEncounter.classCode => [None..0]
-             EncompassingEncounter.moodCode => [None..0]
              EncompassingEncounter.id => [None..None]
              EncompassingEncounter.code => [None..None]
              EncompassingEncounter.code.nullFlavor => [None..0]
@@ -934,7 +846,6 @@ package IG #DDDDDD{
              HealthCareFacility.typeId.nullFlavor => [None..0]
              HealthCareFacility.typeId.assigningAuthorityName => [None..0]
              HealthCareFacility.typeId.displayable => [None..0]
-             HealthCareFacility.classCode => [None..0]
              HealthCareFacility.id => [None..0]
              HealthCareFacility.sdtcIdentifiedBy => [None..0]
              HealthCareFacility.code => [1..None]
@@ -961,7 +872,6 @@ package IG #DDDDDD{
              InFulfillmentOf.typeId.nullFlavor => [None..0]
              InFulfillmentOf.typeId.assigningAuthorityName => [None..0]
              InFulfillmentOf.typeId.displayable => [None..0]
-             InFulfillmentOf.typeCode => [None..0]
              InFulfillmentOf.order => [None..None]
         } 
 
@@ -971,7 +881,6 @@ package IG #DDDDDD{
              Informant.typeId.nullFlavor => [None..0]
              Informant.typeId.assigningAuthorityName => [None..0]
              Informant.typeId.displayable => [None..0]
-             Informant.typeCode => [None..0]
              Informant.contextControlCode => [None..0]
              Informant.assignedEntity => [None..None]
              Informant.relatedEntity => [None..None]
@@ -983,7 +892,6 @@ package IG #DDDDDD{
              InformationRecipient.typeId.nullFlavor => [None..0]
              InformationRecipient.typeId.assigningAuthorityName => [None..0]
              InformationRecipient.typeId.displayable => [None..0]
-             InformationRecipient.typeCode => [None..0]
              InformationRecipient.intendedRecipient => [None..None]
         } 
 
@@ -992,7 +900,6 @@ package IG #DDDDDD{
              IntendedRecipient.typeId.nullFlavor => [None..0]
              IntendedRecipient.typeId.assigningAuthorityName => [None..0]
              IntendedRecipient.typeId.displayable => [None..0]
-             IntendedRecipient.classCode => [None..0]
              IntendedRecipient.id => [None..None]
              IntendedRecipient.id.assigningAuthorityName => [None..0]
              IntendedRecipient.id.displayable => [None..0]
@@ -1013,7 +920,6 @@ package IG #DDDDDD{
              LegalAuthenticator.typeId.nullFlavor => [None..0]
              LegalAuthenticator.typeId.assigningAuthorityName => [None..0]
              LegalAuthenticator.typeId.displayable => [None..0]
-             LegalAuthenticator.typeCode => [None..0]
              LegalAuthenticator.contextControlCode => [None..0]
              LegalAuthenticator.time => [None..None]
              LegalAuthenticator.time.value => [None..None]
@@ -1044,8 +950,6 @@ package IG #DDDDDD{
              Order.typeId.nullFlavor => [None..0]
              Order.typeId.assigningAuthorityName => [None..0]
              Order.typeId.displayable => [None..0]
-             Order.classCode => [None..0]
-             Order.moodCode => [None..0]
              Order.id => [None..None]
              Order.id.nullFlavor => [None..0]
              Order.id.assigningAuthorityName => [None..0]
@@ -1097,7 +1001,6 @@ package IG #DDDDDD{
              PatientRole.realmCode => [None..0]
              PatientRole.typeId => [None..0]
              PatientRole.templateId => [None..0]
-             PatientRole.classCode => [None..0]
              PatientRole.id => [None..None]
              PatientRole.id.nullFlavor => [None..0]
              PatientRole.id.assigningAuthorityName => [None..0]
@@ -1151,11 +1054,11 @@ package IG #DDDDDD{
 
         class FrAssignedPerson{
 
+             Person => [None..None]
              Person.nullFlavor => [None..0]
              Person.typeId.nullFlavor => [None..0]
              Person.typeId.assigningAuthorityName => [None..0]
              Person.typeId.displayable => [None..0]
-             Person.classCode => [None..0]
              Person.determinerCode => [None..0]
              Person.name => [1..1]
              Person.sdtcDesc => [None..0]
@@ -1168,7 +1071,6 @@ package IG #DDDDDD{
              RecordTarget.typeId.nullFlavor => [None..0]
              RecordTarget.typeId.assigningAuthorityName => [None..0]
              RecordTarget.typeId.displayable => [None..0]
-             RecordTarget.typeCode => [None..0]
              RecordTarget.contextControlCode => [None..0]
              RecordTarget.patientRole => [None..None]
         } 
@@ -1207,7 +1109,6 @@ package IG #DDDDDD{
              CustodianOrganization.typeId.nullFlavor => [None..0]
              CustodianOrganization.typeId.assigningAuthorityName => [None..0]
              CustodianOrganization.typeId.displayable => [None..0]
-             CustodianOrganization.classCode => [None..0]
              CustodianOrganization.determinerCode => [None..0]
              CustodianOrganization.id => [None..1]
              CustodianOrganization.id.root => [None..None]
@@ -1223,7 +1124,6 @@ package IG #DDDDDD{
              Organization.typeId.nullFlavor => [None..0]
              Organization.typeId.assigningAuthorityName => [None..0]
              Organization.typeId.displayable => [None..0]
-             Organization.classCode => [None..0]
              Organization.determinerCode => [None..0]
              Organization.id => [None..None]
              Organization.name => [None..None]
@@ -1240,8 +1140,6 @@ package IG #DDDDDD{
              ServiceEvent.typeId.nullFlavor => [None..0]
              ServiceEvent.typeId.assigningAuthorityName => [None..0]
              ServiceEvent.typeId.displayable => [None..0]
-             ServiceEvent.classCode => [None..0]
-             ServiceEvent.moodCode => [None..0]
              ServiceEvent.id => [None..None]
              ServiceEvent.code => [None..None]
              ServiceEvent.code.nullFlavor => [None..0]
@@ -1291,7 +1189,9 @@ package IG #DDDDDD{
              DeviceRequest.occurrence[x]:occurrenceTiming.repeat.count => [None..None]
              DeviceRequest.occurrence[x]:occurrencePeriod => [0..1]
              DeviceRequest.requester => [None..None]
-             DeviceRequest.performer => [None..None]
+             DeviceRequest.requester.extension:prescripteur => <&plus>[0..1]
+             DeviceRequest.requester.extension:prescripteur.extension:reference => <&plus>[None..None]
+             DeviceRequest.requester.extension:prescripteur.extension:reference.value[x] => <&plus>[None..None]
              DeviceRequest.reasonReference => [None..None]
              DeviceRequest.reasonReference:EnRapportAvecALD => [0..1]
              DeviceRequest.reasonReference:EnRapportAvecAccidentTravail => [0..1]
@@ -1304,12 +1204,52 @@ package IG #DDDDDD{
              DeviceUseStatement.identifier => [1..None]
              DeviceUseStatement.timing[x] => [None..None]
              DeviceUseStatement.source => [None..None]
+             DeviceUseStatement.source.extension:performer => <&plus>[0..1]
+             DeviceUseStatement.source.extension:performer.extension:type => <&plus>[None..None]
+             DeviceUseStatement.source.extension:performer.extension:type.value[x] => <&plus>[None..None]
+             DeviceUseStatement.source.extension:performer.extension:reference => <&plus>[None..None]
+             DeviceUseStatement.source.extension:performer.extension:reference.value[x] => <&plus>[None..None]
              DeviceUseStatement.device => [None..None]
              DeviceUseStatement.reasonReference => [None..None]
              DeviceUseStatement.reasonReference:EnRapportAvecALD => [0..1]
              DeviceUseStatement.reasonReference:EnRapportAvecAccidentTravail => [0..1]
              DeviceUseStatement.reasonReference:EnRapportAvecLaPrevention => [0..1]
              DeviceUseStatement.reasonReference:NonRemboursable => [0..1]
+        } 
+
+        class FrDiagnosticReportDocument{
+
+             DiagnosticReport.identifier => [1..1]
+             DiagnosticReport.status => [None..None]
+             DiagnosticReport.code => [None..None]
+             DiagnosticReport.effective[x] => [1..None]
+             DiagnosticReport.performer => [None..None]
+             DiagnosticReport.performer.extension => [1..None]
+             DiagnosticReport.performer.extension:performerFunction => <&plus>[1..1]
+             DiagnosticReport.performer.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             DiagnosticReport.resultsInterpreter => [None..None]
+             DiagnosticReport.resultsInterpreter.extension => [1..None]
+             DiagnosticReport.resultsInterpreter.extension:performerFunction => <&plus>[1..1]
+             DiagnosticReport.resultsInterpreter.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             DiagnosticReport.result => [1..None]
+        } 
+
+        class FrDirectiveAnticipee{
+
+             Consent.status => [None..None]
+             Consent.scope => [None..None]
+             Consent.scope.coding.system => [None..None]
+             Consent.scope.coding.code => [None..None]
+             Consent.scope.coding.display => [None..None]
+             Consent.dateTime => [None..None]
+             Consent.source[x] => [None..None]
+             Consent.source[x]:sourceReference => [0..1]
+             Consent.source[x]:sourceAttachment => [0..1]
+             Consent.source[x]:sourceAttachment.data => [None..None]
+             Consent.source[x]:sourceAttachment.url => [None..None]
+             Consent.provision => [None..None]
+             Consent.provision.type => [None..None]
+             Consent.provision.code => [None..None]
         } 
 
         class FrDocumentReference{
@@ -1346,6 +1286,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1360,6 +1305,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1374,6 +1324,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1399,6 +1354,17 @@ package IG #DDDDDD{
              Encounter.location.location => [None..None]
         } 
 
+        class FrEncounterEvenementDocument{
+
+             Encounter.extension => [None..None]
+             Encounter.extension:caracteristique => <&plus>[0..*]
+             Encounter.extension:commentaire => <&plus>[0..*]
+             Encounter.extension:urlPiecesJointes => <&plus>[0..*]
+             Encounter.type => [None..None]
+             Encounter.type.extension:qualifier => <&plus>[0..*]
+             Encounter.reasonReference => [None..None]
+        } 
+
         class FrEncounter{
 
              Encounter.identifier => [1..None]
@@ -1407,24 +1373,27 @@ package IG #DDDDDD{
              Encounter.priority => [None..None]
              Encounter.subject => [None..None]
              Encounter.participant => [None..None]
-             Encounter.participant:author => [0..*]
-             Encounter.participant:author.type.coding.system => [None..None]
-             Encounter.participant:author.type.coding.code => [1..None]
-             Encounter.participant:author.type.coding.display => [None..None]
-             Encounter.participant:author.individual => [None..None]
-             Encounter.participant:informant => [0..*]
-             Encounter.participant:informant.type.coding.system => [None..None]
-             Encounter.participant:informant.type.coding.code => [1..None]
-             Encounter.participant:informant.type.coding.display => [None..None]
-             Encounter.participant:informant.individual => [None..None]
-             Encounter.participant:executant => [0..*]
-             Encounter.participant:executant.type.coding.system => [None..None]
-             Encounter.participant:executant.type.coding.code => [1..None]
-             Encounter.participant:executant.type.coding.display => [None..None]
-             Encounter.participant:executant.individual => [None..None]
+             Encounter.participant.individual.extension:executant => <&plus>[0..*]
+             Encounter.participant.individual.extension:executant.extension:type => <&plus>[None..None]
+             Encounter.participant.individual.extension:executant.extension:type.value[x] => <&plus>[None..None]
+             Encounter.participant.individual.extension:author => <&plus>[0..*]
+             Encounter.participant.individual.extension:author.extension:type => <&plus>[None..None]
+             Encounter.participant.individual.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Encounter.participant.individual.extension:informant => <&plus>[0..*]
+             Encounter.participant.individual.extension:informant.extension:type => <&plus>[None..None]
+             Encounter.participant.individual.extension:informant.extension:type.value[x] => <&plus>[None..None]
              Encounter.period => [None..None]
              Encounter.location => [None..1]
              Encounter.location.location => [None..None]
+        } 
+
+        class FrEndpointWadoDICOM{
+
+             Endpoint.connectionType => [None..None]
+             Endpoint.connectionType.code => [None..None]
+             Endpoint.connectionType.display => [None..None]
+             Endpoint.payloadMimeType => [1..1]
+             Endpoint.address => [None..None]
         } 
 
         class FrFamilyMemberHistory{
@@ -1439,8 +1408,38 @@ package IG #DDDDDD{
              FamilyMemberHistory.condition.extension:interpretation => <&plus>[0..1]
              FamilyMemberHistory.condition.extension:method => <&plus>[0..1]
              FamilyMemberHistory.condition.extension:author => <&plus>[0..1]
+             FamilyMemberHistory.condition.extension:author.extension:type => <&plus>[None..None]
+             FamilyMemberHistory.condition.extension:author.extension:type.value[x] => <&plus>[None..None]
+             FamilyMemberHistory.condition.extension:author.extension:reference => <&plus>[None..None]
+             FamilyMemberHistory.condition.extension:author.extension:reference.value[x] => <&plus>[None..None]
              FamilyMemberHistory.condition.code => [None..None]
              FamilyMemberHistory.condition.outcome => [1..None]
+        } 
+
+        class FrHistoriqueGrossesseList{
+
+             List.identifier => [1..1]
+             List.status => [None..None]
+             List.code => [1..None]
+             List.code.coding.system => [None..None]
+             List.code.coding.code => [None..None]
+             List.code.coding.display => [None..None]
+             List.date => [1..None]
+             List.entry => [1..None]
+             List.entry.item => [None..None]
+        } 
+
+        class FrHistoriqueGrossesse{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.effective[x] => [1..None]
+             Observation.value[x] => [None..0]
+             Observation.hasMember => [1..None]
         } 
 
         class FrObservationHorsNomenclature{
@@ -1451,6 +1450,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1462,6 +1466,29 @@ package IG #DDDDDD{
              HumanName.family => [1..None]
              HumanName.prefix => [None..None]
              HumanName.suffix => [None..None]
+        } 
+
+        class FrImagingStudyExamenImagerieDICOM{
+
+             ImagingStudy.identifier => [1..None]
+             ImagingStudy.started => [None..None]
+             ImagingStudy.procedureCode => [1..1]
+             ImagingStudy.procedureCode.coding.system => [None..None]
+             ImagingStudy.procedureCode.coding.code => [None..None]
+             ImagingStudy.procedureCode.coding.display => [None..None]
+             ImagingStudy.reasonReference => [None..1]
+             ImagingStudy.series => [1..1]
+             ImagingStudy.series.uid => [None..None]
+             ImagingStudy.series.modality => [None..None]
+             ImagingStudy.series.endpoint => [None..None]
+             ImagingStudy.series.started => [None..None]
+             ImagingStudy.series.instance => [1..None]
+             ImagingStudy.series.instance:parent => [1..1]
+             ImagingStudy.series.instance:parent.sopClass => [None..None]
+             ImagingStudy.series.instance:parent.number => [None..None]
+             ImagingStudy.series.instance:subordonnee => [0..*]
+             ImagingStudy.series.instance:subordonnee.sopClass => [None..None]
+             ImagingStudy.series.instance:subordonnee.number => [None..None]
         } 
 
         class FrLocationDocument{
@@ -1481,11 +1508,201 @@ package IG #DDDDDD{
              Media.basedOn => [None..None]
              Media.partOf => [None..None]
              Media.subject => [None..None]
+             Media.operator => [None..None]
+             Media.operator.extension:performer => <&plus>[0..*]
+             Media.operator.extension:performer.extension:type => <&plus>[None..None]
+             Media.operator.extension:performer.extension:type.value[x] => <&plus>[None..None]
+             Media.operator.extension:author => <&plus>[0..*]
+             Media.operator.extension:author.extension:type => <&plus>[None..None]
+             Media.operator.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Media.operator.extension:author.extension:reference => <&plus>[None..None]
+             Media.operator.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Media.operator.extension:informant => <&plus>[0..*]
+             Media.operator.extension:informant.extension:type => <&plus>[None..None]
+             Media.operator.extension:informant.extension:type.value[x] => <&plus>[None..None]
+             Media.operator.extension:participant => <&plus>[0..*]
+             Media.operator.extension:participant.extension:type => <&plus>[None..None]
+             Media.operator.extension:participant.extension:type.value[x] => <&plus>[None..None]
              Media.reasonCode => [None..None]
              Media.content.contentType => [None..None]
              Media.content.language => [None..None]
              Media.content.data => [None..None]
-             Media.note.text => [None..None]
+        } 
+
+        class FrMedicationAdministrationDocument{
+
+             MedicationAdministration.text => [1..None]
+             MedicationAdministration.extension => [None..None]
+             MedicationAdministration.extension:Prescription => <&plus>[0..*]
+             MedicationAdministration.extension:precondition => <&plus>[0..1]
+             MedicationAdministration.identifier => [1..None]
+             MedicationAdministration.status => [None..None]
+             MedicationAdministration.category => [None..None]
+             MedicationAdministration.medication[x] => [None..None]
+             MedicationAdministration.effective[x] => [None..None]
+             MedicationAdministration.reasonReference => [None..None]
+             MedicationAdministration.dosage.extension => [None..None]
+             MedicationAdministration.dosage.extension:frequenceAdministration => <&plus>[0..1]
+             MedicationAdministration.dosage.extension:sequence => <&plus>[0..*]
+             MedicationAdministration.dosage.text => [None..None]
+             MedicationAdministration.dosage.site => [None..None]
+             MedicationAdministration.dosage.route => [None..None]
+             MedicationAdministration.dosage.dose => [None..None]
+             MedicationAdministration.dosage.rate[x] => [None..None]
+             MedicationAdministration.dosage.rate[x]:rateRatio => [0..1]
+             MedicationAdministration.dosage.rate[x]:rateQuantity => [0..1]
+        } 
+
+        class FrMedicationsCombinaisonDocument{
+
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.item[x]:itemReference => [0..1]
+        } 
+
+        class FrMedicationDispenseDocument{
+
+             MedicationDispense.text => [1..None]
+             MedicationDispense.identifier => [1..1]
+             MedicationDispense.medication[x] => [None..None]
+             MedicationDispense.supportingInformation => [None..1]
+             MedicationDispense.authorizingPrescription => [None..1]
+             MedicationDispense.type => [1..None]
+             MedicationDispense.type.coding => [None..None]
+             MedicationDispense.quantity => [1..None]
+             MedicationDispense.quantity.unit => [None..None]
+             MedicationDispense.dosageInstruction.text => [None..None]
+             MedicationDispense.dosageInstruction.additionalInstruction => [None..None]
+             MedicationDispense.dosageInstruction.patientInstruction => [None..None]
+             MedicationDispense.substitution => [None..None]
+             MedicationDispense.substitution.type => [1..None]
+        } 
+
+        class FrMedicationDocument{
+
+             Medication.extension => [1..None]
+             Medication.extension:productName => <&plus>[1..1]
+             Medication.extension:classification => <&plus>[0..*]
+             Medication.extension:conditionnement => <&plus>[0..*]
+             Medication.code => [1..None]
+             Medication.code.coding.extension:translation => <&plus>[0..*]
+             Medication.code.coding.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
+             Medication.code.coding.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             Medication.form => [None..None]
+             Medication.ingredient => [None..None]
+             Medication.ingredient.item[x] => [None..None]
+             Medication.ingredient.item[x].extension => [1..None]
+             Medication.ingredient.item[x].extension:NomSubstance => <&plus>[1..1]
+             Medication.ingredient.strength => [None..None]
+             Medication.ingredient.strength.numerator => [1..None]
+             Medication.ingredient.strength.denominator => [1..None]
+             Medication.batch.lotNumber => [None..None]
+             Medication.batch.expirationDate => [None..None]
+        } 
+
+        class FrMedicationRequestDocument{
+
+             MedicationRequest.text => [1..None]
+             MedicationRequest.extension => [None..None]
+             MedicationRequest.extension:precondition => <&plus>[0..1]
+             MedicationRequest.identifier => [2..None]
+             MedicationRequest.identifier:identifierEntree => [1..*]
+             MedicationRequest.identifier:referencePrescription => [1..*]
+             MedicationRequest.status => [None..None]
+             MedicationRequest.intent => [None..None]
+             MedicationRequest.category => [None..1]
+             MedicationRequest.category.coding => [1..1]
+             MedicationRequest.category.coding.system => [None..None]
+             MedicationRequest.category.coding.code => [None..None]
+             MedicationRequest.category.coding.display => [None..None]
+             MedicationRequest.doNotPerform => [None..None]
+             MedicationRequest.medication[x] => [None..None]
+             MedicationRequest.supportingInformation => [None..None]
+             MedicationRequest.supportingInformation.identifier => [None..None]
+             MedicationRequest.authoredOn => [None..None]
+             MedicationRequest.requester => [None..None]
+             MedicationRequest.requester.extension:author => <&plus>[0..1]
+             MedicationRequest.requester.extension:author.extension:type => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:reference => <&plus>[None..None]
+             MedicationRequest.requester.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             MedicationRequest.performer => [None..None]
+             MedicationRequest.performer.extension:prescripteur => <&plus>[0..1]
+             MedicationRequest.performer.extension:prescripteur.extension:type => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:type.value[x] => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:reference => <&plus>[None..None]
+             MedicationRequest.performer.extension:prescripteur.extension:reference.value[x] => <&plus>[None..None]
+             MedicationRequest.reasonReference => [None..None]
+             MedicationRequest.reasonReference:renouvellement => [0..1]
+             MedicationRequest.reasonReference:ald => [0..1]
+             MedicationRequest.reasonReference:accidentTravail => [0..1]
+             MedicationRequest.reasonReference:prevention => [0..1]
+             MedicationRequest.reasonReference:nonRemboursable => [0..1]
+             MedicationRequest.reasonReference:horsAMM => [0..1]
+             MedicationRequest.dosageInstruction => [None..None]
+             MedicationRequest.dosageInstruction.sequence => [None..None]
+             MedicationRequest.dosageInstruction.additionalInstruction => [None..None]
+             MedicationRequest.dosageInstruction.additionalInstruction.text => [None..None]
+             MedicationRequest.dosageInstruction.timing => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x] => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod => [0..1]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.start => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.end => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.frequency => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.period => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.periodUnit => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.when => [None..None]
+             MedicationRequest.dosageInstruction.timing.repeat.offset => [None..None]
+             MedicationRequest.dosageInstruction.asNeeded[x] => [None..None]
+             MedicationRequest.dosageInstruction.site => [None..None]
+             MedicationRequest.dosageInstruction.route => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x] => [None..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange => [0..1]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low => [1..None]
+             MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high => [1..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod => [None..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator => [1..None]
+             MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator => [1..None]
+             MedicationRequest.dispenseRequest => [None..None]
+             MedicationRequest.dispenseRequest.extension => [None..None]
+             MedicationRequest.dispenseRequest.extension:instructionsAuDispensateur => <&plus>[0..1]
+             MedicationRequest.dispenseRequest.numberOfRepeatsAllowed => [None..None]
+             MedicationRequest.dispenseRequest.quantity => [None..None]
+             MedicationRequest.substitution => [1..None]
+             MedicationRequest.substitution.allowed[x] => [None..None]
+             MedicationRequest.substitution.allowed[x]:allowedCodeableConcept => [0..1]
+        } 
+
+        class FrMedicationStatementDocument{
+
+             MedicationStatement.text => [1..None]
+             MedicationStatement.extension => [None..None]
+             MedicationStatement.extension:Prescription => <&plus>[0..*]
+             MedicationStatement.extension:precondition => <&plus>[0..1]
+             MedicationStatement.identifier => [1..None]
+             MedicationStatement.basedOn => [None..None]
+             MedicationStatement.partOf => [None..None]
+             MedicationStatement.status => [None..None]
+             MedicationStatement.category => [None..None]
+             MedicationStatement.medication[x] => [None..None]
+             MedicationStatement.effective[x] => [None..None]
+             MedicationStatement.reasonReference => [None..None]
+             MedicationStatement.dosage => [None..None]
+             MedicationStatement.dosage.extension:frequenceAdministration => <&plus>[0..1]
+             MedicationStatement.dosage.sequence => [None..None]
+             MedicationStatement.dosage.additionalInstruction => [None..None]
+             MedicationStatement.dosage.additionalInstruction.text => [None..None]
+             MedicationStatement.dosage.asNeeded[x] => [None..None]
+             MedicationStatement.dosage.site => [None..None]
+             MedicationStatement.dosage.route => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x] => [None..None]
+             MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio => [0..1]
+             MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity => [0..1]
         } 
 
         class FrObservationNonRemboursable{
@@ -1496,10 +1713,22 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
              Observation.method => [None..None]
+        } 
+
+        class FrObjectifsDeReferenceDICOM{
+
+             Observation.code => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.value[x]:valueCodeableConcept => [1..1]
         } 
 
         class FrObservationContexte{
@@ -1510,10 +1739,34 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
              Observation.method => [None..None]
+        } 
+
+        class FrObservationDICOM{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.effective[x] => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.bodySite => [None..None]
+             Observation.bodySite.extension:qualifier => <&plus>[0..*]
+             Observation.bodySite.extension:qualifier.extension:name => <&plus>[None..None]
+             Observation.bodySite.extension:qualifier.extension:name.value[x].coding.system => <&plus>[None..None]
+             Observation.bodySite.extension:qualifier.extension:name.value[x].coding.code => <&plus>[None..None]
+             Observation.bodySite.extension:qualifier.extension:name.value[x].coding.display => <&plus>[None..None]
+             Observation.bodySite.extension:qualifier.extension:value => <&plus>[None..None]
+             Observation.bodySite.extension:qualifier.extension:value.value[x] => <&plus>[None..None]
+             Observation.hasMember => [None..None]
+             Observation.derivedFrom => [None..None]
         } 
 
         class FrObservationDifficulte{
@@ -1524,6 +1777,11 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1537,20 +1795,27 @@ package IG #DDDDDD{
              Observation.category.coding.system => [None..None]
              Observation.category.coding.code => [None..None]
              Observation.code => [None..None]
-             Observation.code.coding => [1..None]
-             Observation.code.coding:principal => [1..1]
-             Observation.code.coding:translation => [0..1]
+             Observation.code.extension:translation => <&plus>[0..1]
              Observation.performer => [None..None]
-             Observation.performer:Evaluateur => [0..1]
-             Observation.performer:Evaluateur.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:Evaluateur.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:Auteur => [0..1]
-             Observation.performer:Auteur.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:Auteur.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:Participant => [0..1]
-             Observation.performer:Participant.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:Participant.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:Participant.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur => <&plus>[0..1]
+             Observation.performer.extension:Evaluateur.extension:type => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:Evaluateur.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Auteur => <&plus>[0..1]
+             Observation.performer.extension:Auteur.extension:type => <&plus>[None..None]
+             Observation.performer.extension:Auteur.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Auteur.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:Auteur.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Participant => <&plus>[0..1]
+             Observation.performer.extension:Participant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:Participant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:Participant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:Participant.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:Participant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:Participant.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
@@ -1568,6 +1833,20 @@ package IG #DDDDDD{
              Observation.component:ComposantN2.code => [None..None]
              Observation.component:ComposantN2.value[x] => [1..None]
              Observation.component:ComposantN2.interpretation => [None..1]
+        } 
+
+        class FrObservationGrossesseDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
         } 
 
         class FrObservationGroupeDeQuestionnairesDevaluation{
@@ -1596,24 +1875,41 @@ package IG #DDDDDD{
              Observation.code => [None..None]
              Observation.subject => [1..None]
              Observation.performer => [None..None]
-             Observation.performer:laboratoireExecutant => [0..1]
-             Observation.performer:laboratoireExecutant.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:laboratoireExecutant.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:auteur => [0..1]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:auteur.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:validateurResultat => [0..1]
-             Observation.performer:validateurResultat.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:validateurResultat.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:validateurResultat.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:responsableExamen => [0..1]
-             Observation.performer:responsableExamen.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:responsableExamen.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:responsableExamen.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:dispositifAuto => [0..*]
-             Observation.performer:dispositifAuto.extension:performerFunction => <&plus>[0..1]
-             Observation.performer:dispositifAuto.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:dispositifAuto.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant => <&plus>[0..1]
+             Observation.performer.extension:laboratoireExecutant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur => <&plus>[0..1]
+             Observation.performer.extension:auteur.extension:type => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat => <&plus>[0..1]
+             Observation.performer.extension:validateurResultat.extension:type => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:validateurResultat.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen => <&plus>[0..1]
+             Observation.performer.extension:responsableExamen.extension:type => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:responsableExamen.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto => <&plus>[0..*]
+             Observation.performer.extension:dispositifAuto.extension:type => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:dispositifAuto.extension:reference.value[x] => <&plus>[None..None]
              Observation.note => [None..None]
              Observation.specimen => [1..None]
              Observation.hasMember => [None..None]
@@ -1624,14 +1920,52 @@ package IG #DDDDDD{
 
              Observation.code => [None..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
         } 
 
         class FrObservationModaliteSortie{
 
              Observation.code => [None..None]
-             Observation.performer => [None..1]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
+        } 
+
+        class FrObservationNaissanceDocument{
+
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.focus => [1..1]
+             Observation.effective[x] => [1..None]
+             Observation.value[x] => [None..0]
+             Observation.hasMember => [1..None]
+        } 
+
+        class FrObservationRechercheMicroOrganismes{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
         } 
 
         class FrObservationRenouvellement{
@@ -1642,8 +1976,143 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
              Observation.value[x] => [1..None]
              Observation.value[x]:valueCodeableConcept => [1..1]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationResultatDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.interpretation:observationRange => [0..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+             Observation.referenceRange => [None..None]
+        } 
+
+        class FrObservationStatutDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationStatut{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
+             Observation.value[x].coding.extension:qualifier => <&plus>[0..1]
+             Observation.value[x].coding.extension:qualifier.extension => <&plus>[2..None]
+             Observation.value[x].coding.extension:qualifier.extension:name => <&plus>[1..None]
+             Observation.value[x].coding.extension:qualifier.extension:name.value[x] => <&plus>[None..None]
+             Observation.value[x].coding.extension:qualifier.extension:value => <&plus>[1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationSurEchelleDouleur{
+
+             Observation.text => [1..None]
+             Observation.extension => [None..None]
+             Observation.extension:repeatNumber => <&plus>[0..1]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.effective[x] => [1..None]
+             Observation.effective[x]:effectiveDateTime => [1..1]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.bodySite => [None..None]
+        } 
+
+        class FrObservationSyntheseMedicaleSejourDocument{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
+             Observation.interpretation => [None..1]
+             Observation.note => [None..None]
+             Observation.method => [None..None]
+        } 
+
+        class FrObservationTransfusionDeProduitsSanguins{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.code.coding.system => [None..None]
+             Observation.code.coding.code => [None..None]
+             Observation.code.coding.display => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.performer => [None..None]
+             Observation.performer.extension:author => <&plus>[0..1]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.value[x] => [1..None]
              Observation.interpretation => [None..1]
              Observation.note => [None..None]
              Observation.method => [None..None]
@@ -1714,6 +2183,142 @@ package IG #DDDDDD{
              PractitionerRole.code:typeCode.coding => [None..None]
         } 
 
+        class FrProcedureExpositionPatientDICOM{
+
+             Procedure.code => [1..None]
+             Procedure.code.coding.system => [None..None]
+             Procedure.code.coding.code => [None..None]
+             Procedure.code.coding.display => [None..None]
+             Procedure.performer => [None..None]
+             Procedure.performer.actor.extension => [1..None]
+             Procedure.performer.actor.extension:Participant => <&plus>[1..1]
+             Procedure.performer.actor.extension:Participant.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:reference.value[x] => <&plus>[None..None]
+        } 
+
+        class FrProcedureTechniqueImagerieDICOM{
+
+             Procedure.extension => [1..None]
+             Procedure.extension:modaliteAcquisition => <&plus>[1..*]
+             Procedure.extension:modaliteAcquisition.value[x] => <&plus>[None..None]
+             Procedure.extension:ModificateurTopographique => <&plus>[0..1]
+             Procedure.identifier => [1..1]
+             Procedure.code => [1..None]
+             Procedure.subject => [None..None]
+             Procedure.performed[x] => [None..None]
+             Procedure.performer => [None..None]
+             Procedure.performer.actor.extension:Participant => <&plus>[0..1]
+             Procedure.performer.actor.extension:Participant.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:typeCode.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:Participant.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.bodySite => [1..1]
+        } 
+
+        class FrProcedureTransportProfessionnel{
+
+             Procedure.text => [None..None]
+             Procedure.extension => [None..None]
+             Procedure.extension:precisionTransportProfessionnel => <&plus>[0..*]
+             Procedure.identifier => [1..1]
+             Procedure.code => [1..None]
+             Procedure.code.coding => [1..1]
+             Procedure.code.coding.extension:qualifier => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier.extension => <&plus>[2..None]
+             Procedure.code.coding.extension:qualifier.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier.extension:value => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier.extension:value.value[x].coding.system => <&plus>[None..None]
+             Procedure.code.coding.system => [1..None]
+             Procedure.code.coding.code => [1..None]
+             Procedure.performed[x] => [1..None]
+             Procedure.performed[x]:performedDateTime => [1..1]
+             Procedure.performer => [None..None]
+             Procedure.performer.actor.extension => [1..None]
+             Procedure.performer.actor.extension:transporteur => <&plus>[0..1]
+             Procedure.performer.actor.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne => <&plus>[1..1]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:professionnelConcerne.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.location => [None..None]
+             Procedure.location.extension:lieuDepart => <&plus>[0..1]
+             Procedure.location.extension:destination => <&plus>[0..1]
+        } 
+
+        class FrProcedureTransportPatient{
+
+             Procedure.text => [None..None]
+             Procedure.extension => [None..None]
+             Procedure.extension:precisionTransportPatient => <&plus>[0..*]
+             Procedure.identifier => [1..1]
+             Procedure.code => [1..None]
+             Procedure.code.coding => [1..1]
+             Procedure.code.coding.extension:qualifier1 => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier1.extension => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier1.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier1.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier2 => <&plus>[0..1]
+             Procedure.code.coding.extension:qualifier2.extension => <&plus>[2..None]
+             Procedure.code.coding.extension:qualifier2.extension:name => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier2.extension:name.value[x] => <&plus>[None..None]
+             Procedure.code.coding.extension:qualifier2.extension:value => <&plus>[1..None]
+             Procedure.code.coding.extension:qualifier2.extension:value.value[x].coding.system => <&plus>[None..None]
+             Procedure.code.coding.system => [1..None]
+             Procedure.code.coding.code => [1..None]
+             Procedure.performed[x] => [1..None]
+             Procedure.performed[x]:performedDateTime => [1..1]
+             Procedure.performer => [None..None]
+             Procedure.performer.actor.extension => [1..None]
+             Procedure.performer.actor.extension:transporteur => <&plus>[1..1]
+             Procedure.performer.actor.extension:transporteur.extension:type => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:type.value[x] => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:typeCode.value[x].coding.code => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference => <&plus>[None..None]
+             Procedure.performer.actor.extension:transporteur.extension:reference.value[x] => <&plus>[None..None]
+             Procedure.location => [None..None]
+             Procedure.location.extension:lieuDepart => <&plus>[0..1]
+             Procedure.location.extension:destination => <&plus>[0..1]
+        } 
+
+        class FrQuantityDICOM{
+
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.subject => [1..None]
+             Observation.effective[x] => [1..None]
+             Observation.value[x] => [1..None]
+             Observation.value[x]:valueQuantity => [0..1]
+             Observation.value[x]:valueQuantity.system => [None..None]
+             Observation.value[x]:valueQuantity.code => [None..None]
+        } 
+
+        class FrReferencesExternesDocument{
+
+             DocumentReference.text => [1..None]
+             DocumentReference.identifier => [1..None]
+             DocumentReference.status => [None..None]
+             DocumentReference.type => [1..None]
+             DocumentReference.type.extension:dataAbsentReason => <&plus>[0..1]
+             DocumentReference.content => [None..None]
+             DocumentReference.content.attachment => [None..None]
+             DocumentReference.content.attachment.contentType => [1..None]
+             DocumentReference.content.attachment.url => [1..None]
+        } 
+
         class FrRelatedPersonDocument{
 
              RelatedPerson.relationship:Role => [None..None]
@@ -1730,22 +2335,29 @@ package IG #DDDDDD{
              Observation.extension:supportingInfo => <&plus>[0..*]
              Observation.status => [None..None]
              Observation.code => [None..None]
-             Observation.code.coding.extension.extension => [None..0]
-             Observation.code.coding.extension.url => [None..None]
-             Observation.code.coding.extension.value[x] => [None..None]
-             Observation.code.coding.extension.value[x]:valueCoding => [0..1]
+             Observation.code.extension:translation => <&plus>[0..1]
              Observation.code.text => [None..None]
              Observation.subject => [None..None]
              Observation.performer => [None..None]
-             Observation.performer:laboratoireExecutant => [0..1]
-             Observation.performer:laboratoireExecutant.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:laboratoireExecutant.extension:performerFunction.value[x] => <&plus>[None..None]
-             Observation.performer:auteur => [0..1]
-             Observation.performer:auteur.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:auteur.extension:performerFunction.value[x].coding.code => <&plus>[None..None]
-             Observation.performer:participant => [0..1]
-             Observation.performer:participant.extension:performerFunction => <&plus>[0..*]
-             Observation.performer:participant.extension:performerFunction.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant => <&plus>[0..1]
+             Observation.performer.extension:laboratoireExecutant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:laboratoireExecutant.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur => <&plus>[0..1]
+             Observation.performer.extension:auteur.extension:type => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:auteur.extension:reference.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant => <&plus>[0..1]
+             Observation.performer.extension:participant.extension:type => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:typeCode => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:typeCode.value[x] => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:participant.extension:reference.value[x] => <&plus>[None..None]
              Observation.value[x] => [None..None]
              Observation.value[x]:valueRange => [0..1]
              Observation.value[x]:valueRange.low => [None..None]
@@ -1765,7 +2377,44 @@ package IG #DDDDDD{
              ServiceRequest.orderDetail.coding => [None..None]
              ServiceRequest.occurrence[x] => [1..None]
              ServiceRequest.requester => [None..None]
+             ServiceRequest.requester.extension:author => <&plus>[0..1]
+             ServiceRequest.requester.extension:author.extension:type => <&plus>[None..None]
+             ServiceRequest.requester.extension:author.extension:type.value[x] => <&plus>[None..None]
              ServiceRequest.bodySite => [None..None]
+        } 
+
+        class FrSigneVitalObserveDocument{
+
+             Observation => [None..None]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.code => [None..None]
+             Observation.effective[x] => [None..None]
+             Observation.performer => [None..1]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.interpretation => [None..None]
+             Observation.bodySite => [None..None]
+             Observation.method => [None..None]
+             Observation.component.value[x] => [1..None]
+        } 
+
+        class FrSignesVitauxDocument{
+
+             Observation => [None..None]
+             Observation.identifier => [1..1]
+             Observation.status => [None..None]
+             Observation.effective[x] => [None..None]
+             Observation.performer => [None..1]
+             Observation.performer.extension:author => <&plus>[0..*]
+             Observation.performer.extension:author.extension:type => <&plus>[None..None]
+             Observation.performer.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference => <&plus>[None..None]
+             Observation.performer.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Observation.hasMember => [None..None]
         } 
 
         class FrSpecimen{
@@ -1786,25 +2435,184 @@ package IG #DDDDDD{
              Specimen.processing.additive => [None..None]
              Specimen.container => [None..None]
              Specimen.container.type => [1..None]
+        } 
+
+        class FrVaccinRecommandeDocument{
+
+             ImmunizationRecommendation.text => [1..None]
+             ImmunizationRecommendation.extension => [1..None]
+             ImmunizationRecommendation.extension:typeVaccination => <&plus>[1..1]
+             ImmunizationRecommendation.extension:typeVaccination.value[x].coding.system => <&plus>[None..None]
+             ImmunizationRecommendation.extension:prescription => <&plus>[0..1]
+             ImmunizationRecommendation.identifier => [1..1]
+             ImmunizationRecommendation.recommendation => [None..1]
+             ImmunizationRecommendation.recommendation.vaccineCode => [None..None]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation => <&plus>[0..*]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             ImmunizationRecommendation.recommendation.forecastStatus => [None..None]
+             ImmunizationRecommendation.recommendation.dateCriterion => [1..1]
+             ImmunizationRecommendation.recommendation.dateCriterion.value => [None..None]
+             ImmunizationRecommendation.recommendation.description => [None..None]
+             ImmunizationRecommendation.recommendation.seriesDoses[x] => [None..None]
+             ImmunizationRecommendation.recommendation.seriesDoses[x]:seriesDosesPositiveInt => [0..1]
+             ImmunizationRecommendation.recommendation.supportingImmunization => [None..None]
+        } 
+
+        class FrVaccinationDocument{
+
+             Immunization.text => [1..None]
+             Immunization.extension => [2..None]
+             Immunization.extension:typeVaccination => <&plus>[1..1]
+             Immunization.extension:productName => <&plus>[1..1]
+             Immunization.extension:prescription => <&plus>[0..1]
+             Immunization.extension:doseAntigene => <&plus>[0..*]
+             Immunization.identifier => [1..1]
+             Immunization.status => [None..None]
+             Immunization.vaccineCode => [None..None]
+             Immunization.vaccineCode.extension:translation => <&plus>[0..*]
+             Immunization.vaccineCode.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
+             Immunization.vaccineCode.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             Immunization.occurrence[x] => [None..None]
+             Immunization.occurrence[x].extension => [None..None]
+             Immunization.occurrence[x].extension:dataAbsentReason => <&plus>[0..1]
+             Immunization.lotNumber => [None..None]
+             Immunization.expirationDate => [None..None]
+             Immunization.site => [None..None]
+             Immunization.route => [None..None]
+             Immunization.doseQuantity => [None..None]
+             Immunization.performer => [None..None]
+             Immunization.performer.actor.extension => [1..None]
+             Immunization.performer.actor.extension:author => <&plus>[1..1]
+             Immunization.performer.actor.extension:author.extension:type => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:type.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:reference => <&plus>[None..None]
+             Immunization.performer.actor.extension:author.extension:reference.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant => <&plus>[0..1]
+             Immunization.performer.actor.extension:executant.extension:type => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:type.value[x] => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:reference => <&plus>[None..None]
+             Immunization.performer.actor.extension:executant.extension:reference.value[x] => <&plus>[None..None]
+             Immunization.note => [None..1]
+             Immunization.reasonReference => [None..None]
+             Immunization.protocolApplied => [None..None]
+             Immunization.protocolApplied.doseNumber[x] => [None..None]
+             Immunization.protocolApplied.doseNumber[x]:doseNumberPositiveInt => [1..1]
          }
 
      }
      package extension #paleturquoise {
 
+     FrObservationAccidentsTransfusionnels -[#black,dashed,thickness=2]-> FrActorExtension
      FrObservationActeBiologiePrescrit -[#black,dashed,thickness=2]-> FrPriorityExtension
      FrProcedureActe -[#black,dashed,thickness=2]-> FrPriorityExtension
      FrProcedureActe -[#black,dashed,thickness=2]-> FrDifficulteExtension
      FrProcedureActe -[#black,dashed,thickness=2]-> FrScoreExtension
+     FrProcedureActe -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureActe -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureActe -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureActe -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationAdministrationDeDerivesDuSang -[#black,dashed,thickness=2]-> FrActorExtension
+     FrAdministrationRadiopharmaceutiqueDICOM -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrObservationBatterieExamenBiologieMedicale -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrObservationBatterieExamenBiologieMedicale -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationBatterieExamenBiologieMedicale -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationBatterieExamenBiologieMedicale -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationBatterieExamEtSurveillancePrenataux -[#black,dashed,thickness=2]-> FrActorExtension
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrAuthorTimeExtension
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
      FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
      FrCondition -[#black,dashed,thickness=2]-> FrStatutCliniquePatientExtension
+     FrCondition -[#black,dashed,thickness=2]-> FrActorExtension
+     FrDeviceRequestMedicalDevice -[#black,dashed,thickness=2]-> FrActorExtension
+     FrDeviceUseStatementMedicalDevice -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEnRapportAvecAccidentTravail -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEnRapportAvecALD -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEnRapportAvecLaPrevention -[#black,dashed,thickness=2]-> FrActorExtension
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrEvenementCaracteristiqueExtension
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrReferenceInterneExtension
+     FrEncounterEvenementDocument -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrEncounter -[#black,dashed,thickness=2]-> FrActorExtension
+     FrEncounter -[#black,dashed,thickness=2]-> FrActorExtension
+     FrEncounter -[#black,dashed,thickness=2]-> FrActorExtension
      FrFamilyMemberHistory -[#black,dashed,thickness=2]-> FrInterpretationExtension
      FrFamilyMemberHistory -[#black,dashed,thickness=2]-> FrMethodExtension
-     FrFamilyMemberHistory -[#black,dashed,thickness=2]-> FrAuthorExtension
+     FrFamilyMemberHistory -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationHorsNomenclature -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMediaImageIllustrative -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMediaImageIllustrative -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMediaImageIllustrative -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMediaImageIllustrative -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrAdministrationFrequency
+     FrMedicationAdministrationDocument -[#black,dashed,thickness=2]-> FrSequenceExtension
+     FrMedicationDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrMedicationDocument -[#black,dashed,thickness=2]-> FrNomSubstance
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrMedicationRequestDocument -[#black,dashed,thickness=2]-> FrDispenserInstructionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrPreconditionExtension
+     FrMedicationStatementDocument -[#black,dashed,thickness=2]-> FrAdministrationFrequency
+     FrObservationNonRemboursable -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationContexte -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationDICOM -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrObservationDifficulte -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEvaluation -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrObservationEvaluation -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEvaluation -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationEvaluation -[#black,dashed,thickness=2]-> FrActorExtension
      FrObservationHabitusModeDeVie -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrObservationIsolatMicrobiologique -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationIsolatMicrobiologique -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationIsolatMicrobiologique -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationIsolatMicrobiologique -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationIsolatMicrobiologique -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationModaliteEntree -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationModaliteSortie -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationRechercheMicroOrganismes -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationRenouvellement -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationResultatDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationStatutDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationStatut -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationStatut -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrObservationSurEchelleDouleur -[#black,dashed,thickness=2]-> FrRepeatNumberExtension
+     FrObservationSyntheseMedicaleSejourDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationTransfusionDeProduitsSanguins -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureExpositionPatientDICOM -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTechniqueImagerieDICOM -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrProcedureFromLocation
+     FrProcedureTransportProfessionnel -[#black,dashed,thickness=2]-> FrProceduretoLocation
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrAutresPrecisionExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrQualifierExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrActorExtension
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrProcedureFromLocation
+     FrProcedureTransportPatient -[#black,dashed,thickness=2]-> FrProceduretoLocation
+     FrObservationResultatsExamensDeBiologieElementCliniquePertinent -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrObservationResultatsExamensDeBiologieElementCliniquePertinent -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationResultatsExamensDeBiologieElementCliniquePertinent -[#black,dashed,thickness=2]-> FrActorExtension
+     FrObservationResultatsExamensDeBiologieElementCliniquePertinent -[#black,dashed,thickness=2]-> FrActorExtension
      FrSeviceRequestDemandeDexamenOuDeSuivi -[#black,dashed,thickness=2]-> FrInterpretationExtension
      FrSeviceRequestDemandeDexamenOuDeSuivi -[#black,dashed,thickness=2]-> FrMethodExtension
+     FrSeviceRequestDemandeDexamenOuDeSuivi -[#black,dashed,thickness=2]-> FrActorExtension
+     FrSigneVitalObserveDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrSignesVitauxDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrVaccinationTypeExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrVaccinRecommandeDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrVaccinationTypeExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrPrescriptionExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrDoseAntigeneExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrTranslationExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrActorExtension
+     FrVaccinationDocument -[#black,dashed,thickness=2]-> FrActorExtension
 
         class FrActorExtension{
 
@@ -1813,6 +2621,10 @@ package IG #DDDDDD{
           Extension.extension:type.extension => [None..0]
           Extension.extension:type.url => [None..None]
           Extension.extension:type.value[x] => [None..None]
+          Extension.extension:typeCode => [0..1]
+          Extension.extension:typeCode.extension => [None..0]
+          Extension.extension:typeCode.url => [None..None]
+          Extension.extension:typeCode.value[x] => [None..None]
           Extension.extension:reference => [1..1]
           Extension.extension:reference.extension => [None..0]
           Extension.extension:reference.url => [None..None]
@@ -1820,13 +2632,19 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
         } 
-        class FrAuthorExtension{
+        class FrAdministrationFrequency{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
         class FrAuthorTimeExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrAutresPrecisionExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
@@ -1851,6 +2669,48 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
+        class FrDispenserInstructionExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
+        } 
+        class FrDocumentReferenceExterneExtension{
+
+          Extension.extension => [1..None]
+          Extension.extension:identifier => [1..1]
+          Extension.extension:identifier.extension => [None..0]
+          Extension.extension:identifier.url => [None..None]
+          Extension.extension:identifier.value[x] => [1..None]
+          Extension.extension:identifier.value[x]:valueIdentifier => [1..1]
+          Extension.extension:url => [0..1]
+          Extension.extension:url.extension => [None..0]
+          Extension.extension:url.url => [None..None]
+          Extension.extension:url.value[x] => [None..None]
+          Extension.extension:url.value[x]:valueUrl => [0..1]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrDoseAntigeneExtension{
+
+          Extension.extension => [2..None]
+          Extension.extension:doseQuantity => [1..1]
+          Extension.extension:doseQuantity.url => [None..None]
+          Extension.extension:consumable => [1..1]
+          Extension.extension:consumable.extension => [None..0]
+          Extension.extension:consumable.url => [None..None]
+          Extension.extension:consumable.value[x] => [None..None]
+          Extension.extension:consumable.value[x]:valueReference => [0..1]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrEvenementCaracteristiqueExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
         class FrInterpretationExtension{
 
           Extension.extension => [None..0]
@@ -1863,6 +2723,12 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
+        class FrNomSubstance{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
+        } 
         class FrPerformerEvent{
 
           Extension.extension => [None..0]
@@ -1870,11 +2736,71 @@ package IG #DDDDDD{
           Extension.value[x] => [None..None]
           Extension.value[x]:valueReference => [0..1]
         } 
+        class FrPreconditionExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrPrescriptionExtension{
+
+          Extension.extension => [1..None]
+          Extension.extension:dosage => [1..1]
+          Extension.extension:dosage.extension => [None..0]
+          Extension.extension:dosage.url => [None..None]
+          Extension.extension:dosage.value[x] => [None..None]
+          Extension.extension:dosage.value[x].text => [1..None]
+          Extension.extension:dosage.value[x].additionalInstruction => [1..1]
+          Extension.extension:dosage.value[x].additionalInstruction.text => [1..None]
+          Extension.extension:dosage.value[x].doseAndRate.dose[x] => [None..None]
+          Extension.extension:dosage.value[x].doseAndRate.dose[x]:doseQuantity => [0..1]
+          Extension.extension:repeatNumber => [0..1]
+          Extension.extension:prescripteur => [0..1]
+          Extension.extension:prescripteur.extension => [None..0]
+          Extension.extension:prescripteur.url => [None..None]
+          Extension.extension:prescripteur.value[x] => [None..None]
+          Extension.extension:dispensateur => [0..*]
+          Extension.extension:dispensateur.extension => [None..0]
+          Extension.extension:dispensateur.url => [None..None]
+          Extension.extension:dispensateur.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
         class FrPriorityExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrProcedureFromLocation{
+
+          Extension.extension => [2..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:type.value[x].coding.code => [None..None]
+          Extension.extension:reference => [1..1]
+          Extension.extension:reference.extension => [None..0]
+          Extension.extension:reference.url => [None..None]
+          Extension.extension:reference.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
+        } 
+        class FrProceduretoLocation{
+
+          Extension.extension => [2..None]
+          Extension.extension:type => [1..1]
+          Extension.extension:type.extension => [None..0]
+          Extension.extension:type.url => [None..None]
+          Extension.extension:type.value[x] => [None..None]
+          Extension.extension:type.value[x].coding.code => [None..None]
+          Extension.extension:reference => [1..1]
+          Extension.extension:reference.extension => [None..0]
+          Extension.extension:reference.url => [None..None]
+          Extension.extension:reference.value[x] => [None..None]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..0]
         } 
         class FrQualifierExtension{
 
@@ -1889,11 +2815,56 @@ package IG #DDDDDD{
           Extension.url => [None..None]
           Extension.value[x] => [None..0]
         } 
+        class FrReferenceInterneExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrRepeatNumberExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
         class FrScoreExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
+        } 
+        class FrSequenceExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+        } 
+        class FrTranslationExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
+          Extension.value[x]:valueCodeableConcept => [1..1]
+        } 
+        class FrTransportPatient{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrTransportProfessionnel{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [None..None]
+          Extension.value[x]:valueReference => [0..1]
+        } 
+        class FrVaccinationTypeExtension{
+
+          Extension.extension => [None..0]
+          Extension.url => [None..None]
+          Extension.value[x] => [1..None]
          }
      }
      package valueset #PaleVioletRed{
@@ -1902,9 +2873,9 @@ package IG #DDDDDD{
 
      FrActorExtension -[#black,dotted,thickness=2]-> FrValueSetActorType
 
-        class FrValueSetConditionVerificationStatus  
+        class FrValueSetAllergieIntoleranceVerificationStatus  
 
-     FrAllergyIntolerance -[#black,dotted,thickness=2]-> FrValueSetConditionVerificationStatus
+     FrAllergyIntolerance -[#black,dotted,thickness=2]-> FrValueSetAllergieIntoleranceVerificationStatus
 
         class FrValueSetPerformerFunctionParticipant  
 
@@ -1921,6 +2892,42 @@ package IG #DDDDDD{
         class FrValueSetConditionVerificationStatus  
 
      FrCondition -[#black,dotted,thickness=2]-> FrValueSetConditionVerificationStatus
+
+        class FrValueSetTypeResultat  
+
+     FrDiagnosticReportDocument -[#black,dotted,thickness=2]-> FrValueSetTypeResultat
+
+        class FrValueSetMedicationAdministrationCategory  
+
+     FrMedicationAdministrationDocument -[#black,dotted,thickness=2]-> FrValueSetMedicationAdministrationCategory
+
+        class FrValueSetEDQM  
+
+     FrMedicationAdministrationDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetEDQM  
+
+     FrMedicationDispenseDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetVaccineTranslation  
+
+     FrMedicationDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetEDQM  
+
+     FrMedicationDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetEDQM  
+
+     FrMedicationRequestDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
+
+        class FrValueSetMedicationAdministrationCategory  
+
+     FrMedicationStatementDocument -[#black,dotted,thickness=2]-> FrValueSetMedicationAdministrationCategory
+
+        class FrValueSetEDQM  
+
+     FrMedicationStatementDocument -[#black,dotted,thickness=2]-> FrValueSetEDQM
 
         class FRValueSetTypeSavoirFaireProfessionMedecin  
 
@@ -1961,6 +2968,26 @@ package IG #DDDDDD{
         class FrValueSetRequestIntent  
 
      FrSeviceRequestDemandeDexamenOuDeSuivi -[#black,dotted,thickness=2]-> FrValueSetRequestIntent
+
+        class FrValueSetCodeProduit  
+
+     FrVaccinRecommandeDocument -[#black,dotted,thickness=2]-> FrValueSetCodeProduit
+
+        class FrValueSetVaccineTranslation  
+
+     FrVaccinRecommandeDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetCodeProduit  
+
+     FrVaccinationDocument -[#black,dotted,thickness=2]-> FrValueSetCodeProduit
+
+        class FrValueSetVaccineTranslation  
+
+     FrVaccinationDocument -[#black,dotted,thickness=2]-> FrValueSetVaccineTranslation
+
+        class FrValueSetVaccinationType  
+
+     FrVaccinationTypeExtension -[#black,dotted,thickness=2]-> FrValueSetVaccinationType
        }
 
 package "Ressources de base" #palegreen {
@@ -1988,46 +3015,6 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> Evenement
-
- class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
-
-    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationDICOM
-
- class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
-
-    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrAdministrationProduitsDeSanteDICOM
-
- class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
-
-    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrAdministrationRadiopharmaceutiqueDICOM
-
- class "Consent" as  class1bbdf136f897ea2075a786bd05152095 
-
-    class1bbdf136f897ea2075a786bd05152095 --> FrDirectiveAnticipee
-
- class "Endpoint" as  class2a6ba72e93aa7fa676d07973ed2716bb 
-
-    class2a6ba72e93aa7fa676d07973ed2716bb --> FrEndpointWadoDICOM
-
- class "ImagingStudy" as  class98b883da5bd7f6cf3d633a7ac978e365 
-
-    class98b883da5bd7f6cf3d633a7ac978e365 --> FrImagingStudyExamenImagerieDICOM
-
- class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
-
-    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObjectifsDeReferenceDICOM
-
- class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
-
-    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureExpositionPatientDICOM
-
- class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
-
-    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTechniqueImagerieDICOM
-
- class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
-
-    classc680d437163cc6bab4f9bdb35c3073d0 --> FrQuantityDICOM
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2093,6 +3080,14 @@ package "Ressources de base" #palegreen {
 
     classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationAdministrationDeDerivesDuSang
 
+ class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
+
+    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrAdministrationProduitsDeSanteDICOM
+
+ class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
+
+    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrAdministrationRadiopharmaceutiqueDICOM
+
  class "AllergyIntolerance" as  classa809a3bb47583552029f4cbd0043d00f 
 
     classa809a3bb47583552029f4cbd0043d00f --> FrAllergyIntolerance
@@ -2108,6 +3103,10 @@ package "Ressources de base" #palegreen {
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
+
+ class "CarePlan" as  classc1c8e4b50c739ddc150dd233aa035d7a 
+
+    classc1c8e4b50c739ddc150dd233aa035d7a --> FrCarePlanDocument
 
  class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
 
@@ -2269,6 +3268,14 @@ package "Ressources de base" #palegreen {
 
     class48a85c3cc509715567fa4b3fe50c01ce --> FrDeviceUseStatementMedicalDevice
 
+ class "DiagnosticReport" as  class4a13057f4409624a283d7471c591d19e 
+
+    class4a13057f4409624a283d7471c591d19e --> FrDiagnosticReportDocument
+
+ class "Consent" as  class1bbdf136f897ea2075a786bd05152095 
+
+    class1bbdf136f897ea2075a786bd05152095 --> FrDirectiveAnticipee
+
  class "DocumentReference" as  classabc067272ee1964cc2c74c1c1a1854f5 
 
     classabc067272ee1964cc2c74c1c1a1854f5 --> FrDocumentReference
@@ -2295,11 +3302,27 @@ package "Ressources de base" #palegreen {
 
  class "Encounter" as  classd1e9f9f891de8f9a655739a01fbf68f0 
 
+    classd1e9f9f891de8f9a655739a01fbf68f0 --> FrEncounterEvenementDocument
+
+ class "Encounter" as  classd1e9f9f891de8f9a655739a01fbf68f0 
+
     classd1e9f9f891de8f9a655739a01fbf68f0 --> FrEncounter
+
+ class "Endpoint" as  class2a6ba72e93aa7fa676d07973ed2716bb 
+
+    class2a6ba72e93aa7fa676d07973ed2716bb --> FrEndpointWadoDICOM
 
  class "FamilyMemberHistory" as  class8133ff052c92e7041ff8cc4a25e4bc31 
 
     class8133ff052c92e7041ff8cc4a25e4bc31 --> FrFamilyMemberHistory
+
+ class "List" as  class4ee29ca12c7d126654bd0e5275de6135 
+
+    class4ee29ca12c7d126654bd0e5275de6135 --> FrHistoriqueGrossesseList
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrHistoriqueGrossesse
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
@@ -2309,6 +3332,10 @@ package "Ressources de base" #palegreen {
 
     classab70be087e84d984395444c4643fb763 --> HumanNameDocument
 
+ class "ImagingStudy" as  class98b883da5bd7f6cf3d633a7ac978e365 
+
+    class98b883da5bd7f6cf3d633a7ac978e365 --> FrImagingStudyExamenImagerieDICOM
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
     class505b865d93b3b02ed3aff95e782d498a --> FrLocationDocument
@@ -2317,13 +3344,45 @@ package "Ressources de base" #palegreen {
 
     class3b563524fdb17b4a86590470d40bef74 --> FrMediaImageIllustrative
 
+ class "MedicationAdministration" as  classcb08d1580a4f19d9fc3a0c98169f1144 
+
+    classcb08d1580a4f19d9fc3a0c98169f1144 --> FrMedicationAdministrationDocument
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationsCombinaisonDocument
+
+ class "MedicationDispense" as  classfc53f5b9eccfc9aa8cc26374d1451ab5 
+
+    classfc53f5b9eccfc9aa8cc26374d1451ab5 --> FrMedicationDispenseDocument
+
+ class "Medication" as  class353bd6f65060d17097c3b03141e79cce 
+
+    class353bd6f65060d17097c3b03141e79cce --> FrMedicationDocument
+
+ class "MedicationRequest" as  class2071abb7e1482ea8731af3cdcaed7225 
+
+    class2071abb7e1482ea8731af3cdcaed7225 --> FrMedicationRequestDocument
+
+ class "MedicationStatement" as  class8934c1aef5d0ec0c826ed7fe19f4e1a3 
+
+    class8934c1aef5d0ec0c826ed7fe19f4e1a3 --> FrMedicationStatementDocument
+
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
     classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationNonRemboursable
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObjectifsDeReferenceDICOM
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
     classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationContexte
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationDICOM
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
@@ -2332,6 +3391,10 @@ package "Ressources de base" #palegreen {
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
     classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationEvaluation
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationGrossesseDocument
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
@@ -2355,7 +3418,39 @@ package "Ressources de base" #palegreen {
 
  class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
 
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationNaissanceDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationRechercheMicroOrganismes
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
     classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationRenouvellement
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationResultatDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationStatutDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationStatut
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationSurEchelleDouleur
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationSyntheseMedicaleSejourDocument
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrObservationTransfusionDeProduitsSanguins
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization" as  class02104d9d29574b85b8bdd491de969f0d 
 
@@ -2377,6 +3472,30 @@ package "Ressources de base" #palegreen {
 
     class409d7284b1fcd82a5ca90685afaba163 --> FrPractitionerRoleDocument
 
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureExpositionPatientDICOM
+
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTechniqueImagerieDICOM
+
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTransportProfessionnel
+
+ class "Procedure" as  class8c4271e6faf2cea4cfc8e5b7108d8ee9 
+
+    class8c4271e6faf2cea4cfc8e5b7108d8ee9 --> FrProcedureTransportPatient
+
+ class "Observation" as  classc680d437163cc6bab4f9bdb35c3073d0 
+
+    classc680d437163cc6bab4f9bdb35c3073d0 --> FrQuantityDICOM
+
+ class "DocumentReference" as  classabc067272ee1964cc2c74c1c1a1854f5 
+
+    classabc067272ee1964cc2c74c1c1a1854f5 --> FrReferencesExternesDocument
+
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person" as  class73d64d75d9b8829a511eb36c46458829 
 
     class73d64d75d9b8829a511eb36c46458829 --> FrRelatedPersonDocument
@@ -2389,8 +3508,24 @@ package "Ressources de base" #palegreen {
 
     class36a80548d09d2e7c003ede674799a03a --> FrSeviceRequestDemandeDexamenOuDeSuivi
 
+ class "vitalsigns" as  classbc3e6f566d4b627eb1169a15f6c63afa 
+
+    classbc3e6f566d4b627eb1169a15f6c63afa --> FrSigneVitalObserveDocument
+
+ class "vitalspanel" as  class48cc96dc575369fad67347d24c304310 
+
+    class48cc96dc575369fad67347d24c304310 --> FrSignesVitauxDocument
+
  class "Specimen" as  class8dc6383321d3c88f6b3d533921197caa 
 
     class8dc6383321d3c88f6b3d533921197caa --> FrSpecimen
+
+ class "ImmunizationRecommendation" as  classf3209e303493c906899c832891d1dda7 
+
+    classf3209e303493c906899c832891d1dda7 --> FrVaccinRecommandeDocument
+
+ class "Immunization" as  classa3bca275063d357198e946211a06b816 
+
+    classa3bca275063d357198e946211a06b816 --> FrVaccinationDocument
 }
 @enduml

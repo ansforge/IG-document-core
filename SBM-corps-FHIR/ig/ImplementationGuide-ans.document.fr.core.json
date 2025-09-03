@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-08-25T15:49:50+00:00",
+  "date" : "2025-09-03T12:41:15+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -56,10 +56,10 @@
     "version" : "2.0.0-sd"
   },
   {
-    "id" : "ans_fr_terminologies",
-    "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
-    "packageId" : "ans.fr.terminologies",
-    "version" : "1.2.0"
+    "id" : "ans_fr_nos",
+    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
+    "packageId" : "ans.fr.nos",
+    "version" : "1.4.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -78,6 +78,12 @@
     "uri" : "http://hl7.org/fhir/uv/fhir-clinical-document/ImplementationGuide/hl7.fhir.uv.fhir-clinical-document",
     "packageId" : "hl7.fhir.uv.fhir-clinical-document",
     "version" : "1.0.0-ballot"
+  },
+  {
+    "id" : "ihe_pharm_mpd",
+    "uri" : "https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd",
+    "packageId" : "ihe.pharm.mpd",
+    "version" : "1.0.0-comment-2"
   }],
   "definition" : {
     "extension" : [{
@@ -687,16 +693,24 @@
       "name" : "Eléments CDA"
     },
     {
-      "id" : "Ressources FHIR",
-      "name" : "Profils FHIR"
+      "id" : "Ressources FHIR entête",
+      "name" : "Profils FHIR entête"
+    },
+    {
+      "id" : "Ressources FHIR corps",
+      "name" : "Profils FHIR corps"
     },
     {
       "id" : "Data Type FHIR",
       "name" : "Data Type Profiles"
     },
     {
-      "id" : "Extensions FHIR",
-      "name" : "Extensions FHIR"
+      "id" : "Extensions FHIR entête",
+      "name" : "Extensions FHIR entête"
+    },
+    {
+      "id" : "Extensions FHIR corps",
+      "name" : "Extensions FHIR corps"
     },
     {
       "id" : "Mapping",
@@ -710,9 +724,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-effet-indesirable"
       },
-      "name" : "AdverseEvent - Effet indésirable",
+      "name" : "AdverseEvent - Fr Effet indésirable",
       "description" : "FrEffetIndesirable permet de décrire un effet indésirable prévisible lié à un médicament",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -722,9 +737,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-allergie-intolerance"
       },
-      "name" : "AllergyIntolerance - Fr AllergyIntolerance",
+      "name" : "AllergyIntolerance - Fr Allergie et intolérance",
       "description" : "FrAllergyIntolerance est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -761,6 +777,19 @@
       "name" : "Body Site SNOMED CT",
       "description" : "ValueSet pour les localisations anatomiques",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-care-plan-document"
+      },
+      "name" : "CarePlan - Fr Reference item plan traitement",
+      "description" : "Cette entrée permet d’enregistrer une référence à un traitement dans un plan de traitement.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1056,8 +1085,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-core-name"
       },
-      "name" : "CDA - name",
-      "description" : "L'élément de l'en-tête du CDA name correspond au nom d'une personne physique.",
+      "name" : "CDA - Name ",
+      "description" : "L'élément de l'en-tête du CDA  correspond au nom d'une personne physique.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources CDA"
     },
@@ -1220,26 +1249,15 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/clinical-document-bundle-BIO-CR-BIO"
-      },
-      "name" : "clinical-document-bundle-BIO-CR-BIO",
-      "description" : "Document Bundle exemple FHIR du CR-BIO",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
         "reference" : "StructureDefinition/fr-condition"
       },
-      "name" : "Condition - Fr condition",
+      "name" : "Condition - Fr Condition (problème)",
       "description" : "FrCondition est un profil utilisé pour décrire un problème du patient (une pathologie par exemple).",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1247,11 +1265,12 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-directive-anticipee"
+        "reference" : "StructureDefinition/fr-directive-anticipee"
       },
-      "name" : "Consent - Fr Directive Anticipée",
+      "name" : "Consent - Fr Directive anticipée",
       "description" : "FrDirectiveAnticipee permet  d’indiquer si les directives anticipées du patient.\nArticle L1111-11 du Code de la Santé Publique : \n« Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un \njour hors d'état d'exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne \nrelative à sa fin de vie en ce qui concerne les conditions de la poursuite, de la limitation, \nde l'arrêt ou du refus de traitement ou d'acte médicaux.»",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1261,9 +1280,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-device-request-medicaldevice"
       },
-      "name" : "DeviceRequest - Medical Device",
+      "name" : "DeviceRequest - Fr git add .Dispositif médical",
       "description" : "Représentation d'une demande de dispositif médical (DM) qui n’a pas encore été dispensé.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1273,9 +1293,23 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-device-use-statement-medicaldevice"
       },
-      "name" : "DeviceUseStatement - Fr Device Use Statement Medical Device",
+      "name" : "DeviceUseStatement - Fr Dispositif médical",
       "description" : "FrDeviceUseStatementMedicalDevice représente les information sur un dispositif médical",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-diagnostic-report-document"
+      },
+      "name" : "DiagnosticReport - Fr Resultats",
+      "description" : "\n - L'entrée 'FR-Resultats' est une entrée de type 'organizer' regroupant les types des résultats classés par type d’examens (BIO, IMG, etc…).\n - L'entrée 'FR-Resultats' est une entrée de type 'organizer' regroupant les types des résultats classés par type d’examens (BIO, IMG, etc…).",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1285,9 +1319,23 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-document-reference"
       },
-      "name" : "DocumentReference - Fr Document Reference",
+      "name" : "DocumentReference - Fr Document referencé",
       "description" : "DocumentReference restreint pour les documents PDF.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-references-externes-document"
+      },
+      "name" : "DocumentReference - Fr References externes",
+      "description" : "Cette entrée de type act permet de relier un élément à un (ou des) document(s) externe(s) par l’intermédiaire d’une adresse URL.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1311,7 +1359,8 @@
       },
       "name" : "Encounter - Fr Encounter",
       "description" : "FrEncounter est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1319,11 +1368,25 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-endpoint-wado-DICOM"
+        "reference" : "StructureDefinition/fr-encounter-evenement-document"
+      },
+      "name" : "Encouter - Fr Evenement",
+      "description" : "Cette entrée est un élément de type encounter permettant de conserver les données d’activités liées à un patient / usager. \nIl peut s'agir d'un évènement passé ou à venir.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-endpoint-wado-dicom"
       },
       "name" : "endpoint - Fr Endpoint Wado DICOM",
       "description" : "FrEndpointWadoDICOM permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1359,19 +1422,8 @@
       },
       "name" : "Extension - Actor",
       "description" : "Extension pour représenter un acteur impliqué dans le document avec son type et sa référence.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-author-extension"
-      },
-      "name" : "Extension - Auteur",
-      "description" : "Extension permettant d’indiquer l’auteur de l’information sur la condition familiale.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1383,7 +1435,8 @@
       },
       "name" : "Extension - Body Site Extension",
       "description" : "Extension pour indiquer la localisation anatomique d'une condition dans antécédents familiaux",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1391,11 +1444,25 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-difficulte"
+        "reference" : "StructureDefinition/fr-difficulte-extension"
       },
       "name" : "Extension - Difficulté de l'acte",
       "description" : "Extension permettant d'indiquer la difficulté perçue ou mesurée d'un acte, référencée sous forme d'une Observation.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-translation-extension"
+      },
+      "name" : "Extension - Fr Translation",
+      "description" : "Extension utilisée pour représenter d'autres codifications sous forme de CodeableConcept",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1407,7 +1474,8 @@
       },
       "name" : "Extension - Interprétation",
       "description" : "Extension permettant de spécifier l’interprétation d’une condition.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1419,7 +1487,8 @@
       },
       "name" : "Extension - Méthode",
       "description" : "Extension permettant d’indiquer la méthode par laquelle la condition a été identifiée.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1431,7 +1500,8 @@
       },
       "name" : "Extension - Priorité",
       "description" : "Indique la priorité clinique de l’observation.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1439,11 +1509,12 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-score"
+        "reference" : "StructureDefinition/fr-score-extension"
       },
       "name" : "Extension - Scores associés à l'acte",
       "description" : "Extension permettant de référencer un ou plusieurs scores cliniques liés à l'acte (ex: score d'ASA, score de Glasgow).",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1455,7 +1526,8 @@
       },
       "name" : "Extension - Statut clinique du patient",
       "description" : "Extension pour représenter le statut clinique du patient avec le jeu de valeurs français CISIS.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1465,10 +1537,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-family-member-history"
       },
-      "name" : "FamilyMemberHistory - Fr FamilyMemberHistory",
+      "name" : "FamilyMemberHistory - Fr Antécédents familiaux",
       "description" : "FrFamilyMemberHistory est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…).",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1484,66 +1556,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-groupe-questionnaires-evaluation"
-      },
-      "name" : "FR - Groupe de questionnaires d'évaluation",
-      "description" : "FrObservationGroupeDeQuestionnairesDevaluation permet de rassembler des observations de questionnaires.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-habitus-mode-de-vie"
-      },
-      "name" : "FR - Habitus / Mode de vie",
-      "description" : "Profil Observation décrivant les habitudes de vie du patient (Habitus / Mode de vie), dérivé de FrSimpleObservation.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-isolat-microbiologique"
-      },
-      "name" : "FR - Isolat microbiologique",
-      "description" : "Profil Observation pour représenter un isolat microbiologique, dérivé de FrSimpleObservation.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-modalite-entree"
-      },
-      "name" : "FR - Modalité d'entrée",
-      "description" : "Profil Observation décrivant la modalité d'entrée du patient, dérivé de FrSimpleObservation.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-observation-modalite-sortie"
-      },
-      "name" : "FR - Modalité de sortie",
-      "description" : "Profil Observation décrivant la modalité de sortie du patient, dérivé de FrSimpleObservation.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1552,7 +1564,20 @@
       "name" : "Fr Author Time Extension",
       "description" : "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.",
       "exampleBoolean" : false,
-      "groupingId" : "Extensions FHIR"
+      "groupingId" : "Extensions FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-autres-precision-extension"
+      },
+      "name" : "Fr Autres Precision",
+      "description" : "Autres précision sur le trajet ou le transport du patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1565,7 +1590,20 @@
       "name" : "Fr Bundle Document",
       "description" : "Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-evenement-caracteristique-extension"
+      },
+      "name" : "Fr Caractéristique de l'évènement",
+      "description" : "Référence à une observation de type Fr-Simple-Observation représentant les caractéristiques de l'évènement.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1578,7 +1616,7 @@
       "name" : "Fr Composition Document",
       "description" : "Ce profil est utilisé pour représenter un document médical.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
     },
     {
       "extension" : [{
@@ -1591,7 +1629,33 @@
       "name" : "Fr Device Document",
       "description" : "Ce profil représente le système auteur du document.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-document-reference-externe-extension"
+      },
+      "name" : "Fr Document Reference Externe",
+      "description" : "Document référencé",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-dose-antigene-extension"
+      },
+      "name" : "Fr Dose Antigene",
+      "description" : "Extension complexe pour représenter un consommable (FrMedication) et une doseQuantity dans Immunization.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1604,7 +1668,59 @@
       "name" : "Fr Encounter Document",
       "description" : "Ce profil représente l'association du document à une prise en charge.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-administration-frequency"
+      },
+      "name" : "Fr Fréquence d’administration",
+      "description" : "Extension pour représenter la fréquence d'administration dans MedicationAdministration et MedicationStatement",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-dispenser-instruction-extension"
+      },
+      "name" : "Fr Instructions au dispensateur",
+      "description" : "Instructions au dispensateur : par exemple pour indiquer que le traitement doit être étiqueté dans une langue étrangère, etc …",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-procedure-from-location"
+      },
+      "name" : "Fr Lieu de départ du transport",
+      "description" : "Extension pour représenter le lieu de départ d’un transport (patient ou professionnel).",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-procedure-to-location"
+      },
+      "name" : "Fr Lieu de départ du transport",
+      "description" : "Extension pour représenter le lieu de destination d’un transport (patient ou professionnel).",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1617,7 +1733,20 @@
       "name" : "Fr Location Document",
       "description" : "Ce profil représente le lieu de la prise en charge.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-nom-substance"
+      },
+      "name" : "Fr Nom de la substance",
+      "description" : "Nom de la substance active, à utiliser en complément d’un codage.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1630,7 +1759,7 @@
       "name" : "Fr Organization Document",
       "description" : "Ce profil représente la structure pour le compte de laquelle intervient le professionnel.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
     },
     {
       "extension" : [{
@@ -1643,7 +1772,7 @@
       "name" : "Fr Patient Document",
       "description" : "Ce profil représente le patient concerné par le document.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
     },
     {
       "extension" : [{
@@ -1656,7 +1785,7 @@
       "name" : "Fr Patient INS Document",
       "description" : "Ce profil représente le patient concerné par le document.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
     },
     {
       "extension" : [{
@@ -1669,7 +1798,7 @@
       "name" : "Fr Performer Event",
       "description" : "Extension permettant d'ajouter un performer à l'élément event d'une Composition.",
       "exampleBoolean" : false,
-      "groupingId" : "Extensions FHIR"
+      "groupingId" : "Extensions FHIR entête"
     },
     {
       "extension" : [{
@@ -1682,7 +1811,7 @@
       "name" : "Fr Practitioner Document",
       "description" : "Ce profil permet de décrire un professionnel de santé dans le cadre d'un document médical",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
     },
     {
       "extension" : [{
@@ -1695,7 +1824,46 @@
       "name" : "Fr PractitionerRole Document",
       "description" : "Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-prescription-extension"
+      },
+      "name" : "Fr Prescription",
+      "description" : "Instructions de prescription associées à l'administration du produit de santé.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-precondition-extension"
+      },
+      "name" : "Fr Précondition de l'administration",
+      "description" : "Lien vers la description narrative des conditions préalables dans le document CDA.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-reference-interne-extension"
+      },
+      "name" : "Fr Reference Interne",
+      "description" : "Liens vers les pièces jointes.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -1708,7 +1876,108 @@
       "name" : "Fr RelatedPerson Document",
       "description" : "Ce profil représente l'informateur non professionnel.",
       "exampleBoolean" : false,
-      "groupingId" : "Ressources FHIR"
+      "groupingId" : "Ressources FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-repeat-number-extension"
+      },
+      "name" : "Fr Repeat Number",
+      "description" : "Numéro d'occurrence de l'acte ou de l'observation (équivalent CDA repeatNumber)",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-sequence-extension"
+      },
+      "name" : "Fr Sequence",
+      "description" : "Dosages progressifs et fractionnés",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-transport-patient-extension"
+      },
+      "name" : "Fr Transport patient",
+      "description" : "Extension permettant de référencer une procédure de transport du patient depuis un Encounter.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-transport-professionnel-extension"
+      },
+      "name" : "Fr Transport professionnel",
+      "description" : "Extension permettant de référencer une procédure de transport du Professionnel depuis un Encounter.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-vaccination-type-extension"
+      },
+      "name" : "Fr Vaccination Type",
+      "description" : "Extension représentant le type de vaccination (ex: INITIMMUNIZ, BOOSTER, IMMUNIZ), équivalent au code de l'entrée CDA FR-Vaccination.",
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-doc-vs-medication-administration-category"
+      },
+      "name" : "Fr ValueSet Catégories de médicament (actes ou absence)",
+      "description" : "Combinaison des JDVs pour acte ou situation et absence de médicament",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-doc-vs-code-produit"
+      },
+      "name" : "Fr ValueSet Codes ATC ou CIS pour les vaccins",
+      "description" : "Ce jeu de valeurs contient les systèmes ATC et CIS (ANSM) utilisés pour coder les vaccins.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-emdn"
+      },
+      "name" : "Fr ValueSet EDQM - Standard terms",
+      "description" : "ValueSet basé sur le CodeSystem EDQM fourni par SMT",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1776,6 +2045,30 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
+        "reference" : "ValueSet/fr-doc-vs-vac-type"
+      },
+      "name" : "Fr ValueSet Type de vaccination",
+      "description" : "FR ValueSet Type de vaccination : \n\n - JDV_HL7_ActSubstanceAdministrationImmunizationCode_CISIS (2.16.840.1.113883.1.11.19709). Il permet d’indiquer si l’entrée concerne une vaccination. \nOU\n - JDV_AbsentOrUnknownImmunization_CISIS (1.2.250.1.213.1.1.5.666)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-doc-vs-type-resultat"
+      },
+      "name" : "Fr ValueSet Type Resultat",
+      "description" : "ValueSet contenant les codes LOINC autorisés pour les types de résultats",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
         "reference" : "ValueSet/fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste"
       },
       "name" : "Fr ValueSet Type Savoir-faire Profession Chirurgien-Dentiste",
@@ -1821,6 +2114,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-doc-vs-vaccine-translation"
+      },
+      "name" : "Fr ValueSet Vaccine-Translation pour les autres codifications",
+      "description" : "Systèmes autorisés pour les autres codifications (équivalent CDA translation).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
@@ -1837,11 +2142,38 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-imaging-study-examen-imagerie-DICOM"
+        "reference" : "StructureDefinition/fr-imaging-study-examen-imagerie-dicom"
       },
-      "name" : "ImagingStudy - Fr Imaging Study Examen Imagerie DICOM",
+      "name" : "ImagingStudy - Fr Examen Imagerie DICOM",
       "description" : "FrImagingStudyExamenImagerieDICOM (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.\nL’examen est composé d'une ou de plusieurs séries d’images médicales.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-vaccination-document"
+      },
+      "name" : "Immunization - Fr Vaccination Document",
+      "description" : "L'entrée Vaccination est une entrée de type 'substanceAdministration' pour décrire l'administration d'un vaccin. \n - Elle permet également de décrire pourquoi un vaccin n'a pas été réalisé.\n - Cette entrée hérite de la structuration, des contraintes et des vocabulaires de l'entrée Traitement (1.3.6.1.4.1.19376.1.5.3.1.4.7) sauf mentions précisées ci-après.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-vaccin-recommande-document"
+      },
+      "name" : "ImmunizationRecommendation - Fr Vaccin Recommande Document",
+      "description" : "L'entrée 'Vaccin recommandé' est une entrée de type 'substanceAdministration' qui permet de décrire une vaccination prévue ou proposée.\n - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). \n - Une vaccination prévue dépend d'un plan accepté et à venir.\n - Cette entrée hérite de la structuration, des contraintes et des vocabulaires de l'entrée 'Immunization' (1.3.6.1.4.1.19376.1.5.3.1.4.12)..",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -1882,14 +2214,15 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "ConceptMap/CdaToFhirProcedureStatus"
+        "reference" : "StructureDefinition/fr-historique-de-la-grossesse-list"
       },
-      "name" : "Mapping CDA status vers FHIR Procedure.status",
-      "description" : "Correspondance entre les statuts CDA (statusCode) et FHIR (Procedure.status).",
-      "exampleBoolean" : false
+      "name" : "List - Fr Historique de la grossesse",
+      "description" : "Liste contenant soit un événement de naissance, soit une observation sur la grossesse, mais pas les deux.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2159,9 +2492,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-media-image-illustrative"
       },
-      "name" : "Media - Fr Media Image Illustrative",
-      "description" : "Ce profil permet de décrire",
-      "exampleBoolean" : false
+      "name" : "Media - Fr Media image illustrative",
+      "description" : "Ce profil permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2169,11 +2503,38 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-administration-produits-de-sante-DICOM"
+        "reference" : "StructureDefinition/fr-medication-document"
       },
-      "name" : "MedicationAdministration - Fr Administration Produits De Santé DICOM",
+      "name" : "Medication - Fr Produit de santé",
+      "description" : "L'entrée Produit de santé permet de décrire un médicament ou un vaccin.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-combinaison-document"
+      },
+      "name" : "Medication - Fr Produit de santé",
+      "description" : "Combinaison de médicaments.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-administration-produits-de-sante-dicom"
+      },
+      "name" : "MedicationAdministration - Fr Administration produits de santé DICOM",
       "description" : "FrAdministrationProduitsDeSanteDICOM permet d'enregistrer l’administration de produits (hors radiopharmaceutiques) : produit administré,\ndose administrée, voie d’administration, numéro de lot, autres informations liées à l’administration d’un produit",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2181,11 +2542,64 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-administration-radiopharmaceutique-DICOM"
+        "reference" : "StructureDefinition/fr-administration-radiopharmaceutique-dicom"
       },
-      "name" : "MedicationAdministration - Fr Administration Radiopharmaceutique DICOM",
+      "name" : "MedicationAdministration - Fr Administration radiopharmaceutique DICOM",
       "description" : "FrAdministrationRadiopharmaceutiqueDICOM permet d'enregistrer l’administration de produits radiopharmaceutiques :\nproduit administré, dose administrée, voie d’administration, numéro de lot, autres informations liées à l’administration d’un produit",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-administration-document"
+      },
+      "name" : "MedicationAdministration - Fr Traitement",
+      "description" : "\n - L'entrée 'Traitement' est une entrée de type 'substanceAdministration' décrivant les modalités d'administration d'un médicament au patient.\n - Elle permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement est en attente d’administration (c’est-à dire qu’il a été prescrit) : \n  • @moodCode='INT'",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-dispense-document"
+      },
+      "name" : "MedicationDispense - Fr Traitement dispense",
+      "description" : "Cette entrée de type supply permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-request-document"
+      },
+      "name" : "MedicationRequest - Fr Traitement Prescrit",
+      "description" : "\n - Cette entrée de type substanceAdministration permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-medication-statement-document"
+      },
+      "name" : "MedicationStatement - Fr Traitement",
+      "description" : "\n - L'entrée 'Traitement' est une entrée de type 'substanceAdministration' décrivant les modalités d'administration d'un médicament au patient.\n - Elle permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement : \n  • @moodCode='EVN'",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2427,11 +2841,77 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/fr-accidents-transfusionnels"
+      },
+      "name" : "Observation - Fr Accidents transfusionnels",
+      "description" : "FrObservationAccidentsTransfusionnels est un profil utilisé pour décrire un accident transfusionnel.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-acte-biologie-prescrit"
+      },
+      "name" : "Observation - Fr Acte biologie prescrit",
+      "description" : "FrObservationActeBiologiePrescrit est un profil utilisé pour  décrire une ligne de prescription d’examen de biologie médicale.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-administration-de-derives-du-sang"
+      },
+      "name" : "Observation - Fr Administration de derivés du sang",
+      "description" : "FrObservationAdministrationDeDerivesDuSang est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-batterie-examen-biologie-medicale"
+      },
+      "name" : "Observation - Fr Batterie examen biologie médicale",
+      "description" : "Cette observation permet de décrire des examens de biologie médicale comprenant un ou plusieurs éléments porteurs de résultats et d'éventuels commentaires interprétant cet ensemble de résultats.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-batterie-examen-et-surveillance-prenataux"
+      },
+      "name" : "Observation - Fr Batterie examens et surveillance prénataux",
+      "description" : "Ce profil permet de lister les examens et surveillances prénataux.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/fr-observation-contexte"
       },
       "name" : "Observation - Fr Contexte de l'acte",
       "description" : "Observation représentant le contexte de l’acte",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2443,91 +2923,8 @@
       },
       "name" : "Observation - Fr Difficulté de l'acte",
       "description" : "Observation utilisée pour représenter la difficulté d'un acte.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/Fr-objectifs-de-reference-DICOM"
-      },
-      "name" : "Observation - Fr Objectifs De Reference DICOM",
-      "description" : "FrObjectifsDeReferenceDICOM permet d'enregistrer les objectifs de référence d’imagerie",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-accidents-transfusionnels"
-      },
-      "name" : "Observation - Fr Observation Accidents Transfusionnels",
-      "description" : "FrObservationAccidentsTransfusionnels est un profil utilisé pour décrire un accident transfusionnel.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-acte-biologie-prescrit"
-      },
-      "name" : "Observation - Fr Observation Acte biologie prescrit",
-      "description" : "FrObservationActeBiologiePrescrit est un profil utilisé pour  décrire une ligne de prescription d’examen de biologie médicale.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-administration-de-derives-du-sang"
-      },
-      "name" : "Observation - Fr Observation Administration de derivés du sang",
-      "description" : "FrObservationAdministrationDeDerivesDuSang est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-batterie-examen-biologie-medicale"
-      },
-      "name" : "Observation - Fr Observation Batterie Examen Biologie Medicale",
-      "description" : "Cette observation permet de décrire des examens de biologie médicale comprenant un ou plusieurs éléments porteurs de résultats et d'éventuels commentaires interprétant cet ensemble de résultats.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-batterie-examen-et-surveillance-prenataux"
-      },
-      "name" : "Observation - Fr Observation Batterie Examens Et Surveillance Prenataux",
-      "description" : "Ce profil permet de lister les examens et surveillances prénataux.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/Fr-Observation-DICOM"
-      },
-      "name" : "Observation - Fr Observation DICOM",
-      "description" : "FrObservationDICOM permet d'enregistrer une observation avec une valeur codée ou textuelle.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2537,9 +2934,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-en-rapport-avec-accident-travail"
       },
-      "name" : "Observation - Fr Observation En rapport avec accident travail",
+      "name" : "Observation - Fr En rapport avec accident travail",
       "description" : "Cette observation permet d'indiquer si l'élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2549,9 +2947,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-en-rapport-avec-ald"
       },
-      "name" : "Observation - Fr Observation En rapport avec ALD",
+      "name" : "Observation - Fr En rapport avec ALD",
       "description" : "Cette observation permet d'indiquer si l'élément auquel elle est associée est en rapport avec une Affection Longue Durée (ALD).",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2561,9 +2960,49 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-en-rapport-avec-la-prevention"
       },
-      "name" : "Observation - Fr Observation En rapport avec la prévention",
+      "name" : "Observation - Fr En rapport avec la prévention",
       "description" : "Cette observation permet d'indiquer si l'élément auquel elle est associée est en rapport avec la prévention.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-groupe-questionnaires-evaluation"
+      },
+      "name" : "Observation - Fr Groupe de questionnaires d'évaluation",
+      "description" : "FrObservationGroupeDeQuestionnairesDevaluation permet de rassembler des observations de questionnaires.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-habitus-mode-de-vie"
+      },
+      "name" : "Observation - Fr Habitus / Mode de vie",
+      "description" : "Profil Observation décrivant les habitudes de vie du patient (Habitus / Mode de vie), dérivé de FrSimpleObservation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-historique-de-la-grossesse"
+      },
+      "name" : "Observation - Fr Historique de la grossesse",
+      "description" : "Cette entrée permet de regrouper les observations relatives à un épisode de grossesse.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2573,9 +3012,61 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-hors-nomenclature"
       },
-      "name" : "Observation - Fr Observation Hors nomenclature",
+      "name" : "Observation - Fr Hors nomenclature",
       "description" : "Cette observation permet d'indiquer si l’acte est hors nomenclature.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-isolat-microbiologique"
+      },
+      "name" : "Observation - Fr Isolat microbiologique",
+      "description" : "Profil Observation pour représenter un isolat microbiologique, dérivé de FrSimpleObservation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-modalite-entree"
+      },
+      "name" : "Observation - Fr Modalité d'entrée",
+      "description" : "Profil Observation décrivant la modalité d'entrée du patient, dérivé de FrSimpleObservation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-modalite-sortie"
+      },
+      "name" : "Observation - Fr Modalité de sortie",
+      "description" : "Profil Observation décrivant la modalité de sortie du patient.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-naissance-document"
+      },
+      "name" : "Observation - Fr Naissance",
+      "description" : "Cette entrée rassemble les observations relatives à une naissance.\n - Elle peut-être utilisée comme 'component'; d'une entrée FR-Historique-de-la-grossesse (1.3.6.1.4.1.19376.1.5.3.1.4.13.5.1).",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2585,9 +3076,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-non-remboursable"
       },
-      "name" : "Observation - Fr Observation Non Remboursable",
+      "name" : "Observation - Fr Non remboursable",
       "description" : "Cette observation permet d'indiquer si le traitement auquel elle est associée est non remboursable.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2595,11 +3087,12 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-resultats-examens-de-biologie-element-clinique-pertinent"
+        "reference" : "StructureDefinition/fr-objectifs-de-reference-dicom"
       },
-      "name" : "Observation - Fr Observation Resultats Examens De Biologie Element Clinique Pertinent",
-      "description" : "Ce profil permet de décrire un résultat d'un élément d'un examen de biologie médicale ou un élément clinique pertinent fourni par le prescripteur ou le préleveur dans le contexte clinique de la demande d'examens biologiques.",
-      "exampleBoolean" : false
+      "name" : "Observation - Fr Objectifs De Reference DICOM",
+      "description" : "FrObjectifsDeReferenceDICOM permet d'enregistrer les objectifs de référence d’imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2607,11 +3100,64 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-quantity-DICOM"
+        "reference" : "StructureDefinition/fr-observation-dicom"
       },
-      "name" : "Observation - Fr quantity DICOM",
+      "name" : "Observation - Fr Observation DICOM",
+      "description" : "FrObservationDICOM permet d'enregistrer une observation avec une valeur codée ou textuelle.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-grossesse-document"
+      },
+      "name" : "Observation - Fr Observation sur la  Grossesse",
+      "description" : "Cette entrée permet d'apporter des informations relatives aux grossesses actuelle ou passées.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-sur-echelle-douleur"
+      },
+      "name" : "Observation - Fr observation sur échelle de douleur",
+      "description" : "Cette entrée permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-quantity-dicom"
+      },
+      "name" : "Observation - Fr Quantity DICOM",
       "description" : "FrQuantityDICOM permet d'enregistrer les mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques en précisant : \nle type de la mesure, la localisation anatomique / latéralité / topographie, la quantité, si la mesure quantitative est basée sur les données d’une image, une référence à l’image peut être précisée dans la partie narrative.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-recherche-micro-organismes"
+      },
+      "name" : "Observation - Fr Recherche de micro organismes",
+      "description" : "Cette entrée permet d'indiquer si une recherche de micro-organismes multirésistants ou émergents a été effectuée ou pas.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2623,7 +3169,112 @@
       },
       "name" : "Observation - Fr renouvellement de l'acte",
       "description" : "Observation utilisée pour représenter le renouvellement de l'acte.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-resultat-document"
+      },
+      "name" : "Observation - FR Resultat",
+      "description" : "Cette entrée permet d'indiquer le résultat observé.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-resultats-examens-de-biologie-element-clinique-pertinent"
+      },
+      "name" : "Observation - Fr Resultats examens de biologie élément clinique pertinent",
+      "description" : "Ce profil permet de décrire un résultat d'un élément d'un examen de biologie médicale ou un élément clinique pertinent fourni par le prescripteur ou le préleveur dans le contexte clinique de la demande d'examens biologiques.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-signes-vital-Observe-document"
+      },
+      "name" : "Observation - Fr Signe Vital Observé",
+      "description" : "\n - Cette entrée permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.\n - Cette entrée est utilisée dans un élément component d'un élément Signes vitaux (1.3.6.1.4.1.19376.1.5.3.1.4.13.1).\n - Cette entrée est basée sur l'élément Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13) qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-signes-vitaux-document"
+      },
+      "name" : "Observation - Fr Signes Vitaux",
+      "description" : "L'entrée Signes vitaux est une entrée de type 'organizer' qui permet de regrouper des informations relatives aux mesures cliniques du patient.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-statut"
+      },
+      "name" : "Observation - Fr Statut",
+      "description" : "Cette entrée de type observation permet de décrire et de suivre le statut métier d’un objet.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-statut-document"
+      },
+      "name" : "Observation - Fr Statut du document",
+      "description" : "Cette entrée permet d'indiquer le statut du document (son état d'avancement dans le cycle de vie du document, depuis sa création jusqu'à sa validation définitive par son responsable légal (élément 'legalAuthenticator' de l'en-tête) ainsi que la date de ce statut..",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-synthese-medicale-sejour-document"
+      },
+      "name" : "Observation - Fr Synthèse médicale du séjour",
+      "description" : "Cette entrée permet de fournir, sous forme textuelle, une synthèse médicale du séjour.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-observation-transfusion-de-produits-sanguins"
+      },
+      "name" : "Observation - Fr Transfusion De Produits Sanguins",
+      "description" : "Cette entrée permet d'indiquer s'il a eu ou pas transfusion de produit sanguin.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2633,9 +3284,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-observation-evaluation"
       },
-      "name" : "Observation - Évaluation",
+      "name" : "Observation - Fr Évaluation",
       "description" : "FrObservationEvaluation permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple).",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2645,9 +3297,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-acte"
       },
-      "name" : "Procedure - Fr Procedure Acte",
+      "name" : "Procedure - Fr Acte",
       "description" : "FrProcedureActe est un profil utilisé pour décrire un acte planifié ou réalisé.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2655,11 +3308,12 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-procedure-exposition-patient-DICOM"
+        "reference" : "StructureDefinition/fr-procedure-exposition-patient-dicom"
       },
-      "name" : "Procedure - Fr Procedure Exposition Patient DICOM",
+      "name" : "Procedure - Fr Exposition patient DICOM",
       "description" : "FrProcedureExpositionPatientDICOM permet d'enregistrer l'identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements.\nElle est obligatoire dans la norme DICOM Part 20.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2667,11 +3321,38 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/Fr-procedure-technique-imagerie-DICOM"
+        "reference" : "StructureDefinition/fr-procedure-technique-imagerie-dicom"
       },
-      "name" : "Procedure - Fr Procedure Technique Imagerie DICOM",
+      "name" : "Procedure - Fr Technique imagerie DICOM",
       "description" : "FrProcedureTechniqueImagerieDICOM permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-procedurede-transport-patient"
+      },
+      "name" : "Procedure - Fr Transport du patient",
+      "description" : "Cette entrée de type act permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...).",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-procedure-transport-Professionnel"
+      },
+      "name" : "Procedure - Fr Transport du professionnel",
+      "description" : "Cette entrée de type act permet de décrire le transport d'un professionnel lors d’un déplacement.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2682,19 +3363,8 @@
         "reference" : "StructureDefinition/fr-qualifier-extension"
       },
       "name" : "Qualifier du code",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/fr-cs-operator-function-media"
-      },
-      "name" : "Rôles du participant,performer, author pour les médias (Image illustrative)",
-      "description" : "CodeSystem local pour distinguer auteur, performer et participant d'un média.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Extensions FHIR corps"
     },
     {
       "extension" : [{
@@ -2704,9 +3374,10 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-service-request-demande-d-examen-ou-de-suivi"
       },
-      "name" : "ServiceRequest - Fr Sevice Request Demande d'examen ou de Suivi",
+      "name" : "ServiceRequest - Fr Demande d'examen ou de Suivi",
       "description" : "Ce profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
     },
     {
       "extension" : [{
@@ -2716,8 +3387,21 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-specimen"
       },
-      "name" : "Specimen - Fr Specimen",
+      "name" : "Specimen - Fr Prélèvement",
       "description" : "FrSpecimen est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel).",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fr-value-set-allergie-intolerance-verification-status"
+      },
+      "name" : "Statuts de vérification d'une allergie ou intolérance (restreint)",
+      "description" : "Jeu de valeurs français restreint pour AllergyIntolerance.verificationStatus, incluant uniquement confirmed, unconfirmed, et refuted.",
       "exampleBoolean" : false
     },
     {
@@ -2730,18 +3414,6 @@
       },
       "name" : "Statuts de vérification d'une condition (restreint)",
       "description" : "Jeu de valeurs français restreint pour Condition.verificationStatus, incluant uniquement confirmed, unconfirmed, et refuted.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/fr-vs-operator-function-media"
-      },
-      "name" : "Valeurs pour les rôles liés aux médias",
-      "description" : "Contient uniquement Auteur, Performer et Participant pour distinguer les rôles dans une Image Illustrative.",
       "exampleBoolean" : false
     },
     {

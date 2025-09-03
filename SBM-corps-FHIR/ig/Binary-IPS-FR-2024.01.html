@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6.163"}
-    h3,h4,h5,h6{--heading-prefix:"6.163"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.210"}
+    h3,h4,h5,h6{--heading-prefix:"6.210"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -302,6 +302,7 @@
       Historique :
       02/04/2024 : Création IPS-FR_2023.01 (conforme IPS) 
       21/08/2025 : Maj des codeSystemName en fonction de la nouvelle règle de nommage
+      25/08/2025 : Maj des références parties narratives / entrées
       **********************************************************************************************************
    --&gt;
 &lt;ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -747,7 +748,7 @@
                   &lt;td&gt;&lt;content ID="probleme-04-certitude"&gt;Confirmé&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="probleme-04-commentaire"&gt;(texte libre)&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="probleme-04-reference"&gt;
-                      &lt;!-- &lt;linkHtml
+                    &lt;!-- &lt;linkHtml
                         href="https://www.orpha.net/pdfs/data/patho/Emg/Int/fr/AngioedemeBradykinique_FR_fr_EMG_ORPHA658.pdf"&gt;Fiche Orphanet Urgences - Angiœdème bradykinique&lt;/linkHtml&gt; --&gt;
                     &lt;/content&gt;
                   &lt;/td&gt;
@@ -1983,17 +1984,11 @@
               &lt;tbody&gt;
                 &lt;tr&gt;
                   &lt;td&gt;04/12/2021&lt;/td&gt;
-                  &lt;td&gt;
-                    &lt;content ID="allergie-01-type"&gt;Allergie médicamenteuse&lt;/content&gt;
-                  &lt;/td&gt;
-                  &lt;td&gt;
-                    &lt;content ID="allergie-01-agent"&gt;Paracétamol&lt;/content&gt;
-                  &lt;/td&gt;
-                  &lt;td&gt;
-                    &lt;content ID="allergie-statut-01"&gt;Actif&lt;/content&gt;
-                  &lt;/td&gt;
-                  &lt;td&gt;Bas&lt;/td&gt;
-                  &lt;td&gt;Confirmé&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="allergie-01-type"&gt;Allergie médicamenteuse&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="allergie-01-agent"&gt;Paracétamol&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="allergie-01-statut"&gt;Actif&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="allergie-01-criticite"&gt;Bas&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="allergie-01-certitude"&gt;Confirmé&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;
                     &lt;content ID="allergie-01-reaction-1"&gt;Bronchospasme d'origine
                       médicamenteuse&lt;/content&gt;&lt;br/&gt;
@@ -2056,7 +2051,7 @@
                   &lt;!-- Description clinique de l'allergie / hypersensibilité : non renseigné --&gt;
                   &lt;value xsi:type="CD"&gt;
                     &lt;originalText&gt;
-                      &lt;reference value="#"/&gt;
+                      &lt;reference value="noref"/&gt;
                     &lt;/originalText&gt;
                   &lt;/value&gt;
                   &lt;!-- Agent responsable de l'allergie / hypersensibilité --&gt;
@@ -2086,7 +2081,7 @@
                       &lt;code code="33999-4" displayName="Status" codeSystem="2.16.840.1.113883.6.1"
                         codeSystemName="LOINC"/&gt;
                       &lt;text&gt;
-                        &lt;reference value="#allergie-statut-01"/&gt;
+                        &lt;reference value="#allergie-01-statut"/&gt;
                       &lt;/text&gt;
                       &lt;statusCode code="completed"/&gt;
                       &lt;!-- valeur du jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372) --&gt;
@@ -2109,7 +2104,7 @@
                       &lt;code code="82606-5" displayName="Criticité"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/&gt;
                       &lt;text&gt;
-                        &lt;reference value="#"/&gt;
+                        &lt;reference value="#allergie-01-criticite"/&gt;
                       &lt;/text&gt;
                       &lt;statusCode code="completed"/&gt;
                       &lt;effectiveTime nullFlavor="NA"/&gt;
@@ -2133,7 +2128,7 @@
                       &lt;code code="66455-7" displayName="Certitude"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/&gt;
                       &lt;text&gt;
-                        &lt;reference value="#"/&gt;
+                        &lt;reference value="#allergie-01-certitude"/&gt;
                       &lt;/text&gt;
                       &lt;statusCode code="completed"/&gt;
                       &lt;effectiveTime nullFlavor="NA"/&gt;
@@ -2565,7 +2560,7 @@
                   &lt;td&gt;11/01/2024&lt;/td&gt;
                   &lt;td&gt;-&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="med-01"&gt;LEVOTHYROX 75 microgrammes, comprimé sécable&lt;/content&gt;&lt;/td&gt;
-                  &lt;td&gt;&lt;content ID="med-01-doseMin-1"&gt;1 cp&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="med-01-doseMin-1"&gt;1 cp&lt;/content&gt;&lt;content ID="med-01-doseMax-1"&gt;&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="med-01-frequence"&gt;1 fois/j&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="med-01-rateMin"&gt;-&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="med-01-voie"&gt;Voie orale&lt;/content&gt;&lt;/td&gt;
@@ -2751,14 +2746,14 @@
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
-                &lt;tr&gt;
+                &lt;tr ID="DM-01"&gt;
                   &lt;td&gt;11/08/2019&lt;/td&gt;
                   &lt;td&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="DM-01-categorie"&gt;STIMULATEUR CARDIAQUE IMPLANTABLE TRIPLE CHAMBRE&lt;/content&gt;&lt;/td&gt;
                   &lt;td&gt;inconnu&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="DM-01-commentaire"&gt;(texte libre)&lt;/content&gt;&lt;/td&gt;
                 &lt;/tr&gt;
-                &lt;tr&gt;
+                &lt;tr ID="DM-02"&gt;
                   &lt;td&gt;11/08/2013&lt;/td&gt;
                   &lt;td&gt;&lt;/td&gt;
                   &lt;td&gt;&lt;content ID="DM-02-categorie"&gt;Autre DM : (texte libre)&lt;/content&gt;&lt;/td&gt;
@@ -2778,7 +2773,7 @@
               &lt;!-- Identifiant de la fourniture du DM --&gt;
               &lt;id nullFlavor="UNK"/&gt;
               &lt;!-- Référence vers la partie narrative de la section DM --&gt;
-              &lt;text&gt;&lt;reference value="#DM-001"/&gt;&lt;/text&gt;
+              &lt;text&gt;&lt;reference value="#DM-01"/&gt;&lt;/text&gt;
               &lt;!-- Date d'utilisation du DM --&gt;
               &lt;effectiveTime xsi:type="IVL_TS"&gt;
                 &lt;low value="20190811"/&gt;
@@ -2827,7 +2822,7 @@
               &lt;!-- Identifiant de la fourniture du DM --&gt;
               &lt;id nullFlavor="UNK"/&gt;
               &lt;!-- Référence vers la partie narrative de la section DM --&gt;
-              &lt;text&gt;&lt;reference value="#DM-001"/&gt;&lt;/text&gt;
+              &lt;text&gt;&lt;reference value="#DM-02"/&gt;&lt;/text&gt;
               &lt;!-- Date d'utilisation du DM --&gt;
               &lt;effectiveTime xsi:type="IVL_TS"&gt;
                 &lt;low value="20190811"/&gt;
@@ -3054,11 +3049,7 @@
                   &lt;id root="FB97F8B7-7D3D-474A-B6A6-7D55D4DA3AFD"/&gt;
                   &lt;!-- Autre type de statut fonctionnel --&gt;
                   &lt;code xsi:type="CD" code="GEN-092.04.23" displayName="Autre statut fonctionnel"
-                    codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"&gt;
-                    &lt;originalText&gt;
-                      &lt;reference value="#statut-fonctionnel-03"/&gt;
-                    &lt;/originalText&gt;
-                  &lt;/code&gt;
+                    codeSystem="1.2.250.1.213.1.1.4.322" codeSystemName="TerminologieCISIS"/&gt;
                   &lt;text&gt;&lt;reference value="#statut-fonctionnel-03"/&gt;&lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                   &lt;effectiveTime&gt;
@@ -3761,7 +3752,7 @@
                   &lt;code code="418799008"
                     displayName="symptôme rapporté par le patient ou le répondant"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/&gt;
-                  &lt;text&gt;&lt;reference value="#tetanos2-reac"/&gt;&lt;/text&gt;
+                  &lt;text&gt;&lt;reference value="#vaccin-02-reaction"/&gt;&lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                   &lt;effectiveTime&gt;
                     &lt;low value="20090928"/&gt;
@@ -3769,7 +3760,7 @@
                   &lt;value xsi:type="CD" code="R50.2" displayName="Fièvre due à des médicaments"
                     codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI"&gt;
                     &lt;originalText&gt;
-                      &lt;reference value="#tetanos2-reac"/&gt;
+                      &lt;reference value="#vaccin-02-reaction"/&gt;
                     &lt;/originalText&gt;
                   &lt;/value&gt;
                 &lt;/observation&gt;
@@ -3785,7 +3776,7 @@
                   &lt;templateId root="1.2.250.1.213.1.1.3.32"/&gt;
                   &lt;code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/&gt;
-                  &lt;text&gt;&lt;reference value="#tetanos2-comment"/&gt;&lt;/text&gt;
+                  &lt;text&gt;&lt;reference value="#vaccin-02-comment"/&gt;&lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                 &lt;/act&gt;
               &lt;/entryRelationship&gt;
@@ -3804,7 +3795,7 @@
               &lt;code code="INITIMMUNIZ" displayName="1ère série vaccinante"
                 codeSystem="2.16.840.1.113883.5.4"
                 codeSystemName="HL7_ActCode"/&gt;
-              &lt;text&gt;&lt;reference value="#tetanos1"/&gt;&lt;/text&gt;
+              &lt;text&gt;&lt;reference value="#vaccin-01"/&gt;&lt;/text&gt;
               &lt;statusCode code="completed"/&gt;
               &lt;effectiveTime value="20090928094914+0100"/&gt;
               &lt;!-- Voie d'administration : valeur issue du jdv-immunization-route-code-cisis (1.2.250.1.213.1.1.5.676)  --&gt;
@@ -3899,7 +3890,7 @@
                   &lt;code code="418799008"
                     displayName="symptôme rapporté par le patient ou le répondant"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"/&gt;
-                  &lt;text&gt;&lt;reference value="#tetanos1-reac"/&gt;&lt;/text&gt;
+                  &lt;text&gt;&lt;reference value="#vaccin-01-reaction"/&gt;&lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                   &lt;effectiveTime&gt;
                     &lt;low value="20090825"/&gt;
@@ -3907,7 +3898,7 @@
                   &lt;value xsi:type="CD" code="R50.2" displayName="Fièvre due à des médicaments"
                     codeSystem="2.16.840.1.113883.6.3" codeSystemName="CIM10FRPMSI"&gt;
                     &lt;originalText&gt;
-                      &lt;reference value="#tetanos1-reac"/&gt;
+                      &lt;reference value="#vaccin-01-reaction"/&gt;
                     &lt;/originalText&gt;
                   &lt;/value&gt;
                 &lt;/observation&gt;
@@ -3924,7 +3915,7 @@
                   &lt;code code="48767-8" displayName="Commentaire" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC"/&gt;
                   &lt;text&gt;
-                    &lt;reference value="#tetanos1-comment"/&gt;
+                    &lt;reference value="#vaccin-01-comment"/&gt;
                   &lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                 &lt;/act&gt;
@@ -4749,7 +4740,7 @@
               &lt;/thead&gt;
               &lt;tbody&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;
+                  &lt;td ID="directives-anticipees"&gt;
                     &lt;renderMultiMedia referencedObject="directives-anticipees-pdf" /&gt;
                   &lt;/td&gt;                  
                 &lt;/tr&gt;
@@ -5069,7 +5060,7 @@
               &lt;!-- valeur issue du jdv-type-directive-anticipee-cisis (1.2.250.1.213.1.1.5.136) --&gt;
               &lt;code code="42348-3" displayName="Directives anticipées"
                 codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/&gt;
-              &lt;text&gt;&lt;reference value="#directives-anticipees-pdf"/&gt;&lt;/text&gt;
+              &lt;text&gt;&lt;reference value="#directives-anticipees"/&gt;&lt;/text&gt;
               &lt;statusCode code="completed"/&gt;
               &lt;!-- Date du document Directives anticipées récupéré du DMP --&gt;
               &lt;effectiveTime&gt;
@@ -5153,10 +5144,10 @@
               &lt;tbody&gt;
                 &lt;tr&gt;
                   &lt;td&gt;29/03/2024&lt;/td&gt;
-                  &lt;td&gt;&lt;content ID="resultat-imagerie-02"&gt;CT rachis dorsal avec contraste IV&lt;/content&gt;&lt;/td&gt;
-                  &lt;td&gt;&lt;content ID="resultat-imagerie-02-resultat"&gt;Pas d'embolie pulmonaire proximale&lt;/content&gt;&lt;/td&gt;
-                  &lt;td&gt;&lt;content ID="resultat-imagerie-02-localisation"&gt;Thorax entier&lt;/content&gt;&lt;/td&gt;
-                  &lt;td&gt;&lt;content ID="resultat-imagerie-02-commentaire"&gt;(Texte libre)&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="resultat-imagerie-01"&gt;CT rachis dorsal avec contraste IV&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="resultat-imagerie-01-resultat"&gt;Pas d'embolie pulmonaire proximale&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="resultat-imagerie-01-localisation"&gt;Thorax entier&lt;/content&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;content ID="resultat-imagerie-01-commentaire"&gt;(Texte libre)&lt;/content&gt;&lt;/td&gt;
                 &lt;/tr&gt;
               &lt;/tbody&gt;
             &lt;/table&gt;
@@ -5312,11 +5303,7 @@
               &lt;templateId root="1.2.250.1.213.1.1.3.208"/&gt;
               &lt;id root="D5C3639B-2A68-4C87-8019-CBD941B7B429"/&gt;
               &lt;code code="18748-4" displayName="Imagerie" codeSystemName="LOINC"
-                codeSystem="2.16.840.1.113883.6.1"&gt;
-                &lt;originalText&gt;
-                  &lt;reference value="#resultat-02"/&gt;
-                &lt;/originalText&gt;
-              &lt;/code&gt;
+                codeSystem="2.16.840.1.113883.6.1"/&gt;                
               &lt;statusCode code="completed"/&gt;
               &lt;effectiveTime value="20240329"/&gt;
               &lt;!-- Laboratoire exécutant --&gt;
@@ -5419,17 +5406,17 @@
                   &lt;code code="24979-7" 
                     displayName="CT rachis dorsal avec contraste IV"   
                     codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/&gt;
-                  &lt;text&gt;&lt;reference value="#resultat-imagerie-02"/&gt;&lt;/text&gt;
+                  &lt;text&gt;&lt;reference value="#resultat-imagerie-01"/&gt;&lt;/text&gt;
                   &lt;statusCode code="completed"/&gt;
                   &lt;effectiveTime value="20240329"/&gt;
                   &lt;value xsi:type="CD"&gt;
-                    &lt;originalText&gt;&lt;reference value="#resultat-imagerie-02-resultat"/&gt;&lt;/originalText&gt;
+                    &lt;originalText&gt;&lt;reference value="#resultat-imagerie-01-resultat"/&gt;&lt;/originalText&gt;
                   &lt;/value&gt;                  
                   &lt;!-- [0..1] Localisation anatomique --&gt;
                   &lt;targetSiteCode xsi:type="CD" code="302551006" displayName="thorax entier"
                     codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED_CT"&gt;
                     &lt;originalText mediaType="text/xml"&gt;
-                      &lt;reference value="#resultat-imagerie-02-localisation"/&gt;
+                      &lt;reference value="#resultat-imagerie-01-localisation"/&gt;
                     &lt;/originalText&gt;                
                   &lt;/targetSiteCode&gt;                  
                   &lt;!-- Entrée FR-Commentaire-ER --&gt;
@@ -5444,7 +5431,7 @@
                       &lt;code code="48767-8" displayName="Commentaire"
                         codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/&gt;
                       &lt;text&gt;
-                        &lt;reference value="#resultat-imagerie-02-commentaire"/&gt;
+                        &lt;reference value="#resultat-imagerie-01-commentaire"/&gt;
                       &lt;/text&gt;
                       &lt;statusCode code="completed"/&gt;
                     &lt;/act&gt;
@@ -5558,7 +5545,8 @@
 
     &lt;/structuredBody&gt;
   &lt;/component&gt;
-&lt;/ClinicalDocument&gt;</code>
+&lt;/ClinicalDocument&gt;
+</code>
   </pre>
 </div>
 
@@ -5608,7 +5596,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 25, 2025 15:51+0000">2025-08-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 3, 2025 12:42+0000">2025-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
