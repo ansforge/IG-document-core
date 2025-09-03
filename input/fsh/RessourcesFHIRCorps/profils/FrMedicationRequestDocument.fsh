@@ -95,7 +95,7 @@ Description: "
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
-* reasonReference only Reference(Condition or Observation)
+* reasonReference only Reference(FrCondition or Observation)
 
 //copie du plan de traitement médicamenteux
 * supportingInformation only Reference(MedicationRequest)
@@ -143,22 +143,22 @@ Description: "
     nonRemboursable 0..1 and
     horsAMM 0..1
 
-* reasonReference[renouvellement] only Reference(Observation)
+* reasonReference[renouvellement] only Reference(FrObservationRenouvellement)
 * reasonReference[renouvellement] ^short = "Période de renouvellement"
 
-* reasonReference[ald] only Reference(Observation)
+* reasonReference[ald] only Reference(FrObservationEnRapportAvecALD)
 * reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)"
 
-* reasonReference[accidentTravail] only Reference(Observation)
+* reasonReference[accidentTravail] only Reference(FrObservationEnRapportAvecAccidentTravail)
 * reasonReference[accidentTravail] ^short = "En rapport avec accident travail"
 
-* reasonReference[prevention] only Reference(Observation)
+* reasonReference[prevention] only Reference(FrObservationEnRapportAvecLaPrevention)
 * reasonReference[prevention] ^short = "En rapport avec la prévention"
 
-* reasonReference[nonRemboursable] only Reference(Observation)
+* reasonReference[nonRemboursable] only Reference(FrObservationNonRemboursable)
 * reasonReference[nonRemboursable] ^short = "Non remboursable"
 
-* reasonReference[horsAMM] only Reference(Observation)
+* reasonReference[horsAMM] only Reference(FrObservationHorsNomenclature)
 * reasonReference[horsAMM] ^short = "Hors AMM"
 
 // Précondition

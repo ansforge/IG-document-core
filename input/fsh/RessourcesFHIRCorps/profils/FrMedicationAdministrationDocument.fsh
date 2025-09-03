@@ -62,7 +62,7 @@ Description: "
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
-* reasonReference only Reference(Condition or Observation)
+* reasonReference only Reference(FrCondition or Observation)
 
 // Précondition ou bien utiliser l'extnexion FHIR "note" ??
 * extension contains FrPreconditionExtension named precondition 0..1

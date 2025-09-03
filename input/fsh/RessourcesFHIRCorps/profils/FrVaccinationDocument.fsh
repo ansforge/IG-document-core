@@ -92,7 +92,7 @@ Description: "L'entrée Vaccination est une entrée de type 'substanceAdministra
 
 // Profil FrConditionDocument
 * reasonReference MS
-* reasonReference only Reference(Condition) 
+* reasonReference only Reference(FrCondition) 
   * ^short = "Réaction observée suite au vaccin"
 
 // Dose d’antigène reçue (extension) ou créer un profil fsh FrDoseAntigene basé sur la ressource Substance ?
