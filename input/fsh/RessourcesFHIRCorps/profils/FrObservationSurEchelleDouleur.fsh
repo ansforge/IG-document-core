@@ -3,7 +3,7 @@ Profile: FrObservationSurEchelleDouleur
 Parent: Observation
 Id: fr-observation-sur-echelle-douleur
 Title: "Observation - Fr observation sur échelle de douleur"
-Description: "Cette entrée permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10."
+Description: "FrObservationSurEchelleDouleur permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10."
 
 * identifier 1..1 MS
 * identifier ^short = "Identifiant de l'observation"

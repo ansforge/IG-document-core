@@ -3,9 +3,9 @@ Profile: FrVaccinationDocument
 Parent: Immunization
 Id: fr-vaccination-document
 Title: "Immunization - Fr Vaccination Document"
-Description: "L'entrée Vaccination est une entrée de type 'substanceAdministration' pour décrire l'administration d'un vaccin. 
- - Elle permet également de décrire pourquoi un vaccin n'a pas été réalisé.
- - Cette entrée hérite de la structuration, des contraintes et des vocabulaires de l'entrée Traitement (1.3.6.1.4.1.19376.1.5.3.1.4.7) sauf mentions précisées ci-après."
+Description: "FrVaccinationDocument permet de décrire l'administration d'un vaccin. 
+ - Il permet également de décrire pourquoi un vaccin n'a pas été réalisé.
+ - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FrMedicationAdministrationDocument sauf mentions précisées ci-après."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS

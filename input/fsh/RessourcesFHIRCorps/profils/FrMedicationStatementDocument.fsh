@@ -4,23 +4,22 @@ Parent: MedicationStatement
 Id: fr-medication-statement-document
 Title: "MedicationStatement - Fr Traitement"
 Description: "
- - L'entrée 'Traitement' est une entrée de type 'substanceAdministration' décrivant les modalités d'administration d'un médicament au patient.
- - Elle permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
- - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement : 
-  • @moodCode='EVN'"
+ - FrMedicationStatementDocument permet de décrire les modalités d'administration d'un médicament au patient.
+ - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
+ - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..* MS
-  * ^short = "Identifiant de l'entrée. L'entrée Traitement doit être identifiée de manière unique."
+  * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
 * basedOn only Reference(MedicationRequest)
 * partOf only Reference(MedicationAdministration)
 * category MS
   * ^short = "Acte ou situation"
 * category from FrValueSetMedicationAdministrationCategory (preferred)
 * text 1..1 MS
-  * ^short = "Partie narrative de l’entrée"
+  * ^short = "Partie narrative"
 * status 1..1 MS
-  * ^short = "Statut de l’entrée"
+  * ^short = "Statut"
 * status = #completed
 * effective[x] only Period
 * effectivePeriod MS
@@ -71,6 +70,3 @@ Description: "
 
 // Ou bien utilisation de l'extnexion FHIR note ??
 * extension contains FrPreconditionExtension named precondition 0..1
-
-
-

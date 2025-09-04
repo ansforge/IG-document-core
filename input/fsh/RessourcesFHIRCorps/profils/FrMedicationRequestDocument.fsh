@@ -4,7 +4,7 @@ Parent: MedicationRequest
 Id: fr-medication-request-document
 Title: "MedicationRequest - Fr Traitement Prescrit"
 Description: "
- - Cette entrée de type substanceAdministration permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
+ - FrMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
@@ -21,7 +21,7 @@ Description: "
     identifierEntree 1..* MS and
     referencePrescription 1..* MS
 
-* identifier[identifierEntree] ^short = "Identifiant de l'entrée"
+* identifier[identifierEntree] ^short = "Identifiant"
 * identifier[referencePrescription] ^short = "Référence de la prescription. Non utilisé dans une prescription."
 
 * category 0..1 MS
@@ -30,9 +30,9 @@ Description: "
 * category.coding.code = #DRUG
 * category.coding.display = "Médicament"
 * text 1..1 MS
-* text ^short = "Partie narrative de l’entrée"
+* text ^short = "Partie narrative"
 * status 1..1 MS
-* status ^short = "Statut de l’entrée"
+* status ^short = "Statut"
 * status = #completed
 * dosageInstruction MS
 // Dosages progressifs, fractionnés 
@@ -164,4 +164,3 @@ Description: "
 // Précondition
 * extension contains FrPreconditionExtension named precondition 0..1
   * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."
-

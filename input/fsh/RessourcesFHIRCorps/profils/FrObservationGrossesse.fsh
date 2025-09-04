@@ -3,7 +3,7 @@ Profile:  FrObservationGrossesseDocument
 Parent: Observation
 Id: fr-observation-grossesse-document
 Title: "Observation - Fr Observation sur la  Grossesse"
-Description: "Cette entrée permet d'apporter des informations relatives aux grossesses actuelle ou passées."
+Description: "FrObservationGrossesseDocument permet d'apporter des informations relatives aux grossesses actuelle ou passées."
 
 
 * code ^short = "Ce code peut provenir du JDV_ObservationGrossesse_CISIS (1.2.250.1.213.1.1.5.500).

@@ -3,7 +3,7 @@ Profile: FrObservationStatut
 Parent: Observation
 Id: fr-observation-statut
 Title: "Observation - Fr Statut"
-Description: "Cette entrée de type observation permet de décrire et de suivre le statut métier d’un objet."
+Description: "FrObservationStatut permet de décrire et de suivre le statut métier d’un objet."
 
 * code.coding.system = "https://loinc.org/"
 * code.coding.code = #106199-3

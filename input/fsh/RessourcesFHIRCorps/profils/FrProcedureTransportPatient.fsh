@@ -3,7 +3,7 @@ Profile: FrProcedureTransportPatient
 Parent: Procedure
 Id: fr-procedurede-transport-patient
 Title: "Procedure - Fr Transport du patient"
-Description: "Cette entrée de type act permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
+Description: "FrProcedureTransportPatient permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS

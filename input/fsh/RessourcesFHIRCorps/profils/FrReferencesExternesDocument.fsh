@@ -3,7 +3,7 @@ Profile: FrReferencesExternesDocument
 Parent: DocumentReference
 Id: fr-references-externes-document
 Title: "DocumentReference - Fr References externes"
-Description: """Cette entrée de type act permet de relier un élément à un (ou des) document(s) externe(s) par l’intermédiaire d’une adresse URL."""
+Description: """FrReferencesExternesDocument permet de relier un élément à un (ou des) document(s) externe(s) par l’intermédiaire d’une adresse URL."""
 
 * identifier 1..* MS
   * ^short = "Identifiant de l'entrée."

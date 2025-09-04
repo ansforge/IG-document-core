@@ -1,8 +1,8 @@
 // Précondition : extension URL
 Extension: FrPreconditionExtension
 Id: fr-precondition-extension
-Title: "Fr Précondition de l'administration"
-Description: "Lien vers la description narrative des conditions préalables dans le document CDA."
+Title: "Extension - Fr Précondition de l'administration"
+Description: "Extension permettant d'indiquer le lien vers la description narrative des conditions préalables dans le document."
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 // or String ??

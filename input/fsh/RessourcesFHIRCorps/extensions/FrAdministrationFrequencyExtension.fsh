@@ -1,7 +1,7 @@
 // Fréquence d'administration : extension Timing
 Extension: FrAdministrationFrequency
 Id: fr-administration-frequency
-Title: "Fr Fréquence d’administration"
+Title: "Extension - Fr Fréquence d’administration"
 Description: "Extension pour représenter la fréquence d'administration dans MedicationAdministration et MedicationStatement"
 // Contextes autorisés
 * ^context[+].type = #element

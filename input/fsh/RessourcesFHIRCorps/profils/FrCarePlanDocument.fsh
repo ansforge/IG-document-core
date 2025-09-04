@@ -3,15 +3,14 @@ Profile: FrCarePlanDocument
 Parent: CarePlan
 Id: fr-care-plan-document
 Title: "CarePlan - Fr Reference item plan traitement"
-Description: "Cette entrée permet d’enregistrer une référence à un traitement dans un plan de traitement."
+Description: "FrCarePlanDocument est un profil permettant d’enregistrer une référence à un traitement dans un plan de traitement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..* MS
   * ^short = "Identifiant de la ligne de traitement dans un plan de traitement."
 * category 1..1 MS
-  * ^short = "Code de l’entrée.
- - Code indiquant que la référence est une ligne de traitement dans un plan de traitement"
+  * ^short = "Code indiquant que la référence est une ligne de traitement dans un plan de traitement."
 * category.coding 1..1
 * category.coding.system = "urn:1.3.6.1.4.1.19376.1.9.2.2"
 * category.coding.code = #IHEPharmacyItemTypeList

@@ -2,7 +2,7 @@ Profile: FrObservationHabitusModeDeVie
 Parent: Observation
 Id: fr-observation-habitus-mode-de-vie
 Title: "Observation - Fr Habitus / Mode de vie"
-Description: "Profil Observation décrivant les habitudes de vie du patient (Habitus / Mode de vie), dérivé de FrSimpleObservation."
+Description: "Profil Observation décrivant les habitudes de vie du patient (Habitus / Mode de vie)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

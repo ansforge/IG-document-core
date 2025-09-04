@@ -1,7 +1,7 @@
 Extension: FrRepeatNumberExtension
 Id: fr-repeat-number-extension
-Title: "Fr Repeat Number"
-Description: "Numéro d'occurrence de l'acte ou de l'observation (équivalent CDA repeatNumber)"
+Title: "Extension - Fr Repeat Number"
+Description: "Extension permettant d'indiquer le numéro d'occurrence de l'acte ou de l'observation."
 * ^context[+].type = #element
 * ^context[=].expression = "Resource"
 

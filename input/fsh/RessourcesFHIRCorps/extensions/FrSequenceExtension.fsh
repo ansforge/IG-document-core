@@ -1,7 +1,7 @@
 Extension: FrSequenceExtension
 Id: fr-sequence-extension
-Title: "Fr Sequence"
-Description: "Dosages progressifs et fractionnés"
+Title: "Extension - Fr Sequence"
+Description: "Extension utilisée dans le contexte de MedicationAdministration pour indiquer l’ordre d’une prise dans le cadre d’un schéma de traitement comportant des dosages progressifs ou fractionnés. La valeur est un entier (integer) représentant le numéro de séquence de l’administration."
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationAdministration"
 

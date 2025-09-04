@@ -3,8 +3,8 @@ Profile: FrEncounterEvenementDocument
 Parent: FrEncounter
 Id: fr-encounter-evenement-document
 Title: "Encouter - Fr Evenement"
-Description: "Cette entrée est un élément de type encounter permettant de conserver les données d’activités liées à un patient / usager. 
-Il peut s'agir d'un évènement passé ou à venir."
+Description: "FrEncounterEvenementDocument est un profil de type encounter permettant de conserver les données d’activités liées à un patient / usager, dérivé de FrEncounter.
+ - Il peut s'agir d'un évènement passé ou à venir."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
@@ -16,7 +16,7 @@ Il peut s'agir d'un évènement passé ou à venir."
  
 * class MS
   * ^short = "Type d'évènement :
- - Le JDV dépend du volet utilisant cette entrée (les précisions sont alors fournies dans le volet correspondant). 
+ - Le JDV dépend du volet utilisant ce profil (les précisions sont alors fournies dans le volet correspondant). 
  - Si pas d'information utiliser le code Wolf ‘Aucun’."
  
 * type.extension contains FrQualifierExtension named qualifier 0..* 
@@ -36,6 +36,7 @@ Il peut s'agir d'un évènement passé ou à venir."
 /*ou tilisation d'une extension de type ValueReference (FrProceduredeTransportProfessionnel)
 * extension contains FrTransportProfessionnel named transportProfessionnel 0..*
 */
+* priority 0..0 
 
 Extension: FrTransportPatient
 Id: fr-transport-patient-extension

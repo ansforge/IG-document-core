@@ -4,21 +4,20 @@ Parent: MedicationAdministration
 Id: fr-medication-administration-document
 Title: "MedicationAdministration - Fr Traitement"
 Description: "
- - L'entrée 'Traitement' est une entrée de type 'substanceAdministration' décrivant les modalités d'administration d'un médicament au patient.
- - Elle permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
- - Si le traitement est en attente d’administration (c’est-à dire qu’il a été prescrit) : 
-  • @moodCode='INT'"
+ - FrMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.
+ - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
+ - Si le traitement est en attente d’administration c’est-à dire qu’il a été prescrit."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..* MS
-  * ^short = "Identifiant de l'entrée. L'entrée Traitement doit être identifiée de manière unique."
+  * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
 * category MS
   * ^short = "Acte ou situation"
 * category from FrValueSetMedicationAdministrationCategory (preferred)
 * text 1..1 MS
-  * ^short = "Partie narrative de l’entrée"
+  * ^short = "Partie narrative"
 * status 1..1 MS
-  * ^short = "Statut de l’entrée"
+  * ^short = "Statut"
 * status = #completed
 * effective[x] only Period
 * effectivePeriod MS

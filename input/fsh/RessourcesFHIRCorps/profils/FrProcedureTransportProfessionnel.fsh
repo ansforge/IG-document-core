@@ -3,7 +3,7 @@ Profile: FrProcedureTransportProfessionnel
 Parent: Procedure
 Id: fr-procedure-transport-Professionnel
 Title: "Procedure - Fr Transport du professionnel"
-Description: "Cette entrée de type act permet de décrire le transport d'un professionnel lors d’un déplacement."
+Description: "FrProcedureTransportProfessionnel permet de décrire le transport d'un professionnel lors d’un déplacement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS

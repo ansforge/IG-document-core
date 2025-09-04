@@ -3,16 +3,15 @@ Profile:  FrObservationNaissanceDocument
 Parent: Observation
 Id: fr-observation-naissance-document
 Title: "Observation - Fr Naissance"
-Description: "Cette entrée rassemble les observations relatives à une naissance.
- - Elle peut-être utilisée comme 'component'; d'une entrée FR-Historique-de-la-grossesse (1.3.6.1.4.1.19376.1.5.3.1.4.13.5.1)."
+Description: "FrObservationNaissanceDocument est un profil qui permet de rassembler les observations relatives à une naissance."
 
 * code 1..1 MS 
-  * ^short = "Code de l'entrée."
+  * ^short = "Code de l'observation"
 * code.coding.system = "http://snomed.info/sct/"
 * code.coding.code = #118215003
 * code.coding.display = "observation sur l'accouchement"
 * status 1..1
-  * ^short = "Statut de l’entrée"
+  * ^short = "Statut de l'observation"
 * status = #completed
 * effective[x] 1..1 MS
 * effective[x] only dateTime

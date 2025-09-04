@@ -3,7 +3,7 @@ Profile: FrMedicationsCombinaisonDocument
 Parent: Medication
 Id: fr-medication-combinaison-document
 Title: "Medication - Fr Produit de santé"
-Description: "Combinaison de médicaments."
+Description: "FrMedicationsCombinaisonDocumen permet de décrire une combinaison de médicaments ou de vaccins."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 

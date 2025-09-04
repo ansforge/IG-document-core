@@ -4,9 +4,9 @@ Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Id: fr-signes-vital-Observe-document
 Title: "Observation - Fr Signe Vital Observé"
 Description: "
- - Cette entrée permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.
- - Cette entrée est utilisée dans un élément component d'un élément Signes vitaux (1.3.6.1.4.1.19376.1.5.3.1.4.13.1).
- - Cette entrée est basée sur l'élément Simple Observation (1.3.6.1.4.1.19376.1.5.3.1.4.13) qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'."
+ - FrSigneVitalObserveDocument permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.
+ - Ce profil est utilisée dans un profil FrSignesVitauxDocument.
+ - Il est basée sur la ressource Observation qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS

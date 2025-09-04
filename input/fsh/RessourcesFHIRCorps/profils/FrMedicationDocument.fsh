@@ -3,7 +3,7 @@ Profile: FrMedicationDocument
 Parent: Medication
 Id: fr-medication-document
 Title: "Medication - Fr Produit de santé"
-Description: "L'entrée Produit de santé permet de décrire un médicament ou un vaccin."
+Description: "FrMedicationDocument permet de décrire un médicament ou un vaccin."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
@@ -56,4 +56,3 @@ Description: "Nom de la substance active, à utiliser en complément d’un coda
 * ^context.expression = "Medication.ingredient.item"
 * value[x] only string
 * valueString 1..1
-

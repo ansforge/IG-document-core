@@ -2,7 +2,7 @@ Profile: FrObservationIsolatMicrobiologique
 Parent: Observation
 Id: fr-observation-isolat-microbiologique
 Title: "Observation - Fr Isolat microbiologique"
-Description: "Profil Observation pour représenter un isolat microbiologique, dérivé de FrSimpleObservation."
+Description: "Profil Observation pour représenter un isolat microbiologique."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

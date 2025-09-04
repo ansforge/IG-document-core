@@ -1,6 +1,6 @@
 Extension: FrDoseAntigeneExtension
 Id: fr-dose-antigene-extension
-Title: "Fr Dose Antigene"
+Title: "Extension - Fr Dose Antigene"
 Description: "Extension complexe pour représenter un consommable (FrMedication) et une doseQuantity dans Immunization."
 * ^status = #active
 * ^context.type = #element

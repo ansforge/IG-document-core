@@ -3,18 +3,16 @@ Profile: FrDiagnosticReportDocument
 Parent: DiagnosticReport
 Id: fr-diagnostic-report-document
 Title: "DiagnosticReport - Fr Resultats"
-Description: "
- - L'entrée 'FR-Resultats' est une entrée de type 'organizer' regroupant les types des résultats classés par type d’examens (BIO, IMG, etc…).
- - L'entrée 'FR-Resultats' est une entrée de type 'organizer' regroupant les types des résultats classés par type d’examens (BIO, IMG, etc…).
-"
+Description: "FrDiagnosticReportDocument est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)."
+
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
-* identifier ^short = "Identifiant de l'entrée"
+* identifier ^short = "Identifiant"
 * code MS
-  * ^short = "Type de résultat. Code de l'entrée en LOINC."
+  * ^short = "Type de résultat. Codee n LOINC."
 * code from FrValueSetTypeResultat (required)
 * status MS
-* status ^short = "Statut  de l'entrée"
+* status ^short = "Statut"
 * status = #final
 * effective[x] 1..1 MS
 * effective[x] only dateTime

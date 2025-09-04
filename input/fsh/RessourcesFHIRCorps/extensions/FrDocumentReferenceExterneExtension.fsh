@@ -1,7 +1,7 @@
 Extension: FrDocumentReferenceExterneExtension
 Id: fr-document-reference-externe-extension
-Title: "Fr Document Reference Externe"
-Description: "Document référencé"
+Title: "Extension - Fr Document Reference Externe"
+Description: "Extension pour représenter le document référencé externe"
 
 * ^context[0].type = #element
 * ^context[0].expression = "Resource" 

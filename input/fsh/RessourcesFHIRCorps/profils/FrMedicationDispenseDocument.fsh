@@ -3,16 +3,16 @@ Profile: FrMedicationDispenseDocument
 Parent: MedicationDispense
 Id: fr-medication-dispense-document
 Title: "MedicationDispense - Fr Traitement dispense"
-Description: "Cette entrée de type supply permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription."
+Description: "FrMedicationDispenseDocument permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
-  * ^short = "Identifiant de l'entrée."
+  * ^short = "Identifiant"
 * type 1..1 MS
   * ^short = "Complétude de la dispensation" 
   * coding from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis
 * text 1..1 MS
-  * ^short = "Texte de l'entrée"
+  * ^short = "Partie narrative"
 * quantity 1..1 MS
   * ^short = "Quantité : Unité issue de EDQM Packaging / classe CON (Récipient)"
   * unit from FrValueSetEDQM

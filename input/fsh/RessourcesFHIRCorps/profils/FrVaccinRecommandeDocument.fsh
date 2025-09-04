@@ -3,10 +3,10 @@ Profile: FrVaccinRecommandeDocument
 Parent: ImmunizationRecommendation
 Id: fr-vaccin-recommande-document
 Title: "ImmunizationRecommendation - Fr Vaccin Recommande Document"
-Description: "L'entrée 'Vaccin recommandé' est une entrée de type 'substanceAdministration' qui permet de décrire une vaccination prévue ou proposée.
+Description: "FrVaccinRecommandeDocument permet de décrire une vaccination prévue ou proposée.
  - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). 
  - Une vaccination prévue dépend d'un plan accepté et à venir.
- - Cette entrée hérite de la structuration, des contraintes et des vocabulaires de l'entrée 'Immunization' (1.3.6.1.4.1.19376.1.5.3.1.4.12).."
+ - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FrVaccinationDocument."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS

@@ -1,7 +1,7 @@
 Extension: FrPrescriptionExtension
 Id: fr-prescription-extension
-Title: "Fr Prescription"
-Description: "Instructions de prescription associées à l'administration du produit de santé."
+Title: "Extension - Fr Prescription"
+Description: "Extension permettant d’indiquer les instructions de prescription associées à l'administration du produit de santé."
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Resource"

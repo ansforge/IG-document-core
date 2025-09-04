@@ -3,7 +3,7 @@ Profile: FrObservationResultatDocument
 Parent: Observation
 Id: fr-observation-resultat-document
 Title: "Observation - FR Resultat"
-Description: "Cette entrée permet d'indiquer le résultat observé."
+Description: "FrObservationResultatDocument permet d'indiquer le résultat observé."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
