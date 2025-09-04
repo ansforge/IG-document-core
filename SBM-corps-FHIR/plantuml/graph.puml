@@ -1356,12 +1356,16 @@ package IG #DDDDDD{
 
         class FrEncounterEvenementDocument{
 
+             Encounter => [None..None]
              Encounter.extension => [None..None]
              Encounter.extension:caracteristique => <&plus>[0..*]
              Encounter.extension:commentaire => <&plus>[0..*]
              Encounter.extension:urlPiecesJointes => <&plus>[0..*]
-             Encounter.type => [None..None]
+             Encounter.class => [None..None]
              Encounter.type.extension:qualifier => <&plus>[0..*]
+             Encounter.priority => [None..0]
+             Encounter.period.start => [1..None]
+             Encounter.period.end => [None..None]
              Encounter.reasonReference => [None..None]
         } 
 
@@ -1586,8 +1590,7 @@ package IG #DDDDDD{
              Medication.extension:conditionnement => <&plus>[0..*]
              Medication.code => [1..None]
              Medication.code.coding.extension:translation => <&plus>[0..*]
-             Medication.code.coding.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
-             Medication.code.coding.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             Medication.code.coding.extension:translation.value[x].coding.system => <&plus>[None..None]
              Medication.form => [None..None]
              Medication.ingredient => [None..None]
              Medication.ingredient.item[x] => [None..None]
@@ -2448,8 +2451,7 @@ package IG #DDDDDD{
              ImmunizationRecommendation.recommendation => [None..1]
              ImmunizationRecommendation.recommendation.vaccineCode => [None..None]
              ImmunizationRecommendation.recommendation.vaccineCode.extension:translation => <&plus>[0..*]
-             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
-             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             ImmunizationRecommendation.recommendation.vaccineCode.extension:translation.value[x].coding.system => <&plus>[None..None]
              ImmunizationRecommendation.recommendation.forecastStatus => [None..None]
              ImmunizationRecommendation.recommendation.dateCriterion => [1..1]
              ImmunizationRecommendation.recommendation.dateCriterion.value => [None..None]
@@ -2471,8 +2473,7 @@ package IG #DDDDDD{
              Immunization.status => [None..None]
              Immunization.vaccineCode => [None..None]
              Immunization.vaccineCode.extension:translation => <&plus>[0..*]
-             Immunization.vaccineCode.extension:translation.value[x]:valueCodeableConcept => <&plus>[None..None]
-             Immunization.vaccineCode.extension:translation.value[x]:valueCodeableConcept.coding.system => <&plus>[None..None]
+             Immunization.vaccineCode.extension:translation.value[x].coding.system => <&plus>[None..None]
              Immunization.occurrence[x] => [None..None]
              Immunization.occurrence[x].extension => [None..None]
              Immunization.occurrence[x].extension:dataAbsentReason => <&plus>[0..1]
@@ -2844,7 +2845,6 @@ package IG #DDDDDD{
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [1..None]
-          Extension.value[x]:valueCodeableConcept => [1..1]
         } 
         class FrTransportPatient{
 
@@ -3300,9 +3300,9 @@ package "Ressources de base" #palegreen {
 
     class67c94c9a57029ce118810d8d7e718509 --> FrEncounterDocument
 
- class "Encounter" as  classd1e9f9f891de8f9a655739a01fbf68f0 
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter" as  classbf83f16a49b306250069056f4c865abd 
 
-    classd1e9f9f891de8f9a655739a01fbf68f0 --> FrEncounterEvenementDocument
+    classbf83f16a49b306250069056f4c865abd --> FrEncounterEvenementDocument
 
  class "Encounter" as  classd1e9f9f891de8f9a655739a01fbf68f0 
 
