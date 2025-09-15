@@ -30,6 +30,7 @@ Cette page contient la liste des profils FHIR définis dans le guide **ANS IG Do
         OR Title LIKE 'AdverseEvent%'
         OR Title LIKE 'DeviceRequest%'
         OR Title LIKE 'DeviceUseStatement%'
+        OR Title LIKE 'DiagnosticReport%'
       )
   ",
   "class": "lines",

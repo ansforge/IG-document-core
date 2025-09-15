@@ -1,26 +1,62 @@
-Profile: FrObservationIsolatMicrobiologique
+Profile: FrObservationResultatsCompteRenduDeBiologie
 Parent: Observation
-Id: fr-observation-isolat-microbiologique
-Title: "Observation - Fr Isolat microbiologique"
-Description: "Profil Observation pour représenter un isolat microbiologique."
+Id: fr-resultats-compte-rendu-de-biologie
+Title: "Observation - Fr Résultats de compte rendu de Biologie"
+Description: "FrObservationResultatsCompteRenduDeBiologie décrit un résultat d’examen de biologie médicale."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
-//* ^extension[$imposeProfile].valueCanonical = Canonical()
+//* ^extension[$imposeProfile].valueCanonical = Canonical() 
 
-//------------------------------------
-// Code de l’isolat (SNOMED CT, NCBI)
-//------------------------------------
-* code MS
-* code ^short = "Code de l’isolat (SNOMED CT ou NCBI)"
+* status 1..1 MS
+* status ^short = "Niveau de complétude :
+- 'final' si le résultat est présent
+- 'cancelled' dans le cas où l'élément d'examen n’a pu être et ne sera pas réalisé"
+
+* code 1..1 MS
+* code ^short = "Code d'identification de l'analyse ou de l'observation"
+* code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
+
+* code.extension contains FrTranslationExtension named translation 0..1
+* code.extension[translation] ^short = "Code d'identification d'attente national ou code de portée locale"
+
+// Date et heure du résultat
+* effective[x] 0..1 MS
+* effective[x] only dateTime or Period
+* effective[x] ^short = "Date et heure du résultat"
+* effectivePeriod.start ^short = "Début de la période"
+* effectivePeriod.end ^short = "Fin de la période"
+
+* method MS
+* method ^short = "Méthode ou technique employée"
+
+* interpretation MS
+* interpretation ^short = "Code d'interprétation"
+* interpretation from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis
 //------------------------------------
 // Sujet & Specimen
 //------------------------------------
 * subject MS
 * subject 1..1
+* subject ^short = """
+1. Si le spécimen provient du corps du patient :
+- subject = Référence vers FrPatient
+- specimen = Référence vers FrSpecimen
+- specimen.type contraint par le JDV jdv-specimen-type-cisis
+
+2. Si spécimen extérieur au patient :
+- subject = Référence vers FrPatient
+- specimen = Référence vers FrSpecimen
+- specimen.subject = Référence vers Substance
+  Dans Substance :
+    - substance.category depuis le JDV HL7 substance-category
+    - substance.code.coding / display / system
+"""
+
 * subject only Reference(FrPatientINSDocument)
 
 * specimen MS
-* specimen 1..1
+* specimen ^short = "Prélèvement"
+* specimen 0..1
 * specimen only Reference(FrSpecimen)
 
 * performer MS
@@ -72,18 +108,37 @@ Description: "Profil Observation pour représenter un isolat microbiologique."
 // Commentaire (annotation)
 //------------------------------------
 * note 0..* MS
-* note ^short = "Commentaires associés à l’isolat microbiologique"
+* note ^short = "Commentaires associés à l'observation"
 
 //------------------------------------
 // Image illustrative
 //------------------------------------
 * derivedFrom MS
 * derivedFrom only Reference(FrMediaImageIllustrative)
-* derivedFrom ^short = "Image illustrative de l’isolat"
+* derivedFrom ^short = "Image illustrative"
 
 //------------------------------------
 // Groupes de résultats associés
 //------------------------------------
 * hasMember MS
-* hasMember only Reference(FrObservationBatterieExamenBiologieMedicale or FrObservationResultatsExamensDeBiologieElementCliniquePertinent)
-* hasMember ^short = "Lien vers batterie d’examens ou résultats d’examens cliniquement pertinents"
+* hasMember only Reference(FrObservationResultatsCompteRenduDeBiologie)
+* hasMember ^short = "Lien vers batterie d’examens ou résultats d’examens cliniquement pertinents ou isolat microbiologique"
+
+* value[x] 0..1 MS
+* value[x] ^short = "Valeur du résultat :
+Le type de valeur (value[x]) est choisi dynamiquement. 
+Les autres attributs qui qualifient cette valeur (comme par exemple l'unité : unit) dépendent du type de donnée choisi. 
+Les résultats qualitatifs codés peuvent le cas échéant être exprimés dans plusieurs systèmes de codage simultanément. 
+De même les résultats numériques peuvent être exprimés simultanément dans plusieurs unités."
+
+* extension contains $workflow-supportingInfo named supportingInfo 0..*
+* extension[supportingInfo] MS
+* extension[supportingInfo] ^short = "Résultats antérieurs"
+// ou bien * hasMember only Reference(FrSimpleObservation) 
+// * hasMember ^short = "Résultats antérieurs"
+
+* valueRange MS
+* valueRange ^short = "Intervalles de référence"
+* valueRange.low MS
+* valueRange.high MS
+
