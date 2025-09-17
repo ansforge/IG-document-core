@@ -12,10 +12,14 @@ Description: "FrObservationResultatsCompteRenduDeBiologie décrit un résultat d
 - 'final' si le résultat est présent
 - 'cancelled' dans le cas où l'élément d'examen n’a pu être et ne sera pas réalisé"
 
+<<<<<<< HEAD
 * category MS
 * category ^short = "Code du chapitre"
 
 * code MS
+=======
+* code 1..1 MS
+>>>>>>> f969d0b70d5e437f5cfe012a82b7c5d469757959
 * code ^short = "Code d'identification de l'analyse ou de l'observation"
 * code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
 
