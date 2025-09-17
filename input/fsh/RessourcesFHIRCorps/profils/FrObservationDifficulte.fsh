@@ -9,7 +9,7 @@ Description: "Observation utilisée pour représenter la difficulté d'un acte."
 
 * code ^short = "Difficulté de l'acte"
 * code MS
-* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-023 "Difficulté de l’acte"
+* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-023 "Précisions difficultés"
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 

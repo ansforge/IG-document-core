@@ -9,7 +9,7 @@ Description: "Cette observation permet d'indiquer si l'élément auquel elle est
 
 * code ^short = "Catégorie de l'entrée"
 * code MS
-* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-295 "En rapport avec la prévention"
+* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-295 "En rapport avec la prevention"
 * value[x] only boolean
 * valueBoolean 1..1 MS
 * value[x] ^short = """	
