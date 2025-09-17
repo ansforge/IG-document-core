@@ -22,7 +22,6 @@ Alias: $JDV_J141-RoleClass-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J141-RoleC
 Alias: $jdv-type-systeme-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis
 Alias: $jdv-j368-categorie-etablissement-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis
 Alias: $jdv-role-informateur-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis
-Alias: $jdv-role-informateur-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis
 Alias: $jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
 Alias: $jdv-absent-or-unknown-immunization-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-absent-or-unknown-immunization-cisis
 Alias: $jdv-immunization-route-code-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-route-code-cisis

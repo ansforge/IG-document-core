@@ -29,9 +29,6 @@ Description: "FrProcedureTransportPatient permet de décrire le transport d'un p
 * code.coding.extension[qualifier2].extension[name].valueCodeableConcept = $terminologie-cisis#GEN-346 "Type de motorisation"
 * code.coding.extension[qualifier2].extension[value] 1..1
 * code.coding.extension[qualifier2].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis
-
-* text 0..1 MS
-  * ^short = "Texte décrivant le transport"
 * performedDateTime 1..1 MS 
   * ^short = "Date du transport"	
 

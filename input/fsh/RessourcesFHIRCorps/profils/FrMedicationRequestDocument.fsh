@@ -29,8 +29,6 @@ Description: "
 * category.coding.system = "urn:oid:2.16.840.1.113883.5.4"
 * category.coding.code = #DRUG
 * category.coding.display = "Médicament"
-* text 1..1 MS
-* text ^short = "Partie narrative"
 * status 1..1 MS
 * status ^short = "Statut"
 * status = #completed

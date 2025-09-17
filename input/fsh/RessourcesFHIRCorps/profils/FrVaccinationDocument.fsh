@@ -13,8 +13,6 @@ Description: "FrVaccinationDocument permet de décrire l'administration d'un vac
  - Attribué par le LPS avec un identifiant unique de type UUID affecté à l’attribut root (l’attribut extension est omis)."
 
 * extension contains fr-vaccination-type-extension named typeVaccination 1..1
-* text 1..1 MS
-* text ^short = "Partie narrative de l’entrée"
 * status MS
 * status = #completed
 * occurrence[x] MS

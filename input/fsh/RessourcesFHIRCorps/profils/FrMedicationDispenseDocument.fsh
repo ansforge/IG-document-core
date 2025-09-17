@@ -11,8 +11,6 @@ Description: "FrMedicationDispenseDocument permet de décrire un traitement disp
 * type 1..1 MS
   * ^short = "Complétude de la dispensation" 
   * coding from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis
-* text 1..1 MS
-  * ^short = "Partie narrative"
 * quantity 1..1 MS
   * ^short = "Quantité : Unité issue de EDQM Packaging / classe CON (Récipient)"
   * unit from FrValueSetEDQM

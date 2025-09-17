@@ -12,10 +12,6 @@ Description: "FrObservationSurEchelleDouleur permet d'enregistrer l'évaluation 
 * code.coding.system = "https://loinc.org/"
 * code.coding.code = #38208-5
 * code.coding.display = "Sévérité de la douleur"
-
-* text 1..1 MS
-  * ^short = "Description narrative de l'observation"
-
 * status MS
 * status = #final
 * status ^short = "Statut de l'observation"

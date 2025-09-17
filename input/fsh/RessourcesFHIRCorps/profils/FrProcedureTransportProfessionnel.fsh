@@ -26,8 +26,6 @@ Description: "FrProcedureTransportProfessionnel permet de décrire le transport 
 * code.coding.extension[qualifier].extension[value] 1..1
 * code.coding.extension[qualifier].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis
 
-* text 0..1 MS
-  * ^short = "Texte décrivant le transport"
 * performedDateTime 1..1 MS 
   * ^short = "Date du transport"	
 

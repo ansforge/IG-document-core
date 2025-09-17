@@ -39,6 +39,17 @@ Description: "FrAllergyIntolerance est un profil utilisé pourdécrire une aller
 * reaction MS
 * reaction ^short = "Réaction observée"
 
+* reaction.substance MS
+* reaction.substance ^short = """Agent responsable de l'allergie :
+pour les médicaments :
+Pour les médicaments : code CIP ou UCD
+Pour les substances : code SMS
+Pour les substances non présentes dans SMS (par exemple feuille de millepertuis ou extrait d’organe) : texte libre
+pour les aliments : CIM-11 (2.16.840.1.113883.6.347) / Chapitre X Codes d’extensions / Substances / Allergènes ou Substances, essentiellement non médicinales
+pour les agents environnementaux ou physiques : CIM-11 (2.16.840.1.113883.6.347) / Chapitre X Codes d’extensions / Substances / Allergènes ou Substances, essentiellement non médicinales
+pour les allergènes pouvant induire une contre-indication à la vaccination : à partir du jeu de valeurs jdv-allergie-vaccin-cisis (1.2.250.1.213.1.1.5.100)"""
+
+* reaction.manifestation MS
 * reaction.manifestation ^short = "Symptômes/signes cliniques associés à l’événement"
 
 * reaction.severity MS
