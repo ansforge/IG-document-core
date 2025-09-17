@@ -11,8 +11,6 @@ Description: """FrReferencesExternesDocument permet de relier un élément à un
   * ^short = "Code de l'entrée. Fixé à nullFlavor='NA'"
 * type.extension contains http://hl7.org/fhir/StructureDefinition/data-absent-reason named dataAbsentReason 0..1
 * status 1..1 MS
-* text 1..1 MS 
-  * ^short = "Partie narrative de l’entrée"
 
 // Document référencé
 * content MS

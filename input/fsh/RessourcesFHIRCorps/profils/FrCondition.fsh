@@ -47,7 +47,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 * recorder.extension[author].extension[type].valueCode = #AUT (exactly)
 * recorder.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
 
-* bodySite MS
+* bodySite
 * bodySite ^short = "Localisation anatomique"
 * bodySite.coding 1..1
 * bodySite.coding.system = "http://snomed.info/sct"

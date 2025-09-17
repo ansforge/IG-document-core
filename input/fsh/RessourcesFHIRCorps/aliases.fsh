@@ -9,3 +9,7 @@ Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
 Alias: $system = http://example.org/system
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $CIM-10 = https://smt.esante.gouv.fr/terminologie-cim-10
+Alias: $CISP-2 = https://smt.esante.gouv.fr/terminologie-cisp
+Alias: $CCAM = https://smt.esante.gouv.fr/terminologie-ccam
+Alias: $SMS = https://smt.esante.gouv.fr/terminologie-sms

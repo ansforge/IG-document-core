@@ -15,9 +15,6 @@ Description: "FrVaccinRecommandeDocument permet de décrire une vaccination pré
 
 * extension contains fr-vaccination-type-extension named typeVaccination 1..1
 * extension[typeVaccination].valueCodeableConcept.coding.system = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis"
-// ou utiliser une extension FHIR note?
-* text 1..1 MS
-* text ^short = "Partie narrative de l’entrée"
 
 * recommendation 1..1
   * forecastStatus = #complete

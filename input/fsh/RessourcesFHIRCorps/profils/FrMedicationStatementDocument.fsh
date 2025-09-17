@@ -16,8 +16,6 @@ Description: "
 * category MS
   * ^short = "Acte ou situation"
 * category from FrValueSetMedicationAdministrationCategory (preferred)
-* text 1..1 MS
-  * ^short = "Partie narrative"
 * status 1..1 MS
   * ^short = "Statut"
 * status = #completed
