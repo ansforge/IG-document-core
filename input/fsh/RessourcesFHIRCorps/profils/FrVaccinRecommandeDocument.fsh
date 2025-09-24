@@ -22,28 +22,12 @@ Description: "FrVaccinRecommandeDocument permet de décrire une vaccination pré
     * value ^short = "Période de vaccination souhaitable"
 // produit de santé
   * vaccineCode MS
+  * vaccineCode only FrDocumentCodeableConcept
   * vaccineCode ^short = "Vaccin. Code du produit de santé"
   * vaccineCode from FrValueSetCodeProduit (required)
 // translation (autres codifications)
-  * vaccineCode.extension contains FrTranslationExtension named translation 0..* 
-  * vaccineCode.extension[translation].valueCodeableConcept.coding.system from FrValueSetVaccineTranslation (required)
+  * vaccineCode.coding.system from FrValueSetVaccineTranslation (required)
   * vaccineCode obeys Recomm-Immu-VaccineCodeConstraint
-/*
-// Définition du slicing sur coding
-  * vaccineCode.coding ^slicing.discriminator.type = #pattern
-  * vaccineCode.coding ^slicing.discriminator.path = "system"
-  * vaccineCode.coding ^slicing.rules = #open
-  * vaccineCode.coding ^slicing.description = "Slicing pour distinguer le code principal et les translations"
-  * vaccineCode.coding contains
-    code 1..1 and
-    translation 0..*
-// Slice code (code principal)
-  * vaccineCode.coding[code] ^short = "Code principal du vaccin"
-  * vaccineCode.coding[code].system from FRValueSetCodeProduit (required)
-// Slice translation (autres codifications)
-  * vaccineCode.coding[translation] ^short = "Autres codifications (CIP, UCD, ATC, MV)"
-  * vaccineCode.coding[translation].system from FRValueSetVaccineTranslation (required) 
- */
 
  // Référence vers le profil FrVaccinationDocument
   * supportingImmunization only Reference(FrVaccinationDocument)

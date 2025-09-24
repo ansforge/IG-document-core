@@ -17,7 +17,7 @@ Description: "Ce profil permet de lister les examens et surveillances prénataux
 * performer.extension contains FrActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur"
 * performer.extension[author].extension[type].valueCode = #AUT (exactly)
-* performer.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 * component MS
 * component ^short = "Observations"

@@ -41,5 +41,5 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performer.actor.extension contains
     FrActorExtension named Participant 0..1
 * performer.actor.extension[Participant].extension[type].valueCode = #PART (exactly)
-* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)
+* performer.actor.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device)
 * performer.actor.extension[Participant].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis

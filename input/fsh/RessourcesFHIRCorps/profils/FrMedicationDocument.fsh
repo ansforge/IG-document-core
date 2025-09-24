@@ -9,12 +9,9 @@ Description: "FrMedicationDocument permet de décrire un médicament ou un vacci
 
 * code 1..1 MS
   * ^short = "Code du produit de santé"
-// créer un type CodeableConceptDocument ou bien utiliser extension : translation ?
-* code.coding.extension contains FrTranslationExtension named translation 0..*
-* code.coding.extension[translation] ^short = "Autres codifications (CIP, UCD, ATC, MV)"
-* code.coding.extension[translation].valueCodeableConcept.coding.system from FrValueSetVaccineTranslation (required) 
-
-// créer un type CodeableConceptDocument ou bien utiliser extension : translation ?
+* code only FrDocumentCodeableConcept
+* code.coding ^short = "Autres codifications (CIP, UCD, ATC, MV)"
+* code.coding.system from FrValueSetVaccineTranslation (required) 
 
 //Nom de marque du produit : Extension IHE
 * extension contains $ihe-ext-medication-productname named productName 1..1 MS

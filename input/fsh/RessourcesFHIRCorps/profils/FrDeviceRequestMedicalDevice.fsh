@@ -32,7 +32,7 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
 * requester MS
 * requester ^short = "Prescripteur"
 * requester.extension contains FrActorExtension named prescripteur 0..1
-* requester.extension[prescripteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* requester.extension[prescripteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Dispositif médical
 * codeReference MS

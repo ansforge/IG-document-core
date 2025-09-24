@@ -31,29 +31,12 @@ Description: "FrVaccinationDocument permet de décrire l'administration d'un vac
 * doseQuantity ^short = "Dose administrée"
 // produit de santé
 * vaccineCode MS
+* vaccineCode only FrDocumentCodeableConcept
 * vaccineCode ^short = "Vaccin. Code du produit de santé"
 * vaccineCode from FrValueSetCodeProduit (required)
 * vaccineCode obeys Immu-VaccineCodeConstraint
 // translation (autres codifications)
-* vaccineCode.extension contains FrTranslationExtension named translation 0..* 
-* vaccineCode.extension[translation].valueCodeableConcept.coding.system from FrValueSetVaccineTranslation (required)
-
-/*
-// Définition du slicing sur coding
-* vaccineCode.coding ^slicing.discriminator.type = #pattern
-* vaccineCode.coding ^slicing.discriminator.path = "system"
-* vaccineCode.coding ^slicing.rules = #open
-* vaccineCode.coding ^slicing.description = "Slicing pour distinguer le code principal et les translations"
-* vaccineCode.coding contains
-    code 1..1 and
-    translation 0..*
-// Slice code (code principal)
-* vaccineCode.coding[code] ^short = "Code principal du vaccin"
-* vaccineCode.coding[code].system from FRValueSetCodeProduit (required)
-// Slice translation (autres codifications)
-* vaccineCode.coding[translation] ^short = "Autres codifications (CIP, UCD, ATC, MV)"
-* vaccineCode.coding[translation].system from FRValueSetVaccineTranslation (required) 
-*/
+* vaccineCode.coding.system from FrValueSetVaccineTranslation (required)
 
 //Nom de marque du produit : Extension IHE
 * extension contains $ihe-ext-medication-productname named productName 1..1 MS
@@ -72,12 +55,12 @@ Description: "FrVaccinationDocument permet de décrire l'administration d'un vac
 // --- Auteur ---
 * performer.actor.extension[author] ^short = "Auteur de la vaccination (personne ayant validé médicalement que la vaccination a été réalisée)"
 * performer.actor.extension[author].extension[type].valueCode = #AUT (exactly)
-* performer.actor.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // --- Exécutant ---
 * performer.actor.extension[executant] ^short = "Exécutant"
 * performer.actor.extension[executant].extension[type].valueCode = #PRF (exactly)
-* performer.actor.extension[executant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[executant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Prescription
 

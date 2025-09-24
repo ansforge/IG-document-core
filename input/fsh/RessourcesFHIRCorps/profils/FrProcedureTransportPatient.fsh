@@ -8,27 +8,28 @@ Description: "FrProcedureTransportPatient permet de décrire le transport d'un p
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
   * ^short = "Identifiant de l'entrée. Identifiant du transport"
-* code 1..1  MS
-  * ^short = "Mode de transport (Ambulance publique, Taxi, VSL, …)"
 
-// Contraindre le code
-* code.coding 1..1
-* code.coding.system 1..1
-* code.coding.code 1..1
+// Contraindre code
+* code only FrDocumentCodeableConcept
+* code 1..1 MS
+* code ^short = "Mode de transport (Ambulance publique, Taxi, VSL, …)"
 
-// Ajouter deux occurrences de l’extension fr-qualifier-extension
-* code.coding.extension contains
-    FrQualifierExtension named qualifier1 0..1 and
-    FrQualifierExtension named qualifier2 0..1
+// Créer deux slices : natureTransport et typeMotorisation
+* code.coding.extension[qualifier] contains
+    natureTransport 1..1 MS and
+    typeMotorisation 1..1 MS
 
-// qualifier1
-* code.coding.extension[qualifier1].extension[name] 1..1
-* code.coding.extension[qualifier1].extension[name].valueCodeableConcept = $terminologie-cisis#GEN-345 "Nature du transport"
-// qualifier2
-* code.coding.extension[qualifier2].extension[name] 1..1
-* code.coding.extension[qualifier2].extension[name].valueCodeableConcept = $terminologie-cisis#GEN-346 "Type de motorisation"
-* code.coding.extension[qualifier2].extension[value] 1..1
-* code.coding.extension[qualifier2].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis
+// --- Slice 1 : Nature du transport ---
+* code.coding.extension[qualifier][natureTransport].extension[name].valueCodeableConcept from $terminologie-cisis (required)
+* code.coding.extension[qualifier][natureTransport].extension[name].valueCodeableConcept.coding.code = #GEN-345
+* code.coding.extension[qualifier][natureTransport].extension[name] ^short = "Qualifier : Nature du transport (ex. GEN-345)"
+
+// --- Slice 2 : Type de motorisation ---
+* code.coding.extension[qualifier][typeMotorisation].extension[name].valueCodeableConcept from $terminologie-cisis (required)
+* code.coding.extension[qualifier][typeMotorisation].extension[name].valueCodeableConcept.coding.code = #GEN-346
+* code.coding.extension[qualifier][typeMotorisation].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis (required)
+* code.coding.extension[qualifier][typeMotorisation].extension[value] ^short = "Qualifier : Type de motorisation"
+
 * performedDateTime 1..1 MS 
   * ^short = "Date du transport"	
 
@@ -39,7 +40,7 @@ Description: "FrProcedureTransportPatient permet de décrire le transport d'un p
 // transporteur
 * performer.actor.extension[transporteur] ^short = "Transporteur"
 * performer.actor.extension[transporteur].extension[type].valueCode = #PRF (exactly)
-* performer.actor.extension[transporteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[transporteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
 // Lieu de départ / Destination

@@ -19,7 +19,7 @@ Description: "FrEncounterEvenementDocument est un profil de type encounter perme
  - Le JDV dépend du volet utilisant ce profil (les précisions sont alors fournies dans le volet correspondant). 
  - Si pas d'information utiliser le code Wolf ‘Aucun’."
  
-* type.extension contains FrQualifierExtension named qualifier 0..* 
+* type only FrDocumentCodeableConcept  
 
 * extension contains FrEvenementCaracteristiqueExtension named caracteristique 0..*
  

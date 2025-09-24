@@ -21,4 +21,4 @@ Elle est obligatoire dans la norme DICOM Part 20."
 
 * performer.actor.extension[Participant] ^short = "Identité du professionnel de santé ayant donné
 l'autorisation de l'exposition du patient aux rayonnements"
-* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)
+* performer.actor.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device)

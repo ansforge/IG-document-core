@@ -10,15 +10,7 @@ Description: "FrProcedureTransportProfessionnel permet de décrire le transport 
   * ^short = "Identifiant de l'entrée. Identifiant du transport"
 * code 1..1  MS
   * ^short = "Mode de transport (Ambulance publique, Taxi, VSL, …)"
-
-// Contraindre le code
-* code.coding 1..1
-* code.coding.system 1..1
-* code.coding.code 1..1
-
-// Ajout de l’extension fr-qualifier-extension
-* code.coding.extension contains
-    FrQualifierExtension named qualifier 0..1 
+* code only FrDocumentCodeableConcept
 
 //Type de motorisation 
 * code.coding.extension[qualifier].extension[name] 1..1 
@@ -37,13 +29,13 @@ Description: "FrProcedureTransportProfessionnel permet de décrire le transport 
 // --- transporteur ---
 * performer.actor.extension[transporteur] ^short = "Transporteur"
 * performer.actor.extension[transporteur].extension[type].valueCode = #PRF (exactly)
-* performer.actor.extension[transporteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[transporteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
 //le Professionnel concerné
 * performer.actor.extension[professionnelConcerne] ^short = "le Professionnel concerné"
 * performer.actor.extension[professionnelConcerne].extension[type].valueCode = #PART (exactly)
-* performer.actor.extension[professionnelConcerne].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[professionnelConcerne].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
 * performer.actor.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept.coding.code = #RCV 
 

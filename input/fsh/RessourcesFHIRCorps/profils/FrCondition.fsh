@@ -45,7 +45,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 * recorder.extension contains FrActorExtension named author 0..1
 * recorder.extension[author] ^short = "Auteur du problème"
 * recorder.extension[author].extension[type].valueCode = #AUT (exactly)
-* recorder.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* recorder.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 * bodySite
 * bodySite ^short = "Localisation anatomique"

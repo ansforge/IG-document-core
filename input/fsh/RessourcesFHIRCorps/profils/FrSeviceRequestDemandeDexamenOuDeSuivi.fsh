@@ -43,4 +43,4 @@ Si la demande est un objectif à atteindre : 'GOL = plan'
 * requester.extension contains FrActorExtension named author 0..1
 * requester.extension[author] ^short = "Auteur de la demande"
 * requester.extension[author].extension[type].valueCode = #AUT (exactly)
-* requester.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device or FrDeviceDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* requester.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device or FrDeviceDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)

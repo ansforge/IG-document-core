@@ -13,12 +13,10 @@ Description: "FrObservationEvaluation permet de rapporter un résultat (score) r
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" (exactly)
 * category.coding.code = #survey (exactly)
 
-* code 1..1 MS
+* code MS
+* code only FrDocumentCodeableConcept
 * code ^short = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
 Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOINC et décrire le type d'évaluation en texte libre."
-
-* code.extension contains FrTranslationExtension named translation 0..1
-* code.extension[translation] ^short = "Translation du code"
 
 * value[x] 1..1 MS
 * value[x] ^short = "Valeur de l'évaluation"
@@ -36,20 +34,20 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 * performer.extension[Evaluateur] MS
 * performer.extension[Evaluateur] ^short = "Evaluateur"
 * performer.extension[Evaluateur].extension[type].valueCode = #PRF (exactly)
-* performer.extension[Evaluateur].extension[reference].valueReference only Reference(FrOrganizationDocument)
+* performer.extension[Evaluateur].extension[actor].valueReference only Reference(FrOrganizationDocument)
 * performer.extension[Evaluateur].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
 // auteur
 * performer.extension[Auteur] MS
 * performer.extension[Auteur] ^short = "Auteur de l'évaluation"
 * performer.extension[Auteur].extension[type].valueCode = #AUT (exactly)
-* performer.extension[Auteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[Auteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Participant
 * performer.extension[Participant] MS
 * performer.extension[Participant] ^short = "Responsable de l'évaluation"
 * performer.extension[Participant].extension[type].valueCode = #PART (exactly)
-* performer.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.extension[Participant].extension[typeCode].valueCodeableConcept.coding.code = #RESP
 
 // ----------------------

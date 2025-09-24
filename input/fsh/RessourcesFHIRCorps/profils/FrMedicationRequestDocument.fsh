@@ -80,14 +80,14 @@ Description: "
 * requester.extension contains FrActorExtension named author 0..1 
 * requester.extension[author] ^short = "Auteur du document Prescription"
 * requester.extension[author].extension[type].valueCode = #AUT (exactly)
-* requester.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* requester.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // --- Prescripteur ---
 * performer MS
 * performer.extension contains FrActorExtension named prescripteur 0..1
 * performer.extension[prescripteur] ^short = "Prescripteur"
 * performer.extension[prescripteur].extension[type].valueCode = #PRF (exactly)
-* performer.extension[prescripteur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[prescripteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 * authoredOn MS
 // Motif du traitement

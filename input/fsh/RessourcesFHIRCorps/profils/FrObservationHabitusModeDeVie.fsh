@@ -14,10 +14,10 @@ Description: "Profil Observation décrivant les habitudes de vie du patient (Hab
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 
 * code MS
+* code only FrDocumentCodeableConcept
 * code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis (required)
 * code ^short = "Élément observé"
 * code.coding ^short = "Précision du code"
-* code.coding.extension contains FrQualifierExtension named qualifier 0..1 MS
 
 * value[x] 1..1 MS
 * value[x] ^short = "Résultat de l’observation effectuée"

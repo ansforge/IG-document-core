@@ -25,17 +25,16 @@ Description: "FrObservationDICOM permet d'enregistrer une observation avec une v
 * bodySite ^short = "Localisation anatomique"
 * bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
 
-// Ajouter l'extension FrQualifierExtension sur bodySite
-* bodySite.extension contains FrQualifierExtension named qualifier 0..*
-* bodySite.extension[qualifier] ^short = "Précision topographique"
+* bodySite only FrDocumentCodeableConcept
+* bodySite.coding ^short = "Précision topographique"
 
-* bodySite.extension[qualifier].extension[name].valueCodeableConcept.coding.system = $SCT
-* bodySite.extension[qualifier].extension[name].valueCodeableConcept.coding.code = #106233006
-* bodySite.extension[qualifier].extension[name].valueCodeableConcept.coding.display = "modificateur topographique"
+* bodySite.coding.extension[qualifier].extension[name].valueCodeableConcept.coding.system = $SCT
+* bodySite.coding.extension[qualifier].extension[name].valueCodeableConcept.coding.code = #106233006
+* bodySite.coding.extension[qualifier].extension[name].valueCodeableConcept.coding.display = "modificateur topographique"
 
 // Contraindre la sous-extension value à venir du ValueSet CISIS
-* bodySite.extension[qualifier].extension[value].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis (required)
-* bodySite.extension[qualifier].extension[value] ^short = "Valeur de la topographie"
+* bodySite.coding.extension[qualifier].extension[value].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis (required)
+* bodySite.coding.extension[qualifier].extension[value] ^short = "Valeur de la topographie"
 
 * derivedFrom MS
 * derivedFrom ^short = "Informations d’une instance SOP DICOM d'un objet référencé : la classe SOP Instance et la référence WADO."

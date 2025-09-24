@@ -63,23 +63,23 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 * performer.actor.extension[Intervenant] MS 
 * performer.actor.extension[Intervenant] ^short = "Intervenant"
 * performer.actor.extension[Intervenant].extension[type].valueCode = #PRF (exactly)
-* performer.actor.extension[Intervenant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[Intervenant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 //informant
 * performer.actor.extension[Informateur] MS
 * performer.actor.extension[Informateur] ^short = "Informateur"
 * performer.actor.extension[Informateur].extension[type].valueCode = #INF (exactly)
-* performer.actor.extension[Informateur].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* performer.actor.extension[Informateur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 //participant
 * performer.actor.extension[Participant] MS
 * performer.actor.extension[Participant] ^short = "Participant"
 * performer.actor.extension[Participant].extension[type].valueCode = #PART (exactly)
-* performer.actor.extension[Participant].extension[reference].valueReference only Reference(FrPractitionerRoleDocument or Device)
+* performer.actor.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device)
 
 * recorder MS
 * recorder.extension contains FrActorExtension named author 0..1
 * recorder ^short = "Auteur"
 * recorder.extension[author].extension[type].valueCode = #AUT (exactly)
-* recorder.extension[author].extension[reference].valueReference only Reference(FrPractitionerRoleDocument)
+* recorder.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Réference interne à un DM (REFR)
 * usedReference MS

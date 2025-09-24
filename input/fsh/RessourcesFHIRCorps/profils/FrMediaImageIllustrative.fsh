@@ -36,7 +36,7 @@ Description: "Ce profil permet de positionner une image de type gif, jpeg, png o
 
 * operator.extension[author] ^short = "Auteur du média"
 * operator.extension[author].extension[type].valueCode = #AUT (exactly)
-* operator.extension[author].extension[reference].valueReference only Reference(FrDeviceDocument or FrPractitionerRoleDocument)
+* operator.extension[author].extension[actor].valueReference only Reference(FrDeviceDocument or FrPractitionerRoleDocument)
 
 * operator.extension[informant] ^short = "Informateur"
 * operator.extension[informant].extension[type].valueCode = #INF (exactly)
