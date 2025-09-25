@@ -1,16 +1,18 @@
-// StructureDefinition for FrMedicationAdministrationDocument
-Profile: FrMedicationAdministrationDocument
-Parent: MedicationAdministration
-Id: fr-medication-administration-document
-Title: "MedicationAdministration - Fr Traitement"
+// StructureDefinition for FrMedicationStatementDocument
+Profile: FrMedicationStatementDocument
+Parent: MedicationStatement
+Id: fr-medication-statement-document
+Title: "MedicationStatement - Fr Traitement"
 Description: "
- - FrMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.
+ - FrMedicationStatementDocument permet de décrire les modalités d'administration d'un médicament au patient.
  - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
- - Si le traitement est en attente d’administration c’est-à dire qu’il a été prescrit."
+ - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..* MS
   * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
+* basedOn only Reference(MedicationRequest)
+* partOf only Reference(MedicationAdministration)
 * category MS
   * ^short = "Acte ou situation"
 * category from FrValueSetMedicationAdministrationCategory (preferred)
@@ -23,12 +25,12 @@ Description: "
 // R5 : occurenceTiming
 // Fréquence d'administration
 
-* dosage
-  * extension contains FrAdministrationFrequency named frequenceAdministration 0..1
-  // Dosages progressifs ou fractionnés
-  * extension contains FrSequenceExtension named sequence 0..*
+* dosage MS
+  // Dosages progressifs, fractionnés 
+  * sequence MS
   // Dosages conditionnels
-  //* extension contains http://hl7.org/fhir/StructureDefinition/note named dosagesConditionnels 0..* 
+  * asNeeded[x] MS 
+  * extension contains FrAdministrationFrequency named frequenceAdministration 0..1
   * route MS
   * route from FrValueSetEDQM
   * route ^short = "Voie d'administration"
@@ -36,15 +38,22 @@ Description: "
   * site MS
   * site ^short = "Région anatomique d'administration"
   * site from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-human-substance-administration-site-cisis
-  * dose MS
-    * ^short = "Dose à administrer"
+  
+  //* dose MS
+   // * ^short = "Dose à administrer"
 
-* dosage.rate[x] MS
-* dosage.rateRatio MS
+* dosage.doseAndRate.rate[x] MS
+* dosage.doseAndRate.rateRatio MS
   * ^short = "doseMaximale"
-* dosage.rateQuantity MS
+* dosage.doseAndRate.rateQuantity MS
   * ^short = "rythme d'administration"
-
+//Instructions au patient
+// si codé : 
+* dosage.additionalInstruction MS 
+  * ^short = "Instructions au patient"
+  // si non codé : 
+* dosage.additionalInstruction.text MS 
+  * ^short = "Instruction au patient"
 // Médicament
 * medication[x] MS
 * medication[x] only CodeableConcept or Reference(FrMedicationDocument or FrMedicationsCombinaisonDocument)
@@ -52,15 +61,10 @@ Description: "
 // Prescription : Utilisation de l'extension FrPrescription ou l'élément request qui fait référence (MedicationRequest) ?
 * extension contains FrPrescriptionExtension named Prescription 0..* MS 
 
-// Instruction au patient
-* dosage.text MS
-  * ^short = "Instruction au patient"
-
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
 * reasonReference only Reference(FrCondition or Observation)
 
-// Précondition ou bien utiliser l'extnexion FHIR "note" ??
+// Ou bien utilisation de l'extnexion FHIR note ??
 * extension contains FrPreconditionExtension named precondition 0..1
-  * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."
