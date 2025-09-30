@@ -1,7 +1,7 @@
 Profile: FrFamilyMemberHistory
 Parent: FamilyMemberHistory
 Id: fr-family-member-history
-Title: "FamilyMemberHistory - Fr Antécédents familiaux"
+Title: "FamilyMemberHistory - Fr Family member history"
 Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

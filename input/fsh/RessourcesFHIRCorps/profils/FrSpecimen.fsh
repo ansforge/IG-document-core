@@ -2,7 +2,7 @@
 Profile: FrSpecimen
 Parent: Specimen
 Id: fr-specimen
-Title: "Specimen - Fr Prélèvement"
+Title: "Specimen - Fr Specimen"
 Description: "FrSpecimen est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

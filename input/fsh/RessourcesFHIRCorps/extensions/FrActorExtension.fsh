@@ -1,7 +1,10 @@
 Extension: FrActorExtension
 Id: fr-actor-extension
-Title: "Extension - Actor"
+Title: "Extension - Fr Actor"
 Description: "Extension pour représenter un acteur impliqué dans le document avec son type et sa référence."
+
+* ^context[+].type = #element
+* ^context[=].expression = "Resource"
 
 * extension contains
     type 1..1 and

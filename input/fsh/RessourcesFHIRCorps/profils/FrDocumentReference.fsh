@@ -2,7 +2,7 @@
 Profile: FrDocumentReference
 Parent: DocumentReference
 Id: fr-document-reference
-Title: "DocumentReference - Fr Document referencé"
+Title: "DocumentReference - Fr Document reference"
 Description: "DocumentReference restreint pour les documents PDF."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

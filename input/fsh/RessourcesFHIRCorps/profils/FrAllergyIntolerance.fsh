@@ -1,7 +1,7 @@
 Profile: FrAllergyIntolerance
 Parent: AllergyIntolerance
 Id: fr-allergie-intolerance
-Title: "AllergyIntolerance - Fr Allergie et intolérance"
+Title: "AllergyIntolerance - Fr Allergy and intolerance"
 Description: "FrAllergyIntolerance est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

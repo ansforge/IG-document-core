@@ -1,6 +1,6 @@
 Extension: FrProceduretoLocation
 Id: fr-procedure-to-location
-Title: "Extension - Fr Lieu de départ du transport"
+Title: "Extension - Fr Procedure to Location"
 Description: "Extension pour représenter le lieu de destination d’un transport (patient ou professionnel)."
 
 * extension contains

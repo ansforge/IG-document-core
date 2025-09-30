@@ -1,8 +1,9 @@
 Extension: FrQualifierExtension
 Id: fr-qualifier-extension
-Title: "Extension - Qualifier du code"
+Title: "Extension - Fr Qualifier"
 Description: "Extension permettant d’associer à un code une précision (qualifier)."
-
+* ^context[+].type = #element
+* ^context[=].expression = "Coding"
 // Sous-extensions
 * extension contains
     name 0..1 and

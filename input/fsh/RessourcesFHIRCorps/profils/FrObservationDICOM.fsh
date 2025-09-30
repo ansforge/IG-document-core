@@ -38,11 +38,11 @@ Description: "FrObservationDICOM permet d'enregistrer une observation avec une v
 
 * derivedFrom MS
 * derivedFrom ^short = "Informations d’une instance SOP DICOM d'un objet référencé : la classe SOP Instance et la référence WADO."
-* derivedFrom only Reference(FrImagingStudyExamenImagerieDICOM) //Dans FrImagingStudyExamenImagerieDICOM on trouve series.instance
+* derivedFrom only Reference(FrImagingStudyDICOM) //Dans FrImagingStudyExamenImagerieDICOM on trouve series.instance
 
 //Proposition1 :
 //* valueQuantity only Quantity
 //Proposition 2 :
 * hasMember MS
 * hasMember ^short = "Mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques"
-* hasMember only Reference(FrQuantityDICOM)
+* hasMember only Reference(FrObservationQuantityDICOM)
