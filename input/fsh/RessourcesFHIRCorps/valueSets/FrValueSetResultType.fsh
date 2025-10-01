@@ -1,6 +1,6 @@
-ValueSet: FrValueSetTypeResultat
-Id: fr-doc-vs-type-resultat
-Title: "Fr ValueSet Type Resultat"
+ValueSet: FrValueSetResultType
+Id: fr-vs-result-type
+Title: "Fr ValueSet - Result Type"
 Description: "ValueSet contenant les codes LOINC autorisés pour les types de résultats"
 
 * include http://loinc.org#26436-6 "Biologie polyvalente"

@@ -1,5 +1,5 @@
 ValueSet: FrValueSetEDQM
-Id: vs-emdn
+Id: fr-vs-edqm
 Title: "Fr ValueSet EDQM - Standard terms"
 Description: "ValueSet basé sur le CodeSystem EDQM fourni par SMT"
 
