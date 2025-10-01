@@ -1,8 +1,8 @@
-Profile: FrObservationResultatsCompteRenduDeBiologie
+Profile: FrObservationLaboratoryReportResults
 Parent: Observation
-Id: fr-resultats-compte-rendu-de-biologie
-Title: "Observation - Fr Résultats de compte rendu de Biologie"
-Description: "FrObservationResultatsCompteRenduDeBiologie décrit un résultat d’examen de biologie médicale."
+Id: fr-laboratory-report-results
+Title: "Observation - Fr Laboratory report results"
+Description: "FrObservationLaboratoryReportResults décrit un résultat d’examen de biologie médicale."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical() 
@@ -117,14 +117,14 @@ Description: "FrObservationResultatsCompteRenduDeBiologie décrit un résultat d
 // Image illustrative
 //------------------------------------
 * derivedFrom MS
-* derivedFrom only Reference(FrMediaImageIllustrative)
+* derivedFrom only Reference(FrMedia)
 * derivedFrom ^short = "Image illustrative"
 
 //------------------------------------
 // Groupes de résultats associés
 //------------------------------------
 * hasMember MS
-* hasMember only Reference(FrObservationResultatsCompteRenduDeBiologie)
+* hasMember only Reference(FrObservationLaboratoryReportResults)
 * hasMember ^short = "Lien vers batterie d’examens ou résultats d’examens cliniquement pertinents ou isolat microbiologique"
 
 * value[x] 0..1 MS

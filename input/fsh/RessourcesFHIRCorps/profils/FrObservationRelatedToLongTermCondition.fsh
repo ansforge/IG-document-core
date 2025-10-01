@@ -1,21 +1,21 @@
-Profile: FrObservationHorsNomenclature
+Profile: FrObservationRelatedToLongTermCondition
 Parent: Observation
-Id: fr-hors-nomenclature
-Title: "Observation - Fr Hors nomenclature"
-Description: "Cette observation permet d'indiquer si l’acte est hors nomenclature."
+Id: fr-related-to-long-term-condition
+Title: "Observation - Fr related to long term condition"
+Description: "FrObservationRelatedToLongTermCondition permet d'indiquer si l'élément auquel elle est associée est en rapport avec une Affection Longue Durée (ALD)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * code ^short = "Catégorie de l'entrée"
 * code MS
-* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-298 "Hors nomenclature"
+* code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-574 "En rapport avec une ALD"
 * value[x] only boolean
 * valueBoolean 1..1 MS
 * value[x] ^short = """	
 Résultat de l'observation : pourra prendre l'une des deux valeurs suivantes :
-value='true' : l’acte n’est pas hors nomenclature
-value='false' : l’acte est hors nomenclature
+value='true' : le traitement est prescrit dans le cadre d'une affection longue durée (ALD)
+value='false' : le traitement n'est pas prescrit dans le cadre d'une affection longue durée (ALD)
 """
 * performer MS
 * performer.extension contains FrActorExtension named author 0..*

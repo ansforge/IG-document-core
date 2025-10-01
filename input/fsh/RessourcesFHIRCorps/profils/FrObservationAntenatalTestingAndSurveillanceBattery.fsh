@@ -1,8 +1,8 @@
-Profile: FrObservationBatterieExamEtSurveillancePrenataux
+Profile: FrObservationAntenatalTestingAndSurveillanceBattery
 Parent: Observation
-Id: fr-batterie-examen-et-surveillance-prenataux
-Title: "Observation - Fr Batterie examens et surveillance prénataux"
-Description: "Ce profil permet de lister les examens et surveillances prénataux."
+Id: fr-antenatal-testing-and-surveillance-battery
+Title: "Observation - Fr Antenatal testing and surveillance battery"
+Description: "FrObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

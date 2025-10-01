@@ -1,8 +1,8 @@
-Profile: FrObservationNonRemboursable
+Profile: FrObservationNotCovered
 Parent: Observation
-Id: fr-non-remboursable
-Title: "Observation - Fr Non remboursable"
-Description: "Cette observation permet d'indiquer si le traitement auquel elle est associée est non remboursable."
+Id: fr-not-covered
+Title: "Observation - Fr Not covered"
+Description: "FrObservationNotCovered permet d'indiquer si le traitement auquel elle est associée est non remboursable."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

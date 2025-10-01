@@ -1,9 +1,9 @@
 // StructureDefinition for Administration de derivés du sang
-Profile: FrObservationAdministrationDeDerivesDuSang
+Profile: FrObservationAdministrationBloodDerivatives
 Parent: Observation
-Id: fr-administration-de-derives-du-sang
-Title: "Observation - Fr Administration de derivés du sang"
-Description: "FrObservationAdministrationDeDerivesDuSang est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang."
+Id: fr-administration-blood-derivatives
+Title: "Observation - Fr Administration blood derivatives"
+Description: "FrObservationAdministrationBloodDerivatives est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

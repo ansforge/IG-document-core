@@ -1,8 +1,8 @@
-Profile: FrObservationContexte
+Profile: FrObservationContext
 Parent: Observation
-Id: fr-observation-contexte
-Title: "Observation - Fr Contexte de l'acte"
-Description: "Observation représentant le contexte de l’acte"
+Id: fr-observation-context
+Title: "Observation - Fr Context of the act"
+Description: "FrObservationContext représente le contexte de l’acte"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

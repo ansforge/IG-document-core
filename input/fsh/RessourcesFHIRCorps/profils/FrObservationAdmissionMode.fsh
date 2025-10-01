@@ -1,8 +1,8 @@
-Profile: FrObservationModaliteEntree
+Profile: FrObservationAdmissionMode
 Parent: Observation
-Id: fr-observation-modalite-entree
-Title: "Observation - Fr Modalité d'entrée"
-Description: "FrObservationModaliteEntree Observation décrivant la modalité d'entrée du patient."
+Id: fr-observation-admission-mode
+Title: "Observation - Fr Admission mode"
+Description: "FrObservationAdmissionMode Observation décrivant la modalité d'entrée du patient."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

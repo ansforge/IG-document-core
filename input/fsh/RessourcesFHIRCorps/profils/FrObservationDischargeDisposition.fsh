@@ -1,8 +1,8 @@
-Profile: FrObservationModaliteSortie
+Profile: FrObservationDischargeDisposition
 Parent: Observation
-Id: fr-observation-modalite-sortie
-Title: "Observation - Fr Modalité de sortie"
-Description: "FrObservationModaliteSortie Observation décrivant la modalité de sortie du patient."
+Id: fr-observation-discharge-disposition
+Title: "Observation - Fr Discharge disposition"
+Description: "FrObservationDischargeDisposition Observation décrivant la modalité de sortie du patient."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

@@ -1,8 +1,8 @@
-Profile: FrObservationDifficulte
+Profile: FrObservationDifficulty
 Parent: Observation
-Id: fr-observation-difficulte
-Title: "Observation - Fr Difficulté de l'acte"
-Description: "Observation utilisée pour représenter la difficulté d'un acte."
+Id: fr-observation-difficulty
+Title: "Observation - Fr Difficulty of the act"
+Description: "FrObservationDifficulty est utilisée pour représenter la difficulté d'un acte."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
