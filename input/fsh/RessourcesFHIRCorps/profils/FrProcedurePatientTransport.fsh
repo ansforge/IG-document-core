@@ -1,9 +1,9 @@
-// StructureDefinition for FrProcedureTransportPatient
-Profile: FrProcedureTransportPatient
+// StructureDefinition for FrProcedurePatientTransport
+Profile: FrProcedurePatientTransport
 Parent: Procedure
-Id: fr-procedurede-transport-patient
-Title: "Procedure - Fr Transport du patient"
-Description: "FrProcedureTransportPatient permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
+Id: fr-procedurede-patient-transport
+Title: "Procedure - Fr Patient Transport"
+Description: "FrProcedurePatientTransport permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
@@ -51,4 +51,4 @@ Description: "FrProcedureTransportPatient permet de décrire le transport d'un p
 
 //Autres précision sur le trajet ou le transport du patient
 // Si les précisions sur le transport sont non codées ou non structurées, on peut les inclure directement dans Procedure.note
-* extension contains FrAutresPrecisionExtension named precisionTransportPatient 0..* MS
+* extension contains FrAdditionalInformation named precisionTransportPatient 0..* MS

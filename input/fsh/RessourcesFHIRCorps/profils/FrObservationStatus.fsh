@@ -1,9 +1,9 @@
-// StructureDefinition for FrObservationStatut
-Profile: FrObservationStatut
+// StructureDefinition for FrObservationStatus
+Profile: FrObservationStatus
 Parent: Observation
-Id: fr-observation-statut
-Title: "Observation - Fr Statut"
-Description: "FrObservationStatut permet de décrire et de suivre le statut métier d’un objet."
+Id: fr-observation-status
+Title: "Observation - Fr Status"
+Description: "FrObservationStatus permet de décrire et de suivre le statut métier d’un objet."
 
 * code.coding.system = "https://loinc.org/"
 * code.coding.code = #106199-3

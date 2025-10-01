@@ -1,9 +1,9 @@
-// StructureDefinition for Acte
-Profile: FrProcedureActe
+// StructureDefinition for Act
+Profile: FrProcedureAct
 Parent: Procedure
-Id: fr-acte
-Title: "Procedure - Fr Acte"
-Description: "FrProcedureActe est un profil utilisé pour décrire un acte planifié ou réalisé."
+Id: fr-procedure-act
+Title: "Procedure - Fr Act"
+Description: "FrProcedureAct est un profil utilisé pour décrire un acte planifié ou réalisé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -97,7 +97,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 
 // Difficulté Observation / Scores Observation
 * extension contains
-    FrDifficulteExtension named difficulte 0..1 MS and
+    FrDifficultyExtension named difficulte 0..1 MS and
     FrScoreExtension named scores 0..* MS
 * extension[difficulte] ^short = "Référence vers une Observation représentant la difficulté"
 * extension[scores] ^short = "Références vers des Observations de scores associés" 

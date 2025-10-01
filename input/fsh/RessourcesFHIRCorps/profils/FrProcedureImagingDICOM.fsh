@@ -1,8 +1,8 @@
-Profile: FrProcedureTechniqueImagerieDICOM
+Profile: FrProcedureImagingDICOM
 Parent: Procedure
-Id: fr-procedure-technique-imagerie-dicom
-Title: "Procedure - Fr Technique imagerie DICOM"
-Description: "FrProcedureTechniqueImagerieDICOM permet d'enregistrer les différents paramètres de l’acquisition d’image :
+Id: fr-procedure-imaging-dicom
+Title: "Procedure - Fr Imaging DICOM"
+Description: "FrProcedureImagingDICOM permet d'enregistrer les différents paramètres de l’acquisition d’image :
 acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte "
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG

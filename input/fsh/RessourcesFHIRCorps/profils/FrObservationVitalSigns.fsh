@@ -1,10 +1,10 @@
-// StructureDefinition for FrSignesVitalObserveDocument
-Profile: FrSigneVitalObserveDocument
+// StructureDefinition for FrObservationVitalSigns
+Profile: FrObservationVitalSigns
 Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Id: fr-signes-vital-Observe-document
-Title: "Observation - Fr Signe Vital Observé"
+Id: fr-vital-signs
+Title: "Observation - Fr Vital Signs"
 Description: "
- - FrSigneVitalObserveDocument permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.
+ - FrObservationVitalSigns permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.
  - Ce profil est utilisée dans un profil FrSignesVitauxDocument.
  - Il est basée sur la ressource Observation qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'."
 

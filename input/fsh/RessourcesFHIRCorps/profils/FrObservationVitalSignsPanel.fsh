@@ -1,9 +1,9 @@
-// StructureDefinition for FrSignesVitauxDocument
-Profile: FrSignesVitauxDocument
+// StructureDefinition for FrObservationVitalSignsPanel
+Profile: FrObservationVitalSignsPanel
 Parent: http://hl7.org/fhir/StructureDefinition/vitalspanel
-Id: fr-signes-vitaux-document
-Title: "Observation - Fr Signes Vitaux"
-Description: "FrSignesVitauxDocument permet de regrouper des informations relatives aux mesures cliniques du patient."
+Id: fr-Observation-vital-signs-panel
+Title: "Observation - Fr Vital signs panel"
+Description: "FrObservationVitalSignsPanel permet de regrouper des informations relatives aux mesures cliniques du patient."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
@@ -28,4 +28,4 @@ Description: "FrSignesVitauxDocument permet de regrouper des informations relati
     or FrPatientINSDocument
     )
 * hasMember MS 
-* hasMember only Reference (FrSigneVitalObserveDocument)
+* hasMember only Reference (FrObservationVitalSigns)

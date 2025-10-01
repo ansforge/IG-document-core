@@ -1,9 +1,9 @@
-// StructureDefinition for FrProcedureTransportProfessionnel
-Profile: FrProcedureTransportProfessionnel
+// StructureDefinition for FrProcedureHealthcareProfessionalTransport
+Profile: FrProcedureHealthcareProfessionalTransport
 Parent: Procedure
-Id: fr-procedure-transport-Professionnel
-Title: "Procedure - Fr Transport du professionnel"
-Description: "FrProcedureTransportProfessionnel permet de décrire le transport d'un professionnel lors d’un déplacement."
+Id: fr-procedure-healthcare-professional-transport
+Title: "Procedure - Fr Healthcare Professional Transport"
+Description: "FrProcedureHealthcareProfessionalTransport permet de décrire le transport d'un professionnel lors d’un déplacement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
@@ -47,4 +47,4 @@ Description: "FrProcedureTransportProfessionnel permet de décrire le transport 
 
 //Autres précisions sur le trajet ou le transport du patient
 // Si les précisions sur le transport sont non codées ou non structurées, on peut les inclure directement dans Procedure.note ?
-* extension contains FrAutresPrecisionExtension named precisionTransportProfessionnel 0..* MS
+* extension contains FrAdditionalInformation named precisionTransportProfessionnel 0..* MS

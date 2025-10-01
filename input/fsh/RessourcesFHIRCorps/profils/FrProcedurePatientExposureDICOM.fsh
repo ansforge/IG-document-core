@@ -1,8 +1,8 @@
-Profile: FrProcedureExpositionPatientDICOM
+Profile: FrProcedurePatientExposureDICOM
 Parent: Procedure
-Id: fr-procedure-exposition-patient-dicom
-Title: "Procedure - Fr Exposition patient DICOM"
-Description: "FrProcedureExpositionPatientDICOM permet d'enregistrer l'identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements.
+Id: fr-procedure-patient-exposure-dicom
+Title: "Procedure - Fr Patient Exposure DICOM"
+Description: "FrProcedurePatientExposureDICOM permet d'enregistrer l'identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements.
 Elle est obligatoire dans la norme DICOM Part 20."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
