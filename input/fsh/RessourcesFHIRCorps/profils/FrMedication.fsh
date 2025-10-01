@@ -1,9 +1,9 @@
-// StructureDefinition for FrMedicationDocument
-Profile: FrMedicationDocument
+// StructureDefinition for FrMedication
+Profile: FrMedication
 Parent: Medication
-Id: fr-medication-document
-Title: "Medication - Fr Produit de santé"
-Description: "FrMedicationDocument permet de décrire un médicament ou un vaccin."
+Id: fr-medication
+Title: "Medication - Fr Product"
+Description: "FrMedication permet de décrire un médicament ou un vaccin."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
@@ -42,11 +42,11 @@ Description: "FrMedicationDocument permet de décrire un médicament ou un vacci
   * itemCodeableConcept MS
   * itemCodeableConcept from https://smt.esante.gouv.fr/terminologie-sms?vs
   * itemCodeableConcept ^short = "Code SMS de la substance active"
-  * itemCodeableConcept.extension contains fr-nom-substance named NomSubstance 1..1 MS
+  * itemCodeableConcept.extension contains fr-substance-name named NomSubstance 1..1 MS
 
-Extension: FrNomSubstance
-Id: fr-nom-substance
-Title: "Fr Nom de la substance"
+Extension: FrSubstanceName
+Id: fr-substance-name
+Title: "Fr Substance Name"
 Description: "Nom de la substance active, à utiliser en complément d’un codage."
 * ^status = #active
 * ^context.type = #element

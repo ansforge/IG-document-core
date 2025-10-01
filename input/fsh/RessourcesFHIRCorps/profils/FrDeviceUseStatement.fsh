@@ -1,8 +1,8 @@
-Profile: FrDeviceUseStatementMedicalDevice
+Profile: FrDeviceUseStatement
 Parent: DeviceUseStatement
-Id: fr-device-use-statement-medicaldevice
-Title: "DeviceUseStatement - Fr Dispositif médical"
-Description: "FrDeviceUseStatementMedicalDevice représente les information sur un dispositif médical"
+Id: fr-device-use-statement
+Title: "DeviceUseStatement - Fr Medical Device information"
+Description: "FrDeviceUseStatement représente les informations sur un dispositif médical"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -42,18 +42,18 @@ Sous la forme UID (UUID ou OID)."
     EnRapportAvecLaPrevention 0..1 and
     NonRemboursable 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FrObservationEnRapportAvecALD)
+* reasonReference[EnRapportAvecALD] only Reference(FrObservationRelatedToLongTermCondition)
 * reasonReference[EnRapportAvecALD] ^short = "Observation indiquant que l'utilisation est en rapport avec une ALD"
 * reasonReference[EnRapportAvecALD] MS
 
-* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationEnRapportAvecAccidentTravail)
+* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationWorkRelatedAccident)
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "Observation indiquant que l'utilisation est en rapport avec un accident de travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationEnRapportAvecLaPrevention)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationRelatedToPrevention)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "Observation indiquant que l'utilisation est liée à la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FrObservationNonRemboursable)
+* reasonReference[NonRemboursable] only Reference(FrObservationNotCovered)
 * reasonReference[NonRemboursable] ^short = "Observation indiquant que le dispositif n'est pas remboursable"
 * reasonReference[NonRemboursable] MS 

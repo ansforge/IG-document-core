@@ -1,8 +1,8 @@
-Profile: FrImagingStudyExamenImagerieDICOM
+Profile: FrImagingStudyDICOM
 Parent: ImagingStudy
-Id: fr-imaging-study-examen-imagerie-dicom
-Title: "ImagingStudy - Fr Examen Imagerie DICOM"
-Description: "FrImagingStudyExamenImagerieDICOM (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.
+Id: fr-imaging-study-dicom
+Title: "ImagingStudy - Fr Imaging study DICOM"
+Description: "FrImagingStudyDICOM (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.
 L’examen est composé d'une ou de plusieurs séries d’images médicales."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -54,4 +54,4 @@ SOP parente du SOP subordonnée et faire un slicing sur instance  */
 //  Proposition 1 pour Objectifs de référence
 * reasonReference 0..1 MS
 * reasonReference ^short = "Objectifs de référence"
-* reasonReference only Reference(FrObjectifsDeReferenceDICOM) 
+* reasonReference only Reference(FrObservationPurposeOfReferenceDICOM) 

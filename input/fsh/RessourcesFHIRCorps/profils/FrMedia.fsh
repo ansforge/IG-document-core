@@ -1,8 +1,8 @@
-Profile: FrMediaImageIllustrative
+Profile: FrMedia
 Parent: Media
-Id: fr-media-image-illustrative
-Title: "Media - Fr Media image illustrative"
-Description: "Ce profil permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64   "
+Id: fr-media
+Title: "Media - Fr Media"
+Description: "FrMedia permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64   "
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

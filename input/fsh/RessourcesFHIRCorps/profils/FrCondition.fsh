@@ -2,7 +2,7 @@
 Profile: FrCondition
 Parent: Condition
 Id: fr-condition
-Title: "Condition - Fr Condition (problème)"
+Title: "Condition - Fr Condition"
 Description: "FrCondition est un profil utilisé pour décrire un problème du patient (une pathologie par exemple)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -16,8 +16,6 @@ Description: "FrCondition est un profil utilisé pour décrire un problème du p
 
 * verificationStatus MS
 * verificationStatus ^short = "Certitude"
-* verificationStatus from FrValueSetConditionVerificationStatus
-//* verificationStatus from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis
 
 * category 1..1 MS
 * category ^short = "Type d'observation"
@@ -58,7 +56,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 
 * evidence.detail only Reference(FrDocumentReference)
 
-* extension contains FrStatutCliniquePatientExtension named statutClinique 0..1
+* extension contains FrPatientClinicalStatusExtension named statutClinique 0..1
 
 * note 0..1 MS
 * note ^short = "Commentaire"

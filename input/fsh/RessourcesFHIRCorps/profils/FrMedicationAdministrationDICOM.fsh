@@ -1,8 +1,8 @@
-Profile: FrAdministrationProduitsDeSanteDICOM
+Profile: FrMedicationAdministrationDICOM
 Parent: MedicationAdministration
-Id: fr-administration-produits-de-sante-dicom
-Title: "MedicationAdministration - Fr Administration produits de santé DICOM"
-Description: "FrAdministrationProduitsDeSanteDICOM permet d'enregistrer l’administration de produits (hors radiopharmaceutiques) : produit administré,
+Id: fr-medication-administration-dicom
+Title: "MedicationAdministration - Fr Procedural Medication DICOM"
+Description: "FrMedicationAdministrationDICOM permet d'enregistrer l’administration de produits (hors radiopharmaceutiques) : produit administré,
 dose administrée, voie d’administration, numéro de lot, autres informations liées à l’administration d’un produit"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -23,4 +23,4 @@ dose administrée, voie d’administration, numéro de lot, autres informations 
 * medication[x] ^short = "Produit de santé administré"
 * medicationReference MS
 * medicationReference ^short = "Référence au produit de santé administré"
-* medicationReference only Reference (FrMedicationDocument) //ou bien medicationCodeableConcept
+* medicationReference only Reference (FrMedication) //ou bien medicationCodeableConcept

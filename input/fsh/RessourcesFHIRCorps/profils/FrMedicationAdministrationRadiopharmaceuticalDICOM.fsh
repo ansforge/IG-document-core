@@ -1,8 +1,8 @@
-Profile: FrAdministrationRadiopharmaceutiqueDICOM
+Profile: FrMedicationAdministrationRadiopharmaceuticalDICOM
 Parent: MedicationAdministration
 Id: fr-administration-radiopharmaceutique-dicom
-Title: "MedicationAdministration - Fr Administration radiopharmaceutique DICOM"
-Description: "FrAdministrationRadiopharmaceutiqueDICOM permet d'enregistrer l’administration de produits radiopharmaceutiques :
+Title: "MedicationAdministration - Fr Administration of​ radiopharmaceutical"
+Description: "FrMedicationAdministrationRadiopharmaceuticalDICOM permet d'enregistrer l’administration de produits radiopharmaceutiques :
 produit administré, dose administrée, voie d’administration, numéro de lot, autres informations liées à l’administration d’un produit"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -25,4 +25,4 @@ produit administré, dose administrée, voie d’administration, numéro de lot,
 * medication[x] MS
 * medication[x] ^short = "Produit radiopharmaceutique"
 * medicationReference ^short = "Référence au produit radiopharmaceutique"
-* medicationReference only Reference (FrMedicationDocument) //ou bien medicationCodeableConcept
+* medicationReference only Reference (FrMedication) //ou bien medicationCodeableConcept

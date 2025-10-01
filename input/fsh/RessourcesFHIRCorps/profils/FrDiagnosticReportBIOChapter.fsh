@@ -1,8 +1,8 @@
-Profile: FrDiagnosticReportChapitreBIO
+Profile: FrDiagnosticReportBIOChapter
 Parent: DiagnosticReport
-Id: fr-diagnostic-report-chapitre-bio
-Title: "DiagnosticReport - Fr Diagnostic Report Chapitre BIO"
-Description: "FrDiagnosticReportChapitreBIO utilisé pour représenter un CR de biologie"
+Id: fr-diagnostic-report-bio-chapter
+Title: "DiagnosticReport - Fr Diagnostic Report BIO chapter"
+Description: "FrDiagnosticReportBIOChapter utilisé pour représenter un CR de biologie"
 
 * code 1..1 MS 
 * code ^short = "Type de document"
@@ -33,12 +33,12 @@ Description: "FrDiagnosticReportChapitreBIO utilisé pour représenter un CR de 
 * subject only Reference(FrPatientINSDocument)
 
 * specimen MS
-* specimen only Reference (FrSpecimen)
+* specimen only Reference(FrSpecimen)
 * specimen ^short = "Échantillons sur lesquels repose ce compte rendu."
 
 * result 1..* MS
 * result ^short = "Résultats"
-* result only Reference (FrObservationResultatsCompteRenduDeBiologie)
+* result only Reference(FrObservationLaboratoryReportResults)
 
 * presentedForm 1..1 MS
 * presentedForm ^short = "Copie du document"

@@ -1,16 +1,16 @@
-// StructureDefinition for FrDiagnosticReportDocument
-Profile: FrDiagnosticReportDocument
+// StructureDefinition for FrDiagnosticReport
+Profile: FrDiagnosticReport
 Parent: DiagnosticReport
-Id: fr-diagnostic-report-document
-Title: "DiagnosticReport - Fr Resultats"
-Description: "FrDiagnosticReportDocument est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)."
+Id: fr-diagnostic-report
+Title: "DiagnosticReport - Fr Results"
+Description: "FrDiagnosticReport est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
 * identifier ^short = "Identifiant"
 * code MS
   * ^short = "Type de résultat. Codee n LOINC."
-* code from FrValueSetTypeResultat (required)
+* code from FrValueSetResultType (required) // VS à remplacer par le JDV ANS à créer par Alain
 * status MS
 * status ^short = "Statut"
 * status = #final
@@ -32,4 +32,4 @@ Description: "FrDiagnosticReportDocument est un profil permettant de regrouper l
 * resultsInterpreter only Reference (FrPractitionerDocument or FrPractitionerRoleDocument or FrOrganizationDocument)
 * result 1..* MS
   * ^short = "Resultat"
-* result only Reference (FrObservationResultatDocument)
+* result only Reference (FrObservationResult)

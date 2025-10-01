@@ -1,8 +1,8 @@
-Profile: FrDirectiveAnticipee
+Profile: FrAdvanceDirective
 Parent: Consent
-Id: fr-directive-anticipee
-Title: "Consent - Fr Directive anticipée"
-Description: "FrDirectiveAnticipee permet  d’indiquer si les directives anticipées du patient.
+Id: fr-advance-directive
+Title: "Consent - Fr Advance directive"
+Description: "FrAdvanceDirective permet  d’indiquer si les directives anticipées du patient.
 Article L1111-11 du Code de la Santé Publique : 
 « Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un 
 jour hors d'état d'exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne 

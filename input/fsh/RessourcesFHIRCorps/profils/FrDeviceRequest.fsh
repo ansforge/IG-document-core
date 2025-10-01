@@ -1,8 +1,8 @@
-Profile: FrDeviceRequestMedicalDevice
+Profile: FrDeviceRequest
 Parent: DeviceRequest
-Id: fr-device-request-medicaldevice
-Title: "DeviceRequest - Fr Dispositif médical"
-Description: "Représentation d'une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
+Id: fr-device-request
+Title: "DeviceRequest - Fr Medical Device request"
+Description: "FrDeviceRequest représente une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -53,18 +53,18 @@ Description: "Représentation d'une demande de dispositif médical (DM) qui n’
     EnRapportAvecLaPrevention 0..1 and
     NonRemboursable 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FrObservationEnRapportAvecALD)
+* reasonReference[EnRapportAvecALD] only Reference(FrObservationRelatedToLongTermCondition)
 * reasonReference[EnRapportAvecALD] ^short = "En rapport avec une Affection Longue Durée (ALD)"
 * reasonReference[EnRapportAvecALD]  MS
 
-* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationEnRapportAvecAccidentTravail)
+* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationWorkRelatedAccident)
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "En rapport avec accident travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationEnRapportAvecLaPrevention)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationRelatedToPrevention)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FrObservationNonRemboursable)
+* reasonReference[NonRemboursable] only Reference(FrObservationNotCovered)
 * reasonReference[NonRemboursable] ^short = "Non remboursable"
 * reasonReference[NonRemboursable] MS
