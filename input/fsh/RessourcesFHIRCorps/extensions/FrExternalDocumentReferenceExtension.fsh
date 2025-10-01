@@ -1,6 +1,6 @@
-Extension: FrDocumentReferenceExterneExtension
-Id: fr-document-reference-externe-extension
-Title: "Extension - Fr Document Reference Externe"
+Extension: FrExternalDocumentReferenceExtension
+Id: fr-external-document-reference-extension
+Title: "Extension - Fr External Document Reference"
 Description: "Extension pour représenter le document référencé externe"
 
 * ^context[0].type = #element

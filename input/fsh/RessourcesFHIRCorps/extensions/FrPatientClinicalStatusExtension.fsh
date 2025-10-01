@@ -1,6 +1,6 @@
-Extension: FrStatutCliniquePatientExtension
-Id: fr-condition-clinical-status-extension
-Title: "Extension - Statut clinique du patient"
+Extension: FrPatientClinicalStatusExtension
+Id: fr-condition-patient-clinical-status-extension
+Title: "Extension - Patient Clinical Status"
 Description: "Extension pour représenter le statut clinique du patient avec le jeu de valeurs français CISIS."
 * ^context.type = #element
 * ^context.expression = "Condition"

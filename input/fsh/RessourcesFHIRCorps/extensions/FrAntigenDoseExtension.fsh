@@ -1,6 +1,6 @@
-Extension: FrDoseAntigeneExtension
-Id: fr-dose-antigene-extension
-Title: "Extension - Fr Dose Antigene"
+Extension: FrAntigenDoseExtension
+Id: fr-antigen-dose-extension
+Title: "Extension - Fr Antigen Dose"
 Description: "Extension complexe pour représenter un consommable (FrMedication) et une doseQuantity dans Immunization."
 * ^status = #active
 * ^context.type = #element
@@ -10,4 +10,4 @@ Description: "Extension complexe pour représenter un consommable (FrMedication)
     consumable 1..1
 * extension[doseQuantity].valueQuantity
 //* extension[consumable].valueReference 1..1
-* extension[consumable].valueReference only Reference(FrMedicationDocument)
+* extension[consumable].valueReference only Reference(FrMedication)
