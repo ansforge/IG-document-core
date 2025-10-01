@@ -6,5 +6,3 @@ Description: "Extension représentant le type de vaccination (ex: INITIMMUNIZ, B
 * ^context.expression = "Immunization"
 
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-* valueCodeableConcept from FrValueSetVaccinationType (required)

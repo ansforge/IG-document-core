@@ -13,7 +13,6 @@ Description: "
   * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
 * category MS
   * ^short = "Acte ou situation"
-* category from FrValueSetMedicationAdministrationCategory (preferred)
 * status 1..1 MS
   * ^short = "Statut"
 * status = #completed

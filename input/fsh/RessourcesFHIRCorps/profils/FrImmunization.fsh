@@ -29,14 +29,25 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * site from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-approach-site-code-cisis (required)
 * doseQuantity MS 
 * doseQuantity ^short = "Dose administrée"
+
 // produit de santé
+* vaccineCode.coding ^slicing.discriminator.type = #value
+* vaccineCode.coding ^slicing.discriminator.path = "system"
+* vaccineCode.coding ^slicing.rules = #open
+* vaccineCode.coding ^slicing.description = "Slice CIS et autres codifications"
+
 * vaccineCode MS
 * vaccineCode only FrDocumentCodeableConcept
 * vaccineCode ^short = "Vaccin. Code du produit de santé"
-* vaccineCode from FrValueSetCodeProduit (required)
-* vaccineCode obeys Immu-VaccineCodeConstraint
-// translation (autres codifications)
-* vaccineCode.coding.system from FrValueSetVaccineTranslation (required)
+// Slice CIS obligatoire
+* vaccineCode.coding contains cis 1..1
+* vaccineCode.coding[cis].system 1..1
+* vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1" (exactly)
+
+// Slice (autres codifications)
+* vaccineCode.coding contains translation 0..*
+* vaccineCode.coding[translation].system 1..1
+* vaccineCode.coding[translation].system from FrValueSetVaccineTranslation (required)
 
 //Nom de marque du produit : Extension IHE
 * extension contains $ihe-ext-medication-productname named productName 1..1 MS
@@ -82,8 +93,3 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 
 * note 0..1 MS
   * ^short = "Commentaire"
-
-Invariant: Immu-VaccineCodeConstraint
-Description: "Permet soit de ne pas renseigner vaccineCode, soit de renseigner un code ATC ou CIS dans les ressources : ImmunizationR et ImmunizationRecommendation"
-Expression: "empty() or coding.exists(system = 'urn:oid:2.16.840.1.113883.6.73' or system = 'urn:oid:1.2.250.1.213.2.3.1')"
-Severity: #warning

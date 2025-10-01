@@ -15,7 +15,6 @@ Description: "
 * partOf only Reference(FrMedicationAdministration)
 * category MS
   * ^short = "Acte ou situation"
-* category from FrValueSetMedicationAdministrationCategory (preferred)
 * status 1..1 MS
   * ^short = "Statut"
 * status = #completed

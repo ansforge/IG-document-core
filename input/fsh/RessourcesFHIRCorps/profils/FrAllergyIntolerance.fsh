@@ -26,8 +26,6 @@ Description: "FrAllergyIntolerance est un profil utilisé pourdécrire une aller
 
 * verificationStatus MS
 * verificationStatus ^short = "Certitude"
-* verificationStatus from FrValueSetAllergieIntoleranceVerificationStatus
-//* verificationStatus from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis
 
 * clinicalStatus MS
 * clinicalStatus ^short = "Statut clinique"

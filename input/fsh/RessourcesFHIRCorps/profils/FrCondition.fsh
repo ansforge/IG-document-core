@@ -16,8 +16,6 @@ Description: "FrCondition est un profil utilisé pour décrire un problème du p
 
 * verificationStatus MS
 * verificationStatus ^short = "Certitude"
-* verificationStatus from FrValueSetConditionVerificationStatus
-//* verificationStatus from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis
 
 * category 1..1 MS
 * category ^short = "Type d'observation"

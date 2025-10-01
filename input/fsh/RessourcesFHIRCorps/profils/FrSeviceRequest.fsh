@@ -14,8 +14,6 @@ Si la demande fait partie d'un plan de soins : 'INT = order'
 Si la demande est une proposition : 'PRP = proposal'
 Si la demande est un objectif à atteindre : 'GOL = plan'
 """
-* intent from FrValueSetRequestIntent (required)
-
 * code 1..1 MS
 * code ^short = "Type de la demande"
 * code.coding ^short = "Type de la demande : Si aucun code n'est trouvé dans des terminologies existantes, utiliser le code : GEN-092.04.20 'Autre demande d’examen ou de suivi'"

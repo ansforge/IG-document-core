@@ -20,14 +20,24 @@ Description: "FrImmunizationRecommendation permet de décrire une vaccination pr
   * forecastStatus = #complete
   * dateCriterion 1..1 
     * value ^short = "Période de vaccination souhaitable"
-// produit de santé
+  // produit de santé
+  * vaccineCode.coding ^slicing.discriminator.type = #value
+  * vaccineCode.coding ^slicing.discriminator.path = "system"
+  * vaccineCode.coding ^slicing.rules = #open
+  * vaccineCode.coding ^slicing.description = "Slice CIS et autres codifications"
+
   * vaccineCode MS
   * vaccineCode only FrDocumentCodeableConcept
   * vaccineCode ^short = "Vaccin. Code du produit de santé"
-  * vaccineCode from FrValueSetCodeProduit (required)
-// translation (autres codifications)
-  * vaccineCode.coding.system from FrValueSetVaccineTranslation (required)
-  * vaccineCode obeys Recomm-Immu-VaccineCodeConstraint
+  // Slice CIS obligatoire
+  * vaccineCode.coding contains cis 1..1
+  * vaccineCode.coding[cis].system 1..1
+  * vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1" (exactly)
+
+  // Slice (autres codifications)
+  * vaccineCode.coding contains translation 0..*
+  * vaccineCode.coding[translation].system 1..1
+  * vaccineCode.coding[translation].system from FrValueSetVaccineTranslation (required)
 
  // Référence vers le profil FrVaccinationDocument
   * supportingImmunization only Reference(FrImmunization)
@@ -45,8 +55,3 @@ Description: "FrImmunizationRecommendation permet de décrire une vaccination pr
 */
  // Prescription 
 * extension contains FrPrescriptionExtension named prescription 0..1
-
-Invariant: Recomm-Immu-VaccineCodeConstraint
-Description: "Permet soit de ne pas renseigner vaccineCode, soit de renseigner un code ATC ou CIS dans les ressources : ImmunizationR et ImmunizationRecommendation"
-Expression: "empty() or coding.exists(system = 'urn:oid:2.16.840.1.113883.6.73' or system = 'urn:oid:1.2.250.1.213.2.3.1')"
-Severity: #warning
