@@ -1,10 +1,4 @@
 // Extensions
-Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
-Alias: $ihe-ext-medication-productname = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-productname
-Alias: $ihe-ext-medication-classification = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-classification
-Alias: $ihe-ext-medication-characteristic = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-characteristic
-Alias: $performerFunction =  http://hl7.org/fhir/StructureDefinition/event-performerFunction
-
 //Alias: $qualifier = http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier
 
 // JDV
@@ -22,11 +16,7 @@ Alias: $JDV_J141-RoleClass-CISIS = https://mos.esante.gouv.fr/NOS/JDV_J141-RoleC
 Alias: $jdv-type-systeme-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis
 Alias: $jdv-j368-categorie-etablissement-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis
 Alias: $jdv-role-informateur-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-role-informateur-cisis
-Alias: $jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
-Alias: $jdv-absent-or-unknown-immunization-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-absent-or-unknown-immunization-cisis
-Alias: $jdv-immunization-route-code-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-route-code-cisis
-//terminologie-cisis
-Alias: $terminologie-cisis = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis
+
 // TRE 
 Alias: $TRE_R66-CategorieEtablissement = https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement
 Alias: $TRE_G13-OrientationParticuliere = https://mos.esante.gouv.fr/NOS/TRE_G13-OrientationParticuliere/FHIR/TRE-G13-OrientationParticuliere
