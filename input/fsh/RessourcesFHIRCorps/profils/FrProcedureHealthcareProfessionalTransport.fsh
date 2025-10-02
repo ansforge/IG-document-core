@@ -16,7 +16,7 @@ Description: "FrProcedureHealthcareProfessionalTransport permet de décrire le t
 * code.coding.extension[qualifier].extension[name] 1..1 
 * code.coding.extension[qualifier].extension[name].valueCodeableConcept = $terminologie-cisis#GEN-346 "Type de motorisation"
 * code.coding.extension[qualifier].extension[value] 1..1
-* code.coding.extension[qualifier].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis
+* code.coding.extension[qualifier].extension[value].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-motorisation-cisis
 
 * performedDateTime 1..1 MS 
   * ^short = "Date du transport"	

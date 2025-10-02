@@ -1,6 +1,6 @@
 ValueSet: FrValueSetVaccineTranslation
-Id: fr-doc-vs-vaccine-translation
-Title: "Fr ValueSet Vaccine-Translation pour les autres codifications"
+Id: fr-vs-vaccine-translation
+Title: "Fr ValueSet - Vaccine Translation pour les autres codifications"
 Description: "Systèmes autorisés pour les autres codifications (équivalent CDA translation)."
 
 * include codes from system urn:oid:1.2.250.1.213.2.3.2       // CIP : Code Identifiant de Présentation
