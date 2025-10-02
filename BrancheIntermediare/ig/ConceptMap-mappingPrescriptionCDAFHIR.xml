@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingPrescriptionCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CarteDeConcepts mappingPrescriptionCDAFHIR</b></p><a name="mappingPrescriptionCDAFHIR"> </a><a name="hcmappingPrescriptionCDAFHIR"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Prescription.html">Modèle métier - Association du document à une prescription</a> to <a href="StructureDefinition-fr-core-inFulfillment-of.html">CDA - inFulfillmentOf</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>Prescription</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf</td></tr><tr><td>Prescription.identifiantPrescription</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf.order.id</td></tr><tr><td>Prescription.accessionNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf.order.ps3-20:accessionNumber</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-fr-core-inFulfillment-of.html">CDA - inFulfillmentOf</a> to <a href="http://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/StructureDefinition-OrderExtension.html">Order Extension</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>inFulfillmentOf</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:OrderExtension</td></tr><tr><td>inFulfillmentOf.order.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:OrderExtension.ValueReference.ServiceRequest.identifier</td></tr><tr><td>inFulfillmentOf.order.ps3-20:accessionNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:OrderExtension.ValueReference.ServiceRequest.identifier</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPrescriptionCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-10-02T10:04:13+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prescription\&quot; et l'élément CDA \&quot;inFulfillmentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;inFulfillmentOf\&quot; et l'extension FHIR \&quot;OrderExtension\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of"/>
+    <element>
+      <code value="Prescription"/>
+      <target>
+        <code value="inFulfillmentOf"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.identifiantPrescription"/>
+      <target>
+        <code value="inFulfillmentOf.order.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.accessionNumber"/>
+      <target>
+        <code value="inFulfillmentOf.order.ps3-20:accessionNumber"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of"/>
+    <target value="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension"/>
+    <element>
+      <code value="inFulfillmentOf"/>
+      <target>
+        <code value="extension:OrderExtension"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="inFulfillmentOf.order.id"/>
+      <target>
+        <code value="extension:OrderExtension.ValueReference.ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="inFulfillmentOf.order.ps3-20:accessionNumber"/>
+      <target>
+        <code value="extension:OrderExtension.ValueReference.ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
