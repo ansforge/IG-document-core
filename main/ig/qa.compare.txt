@@ -1,7 +1,7 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 219, warn = 739, info = 1074
+err = 218, warn = 739, info = 1074
 $--
 Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https://interop.esante.gouv.fr/ig/document/core)
  Build Errors : 3 / 3 / 0
@@ -22,7 +22,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingPriseEnchargeCDAFHIR : 0 / 6 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingResponsableCDAFHIR : 0 / 5 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingStructureConservationCDAFHIR : 0 / 5 / 1
- /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingSystemeFHIR : 0 / 6 / 1
+ /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingSystemeFHIR : 0 / 7 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingValidateurCDAFHIR : 0 / 5 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingmodelemetierCDAFHIR : 0 / 8 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ImplementationGuide-ans.document.fr.core : 74 / 3 / 1
@@ -82,7 +82,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-represented-custodian-organization : 2 / 3 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-represented-organization : 2 / 6 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-core-service-event : 2 / 4 / 1
- /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-device-document : 1 / 2 / 1
+ /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-device-auteur-document : 0 / 1 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-encounter-document : 0 / 8 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-human-name-document : 0 / 6 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-location-document : 0 / 3 / 1
@@ -225,6 +225,7 @@ WARNING: ConceptMap/mappingStructureConservationCDAFHIR: ConceptMap.group[1].sou
 WARNING: ConceptMap/mappingStructureConservationCDAFHIR: ConceptMap.group[1].target: The Target Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
 == fsh-generated/resources/ConceptMap-mappingSystemeFHIR.json ==
 WARNING: ConceptMap/mappingSystemeFHIR: ConceptMap.group[0].source: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Systeme'
+WARNING: ConceptMap/mappingSystemeFHIR: ConceptMap.group[1].target: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document'
 WARNING: ConceptMap/mappingSystemeFHIR: ConceptMap: Constraint failed: cmd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))'
 WARNING: ConceptMap/mappingSystemeFHIR: ConceptMap.group[0].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Systeme is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 WARNING: ConceptMap/mappingSystemeFHIR: ConceptMap.group[0].target: The Target Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
@@ -611,10 +612,8 @@ ERROR: StructureDefinition/fr-core-service-event: StructureDefinition.snapshot: 
 WARNING: StructureDefinition/fr-core-service-event: StructureDefinition.snapshot.element[54].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer' to 'http://terminology.hl7.org/ValueSet/v3-xServiceEventPerformer|3.0.0'
 WARNING: StructureDefinition/fr-core-service-event: StructureDefinition.snapshot.element[67].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity' to 'http://terminology.hl7.org/ValueSet/v3-RoleClassAssignedEntity|3.0.0'
 WARNING: StructureDefinition/fr-core-service-event: StructureDefinition.snapshot.element[75].binding.valueSet: There are multiple different potential matches for the url 'https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '20250721120000', found versions: 1.3.0, 1.5.0, 20250721120000. Suggested fix: change the canonical reference from 'https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS' to 'https://mos.esante.gouv.fr/NOS/JDV_J01-XdsAuthorSpecialty-CISIS/FHIR/JDV-J01-XdsAuthorSpecialty-CISIS|20250721120000'
-== fsh-generated/resources/StructureDefinition-fr-device-document.json ==
-ERROR: Fr Device Document.Device.type: Binding https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-systeme-cisis is not a subset of binding https://mos.esante.gouv.fr/NOS/JDV_J135-EquipementMaterielLourd-RASS/FHIR/JDV-J135-EquipementMaterielLourd-RASS because The codes 'ALIM_AM,DISPOSITIF,AUTOMATE,SNR,LOGICIEL_DUI' are not in the base valueset
-WARNING: StructureDefinition/fr-device-document: StructureDefinition.snapshot: The slice 'numAutorisationArhgos' on path 'Device.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-fr-device-auteur-document.json ==
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-fr-encounter-document.json ==
 WARNING: StructureDefinition/fr-encounter-document: StructureDefinition.snapshot.element[24].example[1].value.ofType(uri): No definition could be found for URL value '1.2.250.1.71.4.2.2.1330780321'
 WARNING: StructureDefinition/fr-encounter-document: StructureDefinition.snapshot.element[24].example[2].value.ofType(uri): No definition could be found for URL value 'http://hopitalTest.fr/fhir/namingsystem/encounters'
