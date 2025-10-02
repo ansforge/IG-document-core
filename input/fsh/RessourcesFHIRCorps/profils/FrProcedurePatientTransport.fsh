@@ -1,7 +1,7 @@
 // StructureDefinition for FrProcedurePatientTransport
 Profile: FrProcedurePatientTransport
 Parent: Procedure
-Id: fr-procedurede-patient-transport
+Id: fr-procedure-patient-transport
 Title: "Procedure - Fr Patient Transport"
 Description: "FrProcedurePatientTransport permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
 
