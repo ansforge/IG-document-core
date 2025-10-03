@@ -1,4 +1,4 @@
-Extension: FrBodySiteExtension
+Extension: FrFamilyMemberHistoryBodySiteExtension
 Id: fr-body-site-extension
 Title: "Extension - Fr Body Site Extension"
 Description: "Extension pour indiquer la localisation anatomique d'une condition dans antécédents familiaux"
@@ -6,5 +6,4 @@ Description: "Extension pour indiquer la localisation anatomique d'une condition
 * ^context[+].type = #element
 * ^context[=].expression = "FamilyMemberHistory"
 * value[x] only CodeableConcept
-//* valueCodeableConcept from FrValueSetBodySite (extensible)
-* valueCodeableConcept.coding.system = "http://snomed.info/sct" (exactly)
+* valueCodeableConcept.coding.system = "http://snomed.info/sct"

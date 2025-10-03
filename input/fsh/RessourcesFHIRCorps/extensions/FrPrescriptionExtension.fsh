@@ -3,8 +3,14 @@ Id: fr-prescription-extension
 Title: "Extension - Fr Prescription"
 Description: "Extension permettant d’indiquer les instructions de prescription associées à l'administration du produit de santé."
 * ^status = #active
-* ^context.type = #element
-* ^context.expression = "Resource"
+* ^context[+].type = #element
+* ^context[=].expression = "Immunization"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "ImmunizationRecommandation"
 
 // extension complexe
 * extension contains

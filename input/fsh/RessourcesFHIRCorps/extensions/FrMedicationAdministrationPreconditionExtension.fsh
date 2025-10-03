@@ -1,5 +1,5 @@
 // Précondition : extension URL
-Extension: FrPreconditionExtension
+Extension: FrMedicationAdministrationPreconditionExtension
 Id: fr-precondition-extension
 Title: "Extension - Fr Administration Precondition"
 Description: "Extension permettant d'indiquer le lien vers la description narrative des conditions préalables dans le document."

@@ -1,4 +1,4 @@
-Extension: FrScoreExtension
+Extension: FrProcedureScoreExtension
 Id: fr-score-extension
 Title: "Extension - Fr Procedure associated score"
 Description: "Extension permettant de référencer un ou plusieurs scores cliniques liés à l'acte (ex: score d'ASA, score de Glasgow)."
