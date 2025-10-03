@@ -26,8 +26,8 @@ dependencies:
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.extensions.r5: 4.0.1
   ans.fhir.fr.annuaire: 1.1.0
-  hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
-  
+  hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot
+
 pages:
     index.md:
         title: Accueil
@@ -164,8 +164,8 @@ groups:
       - StructureDefinition/fr-core-encounter-participant
       - StructureDefinition/fr-core-health-care-facility
 
-  Ressources FHIR:
-    name: Profils FHIR
+  Ressources FHIR entête:
+    name: Profils FHIR entête
     resources:
       - StructureDefinition/fr-bundle-document
       - StructureDefinition/fr-composition-document
@@ -183,13 +183,45 @@ groups:
     name: Data Type Profiles 
     resources:
       - StructureDefinition/fr-human-name-document
+      - StructureDefinition/fr-document-codeableConcept
+      - StructureDefinition/fr-document-coding
 
-  Extensions FHIR:
-    name: Extensions FHIR
+  Extensions FHIR entête:
+    name: Extensions FHIR entête
     resources:
       - StructureDefinition/fr-author-time
       - StructureDefinition/fr-performer-event
-      
+
+  Extensions FHIR corps:
+    name: Extensions FHIR corps
+    resources:
+      - StructureDefinition/fr-actor-extension
+      - StructureDefinition/fr-body-site-extension
+      - StructureDefinition/fr-difficulte-extension
+      - StructureDefinition/fr-interpretation-extension
+      - StructureDefinition/fr-method-extension
+      - StructureDefinition/fr-priority-extension
+      - StructureDefinition/fr-qualifier-extension
+      - StructureDefinition/fr-score-extension
+      - StructureDefinition/fr-condition-clinical-status-extension
+      - StructureDefinition/fr-autres-precision-extension
+      - StructureDefinition/fr-dispenser-instruction-extension
+      - StructureDefinition/fr-document-reference-externe-extension
+      - StructureDefinition/fr-dose-antigene-extension
+      - StructureDefinition/fr-evenement-caracteristique-extension
+      - StructureDefinition/fr-precondition-extension
+      - StructureDefinition/fr-prescription-extension
+      - StructureDefinition/fr-reference-interne-extension
+      - StructureDefinition/fr-repeat-number-extension
+      - StructureDefinition/fr-sequence-extension
+      - StructureDefinition/fr-vaccination-type-extension
+      - StructureDefinition/fr-administration-frequency
+      - StructureDefinition/fr-nom-substance
+      - StructureDefinition/fr-transport-professionnel-extension
+      - StructureDefinition/fr-transport-patient-extension
+      - StructureDefinition/fr-procedure-from-location
+      - StructureDefinition/fr-procedure-to-location
+
   Mapping:
     name: Concept Maps
     resources:
@@ -213,7 +245,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
       - mappingAdministrativeGender
-      
+
 resources:
   Binary/BIO-CR-BIO-2024.01-glycemie-mole:
     name: BIO-CR-BIO_2024.01_Glycemie_mole
@@ -256,4 +288,3 @@ resources:
     description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
     exampleBoolean: true
     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
-    
