@@ -3,14 +3,14 @@
   "id" : "ans.document.fr.core",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><a name=\"ans.document.fr.core-fr-FR\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core",
   "version" : "0.1.0",
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-06-05T15:38:56+00:00",
+  "date" : "2025-10-06T12:29:55+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -37,7 +37,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.4.0"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -56,10 +56,10 @@
     "version" : "2.0.0-sd"
   },
   {
-    "id" : "ans_fr_nos",
-    "uri" : "https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos",
-    "packageId" : "ans.fr.nos",
-    "version" : "1.4.0"
+    "id" : "ans_fr_terminologies",
+    "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
+    "packageId" : "ans.fr.terminologies",
+    "version" : "1.2.0"
   },
   {
     "id" : "hl7_fhir_fr_core",
@@ -106,6 +106,17 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
       },
       {
         "url" : "value",
@@ -368,7 +379,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
     },
     {
       "extension" : [{
@@ -396,6 +407,17 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
       },
       {
         "url" : "value",
@@ -1237,8 +1259,8 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-core-name"
       },
-      "name" : "CDA - name",
-      "description" : "L'élément de l'en-tête du CDA name correspond au nom d'une personne physique.",
+      "name" : "CDA - Name",
+      "description" : "L'élément de l'en-tête du CDA  correspond au nom d'une personne physique.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources CDA"
     },
@@ -2145,7 +2167,7 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-device-document"
+        "reference" : "StructureDefinition/fr-device-auteur-document"
       },
       "name" : "Fr Device Document",
       "description" : "Ce profil représente le système auteur du document.",
@@ -2315,18 +2337,6 @@
       },
       "name" : "Fr ValueSet Savoir-faire Profession Infirmier",
       "description" : "Savoir-faire pour la profession 60 (Infirmier)",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-medecin"
-      },
-      "name" : "Fr ValueSet Savoir-faire Profession Medecin",
-      "description" : "Savoir-faire pour la profession 10 (Médecin)",
       "exampleBoolean" : false
     },
     {
@@ -4039,6 +4049,69 @@
       "description" : "Modèle logique métier Échantillon prélevé",
       "exampleBoolean" : false,
       "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/IPS-FR-2024.01"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/LDL-SES-2022.01"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eDISP-MED-2024.01"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
+      }
     }],
     "page" : {
       "extension" : [{
@@ -4221,6 +4294,14 @@
       }]
     },
     "parameter" : [{
+      "code" : "generate-turtle",
+      "value" : "false"
+    },
+    {
+      "code" : "generate-json",
+      "value" : "false"
+    },
+    {
       "code" : "path-resource",
       "value" : "input/capabilities"
     },

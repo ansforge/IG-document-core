@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ans.document.fr.core"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name="ans.document.fr.core"> </a><a name="hcans.document.fr.core"> </a><a name="ans.document.fr.core-fr-FR"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name="ans.document.fr.core"> </a><a name="hcans.document.fr.core"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core"/>
   <version value="0.1.0"/>
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-06-05T15:38:56+00:00"/>
+  <date value="2025-10-06T12:29:55+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.4.0"/>
+    <version value="6.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -50,10 +50,10 @@
     <packageId value="hl7.cda.uv.core"/>
     <version value="2.0.0-sd"/>
   </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.4.0"/>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
@@ -90,6 +90,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -280,7 +288,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -301,6 +309,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueCode value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -1019,8 +1035,8 @@
       <reference>
         <reference value="StructureDefinition/fr-core-name"/>
       </reference>
-      <name value="CDA - name"/>
-      <description value="L'élément de l'en-tête du CDA name correspond au nom d'une personne physique."/>
+      <name value="CDA - Name"/>
+      <description value="L'élément de l'en-tête du CDA  correspond au nom d'une personne physique."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
     </resource>
@@ -1857,7 +1873,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-device-document"/>
+        <reference value="StructureDefinition/fr-device-auteur-document"/>
       </reference>
       <name value="Fr Device Document"/>
       <description value="Ce profil représente le système auteur du document."/>
@@ -2014,17 +2030,6 @@
       </reference>
       <name value="Fr ValueSet Savoir-faire Profession Infirmier"/>
       <description value="Savoir-faire pour la profession 60 (Infirmier)"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/fr-doc-vs-savoir-faire-profession-medecin"/>
-      </reference>
-      <name value="Fr ValueSet Savoir-faire Profession Medecin"/>
-      <description value="Savoir-faire pour la profession 10 (Médecin)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -3606,6 +3611,62 @@
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-glycemie-mole"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/IPS-FR-2024.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/LDL-SES-2022.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eDISP-MED-2024.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoNonStruct"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoStruct"/>
+      </reference>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -3766,6 +3827,14 @@
         </page>
       </page>
     </page>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="false"/>
+    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>
