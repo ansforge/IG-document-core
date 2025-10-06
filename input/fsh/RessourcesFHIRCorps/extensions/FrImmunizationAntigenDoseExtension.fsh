@@ -1,4 +1,4 @@
-Extension: FrAntigenDoseExtension
+Extension: FrImmunizationAntigenDoseExtension
 Id: fr-antigen-dose-extension
 Title: "Extension - Fr Antigen Dose"
 Description: "Extension complexe pour représenter un consommable (FrMedication) et une doseQuantity dans Immunization."

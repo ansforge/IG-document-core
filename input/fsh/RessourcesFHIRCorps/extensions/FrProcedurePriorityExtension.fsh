@@ -1,4 +1,4 @@
-Extension: FrPriorityExtension
+Extension: FrProcedurePriorityExtension
 Id: fr-priority-extension
 Title: "Extension - Fr Priority"
 Description: "Extension permettant d’indiquer d'indique la priorité clinique de l’observation."
