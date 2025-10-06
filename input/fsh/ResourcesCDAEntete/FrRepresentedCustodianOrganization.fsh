@@ -5,7 +5,6 @@ Id: fr-core-represented-custodian-organization
 Title: "CDA - representedCustodianOrganization"
 Description: "L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."
 * ^status = #draft
-* classCode 0..0
 * determinerCode 0..0
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0 

@@ -9,6 +9,5 @@ Description: "L'élément de l'en-tête du CDA documentationOf permet de représ
 * typeId.nullFlavor 0..0
 * typeId.assigningAuthorityName 0..0
 * typeId.displayable 0..0
-* typeCode 0..0
 * serviceEvent only fr-core-service-event
 * serviceEvent ^short = "Évènement documenté"

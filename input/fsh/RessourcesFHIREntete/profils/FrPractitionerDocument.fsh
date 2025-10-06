@@ -28,7 +28,6 @@ Description: "Ce profil permet de décrire un professionnel de santé dans le ca
 * qualification[savoirFaire][professionMedecin].code.coding ^slicing.discriminator.path = "$this"
 * qualification[savoirFaire][professionMedecin].code.coding ^slicing.rules = #closed
 * qualification[savoirFaire][professionMedecin].code.coding contains savoirFaire 0..1
-* qualification[savoirFaire][professionMedecin].code.coding[savoirFaire] from FRValueSetSavoirFaireProfessionMedecin (required)
 
 * qualification[savoirFaire][professionMedecin].code.coding contains typeSavoirFaire 0..1
 * qualification[savoirFaire][professionMedecin].code.coding[typeSavoirFaire] from FRValueSetTypeSavoirFaireProfessionMedecin (required)
