@@ -1,4 +1,5 @@
 // StructureDefinition for FrMedicationRequest
+// Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
 Profile: FrMedicationRequest
 Parent: MedicationRequest
 Id: fr-medication-request
