@@ -25,4 +25,4 @@ Description: "FrObservationDischargeDisposition Observation décrivant la modali
 * performer MS
 * performer.extension contains FrActorExtension named author 0..*
 * performer.extension[author] ^short = "Participation d'un auteur au document"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT

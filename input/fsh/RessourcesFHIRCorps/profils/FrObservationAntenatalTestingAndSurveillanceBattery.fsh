@@ -16,7 +16,7 @@ Description: "FrObservationAntenatalTestingAndSurveillanceBattery permet de list
 * performer MS
 * performer.extension contains FrActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 * component MS

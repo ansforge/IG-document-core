@@ -33,7 +33,7 @@ Si l'auteur n'est pas le patient :Valeur issue du https://mos.esante.gouv.fr/NOS
 * performer MS
 * performer.extension contains FrActorExtension named author 0..1
 * performer.extension[author] ^short = "Auteur"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.extension[author].extension[actor] ^short = "Dans code[functionCode] de FrPractitionerRoleDocument on trouve le rôle fonctionnel de l'auteur :
 Si l'auteur est le patient/usager : ne pas utiliser l'élément code[functionCode]

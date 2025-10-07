@@ -21,4 +21,4 @@ Description: "FrObservationAdmissionMode Observation décrivant la modalité d'e
 * performer MS
 * performer.extension contains FrActorExtension named author 0..*
 * performer.extension[author] ^short = "Participation d'un auteur au document"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT

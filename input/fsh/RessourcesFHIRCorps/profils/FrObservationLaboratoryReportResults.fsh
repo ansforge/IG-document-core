@@ -73,21 +73,21 @@ Description: "FrObservationLaboratoryReportResults décrit un résultat d’exam
 // laboratoire executant
 * performer.extension[laboratoireExecutant] MS
 * performer.extension[laboratoireExecutant] ^short = "Laboratoire exécutant"
-* performer.extension[laboratoireExecutant].extension[type].valueCode = #PRF (exactly)
+* performer.extension[laboratoireExecutant].extension[type].valueCode = #PRF
 * performer.extension[laboratoireExecutant].extension[actor].valueReference only Reference(FrOrganizationDocument)
 * performer.extension[laboratoireExecutant].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
 // auteur
 * performer.extension[auteur] MS
 * performer.extension[auteur] ^short = "Auteur"
-* performer.extension[auteur].extension[type].valueCode = #AUT (exactly)
+* performer.extension[auteur].extension[type].valueCode = #AUT
 * performer.extension[auteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 
 // Validateur de résultats
 * performer.extension[validateurResultat] MS
 * performer.extension[validateurResultat] ^short = "Validateur de résultats"
-* performer.extension[validateurResultat].extension[type].valueCode = #PART (exactly)
+* performer.extension[validateurResultat].extension[type].valueCode = #PART
 * performer.extension[validateurResultat].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.extension[validateurResultat].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 * performer.extension[validateurResultat].extension[typeCode].valueCodeableConcept.coding.code = #AUTHEN
@@ -95,14 +95,14 @@ Description: "FrObservationLaboratoryReportResults décrit un résultat d’exam
 // Responsable de l'examen
 * performer.extension[responsableExamen] MS
 * performer.extension[responsableExamen] ^short = "Responsable de l'évaluation"
-* performer.extension[responsableExamen].extension[type].valueCode = #PART (exactly)
+* performer.extension[responsableExamen].extension[type].valueCode = #PART
 * performer.extension[responsableExamen].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.extension[responsableExamen].extension[typeCode].valueCodeableConcept.coding.code = #RESP
 
 // Dispositif automatique
 * performer.extension[dispositifAuto] MS
 * performer.extension[dispositifAuto] ^short = "Dispositif automatique"
-* performer.extension[dispositifAuto].extension[type].valueCode = #PART (exactly)
+* performer.extension[dispositifAuto].extension[type].valueCode = #PART
 * performer.extension[dispositifAuto].extension[actor].valueReference only Reference(Device)
 * performer.extension[dispositifAuto].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 * performer.extension[dispositifAuto].extension[typeCode].valueCodeableConcept.coding.code = #DEV

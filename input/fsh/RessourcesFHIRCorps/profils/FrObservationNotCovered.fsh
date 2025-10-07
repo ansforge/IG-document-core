@@ -21,7 +21,7 @@ value='false' : le traitement prescrit est remboursable
 * performer MS
 * performer.extension contains FrActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur de l’observation"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
     FrPractitionerRoleDocument 
     or FrOrganizationDocument 
