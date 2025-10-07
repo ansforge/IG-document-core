@@ -21,7 +21,7 @@ Description: "DocumentReference restreint pour les documents PDF."
 * type 1..1 MS
 * type  ^short = "type du document"
 * type.extension contains http://hl7.org/fhir/StructureDefinition/data-absent-reason named dataAbsentReason 0..1
-    * ^short = "Type absent pour les documents référencés externes et internes"
+* type.extension[dataAbsentReason] ^short = "Type absent pour les documents référencés externes et internes"
 
 * date MS
 * date ^short = "Quand cette référence a été créée"
@@ -35,8 +35,8 @@ Description: "DocumentReference restreint pour les documents PDF."
 * content.attachment.url ^short = "URI"
 
 * context.encounter MS
-    * ^short = "Contexte clinique du document" 
+    ^short = "Contexte clinique du document" 
 * context.encounter = Reference(FrEncounterEvent)
 
 * context.related MS
-    * ^short = "Ressources ou identifiants liés" 
+    ^short = "Ressources ou identifiants liés" 
