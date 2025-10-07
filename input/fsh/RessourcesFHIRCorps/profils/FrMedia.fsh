@@ -36,7 +36,7 @@ Description: "FrMedia permet de positionner une image de type gif, jpeg, png ou 
 
 * operator.extension[author] ^short = "Auteur du média"
 * operator.extension[author].extension[type].valueCode = #AUT
-* operator.extension[author].extension[actor].valueReference only Reference(FrDeviceDocument or FrPractitionerRoleDocument)
+* operator.extension[author].extension[actor].valueReference only Reference(FrDeviceAuteurDocument or FrPractitionerRoleDocument)
 
 * operator.extension[informant] ^short = "Informateur"
 * operator.extension[informant].extension[type].valueCode = #INF
