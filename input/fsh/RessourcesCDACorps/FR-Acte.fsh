@@ -13,6 +13,10 @@ Description: """L'entrée 'Acte' est une entrée de type 'procedure' décrivant 
   - moodCode='EVN'
   - negationInd='true' si l'acte n'a pas eu lieu
   - negationInd='false' si l'acte a eu lieu (valeur par défaut)"
+* classCode 1..1 
+* classCode = #OBS
+* moodCode 1..1 
+* moodCode = #EVN
 * negationInd 0..0
 
 //* templateId 1..4
@@ -117,6 +121,7 @@ Description: """L'entrée 'Acte' est une entrée de type 'procedure' décrivant 
       * qualifier 0..0
       * translation	0..0
     * value 1..1
+    * value only CD
       //* code from  jdv-modificateur-topographique-cisis
 * subject 0..0	
 * specimen	0..0
