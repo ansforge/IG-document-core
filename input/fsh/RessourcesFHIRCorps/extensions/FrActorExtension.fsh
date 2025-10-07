@@ -20,5 +20,5 @@ Description: "Extension pour représenter un acteur impliqué dans le document a
 * extension[typeCode] ^short = "Type de participation"
 
 // Sous-extension actor
-* extension[actor].value[x] only Reference(FrPractitionerRoleDocument or Device or FrDeviceDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* extension[actor].value[x] only Reference(FrPractitionerRoleDocument or Device or FrDeviceAuteurDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 * extension[actor] ^short = "Référence vers le rôle du praticien dans le document"
