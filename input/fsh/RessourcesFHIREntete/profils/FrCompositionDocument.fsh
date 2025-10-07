@@ -73,7 +73,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * author MS
 * author ^short = "Auteur du document"
 * author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
-* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
+* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceAuteurDocument)
 * author.extension contains fr-author-time named time 1..1
 
 // Responsable du document : legalAuthenticator
@@ -137,7 +137,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 /// INVARIANTS
 Invariant:  comp-1
 Description: "La valeur de l'extension versionNumber doit être un entier."
-Expression:  "value.matches('^1[0-9]{9}$')"
+Expression:  "value.matches('^[0-9]+$')" 
 Severity:    #error
 
 Invariant: comp-3
