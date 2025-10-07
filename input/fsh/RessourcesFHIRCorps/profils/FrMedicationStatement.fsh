@@ -21,15 +21,14 @@ Description: "
 * effective[x] only Period
 * effectivePeriod MS
   * ^short = "Durée du traitement"
-// R5 : occurenceTiming
-// Fréquence d'administration
 
 * dosage MS
+  * timing MS
+  * timing ^short = "Fréquence d'administration"
   // Dosages progressifs, fractionnés 
   * sequence MS
   // Dosages conditionnels
   * asNeeded[x] MS 
-  * extension contains FrAdministrationFrequency named frequenceAdministration 0..1
   * route MS
   * route from FrValueSetEDQM
   * route ^short = "Voie d'administration"

@@ -23,9 +23,9 @@ Description: "
 // Fréquence d'administration
 
 * dosage
-  * extension contains FrAdministrationFrequency named frequenceAdministration 0..1
+  * extension contains FrMedicationAdministrationFrequency named frequenceAdministration 0..1
   // Dosages progressifs ou fractionnés
-  * extension contains FrSequenceExtension named sequence 0..*
+  * extension contains FrMedicationAdministrationSequenceExtension named sequence 0..*
   // Dosages conditionnels
   //* extension contains http://hl7.org/fhir/StructureDefinition/note named dosagesConditionnels 0..* 
   * route MS
@@ -61,5 +61,5 @@ Description: "
 * reasonReference only Reference(FrCondition or Observation)
 
 // Précondition ou bien utiliser l'extnexion FHIR "note" ??
-* extension contains FrPreconditionExtension named precondition 0..1
+* extension contains FrMedicationAdministrationPreconditionExtension named precondition 0..1
   * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."

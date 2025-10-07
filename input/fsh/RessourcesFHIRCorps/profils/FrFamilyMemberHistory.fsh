@@ -39,5 +39,5 @@ Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des inf
 * condition.extension[bodySite] ^short = "Localisation anatomique"
 
 * condition.extension[author] ^short = "Auteur"
-* condition.extension[author].extension[type].valueCode = #AUT (exactly)
+* condition.extension[author].extension[type].valueCode = #AUT
 * condition.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrDeviceDocument or FrPatientDocument)

@@ -20,7 +20,7 @@ Sous la forme UID (UUID ou OID)."
 * source ^short = "Dispensateur"
 * source.extension contains FrActorExtension named performer 0..1
 * source.extension[performer] ^short = "Dispensateur: référence au professionnel de santé ou à l'organisation ayant initié ou dispensé le dispositif"
-* source.extension[performer].extension[type].valueCode = #PRF (exactly)
+* source.extension[performer].extension[type].valueCode = #PRF
 * source.extension[performer].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrOrganizationDocument)
 
 // Élément device

@@ -16,7 +16,7 @@ Description: "FrDiagnosticReportBIOChapter utilisé pour représenter un CR de b
 * performer 1..* MS
 * performer.extension contains FrActorExtension named author 1..*
 * performer.extension[author] ^short = "Auteur du compte-rendu de BIO (Médecin - Biologie médicale)"
-* performer.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 * resultsInterpreter MS

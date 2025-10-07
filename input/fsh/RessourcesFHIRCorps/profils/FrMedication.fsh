@@ -32,7 +32,18 @@ Description: "FrMedication permet de décrire un médicament ou un vaccin."
 * extension contains $ihe-ext-medication-characteristic named conditionnement  0..*
 * extension[conditionnement] ^short = "Présentation / conditionnement."
 
-* ingredient MS
+* ingredient ^slicing.discriminator.type = #value
+* ingredient ^slicing.discriminator.path = "$this"
+* ingredient ^slicing.rules = #open
+* ingredient contains doseAntigene 0..* and substanceActive 1..1
+
+* ingredient[doseAntigene] MS
+  * ^short = "Dose antigène"
+  * strength MS
+  * strength ^short = "Quantité de la dose antigène"
+
+
+* ingredient[substanceActive] MS
   * ^short = "Substance active"
   * strength MS
     * ^short = "Dosage"
@@ -42,7 +53,9 @@ Description: "FrMedication permet de décrire un médicament ou un vaccin."
   * itemCodeableConcept MS
   * itemCodeableConcept from https://smt.esante.gouv.fr/terminologie-sms?vs
   * itemCodeableConcept ^short = "Code SMS de la substance active"
-  * itemCodeableConcept.extension contains fr-substance-name named NomSubstance 1..1 MS
+  * itemCodeableConcept.extension contains FrSubstanceName named NomSubstance 1..1 MS
+  // * itemCodeableConcept.text MS
+  //  * * itemCodeableConcept.text ^short = "Nom de la substance" ==> Supprimer l'extension FrSubstanceName ?
 
 Extension: FrSubstanceName
 Id: fr-substance-name

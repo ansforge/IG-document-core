@@ -46,13 +46,13 @@ Sinon, l'élément 'priority' n'est pas fourni.
 Si la rencontre est réalisée :
  au moins 1 exécutant doit être renseigné.
 Sinon : l'exécutant n'est pas obligatoire mais peut être renseigné"
-* participant.individual.extension[executant].extension[type].valueCode = #PRF (exactly)
+* participant.individual.extension[executant].extension[type].valueCode = #PRF
 
 * participant.individual.extension[author] ^short = "Author"
-* participant.individual.extension[author].extension[type].valueCode = #AUT (exactly)
+* participant.individual.extension[author].extension[type].valueCode = #AUT
 
 * participant.individual.extension[informant] ^short = "Informant"
-* participant.individual.extension[informant].extension[type].valueCode = #INF (exactly)
+* participant.individual.extension[informant].extension[type].valueCode = #INF
 
 * location 0..1 MS
 * location ^short = "Lieu d'exécution"

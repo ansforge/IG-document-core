@@ -32,17 +32,17 @@ Description: "FrMedia permet de positionner une image de type gif, jpeg, png ou 
     FrActorExtension named participant 0..*
 
 * operator.extension[performer] ^short = "Performer : Personne ayant réalisé l’acte"
-* operator.extension[performer].extension[type].valueCode = #PRF (exactly)
+* operator.extension[performer].extension[type].valueCode = #PRF
 
 * operator.extension[author] ^short = "Auteur du média"
-* operator.extension[author].extension[type].valueCode = #AUT (exactly)
+* operator.extension[author].extension[type].valueCode = #AUT
 * operator.extension[author].extension[actor].valueReference only Reference(FrDeviceDocument or FrPractitionerRoleDocument)
 
 * operator.extension[informant] ^short = "Informateur"
-* operator.extension[informant].extension[type].valueCode = #INF (exactly)
+* operator.extension[informant].extension[type].valueCode = #INF
 
 * operator.extension[participant] ^short = "Participant : Personne ayant participé à l’acte"
-* operator.extension[participant].extension[type].valueCode = #PART (exactly)
+* operator.extension[participant].extension[type].valueCode = #PART
 
 // EntryRelationship
 * basedOn 0..* 

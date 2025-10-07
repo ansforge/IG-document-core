@@ -21,12 +21,9 @@ Description: "FrEncounterEvent est un profil de type encounter permettant de con
  
 * type only FrDocumentCodeableConcept  
 
-* extension contains FrEventCharacteristicExtension named caracteristique 0..*
+* extension contains FrEncounterEventCharacteristicExtension named caracteristique 0..*
  
 * extension contains http://hl7.org/fhir/StructureDefinition/note named commentaire 0..*
-
-// ou bien dans le profil DocumentReference : context.encounter only Reference (FrEncounterEvenement)
-* extension contains FrInternalReferenceExtension named urlPiecesJointes 0..*
 
 //ou bien enregistrer l'événement dans la ressource Procedure.encounter
 //si le transport du patient est la cause ou justification de l’événement 

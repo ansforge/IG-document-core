@@ -13,9 +13,6 @@ Description: "FrImmunizationRecommendation permet de décrire une vaccination pr
 * identifier ^short = "Identifiant de l’entrée. 
  - Attribué par le LPS avec un identifiant unique de type UUID affecté à l’attribut root (l’attribut extension est omis)."
 
-* extension contains fr-immunization-type-extension named typeVaccination 1..1
-* extension[typeVaccination].valueCodeableConcept.coding.system = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis"
-
 * recommendation 1..1
   * forecastStatus = #complete
   * dateCriterion 1..1 
@@ -32,7 +29,7 @@ Description: "FrImmunizationRecommendation permet de décrire une vaccination pr
   // Slice CIS obligatoire
   * vaccineCode.coding contains cis 1..1
   * vaccineCode.coding[cis].system 1..1
-  * vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1" (exactly)
+  * vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1"
 
   // Slice (autres codifications)
   * vaccineCode.coding contains translation 0..*

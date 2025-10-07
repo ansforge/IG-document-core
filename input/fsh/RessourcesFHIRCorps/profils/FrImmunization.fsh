@@ -12,7 +12,8 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * identifier ^short = "Identifiant de l’entrée. 
  - Attribué par le LPS avec un identifiant unique de type UUID affecté à l’attribut root (l’attribut extension est omis)."
 
-* extension contains fr-immunization-type-extension named typeVaccination 1..1
+// à supprimer après retour de NRISS et remplacer par * protocolApplied.series
+//* extension contains fr-immunization-type-extension named typeVaccination 1..1
 * status MS
 * status = #completed
 * occurrence[x] MS
@@ -42,7 +43,7 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 // Slice CIS obligatoire
 * vaccineCode.coding contains cis 1..1
 * vaccineCode.coding[cis].system 1..1
-* vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1" (exactly)
+* vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1"
 
 // Slice (autres codifications)
 * vaccineCode.coding contains translation 0..*
@@ -57,7 +58,6 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * expirationDate MS 
   * ^short = "Date d'expiration du produit"
 
-
 * performer MS
 * performer.actor.extension contains
     FrActorExtension named author 1..1 and
@@ -65,20 +65,21 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 
 // --- Auteur ---
 * performer.actor.extension[author] ^short = "Auteur de la vaccination (personne ayant validé médicalement que la vaccination a été réalisée)"
-* performer.actor.extension[author].extension[type].valueCode = #AUT (exactly)
+* performer.actor.extension[author].extension[type].valueCode = #AUT
 * performer.actor.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // --- Exécutant ---
 * performer.actor.extension[executant] ^short = "Exécutant"
-* performer.actor.extension[executant].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[executant].extension[type].valueCode = #PRF
 * performer.actor.extension[executant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Prescription
-
 * extension contains FrPrescriptionExtension named prescription 0..1
 
-// Rang de la vaccination 
 * protocolApplied MS
+// Type de vaccination
+* protocolApplied.series from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
+// Rang de la vaccination 
 * protocolApplied.doseNumberPositiveInt 1..1
 * protocolApplied.doseNumberPositiveInt ^short = "Rang de la vaccination"
 
@@ -88,7 +89,7 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
   * ^short = "Réaction observée suite au vaccin"
 
 // Dose d’antigène reçue (extension) ou créer un profil fsh FrDoseAntigene basé sur la ressource Substance ?
-* extension contains FrAntigenDoseExtension named doseAntigene 0..*
+* extension contains FrImmunizationadministredProductExtension named doseAntigene 0..*
   * ^short = "Dose d'antigène"
 
 * note 0..1 MS
