@@ -36,7 +36,7 @@ Description: "DocumentReference restreint pour les documents PDF."
 
 * context.encounter MS
 * context.encounter ^short = "Contexte clinique du document" 
-* context.encounter = Reference(FrEncounterEvent)
+* context.encounter only Reference(FrEncounterEvent)
 
 * context.related MS
 * context.related ^short = "Ressources ou identifiants liés" 
