@@ -61,5 +61,5 @@ Description: "
 * reasonReference only Reference(FrCondition or Observation)
 
 // Précondition ou bien utiliser l'extnexion FHIR "note" ??
-* extension contains FrMedicationAdministrationPreconditionExtension named precondition 0..1
+* extension contains FrPreconditionExtension named precondition 0..1
   * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."

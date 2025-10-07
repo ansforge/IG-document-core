@@ -35,8 +35,8 @@ Description: "DocumentReference restreint pour les documents PDF."
 * content.attachment.url ^short = "URI"
 
 * context.encounter MS
-    ^short = "Contexte clinique du document" 
-* context.encounter = Reference(FrEncounterEvent)
+* context.encounter ^short = "Contexte clinique du document" 
+* context.encounter only Reference(FrEncounterEvent)
 
 * context.related MS
-    ^short = "Ressources ou identifiants liés" 
+* context.related ^short = "Ressources ou identifiants liés" 

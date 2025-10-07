@@ -31,7 +31,7 @@ Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des inf
 * condition.outcome ^short = "Résultat de l'observation effectuée"
 
 * condition.extension contains
-    $bodySite named bodySite 0..1 MS and
+    FrFamilyMemberHistoryBodySiteExtension named bodySite 0..1 MS and
     FrInterpretationExtension named interpretation 0..1 MS and
     FrMethodExtension named method 0..1 MS and
     FrActorExtension named author 0..1 MS
