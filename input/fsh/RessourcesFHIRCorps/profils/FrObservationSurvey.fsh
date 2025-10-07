@@ -10,8 +10,8 @@ Description: "FrObservationSurvey permet de rapporter un résultat (score) répo
 * category 1..1 MS
 * category ^short = "Catégorie"
 * category.coding 1..1
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" (exactly)
-* category.coding.code = #survey (exactly)
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category.coding.code = #survey
 
 * code MS
 * code only FrDocumentCodeableConcept
@@ -33,20 +33,20 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 // Evaluateur
 * performer.extension[Evaluateur] MS
 * performer.extension[Evaluateur] ^short = "Evaluateur"
-* performer.extension[Evaluateur].extension[type].valueCode = #PRF (exactly)
+* performer.extension[Evaluateur].extension[type].valueCode = #PRF
 * performer.extension[Evaluateur].extension[actor].valueReference only Reference(FrOrganizationDocument)
 * performer.extension[Evaluateur].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
 // auteur
 * performer.extension[Auteur] MS
 * performer.extension[Auteur] ^short = "Auteur de l'évaluation"
-* performer.extension[Auteur].extension[type].valueCode = #AUT (exactly)
+* performer.extension[Auteur].extension[type].valueCode = #AUT
 * performer.extension[Auteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 // Participant
 * performer.extension[Participant] MS
 * performer.extension[Participant] ^short = "Responsable de l'évaluation"
-* performer.extension[Participant].extension[type].valueCode = #PART (exactly)
+* performer.extension[Participant].extension[type].valueCode = #PART
 * performer.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.extension[Participant].extension[typeCode].valueCodeableConcept.coding.code = #RESP
 

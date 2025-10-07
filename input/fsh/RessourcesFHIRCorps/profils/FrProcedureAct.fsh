@@ -30,7 +30,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 * performed[x] MS
 * performed[x] ^short = "Date de l'acte"
 
-* extension contains FrPriorityExtension named priority 0..1 MS
+* extension contains FrProcedurePriorityExtension named priority 0..1 MS
 
 * bodySite MS
 * bodySite ^short = "Voie d'abord et localisation anatomique"
@@ -62,23 +62,23 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 //performer
 * performer.actor.extension[Intervenant] MS 
 * performer.actor.extension[Intervenant] ^short = "Intervenant"
-* performer.actor.extension[Intervenant].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[Intervenant].extension[type].valueCode = #PRF
 * performer.actor.extension[Intervenant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 //informant
 * performer.actor.extension[Informateur] MS
 * performer.actor.extension[Informateur] ^short = "Informateur"
-* performer.actor.extension[Informateur].extension[type].valueCode = #INF (exactly)
+* performer.actor.extension[Informateur].extension[type].valueCode = #INF
 * performer.actor.extension[Informateur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
 //participant
 * performer.actor.extension[Participant] MS
 * performer.actor.extension[Participant] ^short = "Participant"
-* performer.actor.extension[Participant].extension[type].valueCode = #PART (exactly)
+* performer.actor.extension[Participant].extension[type].valueCode = #PART
 * performer.actor.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device)
 
 * recorder MS
 * recorder.extension contains FrActorExtension named author 0..1
 * recorder ^short = "Auteur"
-* recorder.extension[author].extension[type].valueCode = #AUT (exactly)
+* recorder.extension[author].extension[type].valueCode = #AUT
 * recorder.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Réference interne à un DM (REFR)
@@ -97,7 +97,7 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 
 // Difficulté Observation / Scores Observation
 * extension contains
-    FrDifficultyExtension named difficulte 0..1 MS and
-    FrScoreExtension named scores 0..* MS
+    FrProcedureDifficultyExtension named difficulte 0..1 MS and
+    FrProcedureScoreExtension named scores 0..* MS
 * extension[difficulte] ^short = "Référence vers une Observation représentant la difficulté"
 * extension[scores] ^short = "Références vers des Observations de scores associés" 

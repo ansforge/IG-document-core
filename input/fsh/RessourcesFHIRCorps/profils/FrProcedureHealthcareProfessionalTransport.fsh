@@ -28,13 +28,13 @@ Description: "FrProcedureHealthcareProfessionalTransport permet de décrire le t
 
 // --- transporteur ---
 * performer.actor.extension[transporteur] ^short = "Transporteur"
-* performer.actor.extension[transporteur].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[transporteur].extension[type].valueCode = #PRF
 * performer.actor.extension[transporteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
 //le Professionnel concerné
 * performer.actor.extension[professionnelConcerne] ^short = "le Professionnel concerné"
-* performer.actor.extension[professionnelConcerne].extension[type].valueCode = #PART (exactly)
+* performer.actor.extension[professionnelConcerne].extension[type].valueCode = #PART
 * performer.actor.extension[professionnelConcerne].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
 * performer.actor.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept.coding.code = #RCV 
@@ -47,4 +47,4 @@ Description: "FrProcedureHealthcareProfessionalTransport permet de décrire le t
 
 //Autres précisions sur le trajet ou le transport du patient
 // Si les précisions sur le transport sont non codées ou non structurées, on peut les inclure directement dans Procedure.note ?
-* extension contains FrAdditionalInformation named precisionTransportProfessionnel 0..* MS
+* extension contains FrProcedureAdditionalInformation named precisionTransportProfessionnel 0..* MS

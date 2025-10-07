@@ -39,7 +39,7 @@ Description: "FrProcedurePatientTransport permet de décrire le transport d'un p
 
 // transporteur
 * performer.actor.extension[transporteur] ^short = "Transporteur"
-* performer.actor.extension[transporteur].extension[type].valueCode = #PRF (exactly)
+* performer.actor.extension[transporteur].extension[type].valueCode = #PRF
 * performer.actor.extension[transporteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 * performer.actor.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
@@ -51,4 +51,4 @@ Description: "FrProcedurePatientTransport permet de décrire le transport d'un p
 
 //Autres précision sur le trajet ou le transport du patient
 // Si les précisions sur le transport sont non codées ou non structurées, on peut les inclure directement dans Procedure.note
-* extension contains FrAdditionalInformation named precisionTransportPatient 0..* MS
+* extension contains FrProcedureAdditionalInformation named precisionTransportPatient 0..* MS
