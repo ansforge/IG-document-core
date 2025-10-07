@@ -19,14 +19,14 @@ Description: "FrDiagnosticReport est un profil permettant de regrouper les types
   * ^short = "Date"
 * performer MS 
   * ^short = "Exécutant"
-* performer.extension contains $performerFunction named performerFunction 1..1
+* performer.extension contains $event-performerFunction named performerFunction 1..1
 * performer.extension[performerFunction] 1..1
 * performer.extension[performerFunction].valueCodeableConcept.coding.code = #PPRF "primary performe"
 * performer only Reference (FrPractitionerDocument or FrPractitionerRoleDocument or FrOrganizationDocument)
 
 * resultsInterpreter MS
   * ^short = "Auteur"
-* resultsInterpreter.extension contains $performerFunction named performerFunction 1..1
+* resultsInterpreter.extension contains $event-performerFunction named performerFunction 1..1
 * resultsInterpreter.extension[performerFunction] 1..1
 * resultsInterpreter.extension[performerFunction].valueCodeableConcept.coding.code = #AUT "author (originator)"
 * resultsInterpreter only Reference (FrPractitionerDocument or FrPractitionerRoleDocument or FrOrganizationDocument)
