@@ -1,4 +1,4 @@
-Logical: ParticipantCorps
+Logical: FrParticipantCorps
 Title: "Participant"
 Description: """Modèle logique métier de l'élément Participant"""
 * dateEtHeureParticipation 0..1 dateTime "Date et heure de la participation"		 		
