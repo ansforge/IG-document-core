@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-10-06T12:29:55+00:00"/>
+  <date value="2025-10-13T08:32:48+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -533,21 +533,6 @@
     <grouping id="Modèle métier du Corps d'un document(Eléments transversaux)">
       <name value="Modèles logiques métier des éléments transversaux"/>
     </grouping>
-    <grouping id="Modèle CDA du Corps d'un document(Entrées)">
-      <name value="Modèles logiques CDA des entrées"/>
-    </grouping>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ModeleCDACorpsDocument"/>
-      </reference>
-      <name value="* Modèle CDA du corps"/>
-      <description value="Eléments CDA du corps d'un document"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle CDA du Corps d'un document(Entrées)"/>
-    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
@@ -577,10 +562,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AccidentsTransfusionnels"/>
+        <reference value="StructureDefinition/FrAccidentsTransfusionnels"/>
       </reference>
       <name value="Accident transfusionnel"/>
-      <description value="Modèle logique métier de l'entrée Accident transfusionnel"/>
+      <description value="Entrée Accident transfusionnel"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -589,10 +574,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Acte"/>
+        <reference value="StructureDefinition/FrActe"/>
       </reference>
       <name value="Acte"/>
-      <description value="Modèle logique métier de l'entrée Acte"/>
+      <description value="Entrée Acte"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -601,10 +586,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMActeImagerie"/>
+        <reference value="StructureDefinition/FrActeImagerie"/>
       </reference>
       <name value="Acte d'imagerie"/>
-      <description value="Modèle logique métier de la section DICOM Acte d'imagerie"/>
+      <description value="Section Acte d'imagerie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -613,10 +598,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ActeSubstitution"/>
+        <reference value="StructureDefinition/FrActeSubstitution"/>
       </reference>
       <name value="Acte substitution"/>
-      <description value="Modèle logique métier de l'entrée Acte substitution"/>
+      <description value="Entrée Acte substitution"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -625,10 +610,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMAddendum"/>
+        <reference value="StructureDefinition/FrAddendum"/>
       </reference>
       <name value="Addendum"/>
-      <description value="Modèle logique métier de la section DICOM Addendum"/>
+      <description value="Section Addendum"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -637,7 +622,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AdministrationDeDerivesDuSang"/>
+        <reference value="StructureDefinition/FrAdministrationDeDerivesDuSang"/>
       </reference>
       <name value="Administration de dérivés du sang"/>
       <description value="Modèle logique métier de l'entrée Administration de dérivés du sang"/>
@@ -649,10 +634,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AllergieOuHypersensibilite"/>
+        <reference value="StructureDefinition/FrAdministrationProduitDeSante"/>
+      </reference>
+      <name value="Administration produit de sante"/>
+      <description value="Entrée Administration produit de sante"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrAllergieOuHypersensibilite"/>
       </reference>
       <name value="Allergie, Hypersensibilité non allergique, Intolérance, Idiosyncrasie"/>
-      <description value="Modèle logique métier de l'entrée Allergie ou hypersensibilite"/>
+      <description value="Entrée Allergie ou hypersensibilite"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -661,10 +658,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AllergiesEtHypersensibilites"/>
+        <reference value="StructureDefinition/FrAllergiesEtHypersensibilites"/>
       </reference>
       <name value="Allergies et hypersensibilités"/>
-      <description value="Modèle loqigue métier de la section Allergies et hypersensibilités"/>
+      <description value="Section Allergies et hypersensibilités"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -673,10 +670,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AntecedentFamilialObserve"/>
+        <reference value="StructureDefinition/FrAntecedentFamilialObserve"/>
       </reference>
       <name value="Antécédent familial observé"/>
-      <description value="Modèle logique métier de l'entrée Antécédent familial"/>
+      <description value="Entrée Antécédent familial"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -685,10 +682,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AntecedentsFamiliauxEntry"/>
+        <reference value="StructureDefinition/FrAntecedentsFamiliauxEntry"/>
       </reference>
       <name value="Antécédents familiaux"/>
-      <description value="Modèle logique métier de l'entrée Antécédents familiaux"/>
+      <description value="Entrée Antécédents familiaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -697,10 +694,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AntecedentsFamiliaux"/>
+        <reference value="StructureDefinition/FrAntecedentsFamiliaux"/>
       </reference>
       <name value="Antécédents familiaux"/>
-      <description value="Modèle logique métier de la section Antécédents familiaux"/>
+      <description value="Section Antécédents familiaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -709,10 +706,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AntecedentsMedicaux"/>
+        <reference value="StructureDefinition/FrAntecedentsMedicaux"/>
       </reference>
       <name value="Antécédents médicaux"/>
-      <description value="Modèle logique métier de la section Antécédents médicaux"/>
+      <description value="Section Antécédents médicaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -721,10 +718,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/HistoriqueDesGrossesses"/>
+        <reference value="StructureDefinition/FrHistoriqueDesGrossesses"/>
       </reference>
       <name value="Antécédents obstétricaux"/>
-      <description value="Modèle logique métier de la section Historique des grossesses"/>
+      <description value="Section Historique des grossesses"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -745,10 +742,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/AutorisationSubstitution"/>
+        <reference value="StructureDefinition/FrAutorisationExposition"/>
       </reference>
-      <name value="Autorisation substitution"/>
-      <description value="Modèle logique métier de l'entrée Autorisation substitution"/>
+      <name value="Autorisation exposition"/>
+      <description value="Entrée Autorisation exposition"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -757,10 +754,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/BatterieExamensDeBiologieMedicale"/>
+        <reference value="StructureDefinition/FrAutorisationSubstitution"/>
+      </reference>
+      <name value="Autorisation substitution"/>
+      <description value="Entrée Autorisation substitution"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrBatterieExamensBiologieMedicale"/>
       </reference>
       <name value="Batterie d'examens de biologie médicale"/>
-      <description value="Modèle logique métier de l'entrée Batterie d'examens de biologie médicale"/>
+      <description value="Entrée Batterie d'examens de biologie médicale"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1189,10 +1198,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Certitude"/>
+        <reference value="StructureDefinition/FrCertitude"/>
       </reference>
       <name value="Certitude"/>
-      <description value="Modèle logique métier de l'entrée Certitude"/>
+      <description value="Entrée Certitude"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1201,10 +1210,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CodesAbarres"/>
+        <reference value="StructureDefinition/FrCodesAbarres"/>
       </reference>
       <name value="Codes à barres"/>
-      <description value="Modèle logique métier de la section Codes à barres"/>
+      <description value="Section Codes à barres"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1213,10 +1222,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CommentaireER"/>
+        <reference value="StructureDefinition/FrCommentaireER"/>
       </reference>
       <name value="Commentaire"/>
-      <description value="Modèle logique métier de l'entrée Commentaire"/>
+      <description value="Entrée Commentaire"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1225,7 +1234,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CommentaireNonCode"/>
+        <reference value="StructureDefinition/FrCommentaireNonCode"/>
       </reference>
       <name value="Commentaire (non-codé)"/>
       <description value="Modèle logique métier de la section Commentaire (non-codé)"/>
@@ -1237,10 +1246,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMComplication"/>
+        <reference value="StructureDefinition/FrComparaisonExamensImagerie"/>
       </reference>
-      <name value="Complications"/>
-      <description value="Modèle logique métier de la section DICOM Complications"/>
+      <name value="Comparaison d'examens d'imagerie"/>
+      <description value="Section Comparaison d'examens d'imagerie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1249,10 +1258,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CRBIOChapitre"/>
+        <reference value="StructureDefinition/FrComplicationsActe"/>
+      </reference>
+      <name value="Complications Acte"/>
+      <description value="Section Complications au cours de l'acte"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrCRBIOChapitre"/>
       </reference>
       <name value="Compte rendu de biologie de 1er niveau"/>
-      <description value="Modèle logique métier de la section Compte rendu de biologie de 1er niveau"/>
+      <description value="Section Compte rendu de biologie de 1er niveau"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1261,10 +1282,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMConclusions"/>
+        <reference value="StructureDefinition/FrConclusionExamenImagerie"/>
       </reference>
-      <name value="Conclusions"/>
-      <description value="Modèle logique métier de la section DICOM Conclusions"/>
+      <name value="Conclusion examen d'imagerie"/>
+      <description value="Section Conclusion examen d'imagerie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1273,10 +1294,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Criticite"/>
+        <reference value="StructureDefinition/FrCriticite"/>
       </reference>
       <name value="Criticite"/>
-      <description value="Modèle logique métier de l'entrée Criticite"/>
+      <description value="Entrée Criticite"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1285,10 +1306,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMDemandeExamen"/>
+        <reference value="StructureDefinition/FrDemandeExamenImagerie"/>
       </reference>
-      <name value="Demande d'examen"/>
-      <description value="Modèle logique métier de la section DICOM Demande d'examen"/>
+      <name value="Demande d'examen d'imagerie"/>
+      <description value="Section Demande d'examen d'imagerie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1297,10 +1318,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DemandeExamenOuSuivi"/>
+        <reference value="StructureDefinition/FrDemandeExamenOuSuivi"/>
       </reference>
       <name value="Demande d'examen ou de suivi / Objectif à atteindre"/>
-      <description value="Modèle logique métier de l'entrée Demande d'examen ou de suivi / Objectif à atteindre"/>
+      <description value="Entrée Demande d'examen ou de suivi / Objectif à atteindre"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1309,190 +1330,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMAdministrationProduitDeSante"/>
-      </reference>
-      <name value="DICOM Administration produit de sante"/>
-      <description value="Modèle logique métier de l'entrée DICOM Administration produit de sante"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMAdministrationRadiopharmaceutique"/>
-      </reference>
-      <name value="DICOM Administration radiopharmaceutique"/>
-      <description value="Modèle logique métier de l'entrée DICOM Administration radiopharmaceutique"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMCadresReferences"/>
-      </reference>
-      <name value="DICOM Cadres references"/>
-      <description value="Modèle logique métier de l'entrée DICOM Cadres references"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMCadresAafficher"/>
-      </reference>
-      <name value="DICOM Cadres à afficher"/>
-      <description value="Modèle logique métier de l'entrée DICOM Cadres à afficher"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMExamenImagerie"/>
-      </reference>
-      <name value="DICOM Examen Imagerie"/>
-      <description value="Modèle logique métier de l'entrée DICOM Examen Imagerie"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMExpositionPatient"/>
-      </reference>
-      <name value="DICOM Exposition patient"/>
-      <description value="Modèle logique métier de l'entrée DICOM Exposition patient"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMObjectifsDeReference"/>
-      </reference>
-      <name value="DICOM Objectifs de reference"/>
-      <description value="Modèle logique métier de l'entrée DICOM Objectifs de reference"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMObservation"/>
-      </reference>
-      <name value="DICOM Observation"/>
-      <description value="Modèle logique métier de l'entrée DICOM Observation"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMObservationSubordonnee"/>
-      </reference>
-      <name value="DICOM Observation Subordonnee"/>
-      <description value="Modèle logique métier de l'entrée DICOM Observation Subordonnee"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMQuantity"/>
-      </reference>
-      <name value="DICOM Quantity"/>
-      <description value="Modèle logique métier de l'entrée DICOM Quantity"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMQuantitySubordonnee"/>
-      </reference>
-      <name value="DICOM Quantity Subordonnee"/>
-      <description value="Modèle logique métier de l'entrée DICOM Quantity Subordonnee"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMSerieImagerie"/>
-      </reference>
-      <name value="DICOM Serie imagerie"/>
-      <description value="Modèle logique métier de l'entrée DICOM Serie imagerie"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMSOPInstanceObservation"/>
-      </reference>
-      <name value="DICOM SOP Instance Observation"/>
-      <description value="Modèle logique métier de l'entrée DICOM SOP Instance Observation"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMSOPInstanceObservationSubordonnee"/>
-      </reference>
-      <name value="DICOM SOP Instance Observation Subordonnee"/>
-      <description value="Modèle logique métier de l'entrée DICOM SOP Instance Observation Subordonnee"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DICOMTechniqueImagerie"/>
-      </reference>
-      <name value="DICOM Technique imagerie"/>
-      <description value="Modèle logique métier de l'entrée DICOM Technique imagerie"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/DirectiveAnticipee"/>
+        <reference value="StructureDefinition/FrDirectiveAnticipee"/>
       </reference>
       <name value="Directive anticipée"/>
-      <description value="Modèle logique métier de l'entrée Directive anticipée"/>
+      <description value="Entrée Directive anticipée"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1501,10 +1342,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DirectivesAnticipees"/>
+        <reference value="StructureDefinition/FrDirectivesAnticipees"/>
       </reference>
       <name value="Directives-anticipées"/>
-      <description value="Modèle logique métier de la section Directives anticipées"/>
+      <description value="Section Directives anticipées"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1513,10 +1354,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DispensationMedicaments"/>
+        <reference value="StructureDefinition/FrDispensationMedicaments"/>
       </reference>
       <name value="Dispensation médicaments"/>
-      <description value="Modèle logique métier de la section Dispensation médicaments"/>
+      <description value="Section Dispensation médicaments"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1537,10 +1378,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DispositifMedicalEntry"/>
+        <reference value="StructureDefinition/FrDispositifMedicalEntry"/>
       </reference>
       <name value="Dispositif médical"/>
-      <description value="Modèle logique métier de l'entrée Dispositif médical"/>
+      <description value="Entrée Dispositif médical"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1549,10 +1390,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DispositifsMedicaux"/>
+        <reference value="StructureDefinition/FrDispositifsMedicaux"/>
       </reference>
       <name value="Dispositifs medicaux"/>
-      <description value="Modèle logique métier de la section Dispositifs medicaux"/>
+      <description value="Section Dispositifs medicaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1561,10 +1402,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DocumentAttache"/>
+        <reference value="StructureDefinition/FrDocumentAttache"/>
       </reference>
       <name value="Document attaché"/>
-      <description value="Modèle logique métier de l'entrée Document attaché"/>
+      <description value="Entrée Document attaché"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1573,10 +1414,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DocumentPDFCopie"/>
+        <reference value="StructureDefinition/FrDocumentPDFCopie"/>
       </reference>
       <name value="Document PDF copie"/>
-      <description value="Modèle logique métier de la section Document PDF-copie"/>
+      <description value="Section Document PDF-copie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1585,10 +1426,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DocumentsAjoutes"/>
+        <reference value="StructureDefinition/FrDocumentsAjoutes"/>
       </reference>
       <name value="Documents ajoutés"/>
-      <description value="Modèle logique métier de la section Documents ajoutés"/>
+      <description value="Section Documents ajoutés"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1597,10 +1438,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DoseAntigene"/>
+        <reference value="StructureDefinition/FrDoseAntigene"/>
       </reference>
       <name value="Dose d'antigène"/>
-      <description value="Modèle logique métier de l'entrée Dose d'antigène"/>
+      <description value="Entrée Dose d'antigène"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1609,10 +1450,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EducationPatient"/>
+        <reference value="StructureDefinition/FrEducationPatient"/>
       </reference>
       <name value="Education du patient"/>
-      <description value="Modèle logique métier de la section Education du patient"/>
+      <description value="Section Education du patient"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1621,10 +1462,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EffetIndesirable"/>
+        <reference value="StructureDefinition/FrEffetIndesirable"/>
       </reference>
       <name value="Effet indesirable"/>
-      <description value="Modèle logique métier de l'entrée Effet indesirable"/>
+      <description value="Entrée Effet indesirable"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1633,10 +1474,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EffetsIndesirables"/>
+        <reference value="StructureDefinition/FrEffetsIndesirables"/>
       </reference>
       <name value="Effets indesirables"/>
-      <description value="Modèle logique métier de la section Effets indesirables"/>
+      <description value="Section Effets indesirables"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1645,10 +1486,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EnRapportAvecLaPrevention"/>
+        <reference value="StructureDefinition/FrEnRapportAvecLaPrevention"/>
       </reference>
       <name value="En rapport avec la prevention"/>
-      <description value="Modèle logique métier de l'entrée En rapport avec la prevention"/>
+      <description value="Entrée En rapport avec la prevention"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1657,10 +1498,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EnRapportAvecAccidentTravail"/>
+        <reference value="StructureDefinition/FrEnRapportAvecAccidentTravail"/>
       </reference>
       <name value="En rapport avec un accident travail"/>
-      <description value="Modèle logique métier de l'entrée En rapport avec un accident travail"/>
+      <description value="Entrée En rapport avec un accident travail"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1669,10 +1510,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EnRapportAvecALD"/>
+        <reference value="StructureDefinition/FrEnRapportAvecALD"/>
       </reference>
       <name value="En rapport avec une Affection Longue Durée (ALD)"/>
-      <description value="Modèle logique métier de l'entrée En rapport avec une Affection Longue Durée (ALD)"/>
+      <description value="Entrée En rapport avec une Affection Longue Durée (ALD)"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1681,10 +1522,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Evaluation"/>
+        <reference value="StructureDefinition/FrObservation"/>
+      </reference>
+      <name value="Entrée Observation"/>
+      <description value="Entrée observation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrEvaluation"/>
       </reference>
       <name value="Evaluation"/>
-      <description value="Modèle logique métier de l'entrée Evaluation"/>
+      <description value="Entrée Evaluation"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1693,10 +1546,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EvaluationComposant"/>
+        <reference value="StructureDefinition/FrEvaluationComposant"/>
       </reference>
       <name value="Evaluation Composant"/>
-      <description value="Modèle logique métier de l'entrée Evaluation Composant"/>
+      <description value="Entrée Evaluation Composant"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1705,10 +1558,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EvaluationComposantN2"/>
+        <reference value="StructureDefinition/FrEvaluationComposantN2"/>
       </reference>
       <name value="Evaluation Composant N2"/>
-      <description value="Modèle logique métier de l'entrée Evaluation Composant N2"/>
+      <description value="Entrée Evaluation Composant N2"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1717,10 +1570,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EvolutionEffetIndesirable"/>
+        <reference value="StructureDefinition/FrEvolutionEffetIndesirable"/>
       </reference>
       <name value="Evolution effet indesirable"/>
-      <description value="Modèle logique métier de l'entrée Evolution effet indesirable"/>
+      <description value="Entrée Evolution effet indesirable"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1729,10 +1582,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EvenementIndesirablePendantHospitalisation"/>
+        <reference value="StructureDefinition/FrEvenementIndesirablePendantHospitalisation"/>
       </reference>
       <name value="Evènements indésirables pendant l'hospitalisation"/>
-      <description value="Modèle logique métier de l'entrée Evènements indésirables pendant l'hospitalisation"/>
+      <description value="Entrée Evènements indésirables pendant l'hospitalisation"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1741,10 +1594,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EvenementsIndesirablesSuiteAdministrationDerivesSang"/>
+        <reference value="StructureDefinition/FrEvenementsIndesirablesSuiteAdministrationDerivesSang"/>
       </reference>
       <name value="Evènements indésirables suite à l'administration de dérivés du sang"/>
-      <description value="Modèle logique métier de l'entrée Evènements indésirables suite à l'administration de dérivés du sang"/>
+      <description value="Entrée Evènements indésirables suite à l'administration de dérivés du sang"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -1753,22 +1606,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMExamenComparatif"/>
+        <reference value="StructureDefinition/FrExamenImagerie"/>
       </reference>
-      <name value="Examen comparatif"/>
-      <description value="Modèle logique métier de la section DICOM Examen comparatif"/>
+      <name value="Examen Imagerie"/>
+      <description value="Entrée DICOM Examen Imagerie"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMExpositionRadiations"/>
+        <reference value="StructureDefinition/FrExpositionRadiations"/>
       </reference>
       <name value="Exposition aux radiations"/>
-      <description value="Modèle logique métier de la section DICOM Exposition aux radiations"/>
+      <description value="Section Exposition aux radiations"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1777,10 +1630,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FacteursDeRisqueProfessionnelsNonCode"/>
+        <reference value="StructureDefinition/FrFacteursDeRisqueProfessionnelsNonCode"/>
       </reference>
       <name value="Facteurs de risque professionnels non code"/>
-      <description value="Modèle logique métier de la section Facteurs de risque professionnels non code"/>
+      <description value="Section Facteurs de risque professionnels non code"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -1789,48 +1642,12 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FonctionsPhysiques"/>
+        <reference value="StructureDefinition/FrFonctionsPhysiques"/>
       </reference>
       <name value="Fonctions physiques"/>
-      <description value="Modèle logique métier de la section Fonctions physiques"/>
+      <description value="Section Fonctions physiques"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FrActe"/>
-      </reference>
-      <name value="FR Acte"/>
-      <description value="L'entrée 'Acte' est une entrée de type 'procedure' décrivant un acte planifié ou réalisé."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle CDA du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FrActeSubstitution"/>
-      </reference>
-      <name value="FR Acte substitution"/>
-      <description value="Cette observation permet d'indiquer si le traitement a été substitué."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle CDA du Corps d'un document(Entrées)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FrAllergieOuHypersensibilite"/>
-      </reference>
-      <name value="FR Allergie ou hypersensibilite"/>
-      <description value="Cette entrée permet de décrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie, en précisant :&#xA; - Le type : allergie médicamenteuse, hypersensibilité non allergique alimentaire, etc.&#xA; - La date de début et de fin&#xA; - L'agent responsable : médicament, agent environnemental, …&#xA; - Le statut clinique : Actif, Inactif, Résolu&#xA; - La criticité : Bas, Elevé, Impossible à évaluer&#xA; - La certitude : Confirmé, Non confirmé, Réfuté&#xA; - La (les) réaction(s) observée(s) : urticaire, nausée, … et&#xA; - La sévérité de la réaction : Potentiellement mortel, Elevé, Modéré, Bas, …&#xA; - un commentaire sur la réaction&#xA; - Cette entrée est basée sur l'entrée Problème (1.3.6.1.4.1.19376.1.5.3.1.4.5) qu'elle spécialise.."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle CDA du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2092,10 +1909,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/GraviteEffetIndesirable"/>
+        <reference value="StructureDefinition/FrGraviteEffetIndesirable"/>
       </reference>
       <name value="Gravite effet indesirable"/>
-      <description value="Modèle logique métier de l'entrée Gravite effet indesirable"/>
+      <description value="Entrée Gravite effet indesirable"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2104,10 +1921,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/GroupDeQuestionnairesDevaluation"/>
+        <reference value="StructureDefinition/FrGroupDeQuestionnairesDevaluation"/>
       </reference>
       <name value="Groupe de questionnaires d'évalutation"/>
-      <description value="Modèle logique métier de l'entrée Groupe de questionnaires d'évalutation"/>
+      <description value="Entrée Groupe de questionnaires d'évalutation"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2116,10 +1933,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/HabitusModeDeVie"/>
+        <reference value="StructureDefinition/FrHabitusModeDeVie"/>
       </reference>
       <name value="Habitus et modes de vie"/>
-      <description value="Modèle logique métier de la section Habitus et modes de vie"/>
+      <description value="Section Habitus et modes de vie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2128,10 +1945,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/HabitusModeDeVieEntry"/>
+        <reference value="StructureDefinition/FrHabitusModeDeVieEntry"/>
       </reference>
       <name value="Habitus Mode de vie"/>
-      <description value="Modèle logique métier de l'entrée Habitus Mode de vie"/>
+      <description value="Entrée Habitus Mode de vie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2140,10 +1957,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/HistoriqueGrossesse"/>
+        <reference value="StructureDefinition/FrHistoriqueGrossesse"/>
       </reference>
       <name value="Historique de la grossesse"/>
-      <description value="Modèle logique métier de l'entrée Historique de la grossesse"/>
+      <description value="Entrée Historique de la grossesse"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2152,10 +1969,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/HistoriqueDesActes"/>
+        <reference value="StructureDefinition/FrHistoriqueDesActes"/>
       </reference>
       <name value="Historique des actes"/>
-      <description value="Modèle logique métier de la section Historique des actes"/>
+      <description value="Section Historique des actes"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2164,22 +1981,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMHistoriqueMedical"/>
-      </reference>
-      <name value="Historique médical"/>
-      <description value="Modèle logique métier de la section DICOM Historique médical"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/HorsAMM"/>
+        <reference value="StructureDefinition/FrHorsAMM"/>
       </reference>
       <name value="Hors Autorisation de Mise sur le Marché (AMM)"/>
-      <description value="Modèle logique métier de l'entrée Hors Autorisation de Mise sur le Marché (AMM)"/>
+      <description value="Entrée Hors Autorisation de Mise sur le Marché (AMM)"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2200,10 +2005,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/IdentificationDeMicroOrganismesMultiresistants"/>
+        <reference value="StructureDefinition/FrIdentificationDeMicroOrganismesMultiresistants"/>
       </reference>
       <name value="Identification de micro-organismes multirésistants"/>
-      <description value="Modèle logique métier de l'entrée Identification de micro-organismes multirésistants"/>
+      <description value="Entrée Identification de micro-organismes multirésistants"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2212,10 +2017,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ImageIllustrative"/>
+        <reference value="StructureDefinition/FrImageIllustrative"/>
       </reference>
       <name value="Image illustrative"/>
-      <description value="Modèle logique métier de l'entrée Image illustrative."/>
+      <description value="Entrée Image illustrative."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2224,10 +2029,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ImputabiliteEffetIndesirable"/>
+        <reference value="StructureDefinition/FrImputabiliteEffetIndesirable"/>
       </reference>
       <name value="Imputabilite effet indesirable"/>
-      <description value="Modèle logique métier de l'entrée Imputabilite effet indesirable"/>
+      <description value="Entrée Imputabilite effet indesirable"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2248,10 +2053,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMInformationsCliniques"/>
+        <reference value="StructureDefinition/FrInformationsCliniques"/>
       </reference>
-      <name value="Informations cliniques"/>
-      <description value="Modèle logique métier de la section DICOM Informations cliniques"/>
+      <name value="Informations Cliniques"/>
+      <description value="Section Informations Cliniques"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2260,10 +2065,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/InstructionAuPatient"/>
+        <reference value="StructureDefinition/FrInstructionAuPatient"/>
       </reference>
       <name value="Instruction au patient"/>
-      <description value="Modèle logique métier de l'entrée Instruction au patient"/>
+      <description value="Entrée Instruction au patient"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2272,10 +2077,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/InstructionsAuDispensateur"/>
+        <reference value="StructureDefinition/FrInstructionsAuDispensateur"/>
       </reference>
       <name value="Instructions au dispensateur"/>
-      <description value="Modèle logique métier de l'entrée Instructions au dispensateur"/>
+      <description value="Entrée Instructions au dispensateur"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2284,10 +2089,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/InstructionsPatient"/>
+        <reference value="StructureDefinition/FrInstructionsPatient"/>
       </reference>
       <name value="Instructions au patient"/>
-      <description value="Modèle logique métier de l'entrée Instructions au patient"/>
+      <description value="Entrée Instructions au patient"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2296,10 +2101,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/IsolatMicrobiologique"/>
+        <reference value="StructureDefinition/FrIsolatMicrobiologique"/>
       </reference>
       <name value="Isolat microbiologique"/>
-      <description value="Modèle logique métier de l'entrée Isolat microbiologique"/>
+      <description value="Entrée Isolat microbiologique"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2560,10 +2365,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ModaliteEntree"/>
+        <reference value="StructureDefinition/FrModaliteEntree"/>
       </reference>
       <name value="Modalité d'entrée"/>
-      <description value="Modèle logique métier de l'entrée Modalité d'entrée"/>
+      <description value="Entrée Modalité d'entrée"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2572,10 +2377,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ModaliteSortie"/>
+        <reference value="StructureDefinition/FrModaliteSortie"/>
       </reference>
       <name value="Modalité de sortie"/>
-      <description value="Modèle logique métier de l'entrée Modalité de sortie"/>
+      <description value="Entrée Modalité de sortie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2800,22 +2605,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMMotifActe"/>
-      </reference>
-      <name value="Motif de l'acte"/>
-      <description value="Modèle logique métier de la section DICOM Motif de l'acte"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Naissance"/>
+        <reference value="StructureDefinition/FrNaissance"/>
       </reference>
       <name value="Naissance"/>
-      <description value="Modèle logique métier de l'entrée Naissance"/>
+      <description value="Entrée Naissance"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2824,10 +2617,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/NonRemboursable"/>
+        <reference value="StructureDefinition/FrNonRemboursable"/>
       </reference>
       <name value="Non remboursable"/>
-      <description value="Modèle logique métier de l'entrée Non remboursable"/>
+      <description value="Entrée Non remboursable"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2836,10 +2629,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/NotesDispensateur"/>
+        <reference value="StructureDefinition/FrNotesDispensateur"/>
       </reference>
       <name value="Notes du dispensateur"/>
-      <description value="Modèle logique métier de l'entrée Notes du dispensateur"/>
+      <description value="Entrée Notes du dispensateur"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2848,10 +2641,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMObjectCatalog"/>
+        <reference value="StructureDefinition/FrObjectCatalog"/>
       </reference>
       <name value="Object Catalog"/>
-      <description value="Modèle logique métier de la section DICOM Object Catalog"/>
+      <description value="Section Object Catalog"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2860,10 +2653,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ObservationGrossesse"/>
+        <reference value="StructureDefinition/FrObservationGrossesse"/>
       </reference>
       <name value="Observation sur la grossesse"/>
-      <description value="Modèle logique métier de l'entrée Observation sur la grossesse"/>
+      <description value="Entrée Observation sur la grossesse"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2872,7 +2665,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ParticipantCorps"/>
+        <reference value="StructureDefinition/FrParticipantCorps"/>
       </reference>
       <name value="Participant"/>
       <description value="Modèle logique métier de l'élément Participant"/>
@@ -2920,10 +2713,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PlanSoins"/>
+        <reference value="StructureDefinition/FrPlanSoins"/>
       </reference>
       <name value="Plan de soins"/>
-      <description value="Modèle logique métier de la section Plan de soins"/>
+      <description value="Section Plan de soins"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2932,10 +2725,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PrescriptionEntry"/>
+        <reference value="StructureDefinition/FrPrescriptionEntry"/>
       </reference>
       <name value="Prescription"/>
-      <description value="Modèle logique métier de l'entrée Prescription"/>
+      <description value="Entrée Prescription"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2944,10 +2737,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PrescriptionDispositifsMedicaux"/>
+        <reference value="StructureDefinition/FrPrescriptionDispositifsMedicaux"/>
       </reference>
       <name value="Prescription de dispositifs médicaux"/>
-      <description value="Modèle logique métier de la section Prescription de dispositifs médicaux"/>
+      <description value="Section Prescription de dispositifs médicaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2956,10 +2749,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PrescriptionMedicaments"/>
+        <reference value="StructureDefinition/FrPrescriptionMedicaments"/>
       </reference>
       <name value="Prescription de médicaments"/>
-      <description value="Modèle logique métier de la section Prescription de médicaments"/>
+      <description value="Section Prescription de médicaments"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2968,10 +2761,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Probleme"/>
+        <reference value="StructureDefinition/FrProbleme"/>
       </reference>
       <name value="Problème"/>
-      <description value="Modèle logique métier de l'entrée Problème"/>
+      <description value="Entrée Problème"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -2980,10 +2773,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ProblemesActifs"/>
+        <reference value="StructureDefinition/FrProblemesActifs"/>
       </reference>
       <name value="Problèmes actifs"/>
-      <description value="Modèle logique métier de la section Problèmes actifs"/>
+      <description value="Section Problèmes actifs"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -2992,10 +2785,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ProduitSante"/>
+        <reference value="StructureDefinition/FrProduitSante"/>
       </reference>
       <name value="Produit de santé"/>
-      <description value="Modèle logique métier du Produit de santé"/>
+      <description value="Produit de santé"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3004,10 +2797,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Prelevement"/>
+        <reference value="StructureDefinition/FrPrelevement"/>
       </reference>
       <name value="Prélèvement"/>
-      <description value="Modèle logique métier de l'entrée Prélèvement"/>
+      <description value="Entrée Prélèvement"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3016,10 +2809,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PeriodeDeRenouvellement"/>
+        <reference value="StructureDefinition/FrPeriodeDeRenouvellement"/>
       </reference>
       <name value="Période de renouvellement de la prescription"/>
-      <description value="Modèle logique métier de l'entrée Période de renouvellement de la prescription"/>
+      <description value="Entrée Période de renouvellement de la prescription"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3028,10 +2821,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/QuantiteProduit"/>
+        <reference value="StructureDefinition/FrQuantiteProduit"/>
       </reference>
       <name value="Quantité de produit"/>
-      <description value="Modèle logique métier de l'entrée Quantité de produit"/>
+      <description value="Entrée Quantité de produit"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3040,10 +2833,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/RaisonRecommandation"/>
+        <reference value="StructureDefinition/FrQuantiteExposition"/>
+      </reference>
+      <name value="Quantité exposition"/>
+      <description value="Entrée Quantité exposition"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrRaisonRecommandation"/>
       </reference>
       <name value="Raison de la recommandation"/>
-      <description value="Modèle logique métier de la section Raison de la recommandation"/>
+      <description value="Section Raison de la recommandation"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3052,10 +2857,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/RaisonRecommandationNonCode"/>
+        <reference value="StructureDefinition/FrRaisonRecommandationNonCode"/>
       </reference>
       <name value="Raison de la recommandation (non codée)"/>
-      <description value="Modèle logique métier de la section Raison de la recommandation (non codée)"/>
+      <description value="Section Raison de la recommandation (non codée)"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3064,10 +2869,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/RangVaccination"/>
+        <reference value="StructureDefinition/FrRangVaccination"/>
       </reference>
       <name value="Rang de la vaccination"/>
-      <description value="Modèle logique métier de l'entrée Rang de la vaccination"/>
+      <description value="Entrée Rang de la vaccination"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3076,10 +2881,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/RechercheDeMicroOrganismes"/>
+        <reference value="StructureDefinition/FrRechercheDeMicroOrganismes"/>
       </reference>
       <name value="Recherche de micro organismes"/>
-      <description value="Modèle logique métier de l'entrée Recherche de micro organismes"/>
+      <description value="Entrée Recherche de micro organismes"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3088,10 +2893,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Rencontre"/>
+        <reference value="StructureDefinition/FrRencontre"/>
       </reference>
       <name value="Rencontre"/>
-      <description value="Modèle logique métier de l'entrée Rencontre"/>
+      <description value="Entrée Rencontre"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3100,10 +2905,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsEntry"/>
+        <reference value="StructureDefinition/FrResultatsEntry"/>
       </reference>
       <name value="Resultats"/>
-      <description value="Modèle logique métier de l'entrée Resultats"/>
+      <description value="Entrée Resultats"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3112,10 +2917,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsExamensBiologieMedicale"/>
+        <reference value="StructureDefinition/FrResultatsExamensBiologieMedicale"/>
       </reference>
       <name value="Resultats d'examens de biologie medicale"/>
-      <description value="Modèle logique métier de l'entrée Resultats d'examens de biologie medicale"/>
+      <description value="Entrée Resultats d'examens de biologie medicale"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3124,10 +2929,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ReferenceInterne"/>
+        <reference value="StructureDefinition/FrReferenceInterne"/>
       </reference>
       <name value="Référence interne"/>
-      <description value="Modèle logique métier de l'entrée Référence interne"/>
+      <description value="Entrée Référence interne"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3136,10 +2941,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ReferenceItemPlanTraitement"/>
+        <reference value="StructureDefinition/FrReferenceItemPlanTraitement"/>
       </reference>
       <name value="Référence item plan traitement"/>
-      <description value="Modèle logique métier de l'entrée Référence item plan traitement"/>
+      <description value="Entrée Référence item plan traitement"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3148,10 +2953,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ReferenceItemPrescription"/>
+        <reference value="StructureDefinition/FrReferenceItemPrescription"/>
       </reference>
       <name value="Référence item prescription"/>
-      <description value="Modèle logique métier de l'entrée Référence item prescription"/>
+      <description value="Entrée Référence item prescription"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3160,10 +2965,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ReferencesExternes"/>
+        <reference value="StructureDefinition/FrReferencesExternes"/>
       </reference>
       <name value="Références externes"/>
-      <description value="Modèle logique métier de l'entrée Références externes"/>
+      <description value="Entrée Références externes"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3172,10 +2977,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatExamensBiologieElementCliniquePertinent"/>
+        <reference value="StructureDefinition/FrResultatExamensBiologieElementCliniquePertinent"/>
       </reference>
       <name value="Résultat d'examens de biologie / élement clinique pertinent"/>
-      <description value="Modèle logique métier de l'entrée Résultat d'examens de biologie / élement clinique pertinent"/>
+      <description value="Entrée Résultat d'examens de biologie / élement clinique pertinent"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3184,10 +2989,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DICOMResultats"/>
+        <reference value="StructureDefinition/FrResultats"/>
       </reference>
       <name value="Résultats"/>
-      <description value="Modèle logique métier de la section DICOM Résultats"/>
+      <description value="Section Résultats"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3196,22 +3001,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Resultats"/>
+        <reference value="StructureDefinition/FrResultatsExamenImagerie"/>
       </reference>
-      <name value="Résultats"/>
-      <description value="Modèle logique métier de la section Résultats"/>
+      <name value="Résultats d'examen d'imagerie"/>
+      <description value="Section Résultats d'examen d'imagerie"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsExamens"/>
+        <reference value="StructureDefinition/FrResultatsExamens"/>
       </reference>
       <name value="Résultats d'examens"/>
-      <description value="Modèle logique métier de la section Résultats d'examens"/>
+      <description value="Section Résultats d'examens"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3220,10 +3024,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsExamensNonCode"/>
+        <reference value="StructureDefinition/FrResultatsExamensNonCode"/>
       </reference>
       <name value="Résultats d'examens (non codée)"/>
-      <description value="Modèle logique métier de la section Résultats d'examens (non codée)"/>
+      <description value="Section Résultats d'examens (non codée)"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3232,10 +3036,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsEvenements"/>
+        <reference value="StructureDefinition/FrResultatsEvenements"/>
       </reference>
       <name value="Résultats d'événements"/>
-      <description value="Modèle logique métier de la section Résultats d'événements"/>
+      <description value="Section Résultats d'événements"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3244,7 +3048,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/ResultatsLaboratoireBiologieSecondeIntention"/>
+        <reference value="StructureDefinition/FrResultatsLaboratoireBiologieSecondeIntention"/>
       </reference>
       <name value="Résultats de laboratoire de biologie de seconde intention"/>
       <description value="Modèle logique métier de la section Résultats de laboratoire de biologie de seconde intention"/>
@@ -3256,10 +3060,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PointsDeVigilancesNonCode"/>
+        <reference value="StructureDefinition/FrPointsDeVigilancesNonCode"/>
       </reference>
       <name value="Section Points de vigilance (non-codés)"/>
-      <description value="Modèle logique métier de la section Points de vigilance (non-codés)"/>
+      <description value="Section Points de vigilance (non-codés)"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3268,10 +3072,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SigneVital"/>
+        <reference value="StructureDefinition/FrSerieImagerie"/>
+      </reference>
+      <name value="Serie imagerie"/>
+      <description value="Entrée Serie imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrSigneVital"/>
       </reference>
       <name value="Signe vital"/>
-      <description value="Modèle logique métier de l'entrée Signe vital"/>
+      <description value="Entrée Signe vital"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3280,10 +3096,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SigneVitalObserve"/>
+        <reference value="StructureDefinition/FrSigneVitalObserve"/>
       </reference>
       <name value="Signe vital observé"/>
-      <description value="Modèle logique métier de l'entrée Signe vital observé"/>
+      <description value="Entrée Signe vital observé"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3292,10 +3108,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SignesVitaux"/>
+        <reference value="StructureDefinition/FrSignesVitaux"/>
       </reference>
       <name value="Signes vitaux"/>
-      <description value="Modèle logique métier de la section Signes vitaux"/>
+      <description value="Section Signes vitaux"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3304,10 +3120,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SimpleObservation"/>
+        <reference value="StructureDefinition/FrSOPInstance"/>
       </reference>
-      <name value="Simple observation"/>
-      <description value="Modèle logique métier de l'entrée Simple observation"/>
+      <name value="SOP Instance"/>
+      <description value="Entrée SOP Instance"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3316,7 +3132,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CRBIOSousChapitre"/>
+        <reference value="StructureDefinition/FrCRBIOSousChapitre"/>
       </reference>
       <name value="Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)"/>
       <description value="Modèle logique métier de la section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)"/>
@@ -3328,10 +3144,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Statut"/>
+        <reference value="StructureDefinition/FrStatut"/>
       </reference>
       <name value="Statut"/>
-      <description value="Modèle logique métier de l'entrée Statut"/>
+      <description value="Entrée Statut"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3340,10 +3156,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StatutCliniquePatient"/>
+        <reference value="StructureDefinition/FrStatutCliniquePatient"/>
       </reference>
       <name value="Statut clinique du patient"/>
-      <description value="Modèle logique métier de l'entrée Statut clinique du patient"/>
+      <description value="Entrée Statut clinique du patient"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3352,10 +3168,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StatutDocumentEntry"/>
+        <reference value="StructureDefinition/FrStatutDocumentEntry"/>
       </reference>
       <name value="Statut du document"/>
-      <description value="Modèle logique métier de l'entrée Statut du document"/>
+      <description value="Entrée Statut du document"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3364,10 +3180,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StatutDocument"/>
+        <reference value="StructureDefinition/FrStatutDocument"/>
       </reference>
       <name value="Statut du document"/>
-      <description value="Modèle logique métier de la section Statut du document"/>
+      <description value="Section Statut du document"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3376,10 +3192,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StatutProbleme"/>
+        <reference value="StructureDefinition/FrStatutProbleme"/>
       </reference>
       <name value="Statut du problème"/>
-      <description value="Modèle logique métier de l'entrée Statut du problème."/>
+      <description value="Entrée Statut du problème."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3388,10 +3204,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StatutFonctionnel"/>
+        <reference value="StructureDefinition/FrStatutFonctionnel"/>
       </reference>
       <name value="Statut fonctionnel"/>
-      <description value="Modèle logique métier de la section Statut fonctionnel"/>
+      <description value="Section Statut fonctionnel"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3424,10 +3240,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SyntheseMedicaleSejour"/>
+        <reference value="StructureDefinition/FrSyntheseMedicaleSejour"/>
       </reference>
       <name value="Synthese medicale sejour"/>
-      <description value="Modèle logique métier de l'entrée Synthese medicale sejour"/>
+      <description value="Entrée Synthese medicale sejour"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3436,10 +3252,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Severite"/>
+        <reference value="StructureDefinition/FrSeverite"/>
       </reference>
       <name value="Sévérité"/>
-      <description value="Modèle logique métier de l'entrée Sévérité."/>
+      <description value="Entrée Sévérité."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3448,10 +3264,22 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Traitement"/>
+        <reference value="StructureDefinition/FrTechniqueImagerie"/>
+      </reference>
+      <name value="Technique imagerie"/>
+      <description value="Entrée Technique imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FrTraitement"/>
       </reference>
       <name value="Traitement"/>
-      <description value="Modèle logique métier de l'entrée Traitement"/>
+      <description value="Entrée Traitement"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3460,10 +3288,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementDispense"/>
+        <reference value="StructureDefinition/FrTraitementDispense"/>
       </reference>
       <name value="Traitement dispensé"/>
-      <description value="Modèle logique métier de l'entrée Traitement dispense"/>
+      <description value="Entrée Traitement dispense"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3472,10 +3300,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementPrescrit"/>
+        <reference value="StructureDefinition/FrTraitementPrescrit"/>
       </reference>
       <name value="Traitement Prescrit"/>
-      <description value="Modèle logique métier de l'entrée Traitement prescrit"/>
+      <description value="Entrée Traitement prescrit"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3484,10 +3312,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementPrescritSubordonne"/>
+        <reference value="StructureDefinition/FrTraitementPrescritSubordonne"/>
       </reference>
       <name value="Traitement Prescrit Subordonnee"/>
-      <description value="Modèle logique métier de l'entrée Traitement prescrit subordonne"/>
+      <description value="Entrée Traitement prescrit subordonne"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3496,10 +3324,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementSubordonne"/>
+        <reference value="StructureDefinition/FrTraitementSubordonne"/>
       </reference>
       <name value="Traitement subordonné"/>
-      <description value="Modèle logique métier de l'entrée Traitement subordonné"/>
+      <description value="Entrée Traitement subordonné"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3508,10 +3336,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Traitements"/>
+        <reference value="StructureDefinition/FrTraitements"/>
       </reference>
       <name value="Traitements"/>
-      <description value="Modèle loqigue métier de la section Traitements"/>
+      <description value="Section Traitements"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3520,10 +3348,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementsAdministres"/>
+        <reference value="StructureDefinition/FrTraitementsAdministres"/>
       </reference>
       <name value="Traitements administrés"/>
-      <description value="Modèle logique métier de la section Traitements administrés"/>
+      <description value="Section Traitements administrés"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3532,10 +3360,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TraitementSortie"/>
+        <reference value="StructureDefinition/FrTraitementSortie"/>
       </reference>
       <name value="Traitements à la sortie"/>
-      <description value="Modèle logique métier de la section Traitements à la sortie"/>
+      <description value="Section Traitements à la sortie"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
@@ -3544,10 +3372,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TransfertDuPatient"/>
+        <reference value="StructureDefinition/FrTransfertDuPatient"/>
       </reference>
       <name value="Transfert du patient"/>
-      <description value="Modèle logique métier de l'entrée Transfert du patient"/>
+      <description value="Entrée Transfert du patient"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3556,10 +3384,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/TransfusionDeProduitsSanguins"/>
+        <reference value="StructureDefinition/FrTransfusionDeProduitsSanguins"/>
       </reference>
       <name value="Transfusion de produits sanguins"/>
-      <description value="Modèle logique métier de l'entrée Transfusion de produits sanguins"/>
+      <description value="Entrée Transfusion de produits sanguins"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3568,10 +3396,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/VaccinRecommande"/>
+        <reference value="StructureDefinition/FrVaccinRecommande"/>
       </reference>
       <name value="Vaccin recommandé"/>
-      <description value="Modèle logique métier de l'entrée Vaccin recommandé"/>
+      <description value="Entrée Vaccin recommandé"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3580,10 +3408,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Vaccination"/>
+        <reference value="StructureDefinition/FrVaccination"/>
       </reference>
       <name value="Vaccination"/>
-      <description value="Modèle logique métier de l'entrée Vaccination"/>
+      <description value="Entrée Vaccination"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
@@ -3592,10 +3420,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Vaccinations"/>
+        <reference value="StructureDefinition/FrVaccinations"/>
       </reference>
       <name value="Vaccinations"/>
-      <description value="Modèle logique métier de la section Vaccinations"/>
+      <description value="Section Vaccinations"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
