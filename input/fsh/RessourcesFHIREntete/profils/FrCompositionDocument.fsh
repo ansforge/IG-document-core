@@ -51,6 +51,11 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * extension[participant].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
 * extension[participant].extension[party] obeys comp-3
 
+// basedOn-extension
+
+* extension[basedOn].valueReference only Reference(ServiceRequest)
+* extension[basedOn].valueReference ^short = "Association du document à une prescription"
+
 * language 1..1 MS
 * identifier ^short = "Identifiant lot de versions"
 * identifier 1..1 MS
