@@ -7,4 +7,3 @@ Description: "Extension pour représenter la fréquence d'administration dans Me
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationAdministration"
 * value[x] only Timing
-* valueTiming 0..1
