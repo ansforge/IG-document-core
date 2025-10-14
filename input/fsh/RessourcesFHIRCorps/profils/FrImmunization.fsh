@@ -89,8 +89,16 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
   * ^short = "Réaction observée suite au vaccin"
 
 // Dose d’antigène reçue (extension) ou créer un profil fsh FrDoseAntigene basé sur la ressource Substance ?
-* extension contains FrImmunizationadministredProductExtension named doseAntigene 0..*
-  * ^short = "Dose d'antigène"
+/* * extension contains FrImmunizationadministredProductExtension named doseAntigene 0..*
+  * ^short = "Dose d'antigène" */
+
+* extension contains $immunization-administeredProduct-r5 named ImmunizationAdministeredProductR5 0..*
+
+* extension[ImmunizationAdministeredProductR5]
+  * ^short = "Produit administré"
+  * ^definition = "Cette extension implémente l’élément administeredProduct de la version R5.Elle permet d’ajouter un produit administré (médicament) à l’Immunization."
+  *  valueReference 0..1
+  *  valueReference only Reference(FrMedication)
 
 * note 0..1 MS
   * ^short = "Commentaire"
