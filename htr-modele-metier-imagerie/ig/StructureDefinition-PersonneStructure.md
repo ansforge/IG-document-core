@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:PersonneStructure |
+| Draft as of 2025-10-14 | *Computable Name*:PersonneStructure |
 
  
 Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). 
 
 **Usages:**
 
-* Use this Logical Model: [Modèle métier - Destinataire prévu du document](StructureDefinition-DestinatairePrevu.md), [Modèle métier - Évènement documenté](StructureDefinition-Evenement.md), [Modèle métier - Informateur](StructureDefinition-Informateur.md), [Modèle métier - Opérateur de saisie](StructureDefinition-OperateurSaisie.md)...Show 4 more,[Modèle métier - Autres personnes / structures impliquées](StructureDefinition-Participant.md),[Modèle métier - Association du document à une prise en charge](StructureDefinition-PriseEncharge.md),[Modèle métier - Responsable du document](StructureDefinition-Responsable.md)and[Modèle métier - Validateur du document](StructureDefinition-Validateur.md)
+* Use this Logical Model: [Modèle métier - Destinataire prévu du document](StructureDefinition-DestinatairePrevu.md), [Modèle métier - Évènement documenté](StructureDefinition-Evenement.md), [Acte](StructureDefinition-FrActe.md), [Dispositif médical](StructureDefinition-FrDispositifMedicalEntry.md)...Show 7 more,[Rencontre](StructureDefinition-FrRencontre.md),[Modèle métier - Informateur](StructureDefinition-Informateur.md),[Modèle métier - Opérateur de saisie](StructureDefinition-OperateurSaisie.md),[Modèle métier - Autres personnes / structures impliquées](StructureDefinition-Participant.md),[Modèle métier - Association du document à une prise en charge](StructureDefinition-PriseEncharge.md),[Modèle métier - Responsable du document](StructureDefinition-Responsable.md)and[Modèle métier - Validateur du document](StructureDefinition-Validateur.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/PersonneStructure)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-PersonneStructure.cs
   "name" : "PersonneStructure",
   "title" : "Modèle métier - Personne et/ou Structure",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -176,6 +176,67 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
  |
 | [Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md) | Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap. |
 
+### Modèles logiques métier des sections 
+
+| | |
+| :--- | :--- |
+| [* Modèle logique métier du corps](StructureDefinition-CorpsDocument.md) | Eléments métier du corps d’un document |
+| [* Section](StructureDefinition-Section.md) | Modèle logique métier : Section |
+| [Acte d'imagerie](StructureDefinition-FrActeImagerie.md) | Section Acte d’imagerie |
+| [Addendum](StructureDefinition-FrAddendum.md) | Section Addendum |
+| [Comparaison d'examens d'imagerie](StructureDefinition-FrComparaisonExamensImagerie.md) | Section Comparaison d’examens d’imagerie |
+| [Complications Acte](StructureDefinition-FrComplicationsActe.md) | Section Complications au cours de l’acte |
+| [Conclusion examen d'imagerie](StructureDefinition-FrConclusionExamenImagerie.md) | Section Conclusion examen d’imagerie |
+| [Demande d'examen d'imagerie](StructureDefinition-FrDemandeExamenImagerie.md) | Section Demande d’examen d’imagerie |
+| [Dispositifs medicaux](StructureDefinition-FrDispositifsMedicaux.md) | Section Dispositifs medicaux |
+| [Documents ajoutés](StructureDefinition-FrDocumentsAjoutes.md) | Section Documents ajoutés |
+| [Education du patient](StructureDefinition-FrEducationPatient.md) | Section Education du patient |
+| [Exposition aux radiations](StructureDefinition-FrExpositionRadiations.md) | Section Exposition aux radiations |
+| [Informations Cliniques](StructureDefinition-FrInformationsCliniques.md) | Section Informations Cliniques |
+| [Object Catalog](StructureDefinition-FrObjectCatalog.md) | Section Object Catalog |
+| [Résultats d'examen d'imagerie](StructureDefinition-FrResultatsExamenImagerie.md) | Section Résultats d’examen d’imagerie |
+| [Résultats d'examens (non codée)](StructureDefinition-FrResultatsExamensNonCode.md) | Section Résultats d’examens (non codée) |
+
+### Modèles logiques métier des entrées 
+
+| | |
+| :--- | :--- |
+| [Administration produit de sante](StructureDefinition-FrAdministrationProduitDeSante.md) | Entrée Administration produit de sante |
+| [Autorisation exposition](StructureDefinition-FrAutorisationExposition.md) | Entrée Autorisation exposition |
+| [Document attaché](StructureDefinition-FrDocumentAttache.md) | Entrée Document attaché |
+| [Entrée Observation](StructureDefinition-FrObservation.md) | Entrée observation |
+| [Examen Imagerie](StructureDefinition-FrExamenImagerie.md) | Entrée DICOM Examen Imagerie |
+| [Observation sur la grossesse](StructureDefinition-FrObservationGrossesse.md) | Entrée Observation sur la grossesse |
+| [SOP Instance](StructureDefinition-FrSOPInstance.md) | Entrée SOP Instance |
+| [Technique imagerie](StructureDefinition-FrTechniqueImagerie.md) | Entrée Technique imagerie |
+
+### Modèles logiques métier des éléments transversaux 
+
+| | |
+| :--- | :--- |
+| [Participant](StructureDefinition-FrParticipantCorps.md) | Modèle logique métier de l’élément Participant |
+
+### Structures: Logical Models 
+
+These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.
+
+| | |
+| :--- | :--- |
+| [Acte](StructureDefinition-FrActe.md) | Entrée Acte |
+| [Certitude](StructureDefinition-FrCertitude.md) | Entrée Certitude |
+| [Commentaire](StructureDefinition-FrCommentaireER.md) | Entrée Commentaire |
+| [Dispositif médical](StructureDefinition-DispositifMedical.md) | Modèle logique métier Dispositif médical |
+| [Dispositif médical](StructureDefinition-FrDispositifMedicalEntry.md) | Entrée Dispositif médical |
+| [Problème](StructureDefinition-FrProbleme.md) | Entrée Problème |
+| [Quantité exposition](StructureDefinition-FrQuantiteExposition.md) | Entrée Quantité exposition |
+| [Rencontre](StructureDefinition-FrRencontre.md) | Entrée Rencontre |
+| [Référence interne](StructureDefinition-FrReferenceInterne.md) | Entrée Référence interne |
+| [Références externes](StructureDefinition-FrReferencesExternes.md) | Entrée Références externes |
+| [Serie imagerie](StructureDefinition-FrSerieImagerie.md) | Entrée Serie imagerie |
+| [Statut clinique du patient](StructureDefinition-FrStatutCliniquePatient.md) | Entrée Statut clinique du patient |
+| [Statut du problème](StructureDefinition-FrStatutProbleme.md) | Entrée Statut du problème. |
+| [Sévérité](StructureDefinition-FrSeverite.md) | Entrée Sévérité. |
+
 ### Terminology: Value Sets 
 
 These define sets of codes used by systems conforming to this implementation guide.

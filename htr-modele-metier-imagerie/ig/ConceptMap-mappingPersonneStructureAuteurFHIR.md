@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureAuteurFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)" |
+| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)" |
 
  
 Ce ConceptMap de l’élément PersonneStructureAuteur présente deux groupes de mapping : 
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

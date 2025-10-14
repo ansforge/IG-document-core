@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-encounter-participant | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FrEncounterParticipant |
+| Draft as of 2025-10-14 | *Computable Name*:FrEncounterParticipant |
 
  
 L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-core-encounter-pa
   "name" : "FrEncounterParticipant",
   "title" : "CDA - encounterParticipant",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

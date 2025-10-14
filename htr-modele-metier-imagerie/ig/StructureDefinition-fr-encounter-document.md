@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FrEncounterDocument |
+| Draft as of 2025-10-14 | *Computable Name*:FrEncounterDocument |
 
  
 Ce profil représente l’association du document à une prise en charge. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-encounter-documen
   "name" : "FrEncounterDocument",
   "title" : "Fr Encounter Document",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:EnteteDocument |
+| Draft as of 2025-10-14 | *Computable Name*:EnteteDocument |
 
  
 Eléments de l’entête d’un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-EnteteDocument.csv),
   "name" : "EnteteDocument",
   "title" : "Modèle logique métier de l'en-tête",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

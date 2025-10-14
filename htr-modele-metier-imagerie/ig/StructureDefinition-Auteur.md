@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Auteur |
+| Draft as of 2025-10-14 | *Computable Name*:Auteur |
 
  
 Auteur du document : ce peut être un professionnel, un patient/usager ou un système. 
@@ -29,7 +29,7 @@ Auteur du document : ce peut être un professionnel, un patient/usager ou un sys
 
 **Usages:**
 
-* Use this Logical Model: [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md)
+* Use this Logical Model: [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md), [Acte](StructureDefinition-FrActe.md), [Addendum](StructureDefinition-FrAddendum.md), [Commentaire](StructureDefinition-FrCommentaireER.md)...Show 3 more,[Dispositif médical](StructureDefinition-FrDispositifMedicalEntry.md),[Entrée Observation](StructureDefinition-FrObservation.md)and[Rencontre](StructureDefinition-FrRencontre.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/Auteur)
 
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-Auteur.csv), [Excel]
   "name" : "Auteur",
   "title" : "Modèle métier - Auteur du document (humain ou système)",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

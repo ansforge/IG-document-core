@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FrInformationRecipient |
+| Draft as of 2025-10-14 | *Computable Name*:FrInformationRecipient |
 
  
 L’élément de l’en-tête du CDA informationRecipient permet d’enregistrer une personne déclarée comme destinataire prévu du document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-core-information-
   "name" : "FrInformationRecipient",
   "title" : "CDA - informationRecipient",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

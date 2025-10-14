@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Informateur |
+| Draft as of 2025-10-14 | *Computable Name*:Informateur |
 
  
 Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé. 
 
 **Usages:**
 
-* Use this Logical Model: [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md)
+* Use this Logical Model: [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md), [Acte](StructureDefinition-FrActe.md) and [Rencontre](StructureDefinition-FrRencontre.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/Informateur)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-Informateur.csv), [E
   "name" : "Informateur",
   "title" : "Modèle métier - Informateur",
   "status" : "draft",
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-pharmacien | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FRValueSetSavoirFaireProfessionPharmacien |
+| Draft as of 2025-10-14 | *Computable Name*:FRValueSetSavoirFaireProfessionPharmacien |
 
  
 Savoir-faire pour la profession 21 (Pharmacien) 
@@ -24,8 +24,8 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
 
 Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
 
-* Inclut tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-G05-SousSectionTableauCNOP.html) version 📦20231215120000
-* Inclut tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-R45-FonctionQualifiee.html) version 📦20231215120000
+* Inclut tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-G05-SousSectionTableauCNOP.html)version 📦20231215120000
+* Inclut tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R45-FonctionQualifiee/FHIR/TRE-R45-FonctionQualifiee`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-R45-FonctionQualifiee.html)version 📦20231215120000
 
  
 
@@ -63,7 +63,7 @@ Ce jeu de valeur (ValueSet) contient 22 concepts
   "title" : "Fr ValueSet Savoir-faire Profession Pharmacien",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T15:11:30+00:00",
+  "date" : "2025-10-14T08:46:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
