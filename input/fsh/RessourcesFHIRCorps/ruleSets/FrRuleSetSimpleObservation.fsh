@@ -43,3 +43,5 @@ RuleSet: FrRuleSetSimpleObservation
 
 * note MS
 * note ^short = "Commentaire"
+
+* encounter only Reference(FrEncounter)
