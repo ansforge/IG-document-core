@@ -27,5 +27,5 @@ Alias: $jdv-immunization-route-code-cisis = https://smt.esante.gouv.fr/fhir/Valu
 // Extensions pour les éléments R5
 Alias: $immunization-administredProduct-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.administeredProduct
 Alias: $medicationRequest-dispenseRequest-dispenserInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.dispenseRequest.dispenserInstruction
-Alias: $medicationAdministration-occurenceTiming-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.occurenceTiming
+Alias: $medicationAdministration-occurence-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.occurence[x]
 Alias: $immunization-basedOn-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.basedOn

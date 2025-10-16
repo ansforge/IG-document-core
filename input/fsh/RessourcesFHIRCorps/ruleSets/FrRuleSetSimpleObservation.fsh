@@ -44,5 +44,5 @@ RuleSet: FrRuleSetSimpleObservation
 * note MS
 * note ^short = "Commentaire"
 
-* encounter only Reference(FrEncounter or FrEncounterEvent)
-  ^short = "Rencontre de soins durant laquelle cette observation a été effectuée"
+* encounter only Reference (FrEncounter or FrEncounterEvent)
+* encounter ^short = "Rencontre de soins durant laquelle cette observation a été effectuée"
