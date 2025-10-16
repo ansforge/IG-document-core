@@ -1,4 +1,3 @@
-// StructureDefinition for FrMedicationRequest
 // Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
 Profile: FrMedicationRequest
 Parent: MedicationRequest
@@ -33,8 +32,8 @@ Description: "
 * status 1..1 MS
 * status ^short = "Statut"
 * status = #completed
-* dosageInstruction MS
 // Dosages progressifs, fractionnés 
+* dosageInstruction
   * sequence MS
   * timing MS
     * ^short = "Durée du traitement et fréquence d'administration."
@@ -107,20 +106,29 @@ Description: "
 * basedOn only Reference(FrCarePlanDocument)
 */
 
-//Instructions au patient
-// si codé : 
-* dosageInstruction.additionalInstruction MS 
-  * ^short = "Instructions au patient"
-  // si non codé : 
-* dosageInstruction.additionalInstruction.text MS 
+* dosageInstruction.additionalInstruction ^slicing.discriminator.type = #pattern
+* dosageInstruction.additionalInstruction ^slicing.discriminator.path = "$this"
+* dosageInstruction.additionalInstruction ^slicing.rules = #open
+ 
+* dosageInstruction.additionalInstruction contains
+    instructionsPatient 0..1 MS and
+    precondition 0..1
+ 
+* dosageInstruction.additionalInstruction[instructionsPatient]
   * ^short = "Instruction au patient"
-/*
-* dosageInstruction.text MS 
-  * ^short = "Instructions au dispensateur"
-  */
+  * coding 1..1
+  * coding.code = #PINSTRUCT
+  * coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+ 
+* dosageInstruction.additionalInstruction[precondition]
+  * ^short = "Condition préalable à l'utilisation du médicament"
+  * text = "Permet de décrire les conditions préalables à l'utilisation du médicament."
+
 * dispenseRequest MS
-  * extension contains FrMedicationRequestDispenserInstructionExtension named instructionsAuDispensateur 0..1 MS 
+  * extension contains $medicationRequest-dispenseRequest-dispenserInstruction-r5 named dispenserInstructionR5 0..1
+  * extension[dispenserInstructionR5].valueAnnotation 1..1
     * ^short = "instructions au dispensateur"
+
   * quantity MS
     * ^short = "Quantité à dispenser" 
   * numberOfRepeatsAllowed MS 
@@ -159,7 +167,3 @@ Description: "
 
 * reasonReference[horsAMM] only Reference(FrObservationOutOfNomenclature)
 * reasonReference[horsAMM] ^short = "Hors AMM"
-
-// Précondition
-* extension contains FrPreconditionExtension named precondition 0..1
-  * ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."

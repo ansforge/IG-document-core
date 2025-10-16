@@ -31,4 +31,5 @@ Description: "FrObservationPainScore permet d'enregistrer l'évaluation du patie
 * valueInteger 1..1 MS
   * ^short = "Valeur de l'observation. entier de 0 à 10"
 
-* extension contains FrRepeatNumberExtension named repeatNumber 0..1
+* hasMember 0..1 MS
+* hasMember only Reference(Observation)
