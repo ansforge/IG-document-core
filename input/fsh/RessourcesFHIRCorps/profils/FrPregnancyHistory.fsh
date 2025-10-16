@@ -1,4 +1,3 @@
-// StructureDefinition for FrPregnancyHistory
 // Ou bien le garder le profil FrObsrvationPregnancyHistory
 Profile: FrPregnancyHistory 
 Parent: List

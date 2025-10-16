@@ -1,4 +1,3 @@
-// StructureDefinition for Accidents Transfusionnels
 Profile: FrObservationTransfusionAccidents
 Parent: Observation
 Id: fr-transfusion-accidents

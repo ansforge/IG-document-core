@@ -1,4 +1,3 @@
-// StructureDefinition for Prelevement
 Profile: FrSpecimen
 Parent: Specimen
 Id: fr-specimen

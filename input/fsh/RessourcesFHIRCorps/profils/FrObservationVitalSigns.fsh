@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationVitalSigns
 Profile: FrObservationVitalSigns
 Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Id: fr-vital-signs

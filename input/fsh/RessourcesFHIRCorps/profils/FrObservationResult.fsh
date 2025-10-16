@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationResult
 Profile: FrObservationResult
 Parent: Observation
 Id: fr-observation-result

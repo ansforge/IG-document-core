@@ -1,4 +1,3 @@
-// StructureDefinition for Act
 Profile: FrProcedureAct
 Parent: Procedure
 Id: fr-procedure-act

@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationVitalSignsPanel
 Profile: FrObservationVitalSignsPanel
 Parent: http://hl7.org/fhir/StructureDefinition/vitalspanel
 Id: fr-Observation-vital-signs-panel
