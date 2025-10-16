@@ -73,7 +73,10 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * performer.actor.extension[executant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
 
 //Prescription
-* extension contains FrPrescriptionExtension named prescription 0..1
+* extension contains $immunization-basedOn-r5 named basedOnRequestR5 0..1
+* extension[basedOnRequestR5].valueReference 1..1
+* extension[basedOnRequestR5].valueReference only Reference (FrMedicationRequest)
+* extension[basedOnRequestR5] ^short = "Prescription"
 
 * protocolApplied MS
 // Type de vaccination
@@ -82,22 +85,14 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * protocolApplied.doseNumberPositiveInt 1..1
 * protocolApplied.doseNumberPositiveInt ^short = "Rang de la vaccination"
 
-// Profil FrConditionDocument
 * reasonReference MS
 * reasonReference only Reference(FrCondition) 
   * ^short = "Réaction observée suite au vaccin"
 
-// Dose d’antigène reçue (extension) ou créer un profil fsh FrDoseAntigene basé sur la ressource Substance ?
-/* * extension contains FrImmunizationadministredProductExtension named doseAntigene 0..*
-  * ^short = "Dose d'antigène" */
-
-* extension contains $immunization-administeredProduct-r5 named ImmunizationAdministeredProductR5 0..*
-
-* extension[ImmunizationAdministeredProductR5]
-  * ^short = "Produit administré"
-  * ^definition = "Cette extension implémente l’élément administeredProduct de la version R5.Elle permet d’ajouter un produit administré (médicament) à l’Immunization."
-  *  valueReference 0..1
-  *  valueReference only Reference(FrMedication)
-
+// Dose d'antigène
+// Problème dataType : codeableReference 
+/* * extension contains $immunization-administeredProduct-r5 named ImmunizationAdministeredProductR5 0..*
+* extension[ImmunizationAdministeredProductR5].extension[reference].valueReference only Reference(FrMedication)
+ */
 * note 0..1 MS
   * ^short = "Commentaire"
