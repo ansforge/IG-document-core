@@ -1,4 +1,3 @@
-// StructureDefinition for FrEncounterEvent
 Profile: FrEncounterEvent
 Parent: FrEncounter
 Id: fr-encounter-event

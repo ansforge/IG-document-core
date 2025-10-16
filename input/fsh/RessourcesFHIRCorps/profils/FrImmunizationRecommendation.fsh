@@ -1,4 +1,3 @@
-// StructureDefinition for FrImmunizationRecommendation
 Profile: FrImmunizationRecommendation
 Parent: ImmunizationRecommendation
 Id: fr-immunization-recommendation

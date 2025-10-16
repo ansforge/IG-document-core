@@ -1,4 +1,3 @@
-// StructureDefinition for FrCarePlan
 Profile: FrCarePlan
 Parent: CarePlan
 Id: fr-care-plan

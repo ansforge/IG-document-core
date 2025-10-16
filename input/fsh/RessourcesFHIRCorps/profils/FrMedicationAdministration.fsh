@@ -1,4 +1,3 @@
-// StructureDefinition for FrMedicationAdministration
 Profile: FrMedicationAdministration
 Parent: MedicationAdministration
 Id: fr-medication-administration
@@ -19,11 +18,14 @@ Description: "
 * effective[x] only Period
 * effectivePeriod MS
   * ^short = "Durée du traitement"
+
 // R5 : occurenceTiming
 // Fréquence d'administration
+* extension contains $medicationAdministration-occurence-r5 named occurenceR5 0..1
+* extension[occurenceR5].valueTiming 1..1
+* extension[occurenceR5] ^short = "Fréquence d'administration"
 
 * dosage
-  * extension contains FrMedicationAdministrationFrequency named frequenceAdministration 0..1
   // Dosages progressifs ou fractionnés
   * extension contains FrMedicationAdministrationSequenceExtension named sequence 0..*
   // Dosages conditionnels

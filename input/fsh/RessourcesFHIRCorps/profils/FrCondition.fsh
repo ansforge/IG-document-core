@@ -1,4 +1,3 @@
-// StructureDefinition for Profile: FrCondition
 Profile: FrCondition
 Parent: Condition
 Id: fr-condition

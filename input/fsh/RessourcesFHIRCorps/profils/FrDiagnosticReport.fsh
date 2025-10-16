@@ -1,4 +1,3 @@
-// StructureDefinition for FrDiagnosticReport
 Profile: FrDiagnosticReport
 Parent: DiagnosticReport
 Id: fr-diagnostic-report

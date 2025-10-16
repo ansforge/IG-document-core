@@ -1,4 +1,3 @@
-// StructureDefinition for FrImmunization
 Profile: FrImmunization
 Parent: Immunization
 Id: fr-immunization

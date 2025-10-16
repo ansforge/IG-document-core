@@ -1,4 +1,3 @@
-// StructureDefinition for encounterParticipant
 Profile: FrDocumentReference
 Parent: DocumentReference
 Id: fr-document-reference

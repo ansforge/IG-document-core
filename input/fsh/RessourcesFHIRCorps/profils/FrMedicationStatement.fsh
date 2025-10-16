@@ -1,4 +1,3 @@
-// StructureDefinition for FrMedicationStatement
 Profile: FrMedicationStatement
 Parent: MedicationStatement
 Id: fr-medication-statement
