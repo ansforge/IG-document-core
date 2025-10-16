@@ -1,4 +1,3 @@
-// StructureDefinition for FrMedicationDispense
 // Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
 Profile: FrMedicationDispense
 Parent: MedicationDispense

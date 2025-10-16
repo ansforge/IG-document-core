@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationPainScore
 Profile: FrObservationPainScore 
 Parent: Observation
 Id: fr-observation-pain-score

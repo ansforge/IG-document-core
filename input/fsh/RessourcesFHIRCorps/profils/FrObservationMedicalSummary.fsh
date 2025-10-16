@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationMedicalSummary
 Profile: FrObservationMedicalSummary 
 Parent: Observation
 Id: fr-observation-medical-summary

@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationBloodProductTransfusion
 Profile: FrObservationBloodProductTransfusion
 Parent: Observation
 Id: fr-observation-blood-product-transfusion

@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationBirthEvent
 Profile:  FrObservationBirthEvent
 Parent: Observation
 Id: fr-observation-birth-event

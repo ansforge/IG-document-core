@@ -1,4 +1,3 @@
-// StructureDefinition for FrMedicationsCombinaison 
 Profile: FrMedicationsCombinaison
 Parent: Medication
 Id: fr-medication-combinaison

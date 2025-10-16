@@ -1,4 +1,3 @@
-// StructureDefinition for Administration de derivés du sang
 Profile: FrObservationAdministrationBloodDerivatives
 Parent: Observation
 Id: fr-administration-blood-derivatives

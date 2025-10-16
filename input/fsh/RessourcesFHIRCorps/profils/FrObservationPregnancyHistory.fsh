@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationPregnancyHistory 
 Profile: FrObservationPregnancyHistory 
 Parent: Observation
 Id: fr-observation-pregnancy-history 

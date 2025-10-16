@@ -1,4 +1,3 @@
-// StructureDefinition for FrObservationMicroorganismDetection
 Profile: FrObservationMicroorganismDetection
 Parent: Observation
 Id: fr-observation-microorganism-detection
