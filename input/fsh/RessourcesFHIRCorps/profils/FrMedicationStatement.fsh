@@ -11,6 +11,7 @@ Description: "
 * identifier 1..* MS
   * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
 * basedOn only Reference(FrMedicationRequest)
+* basedOn ^short = "Prescription"
 * partOf only Reference(FrMedicationAdministration)
 * category MS
   * ^short = "Acte ou situation"
@@ -55,13 +56,10 @@ Description: "
 * medication[x] MS
 * medication[x] only CodeableConcept or Reference(FrMedication or FrMedicationsCombinaison)
 
-// Prescription : Utilisation de l'extension FrPrescription ou l'élément request qui fait référence (MedicationRequest) ?
-* extension contains FrPrescriptionExtension named Prescription 0..* MS 
-
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
 * reasonReference only Reference(FrCondition or Observation)
 
-// Ou bien utilisation de l'extnexion FHIR note ??
-* extension contains FrPreconditionExtension named precondition 0..1
+* note 0..1 MS
+* note ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."
