@@ -7,28 +7,9 @@ Description: "
  - FrMedicationRequest permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
-
-* doNotPerform = false
 * intent = #order
-
-* identifier MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-
-* identifier contains
-    identifierEntree 1..* MS and
-    referencePrescription 1..* MS
-
-* identifier[identifierEntree] ^short = "Identifiant"
-* identifier[referencePrescription] ^short = "Référence de la prescription. Non utilisé dans une prescription."
-
-* category 0..1 MS
-* category.coding 1..1
-* category.coding.system = "urn:oid:2.16.840.1.113883.5.4"
-* category.coding.code = #DRUG
-* category.coding.display = "Médicament"
+* identifier 1..* MS
+* identifier ^short = "Identifiant prescription"
 * status 1..1 MS
 * status ^short = "Statut"
 * status = #completed
@@ -95,16 +76,12 @@ Description: "
   * ^short = "Motif du traitement"
 * reasonReference only Reference(FrCondition or Observation)
 
-//copie du plan de traitement médicamenteux
-* supportingInformation only Reference(FrMedicationRequest)
-  * ^short = "Référence à un item du plan de traitement. Une copie du plan de traitement médicamenteux."
-  * identifier MS
-    * ^short = "Identifiant de la ligne de traitement dans un plan de traitement."
-// ou bien basedOn lien vers le plan de traitement ?
-/*
+// document externe 
+* instantiatesUri ^short = "Référence de la prescription"
+
 * basedOn 0..1 MS
-* basedOn only Reference(FrCarePlanDocument)
-*/
+  * ^short = "Référence à un item du plan de traitement. Une copie du plan de traitement médicamenteux."
+* basedOn only Reference(FrMedicationRequest)
 
 * dosageInstruction.additionalInstruction ^slicing.discriminator.type = #pattern
 * dosageInstruction.additionalInstruction ^slicing.discriminator.path = "$this"
@@ -128,9 +105,10 @@ Description: "
   * extension contains $medicationRequest-dispenseRequest-dispenserInstruction-r5 named dispenserInstructionR5 0..1
   * extension[dispenserInstructionR5].valueAnnotation 1..1
     * ^short = "instructions au dispensateur"
-
   * quantity MS
     * ^short = "Quantité à dispenser" 
+  * validityPeriod MS
+    * ^short = "Période de renouvellement"
   * numberOfRepeatsAllowed MS 
     * ^short = "Nombre de renouvellement(s) possible(s)"
 * substitution 1..1 MS
@@ -150,11 +128,9 @@ Description: "
     nonRemboursable 0..1 and
     horsAMM 0..1
 
-* reasonReference[renouvellement] only Reference(FrObservationRenewal)
-* reasonReference[renouvellement] ^short = "Période de renouvellement"
-
-* reasonReference[ald] only Reference(FrObservationRelatedToLongTermCondition)
-* reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)"
+* reasonReference[ald] only Reference(FrCondition)
+* reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)."
+* reasonReference[ald] ^definition = "S'il s'agit d'une Affection Longue Durée (ALD) il faut préciser le problème"
 
 * reasonReference[accidentTravail] only Reference(FrObservationWorkRelatedAccident)
 * reasonReference[accidentTravail] ^short = "En rapport avec accident travail"
@@ -165,5 +141,6 @@ Description: "
 * reasonReference[nonRemboursable] only Reference(FrObservationNotCovered)
 * reasonReference[nonRemboursable] ^short = "Non remboursable"
 
+// à supprimer et à remplacer par une extension de type BL à la racine du profil
 * reasonReference[horsAMM] only Reference(FrObservationOutOfNomenclature)
 * reasonReference[horsAMM] ^short = "Hors AMM"

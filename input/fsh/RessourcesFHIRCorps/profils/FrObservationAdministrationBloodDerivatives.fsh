@@ -14,20 +14,6 @@ Description: "FrObservationAdministrationBloodDerivatives est un profil utilisé
 * valueBoolean 1..1 MS
 * valueBoolean ^short = "Administration de dérivés du sang"
 
-/* // author
-* performer ^slicing.discriminator.type = #type
-* performer ^slicing.discriminator.path = "$this"
-* performer ^slicing.rules = #open
-
-* performer contains auteur 0..1 MS
-* performer[auteur] ^short = "Auteur"
-* performer[auteur] only Reference(FrPractitionerRoleDocument)
-* performer[auteur].extension contains $event-performerFunction named performerFunction 0..1
-* performer[auteur].extension[performerFunction] ^short = "Rôle fonctionnel de l'auteur :
-Si l'auteur est le patient/usager : ne pas utiliser l'élément performerFunction
-Si l'auteur n'est pas le patient :Valeur issue du https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS."
-* performer[auteur].extension[performerFunction].valueCodeableConcept from https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS
- */
 // Auteur
 * performer MS
 * performer.extension contains FrActorExtension named author 0..1
