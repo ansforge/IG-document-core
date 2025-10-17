@@ -27,7 +27,8 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   ans.fhir.fr.annuaire: 1.1.0
   hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
-  
+  ihe.pharm.mpd: 1.0.0-comment-2  
+
 pages:
     index.md:
         title: Accueil
@@ -164,8 +165,8 @@ groups:
       - StructureDefinition/fr-core-encounter-participant
       - StructureDefinition/fr-core-health-care-facility
 
-  Ressources FHIR:
-    name: Profils FHIR
+  Ressources FHIR entête:
+    name: Profils FHIR entête
     resources:
       - StructureDefinition/fr-bundle-document
       - StructureDefinition/fr-composition-document
@@ -174,10 +175,38 @@ groups:
       - StructureDefinition/fr-practitionerRole-document
       - StructureDefinition/fr-practitioner-document
       - StructureDefinition/fr-organization-document
-      - StructureDefinition/fr-device-document
+      - StructureDefinition/fr-device-auteur-document
       - StructureDefinition/fr-encounter-document
       - StructureDefinition/fr-location-document
       - StructureDefinition/fr-related-person-document
+     
+  Ressources FHIR corps:
+      name: Profils FHIR corps
+      resources:
+        - StructureDefinition/fr-advance-directive
+        - StructureDefinition/fr-adverse-event
+        - StructureDefinition/fr-allergie-intolerance
+        - StructureDefinition/fr-care-plan
+        - StructureDefinition/fr-condition
+        - StructureDefinition/fr-device-request
+        - StructureDefinition/fr-device-use-statement
+        - StructureDefinition/fr-diagnostic-report
+        - StructureDefinition/fr-diagnostic-report-bio-chapter
+        - StructureDefinition/fr-document-reference
+        - StructureDefinition/fr-encounter
+        - StructureDefinition/fr-encounter-event
+        - StructureDefinition/fr-endpoint-wado-dicom
+        - StructureDefinition/fr-family-member-history
+        - StructureDefinition/fr-imaging-study-dicom
+        - StructureDefinition/fr-immunization
+        - StructureDefinition/fr-immunization-recommendation
+        - StructureDefinition/fr-media
+        - StructureDefinition/fr-medication
+        - StructureDefinition/fr-medication-administration
+        - StructureDefinition/fr-medication-administration-dicom
+        - StructureDefinition/fr-administration-radiopharmaceutique-dicom
+        - StructureDefinition/fr-medication-statement
+        - StructureDefinition/fr-service-request
 
   Data Type FHIR:
     name: Data Type Profiles 
@@ -189,7 +218,7 @@ groups:
     resources:
       - StructureDefinition/fr-author-time
       - StructureDefinition/fr-performer-event
-      
+
   Mapping:
     name: Concept Maps
     resources:
@@ -213,7 +242,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
       - mappingAdministrativeGender
-      
+
 resources:
   Binary/BIO-CR-BIO-2024.01-glycemie-mole:
     name: BIO-CR-BIO_2024.01_Glycemie_mole
@@ -256,4 +285,3 @@ resources:
     description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
     exampleBoolean: true
     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
-    
