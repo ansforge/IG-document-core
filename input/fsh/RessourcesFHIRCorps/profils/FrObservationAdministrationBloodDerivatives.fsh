@@ -4,9 +4,6 @@ Id: fr-administration-blood-derivatives
 Title: "Observation - Fr Administration blood derivatives"
 Description: "FrObservationAdministrationBloodDerivatives est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang."
 
-// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
-//* ^extension[$imposeProfile].valueCanonical = Canonical()
-
 * identifier 1..1 MS
 * code MS
 * code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-147 "Administration de dérivés du sang"

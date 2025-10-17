@@ -4,8 +4,6 @@ Id: fr-related-to-long-term-condition
 Title: "Observation - Fr related to long term condition"
 Description: "FrObservationRelatedToLongTermCondition permet d'indiquer si l'élément auquel elle est associée est en rapport avec une Affection Longue Durée (ALD)."
 
-// mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
-//* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * code ^short = "Catégorie de l'entrée"
 * code MS

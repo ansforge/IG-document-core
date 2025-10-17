@@ -141,6 +141,5 @@ Description: "
 * reasonReference[nonRemboursable] only Reference(FrObservationNotCovered)
 * reasonReference[nonRemboursable] ^short = "Non remboursable"
 
-// à supprimer et à remplacer par une extension de type BL à la racine du profil
-* reasonReference[horsAMM] only Reference(FrObservationOutOfNomenclature)
-* reasonReference[horsAMM] ^short = "Hors AMM"
+* extension contains FrMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
+* extension[horsAMM] ^short = "Hors Autorisation de mise sur le marché"
