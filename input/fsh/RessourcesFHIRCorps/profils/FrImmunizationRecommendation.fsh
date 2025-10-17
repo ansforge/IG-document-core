@@ -43,11 +43,5 @@ Description: "FrImmunizationRecommendation permet de décrire une vaccination pr
   * description MS
     * ^short = "Commentaire"
 
-  /*
-  // Prescription 
-  * supportingPatientInformation 0..1 MS
-  // créer un profil FrPrescriptionDocument de type MedicationRequest 
-  * supportingPatientInformation only Reference(MedicationRequest)
-*/
- // Prescription 
-* extension contains FrPrescriptionExtension named prescription 0..1
+  * supportingPatientInformation only Reference(FrMedicationRequest)
+  * supportingPatientInformation ^short = "Prescription"
