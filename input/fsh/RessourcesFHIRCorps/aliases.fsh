@@ -23,3 +23,9 @@ Alias: $terminologie-cisis = https://smt.esante.gouv.fr/fhir/CodeSystem/terminol
 Alias: $jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
 Alias: $jdv-absent-or-unknown-immunization-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-absent-or-unknown-immunization-cisis
 Alias: $jdv-immunization-route-code-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-immunization-route-code-cisis
+
+// Extensions pour les éléments R5
+Alias: $immunization-administredProduct-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.administeredProduct
+Alias: $medicationRequest-dispenseRequest-dispenserInstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.dispenseRequest.dispenserInstruction
+Alias: $medicationAdministration-occurence-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationAdministration.occurence[x]
+Alias: $immunization-basedOn-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.basedOn
