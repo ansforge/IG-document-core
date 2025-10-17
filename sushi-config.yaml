@@ -26,8 +26,8 @@ dependencies:
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.extensions.r5: 4.0.1
   ans.fhir.fr.annuaire: 1.1.0
-  hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot 
-  
+  hl7.fhir.uv.fhir-clinical-document: 1.0.0-ballot
+
 pages:
     index.md:
         title: Accueil
@@ -164,8 +164,8 @@ groups:
       - StructureDefinition/fr-core-encounter-participant
       - StructureDefinition/fr-core-health-care-facility
 
-  Ressources FHIR:
-    name: Profils FHIR
+  Ressources FHIR entête:
+    name: Profils FHIR entête
     resources:
       - StructureDefinition/fr-bundle-document
       - StructureDefinition/fr-composition-document
@@ -178,18 +178,39 @@ groups:
       - StructureDefinition/fr-encounter-document
       - StructureDefinition/fr-location-document
       - StructureDefinition/fr-related-person-document
+     
+  Ressources FHIR corps:
+      name: Profils FHIR corps
+      resources:
+         - StructureDefinition/fr-transfusion-accidents
+         - StructureDefinition/fr-work-related-accident
+         - StructureDefinition/fr-observation-survey
+         - StructureDefinition/fr-observation-survey-pannel
+         - StructureDefinition/fr-observation-social-history
+         - StructureDefinition/fr-procedure-patient-exposure-dicom
+         - StructureDefinition/fr-procedure-imaging-dicom
+         - StructureDefinition/fr-procedure-act
+         - StructureDefinition/fr-specimen
+         - StructureDefinition/fr-observation-renewal
+         - StructureDefinition/fr-pregnancy-history
+         - StructureDefinition/fr-observation-result
+         - StructureDefinition/fr-observation-status
+         - StructureDefinition/fr-procedure-patient-transport
+         - StructureDefinition/fr-procedure-healthcare-professional-transport
+         - StructureDefinition/fr-Observation-vital-signs-panel
+         - StructureDefinition/fr-vital-signs
 
   Data Type FHIR:
     name: Data Type Profiles 
     resources:
       - StructureDefinition/fr-human-name-document
 
-  Extensions FHIR:
-    name: Extensions FHIR
+  Extensions FHIR entête:
+    name: Extensions FHIR entête
     resources:
       - StructureDefinition/fr-author-time
       - StructureDefinition/fr-performer-event
-      
+
   Mapping:
     name: Concept Maps
     resources:
@@ -213,7 +234,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
       - mappingAdministrativeGender
-      
+
 resources:
   Binary/BIO-CR-BIO-2024.01-glycemie-mole:
     name: BIO-CR-BIO_2024.01_Glycemie_mole
@@ -256,4 +277,3 @@ resources:
     description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
     exampleBoolean: true
     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
-    
