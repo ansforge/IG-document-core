@@ -6,8 +6,6 @@
 
 ## Example Binary: eDISP-MED-2024.01
 
-This content is an example of the [CDA - clinicalDocument](StructureDefinition-fr-core-clinical-document.md) Logical Model and is not a FHIR Resource
-
 ```
 
 <?xml version="1.0" encoding="UTF-8"?>

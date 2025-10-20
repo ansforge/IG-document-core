@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Auteur |
+| Draft as of 2025-10-20 | *Computable Name*:Auteur |
 
  
 Auteur du document : ce peut être un professionnel, un patient/usager ou un système. 
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-Auteur.csv), [Excel]
   "name" : "Auteur",
   "title" : "Modèle métier - Auteur du document (humain ou système)",
   "status" : "draft",
-  "date" : "2025-10-13T15:21:05+00:00",
+  "date" : "2025-10-20T17:15:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

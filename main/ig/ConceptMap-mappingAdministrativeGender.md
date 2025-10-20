@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAdministrativeGender | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Mapping ValueSet AdministrativeGender |
+| Draft as of 2025-10-20 | *Computable Name*:Mapping ValueSet AdministrativeGender |
 
  
 Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap. 
@@ -42,7 +42,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping ValueSet AdministrativeGender",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T15:21:05+00:00",
+  "date" : "2025-10-20T17:15:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
