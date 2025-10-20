@@ -1,5 +1,5 @@
 //  Logical Model : personne-structure			
-Logical: PersonneStructure		
+Logical: FRLMPersonneStructure		
 Title: "Modèle métier - Personne et/ou Structure"			
 Description: "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." 
 Characteristics: #can-be-target 			 			 		

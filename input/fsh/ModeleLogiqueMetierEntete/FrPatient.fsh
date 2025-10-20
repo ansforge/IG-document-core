@@ -1,5 +1,5 @@
 	//  Logical Model : patient	
-Logical: PatientUsager				
+Logical: FRLMPatientUsager				
 Title: "Modèle métier - Patient / Usager"				
 Description:  """Patient/Usager concerné par le document."""
 Characteristics: #can-be-target	
