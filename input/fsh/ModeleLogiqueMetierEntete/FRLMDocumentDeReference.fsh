@@ -1,7 +1,6 @@
-//  Logical Model : document-reference	
-Logical: DocumentDeReference			
-Title: "Modèle métier - Document de référence"	
-//Id: fr-document-reference			
+Logical: FRLMDocumentDeReference	
+Id: fr-lm-document-reference			
+Title: "Modèle logique métier - FR LM Document de référence"			
 Description: "Référence un document existant (à remplacer ou transformé)." 	
 Characteristics: #can-be-target	
 * . 0..1
