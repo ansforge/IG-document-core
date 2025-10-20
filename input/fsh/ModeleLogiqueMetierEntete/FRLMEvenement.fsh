@@ -1,7 +1,6 @@
-//  Logical Model : evenement-documente				
-Logical: Evenement	
-Title: "Modèle métier - Évènement documenté"	
-//Id: fr-evenement-documente			
+Logical: FRLMEvenement
+Id: fr-lm-evenement
+Title: "Modèle logique métier - FR LM Évènement"		
 Description: "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." 	
 Characteristics: #can-be-target
 * . 1..*	
@@ -31,5 +30,5 @@ Characteristics: #can-be-target
   Obligatoire pour l'évènement documenté principal." 
   * roleFonctionnel 0..1 CodeableConcept "Rôle fonctionnel."
   * dateHeureParticipation 0..1 dateTime "Date et heure de participation."
-  * executant 1..1 PersonneStructure "Exécutant. 
+  * executant 1..1 FRLMPersonneStructure "Exécutant. 
   Le cadre d'exercice est obligatoire pour l'évènement documenté principal."

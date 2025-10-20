@@ -1,6 +1,6 @@
-//  Logical Model : personne-structure-auteur			
-Logical: PersonneStructureAuteur		
-Title: "Modèle métier - Personne et/ou Structure (Auteur)"			
+Logical: FRLMPersonneStructureAuteur		
+Id: fr-lm-personne-structure-auteur
+Title: "Modèle logique métier - FR LM Personne et/ou Structure Auteur"			
 Description: "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." 
 Characteristics: #can-be-target 			 			 		
 * personne 0..1 Base "Personne"		 		

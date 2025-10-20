@@ -1,7 +1,6 @@
-//  Logical Model	: consentement-document				
-Logical: Consentement		
-Title: "Modèle métier - Consentement associé au document"	
-//Id: fr-consentement-documente			
+Logical: FRLMConsentement	
+Id: fr-lm-consentement	
+Title: "Modèle logique métier - FR LM Consentement"			
 Description: "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." 	
 Characteristics: #can-be-target	
 * . 0..*		 		

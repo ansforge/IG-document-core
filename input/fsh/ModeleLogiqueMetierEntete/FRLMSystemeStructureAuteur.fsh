@@ -1,7 +1,6 @@
-//  Logical Model : auteur-systeme	
-Logical: SystemeStructureAuteur		
-Title: "Modèle métier - Système / Structure"	
-//Id: fr-auteur-systeme	
+Logical: FRLMSystemeStructureAuteur		
+Id: fr-lm-systeme-structure-auteur
+Title: "Modèle logique métier - FR LM Système / Structure"	
 Description: "Système auteur du document" 	
 Characteristics: #can-be-target		
 * systeme 1..1 Base "Identification du système."		 		

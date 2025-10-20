@@ -1,7 +1,6 @@
-//  Logical Model : responsable-document			
-Logical: Responsable		
-Title: "Modèle métier - Responsable du document"	
-//Id: fr-responsable-document			
+Logical: FRLMResponsable	
+Id: fr-lm-responsable	
+Title: "Modèle logique métier - FR LM Responsable"	
 Description: "Représente le responsable du document, qui est : 
  - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. 
  - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). 
@@ -11,4 +10,4 @@ Description: "Représente le responsable du document, qui est :
 Characteristics: #can-be-target
 * . 1..1 
 * dateHeurePriseResponsabilite 1..1 dateTime "Date/Heure de la prise de responsabilité."		 			 			 		
-* responsable 1..1 PersonneStructure "Responsable du document."		 		
+* responsable 1..1 FRLMPersonneStructure "Responsable du document."		 		

@@ -1,7 +1,6 @@
-//  Logical Model : participant-document		
-Logical: FRLMParticipant		
-Title: "Modèle métier - Autres personnes / structures impliquées"	
-//Id: fr-participant-document			
+Logical: FRLMParticipant	
+Id: fr-lm-participant	
+Title: "Modèle logique métier - FR LM Participant"		
 Description: "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." 	
 Characteristics: #can-be-target	
 * typeParticipation 1..1 CodeableConcept "Type de participation."		 			 			 		
