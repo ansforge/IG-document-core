@@ -1,6 +1,6 @@
 Logical: FRLMComparaisonExamensImagerie
 Id: fr-lm-comparaison-examens-imagerie
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Comparaison d'examens d'imagerie"
 Description: """Section Comparaison d'examens d'imagerie"""
 Characteristics: #can-be-target

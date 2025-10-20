@@ -1,6 +1,6 @@
 Logical: FRLMProblemesActifs 
 Id: fr-lm-problemes-actifs
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Problèmes actifs"
 Description: """Section Problèmes actifs"""
 Characteristics: #can-be-target

@@ -1,6 +1,6 @@
 Logical: FRLMCommentaireNonCode 
 Id: fr-lm-commentaire-non-code
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Commentaire (non-codé)"
 Description: """Section Commentaire (non-codé)"""
 Characteristics: #can-be-target

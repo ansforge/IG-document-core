@@ -1,6 +1,6 @@
 Logical: FRLMDirectivesAnticipees
 Id: fr-lm-directives-anticipees
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Directives-anticipées"
 Description: """Section Directives anticipées"""
 Characteristics: #can-be-target

@@ -1,6 +1,6 @@
 Logical: FRLMResultatsExamensNonCode 
 Id: fr-lm-resultats-examens-non-code
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats d'examens (non codée)"
 Description: """Section Résultats d'examens (non codée)"""
 Characteristics: #can-be-target

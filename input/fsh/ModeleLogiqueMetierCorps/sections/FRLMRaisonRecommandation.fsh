@@ -1,6 +1,6 @@
 Logical: FRLMRaisonRecommandation
 Id: fr-lm-raison-recommandation
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Raison de la recommandation"
 Description: """Section Raison de la recommandation"""
 Characteristics: #can-be-target

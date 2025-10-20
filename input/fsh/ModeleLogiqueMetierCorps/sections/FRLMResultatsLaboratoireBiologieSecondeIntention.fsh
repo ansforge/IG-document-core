@@ -1,6 +1,6 @@
 Logical: FRLMResultatsLaboratoireBiologieSecondeIntention
 Id: fr-lm-resultats-laboratoire-biologie-seconde-intention
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention"
 Description: """Section Résultats de laboratoire de biologie de seconde intention"""
 Characteristics: #can-be-target

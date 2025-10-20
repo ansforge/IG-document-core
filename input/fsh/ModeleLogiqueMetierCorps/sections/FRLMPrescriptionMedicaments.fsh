@@ -1,6 +1,6 @@
 Logical: FRLMPrescriptionMedicaments
 Id: fr-lm-prescription-medicaments
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Prescription de médicaments"
 Description: """Section Prescription de médicaments"""
 Characteristics: #can-be-target

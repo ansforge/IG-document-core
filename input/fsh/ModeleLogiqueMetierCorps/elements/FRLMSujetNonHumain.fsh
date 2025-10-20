@@ -1,4 +1,5 @@
 Logical: FRLMSujetNonHumain
+Id: fr-lm-sujet-non-humain
 Title: "Modèle logique métier - FR LM Sujet non humain"
 Description: "Sujet non humain"
 

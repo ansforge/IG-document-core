@@ -1,6 +1,6 @@
 Logical: FRLMAntecedentsMedicaux 
 Id: fr-lm-antecedents-medicaux
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Antécédents médicaux"
 Description: """Section Antécédents médicaux"""
 Characteristics: #can-be-target

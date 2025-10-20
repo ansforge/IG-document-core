@@ -1,6 +1,6 @@
 Logical: FRLMResultatsEvenements
 Id: fr-lm-resultats-evenements
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats d'événements"
 Description: """Section Résultats d'événements"""
 Characteristics: #can-be-target

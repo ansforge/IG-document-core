@@ -1,6 +1,6 @@
 Logical: FRLMResultatsExamenImagerie
 Id: fr-lm-resultats-examen-imagerie
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats d'examen d'imagerie"
 Description: """Section Résultats d'examen d'imagerie"""
 Characteristics: #can-be-target

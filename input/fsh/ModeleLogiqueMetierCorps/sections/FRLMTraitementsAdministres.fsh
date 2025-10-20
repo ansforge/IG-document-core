@@ -1,6 +1,6 @@
 Logical: FRLMTraitementsAdministres
 Id: fr-lm-traitements-administres
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Traitements administrés"
 Description: """Section Traitements administrés"""
 Characteristics: #can-be-target

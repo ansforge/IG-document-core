@@ -1,6 +1,6 @@
 Logical: FRLMRaisonRecommandationNonCode 
 Id: fr-lm-raison-recommandation-non-code
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Raison de la recommandation (non codée)"
 Description: """Section Raison de la recommandation (non codée)"""
 Characteristics: #can-be-target

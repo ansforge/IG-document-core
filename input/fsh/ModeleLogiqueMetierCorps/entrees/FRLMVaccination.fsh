@@ -21,7 +21,7 @@ Characteristics: #can-be-target
 * doseVaccination 0..1 Quantity "Dose administrée" 
 // administeredProduct	0..1	EHDSMedication
 * vaccin 1..1 FRLMProduitSante "Vaccin" 
-* prescription 0..1 FRLMPrescriptionEntry "Référence de la prescription"
+* prescription 0..1 FRLMPrescriptionEntree "Référence de la prescription"
 // doseNumber 
 * rangVaccination 0..1 FRLMRangVaccination "Rang de la vaccination" 
 // Immunization.reaction.detail

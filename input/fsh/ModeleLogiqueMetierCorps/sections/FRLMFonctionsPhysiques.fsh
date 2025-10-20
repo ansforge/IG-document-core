@@ -1,6 +1,6 @@
 Logical: FRLMFonctionsPhysiques
 Id: fr-lm-fonctions-physiques
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Fonctions physiques"
 Description: """Section Fonctions physiques"""
 Characteristics: #can-be-target

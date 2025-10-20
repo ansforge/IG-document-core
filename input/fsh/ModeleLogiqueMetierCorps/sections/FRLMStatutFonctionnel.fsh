@@ -1,6 +1,6 @@
 Logical: FRLMStatutFonctionnel
 Id: fr-lm-statut-fonctionnel
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Statut fonctionnel"
 Description: """Section Statut fonctionnel"""
 Characteristics: #can-be-target

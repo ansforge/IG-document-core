@@ -1,6 +1,6 @@
 Logical: FRLMCRBIOChapitre
 Id: fr-lm-cr-bio-chapitre
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau"
 Description: """Section Compte rendu de biologie de 1er niveau"""
 Characteristics: #can-be-target

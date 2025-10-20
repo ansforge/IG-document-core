@@ -25,7 +25,7 @@ Characteristics: #can-be-target
 * medicament 1..1 FRLMProduitSante "Médicament"
 * reason 0..* FRLMReferenceInterne "Motif du traitement"
 // MedicationAdministration.request
-* prescription 0..* FRLMPrescriptionEntry "Prescription"
+* prescription 0..* FRLMPrescriptionEntree "Prescription"
 // MedicationAdministration.supportingInformation
 * subordinateTreatment 0..* FRLMTraitementSubordonne "Traitement subordonné"
 //MedicationAdministration.supportingInformation

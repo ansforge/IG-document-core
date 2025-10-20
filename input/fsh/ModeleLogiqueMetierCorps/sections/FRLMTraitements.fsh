@@ -1,6 +1,6 @@
 Logical: FRLMTraitements 
 Id: fr-lm-traitements
-Parent : Section 
+Parent : FRLMSection 
 Title: "Modèle logique métier - FR LM Traitements"
 Description: """Section Traitements"""
 Characteristics: #can-be-target

@@ -1,5 +1,6 @@
 Logical: FRLMHistoriqueDesGrossesses
-Parent: Section
+Id: fr-lm-historique-des-grossesses
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Antécédents obstétricaux"
 Description: """Section Historique des grossesses"""
 Characteristics: #can-be-target

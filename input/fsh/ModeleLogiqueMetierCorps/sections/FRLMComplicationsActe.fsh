@@ -1,6 +1,6 @@
 Logical: FRLMComplicationsActe
 Id: fr-lm-complications-acte
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Complications Acte"
 Description: """Section Complications au cours de l'acte"""
 Characteristics: #can-be-target

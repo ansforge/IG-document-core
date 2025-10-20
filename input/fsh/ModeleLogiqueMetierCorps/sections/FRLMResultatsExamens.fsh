@@ -1,6 +1,6 @@
-Logical: FRLMesultatsExamens
+Logical: FRLMResultatsExamens
 Id: fr-lm-resultats-examens
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats d'examens"
 Description: """Section Résultats d'examens"""
 Characteristics: #can-be-target

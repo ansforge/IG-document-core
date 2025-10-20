@@ -1,6 +1,6 @@
 Logical: FRLMObjectCatalog
 Id: fr-lm-object-catalog
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Object Catalog"
 Description: """Section Object Catalog"""
 Characteristics: #can-be-target

@@ -1,5 +1,5 @@
-Logical: FRLMPrescriptionEntry
-Id: fr-lm-prescription
+Logical: FRLMPrescriptionEntree
+Id: fr-lm-prescription-entree
 //Parent : EHDSDosaging
 Title: "Modèle logique métier - FR LM Prescription"
 Description: """Entrée Prescription """

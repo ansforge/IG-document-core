@@ -1,6 +1,6 @@
 Logical: FRLMPlanSoins
 Id: fr-lm-plan-soins
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Plan de soins"
 Description: """Section Plan de soins"""
 Characteristics: #can-be-target

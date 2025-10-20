@@ -1,6 +1,6 @@
 Logical: FRLMHistoriqueDesActes
 Id: fr-lm-historique-des-actes
-Parent: Section
+Parent: FRLMSection
 Title: "Historique des actes"
 Description: """Section Historique des actes"""
 Characteristics: #can-be-target

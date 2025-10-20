@@ -1,6 +1,6 @@
 Logical: FRLMResultats
 Id: fr-lm-resultats
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Résultats"
 Description: """Section Résultats"""
 Characteristics: #can-be-target

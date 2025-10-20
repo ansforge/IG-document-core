@@ -1,6 +1,6 @@
 Logical: FRLMSignesVitaux
 Id: fr-lm-signes-vitaux
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Signes vitaux"
 Description: """Section Signes vitaux"""
 Characteristics: #can-be-target

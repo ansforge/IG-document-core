@@ -1,6 +1,6 @@
 Logical: FRLMFacteursDeRisqueProfessionnelsNonCode 
 Id: fr-lm-facteurs-de-risque-professionnels-non-code
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Facteurs de risque professionnels non code"
 Description: """Section Facteurs de risque professionnels non code"""
 Characteristics: #can-be-target

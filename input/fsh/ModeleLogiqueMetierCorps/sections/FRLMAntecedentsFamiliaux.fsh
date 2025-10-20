@@ -1,6 +1,6 @@
 Logical: FRLMAntecedentsFamiliaux 
 Id: fr-lm-antecedents-familiaux
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Antécédents familiaux"
 Description: """Section Antécédents familiaux"""
 Characteristics: #can-be-target

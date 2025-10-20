@@ -1,6 +1,6 @@
 Logical: FRLMAllergiesEtHypersensibilites 
 Id: fr-lm-allergies-et-hypersensibilites
-Parent : Section
+Parent : FRLMSection
 Title: "Modèle logique métier - FR LM Allergies et hypersensibilités"
 Description: """Section Allergies et hypersensibilités"""
 Characteristics: #can-be-target

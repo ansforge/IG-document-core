@@ -1,6 +1,6 @@
 Logical: FRLMExpositionRadiations
 Id: fr-lm-exposition-radiations
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Exposition aux radiations"
 Description: """Section Exposition aux radiations"""
 Characteristics: #can-be-target

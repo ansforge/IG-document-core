@@ -1,4 +1,5 @@
 Logical: FRLMSujet
+Id: fr-lm-sujet
 Title: "Modèle logique métier - FR LM Sujet"
 Description: "Sujet"
 

@@ -1,6 +1,6 @@
 Logical: FRLMAddendum
 Id: fr-lm-addendum
-Parent: Section
+Parent: FRLMSection
 Title: "Modèle logique métier - FR LM Addendum"
 Description: """Section Addendum"""
 Characteristics: #can-be-target

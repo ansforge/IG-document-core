@@ -1,5 +1,6 @@
 Logical: FRLMEffetsIndesirables
-Parent: Section 
+Id: fr-lm-effets-indesirables
+Parent: FRLMSection 
 Title: "Modèle logique métier - FR LM Effets indesirables"
 Description: """Section Effets indesirables"""
 Characteristics: #can-be-target
