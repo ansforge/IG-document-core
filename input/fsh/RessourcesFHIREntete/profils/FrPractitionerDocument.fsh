@@ -16,7 +16,6 @@ Description: "Ce profil permet de décrire un professionnel de santé dans le ca
  - Savoir-faire : pour les professions 10 (Médecin), 21 (Pharmacien), 40 (Chirurgien-dentiste) et 60 (Infirmier).
  - Rôle : pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle)."
 
-
 // Rôle (Profession 41 et 99) 
 * qualification contains role 0..1
 * qualification[role] ^short = "Rôle : Pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle)."

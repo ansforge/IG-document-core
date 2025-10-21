@@ -25,13 +25,13 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Groupe Mapping 2 : CDA to FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of"					
-* group[=].target = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension"									
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/event-basedOn"									
 * group[=].element[+].code = #inFulfillmentOf								
-* group[=].element[=].target.code = #extension:OrderExtension
+* group[=].element[=].target.code = #extension:basedOn
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #inFulfillmentOf.order.id							
-* group[=].element[=].target.code = #extension:OrderExtension.ValueReference.ServiceRequest.identifier
+* group[=].element[=].target.code = #extension:basedOnExtension.ValueReference.ServiceRequest.identifier
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #inFulfillmentOf.order.ps3-20:accessionNumber							
-* group[=].element[=].target.code = #extension:OrderExtension.ValueReference.ServiceRequest.identifier
+* group[=].element[=].target.code = #extension:basedOn.ValueReference.ServiceRequest.identifier
 * group[=].element[=].target.equivalence = #equivalent

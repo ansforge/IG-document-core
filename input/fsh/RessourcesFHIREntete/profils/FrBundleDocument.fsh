@@ -50,7 +50,7 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 
 // Définition de l'entrée device
 * entry contains device 0..1
-* entry[device].resource only FrDeviceDocument
+* entry[device].resource only FrDeviceAuteurDocument
 
 // Définition de l'entrée encounter
 * entry contains encounter 1..*
