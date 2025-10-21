@@ -11,21 +11,21 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator"									
-* group[=].element[+].code = #Responsable							
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator"									
+* group[=].element[+].code = #FRLMResponsable							
 * group[=].element[=].target.code = #legalAuthenticator
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Responsable.dateHeureAttestationPriseResponsabilite								
+* group[=].element[+].code = #FRLMResponsable.dateHeureAttestationPriseResponsabilite								
 * group[=].element[=].target.code = #legalAuthenticator.time
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Responsable.responsable								
+* group[=].element[+].code = #FRLMResponsable.responsable								
 * group[=].element[=].target.code = #legalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément responsable est de type PersonneStructure."
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"									
 * group[=].element[+].code = #legalAuthenticator				
 * group[=].element[=].target.code = #Composition.attester						

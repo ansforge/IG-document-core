@@ -11,29 +11,29 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"									
-* group[=].element[+].code = #StructureConservation								
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-structure-conservation"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian"									
+* group[=].element[+].code = #FRLMStructureConservation								
 * group[=].element[=].target.code = #custodian
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #StructureConservation.structure								
+* group[=].element[+].code = #FRLMStructureConservation.structure								
 * group[=].element[=].target.code = #custodian.assignedCustodian
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #StructureConservation.structure.identifiantStructure								
+* group[=].element[+].code = #FRLMStructureConservation.structure.identifiantStructure								
 * group[=].element[=].target.code = #custodian.assignedCustodian.representedCustodianOrganization.id
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #StructureConservation.structure.nomStructure								
+* group[=].element[+].code = #FRLMStructureConservation.structure.nomStructure								
 * group[=].element[=].target.code = #custodian.assignedCustodian.representedCustodianOrganization.name
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #StructureConservation.structure.adresse								
+* group[=].element[+].code = #FRLMStructureConservation.structure.adresse								
 * group[=].element[=].target.code = #custodian.assignedCustodian.representedCustodianOrganization.addr
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #StructureConservation.structure.coordonneesTelecom									
+* group[=].element[+].code = #FRLMStructureConservation.structure.coordonneesTelecom									
 * group[=].element[=].target.code = #custodian.assignedCustodian.representedCustodianOrganization.telecom
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"									
 * group[=].element[+].code = #custodian							
 * group[=].element[=].target.code = #Composition.custodian

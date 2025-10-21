@@ -11,18 +11,18 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient"									
-* group[=].element[+].code = #DestinatairePrevu							
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-information-recipient"									
+* group[=].element[+].code = #FRLMDestinatairePrevu							
 * group[=].element[=].target.code = #informationRecipient 
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #DestinatairePrevu.destinataire								
+* group[=].element[+].code = #FRLMDestinatairePrevu.destinataire								
 * group[=].element[=].target.code = #informationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément destinataire est de type PersonneStructure."
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-information-recipient"					
 * group[=].target = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension"									
 * group[=].element[+].code = #informationRecipient				
 * group[=].element[=].target.code = #extension:InformationRecipientExtension						
