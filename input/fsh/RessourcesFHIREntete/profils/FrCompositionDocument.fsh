@@ -1,8 +1,7 @@
-// StructureDefinition for composition-document
-Profile: FrCompositionDocument
+Profile: FRCompositionDocument
 Parent: clinical-document-composition
 Id: fr-composition-document
-Title: "Fr Composition Document"
+Title: "FR Composition Document"
 Description: "Ce profil est utilisé pour représenter un document médical."
 
 //Composition.meta.profile : templateId
@@ -23,20 +22,20 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * extension[data-enterer].extension[time] 1..1
 * extension[data-enterer].extension[time] ^short = "Date de la saisie"
 * extension[data-enterer].extension[party] ^short = "Opérateur"
-* extension[data-enterer].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+* extension[data-enterer].extension[party].valueReference only Reference(FRPractitionerRoleDocument)
 
 // informant-extension
 * extension[informant].extension[type] 1..1 
 * extension[informant].extension[type] ^short = "Type de participation : Informateur"
 * extension[informant].extension[party] ^short = "Informateur"
-* extension[informant].extension[party].valueReference only Reference(FrPractitionerRoleDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* extension[informant].extension[party].valueReference only Reference(FRPractitionerRoleDocument or FRRelatedPersonDocument or FRPatientINSDocument or FRPatientDocument)
 
 // information-recipient-extension
 * extension[information-recipient].extension[type] 1..1 
 * extension[information-recipient].extension[type] ^short = "Type de participation : destinataire"
 * extension[information-recipient].extension[type].valueCodeableConcept from FRValueSetParticipationType
 * extension[information-recipient].extension[party] ^short = "Destinataire"
-* extension[information-recipient].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+* extension[information-recipient].extension[party].valueReference only Reference(FRPractitionerRoleDocument)
 
 // participant-extension
 * extension[participant].extension[type] 1..1 
@@ -48,7 +47,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * extension[participant].extension[time] 1..1 
 * extension[participant].extension[time] ^short = "Date de début et/ou de fin de la participation"
 * extension[participant].extension[party] ^short = "Identification du participant"
-* extension[participant].extension[party].valueReference only Reference(FrPractitionerRoleDocument)
+* extension[participant].extension[party].valueReference only Reference(FRPractitionerRoleDocument)
 * extension[participant].extension[party] obeys comp-3
 
 // basedOn-extension
@@ -69,7 +68,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * title ^definition = "Les volets de contenus du CI-SIS fixent parfois le titre du document. Dans les autres cas, le titre provient soit de la saisie directe par le professionnel ou le patient/usager, soit d’une valeur par défaut générée par le logiciel et modifiable par le professionnel ou le patient/usager."
 * subject 1.. MS
 * subject ^short = "Patient / Usager"
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FRPatientINSDocument or FRPatientDocument)
 * subject.reference 1.. MS
 * date MS
 * date ^short = "Date de création"
@@ -77,29 +76,29 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * confidentiality ^short = "Niveau de confidentialité"
 * author MS
 * author ^short = "Auteur du document"
-* author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FrPractitionerRoleDocument)."
-* author only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceAuteurDocument)
-* author.extension contains fr-author-time named time 1..1
+* author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FRPractitionerRoleDocument)."
+* author only Reference(FRPractitionerRoleDocument or FRPatientINSDocument or FRPatientDocument or FRDeviceAuteurDocument)
+* author.extension contains fr-author-time-extension named time 1..1
 
 // Responsable du document : legalAuthenticator
 * attester[legal_attester] 1..1
 * attester[legal_attester].mode = #legal
 * attester[legal_attester].time 1..1
 * attester[legal_attester].party 1..1 
-* attester[legal_attester].party only Reference(FrPractitionerRoleDocument)
+* attester[legal_attester].party only Reference(FRPractitionerRoleDocument)
 * attester[legal_attester] ^short = "Responsable du document"
 
 // Professionnel attestant la validité du contenu du document : authenticator
 * attester[professional_attester].mode = #professional
 * attester[professional_attester].time 1..1
 * attester[professional_attester].party 1..1 
-* attester[professional_attester].party only Reference(FrPractitionerRoleDocument)
+* attester[professional_attester].party only Reference(FRPractitionerRoleDocument)
 * attester[professional_attester] ^short = "Professionnel attestant la validité du contenu du document"
 
 * event 1..*
 * event.detail 0..1
 * event.period ^short = "Date et heure de l’évènement documenté"
-* event.extension contains fr-performer-event named performer 0..1
+* event.extension contains fr-performer-event-extension named performer 0..1
 
 // Slicing event : évènement documenté principal 
 * event ^slicing.discriminator.type = #value
@@ -115,7 +114,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 
 * relatesTo 1..*
 * relatesTo ^short = "Document de référence"
-* relatesTo.target[x] only Identifier or Reference(FrCompositionDocument)
+* relatesTo.target[x] only Identifier or Reference(FRCompositionDocument)
 * relatesTo.targetIdentifier.type 1..1
 * relatesTo.targetIdentifier.system 1..1
 * relatesTo.targetIdentifier.value 1..1
@@ -128,9 +127,9 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 
 * custodian 1..1
 * custodian ^short = "Structure chargée de la conservation du document"
-* custodian only Reference(FrOrganizationDocument)
+* custodian only Reference(FROrganizationDocument)
 * encounter 1..1 MS
-* encounter only Reference(FrEncounterDocument)
+* encounter only Reference(FREncounterDocument)
 
 * section 1..* MS
 * section ^slicing.discriminator[0].type = #value

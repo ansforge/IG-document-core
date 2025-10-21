@@ -1,8 +1,7 @@
-// StructureDefinition for OrganizationDocument
-Profile: FrOrganizationDocument
+Profile: FROrganizationDocument
 Parent: AsOrganizationProfile
 Id: fr-organization-document
-Title: "Fr Organization Document"
+Title: "FR Organization Document"
 Description: "Ce profil représente la structure pour le compte de laquelle intervient le professionnel." 
 
 * identifier ^short = "Identifiant de la structure
