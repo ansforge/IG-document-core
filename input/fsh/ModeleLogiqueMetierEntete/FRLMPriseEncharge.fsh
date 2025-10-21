@@ -1,7 +1,6 @@
-//  Logical Model : association-prise-en-charge		
-Logical: PriseEncharge		
-Title: "Modèle métier - Association du document à une prise en charge"	
-//Id: fr-association-prise-en-charge.			
+Logical: FRLMPriseEncharge	
+Id: fr-lm-prise-en-charge	
+Title: "Modèle logique métier - FR LM Prise en charge"	
 Description: "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.
  - Exemples :
    - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.
@@ -12,11 +11,11 @@ Description: "Association du document à une prise en charge du patient/usager p
 * typePriseEnCharge 0..1 CodeableConcept "Type de prise en charge."
 * dateDebutFinPriseEnCharge 1..1 dateTime "Date de début et de fin de la prise en charge."
 * typeSortie 0..1 CodeableConcept "Type sortie."
-* responsablePriseEnCharge 0..1 PersonneStructure "Responsable de la prise en charge."
+* responsablePriseEnCharge 0..1 FRLMPersonneStructure "Responsable de la prise en charge."
 * personneImpliqueePriseEnCharge 0..* Base "Personne impliquée dans la prise en charge."
   * typeParticipation 1..1 CodeableConcept "Type de participation." 
   * dateDebutFinParticipation 0..1 dateTime "Date de début et de fin de la participation." 
-  * professionnelImplique 1..1 PersonneStructure "Professionnel impliqué." 
+  * professionnelImplique 1..1 FRLMPersonneStructure "Professionnel impliqué." 
 * lieuPriseEnCharge 1..1 Base "Lieu de la prise en charge."
   * structure 0..1 Base "Structure" 
     * identifiantStructure 0..1 Identifier "Identifiant de la structure"
