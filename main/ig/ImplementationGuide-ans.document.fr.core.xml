@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-10-20T17:15:49+00:00"/>
+  <date value="2025-10-21T08:14:34+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -1533,45 +1533,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EnteteDocument"/>
+        <reference value="StructureDefinition/fr-lm-auteur"/>
       </reference>
-      <name value="Modèle logique métier de l'en-tête"/>
-      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Prescription"/>
-      </reference>
-      <name value="Modèle métier - Association du document à une prescription"/>
-      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/PriseEncharge"/>
-      </reference>
-      <name value="Modèle métier - Association du document à une prise en charge"/>
-      <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Auteur"/>
-      </reference>
-      <name value="Modèle métier - Auteur du document (humain ou système)"/>
+      <name value="Modèle logique métier - FR LM Auteur"/>
       <description value="Auteur du document : ce peut être un professionnel, un patient/usager ou un système. &#xA;- Pour un professionnel ou un système, la structure de rattachement doit être précisée."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1581,21 +1545,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Participant"/>
+        <reference value="StructureDefinition/fr-lm-consentement"/>
       </reference>
-      <name value="Modèle métier - Autres personnes / structures impliquées"/>
-      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Consentement"/>
-      </reference>
-      <name value="Modèle métier - Consentement associé au document"/>
+      <name value="Modèle logique métier - FR LM Consentement"/>
       <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1605,9 +1557,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DestinatairePrevu"/>
+        <reference value="StructureDefinition/fr-lm-destinataire-prevu-document"/>
       </reference>
-      <name value="Modèle métier - Destinataire prévu du document"/>
+      <name value="Modèle logique métier - FR LM Destinataire prévu"/>
       <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1617,9 +1569,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DocumentDeReference"/>
+        <reference value="StructureDefinition/fr-lm-document-reference"/>
       </reference>
-      <name value="Modèle métier - Document de référence"/>
+      <name value="Modèle logique métier - FR LM Document de référence"/>
       <description value="Référence un document existant (à remplacer ou transformé)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1629,9 +1581,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Informateur"/>
+        <reference value="StructureDefinition/fr-lm-entete-document"/>
       </reference>
-      <name value="Modèle métier - Informateur"/>
+      <name value="Modèle logique métier - FR LM En-tête document"/>
+      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-informateur"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Informateur"/>
       <description value="Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1641,9 +1605,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/OperateurSaisie"/>
+        <reference value="StructureDefinition/fr-lm-operateur-saisie"/>
       </reference>
-      <name value="Modèle métier - Opérateur de saisie"/>
+      <name value="Modèle logique métier - FR LM Opérateur de saisie"/>
       <description value="Opérateur de saisie de la totalité ou d'une partie du contenu du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1653,9 +1617,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PatientUsager"/>
+        <reference value="StructureDefinition/fr-lm-participant"/>
       </reference>
-      <name value="Modèle métier - Patient / Usager"/>
+      <name value="Modèle logique métier - FR LM Participant"/>
+      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-usager"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Patient Usager"/>
       <description value="Patient/Usager concerné par le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1665,9 +1641,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PersonneStructure"/>
+        <reference value="StructureDefinition/fr-lm-personne-structure"/>
       </reference>
-      <name value="Modèle métier - Personne et/ou Structure"/>
+      <name value="Modèle logique métier - FR LM Personne et/ou Structure"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1677,9 +1653,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PersonneStructureAuteur"/>
+        <reference value="StructureDefinition/fr-lm-personne-structure-auteur"/>
       </reference>
-      <name value="Modèle métier - Personne et/ou Structure (Auteur)"/>
+      <name value="Modèle logique métier - FR LM Personne et/ou Structure Auteur"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1689,9 +1665,33 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Responsable"/>
+        <reference value="StructureDefinition/fr-lm-prescription"/>
       </reference>
-      <name value="Modèle métier - Responsable du document"/>
+      <name value="Modèle logique métier - FR LM Prescription"/>
+      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prise-en-charge"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prise en charge"/>
+      <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-responsable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Responsable"/>
       <description value="Représente le responsable du document, qui est : &#xA; - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. &#xA; - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). &#xA; - soit le patient/usager responsable du document d'expression personnelle &#xA; - soit le SNR responsable du document produit via ce SNR. &#xA; - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1701,9 +1701,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StructureConservation"/>
+        <reference value="StructureDefinition/fr-lm-structure-conservation"/>
       </reference>
-      <name value="Modèle métier - Structure chargée de la conservation du document"/>
+      <name value="Modèle logique métier - FR LM Structure conservation"/>
       <description value="Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1713,9 +1713,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SystemeStructureAuteur"/>
+        <reference value="StructureDefinition/fr-lm-systeme-structure-auteur"/>
       </reference>
-      <name value="Modèle métier - Système / Structure"/>
+      <name value="Modèle logique métier - FR LM Système / Structure"/>
       <description value="Système auteur du document"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1725,9 +1725,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Validateur"/>
+        <reference value="StructureDefinition/fr-lm-validateur"/>
       </reference>
-      <name value="Modèle métier - Validateur du document"/>
+      <name value="Modèle logique métier - FR LM Validateur"/>
       <description value="Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1737,9 +1737,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Evenement"/>
+        <reference value="StructureDefinition/fr-lm-evenement"/>
       </reference>
-      <name value="Modèle métier - Évènement documenté"/>
+      <name value="Modèle logique métier - FR LM Évènement"/>
       <description value="Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>

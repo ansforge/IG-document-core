@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-represented-custodian-organization | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:FRCDARepresentedCustodianOrganization |
+| Draft as of 2025-10-21 | *Computable Name*:FRCDARepresentedCustodianOrganization |
 
  
 L’élément de l’en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l’identifiant, le nom, les adresses géopostales et de télécommunication. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-represented-c
   "name" : "FRCDARepresentedCustodianOrganization",
   "title" : "CDA - representedCustodianOrganization",
   "status" : "draft",
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

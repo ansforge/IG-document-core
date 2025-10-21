@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapping: 
@@ -20,7 +20,7 @@ Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapp
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Personne et/ou Structure](StructureDefinition-PersonneStructure.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity`
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity`
 
 * **Source Code**: PersonneStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -136,7 +136,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

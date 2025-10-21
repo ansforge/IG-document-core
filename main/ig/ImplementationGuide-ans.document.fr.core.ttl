@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-10-20T17:15:49+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-21T08:14:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -2560,67 +2560,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument> ;
-         fhir:reference [ fhir:v "StructureDefinition/EnteteDocument" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-auteur" ]
        ] ;
-       fhir:name [ fhir:v "Modèle logique métier de l'en-tête" ] ;
-       fhir:description [ fhir:v "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription> ;
-         fhir:reference [ fhir:v "StructureDefinition/Prescription" ]
-       ] ;
-       fhir:name [ fhir:v "Modèle métier - Association du document à une prescription" ] ;
-       fhir:description [ fhir:v "Association à une prescription à l’origine de l’acte dont résulte le document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge> ;
-         fhir:reference [ fhir:v "StructureDefinition/PriseEncharge" ]
-       ] ;
-       fhir:name [ fhir:v "Modèle métier - Association du document à une prise en charge" ] ;
-       fhir:description [ fhir:v "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.\n - Exemples :\n   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.\n   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.\n - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur> ;
-         fhir:reference [ fhir:v "StructureDefinition/Auteur" ]
-       ] ;
-       fhir:name [ fhir:v "Modèle métier - Auteur du document (humain ou système)" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Auteur" ] ;
        fhir:description [ fhir:v "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2636,29 +2579,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant> ;
-         fhir:reference [ fhir:v "StructureDefinition/Participant" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-consentement> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-consentement" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Autres personnes / structures impliquées" ] ;
-       fhir:description [ fhir:v "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement> ;
-         fhir:reference [ fhir:v "StructureDefinition/Consentement" ]
-       ] ;
-       fhir:name [ fhir:v "Modèle métier - Consentement associé au document" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Consentement" ] ;
        fhir:description [ fhir:v "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2674,10 +2598,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu> ;
-         fhir:reference [ fhir:v "StructureDefinition/DestinatairePrevu" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-destinataire-prevu-document" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Destinataire prévu du document" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Destinataire prévu" ] ;
        fhir:description [ fhir:v "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2693,10 +2617,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference> ;
-         fhir:reference [ fhir:v "StructureDefinition/DocumentDeReference" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-document-reference" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Document de référence" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Document de référence" ] ;
        fhir:description [ fhir:v "Référence un document existant (à remplacer ou transformé)." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2712,10 +2636,29 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/Informateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-entete-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-entete-document" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Informateur" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM En-tête document" ] ;
+       fhir:description [ fhir:v "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-informateur" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Informateur" ] ;
        fhir:description [ fhir:v "Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2731,10 +2674,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/OperateurSaisie> ;
-         fhir:reference [ fhir:v "StructureDefinition/OperateurSaisie" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-operateur-saisie> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-operateur-saisie" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Opérateur de saisie" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Opérateur de saisie" ] ;
        fhir:description [ fhir:v "Opérateur de saisie de la totalité ou d'une partie du contenu du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2750,10 +2693,29 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PatientUsager> ;
-         fhir:reference [ fhir:v "StructureDefinition/PatientUsager" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-participant" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Patient / Usager" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Participant" ] ;
+       fhir:description [ fhir:v "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-usager> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-patient-usager" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Patient Usager" ] ;
        fhir:description [ fhir:v "Patient/Usager concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2769,10 +2731,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure> ;
-         fhir:reference [ fhir:v "StructureDefinition/PersonneStructure" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-personne-structure" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Personne et/ou Structure" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Personne et/ou Structure" ] ;
        fhir:description [ fhir:v "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2788,10 +2750,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructureAuteur> ;
-         fhir:reference [ fhir:v "StructureDefinition/PersonneStructureAuteur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-personne-structure-auteur" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Personne et/ou Structure (Auteur)" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Personne et/ou Structure Auteur" ] ;
        fhir:description [ fhir:v "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2807,10 +2769,48 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable> ;
-         fhir:reference [ fhir:v "StructureDefinition/Responsable" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-prescription" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Responsable du document" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Prescription" ] ;
+       fhir:description [ fhir:v "Association à une prescription à l’origine de l’acte dont résulte le document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prise-en-charge> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-prise-en-charge" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Prise en charge" ] ;
+       fhir:description [ fhir:v "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.\n - Exemples :\n   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.\n   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.\n - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-responsable" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Responsable" ] ;
        fhir:description [ fhir:v "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2826,10 +2826,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation> ;
-         fhir:reference [ fhir:v "StructureDefinition/StructureConservation" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-structure-conservation> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-structure-conservation" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Structure chargée de la conservation du document" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Structure conservation" ] ;
        fhir:description [ fhir:v "Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2845,10 +2845,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/SystemeStructureAuteur> ;
-         fhir:reference [ fhir:v "StructureDefinition/SystemeStructureAuteur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-systeme-structure-auteur> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-systeme-structure-auteur" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Système / Structure" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Système / Structure" ] ;
        fhir:description [ fhir:v "Système auteur du document" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2864,10 +2864,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur> ;
-         fhir:reference [ fhir:v "StructureDefinition/Validateur" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-validateur> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-validateur" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Validateur du document" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Validateur" ] ;
        fhir:description [ fhir:v "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -2883,10 +2883,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement> ;
-         fhir:reference [ fhir:v "StructureDefinition/Evenement" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-evenement> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-evenement" ]
        ] ;
-       fhir:name [ fhir:v "Modèle métier - Évènement documenté" ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Évènement" ] ;
        fhir:description [ fhir:v "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant." ] ;
        fhir:example [
          a fhir:boolean ;

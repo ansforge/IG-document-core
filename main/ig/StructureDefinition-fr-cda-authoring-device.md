@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authoring-device | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:FRCDAAuthoringDevice |
+| Draft as of 2025-10-21 | *Computable Name*:FRCDAAuthoringDevice |
 
  
 L’élément de l’en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-authoring-dev
   "name" : "FRCDAAuthoringDevice",
   "title" : "CDA - authoringDevice",
   "status" : "draft",
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

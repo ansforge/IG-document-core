@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-type-savoir-faire-profession-medecin | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:FRValueSetTypeSavoirFaireProfessionMedecin |
+| Draft as of 2025-10-21 | *Computable Name*:FRValueSetTypeSavoirFaireProfessionMedecin |
 
  
 Type Savoir-faire pour la profession 10 (Médecin) 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Fr ValueSet Type Savoir-faire Profession Medecin",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

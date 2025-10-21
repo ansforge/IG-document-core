@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-chirurgien-dentiste | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:FRValueSetSavoirFaireProfessionChirurgienDentiste |
+| Draft as of 2025-10-21 | *Computable Name*:FRValueSetSavoirFaireProfessionChirurgienDentiste |
 
  
 Savoir-faire pour la profession 40 (Chirurgien-Dentiste) 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Fr ValueSet Savoir-faire Profession Chirurgien-Dentiste",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

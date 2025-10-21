@@ -7,251 +7,6 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class Auteur{
-
-             Auteur => [1..None]
-             Auteur.roleFonctionnel => [0..1]
-             Auteur.horodatageParticipation => [1..1]
-             Auteur.auteur[x] => [1..1]
-        } 
-
-        class Consentement{
-
-             Consentement => [None..None]
-             Consentement.identifiantConsentement => [0..*]
-             Consentement.typeConsentement => [1..1]
-             Consentement.statutConsentement => [1..1]
-        } 
-
-        class DestinatairePrevu{
-
-             DestinatairePrevu => [None..None]
-             DestinatairePrevu.destinataire => [0..*]
-        } 
-
-        class DocumentDeReference{
-
-             DocumentDeReference => [None..1]
-             DocumentDeReference.typeReference => [1..1]
-             DocumentDeReference.identifiantUniqueDocument => [1..1]
-        } 
-
-        class EnteteDocument{
-
-             EnteteDocument => [1..1]
-             EnteteDocument.identifiantUniqueDocument => [1..1]
-             EnteteDocument.modeleDocument => [1..1]
-             EnteteDocument.typeDocument => [1..1]
-             EnteteDocument.titreDocument => [1..1]
-             EnteteDocument.dateDeCreationDocument => [1..1]
-             EnteteDocument.niveauConfidentialiteDocument => [1..1]
-             EnteteDocument.languePrincipaleDocument => [1..1]
-             EnteteDocument.identifiantLotDeVersionsDocument => [1..1]
-             EnteteDocument.versionDocument => [1..1]
-             EnteteDocument.statutDocument => [1..1]
-             EnteteDocument.patient => [1..1]
-             EnteteDocument.auteur => [1..*]
-             EnteteDocument.operateurSaisie => [0..1]
-             EnteteDocument.informateur => [0..*]
-             EnteteDocument.structureConservation => [1..1]
-             EnteteDocument.destinataire => [0..*]
-             EnteteDocument.responsable => [1..1]
-             EnteteDocument.validateur => [0..*]
-             EnteteDocument.participant => [0..*]
-             EnteteDocument.prescription => [0..*]
-             EnteteDocument.evenement => [1..*]
-             EnteteDocument.documentDeReference => [0..1]
-             EnteteDocument.consentementAssocie => [0..*]
-             EnteteDocument.priseEncharge => [1..1]
-        } 
-
-        class Evenement{
-
-             Evenement => [1..None]
-             Evenement.identifiantEvenement => [0..*]
-             Evenement.codeEvenement => [0..1]
-             Evenement.codeEvenement.id => [None..0]
-             Evenement.codeEvenement.extension => [None..0]
-             Evenement.codeEvenement.translation => [0..*]
-             Evenement.dateHeureEvenement => [0..1]
-             Evenement.executantEvenement => [0..1]
-             Evenement.executantEvenement.roleFonctionnel => [0..1]
-             Evenement.executantEvenement.dateHeureParticipation => [0..1]
-             Evenement.executantEvenement.executant => [1..1]
-        } 
-
-        class Informateur{
-
-             Informateur => [None..None]
-             Informateur.informateur => [1..1]
-        } 
-
-        class OperateurSaisie{
-
-             OperateurSaisie => [None..1]
-             OperateurSaisie.dateSaisie => [1..1]
-             OperateurSaisie.operateurSaisie => [1..1]
-        } 
-
-        class Participant{
-
-             Participant => [None..None]
-             Participant.typeParticipation => [1..1]
-             Participant.roleFonctionnel => [0..1]
-             Participant.dateDebutEtOuFinParticipation => [1..1]
-             Participant.participant => [1..1]
-        } 
-
-        class PatientUsager{
-
-             PatientUsager => [1..1]
-             PatientUsager.identifiantPatient => [1..*]
-             PatientUsager.adresse => [0..*]
-             PatientUsager.coordonneesTelecom => [0..*]
-             PatientUsager.personnePhysique => [1..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient => [1..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom => [1..*]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
-             PatientUsager.personnePhysique.sexe => [1..1]
-             PatientUsager.personnePhysique.dateNaissance => [1..1]
-             PatientUsager.personnePhysique.indicateurDeces => [0..1]
-             PatientUsager.personnePhysique.dateDeces => [0..1]
-             PatientUsager.personnePhysique.grossesseMultiple => [0..1]
-             PatientUsager.personnePhysique.numeroOrdreNaissance => [0..1]
-             PatientUsager.personnePhysique.representantPatient => [0..*]
-             PatientUsager.personnePhysique.representantPatient.adresse => [0..*]
-             PatientUsager.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
-        } 
-
-        class PersonneStructure{
-
-             PersonneStructure => [None..None]
-             PersonneStructure.personne => [0..1]
-             PersonneStructure.personne.identifiantPersonne => [0..1]
-             PersonneStructure.personne.professionRole => [0..1]
-             PersonneStructure.personne.lien => [0..1]
-             PersonneStructure.personne.adresse => [0..*]
-             PersonneStructure.personne.coordonneesTelecom => [0..*]
-             PersonneStructure.personne.IdentitePersonne => [0..1]
-             PersonneStructure.personne.IdentitePersonne.nomPersonne => [1..*]
-             PersonneStructure.personne.IdentitePersonne.prenomPersonne => [0..*]
-             PersonneStructure.personne.IdentitePersonne.civilite => [0..1]
-             PersonneStructure.personne.IdentitePersonne.titre => [0..1]
-             PersonneStructure.structure => [0..1]
-             PersonneStructure.structure.identifiantStructure => [0..1]
-             PersonneStructure.structure.nomStructure => [0..1]
-             PersonneStructure.structure.adresse => [0..*]
-             PersonneStructure.structure.coordonneesTelecom => [0..*]
-             PersonneStructure.structure.cadreExercice => [0..1]
-        } 
-
-        class PersonneStructureAuteur{
-
-             PersonneStructureAuteur => [None..None]
-             PersonneStructureAuteur.personne => [0..1]
-             PersonneStructureAuteur.personne.identifiantPersonne => [1..*]
-             PersonneStructureAuteur.personne.professionRole => [0..1]
-             PersonneStructureAuteur.personne.adresse => [0..*]
-             PersonneStructureAuteur.personne.coordonneesTelecom => [0..*]
-             PersonneStructureAuteur.personne.IdentitePersonne => [1..1]
-             PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne => [1..*]
-             PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne => [0..*]
-             PersonneStructureAuteur.personne.IdentitePersonne.civilite => [0..1]
-             PersonneStructureAuteur.personne.IdentitePersonne.titre => [0..1]
-             PersonneStructureAuteur.structure => [0..1]
-             PersonneStructureAuteur.structure.identifiantStructure => [0..1]
-             PersonneStructureAuteur.structure.nomStructure => [0..1]
-             PersonneStructureAuteur.structure.adresse => [0..*]
-             PersonneStructureAuteur.structure.coordonneesTelecom => [0..*]
-             PersonneStructureAuteur.structure.secteurActivite => [0..1]
-        } 
-
-        class Prescription{
-
-             Prescription => [None..None]
-             Prescription.identifiantPrescription => [1..1]
-             Prescription.accessionNumber => [0..1]
-        } 
-
-        class PriseEncharge{
-
-             PriseEncharge => [1..1]
-             PriseEncharge.identifiantPriseEnCharge => [0..*]
-             PriseEncharge.typePriseEnCharge => [0..1]
-             PriseEncharge.dateDebutFinPriseEnCharge => [1..1]
-             PriseEncharge.typeSortie => [0..1]
-             PriseEncharge.responsablePriseEnCharge => [0..1]
-             PriseEncharge.personneImpliqueePriseEnCharge => [0..*]
-             PriseEncharge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
-             PriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
-             PriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
-             PriseEncharge.lieuPriseEnCharge => [1..1]
-             PriseEncharge.lieuPriseEnCharge.structure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.nomStructure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.adresse => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
-             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [1..1]
-             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.typeStructure => [0..1]
-        } 
-
-        class Responsable{
-
-             Responsable => [1..1]
-             Responsable.dateHeurePriseResponsabilite => [1..1]
-             Responsable.responsable => [1..1]
-        } 
-
-        class StructureConservation{
-
-             StructureConservation => [1..1]
-             StructureConservation.structure => [1..1]
-             StructureConservation.structure.identifiantStructure => [1..1]
-             StructureConservation.structure.nomStructure => [0..1]
-             StructureConservation.structure.coordonneesTelecom => [0..1]
-             StructureConservation.structure.adresse => [0..1]
-        } 
-
-        class SystemeStructureAuteur{
-
-             SystemeStructureAuteur => [None..None]
-             SystemeStructureAuteur.systeme => [1..1]
-             SystemeStructureAuteur.systeme.identifiantSysteme => [1..*]
-             SystemeStructureAuteur.systeme.typeSysteme => [1..1]
-             SystemeStructureAuteur.systeme.nomModeleSysteme => [1..1]
-             SystemeStructureAuteur.systeme.nomSysteme => [1..1]
-             SystemeStructureAuteur.structure => [1..1]
-             SystemeStructureAuteur.structure.identifiantStructure => [1..1]
-             SystemeStructureAuteur.structure.nomStructure => [1..1]
-             SystemeStructureAuteur.structure.adresse => [0..*]
-             SystemeStructureAuteur.structure.coordonneesTelecom => [0..*]
-             SystemeStructureAuteur.structure.secteurActivite => [0..1]
-        } 
-
-        class Validateur{
-
-             Validateur => [None..None]
-             Validateur.dateHeureAttestationValidite => [1..1]
-             Validateur.validateur => [1..1]
-        } 
-
         class FrBundleDocument{
 
              Bundle.identifier => [1..None]
@@ -970,6 +725,251 @@ package IG #DDDDDD{
              HumanName.suffix => [None..None]
         } 
 
+        class FRLMAuteur{
+
+             fr-lm-auteur => [1..None]
+             fr-lm-auteur.roleFonctionnel => [0..1]
+             fr-lm-auteur.horodatageParticipation => [1..1]
+             fr-lm-auteur.auteur[x] => [1..1]
+        } 
+
+        class FRLMConsentement{
+
+             fr-lm-consentement => [None..None]
+             fr-lm-consentement.identifiantConsentement => [0..*]
+             fr-lm-consentement.typeConsentement => [1..1]
+             fr-lm-consentement.statutConsentement => [1..1]
+        } 
+
+        class FRLMDestinatairePrevu{
+
+             fr-lm-destinataire-prevu-document => [None..None]
+             fr-lm-destinataire-prevu-document.destinataire => [0..*]
+        } 
+
+        class FRLMDocumentDeReference{
+
+             fr-lm-document-reference => [None..1]
+             fr-lm-document-reference.typeReference => [1..1]
+             fr-lm-document-reference.identifiantUniqueDocument => [1..1]
+        } 
+
+        class FRLMEnteteDocument{
+
+             fr-lm-entete-document => [1..1]
+             fr-lm-entete-document.identifiantUniqueDocument => [1..1]
+             fr-lm-entete-document.modeleDocument => [1..1]
+             fr-lm-entete-document.typeDocument => [1..1]
+             fr-lm-entete-document.titreDocument => [1..1]
+             fr-lm-entete-document.dateDeCreationDocument => [1..1]
+             fr-lm-entete-document.niveauConfidentialiteDocument => [1..1]
+             fr-lm-entete-document.languePrincipaleDocument => [1..1]
+             fr-lm-entete-document.identifiantLotDeVersionsDocument => [1..1]
+             fr-lm-entete-document.versionDocument => [1..1]
+             fr-lm-entete-document.statutDocument => [1..1]
+             fr-lm-entete-document.patient => [1..1]
+             fr-lm-entete-document.auteur => [1..*]
+             fr-lm-entete-document.operateurSaisie => [0..1]
+             fr-lm-entete-document.informateur => [0..*]
+             fr-lm-entete-document.structureConservation => [1..1]
+             fr-lm-entete-document.destinataire => [0..*]
+             fr-lm-entete-document.responsable => [1..1]
+             fr-lm-entete-document.validateur => [0..*]
+             fr-lm-entete-document.participant => [0..*]
+             fr-lm-entete-document.prescription => [0..*]
+             fr-lm-entete-document.evenement => [1..*]
+             fr-lm-entete-document.documentDeReference => [0..1]
+             fr-lm-entete-document.consentementAssocie => [0..*]
+             fr-lm-entete-document.priseEncharge => [1..1]
+        } 
+
+        class FRLMEvenement{
+
+             fr-lm-evenement => [1..None]
+             fr-lm-evenement.identifiantEvenement => [0..*]
+             fr-lm-evenement.codeEvenement => [0..1]
+             fr-lm-evenement.codeEvenement.id => [None..0]
+             fr-lm-evenement.codeEvenement.extension => [None..0]
+             fr-lm-evenement.codeEvenement.translation => [0..*]
+             fr-lm-evenement.dateHeureEvenement => [0..1]
+             fr-lm-evenement.executantEvenement => [0..1]
+             fr-lm-evenement.executantEvenement.roleFonctionnel => [0..1]
+             fr-lm-evenement.executantEvenement.dateHeureParticipation => [0..1]
+             fr-lm-evenement.executantEvenement.executant => [1..1]
+        } 
+
+        class FRLMInformateur{
+
+             fr-lm-informateur => [None..None]
+             fr-lm-informateur.informateur => [1..1]
+        } 
+
+        class FRLMOperateurSaisie{
+
+             fr-lm-operateur-saisie => [None..1]
+             fr-lm-operateur-saisie.dateSaisie => [1..1]
+             fr-lm-operateur-saisie.operateurSaisie => [1..1]
+        } 
+
+        class FRLMParticipant{
+
+             fr-lm-participant => [None..None]
+             fr-lm-participant.typeParticipation => [1..1]
+             fr-lm-participant.roleFonctionnel => [0..1]
+             fr-lm-participant.dateDebutEtOuFinParticipation => [1..1]
+             fr-lm-participant.participant => [1..1]
+        } 
+
+        class FRLMPatientUsager{
+
+             fr-lm-patient-usager => [1..1]
+             fr-lm-patient-usager.identifiantPatient => [1..*]
+             fr-lm-patient-usager.adresse => [0..*]
+             fr-lm-patient-usager.coordonneesTelecom => [0..*]
+             fr-lm-patient-usager.personnePhysique => [1..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient => [1..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom => [1..*]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
+             fr-lm-patient-usager.personnePhysique.sexe => [1..1]
+             fr-lm-patient-usager.personnePhysique.dateNaissance => [1..1]
+             fr-lm-patient-usager.personnePhysique.indicateurDeces => [0..1]
+             fr-lm-patient-usager.personnePhysique.dateDeces => [0..1]
+             fr-lm-patient-usager.personnePhysique.grossesseMultiple => [0..1]
+             fr-lm-patient-usager.personnePhysique.numeroOrdreNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.adresse => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
+        } 
+
+        class FRLMPersonneStructureAuteur{
+
+             fr-lm-personne-structure-auteur => [None..None]
+             fr-lm-personne-structure-auteur.personne => [0..1]
+             fr-lm-personne-structure-auteur.personne.identifiantPersonne => [1..*]
+             fr-lm-personne-structure-auteur.personne.professionRole => [0..1]
+             fr-lm-personne-structure-auteur.personne.adresse => [0..*]
+             fr-lm-personne-structure-auteur.personne.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne => [1..1]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.nomPersonne => [1..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.prenomPersonne => [0..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.civilite => [0..1]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.titre => [0..1]
+             fr-lm-personne-structure-auteur.structure => [0..1]
+             fr-lm-personne-structure-auteur.structure.identifiantStructure => [0..1]
+             fr-lm-personne-structure-auteur.structure.nomStructure => [0..1]
+             fr-lm-personne-structure-auteur.structure.adresse => [0..*]
+             fr-lm-personne-structure-auteur.structure.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure-auteur.structure.secteurActivite => [0..1]
+        } 
+
+        class FRLMPersonneStructure{
+
+             fr-lm-personne-structure => [None..None]
+             fr-lm-personne-structure.personne => [0..1]
+             fr-lm-personne-structure.personne.identifiantPersonne => [0..1]
+             fr-lm-personne-structure.personne.professionRole => [0..1]
+             fr-lm-personne-structure.personne.lien => [0..1]
+             fr-lm-personne-structure.personne.adresse => [0..*]
+             fr-lm-personne-structure.personne.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure.personne.IdentitePersonne => [0..1]
+             fr-lm-personne-structure.personne.IdentitePersonne.nomPersonne => [1..*]
+             fr-lm-personne-structure.personne.IdentitePersonne.prenomPersonne => [0..*]
+             fr-lm-personne-structure.personne.IdentitePersonne.civilite => [0..1]
+             fr-lm-personne-structure.personne.IdentitePersonne.titre => [0..1]
+             fr-lm-personne-structure.structure => [0..1]
+             fr-lm-personne-structure.structure.identifiantStructure => [0..1]
+             fr-lm-personne-structure.structure.nomStructure => [0..1]
+             fr-lm-personne-structure.structure.adresse => [0..*]
+             fr-lm-personne-structure.structure.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure.structure.cadreExercice => [0..1]
+        } 
+
+        class FRLMPrescription{
+
+             fr-lm-prescription => [None..None]
+             fr-lm-prescription.identifiantPrescription => [1..1]
+             fr-lm-prescription.accessionNumber => [0..1]
+        } 
+
+        class FRLMPriseEncharge{
+
+             fr-lm-prise-en-charge => [1..1]
+             fr-lm-prise-en-charge.identifiantPriseEnCharge => [0..*]
+             fr-lm-prise-en-charge.typePriseEnCharge => [0..1]
+             fr-lm-prise-en-charge.dateDebutFinPriseEnCharge => [1..1]
+             fr-lm-prise-en-charge.typeSortie => [0..1]
+             fr-lm-prise-en-charge.responsablePriseEnCharge => [0..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge => [0..*]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.nomStructure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.adresse => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.secteurActivite => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.typeStructure => [0..1]
+        } 
+
+        class FRLMResponsable{
+
+             fr-lm-responsable => [1..1]
+             fr-lm-responsable.dateHeurePriseResponsabilite => [1..1]
+             fr-lm-responsable.responsable => [1..1]
+        } 
+
+        class FRLMStructureConservation{
+
+             fr-lm-structure-conservation => [1..1]
+             fr-lm-structure-conservation.structure => [1..1]
+             fr-lm-structure-conservation.structure.identifiantStructure => [1..1]
+             fr-lm-structure-conservation.structure.nomStructure => [0..1]
+             fr-lm-structure-conservation.structure.coordonneesTelecom => [0..1]
+             fr-lm-structure-conservation.structure.adresse => [0..1]
+        } 
+
+        class FRLMSystemeStructureAuteur{
+
+             fr-lm-systeme-structure-auteur => [None..None]
+             fr-lm-systeme-structure-auteur.systeme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.identifiantSysteme => [1..*]
+             fr-lm-systeme-structure-auteur.systeme.typeSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.nomModeleSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.nomSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.structure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.identifiantStructure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.nomStructure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.adresse => [0..*]
+             fr-lm-systeme-structure-auteur.structure.coordonneesTelecom => [0..*]
+             fr-lm-systeme-structure-auteur.structure.secteurActivite => [0..1]
+        } 
+
+        class FRLMValidateur{
+
+             fr-lm-validateur => [None..None]
+             fr-lm-validateur.dateHeureAttestationValidite => [1..1]
+             fr-lm-validateur.validateur => [1..1]
+        } 
+
         class FrLocationDocument{
 
              Location.name => [None..None]
@@ -1118,78 +1118,6 @@ package IG #DDDDDD{
        }
 
 package "Ressources de base" #palegreen {
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Auteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Consentement
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> DestinatairePrevu
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> DocumentDeReference
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> EnteteDocument
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Evenement
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Informateur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> OperateurSaisie
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Participant
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PatientUsager
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PersonneStructure
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PersonneStructureAuteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Prescription
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PriseEncharge
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Responsable
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> StructureConservation
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> SystemeStructureAuteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Validateur
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
@@ -1350,6 +1278,78 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name" as  classab70be087e84d984395444c4643fb763 
 
     classab70be087e84d984395444c4643fb763 --> HumanNameDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMConsentement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDestinatairePrevu
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDocumentDeReference
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEnteteDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvenement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMInformateur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMOperateurSaisie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMParticipant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPatientUsager
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPersonneStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPersonneStructure
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPrescription
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPriseEncharge
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMResponsable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStructureConservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSystemeStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMValidateur
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 

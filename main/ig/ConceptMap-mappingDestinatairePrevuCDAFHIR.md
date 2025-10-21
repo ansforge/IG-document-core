@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDestinatairePrevuCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-20 | *Computable Name*:Mapping Métier/CDA/FHIR : "Destinataire prévu" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Destinataire prévu" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Destinataire prévu du document](StructureDefinition-DestinatairePrevu.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient`
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient`
 
 * **Source Code**: DestinatairePrevu
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -94,7 +94,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-20T17:15:49+00:00",
+  "date" : "2025-10-21T08:14:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
