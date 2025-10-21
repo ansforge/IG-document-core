@@ -66,7 +66,7 @@ Mapping from (non spécifié) to (non spécifié)
 * **Source Code**: FRLMPersonneStructureAuteur.structure.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.telecom
-* **Source Code**: #FRLMPersonneStructureAuteur.structure.secteurActivite
+* **Source Code**: FRLMPersonneStructureAuteur.structure.secteurActivite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.standardIndustryClassCode
 
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T13:05:45+00:00",
+  "date" : "2025-10-21T13:27:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -319,7 +319,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "#FRLMPersonneStructureAuteur.structure.secteurActivite",
+          "code" : "FRLMPersonneStructureAuteur.structure.secteurActivite",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.standardIndustryClassCode",
