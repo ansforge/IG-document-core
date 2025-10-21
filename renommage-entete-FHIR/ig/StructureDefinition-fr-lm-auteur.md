@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-auteur.csv), [
   "name" : "FRLMAuteur",
   "title" : "Modèle logique métier - FR LM Auteur",
   "status" : "draft",
-  "date" : "2025-10-21T22:51:41+00:00",
+  "date" : "2025-10-21T23:32:22+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
