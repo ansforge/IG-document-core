@@ -60,7 +60,7 @@ Description: """Ce ConceptMap de l'élément PersonneStructureAuteur présente d
 * group[=].element[+].code = #FRLMPersonneStructureAuteur.structure.coordonneesTelecom					
 * group[=].element[=].target.code = #assignedAuthor.representedOrganization.telecom
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = ##FRLMPersonneStructureAuteur.structure.secteurActivite					
+* group[=].element[+].code = #FRLMPersonneStructureAuteur.structure.secteurActivite					
 * group[=].element[=].target.code = #assignedAuthor.representedOrganization.standardIndustryClassCode
 * group[=].element[=].target.equivalence = #equivalent
 
