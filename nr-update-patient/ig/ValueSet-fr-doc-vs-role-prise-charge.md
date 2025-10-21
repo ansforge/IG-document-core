@@ -22,7 +22,7 @@ Pour les professions 41 (Assistant de service social) et 99 (Acteur caractéris�
 
 Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
 
-* Include tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge`](https://interop.esante.gouv.fr/ig/nos/1.5.0/CodeSystem-TRE-R85-RolePriseCharge.html)version 📦1.5.0
+* Include tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-R85-RolePriseCharge.html)version 📦20250721120000
 
  
 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Fr ValueSet RolePriseCharge",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

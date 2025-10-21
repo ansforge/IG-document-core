@@ -17,7 +17,7 @@ Ce profil permet de décrire un professionnel de santé dans le cadre d’un doc
 **Usages:**
 
 * Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Composition Document](StructureDefinition-fr-composition-document.md), [Fr Patient INS Document](StructureDefinition-fr-patient-ins-document.md) and [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+* Refer to this Profile: [Fr Patient INS Document](StructureDefinition-fr-patient-ins-document.md) and [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-practitioner-document)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitioner-docu
   "name" : "FrPractitionerDocument",
   "title" : "Fr Practitioner Document",
   "status" : "draft",
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -16,7 +16,7 @@ Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSe
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [AdministrativeGender](http://hl7.org/fhir/R4/codesystem-administrative-gender.html) to [JDV_J143-AdministrativeGender-CISIS](https://interop.esante.gouv.fr/ig/nos/1.5.0/ValueSet-JDV-J143-AdministrativeGender-CISIS.html)
+**Group 1**Mapping from [AdministrativeGender](http://hl7.org/fhir/R4/codesystem-administrative-gender.html) to [JDV_J143_AdministrativeGender_CISIS](https://interop.esante.gouv.fr/terminologies/1.2.0/ValueSet-JDV-J143-AdministrativeGender-CISIS.html)
 
 * **Source Code**: male
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -42,7 +42,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping ValueSet AdministrativeGender",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

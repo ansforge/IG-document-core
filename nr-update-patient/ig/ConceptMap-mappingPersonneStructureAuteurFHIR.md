@@ -19,7 +19,7 @@ Ce ConceptMap de l’élément PersonneStructureAuteur présente deux groupes de
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Personne et/ou Structure (Auteur)](StructureDefinition-PersonneStructureAuteur.md) to [CDA - assignedAuthor](StructureDefinition-fr-core-assigned-author.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructureAuteur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author`
 
 * **Source Code**: PersonneStructureAuteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -72,7 +72,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - assignedAuthor](StructureDefinition-fr-core-assigned-author.md) to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author` to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
 
 * **Source Code**: assignedAuthor
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

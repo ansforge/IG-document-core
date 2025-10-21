@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Structure chargée de la conservation du document](StructureDefinition-StructureConservation.md) to [CDA - custodian](StructureDefinition-fr-core-custodian.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian`
 
 * **Source Code**: StructureConservation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -42,7 +42,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - custodian](StructureDefinition-fr-core-custodian.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: custodian
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -83,7 +83,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

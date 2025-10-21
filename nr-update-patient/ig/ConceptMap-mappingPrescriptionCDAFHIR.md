@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Association du document à une prescription](StructureDefinition-Prescription.md) to [CDA - inFulfillmentOf](StructureDefinition-fr-core-inFulfillment-of.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of`
 
 * **Source Code**: Prescription
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -33,17 +33,17 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - inFulfillmentOf](StructureDefinition-fr-core-inFulfillment-of.md) to [Order Extension](http://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/StructureDefinition-OrderExtension.html)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of` to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
 
 * **Source Code**: inFulfillmentOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Target Code**: extension:OrderExtension
+  * **Target Code**: extension:basedOn
 * **Source Code**: inFulfillmentOf.order.id
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Target Code**: extension:OrderExtension.ValueReference.ServiceRequest.identifier
+  * **Target Code**: extension:basedOnExtension.ValueReference.ServiceRequest.identifier
 * **Source Code**: inFulfillmentOf.order.ps3-20:accessionNumber
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Target Code**: extension:OrderExtension.ValueReference.ServiceRequest.identifier
+  * **Target Code**: extension:basedOn.ValueReference.ServiceRequest.identifier
 
 
 
@@ -59,7 +59,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -120,13 +120,13 @@ Mapping from (non spécifié) to (non spécifié)
     },
     {
       "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of",
-      "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/OrderExtension",
+      "target" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
       "element" : [
         {
           "code" : "inFulfillmentOf",
           "target" : [
             {
-              "code" : "extension:OrderExtension",
+              "code" : "extension:basedOn",
               "equivalence" : "equivalent"
             }
           ]
@@ -135,7 +135,7 @@ Mapping from (non spécifié) to (non spécifié)
           "code" : "inFulfillmentOf.order.id",
           "target" : [
             {
-              "code" : "extension:OrderExtension.ValueReference.ServiceRequest.identifier",
+              "code" : "extension:basedOnExtension.ValueReference.ServiceRequest.identifier",
               "equivalence" : "equivalent"
             }
           ]
@@ -144,7 +144,7 @@ Mapping from (non spécifié) to (non spécifié)
           "code" : "inFulfillmentOf.order.ps3-20:accessionNumber",
           "target" : [
             {
-              "code" : "extension:OrderExtension.ValueReference.ServiceRequest.identifier",
+              "code" : "extension:basedOn.ValueReference.ServiceRequest.identifier",
               "equivalence" : "equivalent"
             }
           ]

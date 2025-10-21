@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Autres personnes / structures impliquées](StructureDefinition-Participant.md) to [CDA - participant](StructureDefinition-fr-core-participant.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant`
 
 * **Source Code**: Participant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -44,7 +44,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - participant](StructureDefinition-fr-core-participant.md) to [Participant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/2024Sep/StructureDefinition-ParticipantExtension.html)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant` to [Participant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-ParticipantExtension.html)
 
 * **Source Code**: participant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -141,7 +141,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

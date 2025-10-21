@@ -15,7 +15,7 @@ Cette page contient la liste des profils FHIR définis dans le guide **ANS IG do
 | Titre du profil | Description |
 | [Fr Bundle Document](StructureDefinition-fr-bundle-document.md) | Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document. |
 | [Fr Composition Document](StructureDefinition-fr-composition-document.md) | Ce profil est utilisé pour représenter un document médical. |
-| [Fr Device Document](StructureDefinition-fr-device-document.md) | Ce profil représente le système auteur du document. |
+| [Fr Device Document](StructureDefinition-fr-device-auteur-document.md) | Ce profil représente le système auteur du document. |
 | [Fr Encounter Document](StructureDefinition-fr-encounter-document.md) | Ce profil représente l'association du document à une prise en charge. |
 | [Fr Location Document](StructureDefinition-fr-location-document.md) | Ce profil représente le lieu de la prise en charge. |
 | [Fr Organization Document](StructureDefinition-fr-organization-document.md) | Ce profil représente la structure pour le compte de laquelle intervient le professionnel. |

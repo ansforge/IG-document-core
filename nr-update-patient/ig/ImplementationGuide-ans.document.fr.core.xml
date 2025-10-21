@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-10-21T14:02:08+00:00"/>
+  <date value="2025-10-21T14:55:40+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -50,10 +50,10 @@
     <packageId value="hl7.cda.uv.core"/>
     <version value="2.0.0-sd"/>
   </dependsOn>
-  <dependsOn id="ans_fr_nos">
-    <uri value="https://interop.esante.gouv.fr/ig/nos/ImplementationGuide/ans.fr.nos"/>
-    <packageId value="ans.fr.nos"/>
-    <version value="1.4.0"/>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
@@ -68,7 +68,7 @@
   <dependsOn id="hl7_fhir_uv_fhir_clinical_document">
     <uri value="http://hl7.org/fhir/uv/fhir-clinical-document/ImplementationGuide/hl7.fhir.uv.fhir-clinical-document"/>
     <packageId value="hl7.fhir.uv.fhir-clinical-document"/>
-    <version value="1.0.0-ballot"/>
+    <version value="1.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -90,6 +90,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -308,6 +316,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueCode value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
@@ -510,10 +526,32 @@
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-glycemie-mole"/>
+      </reference>
+      <name value="BIO-CR-BIO_2024.01_Glycemie_mole"/>
+      <description value="Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"/>
+      </reference>
+      <name value="BIO-CR-BIO_2024.01_Microbiologie_V1"/>
+      <description value="Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-assigned-author"/>
+        <reference value="StructureDefinition/fr-cda-assigned-author"/>
       </reference>
       <name value="CDA - assignedAuthor"/>
       <description value="L'élément de l'en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur."/>
@@ -525,7 +563,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-assigned-custodian"/>
+        <reference value="StructureDefinition/fr-cda-assigned-custodian"/>
       </reference>
       <name value="CDA - assignedCustodian"/>
       <description value="L'élément de l'en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document."/>
@@ -537,7 +575,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-assigned-entity"/>
+        <reference value="StructureDefinition/fr-cda-assigned-entity"/>
       </reference>
       <name value="CDA - assignedEntity"/>
       <description value="L'élément de l'en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."/>
@@ -549,7 +587,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-person"/>
+        <reference value="StructureDefinition/fr-cda-assigned-person"/>
       </reference>
       <name value="CDA - assignedPerson"/>
       <description value="L'élément de l'en-tête du CDA assignedPerson permet de décrire une personne physique."/>
@@ -561,7 +599,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-associated-entity"/>
+        <reference value="StructureDefinition/fr-cda-associated-entity"/>
       </reference>
       <name value="CDA - associatedEntity"/>
       <description value="L'élément de l'en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
@@ -573,7 +611,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-authenticator"/>
+        <reference value="StructureDefinition/fr-cda-authenticator"/>
       </reference>
       <name value="CDA - authenticator"/>
       <description value="L'élément de l'en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document."/>
@@ -585,7 +623,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-author"/>
+        <reference value="StructureDefinition/fr-cda-author"/>
       </reference>
       <name value="CDA - author"/>
       <description value="L'élément de l'en-tête du CDA author permet d’enregistrer un auteur du document."/>
@@ -597,7 +635,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-authoring-device"/>
+        <reference value="StructureDefinition/fr-cda-authoring-device"/>
       </reference>
       <name value="CDA - authoringDevice"/>
       <description value="L'élément de l'en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système."/>
@@ -609,7 +647,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-authorization"/>
+        <reference value="StructureDefinition/fr-cda-authorization"/>
       </reference>
       <name value="CDA - authorization"/>
       <description value="L'élément de l'en-tête du CDA authorization permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
@@ -621,7 +659,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-clinical-document"/>
+        <reference value="StructureDefinition/fr-cda-clinical-document"/>
       </reference>
       <name value="CDA - clinicalDocument"/>
       <description value="L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical."/>
@@ -633,7 +671,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-component-of"/>
+        <reference value="StructureDefinition/fr-cda-component-of"/>
       </reference>
       <name value="CDA - componentOf"/>
       <description value="L'élément de l'en-tête du CDA componentOf permet d'associer le document à une prise en charge du patient/usager."/>
@@ -645,7 +683,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-custodian"/>
+        <reference value="StructureDefinition/fr-cda-custodian"/>
       </reference>
       <name value="CDA - custodian"/>
       <description value="L'élément de l'en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document."/>
@@ -657,7 +695,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-data-enterer"/>
+        <reference value="StructureDefinition/fr-cda-data-enterer"/>
       </reference>
       <name value="CDA - dataEnterer"/>
       <description value="L'élément de l'en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document."/>
@@ -669,7 +707,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-documentation-of"/>
+        <reference value="StructureDefinition/fr-cda-documentation-of"/>
       </reference>
       <name value="CDA - documentationOf"/>
       <description value="L'élément de l'en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
@@ -681,7 +719,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-encompassing-encounter"/>
+        <reference value="StructureDefinition/fr-cda-encompassing-encounter"/>
       </reference>
       <name value="CDA - encompassingEncounter"/>
       <description value="L'élément de l'en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure."/>
@@ -693,7 +731,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-encounter-participant"/>
+        <reference value="StructureDefinition/fr-cda-encounter-participant"/>
       </reference>
       <name value="CDA - encounterParticipant"/>
       <description value="L'élément de l'en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel ayant donné son avis quant à la prise en charge."/>
@@ -705,7 +743,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-health-care-facility"/>
+        <reference value="StructureDefinition/fr-cda-health-care-facility"/>
       </reference>
       <name value="CDA - healthCareFacility"/>
       <description value="L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)."/>
@@ -717,7 +755,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-informant"/>
+        <reference value="StructureDefinition/fr-cda-informant"/>
       </reference>
       <name value="CDA - informant"/>
       <description value="L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
@@ -729,7 +767,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-information-recipient"/>
+        <reference value="StructureDefinition/fr-cda-information-recipient"/>
       </reference>
       <name value="CDA - informationRecipient"/>
       <description value="L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document."/>
@@ -741,7 +779,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-inFulfillment-of"/>
+        <reference value="StructureDefinition/fr-cda-inFulfillment-of"/>
       </reference>
       <name value="CDA - inFulfillmentOf"/>
       <description value="L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription."/>
@@ -753,7 +791,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-intended-recipient"/>
+        <reference value="StructureDefinition/fr-cda-intended-recipient"/>
       </reference>
       <name value="CDA - intendedRecipient"/>
       <description value="L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document."/>
@@ -765,7 +803,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-legal-authenticator"/>
+        <reference value="StructureDefinition/fr-cda-legal-authenticator"/>
       </reference>
       <name value="CDA - legalAuthenticator"/>
       <description value="L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
@@ -777,10 +815,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-name"/>
+        <reference value="StructureDefinition/fr-cda-name"/>
       </reference>
-      <name value="CDA - name"/>
-      <description value="L'élément de l'en-tête du CDA name correspond au nom d'une personne physique."/>
+      <name value="CDA - Name"/>
+      <description value="L'élément de l'en-tête du CDA  correspond au nom d'une personne physique."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
     </resource>
@@ -789,7 +827,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-order"/>
+        <reference value="StructureDefinition/fr-cda-order"/>
       </reference>
       <name value="CDA - order"/>
       <description value="L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document."/>
@@ -801,7 +839,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-parent-document"/>
+        <reference value="StructureDefinition/fr-cda-parent-document"/>
       </reference>
       <name value="CDA - parentDocument"/>
       <description value="L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence."/>
@@ -813,7 +851,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-participant"/>
+        <reference value="StructureDefinition/fr-cda-participant"/>
       </reference>
       <name value="CDA - participant"/>
       <description value="L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."/>
@@ -825,7 +863,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-patient"/>
+        <reference value="StructureDefinition/fr-cda-patient"/>
       </reference>
       <name value="CDA - patient"/>
       <description value="L'élément de l'en-tête du CDA patient permet de représenter une personne physique."/>
@@ -837,7 +875,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-patient-role"/>
+        <reference value="StructureDefinition/fr-cda-patient-role"/>
       </reference>
       <name value="CDA - patientRole"/>
       <description value="L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager."/>
@@ -849,7 +887,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-performer"/>
+        <reference value="StructureDefinition/fr-cda-performer"/>
       </reference>
       <name value="CDA - performer"/>
       <description value="L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal."/>
@@ -861,7 +899,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-record-target"/>
+        <reference value="StructureDefinition/fr-cda-record-target"/>
       </reference>
       <name value="CDA - recordTarget"/>
       <description value="L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document."/>
@@ -873,7 +911,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-related-document"/>
+        <reference value="StructureDefinition/fr-cda-related-document"/>
       </reference>
       <name value="CDA - relatedDocument"/>
       <description value="L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)."/>
@@ -885,7 +923,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-related-entity"/>
+        <reference value="StructureDefinition/fr-cda-related-entity"/>
       </reference>
       <name value="CDA - relatedEntity"/>
       <description value="L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
@@ -897,7 +935,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-represented-custodian-organization"/>
+        <reference value="StructureDefinition/fr-cda-represented-custodian-organization"/>
       </reference>
       <name value="CDA - representedCustodianOrganization"/>
       <description value="L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."/>
@@ -909,7 +947,7 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-represented-organization"/>
+        <reference value="StructureDefinition/fr-cda-represented-organization"/>
       </reference>
       <name value="CDA - representedOrganization"/>
       <description value="L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."/>
@@ -921,12 +959,45 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-core-service-event"/>
+        <reference value="StructureDefinition/fr-cda-service-event"/>
       </reference>
       <name value="CDA - serviceEvent"/>
       <description value="L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. &#xA;L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources CDA"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eDISP-MED-2024.01"/>
+      </reference>
+      <name value="eDISP-MED-2024.01"/>
+      <description value="eDispensation de médicaments (eDISP-MED-2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoNonStruct"/>
+      </reference>
+      <name value="eP-MED-DM_2024.01_PosoNonStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoStruct"/>
+      </reference>
+      <name value="eP-MED-DM_2024.01_PosoStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -969,7 +1040,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-device-document"/>
+        <reference value="StructureDefinition/fr-device-auteur-document"/>
       </reference>
       <name value="Fr Device Document"/>
       <description value="Ce profil représente le système auteur du document."/>
@@ -1117,6 +1188,28 @@
       <description value="Ce profil correspond au type de données HumanName utilisé dans le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Data Type FHIR"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/IPS-FR-2024.01"/>
+      </reference>
+      <name value="IPS-FR"/>
+      <description value="Volet International Patient Summary - France (IPS-FR_2024.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/LDL-SES-2022.01"/>
+      </reference>
+      <name value="LDL-SES_2022.01"/>
+      <description value="Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1363,45 +1456,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/EnteteDocument"/>
+        <reference value="StructureDefinition/fr-lm-auteur"/>
       </reference>
-      <name value="Modèle logique métier de l'en-tête"/>
-      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Prescription"/>
-      </reference>
-      <name value="Modèle métier - Association du document à une prescription"/>
-      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/PriseEncharge"/>
-      </reference>
-      <name value="Modèle métier - Association du document à une prise en charge"/>
-      <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Auteur"/>
-      </reference>
-      <name value="Modèle métier - Auteur du document (humain ou système)"/>
+      <name value="Modèle logique métier - FR LM Auteur"/>
       <description value="Auteur du document : ce peut être un professionnel, un patient/usager ou un système. &#xA;- Pour un professionnel ou un système, la structure de rattachement doit être précisée."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1411,21 +1468,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Participant"/>
+        <reference value="StructureDefinition/fr-lm-consentement"/>
       </reference>
-      <name value="Modèle métier - Autres personnes / structures impliquées"/>
-      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/Consentement"/>
-      </reference>
-      <name value="Modèle métier - Consentement associé au document"/>
+      <name value="Modèle logique métier - FR LM Consentement"/>
       <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1435,9 +1480,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DestinatairePrevu"/>
+        <reference value="StructureDefinition/fr-lm-destinataire-prevu-document"/>
       </reference>
-      <name value="Modèle métier - Destinataire prévu du document"/>
+      <name value="Modèle logique métier - FR LM Destinataire prévu"/>
       <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1447,9 +1492,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/DocumentDeReference"/>
+        <reference value="StructureDefinition/fr-lm-document-reference"/>
       </reference>
-      <name value="Modèle métier - Document de référence"/>
+      <name value="Modèle logique métier - FR LM Document de référence"/>
       <description value="Référence un document existant (à remplacer ou transformé)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1459,9 +1504,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Informateur"/>
+        <reference value="StructureDefinition/fr-lm-entete-document"/>
       </reference>
-      <name value="Modèle métier - Informateur"/>
+      <name value="Modèle logique métier - FR LM En-tête document"/>
+      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-informateur"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Informateur"/>
       <description value="Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1471,9 +1528,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/OperateurSaisie"/>
+        <reference value="StructureDefinition/fr-lm-operateur-saisie"/>
       </reference>
-      <name value="Modèle métier - Opérateur de saisie"/>
+      <name value="Modèle logique métier - FR LM Opérateur de saisie"/>
       <description value="Opérateur de saisie de la totalité ou d'une partie du contenu du document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1483,9 +1540,21 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PatientUsager"/>
+        <reference value="StructureDefinition/fr-lm-participant"/>
       </reference>
-      <name value="Modèle métier - Patient / Usager"/>
+      <name value="Modèle logique métier - FR LM Participant"/>
+      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-usager"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Patient Usager"/>
       <description value="Patient/Usager concerné par le document."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1495,9 +1564,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PersonneStructure"/>
+        <reference value="StructureDefinition/fr-lm-personne-structure"/>
       </reference>
-      <name value="Modèle métier - Personne et/ou Structure"/>
+      <name value="Modèle logique métier - FR LM Personne et/ou Structure"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1507,9 +1576,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/PersonneStructureAuteur"/>
+        <reference value="StructureDefinition/fr-lm-personne-structure-auteur"/>
       </reference>
-      <name value="Modèle métier - Personne et/ou Structure (Auteur)"/>
+      <name value="Modèle logique métier - FR LM Personne et/ou Structure Auteur"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1519,9 +1588,33 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Responsable"/>
+        <reference value="StructureDefinition/fr-lm-prescription"/>
       </reference>
-      <name value="Modèle métier - Responsable du document"/>
+      <name value="Modèle logique métier - FR LM Prescription"/>
+      <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prise-en-charge"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prise en charge"/>
+      <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-responsable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Responsable"/>
       <description value="Représente le responsable du document, qui est : &#xA; - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. &#xA; - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). &#xA; - soit le patient/usager responsable du document d'expression personnelle &#xA; - soit le SNR responsable du document produit via ce SNR. &#xA; - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1531,9 +1624,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/StructureConservation"/>
+        <reference value="StructureDefinition/fr-lm-structure-conservation"/>
       </reference>
-      <name value="Modèle métier - Structure chargée de la conservation du document"/>
+      <name value="Modèle logique métier - FR LM Structure conservation"/>
       <description value="Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1543,9 +1636,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/SystemeStructureAuteur"/>
+        <reference value="StructureDefinition/fr-lm-systeme-structure-auteur"/>
       </reference>
-      <name value="Modèle métier - Système / Structure"/>
+      <name value="Modèle logique métier - FR LM Système / Structure"/>
       <description value="Système auteur du document"/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1555,9 +1648,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Validateur"/>
+        <reference value="StructureDefinition/fr-lm-validateur"/>
       </reference>
-      <name value="Modèle métier - Validateur du document"/>
+      <name value="Modèle logique métier - FR LM Validateur"/>
       <description value="Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1567,9 +1660,9 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/Evenement"/>
+        <reference value="StructureDefinition/fr-lm-evenement"/>
       </reference>
-      <name value="Modèle métier - Évènement documenté"/>
+      <name value="Modèle logique métier - FR LM Évènement"/>
       <description value="Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
       <groupingId value="Modèles logiques"/>
@@ -1734,6 +1827,14 @@
         </page>
       </page>
     </page>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="false"/>
+    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>

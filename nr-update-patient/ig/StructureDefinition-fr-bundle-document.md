@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
   "name" : "FrBundleDocument",
   "title" : "Fr Bundle Document",
   "status" : "draft",
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -262,7 +262,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
           {
             "code" : "Device",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document"
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document"
             ]
           }
         ]

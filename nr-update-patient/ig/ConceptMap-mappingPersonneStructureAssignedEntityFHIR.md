@@ -19,7 +19,7 @@ Ce ConceptMap de l’élément PersonneStructure présente deux groupes de mappi
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Personne et/ou Structure](StructureDefinition-PersonneStructure.md) to [CDA - assignedEntity](StructureDefinition-fr-core-assigned-entity.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-entity`
 
 * **Source Code**: PersonneStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -72,7 +72,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - assignedEntity](StructureDefinition-fr-core-assigned-entity.md) to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-entity` to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
 
 * **Source Code**: assignedEntity
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

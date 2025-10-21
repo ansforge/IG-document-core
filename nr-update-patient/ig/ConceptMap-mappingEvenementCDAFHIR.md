@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Évènement documenté](StructureDefinition-Evenement.md) to [CDA - documentationOf](StructureDefinition-fr-core-documentation-of.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of`
 
 * **Source Code**: Evenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -48,7 +48,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - documentationOf](StructureDefinition-fr-core-documentation-of.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: documentationOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -95,7 +95,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T14:02:08+00:00",
+  "date" : "2025-10-21T14:55:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
