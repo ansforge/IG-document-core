@@ -1,4 +1,5 @@
-Logical: FRLMCorpsDocument							
+Logical: FRLMCorpsDocument		
+Id: fr-lm-corps-document					
 Title: "* Modèle logique métier du corps"				
 Description: "Eléments métier du corps d'un document"	
 
