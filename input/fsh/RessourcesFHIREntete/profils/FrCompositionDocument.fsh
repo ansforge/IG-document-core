@@ -72,7 +72,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * confidentiality ^short = "Niveau de confidentialité"
 * author MS
 * author ^short = "Auteur du document"
-* author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs."
+* author ^definition = "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FrPractitionerRoleDocument)."
 * author only Reference(FrPractitionerDocument or FrPractitionerRoleDocument or FrPatientINSDocument or FrPatientDocument or FrDeviceDocument)
 * author.extension contains fr-author-time named time 1..1
 
