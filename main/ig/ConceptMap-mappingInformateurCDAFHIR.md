@@ -19,24 +19,24 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant`
+**Group 1**Mapping from [Modèle logique métier - FR LM Informateur](StructureDefinition-fr-lm-informateur.md) to [CDA - informant](StructureDefinition-fr-cda-informant.md)
 
-* **Source Code**: Informateur
+* **Source Code**: FRLMInformateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: informant
   * **Commentaire**: 
-* **Source Code**: Informateur.informateur
+* **Source Code**: FRLMInformateur.informateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: informant.assignedEntity
   * **Commentaire**: L'élément informateur est de type PersonneStructure.
-* **Source Code**: Informateur.informateur
+* **Source Code**: FRLMInformateur.informateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: informant.relatedEntity
   * **Commentaire**: L'élément informateur est de type PersonneStructure.
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant` to [Informant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-informant-extension.html)
+**Group 2**Mapping from [CDA - informant](StructureDefinition-fr-cda-informant.md) to [Informant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-informant-extension.html)
 
 * **Source Code**: informant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -65,7 +65,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -92,11 +92,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant",
       "element" : [
         {
-          "code" : "Informateur",
+          "code" : "FRLMInformateur",
           "target" : [
             {
               "code" : "informant",
@@ -105,7 +105,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Informateur.informateur",
+          "code" : "FRLMInformateur.informateur",
           "target" : [
             {
               "code" : "informant.assignedEntity",
@@ -115,7 +115,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Informateur.informateur",
+          "code" : "FRLMInformateur.informateur",
           "target" : [
             {
               "code" : "informant.relatedEntity",
@@ -127,7 +127,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant",
       "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension",
       "element" : [
         {

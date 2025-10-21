@@ -19,105 +19,105 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target`
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient` to [CDA - recordTarget](StructureDefinition-fr-cda-record-target.md)
 
-* **Source Code**: Patient
+* **Source Code**: FRLMPatientUsager
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget
-* **Source Code**: Patient.identifiantPatient
+* **Source Code**: FRLMPatientUsager.identifiantPatient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.id
-* **Source Code**: Patient.adresse
+* **Source Code**: FRLMPatientUsager.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.addr
-* **Source Code**: Patient.coordonneesTelecom
+* **Source Code**: FRLMPatientUsager.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.telecom
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.nom
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.family
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.nom.nomNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: PrecordTarget.patientRole.patient.name.family@qualifier='BR'
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.nom.nomUtilise
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.family@qualifier='CL'
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.prenom
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.given
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.given
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.given@qualifier='BR'
-* **Source Code**: Patient.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise
+* **Source Code**: FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.name.given@qualifier='CL'
-* **Source Code**: Patient.personnePhysique.sexe
+* **Source Code**: FRLMPatientUsager.personnePhysique.sexe
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.administrativeGenderCode
-* **Source Code**: Patient.personnePhysique.dateNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.dateNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.birthTime
-* **Source Code**: Patient.personnePhysique.indicateurDeces
+* **Source Code**: FRLMPatientUsager.personnePhysique.indicateurDeces
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.sdtc:deceasedInd
-* **Source Code**: Patient.personnePhysique.dateDeces
+* **Source Code**: FRLMPatientUsager.personnePhysique.dateDeces
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.sdtc:deceasedTime
-* **Source Code**: Patient.personnePhysique.grossesseMultiple
+* **Source Code**: FRLMPatientUsager.personnePhysique.grossesseMultiple
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.sdtc:multipleBirthInd
-* **Source Code**: Patient.personnePhysique.numeroOrdreNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.numeroOrdreNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.sdtc:multipleBirthOrderNumber
-* **Source Code**: Patient.personnePhysique.representantPatient
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian
-* **Source Code**: Patient.personnePhysique.representantPatient.adresse
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.addr
-* **Source Code**: Patient.personnePhysique.representantPatient.coordonneesTelecom
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.telecom
-* **Source Code**: Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianPerson.name
-* **Source Code**: Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianPerson.family
-* **Source Code**: Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianPerson.given
-* **Source Code**: Patient.personnePhysique.representantPatient.structureRepresentantPatient
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianOrganization
-* **Source Code**: Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianOrganization.id
-* **Source Code**: Patient.personnePhysique.representantPatient.structureRepresentantPatient.nom
+* **Source Code**: FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.nom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.guardian.guardianOrganization.name
-* **Source Code**: Patient.personnePhysique.lieuNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.lieuNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.birthPlace
-* **Source Code**: Patient.personnePhysique.lieuNaissance.nomLieuNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.birthPlace.place.name
-* **Source Code**: Patient.personnePhysique.lieuNaissance.adresseLieuNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.birthPlace.place.addr
-* **Source Code**: Patient.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance
+* **Source Code**: FRLMPatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: recordTarget.patientRole.patient.birthPlace.place.addr.county
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
+**Group 2**Mapping from [CDA - recordTarget](StructureDefinition-fr-cda-record-target.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
 
 * **Source Code**: recordTarget.patientRole
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -227,7 +227,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -254,11 +254,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-record-target",
       "element" : [
         {
-          "code" : "Patient",
+          "code" : "FRLMPatientUsager",
           "target" : [
             {
               "code" : "recordTarget",
@@ -267,7 +267,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.identifiantPatient",
+          "code" : "FRLMPatientUsager.identifiantPatient",
           "target" : [
             {
               "code" : "recordTarget.patientRole.id",
@@ -276,7 +276,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.adresse",
+          "code" : "FRLMPatientUsager.adresse",
           "target" : [
             {
               "code" : "recordTarget.patientRole.addr",
@@ -285,7 +285,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.coordonneesTelecom",
+          "code" : "FRLMPatientUsager.coordonneesTelecom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.telecom",
@@ -294,7 +294,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name",
@@ -303,7 +303,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.nom",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.family",
@@ -312,7 +312,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.nom.nomNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance",
           "target" : [
             {
               "code" : "PrecordTarget.patientRole.patient.name.family@qualifier='BR'",
@@ -321,7 +321,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.nom.nomUtilise",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.family@qualifier='CL'",
@@ -330,7 +330,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.prenom",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.given",
@@ -339,7 +339,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.given",
@@ -348,7 +348,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.given@qualifier='BR'",
@@ -357,7 +357,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise",
+          "code" : "FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.name.given@qualifier='CL'",
@@ -366,7 +366,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.sexe",
+          "code" : "FRLMPatientUsager.personnePhysique.sexe",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.administrativeGenderCode",
@@ -375,7 +375,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.dateNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.dateNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.birthTime",
@@ -384,7 +384,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.indicateurDeces",
+          "code" : "FRLMPatientUsager.personnePhysique.indicateurDeces",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.sdtc:deceasedInd",
@@ -393,7 +393,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.dateDeces",
+          "code" : "FRLMPatientUsager.personnePhysique.dateDeces",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.sdtc:deceasedTime",
@@ -402,7 +402,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.grossesseMultiple",
+          "code" : "FRLMPatientUsager.personnePhysique.grossesseMultiple",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.sdtc:multipleBirthInd",
@@ -411,7 +411,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.numeroOrdreNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.numeroOrdreNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.sdtc:multipleBirthOrderNumber",
@@ -420,7 +420,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian",
@@ -429,7 +429,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.adresse",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.adresse",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.addr",
@@ -438,7 +438,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.coordonneesTelecom",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.coordonneesTelecom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.telecom",
@@ -447,7 +447,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianPerson.name",
@@ -456,7 +456,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianPerson.family",
@@ -465,7 +465,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianPerson.given",
@@ -474,7 +474,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.structureRepresentantPatient",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianOrganization",
@@ -483,7 +483,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.structureRepresentantPatient.identifiant",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianOrganization.id",
@@ -492,7 +492,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.representantPatient.structureRepresentantPatient.nom",
+          "code" : "FRLMPatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.nom",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.guardian.guardianOrganization.name",
@@ -501,7 +501,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.lieuNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.lieuNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.birthPlace",
@@ -510,7 +510,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.lieuNaissance.nomLieuNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.birthPlace.place.name",
@@ -519,7 +519,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.lieuNaissance.adresseLieuNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.birthPlace.place.addr",
@@ -528,7 +528,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Patient.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance",
+          "code" : "FRLMPatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance",
           "target" : [
             {
               "code" : "recordTarget.patientRole.patient.birthPlace.place.addr.county",
@@ -539,7 +539,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-record-target",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document",
       "element" : [
         {

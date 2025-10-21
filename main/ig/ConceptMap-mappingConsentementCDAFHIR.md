@@ -19,24 +19,24 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization`
+**Group 1**Mapping from [Modèle logique métier - FR LM Consentement](StructureDefinition-fr-lm-consentement.md) to [CDA - authorization](StructureDefinition-fr-cda-authorization.md)
 
-* **Source Code**: Consentement
+* **Source Code**: FRLMConsentement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authorization
-* **Source Code**: Consentement.identifiantConsentement
+* **Source Code**: FRLMConsentement.identifiantConsentement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authorization.consent.id
-* **Source Code**: Consentement.typeConsentement
+* **Source Code**: FRLMConsentement.typeConsentement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authorization.consent.code
-* **Source Code**: Consentement.statutConsentement
+* **Source Code**: FRLMConsentement.statutConsentement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authorization.consent.statusCode="completed"
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization` to [Consent Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-consent-extension.html)
+**Group 2**Mapping from [CDA - authorization](StructureDefinition-fr-cda-authorization.md) to [Consent Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-consent-extension.html)
 
 * **Source Code**: authorization
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -69,7 +69,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -96,11 +96,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Consentement",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-consentement",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authorization",
       "element" : [
         {
-          "code" : "Consentement",
+          "code" : "FRLMConsentement",
           "target" : [
             {
               "code" : "authorization",
@@ -109,7 +109,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Consentement.identifiantConsentement",
+          "code" : "FRLMConsentement.identifiantConsentement",
           "target" : [
             {
               "code" : "authorization.consent.id",
@@ -118,7 +118,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Consentement.typeConsentement",
+          "code" : "FRLMConsentement.typeConsentement",
           "target" : [
             {
               "code" : "authorization.consent.code",
@@ -127,7 +127,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Consentement.statutConsentement",
+          "code" : "FRLMConsentement.statutConsentement",
           "target" : [
             {
               "code" : "authorization.consent.statusCode=\"completed\"",
@@ -138,7 +138,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authorization",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authorization",
       "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/consent-extension",
       "element" : [
         {

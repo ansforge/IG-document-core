@@ -19,76 +19,76 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of`
+**Group 1**Mapping from [Modèle logique métier - FR LM Prise en charge](StructureDefinition-fr-lm-prise-en-charge.md) to [CDA - componentOf](StructureDefinition-fr-cda-component-of.md)
 
-* **Source Code**: PriseEncharge
+* **Source Code**: FRLMPriseEncharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.identifiantPriseEnCharge
+* **Source Code**: FRLMPriseEncharge.identifiantPriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.id
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.typePriseEnCharge
+* **Source Code**: FRLMPriseEncharge.typePriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.code
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.dateDebutFinPriseEnCharge
+* **Source Code**: FRLMPriseEncharge.dateDebutFinPriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.effectiveTime
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.typeSortie
+* **Source Code**: FRLMPriseEncharge.typeSortie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.dischargeDispositionCode
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.responsablePriseEnCharge
+* **Source Code**: FRLMPriseEncharge.responsablePriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.responsibleParty.assignedEntity
   * **Commentaire**: L'élément responsablePriseEnCharge est de type PersonneStructure.
-* **Source Code**: PriseEncharge.personneImpliqueePriseEnCharge
+* **Source Code**: FRLMPriseEncharge.personneImpliqueePriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.encounterParticipant
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.personneImpliqueePriseEnCharge.typeParticipation
+* **Source Code**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.encounterParticipant@typeCode
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation
+* **Source Code**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.encounterParticipant.time
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique
+* **Source Code**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.encounterParticipant.assignedEntity
   * **Commentaire**: L'élément personneImpliqueePriseEnCharge est de type PersonneStructure.
-* **Source Code**: PriseEncharge.lieuPriseEnCharge
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.lieuPriseEnCharge.structure
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge.structure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location.healthcareFacility
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.lieuPriseEnCharge.structure.secteurActivite
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location.healthcareFacility.code
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location.healthcareFacility.code.translation
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.lieuPriseEnCharge.structure.nomStructure
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge.structure.nomStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location.healthcareFacility.location.name
   * **Commentaire**: 
-* **Source Code**: PriseEncharge.lieuPriseEnCharge.structure.adresse
+* **Source Code**: FRLMPriseEncharge.lieuPriseEnCharge.structure.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: componentOf.encompassingEncounter.location.healthcareFacility.location.addr
   * **Commentaire**: 
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of` to [Fr Encounter Document](StructureDefinition-fr-encounter-document.md)
+**Group 2**Mapping from [CDA - componentOf](StructureDefinition-fr-cda-component-of.md) to [Fr Encounter Document](StructureDefinition-fr-encounter-document.md)
 
 * **Source Code**: componentOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -165,7 +165,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -192,11 +192,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PriseEncharge",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prise-en-charge",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-component-of",
       "element" : [
         {
-          "code" : "PriseEncharge",
+          "code" : "FRLMPriseEncharge",
           "target" : [
             {
               "code" : "componentOf",
@@ -205,7 +205,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.identifiantPriseEnCharge",
+          "code" : "FRLMPriseEncharge.identifiantPriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.id",
@@ -214,7 +214,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.typePriseEnCharge",
+          "code" : "FRLMPriseEncharge.typePriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.code",
@@ -223,7 +223,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.dateDebutFinPriseEnCharge",
+          "code" : "FRLMPriseEncharge.dateDebutFinPriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.effectiveTime",
@@ -232,7 +232,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.typeSortie",
+          "code" : "FRLMPriseEncharge.typeSortie",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.dischargeDispositionCode",
@@ -241,7 +241,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.responsablePriseEnCharge",
+          "code" : "FRLMPriseEncharge.responsablePriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.responsibleParty.assignedEntity",
@@ -251,7 +251,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.personneImpliqueePriseEnCharge",
+          "code" : "FRLMPriseEncharge.personneImpliqueePriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.encounterParticipant",
@@ -260,7 +260,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.personneImpliqueePriseEnCharge.typeParticipation",
+          "code" : "FRLMPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.encounterParticipant@typeCode",
@@ -269,7 +269,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation",
+          "code" : "FRLMPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.encounterParticipant.time",
@@ -278,7 +278,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique",
+          "code" : "FRLMPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.encounterParticipant.assignedEntity",
@@ -288,7 +288,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location",
@@ -297,7 +297,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge.structure",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge.structure",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location.healthcareFacility",
@@ -306,7 +306,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge.structure.secteurActivite",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location.healthcareFacility.code",
@@ -315,7 +315,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location.healthcareFacility.code.translation",
@@ -324,7 +324,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge.structure.nomStructure",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge.structure.nomStructure",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location.healthcareFacility.location.name",
@@ -333,7 +333,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PriseEncharge.lieuPriseEnCharge.structure.adresse",
+          "code" : "FRLMPriseEncharge.lieuPriseEnCharge.structure.adresse",
           "target" : [
             {
               "code" : "componentOf.encompassingEncounter.location.healthcareFacility.location.addr",
@@ -344,7 +344,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-component-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-component-of",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document",
       "element" : [
         {

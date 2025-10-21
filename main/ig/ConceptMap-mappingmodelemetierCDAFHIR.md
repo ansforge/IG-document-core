@@ -20,84 +20,84 @@ Ce ConceptMap présente trois groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document`
+**Group 1**Mapping from [Modèle logique métier - FR LM En-tête document](StructureDefinition-fr-lm-entete-document.md) to [CDA - clinicalDocument](StructureDefinition-fr-cda-clinical-document.md)
 
-* **Source Code**: EnteteDocument.identifiantUniqueDocument
+* **Source Code**: FRLMEnteteDocument.identifiantUniqueDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.id
-* **Source Code**: EnteteDocument.modeleDocument
+* **Source Code**: FRLMEnteteDocument.modeleDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.templateId
-* **Source Code**: EnteteDocument.typeDocument
+* **Source Code**: FRLMEnteteDocument.typeDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.code
-* **Source Code**: EnteteDocument.titreDocument
+* **Source Code**: FRLMEnteteDocument.titreDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.title
-* **Source Code**: EnteteDocument.dateDeCreationDocument
+* **Source Code**: FRLMEnteteDocument.dateDeCreationDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.effectiveTime
-* **Source Code**: EnteteDocument.niveauConfidentialiteDocument
+* **Source Code**: FRLMEnteteDocument.niveauConfidentialiteDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.confidentialityCode
-* **Source Code**: EnteteDocument.languePrincipaleDocument
+* **Source Code**: FRLMEnteteDocument.languePrincipaleDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.languageCode
-* **Source Code**: EnteteDocument.identifiantLotDeVersionsDocument
+* **Source Code**: FRLMEnteteDocument.identifiantLotDeVersionsDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.setId
-* **Source Code**: EnteteDocument.versionDocument
+* **Source Code**: FRLMEnteteDocument.versionDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.versionNumber
-* **Source Code**: EnteteDocument.StatutDocument
+* **Source Code**: FRLMEnteteDocument.StatutDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.documentationOf.serviceEvent.lab:statusCode
-* **Source Code**: EnteteDocument.patient
+* **Source Code**: FRLMEnteteDocument.patient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.recordTarget
-* **Source Code**: EnteteDocument.auteur
+* **Source Code**: FRLMEnteteDocument.auteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.author
-* **Source Code**: EnteteDocument.operateurSaisie
+* **Source Code**: FRLMEnteteDocument.operateurSaisie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.dataEnterer
-* **Source Code**: EnteteDocument.informateur
+* **Source Code**: FRLMEnteteDocument.informateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.informant
-* **Source Code**: EnteteDocument.structureConservation
+* **Source Code**: FRLMEnteteDocument.structureConservation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.custodian
-* **Source Code**: EnteteDocument.destinataire
+* **Source Code**: FRLMEnteteDocument.destinataire
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.informationRecipient
-* **Source Code**: EnteteDocument.responsable
+* **Source Code**: FRLMEnteteDocument.responsable
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.legalAuthenticator
-* **Source Code**: EnteteDocument.validateur
+* **Source Code**: FRLMEnteteDocument.validateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.authenticator
-* **Source Code**: EnteteDocument.participant
+* **Source Code**: FRLMEnteteDocument.participant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.participant
-* **Source Code**: EnteteDocument.prescription
+* **Source Code**: FRLMEnteteDocument.prescription
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.inFulfillmentOf
-* **Source Code**: EnteteDocument.evenement
+* **Source Code**: FRLMEnteteDocument.evenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.documentationOf
-* **Source Code**: EnteteDocument.documentDeReference
+* **Source Code**: FRLMEnteteDocument.documentDeReference
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.relatedDocument
-* **Source Code**: EnteteDocument.consentementAssocie
+* **Source Code**: FRLMEnteteDocument.consentementAssocie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.authorization
-* **Source Code**: EnteteDocument.priseEncharge
+* **Source Code**: FRLMEnteteDocument.priseEncharge
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: ClinicalDocument.componentOf
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document` to [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
+**Group 2**Mapping from [CDA - clinicalDocument](StructureDefinition-fr-cda-clinical-document.md) to [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
 
 * **Source Code**: ClinicalDocument.id
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -105,7 +105,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 3**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 3**Mapping from [CDA - clinicalDocument](StructureDefinition-fr-cda-clinical-document.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: ClinicalDocument.templateId
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -214,7 +214,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -241,11 +241,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-entete-document",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document",
       "element" : [
         {
-          "code" : "EnteteDocument.identifiantUniqueDocument",
+          "code" : "FRLMEnteteDocument.identifiantUniqueDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.id",
@@ -254,7 +254,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.modeleDocument",
+          "code" : "FRLMEnteteDocument.modeleDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.templateId",
@@ -263,7 +263,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.typeDocument",
+          "code" : "FRLMEnteteDocument.typeDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.code",
@@ -272,7 +272,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.titreDocument",
+          "code" : "FRLMEnteteDocument.titreDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.title",
@@ -281,7 +281,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.dateDeCreationDocument",
+          "code" : "FRLMEnteteDocument.dateDeCreationDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.effectiveTime",
@@ -290,7 +290,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.niveauConfidentialiteDocument",
+          "code" : "FRLMEnteteDocument.niveauConfidentialiteDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.confidentialityCode",
@@ -299,7 +299,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.languePrincipaleDocument",
+          "code" : "FRLMEnteteDocument.languePrincipaleDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.languageCode",
@@ -308,7 +308,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.identifiantLotDeVersionsDocument",
+          "code" : "FRLMEnteteDocument.identifiantLotDeVersionsDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.setId",
@@ -317,7 +317,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.versionDocument",
+          "code" : "FRLMEnteteDocument.versionDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.versionNumber",
@@ -326,7 +326,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.StatutDocument",
+          "code" : "FRLMEnteteDocument.StatutDocument",
           "target" : [
             {
               "code" : "ClinicalDocument.documentationOf.serviceEvent.lab:statusCode",
@@ -335,7 +335,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.patient",
+          "code" : "FRLMEnteteDocument.patient",
           "target" : [
             {
               "code" : "ClinicalDocument.recordTarget",
@@ -344,7 +344,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.auteur",
+          "code" : "FRLMEnteteDocument.auteur",
           "target" : [
             {
               "code" : "ClinicalDocument.author",
@@ -353,7 +353,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.operateurSaisie",
+          "code" : "FRLMEnteteDocument.operateurSaisie",
           "target" : [
             {
               "code" : "ClinicalDocument.dataEnterer",
@@ -362,7 +362,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.informateur",
+          "code" : "FRLMEnteteDocument.informateur",
           "target" : [
             {
               "code" : "ClinicalDocument.informant",
@@ -371,7 +371,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.structureConservation",
+          "code" : "FRLMEnteteDocument.structureConservation",
           "target" : [
             {
               "code" : "ClinicalDocument.custodian",
@@ -380,7 +380,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.destinataire",
+          "code" : "FRLMEnteteDocument.destinataire",
           "target" : [
             {
               "code" : "ClinicalDocument.informationRecipient",
@@ -389,7 +389,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.responsable",
+          "code" : "FRLMEnteteDocument.responsable",
           "target" : [
             {
               "code" : "ClinicalDocument.legalAuthenticator",
@@ -398,7 +398,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.validateur",
+          "code" : "FRLMEnteteDocument.validateur",
           "target" : [
             {
               "code" : "ClinicalDocument.authenticator",
@@ -407,7 +407,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.participant",
+          "code" : "FRLMEnteteDocument.participant",
           "target" : [
             {
               "code" : "ClinicalDocument.participant",
@@ -416,7 +416,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.prescription",
+          "code" : "FRLMEnteteDocument.prescription",
           "target" : [
             {
               "code" : "ClinicalDocument.inFulfillmentOf",
@@ -425,7 +425,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.evenement",
+          "code" : "FRLMEnteteDocument.evenement",
           "target" : [
             {
               "code" : "ClinicalDocument.documentationOf",
@@ -434,7 +434,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.documentDeReference",
+          "code" : "FRLMEnteteDocument.documentDeReference",
           "target" : [
             {
               "code" : "ClinicalDocument.relatedDocument",
@@ -443,7 +443,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.consentementAssocie",
+          "code" : "FRLMEnteteDocument.consentementAssocie",
           "target" : [
             {
               "code" : "ClinicalDocument.authorization",
@@ -452,7 +452,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "EnteteDocument.priseEncharge",
+          "code" : "FRLMEnteteDocument.priseEncharge",
           "target" : [
             {
               "code" : "ClinicalDocument.componentOf",
@@ -463,7 +463,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document",
       "element" : [
         {
@@ -478,7 +478,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

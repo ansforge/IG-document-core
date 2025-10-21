@@ -13,7 +13,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | | |
 | :--- | :--- |
 | Titre du profil | Description |
-| [Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md) | Ce ConceptMap présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "auteur" et l'élément CDA "author"
+| [Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md) | Ce ConceptMap présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "Auteur" et l'élément CDA "author"
 * Mapping 2 : entre l'élément CDA "author" et l'élément FHIR "Composition.author"
  |
 | [Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md) | Ce ConceptMap présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "ConsentementAssocie" et l'élément CDA "authorization"
@@ -46,7 +46,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | [Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md) | Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "PersonneStructureAuteur" et l'élément CDA "assignedAuthor"
 * Mapping 2 : entre l'élément CDA "assignedAuthor" et le profil FHIR "FrPractitionerRoleDocument"
  |
-| [Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md) | Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:* Mapping 1 : entre le modèle métier "PersonneStructure" et l'élément CDA "relatedEntity"
+| [Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md) | Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:* Mapping 1 : entre le modèle métier "FRLMPersonneStructure" et l'élément CDA "relatedEntity"
 * Mapping 2 : entre l'élément CDA "relatedEntity" et le profil FHIR "FrRelatedPersonDocument"
 * Mapping 3 : entre l'élément CDA "relatedEntity" et l'élément FHIR "Patient.contact"
  |
@@ -84,7 +84,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | [Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md) | Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "PersonneStructureAuteur" et l'élément CDA "assignedAuthor"
 * Mapping 2 : entre l'élément CDA "assignedAuthor" et le profil FHIR "FrPractitionerRoleDocument"
  |
-| [Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md) | Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:* Mapping 1 : entre le modèle métier "PersonneStructure" et l'élément CDA "relatedEntity"
+| [Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md) | Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:* Mapping 1 : entre le modèle métier "FRLMPersonneStructure" et l'élément CDA "relatedEntity"
 * Mapping 2 : entre l'élément CDA "relatedEntity" et le profil FHIR "FrRelatedPersonDocument"
 * Mapping 3 : entre l'élément CDA "relatedEntity" et l'élément FHIR "Patient.contact"
  |

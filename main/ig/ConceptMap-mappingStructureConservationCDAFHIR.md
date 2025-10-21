@@ -19,30 +19,30 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian`
+**Group 1**Mapping from [Modèle logique métier - FR LM Structure conservation](StructureDefinition-fr-lm-structure-conservation.md) to [CDA - custodian](StructureDefinition-fr-cda-custodian.md)
 
-* **Source Code**: StructureConservation
+* **Source Code**: FRLMStructureConservation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian
-* **Source Code**: StructureConservation.structure
+* **Source Code**: FRLMStructureConservation.structure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian.assignedCustodian
-* **Source Code**: StructureConservation.structure.identifiantStructure
+* **Source Code**: FRLMStructureConservation.structure.identifiantStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian.assignedCustodian.representedCustodianOrganization.id
-* **Source Code**: StructureConservation.structure.nomStructure
+* **Source Code**: FRLMStructureConservation.structure.nomStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian.assignedCustodian.representedCustodianOrganization.name
-* **Source Code**: StructureConservation.structure.adresse
+* **Source Code**: FRLMStructureConservation.structure.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian.assignedCustodian.representedCustodianOrganization.addr
-* **Source Code**: StructureConservation.structure.coordonneesTelecom
+* **Source Code**: FRLMStructureConservation.structure.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: custodian.assignedCustodian.representedCustodianOrganization.telecom
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - custodian](StructureDefinition-fr-cda-custodian.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: custodian
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -83,7 +83,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -110,11 +110,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/StructureConservation",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-structure-conservation",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian",
       "element" : [
         {
-          "code" : "StructureConservation",
+          "code" : "FRLMStructureConservation",
           "target" : [
             {
               "code" : "custodian",
@@ -123,7 +123,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "StructureConservation.structure",
+          "code" : "FRLMStructureConservation.structure",
           "target" : [
             {
               "code" : "custodian.assignedCustodian",
@@ -132,7 +132,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "StructureConservation.structure.identifiantStructure",
+          "code" : "FRLMStructureConservation.structure.identifiantStructure",
           "target" : [
             {
               "code" : "custodian.assignedCustodian.representedCustodianOrganization.id",
@@ -141,7 +141,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "StructureConservation.structure.nomStructure",
+          "code" : "FRLMStructureConservation.structure.nomStructure",
           "target" : [
             {
               "code" : "custodian.assignedCustodian.representedCustodianOrganization.name",
@@ -150,7 +150,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "StructureConservation.structure.adresse",
+          "code" : "FRLMStructureConservation.structure.adresse",
           "target" : [
             {
               "code" : "custodian.assignedCustodian.representedCustodianOrganization.addr",
@@ -159,7 +159,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "StructureConservation.structure.coordonneesTelecom",
+          "code" : "FRLMStructureConservation.structure.coordonneesTelecom",
           "target" : [
             {
               "code" : "custodian.assignedCustodian.representedCustodianOrganization.telecom",
@@ -170,7 +170,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-custodian",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

@@ -13,49 +13,49 @@
 
  
 Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapping: 
-* Mapping 1 : entre le modèle métier "PersonneStructure" et l’élément CDA "relatedEntity"
+* Mapping 1 : entre le modèle métier "FRLMPersonneStructure" et l’élément CDA "relatedEntity"
 * Mapping 2 : entre l’élément CDA "relatedEntity" et le profil FHIR "FrRelatedPersonDocument"
 * Mapping 3 : entre l’élément CDA "relatedEntity" et l’élément FHIR "Patient.contact"
  
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity`
+**Group 1**Mapping from [Modèle logique métier - FR LM Personne et/ou Structure](StructureDefinition-fr-lm-personne-structure.md) to [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md)
 
-* **Source Code**: PersonneStructure
+* **Source Code**: FRLMPersonneStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity
-* **Source Code**: PersonneStructure.personne.professionRole
+* **Source Code**: FRLMPersonneStructure.personne.professionRole
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity@classCode
-* **Source Code**: PersonneStructure.personne.lien
+* **Source Code**: FRLMPersonneStructure.personne.lien
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.code
-* **Source Code**: PersonneStructure.personne.adresse
+* **Source Code**: FRLMPersonneStructure.personne.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.addr
-* **Source Code**: PersonneStructure.personne.coordonneesTelecom
+* **Source Code**: FRLMPersonneStructure.personne.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.telecom
-* **Source Code**: PersonneStructure.personne.IdentitePersonne
+* **Source Code**: FRLMPersonneStructure.personne.IdentitePersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.relatedPerson
-* **Source Code**: PersonneStructure.personne.IdentitePersonne.nomPersonne
+* **Source Code**: FRLMPersonneStructure.personne.IdentitePersonne.nomPersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.relatedPerson.name.family
-* **Source Code**: PersonneStructure.personne.IdentitePersonne.prenomPersonne
+* **Source Code**: FRLMPersonneStructure.personne.IdentitePersonne.prenomPersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.relatedPerson.name.given
-* **Source Code**: PersonneStructure.personne.IdentitePersonne.civilite
+* **Source Code**: FRLMPersonneStructure.personne.IdentitePersonne.civilite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.relatedPerson.name.prefix
-* **Source Code**: PersonneStructure.personne.IdentitePersonne.titre
+* **Source Code**: FRLMPersonneStructure.personne.IdentitePersonne.titre
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedEntity.relatedPerson.name.suffix
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity` to [Fr RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
+**Group 2**Mapping from [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to [Fr RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
 
 * **Source Code**: relatedEntity
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -89,7 +89,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 3**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
+**Group 3**Mapping from [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
 
 * **Source Code**: relatedEntity
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -136,7 +136,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -149,7 +149,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     }
   ],
-  "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\" ",
+  "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\" ",
   "jurisdiction" : [
     {
       "coding" : [
@@ -163,11 +163,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructure",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-entity",
       "element" : [
         {
-          "code" : "PersonneStructure",
+          "code" : "FRLMPersonneStructure",
           "target" : [
             {
               "code" : "relatedEntity",
@@ -176,7 +176,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.professionRole",
+          "code" : "FRLMPersonneStructure.personne.professionRole",
           "target" : [
             {
               "code" : "relatedEntity@classCode",
@@ -185,7 +185,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.lien",
+          "code" : "FRLMPersonneStructure.personne.lien",
           "target" : [
             {
               "code" : "relatedEntity.code",
@@ -194,7 +194,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.adresse",
+          "code" : "FRLMPersonneStructure.personne.adresse",
           "target" : [
             {
               "code" : "relatedEntity.addr",
@@ -203,7 +203,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.coordonneesTelecom",
+          "code" : "FRLMPersonneStructure.personne.coordonneesTelecom",
           "target" : [
             {
               "code" : "relatedEntity.telecom",
@@ -212,7 +212,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.IdentitePersonne",
+          "code" : "FRLMPersonneStructure.personne.IdentitePersonne",
           "target" : [
             {
               "code" : "relatedEntity.relatedPerson",
@@ -221,7 +221,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.IdentitePersonne.nomPersonne",
+          "code" : "FRLMPersonneStructure.personne.IdentitePersonne.nomPersonne",
           "target" : [
             {
               "code" : "relatedEntity.relatedPerson.name.family",
@@ -230,7 +230,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.IdentitePersonne.prenomPersonne",
+          "code" : "FRLMPersonneStructure.personne.IdentitePersonne.prenomPersonne",
           "target" : [
             {
               "code" : "relatedEntity.relatedPerson.name.given",
@@ -239,7 +239,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.IdentitePersonne.civilite",
+          "code" : "FRLMPersonneStructure.personne.IdentitePersonne.civilite",
           "target" : [
             {
               "code" : "relatedEntity.relatedPerson.name.prefix",
@@ -248,7 +248,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructure.personne.IdentitePersonne.titre",
+          "code" : "FRLMPersonneStructure.personne.IdentitePersonne.titre",
           "target" : [
             {
               "code" : "relatedEntity.relatedPerson.name.suffix",
@@ -259,7 +259,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-entity",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-related-person-document",
       "element" : [
         {
@@ -354,7 +354,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-entity",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-entity",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document",
       "element" : [
         {

@@ -13,38 +13,38 @@
 
  
 Ce ConceptMap présente deux groupes de mapping : 
-* Mapping 1 : entre le modèle métier "auteur" et l’élément CDA "author"
+* Mapping 1 : entre le modèle métier "Auteur" et l’élément CDA "author"
 * Mapping 2 : entre l’élément CDA "author" et l’élément FHIR "Composition.author"
  
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author`
+**Group 1**Mapping from [Modèle logique métier - FR LM Auteur](StructureDefinition-fr-lm-auteur.md) to [CDA - author](StructureDefinition-fr-cda-author.md)
 
-* **Source Code**: Auteur
+* **Source Code**: FRLMAuteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: author
   * **Commentaire**: 
-* **Source Code**: Auteur.roleFonctionnel
+* **Source Code**: FRLMAuteur.roleFonctionnel
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: author.functionCode
   * **Commentaire**: 
-* **Source Code**: Auteur.horodatageParticipation
+* **Source Code**: FRLMAuteur.horodatageParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: author.time
   * **Commentaire**: 
-* **Source Code**: Auteur.PersonneStructure
+* **Source Code**: FRLMAuteur.FRLMPersonneStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: author.assignedAuthor
   * **Commentaire**: L'élément PersonneStructure est de type PersonneStructure.
-* **Source Code**: Auteur.SystemeStructureAuteur
+* **Source Code**: FRLMAuteur.FRLMSystemeStructureAuteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: author.assignedAuthor
   * **Commentaire**: L'élément SystemeStructureAuteur est de type Systeme
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - author](StructureDefinition-fr-cda-author.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: author
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -85,7 +85,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -98,7 +98,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     }
   ],
-  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\" ",
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\" ",
   "jurisdiction" : [
     {
       "coding" : [
@@ -112,11 +112,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author",
       "element" : [
         {
-          "code" : "Auteur",
+          "code" : "FRLMAuteur",
           "target" : [
             {
               "code" : "author",
@@ -125,7 +125,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Auteur.roleFonctionnel",
+          "code" : "FRLMAuteur.roleFonctionnel",
           "target" : [
             {
               "code" : "author.functionCode",
@@ -134,7 +134,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Auteur.horodatageParticipation",
+          "code" : "FRLMAuteur.horodatageParticipation",
           "target" : [
             {
               "code" : "author.time",
@@ -143,7 +143,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Auteur.PersonneStructure",
+          "code" : "FRLMAuteur.FRLMPersonneStructure",
           "target" : [
             {
               "code" : "author.assignedAuthor",
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Auteur.SystemeStructureAuteur",
+          "code" : "FRLMAuteur.FRLMSystemeStructureAuteur",
           "target" : [
             {
               "code" : "author.assignedAuthor",
@@ -165,7 +165,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

@@ -3,7 +3,7 @@
   "id" : "mappingEvenementCDAFHIR",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingEvenementCDAFHIR</b></p><a name=\"mappingEvenementCDAFHIR\"> </a><a name=\"hcmappingEvenementCDAFHIR\"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>Evenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf</td></tr><tr><td>Evenement.identifiantEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.id</td></tr><tr><td>Evenement.codeEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.code</td></tr><tr><td>Evenement.dateHeureEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.effectiveTime</td></tr><tr><td>Evenement.executantEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</td></tr><tr><td>Evenement.executantEvenement.roleFonctionnel</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.functionCode</td></tr><tr><td>Evenement.executantEvenement.dateHeureParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.time</td></tr><tr><td>Evenement.executantEvenement.executant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.assignedEntity</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of</code> to <a href=\"StructureDefinition-fr-composition-document.html\">Fr Composition Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>documentationOf</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event</td><td/></tr><tr><td>documentationOf.serviceEvent.id</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Cette donnée est fournie dans un autre élément : Composition.relatesTo</td></tr><tr><td>documentationOf.serviceEvent.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.code</td><td/></tr><tr><td>documentationOf.serviceEvent.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.period</td><td/></tr><tr><td>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole</td><td>Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument)</td></tr><tr><td>documentationOf.serviceEvent.performer.functionCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole.code</td><td/></tr><tr><td>documentationOf.serviceEvent.performer.time</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Mapped in Composition.event.period </td></tr><tr><td>documentationOf.serviceEvent.performer.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole.Practitioner</td><td>Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument).Practitioner.resolve()</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingEvenementCDAFHIR</b></p><a name=\"mappingEvenementCDAFHIR\"> </a><a name=\"hcmappingEvenementCDAFHIR\"> </a><p>Mapping from (non spécifié) to (non spécifié)</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-fr-lm-evenement.html\">Modèle logique métier - FR LM Évènement</a> to <a href=\"StructureDefinition-fr-cda-documentation-of.html\">CDA - documentationOf</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf</td></tr><tr><td>FRLMEvenement.identifiantEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.id</td></tr><tr><td>FRLMEvenement.codeEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.code</td></tr><tr><td>FRLMEvenement.dateHeureEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.effectiveTime</td></tr><tr><td>FRLMEvenement.executantEvenement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</td></tr><tr><td>FRLMEvenement.executantEvenement.roleFonctionnel</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.functionCode</td></tr><tr><td>FRLMEvenement.executantEvenement.dateHeureParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.time</td></tr><tr><td>FRLMEvenement.executantEvenement.executant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>documentationOf.serviceEvent.performer.assignedEntity</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-fr-cda-documentation-of.html\">CDA - documentationOf</a> to <a href=\"StructureDefinition-fr-composition-document.html\">Fr Composition Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>relation</b></td><td><b>Target Code</b></td><td><b>Commentaire</b></td></tr><tr><td>documentationOf</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event</td><td/></tr><tr><td>documentationOf.serviceEvent.id</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Cette donnée est fournie dans un autre élément : Composition.relatesTo</td></tr><tr><td>documentationOf.serviceEvent.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.code</td><td/></tr><tr><td>documentationOf.serviceEvent.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.period</td><td/></tr><tr><td>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole</td><td>Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument)</td></tr><tr><td>documentationOf.serviceEvent.performer.functionCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole.code</td><td/></tr><tr><td>documentationOf.serviceEvent.performer.time</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Mapped in Composition.event.period </td></tr><tr><td>documentationOf.serviceEvent.performer.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.event.extension:perfomer.PractitionerRole.Practitioner</td><td>Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument).Practitioner.resolve()</td></tr></table></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingEvenementCDAFHIR",
   "version" : "0.1.0",
@@ -11,7 +11,7 @@
   "title" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -29,59 +29,59 @@
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-evenement",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of",
     "element" : [{
-      "code" : "Evenement",
+      "code" : "FRLMEvenement",
       "target" : [{
         "code" : "documentationOf",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.identifiantEvenement",
+      "code" : "FRLMEvenement.identifiantEvenement",
       "target" : [{
         "code" : "documentationOf.serviceEvent.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.codeEvenement",
+      "code" : "FRLMEvenement.codeEvenement",
       "target" : [{
         "code" : "documentationOf.serviceEvent.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.dateHeureEvenement",
+      "code" : "FRLMEvenement.dateHeureEvenement",
       "target" : [{
         "code" : "documentationOf.serviceEvent.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.executantEvenement",
+      "code" : "FRLMEvenement.executantEvenement",
       "target" : [{
         "code" : "documentationOf.serviceEvent.performer@typeCode=\"PRF\"",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.executantEvenement.roleFonctionnel",
+      "code" : "FRLMEvenement.executantEvenement.roleFonctionnel",
       "target" : [{
         "code" : "documentationOf.serviceEvent.performer.functionCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.executantEvenement.dateHeureParticipation",
+      "code" : "FRLMEvenement.executantEvenement.dateHeureParticipation",
       "target" : [{
         "code" : "documentationOf.serviceEvent.performer.time",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Evenement.executantEvenement.executant",
+      "code" : "FRLMEvenement.executantEvenement.executant",
       "target" : [{
         "code" : "documentationOf.serviceEvent.performer.assignedEntity",
         "equivalence" : "equivalent"
@@ -89,7 +89,7 @@
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
       "code" : "documentationOf",

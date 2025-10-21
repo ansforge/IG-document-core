@@ -19,21 +19,21 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document`
+**Group 1**Mapping from [Modèle logique métier - FR LM Document de référence](StructureDefinition-fr-lm-document-reference.md) to [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md)
 
-* **Source Code**: DocumentDeReference
+* **Source Code**: FRLMDocumentDeReference
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedDocument
-* **Source Code**: DocumentDeReference.typeReference
+* **Source Code**: FRLMDocumentDeReference.typeReference
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedDocument@typeCode
-* **Source Code**: DocumentDeReference.identifiantUniqueDocument
+* **Source Code**: FRLMDocumentDeReference.identifiantUniqueDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: relatedDocument.parentDocument.id
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: relatedDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -59,7 +59,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -86,11 +86,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-reference",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document",
       "element" : [
         {
-          "code" : "DocumentDeReference",
+          "code" : "FRLMDocumentDeReference",
           "target" : [
             {
               "code" : "relatedDocument",
@@ -99,7 +99,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "DocumentDeReference.typeReference",
+          "code" : "FRLMDocumentDeReference.typeReference",
           "target" : [
             {
               "code" : "relatedDocument@typeCode",
@@ -108,7 +108,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "DocumentDeReference.identifiantUniqueDocument",
+          "code" : "FRLMDocumentDeReference.identifiantUniqueDocument",
           "target" : [
             {
               "code" : "relatedDocument.parentDocument.id",
@@ -119,7 +119,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

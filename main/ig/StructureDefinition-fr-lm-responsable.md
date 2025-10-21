@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-responsable.cs
   "name" : "FRLMResponsable",
   "title" : "Modèle logique métier - FR LM Responsable",
   "status" : "draft",
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

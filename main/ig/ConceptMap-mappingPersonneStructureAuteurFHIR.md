@@ -19,60 +19,60 @@ Ce ConceptMap de l’élément PersonneStructureAuteur présente deux groupes de
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructureAuteur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author`
+**Group 1**Mapping from [Modèle logique métier - FR LM Personne et/ou Structure Auteur](StructureDefinition-fr-lm-personne-structure-auteur.md) to [CDA - assignedAuthor](StructureDefinition-fr-cda-assigned-author.md)
 
-* **Source Code**: PersonneStructureAuteur
+* **Source Code**: FRLMPersonneStructureAuteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor
-* **Source Code**: PersonneStructureAuteur.personne.identifiantPersonne
+* **Source Code**: FRLMPersonneStructureAuteur.personne.identifiantPersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.id
-* **Source Code**: PersonneStructureAuteur.personne.professionRole
+* **Source Code**: FRLMPersonneStructureAuteur.personne.professionRole
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.code
-* **Source Code**: PersonneStructureAuteur.personne.adresse
+* **Source Code**: FRLMPersonneStructureAuteur.personne.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.addr
-* **Source Code**: PersonneStructureAuteur.personne.coordonneesTelecom
+* **Source Code**: FRLMPersonneStructureAuteur.personne.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.telecom
-* **Source Code**: PersonneStructureAuteur.personne.IdentitePersonne
+* **Source Code**: FRLMPersonneStructureAuteur.personne.IdentitePersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.assignedPerson
-* **Source Code**: PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne
+* **Source Code**: FRLMPersonneStructureAuteur.personne.IdentitePersonne.nomPersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.assignedPerson.name.family
-* **Source Code**: PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne
+* **Source Code**: FRLMPersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.assignedPerson.name.given
-* **Source Code**: PersonneStructureAuteur.personne.IdentitePersonne.civilite
+* **Source Code**: FRLMPersonneStructureAuteur.personne.IdentitePersonne.civilite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.assignedPerson.name.prefix
-* **Source Code**: PersonneStructureAuteur.personne.IdentitePersonne.titre
+* **Source Code**: FRLMPersonneStructureAuteur.personne.IdentitePersonne.titre
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.assignedPerson.name.suffix
-* **Source Code**: PersonneStructureAuteur.structure
+* **Source Code**: FRLMPersonneStructureAuteur.structure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization
-* **Source Code**: PersonneStructureAuteur.structure.identifiantStructure
+* **Source Code**: FRLMPersonneStructureAuteur.structure.identifiantStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.id
-* **Source Code**: PersonneStructureAuteur.structure.nomStructure
+* **Source Code**: FRLMPersonneStructureAuteur.structure.nomStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.name
-* **Source Code**: PersonneStructureAuteur.structure.adresse
+* **Source Code**: FRLMPersonneStructureAuteur.structure.adresse
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.addr
-* **Source Code**: PersonneStructureAuteur.structure.coordonneesTelecom
+* **Source Code**: FRLMPersonneStructureAuteur.structure.coordonneesTelecom
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.telecom
-* **Source Code**: PersonneStructureAuteur.structure.secteurActivite
+* **Source Code**: FRLMPersonneStructureAuteur.structure.secteurActivite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedAuthor.representedOrganization.standardIndustryClassCode
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author` to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+**Group 2**Mapping from [CDA - assignedAuthor](StructureDefinition-fr-cda-assigned-author.md) to [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
 
 * **Source Code**: assignedAuthor
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -180,11 +180,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/PersonneStructureAuteur",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author",
       "element" : [
         {
-          "code" : "PersonneStructureAuteur",
+          "code" : "FRLMPersonneStructureAuteur",
           "target" : [
             {
               "code" : "assignedAuthor",
@@ -193,7 +193,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.identifiantPersonne",
+          "code" : "FRLMPersonneStructureAuteur.personne.identifiantPersonne",
           "target" : [
             {
               "code" : "assignedAuthor.id",
@@ -202,7 +202,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.professionRole",
+          "code" : "FRLMPersonneStructureAuteur.personne.professionRole",
           "target" : [
             {
               "code" : "assignedAuthor.code",
@@ -211,7 +211,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.adresse",
+          "code" : "FRLMPersonneStructureAuteur.personne.adresse",
           "target" : [
             {
               "code" : "assignedAuthor.addr",
@@ -220,7 +220,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.coordonneesTelecom",
+          "code" : "FRLMPersonneStructureAuteur.personne.coordonneesTelecom",
           "target" : [
             {
               "code" : "assignedAuthor.telecom",
@@ -229,7 +229,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.IdentitePersonne",
+          "code" : "FRLMPersonneStructureAuteur.personne.IdentitePersonne",
           "target" : [
             {
               "code" : "assignedAuthor.assignedPerson",
@@ -238,7 +238,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne",
+          "code" : "FRLMPersonneStructureAuteur.personne.IdentitePersonne.nomPersonne",
           "target" : [
             {
               "code" : "assignedAuthor.assignedPerson.name.family",
@@ -247,7 +247,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne",
+          "code" : "FRLMPersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne",
           "target" : [
             {
               "code" : "assignedAuthor.assignedPerson.name.given",
@@ -256,7 +256,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.IdentitePersonne.civilite",
+          "code" : "FRLMPersonneStructureAuteur.personne.IdentitePersonne.civilite",
           "target" : [
             {
               "code" : "assignedAuthor.assignedPerson.name.prefix",
@@ -265,7 +265,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.personne.IdentitePersonne.titre",
+          "code" : "FRLMPersonneStructureAuteur.personne.IdentitePersonne.titre",
           "target" : [
             {
               "code" : "assignedAuthor.assignedPerson.name.suffix",
@@ -274,7 +274,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure",
+          "code" : "FRLMPersonneStructureAuteur.structure",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization",
@@ -283,7 +283,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure.identifiantStructure",
+          "code" : "FRLMPersonneStructureAuteur.structure.identifiantStructure",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.id",
@@ -292,7 +292,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure.nomStructure",
+          "code" : "FRLMPersonneStructureAuteur.structure.nomStructure",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.name",
@@ -301,7 +301,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure.adresse",
+          "code" : "FRLMPersonneStructureAuteur.structure.adresse",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.addr",
@@ -310,7 +310,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure.coordonneesTelecom",
+          "code" : "FRLMPersonneStructureAuteur.structure.coordonneesTelecom",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.telecom",
@@ -319,7 +319,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "PersonneStructureAuteur.structure.secteurActivite",
+          "code" : "FRLMPersonneStructureAuteur.structure.secteurActivite",
           "target" : [
             {
               "code" : "assignedAuthor.representedOrganization.standardIndustryClassCode",
@@ -330,7 +330,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document",
       "element" : [
         {

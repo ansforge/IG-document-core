@@ -19,32 +19,32 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant`
+**Group 1**Mapping from [Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant.md) to [CDA - participant](StructureDefinition-fr-cda-participant.md)
 
-* **Source Code**: Participant
+* **Source Code**: FRLMParticipant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: participant
   * **Commentaire**: 
-* **Source Code**: Participant.typeParticipation
+* **Source Code**: FRLMParticipant.typeParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: participant@typeCode
   * **Commentaire**: 
-* **Source Code**: Participant.roleFonctionnel
+* **Source Code**: FRLMParticipant.roleFonctionnel
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: participant.functionCode
   * **Commentaire**: 
-* **Source Code**: Participant.dateDebutEtOuFinParticipation
+* **Source Code**: FRLMParticipant.dateDebutEtOuFinParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: participant.time
   * **Commentaire**: 
-* **Source Code**: Participant.participant
+* **Source Code**: FRLMParticipant.participant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: participant.associatedEntity
   * **Commentaire**: L'élément participant est de type PersonneStructure
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant` to [Participant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-ParticipantExtension.html)
+**Group 2**Mapping from [CDA - participant](StructureDefinition-fr-cda-participant.md) to [Participant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-ParticipantExtension.html)
 
 * **Source Code**: participant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -141,7 +141,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -168,11 +168,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
       "element" : [
         {
-          "code" : "Participant",
+          "code" : "FRLMParticipant",
           "target" : [
             {
               "code" : "participant",
@@ -181,7 +181,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Participant.typeParticipation",
+          "code" : "FRLMParticipant.typeParticipation",
           "target" : [
             {
               "code" : "participant@typeCode",
@@ -190,7 +190,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Participant.roleFonctionnel",
+          "code" : "FRLMParticipant.roleFonctionnel",
           "target" : [
             {
               "code" : "participant.functionCode",
@@ -199,7 +199,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Participant.dateDebutEtOuFinParticipation",
+          "code" : "FRLMParticipant.dateDebutEtOuFinParticipation",
           "target" : [
             {
               "code" : "participant.time",
@@ -208,7 +208,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Participant.participant",
+          "code" : "FRLMParticipant.participant",
           "target" : [
             {
               "code" : "participant.associatedEntity",
@@ -220,7 +220,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
       "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension",
       "element" : [
         {

@@ -19,24 +19,24 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator`
+**Group 1**Mapping from [Modèle logique métier - FR LM Validateur](StructureDefinition-fr-lm-validateur.md) to [CDA - authenticator](StructureDefinition-fr-cda-authenticator.md)
 
-* **Source Code**: Validateur
+* **Source Code**: FRLMValidateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authenticator
   * **Commentaire**: 
-* **Source Code**: Validateur.dateHeureAttestationValidite
+* **Source Code**: FRLMValidateur.dateHeureAttestationValidite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authenticator.time
   * **Commentaire**: 
-* **Source Code**: Validateur.validateur
+* **Source Code**: FRLMValidateur.validateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: authenticator.assignedEntity
   * **Commentaire**: L'élément validateur est de type : PersonneStructure
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - authenticator](StructureDefinition-fr-cda-authenticator.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: authenticator
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -125,7 +125,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -152,11 +152,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-validateur",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator",
       "element" : [
         {
-          "code" : "Validateur",
+          "code" : "FRLMValidateur",
           "target" : [
             {
               "code" : "authenticator",
@@ -165,7 +165,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Validateur.dateHeureAttestationValidite",
+          "code" : "FRLMValidateur.dateHeureAttestationValidite",
           "target" : [
             {
               "code" : "authenticator.time",
@@ -174,7 +174,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Validateur.validateur",
+          "code" : "FRLMValidateur.validateur",
           "target" : [
             {
               "code" : "authenticator.assignedEntity",
@@ -186,7 +186,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

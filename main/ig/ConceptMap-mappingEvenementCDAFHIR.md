@@ -19,36 +19,36 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of`
+**Group 1**Mapping from [Modèle logique métier - FR LM Évènement](StructureDefinition-fr-lm-evenement.md) to [CDA - documentationOf](StructureDefinition-fr-cda-documentation-of.md)
 
-* **Source Code**: Evenement
+* **Source Code**: FRLMEvenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf
-* **Source Code**: Evenement.identifiantEvenement
+* **Source Code**: FRLMEvenement.identifiantEvenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.id
-* **Source Code**: Evenement.codeEvenement
+* **Source Code**: FRLMEvenement.codeEvenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.code
-* **Source Code**: Evenement.dateHeureEvenement
+* **Source Code**: FRLMEvenement.dateHeureEvenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.effectiveTime
-* **Source Code**: Evenement.executantEvenement
+* **Source Code**: FRLMEvenement.executantEvenement
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.performer@typeCode="PRF"
-* **Source Code**: Evenement.executantEvenement.roleFonctionnel
+* **Source Code**: FRLMEvenement.executantEvenement.roleFonctionnel
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.performer.functionCode
-* **Source Code**: Evenement.executantEvenement.dateHeureParticipation
+* **Source Code**: FRLMEvenement.executantEvenement.dateHeureParticipation
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.performer.time
-* **Source Code**: Evenement.executantEvenement.executant
+* **Source Code**: FRLMEvenement.executantEvenement.executant
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: documentationOf.serviceEvent.performer.assignedEntity
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - documentationOf](StructureDefinition-fr-cda-documentation-of.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: documentationOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -95,7 +95,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -122,11 +122,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-evenement",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of",
       "element" : [
         {
-          "code" : "Evenement",
+          "code" : "FRLMEvenement",
           "target" : [
             {
               "code" : "documentationOf",
@@ -135,7 +135,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.identifiantEvenement",
+          "code" : "FRLMEvenement.identifiantEvenement",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.id",
@@ -144,7 +144,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.codeEvenement",
+          "code" : "FRLMEvenement.codeEvenement",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.code",
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.dateHeureEvenement",
+          "code" : "FRLMEvenement.dateHeureEvenement",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.effectiveTime",
@@ -162,7 +162,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.executantEvenement",
+          "code" : "FRLMEvenement.executantEvenement",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.performer@typeCode=\"PRF\"",
@@ -171,7 +171,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.executantEvenement.roleFonctionnel",
+          "code" : "FRLMEvenement.executantEvenement.roleFonctionnel",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.performer.functionCode",
@@ -180,7 +180,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.executantEvenement.dateHeureParticipation",
+          "code" : "FRLMEvenement.executantEvenement.dateHeureParticipation",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.performer.time",
@@ -189,7 +189,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Evenement.executantEvenement.executant",
+          "code" : "FRLMEvenement.executantEvenement.executant",
           "target" : [
             {
               "code" : "documentationOf.serviceEvent.performer.assignedEntity",
@@ -200,7 +200,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {

@@ -19,24 +19,24 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/OperateurSaisie` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-data-enterer`
+**Group 1**Mapping from [Modèle logique métier - FR LM Opérateur de saisie](StructureDefinition-fr-lm-operateur-saisie.md) to [CDA - dataEnterer](StructureDefinition-fr-cda-data-enterer.md)
 
-* **Source Code**: OperateurSaisie
+* **Source Code**: FRLMOperateurSaisie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: dataEnterer
   * **Commentaire**: 
-* **Source Code**: OperateurSaisie.dateSaisie
+* **Source Code**: FRLMOperateurSaisie.dateSaisie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: dataEnterer.time
   * **Commentaire**: 
-* **Source Code**: OperateurSaisie.operateurSaisie
+* **Source Code**: FRLMOperateurSaisie.operateurSaisie
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: dataEnterer.assignedEntity
   * **Commentaire**: L'élément operateurSaisie est de type PersonneStructure.
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-data-enterer` to [Data Enterer Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-data-enterer-extension.html)
+**Group 2**Mapping from [CDA - dataEnterer](StructureDefinition-fr-cda-data-enterer.md) to [Data Enterer Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-data-enterer-extension.html)
 
 * **Source Code**: dataEnterer
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -65,7 +65,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -92,11 +92,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/OperateurSaisie",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-data-enterer",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-operateur-saisie",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer",
       "element" : [
         {
-          "code" : "OperateurSaisie",
+          "code" : "FRLMOperateurSaisie",
           "target" : [
             {
               "code" : "dataEnterer",
@@ -105,7 +105,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "OperateurSaisie.dateSaisie",
+          "code" : "FRLMOperateurSaisie.dateSaisie",
           "target" : [
             {
               "code" : "dataEnterer.time",
@@ -114,7 +114,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "OperateurSaisie.operateurSaisie",
+          "code" : "FRLMOperateurSaisie.operateurSaisie",
           "target" : [
             {
               "code" : "dataEnterer.assignedEntity",
@@ -126,7 +126,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-data-enterer",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer",
       "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension",
       "element" : [
         {

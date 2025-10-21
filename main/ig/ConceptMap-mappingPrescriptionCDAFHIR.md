@@ -19,21 +19,21 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of`
+**Group 1**Mapping from [Modèle logique métier - FR LM Prescription](StructureDefinition-fr-lm-prescription.md) to [CDA - inFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md)
 
-* **Source Code**: Prescription
+* **Source Code**: FRLMPrescription
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: inFulfillmentOf
-* **Source Code**: Prescription.identifiantPrescription
+* **Source Code**: FRLMPrescription.identifiantPrescription
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: inFulfillmentOf.order.id
-* **Source Code**: Prescription.accessionNumber
+* **Source Code**: FRLMPrescription.accessionNumber
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: inFulfillmentOf.order.ps3-20:accessionNumber
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of` to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
+**Group 2**Mapping from [CDA - inFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md) to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
 
 * **Source Code**: inFulfillmentOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -59,7 +59,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -86,11 +86,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-inFulfillment-of",
       "element" : [
         {
-          "code" : "Prescription",
+          "code" : "FRLMPrescription",
           "target" : [
             {
               "code" : "inFulfillmentOf",
@@ -99,7 +99,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Prescription.identifiantPrescription",
+          "code" : "FRLMPrescription.identifiantPrescription",
           "target" : [
             {
               "code" : "inFulfillmentOf.order.id",
@@ -108,7 +108,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Prescription.accessionNumber",
+          "code" : "FRLMPrescription.accessionNumber",
           "target" : [
             {
               "code" : "inFulfillmentOf.order.ps3-20:accessionNumber",
@@ -119,7 +119,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-inFulfillment-of",
       "target" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
       "element" : [
         {

@@ -19,20 +19,20 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient`
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu` to [CDA - informationRecipient](StructureDefinition-fr-cda-information-recipient.md)
 
-* **Source Code**: DestinatairePrevu
+* **Source Code**: FRLMDestinatairePrevu
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: informationRecipient
   * **Commentaire**: 
-* **Source Code**: DestinatairePrevu.destinataire
+* **Source Code**: FRLMDestinatairePrevu.destinataire
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: informationRecipient.intendedRecipient
   * **Commentaire**: L'élément destinataire est de type PersonneStructure.
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient` to [Information Recipient Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-information-recipient-extension.html)
+**Group 2**Mapping from [CDA - informationRecipient](StructureDefinition-fr-cda-information-recipient.md) to [Information Recipient Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-information-recipient-extension.html)
 
 * **Source Code**: informationRecipient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -94,7 +94,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -121,11 +121,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DestinatairePrevu",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-information-recipient",
       "element" : [
         {
-          "code" : "DestinatairePrevu",
+          "code" : "FRLMDestinatairePrevu",
           "target" : [
             {
               "code" : "informationRecipient",
@@ -134,7 +134,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "DestinatairePrevu.destinataire",
+          "code" : "FRLMDestinatairePrevu.destinataire",
           "target" : [
             {
               "code" : "informationRecipient.intendedRecipient",
@@ -146,7 +146,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-information-recipient",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-information-recipient",
       "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension",
       "element" : [
         {

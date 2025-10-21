@@ -19,24 +19,24 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator`
+**Group 1**Mapping from [Modèle logique métier - FR LM Responsable](StructureDefinition-fr-lm-responsable.md) to [CDA - legalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md)
 
-* **Source Code**: Responsable
+* **Source Code**: FRLMResponsable
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: legalAuthenticator
   * **Commentaire**: 
-* **Source Code**: Responsable.dateHeureAttestationPriseResponsabilite
+* **Source Code**: FRLMResponsable.dateHeureAttestationPriseResponsabilite
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: legalAuthenticator.time
   * **Commentaire**: 
-* **Source Code**: Responsable.responsable
+* **Source Code**: FRLMResponsable.responsable
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: legalAuthenticator.assignedEntity
   * **Commentaire**: L'élément responsable est de type PersonneStructure.
 
 -------
 
-**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - legalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: legalAuthenticator
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -125,7 +125,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T15:23:03+00:00",
+  "date" : "2025-10-21T16:49:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -152,11 +152,11 @@ Mapping from (non spécifié) to (non spécifié)
   ],
   "group" : [
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Responsable",
-      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator",
       "element" : [
         {
-          "code" : "Responsable",
+          "code" : "FRLMResponsable",
           "target" : [
             {
               "code" : "legalAuthenticator",
@@ -165,7 +165,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Responsable.dateHeureAttestationPriseResponsabilite",
+          "code" : "FRLMResponsable.dateHeureAttestationPriseResponsabilite",
           "target" : [
             {
               "code" : "legalAuthenticator.time",
@@ -174,7 +174,7 @@ Mapping from (non spécifié) to (non spécifié)
           ]
         },
         {
-          "code" : "Responsable.responsable",
+          "code" : "FRLMResponsable.responsable",
           "target" : [
             {
               "code" : "legalAuthenticator.assignedEntity",
@@ -186,7 +186,7 @@ Mapping from (non spécifié) to (non spécifié)
       ]
     },
     {
-      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-legal-authenticator",
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
       "element" : [
         {
