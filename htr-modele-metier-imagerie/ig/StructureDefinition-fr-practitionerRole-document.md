@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:FrPractitionerRoleDocument |
+| Draft as of 2025-10-21 | *Computable Name*:FrPractitionerRoleDocument |
 
  
 Ce profil représente les professionnels de santé et leurs rôles dans le cadre d’un document médical. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitionerRole-
   "name" : "FrPractitionerRoleDocument",
   "title" : "Fr PractitionerRole Document",
   "status" : "draft",
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

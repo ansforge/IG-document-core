@@ -7,713 +7,6 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class Auteur{
-
-             Auteur => [1..None]
-             Auteur.roleFonctionnel => [0..1]
-             Auteur.horodatageParticipation => [1..1]
-             Auteur.auteur[x] => [1..1]
-        } 
-
-        class Consentement{
-
-             Consentement => [None..None]
-             Consentement.identifiantConsentement => [0..*]
-             Consentement.typeConsentement => [1..1]
-             Consentement.statutConsentement => [1..1]
-        } 
-
-        class CorpsDocument{
-
-             CorpsDocument => [None..None]
-             CorpsDocument.acteImagerie => [0..*]
-             CorpsDocument.addendum => [0..*]
-             CorpsDocument.comparaisonExamensImagerie => [0..*]
-             CorpsDocument.conclusions => [0..*]
-             CorpsDocument.demandeExamenImagerie => [0..*]
-             CorpsDocument.dispositifsMedicaux => [0..*]
-             CorpsDocument.documentsAjoutes => [0..*]
-             CorpsDocument.educationPatient => [0..*]
-             CorpsDocument.expositionRadiations => [0..*]
-             CorpsDocument.informationsCliniques => [0..*]
-             CorpsDocument.objectCatalog => [0..*]
-             CorpsDocument.resultatsExamenImagerie => [0..*]
-             CorpsDocument.resultatsExamensNonCode => [0..*]
-        } 
-
-        class DestinatairePrevu{
-
-             DestinatairePrevu => [None..None]
-             DestinatairePrevu.destinataire => [0..*]
-        } 
-
-        class DispositifMedical{
-
-             DispositifMedical => [None..None]
-             DispositifMedical.identifiant => [0..*]
-             DispositifMedical.type => [1..1]
-             DispositifMedical.type.code => [1..1]
-             DispositifMedical.type.code.autreCode => [0..*]
-        } 
-
-        class DocumentDeReference{
-
-             DocumentDeReference => [None..1]
-             DocumentDeReference.typeReference => [1..1]
-             DocumentDeReference.identifiantUniqueDocument => [1..1]
-        } 
-
-        class EnteteDocument{
-
-             EnteteDocument => [1..1]
-             EnteteDocument.identifiantUniqueDocument => [1..1]
-             EnteteDocument.modeleDocument => [1..1]
-             EnteteDocument.typeDocument => [1..1]
-             EnteteDocument.titreDocument => [1..1]
-             EnteteDocument.dateDeCreationDocument => [1..1]
-             EnteteDocument.niveauConfidentialiteDocument => [1..1]
-             EnteteDocument.languePrincipaleDocument => [1..1]
-             EnteteDocument.identifiantLotDeVersionsDocument => [1..1]
-             EnteteDocument.versionDocument => [1..1]
-             EnteteDocument.statutDocument => [1..1]
-             EnteteDocument.patient => [1..1]
-             EnteteDocument.auteur => [1..*]
-             EnteteDocument.operateurSaisie => [0..1]
-             EnteteDocument.informateur => [0..*]
-             EnteteDocument.structureConservation => [1..1]
-             EnteteDocument.destinataire => [0..*]
-             EnteteDocument.responsable => [1..1]
-             EnteteDocument.validateur => [0..*]
-             EnteteDocument.participant => [0..*]
-             EnteteDocument.prescription => [0..*]
-             EnteteDocument.evenement => [1..*]
-             EnteteDocument.documentDeReference => [0..1]
-             EnteteDocument.consentementAssocie => [0..*]
-             EnteteDocument.priseEncharge => [1..1]
-        } 
-
-        class Evenement{
-
-             Evenement => [1..None]
-             Evenement.identifiantEvenement => [0..*]
-             Evenement.codeEvenement => [0..1]
-             Evenement.codeEvenement.id => [None..0]
-             Evenement.codeEvenement.extension => [None..0]
-             Evenement.codeEvenement.translation => [0..*]
-             Evenement.dateHeureEvenement => [0..1]
-             Evenement.executantEvenement => [0..1]
-             Evenement.executantEvenement.roleFonctionnel => [0..1]
-             Evenement.executantEvenement.dateHeureParticipation => [0..1]
-             Evenement.executantEvenement.executant => [1..1]
-        } 
-
-        class FrActe{
-
-             FrActe => [None..None]
-             FrActe.identifiant => [1..*]
-             FrActe.description => [1..1]
-             FrActe.code => [1..1]
-             FrActe.titre => [0..1]
-             FrActe.statut => [1..1]
-             FrActe.date => [0..1]
-             FrActe.priorite => [0..1]
-             FrActe.localisationAnatomique => [0..1]
-             FrActe.voieDAbord => [0..1]
-             FrActe.perfomer => [0..*]
-             FrActe.auteur => [0..*]
-             FrActe.informateur => [0..*]
-             FrActe.participant => [0..*]
-             FrActe.circonstances => [0..*]
-             FrActe.reason => [0..*]
-             FrActe.dispositifMedical => [0..*]
-             FrActe.difficulte => [0..1]
-             FrActe.scores => [0..*]
-        } 
-
-        class FrActeImagerie{
-
-             FrActeImagerie => [None..None]
-             FrActeImagerie.titreSection => [1..None]
-             FrActeImagerie.sousSection.complicationsActe => [0..1]
-             FrActeImagerie.sousSection.expositionsRadiations => [0..1]
-             FrActeImagerie.sousSection.catalogueObjects => [1..1]
-             FrActeImagerie.entree.techniqueImagerie => [1..1]
-             FrActeImagerie.entree.administrationProduits => [0..*]
-        } 
-
-        class FrAddendum{
-
-             FrAddendum => [None..None]
-             FrAddendum.titreSection => [1..None]
-             FrAddendum.sousSection => [None..0]
-             FrAddendum.entree => [None..0]
-             FrAddendum.auteur => [1..1]
-        } 
-
-        class FrAdministrationProduitDeSante{
-
-             FrAdministrationProduitDeSante => [None..None]
-             FrAdministrationProduitDeSante.identifiant => [1..1]
-             FrAdministrationProduitDeSante.description => [0..1]
-             FrAdministrationProduitDeSante.statut => [1..1]
-             FrAdministrationProduitDeSante.voieAdministration => [0..1]
-             FrAdministrationProduitDeSante.dose => [0..1]
-             FrAdministrationProduitDeSante.rythme => [0..1]
-             FrAdministrationProduitDeSante.medicament => [1..1]
-             FrAdministrationProduitDeSante.medicament.produit => [1..1]
-             FrAdministrationProduitDeSante.medicament.produit.codeProduit => [0..1]
-             FrAdministrationProduitDeSante.medicament.produit.codeProduit.autreCodification => [0..1]
-             FrAdministrationProduitDeSante.medicament.produit.nomMarque => [0..1]
-             FrAdministrationProduitDeSante.medicament.produit.numeroLot => [0..1]
-        } 
-
-        class FrAutorisationExposition{
-
-             FrAutorisationExposition => [None..None]
-             FrAutorisationExposition.code => [1..1]
-             FrAutorisationExposition.participant => [1..1]
-        } 
-
-        class FrCertitude{
-
-             FrCertitude => [None..None]
-             FrCertitude.identifiant => [1..1]
-             FrCertitude.code => [1..1]
-             FrCertitude.statut => [1..1]
-             FrCertitude.date => [1..1]
-             FrCertitude.descriptionNarrative => [1..1]
-             FrCertitude.valeur => [1..1]
-        } 
-
-        class FrCommentaireER{
-
-             FrCommentaireER => [None..None]
-             FrCommentaireER.codeCommentaireER => [1..1]
-             FrCommentaireER.texteCommentaireER => [1..1]
-             FrCommentaireER.statutCommentaireER => [1..1]
-             FrCommentaireER.auteurCommentaireER => [0..1]
-        } 
-
-        class FrComparaisonExamensImagerie{
-
-             FrComparaisonExamensImagerie => [None..None]
-             FrComparaisonExamensImagerie.titreSection => [1..None]
-             FrComparaisonExamensImagerie.sousSection => [None..0]
-             FrComparaisonExamensImagerie.entree => [None..0]
-        } 
-
-        class FrComplicationsActe{
-
-             FrComplicationsActe => [None..None]
-             FrComplicationsActe.titreSection => [1..None]
-             FrComplicationsActe.sousSection => [None..0]
-             FrComplicationsActe.entree => [None..0]
-        } 
-
-        class FrConclusionExamenImagerie{
-
-             FrConclusionExamenImagerie => [None..None]
-             FrConclusionExamenImagerie.titreSection => [1..None]
-             FrConclusionExamenImagerie.sousSection => [None..0]
-             FrConclusionExamenImagerie.entree => [None..0]
-        } 
-
-        class FrDemandeExamenImagerie{
-
-             FrDemandeExamenImagerie => [None..None]
-             FrDemandeExamenImagerie.titreSection => [1..None]
-             FrDemandeExamenImagerie.sousSection => [None..0]
-             FrDemandeExamenImagerie.entree => [None..0]
-        } 
-
-        class FrDispositifMedicalEntry{
-
-             FrDispositifMedicalEntry => [None..None]
-             FrDispositifMedicalEntry.identifiant => [1..*]
-             FrDispositifMedicalEntry.description => [1..1]
-             FrDispositifMedicalEntry.statut => [1..1]
-             FrDispositifMedicalEntry.date => [1..1]
-             FrDispositifMedicalEntry.renouvellement => [0..1]
-             FrDispositifMedicalEntry.quantite => [0..1]
-             FrDispositifMedicalEntry.duree => [0..1]
-             FrDispositifMedicalEntry.performer => [0..*]
-             FrDispositifMedicalEntry.auteur => [0..*]
-             FrDispositifMedicalEntry.dispositifMedical => [1..*]
-             FrDispositifMedicalEntry.affectionLongueDuree => [0..1]
-             FrDispositifMedicalEntry.accidentTravail => [0..1]
-             FrDispositifMedicalEntry.prevention => [0..1]
-             FrDispositifMedicalEntry.nonRemboursable => [0..1]
-        } 
-
-        class FrDispositifsMedicaux{
-
-             FrDispositifsMedicaux => [None..None]
-             FrDispositifsMedicaux.titreSection => [1..None]
-             FrDispositifsMedicaux.sousSection => [None..0]
-             FrDispositifsMedicaux.entree.dispositifsMedicaux => [0..*]
-        } 
-
-        class FrDocumentAttache{
-
-             FrDocumentAttache => [None..None]
-             FrDocumentAttache.identifiant => [1..1]
-             FrDocumentAttache.code => [1..1]
-             FrDocumentAttache.statut => [1..1]
-             FrDocumentAttache.date => [0..1]
-             FrDocumentAttache.typeDocumentAttache => [1..1]
-             FrDocumentAttache.typeDocumentAttache.natureDocument => [1..1]
-             FrDocumentAttache.documentAttache => [1..1]
-             FrDocumentAttache.documentAttache.observationMedia => [1..1]
-             FrDocumentAttache.documentAttache.observationMedia.identifiant => [1..1]
-             FrDocumentAttache.documentAttache.observationMedia.documentAttacheEncode => [1..1]
-        } 
-
-        class FrDocumentsAjoutes{
-
-             FrDocumentsAjoutes => [None..None]
-             FrDocumentsAjoutes.sousSection => [None..0]
-             FrDocumentsAjoutes.entree.simpleObservation => [0..1]
-             FrDocumentsAjoutes.entree.documentAttache => [1..*]
-        } 
-
-        class FrEducationPatient{
-
-             FrEducationPatient => [None..None]
-             FrEducationPatient.sousSection => [None..0]
-             FrEducationPatient.entree.acte => [0..*]
-             FrEducationPatient.entree.observation => [0..*]
-             FrEducationPatient.entree.reference => [0..*]
-        } 
-
-        class FrExamenImagerie{
-
-             FrExamenImagerie => [None..None]
-             FrExamenImagerie.uuidInstanceExamen => [1..*]
-             FrExamenImagerie.codeActe => [1..1]
-             FrExamenImagerie.description => [0..1]
-             FrExamenImagerie.dateActe => [0..1]
-             FrExamenImagerie.serieImagerie => [1..1]
-             FrExamenImagerie.objectifsReferences => [0..*]
-        } 
-
-        class FrExpositionRadiations{
-
-             FrExpositionRadiations => [None..None]
-             FrExpositionRadiations.titreSection => [1..None]
-             FrExpositionRadiations.sousSection => [None..0]
-             FrExpositionRadiations.entree.autorisationExposition => [1..1]
-             FrExpositionRadiations.entree.quantiteExposition => [0..*]
-        } 
-
-        class FrInformationsCliniques{
-
-             FrInformationsCliniques => [None..None]
-             FrInformationsCliniques.titreSection => [1..None]
-             FrInformationsCliniques.sousSection => [None..0]
-             FrInformationsCliniques.entree => [1..None]
-             FrInformationsCliniques.entree.antecedentsMedicaux => [1..1]
-             FrInformationsCliniques.entree.antecedentsChirurgicaux => [1..1]
-             FrInformationsCliniques.entree.contreIndications => [0..1]
-             FrInformationsCliniques.entree.probleme => [0..*]
-             FrInformationsCliniques.entree.dispositifMedical => [0..*]
-             FrInformationsCliniques.entree.statutGrossesse => [0..1]
-             FrInformationsCliniques.entree.administrationProduitDeSante => [0..*]
-             FrInformationsCliniques.entree.sexeClinique => [0..*]
-        } 
-
-        class FrObjectCatalog{
-
-             FrObjectCatalog => [None..None]
-             FrObjectCatalog.titreSection => [1..None]
-             FrObjectCatalog.sousSection => [None..0]
-             FrObjectCatalog.entree.examenImagerie => [0..*]
-        } 
-
-        class FrObservation{
-
-             FrObservation => [None..None]
-             FrObservation.observationIdentifiant => [1..1]
-             FrObservation.observationCode => [1..1]
-             FrObservation.observationDescription => [1..1]
-             FrObservation.observationStatut => [1..1]
-             FrObservation.observationDate => [0..1]
-             FrObservation.observationNombreRenouvellements => [0..1]
-             FrObservation.observationResultat => [0..*]
-             FrObservation.observationInterpretation => [0..1]
-             FrObservation.observationMethode => [0..1]
-             FrObservation.observationLocalisationAnatomique => [0..1]
-             FrObservation.observationAuteur => [0..1]
-        } 
-
-        class FrObservationGrossesse{
-
-             FrObservationGrossesse => [None..None]
-             FrObservationGrossesse.identifiant => [1..1]
-             FrObservationGrossesse.code => [1..1]
-             FrObservationGrossesse.description => [1..1]
-             FrObservationGrossesse.statut => [1..1]
-             FrObservationGrossesse.date => [1..1]
-             FrObservationGrossesse.resultat => [1..1]
-        } 
-
-        class FrParticipantCorps{
-
-             FrParticipantCorps => [None..None]
-             FrParticipantCorps.dateEtHeureParticipation => [0..1]
-             FrParticipantCorps.participantRole => [1..1]
-             FrParticipantCorps.participantRole.IdentifiantParticipant => [0..*]
-             FrParticipantCorps.participantRole.typeParticipant => [1..1]
-             FrParticipantCorps.participantRole.adresses => [0..*]
-             FrParticipantCorps.participantRole.coordonneesTelecom => [0..*]
-             FrParticipantCorps.participantRole.identiteParticipant => [0..1]
-             FrParticipantCorps.participantRole.identiteParticipant.ProfessionSpecialite => [0..1]
-             FrParticipantCorps.participantRole.identiteParticipant.nom => [0..*]
-             FrParticipantCorps.participantRole.identiteParticipant.description => [0..1]
-             FrParticipantCorps.participantRole.dispositifAutomatique => [0..1]
-             FrParticipantCorps.participantRole.dispositifAutomatique.categorie => [0..1]
-             FrParticipantCorps.participantRole.dispositifAutomatique.nomModele => [0..1]
-             FrParticipantCorps.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
-             FrParticipantCorps.participantRole.Organisation => [0..1]
-             FrParticipantCorps.participantRole.Organisation.identifiant => [0..1]
-             FrParticipantCorps.participantRole.Organisation.code => [0..1]
-             FrParticipantCorps.participantRole.Organisation.description => [0..1]
-        } 
-
-        class FrProbleme{
-
-             FrProbleme => [None..None]
-             FrProbleme.identifiant => [1..1]
-             FrProbleme.type => [1..1]
-             FrProbleme.description => [1..1]
-             FrProbleme.problemeObserve => [1..1]
-             FrProbleme.statut => [1..1]
-             FrProbleme.dateProbleme => [1..1]
-             FrProbleme.statutProbleme => [0..1]
-             FrProbleme.severite => [0..1]
-             FrProbleme.certitude => [0..1]
-             FrProbleme.statutClinique => [0..1]
-             FrProbleme.reference => [0..*]
-             FrProbleme.reference.externalDocument => [1..1]
-             FrProbleme.reference.externalDocument.identifiant => [1..1]
-             FrProbleme.reference.externalDocument.text => [0..1]
-             FrProbleme.reference.externalDocument.text.reference => [1..*]
-             FrProbleme.commentaire => [0..1]
-        } 
-
-        class FrQuantiteExposition{
-
-             FrQuantiteExposition => [None..None]
-             FrQuantiteExposition.identifiant => [1..1]
-             FrQuantiteExposition.code => [1..1]
-             FrQuantiteExposition.description => [0..1]
-             FrQuantiteExposition.statut => [1..1]
-             FrQuantiteExposition.date => [0..1]
-             FrQuantiteExposition.valeur => [1..1]
-             FrQuantiteExposition.lateralite => [0..1]
-             FrQuantiteExposition.lateralite.topographique => [0..1]
-             FrQuantiteExposition.lateralite.topographique.nom => [1..1]
-             FrQuantiteExposition.lateralite.topographique.valeur => [1..1]
-        } 
-
-        class FrReferenceInterne{
-
-             FrReferenceInterne => [None..None]
-             FrReferenceInterne.identifiant => [1..1]
-             FrReferenceInterne.code => [1..1]
-        } 
-
-        class FrReferencesExternes{
-
-             FrReferencesExternes => [None..None]
-             FrReferencesExternes.codeReferenceExterne => [1..1]
-             FrReferencesExternes.blocNarratif => [1..1]
-             FrReferencesExternes.reference => [1..*]
-             FrReferencesExternes.reference.externalDocument => [1..1]
-             FrReferencesExternes.reference.externalDocument.identifiant => [1..1]
-             FrReferencesExternes.reference.externalDocument.text => [0..1]
-             FrReferencesExternes.reference.externalDocument.text.reference => [0..1]
-        } 
-
-        class FrRencontre{
-
-             FrRencontre => [None..None]
-             FrRencontre.identifiant => [1..*]
-             FrRencontre.typeRencontre => [1..1]
-             FrRencontre.description => [0..1]
-             FrRencontre.dateRencontre => [0..1]
-             FrRencontre.confirmationRencontre => [0..1]
-             FrRencontre.executant => [0..*]
-             FrRencontre.auteur => [0..*]
-             FrRencontre.informateur => [0..*]
-             FrRencontre.participant => [0..1]
-             FrRencontre.autreParticipant => [0..1]
-        } 
-
-        class FrResultatsExamenImagerie{
-
-             FrResultatsExamenImagerie => [None..None]
-             FrResultatsExamenImagerie.titreSection => [1..None]
-             FrResultatsExamenImagerie.sousSection => [None..0]
-             FrResultatsExamenImagerie.entree => [None..0]
-        } 
-
-        class FrResultatsExamensNonCode{
-
-             FrResultatsExamensNonCode => [None..None]
-             FrResultatsExamensNonCode.sousSection => [None..0]
-             FrResultatsExamensNonCode.entree => [None..0]
-        } 
-
-        class FrSOPInstance{
-
-             FrSOPInstance => [None..None]
-             FrSOPInstance.uuidSOPInstance => [1..*]
-             FrSOPInstance.classeSOP => [1..1]
-             FrSOPInstance.description => [0..1]
-             FrSOPInstance.statut => [1..1]
-             FrSOPInstance.date => [0..1]
-             FrSOPInstance.nombreCadresReferences => [0..1]
-        } 
-
-        class FrSerieImagerie{
-
-             FrSerieImagerie => [None..None]
-             FrSerieImagerie.uuidSerie => [1..*]
-             FrSerieImagerie.code => [1..1]
-             FrSerieImagerie.description => [0..1]
-             FrSerieImagerie.date => [0..1]
-             FrSerieImagerie.instanceSOP => [1..1]
-             FrSerieImagerie.referenceWado => [1..1]
-             FrSerieImagerie.referenceWado.iHEInvokeImage => [1..1]
-             FrSerieImagerie.referenceWado.typeMedia => [1..1]
-             FrSerieImagerie.referenceWado.reference => [1..1]
-        } 
-
-        class FrSeverite{
-
-             FrSeverite => [None..None]
-             FrSeverite.identifiantSeverite => [1..1]
-             FrSeverite.codeSeverite => [1..1]
-             FrSeverite.descriptionNarrative => [1..1]
-             FrSeverite.statutSeverite => [1..1]
-             FrSeverite.niveauSeverite => [1..1]
-        } 
-
-        class FrStatutCliniquePatient{
-
-             FrStatutCliniquePatient => [None..None]
-             FrStatutCliniquePatient.codeStatutCliniquePatient => [1..1]
-             FrStatutCliniquePatient.descriptionNarrative => [1..1]
-             FrStatutCliniquePatient.statutEntree => [1..1]
-             FrStatutCliniquePatient.statutCliniquePatient => [1..1]
-        } 
-
-        class FrStatutProbleme{
-
-             FrStatutProbleme => [None..None]
-             FrStatutProbleme.codeStatutProbleme => [1..1]
-             FrStatutProbleme.descriptionNarrative => [1..1]
-             FrStatutProbleme.statutEntree => [1..1]
-             FrStatutProbleme.statutProbleme => [1..1]
-        } 
-
-        class FrTechniqueImagerie{
-
-             FrTechniqueImagerie => [None..None]
-             FrTechniqueImagerie.identifiant => [1..1]
-             FrTechniqueImagerie.codeActe => [1..1]
-             FrTechniqueImagerie.description => [0..1]
-             FrTechniqueImagerie.date => [0..1]
-             FrTechniqueImagerie.modaliteAcquisition => [1..*]
-             FrTechniqueImagerie.lateralite => [0..1]
-             FrTechniqueImagerie.lateralite.topographique => [0..1]
-             FrTechniqueImagerie.lateralite.topographique.nom => [1..1]
-             FrTechniqueImagerie.lateralite.topographique.valeur => [1..1]
-             FrTechniqueImagerie.participant => [0..1]
-        } 
-
-        class Informateur{
-
-             Informateur => [None..None]
-             Informateur.informateur => [1..1]
-        } 
-
-        class OperateurSaisie{
-
-             OperateurSaisie => [None..1]
-             OperateurSaisie.dateSaisie => [1..1]
-             OperateurSaisie.operateurSaisie => [1..1]
-        } 
-
-        class Participant{
-
-             Participant => [None..None]
-             Participant.typeParticipation => [1..1]
-             Participant.roleFonctionnel => [0..1]
-             Participant.dateDebutEtOuFinParticipation => [1..1]
-             Participant.participant => [1..1]
-        } 
-
-        class PatientUsager{
-
-             PatientUsager => [1..1]
-             PatientUsager.identifiantPatient => [1..*]
-             PatientUsager.adresse => [0..*]
-             PatientUsager.coordonneesTelecom => [0..*]
-             PatientUsager.personnePhysique => [1..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient => [1..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom => [1..*]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
-             PatientUsager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
-             PatientUsager.personnePhysique.sexe => [1..1]
-             PatientUsager.personnePhysique.dateNaissance => [1..1]
-             PatientUsager.personnePhysique.indicateurDeces => [0..1]
-             PatientUsager.personnePhysique.dateDeces => [0..1]
-             PatientUsager.personnePhysique.grossesseMultiple => [0..1]
-             PatientUsager.personnePhysique.numeroOrdreNaissance => [0..1]
-             PatientUsager.personnePhysique.representantPatient => [0..*]
-             PatientUsager.personnePhysique.representantPatient.adresse => [0..*]
-             PatientUsager.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
-             PatientUsager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
-             PatientUsager.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
-             PatientUsager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
-        } 
-
-        class PersonneStructure{
-
-             PersonneStructure => [None..None]
-             PersonneStructure.personne => [0..1]
-             PersonneStructure.personne.identifiantPersonne => [0..1]
-             PersonneStructure.personne.professionRole => [0..1]
-             PersonneStructure.personne.lien => [0..1]
-             PersonneStructure.personne.adresse => [0..*]
-             PersonneStructure.personne.coordonneesTelecom => [0..*]
-             PersonneStructure.personne.IdentitePersonne => [0..1]
-             PersonneStructure.personne.IdentitePersonne.nomPersonne => [1..*]
-             PersonneStructure.personne.IdentitePersonne.prenomPersonne => [0..*]
-             PersonneStructure.personne.IdentitePersonne.civilite => [0..1]
-             PersonneStructure.personne.IdentitePersonne.titre => [0..1]
-             PersonneStructure.structure => [0..1]
-             PersonneStructure.structure.identifiantStructure => [0..1]
-             PersonneStructure.structure.nomStructure => [0..1]
-             PersonneStructure.structure.adresse => [0..*]
-             PersonneStructure.structure.coordonneesTelecom => [0..*]
-             PersonneStructure.structure.cadreExercice => [0..1]
-        } 
-
-        class PersonneStructureAuteur{
-
-             PersonneStructureAuteur => [None..None]
-             PersonneStructureAuteur.personne => [0..1]
-             PersonneStructureAuteur.personne.identifiantPersonne => [1..*]
-             PersonneStructureAuteur.personne.professionRole => [0..1]
-             PersonneStructureAuteur.personne.adresse => [0..*]
-             PersonneStructureAuteur.personne.coordonneesTelecom => [0..*]
-             PersonneStructureAuteur.personne.IdentitePersonne => [1..1]
-             PersonneStructureAuteur.personne.IdentitePersonne.nomPersonne => [1..*]
-             PersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne => [0..*]
-             PersonneStructureAuteur.personne.IdentitePersonne.civilite => [0..1]
-             PersonneStructureAuteur.personne.IdentitePersonne.titre => [0..1]
-             PersonneStructureAuteur.structure => [0..1]
-             PersonneStructureAuteur.structure.identifiantStructure => [0..1]
-             PersonneStructureAuteur.structure.nomStructure => [0..1]
-             PersonneStructureAuteur.structure.adresse => [0..*]
-             PersonneStructureAuteur.structure.coordonneesTelecom => [0..*]
-             PersonneStructureAuteur.structure.secteurActivite => [0..1]
-        } 
-
-        class Prescription{
-
-             Prescription => [None..None]
-             Prescription.identifiantPrescription => [1..1]
-             Prescription.accessionNumber => [0..1]
-        } 
-
-        class PriseEncharge{
-
-             PriseEncharge => [1..1]
-             PriseEncharge.identifiantPriseEnCharge => [0..*]
-             PriseEncharge.typePriseEnCharge => [0..1]
-             PriseEncharge.dateDebutFinPriseEnCharge => [1..1]
-             PriseEncharge.typeSortie => [0..1]
-             PriseEncharge.responsablePriseEnCharge => [0..1]
-             PriseEncharge.personneImpliqueePriseEnCharge => [0..*]
-             PriseEncharge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
-             PriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
-             PriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
-             PriseEncharge.lieuPriseEnCharge => [1..1]
-             PriseEncharge.lieuPriseEnCharge.structure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.nomStructure => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.adresse => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
-             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite => [1..1]
-             PriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement => [0..1]
-             PriseEncharge.lieuPriseEnCharge.structure.typeStructure => [0..1]
-        } 
-
-        class Responsable{
-
-             Responsable => [1..1]
-             Responsable.dateHeurePriseResponsabilite => [1..1]
-             Responsable.responsable => [1..1]
-        } 
-
-        class Section{
-
-             Section => [None..None]
-             Section.codeSection => [1..1]
-             Section.titreSection => [0..1]
-             Section.blocNarratif => [1..1]
-             Section.sousSection => [0..*]
-             Section.entree => [0..*]
-        } 
-
-        class StructureConservation{
-
-             StructureConservation => [1..1]
-             StructureConservation.structure => [1..1]
-             StructureConservation.structure.identifiantStructure => [1..1]
-             StructureConservation.structure.nomStructure => [0..1]
-             StructureConservation.structure.coordonneesTelecom => [0..1]
-             StructureConservation.structure.adresse => [0..1]
-        } 
-
-        class SystemeStructureAuteur{
-
-             SystemeStructureAuteur => [None..None]
-             SystemeStructureAuteur.systeme => [1..1]
-             SystemeStructureAuteur.systeme.identifiantSysteme => [1..*]
-             SystemeStructureAuteur.systeme.typeSysteme => [1..1]
-             SystemeStructureAuteur.systeme.nomModeleSysteme => [1..1]
-             SystemeStructureAuteur.systeme.nomSysteme => [1..1]
-             SystemeStructureAuteur.structure => [1..1]
-             SystemeStructureAuteur.structure.identifiantStructure => [1..1]
-             SystemeStructureAuteur.structure.nomStructure => [1..1]
-             SystemeStructureAuteur.structure.adresse => [0..*]
-             SystemeStructureAuteur.structure.coordonneesTelecom => [0..*]
-             SystemeStructureAuteur.structure.secteurActivite => [0..1]
-        } 
-
-        class Validateur{
-
-             Validateur => [None..None]
-             Validateur.dateHeureAttestationValidite => [1..1]
-             Validateur.validateur => [1..1]
-        } 
-
         class FrBundleDocument{
 
              Bundle.identifier => [1..None]
@@ -739,6 +32,581 @@ package IG #DDDDDD{
              Bundle.entry:location.resource => [None..None]
              Bundle.entry:relatedPerson => [0..*]
              Bundle.entry:relatedPerson.resource => [None..None]
+        } 
+
+        class FRCDAAssignedAuthor{
+
+             AssignedAuthor => [None..None]
+             AssignedAuthor.nullFlavor => [None..0]
+             AssignedAuthor.typeId.nullFlavor => [None..0]
+             AssignedAuthor.typeId.assigningAuthorityName => [None..0]
+             AssignedAuthor.typeId.displayable => [None..0]
+             AssignedAuthor.id => [None..None]
+             AssignedAuthor.id.nullFlavor => [None..0]
+             AssignedAuthor.id.assigningAuthorityName => [None..0]
+             AssignedAuthor.id.displayable => [None..0]
+             AssignedAuthor.id.root => [1..None]
+             AssignedAuthor.id.extension => [1..None]
+             AssignedAuthor.sdtcIdentifiedBy => [None..0]
+             AssignedAuthor.code => [None..None]
+             AssignedAuthor.addr => [None..None]
+             AssignedAuthor.telecom => [None..None]
+             AssignedAuthor.assignedPerson => [None..None]
+             AssignedAuthor.assignedAuthoringDevice => [None..None]
+             AssignedAuthor.representedOrganization => [None..None]
+        } 
+
+        class FRCDAAssignedCustodian{
+
+             AssignedCustodian => [None..None]
+             AssignedCustodian.typeId.nullFlavor => [None..0]
+             AssignedCustodian.typeId.assigningAuthorityName => [None..0]
+             AssignedCustodian.typeId.displayable => [None..0]
+             AssignedCustodian.representedCustodianOrganization => [None..None]
+        } 
+
+        class FRCDAAssignedEntity{
+
+             AssignedEntity => [None..None]
+             AssignedEntity.nullFlavor => [None..0]
+             AssignedEntity.typeId.nullFlavor => [None..0]
+             AssignedEntity.typeId.assigningAuthorityName => [None..0]
+             AssignedEntity.typeId.displayable => [None..0]
+             AssignedEntity.id => [None..1]
+             AssignedEntity.id.nullFlavor => [None..0]
+             AssignedEntity.id.assigningAuthorityName => [None..0]
+             AssignedEntity.id.displayable => [None..0]
+             AssignedEntity.id.root => [1..None]
+             AssignedEntity.id.extension => [1..None]
+             AssignedEntity.sdtcIdentifiedBy => [None..0]
+             AssignedEntity.code => [None..None]
+             AssignedEntity.code.nullFlavor => [None..0]
+             AssignedEntity.code.codeSystemVersion => [None..0]
+             AssignedEntity.code.sdtcValueSet => [None..0]
+             AssignedEntity.code.sdtcValueSetVersion => [None..0]
+             AssignedEntity.addr => [None..None]
+             AssignedEntity.telecom => [None..None]
+             AssignedEntity.assignedPerson => [None..None]
+             AssignedEntity.representedOrganization => [None..None]
+             AssignedEntity.sdtcPatient => [None..0]
+        } 
+
+        class FRCDAAssignedPerson{
+
+             Person => [None..None]
+             Person.nullFlavor => [None..0]
+             Person.typeId.nullFlavor => [None..0]
+             Person.typeId.assigningAuthorityName => [None..0]
+             Person.typeId.displayable => [None..0]
+             Person.determinerCode => [None..0]
+             Person.name => [1..1]
+             Person.sdtcDesc => [None..0]
+             Person.sdtcAsPatientRelationship => [None..0]
+        } 
+
+        class FRCDAAssociatedEntity{
+
+             AssociatedEntity => [None..None]
+             AssociatedEntity.nullFlavor => [None..0]
+             AssociatedEntity.typeId.nullFlavor => [None..0]
+             AssociatedEntity.typeId.assigningAuthorityName => [None..0]
+             AssociatedEntity.typeId.displayable => [None..0]
+             AssociatedEntity.classCode => [None..None]
+             AssociatedEntity.id => [None..None]
+             AssociatedEntity.id.root => [None..None]
+             AssociatedEntity.id.extension => [None..None]
+             AssociatedEntity.sdtcIdentifiedBy => [None..0]
+             AssociatedEntity.code => [None..None]
+             AssociatedEntity.addr => [None..None]
+             AssociatedEntity.telecom => [None..None]
+             AssociatedEntity.associatedPerson => [None..None]
+             AssociatedEntity.scopingOrganization => [None..None]
+        } 
+
+        class FRCDAAuthenticator{
+
+             Authenticator => [None..None]
+             Authenticator.nullFlavor => [None..0]
+             Authenticator.typeId.nullFlavor => [None..0]
+             Authenticator.typeId.assigningAuthorityName => [None..0]
+             Authenticator.typeId.displayable => [None..0]
+             Authenticator.time => [None..None]
+             Authenticator.time.value => [None..None]
+             Authenticator.signatureCode => [None..None]
+             Authenticator.signatureCode.sdtcValueSet => [None..0]
+             Authenticator.signatureCode.sdtcValueSetVersion => [None..0]
+             Authenticator.sdtcSignatureText => [None..0]
+             Authenticator.assignedEntity => [None..None]
+        } 
+
+        class FRCDAAuthor{
+
+             Author => [None..None]
+             Author.nullFlavor => [None..0]
+             Author.typeId.nullFlavor => [None..0]
+             Author.typeId.assigningAuthorityName => [None..0]
+             Author.typeId.displayable => [None..0]
+             Author.functionCode => [None..None]
+             Author.functionCode.nullFlavor => [None..0]
+             Author.functionCode.code => [1..None]
+             Author.functionCode.codeSystem => [1..None]
+             Author.functionCode.codeSystemVersion => [None..0]
+             Author.functionCode.sdtcValueSet => [None..0]
+             Author.functionCode.sdtcValueSetVersion => [None..0]
+             Author.functionCode.originalText => [None..None]
+             Author.time => [None..None]
+             Author.time.value => [1..None]
+             Author.assignedAuthor => [None..None]
+        } 
+
+        class FRCDAAuthoringDevice{
+
+             AuthoringDevice.typeId.nullFlavor => [None..0]
+             AuthoringDevice.typeId.assigningAuthorityName => [None..0]
+             AuthoringDevice.typeId.displayable => [None..0]
+             AuthoringDevice.determinerCode => [None..0]
+             AuthoringDevice.manufacturerModelName => [1..None]
+             AuthoringDevice.softwareName => [1..None]
+        } 
+
+        class FRCDAAuthorization{
+
+             Authorization => [None..None]
+             Authorization.typeId.nullFlavor => [None..0]
+             Authorization.typeId.assigningAuthorityName => [None..0]
+             Authorization.typeId.displayable => [None..0]
+             Authorization.consent => [None..None]
+             Authorization.consent.id => [None..None]
+             Authorization.consent.code => [1..None]
+             Authorization.consent.statusCode.code => [None..None]
+             Authorization.consent.statusCode.sdtcValueSet => [None..0]
+             Authorization.consent.statusCode.sdtcValueSetVersion => [None..0]
+        } 
+
+        class FRCDAClinicalDocument{
+
+             ClinicalDocument => [None..None]
+             ClinicalDocument.realmCode => [1..1]
+             ClinicalDocument.typeId => [1..None]
+             ClinicalDocument.templateId => [3..None]
+             ClinicalDocument.id => [None..None]
+             ClinicalDocument.code => [None..None]
+             ClinicalDocument.title => [1..None]
+             ClinicalDocument.effectiveTime => [None..None]
+             ClinicalDocument.confidentialityCode => [None..None]
+             ClinicalDocument.languageCode => [1..None]
+             ClinicalDocument.setId => [1..None]
+             ClinicalDocument.versionNumber => [1..None]
+             ClinicalDocument.copyTime => [None..0]
+             ClinicalDocument.recordTarget => [None..1]
+             ClinicalDocument.author => [None..None]
+             ClinicalDocument.dataEnterer => [None..None]
+             ClinicalDocument.informant => [None..None]
+             ClinicalDocument.custodian => [None..None]
+             ClinicalDocument.informationRecipient => [None..None]
+             ClinicalDocument.legalAuthenticator => [1..None]
+             ClinicalDocument.authenticator => [None..None]
+             ClinicalDocument.participant => [None..None]
+             ClinicalDocument.inFulfillmentOf => [None..None]
+             ClinicalDocument.documentationOf => [1..None]
+             ClinicalDocument.relatedDocument => [None..1]
+             ClinicalDocument.authorization => [None..None]
+             ClinicalDocument.componentOf => [1..None]
+        } 
+
+        class FRCDAComponentOf{
+
+             ComponentOf => [None..None]
+             ComponentOf.nullFlavor => [None..0]
+             ComponentOf.typeId.nullFlavor => [None..0]
+             ComponentOf.typeId.assigningAuthorityName => [None..0]
+             ComponentOf.typeId.displayable => [None..0]
+             ComponentOf.encompassingEncounter => [None..None]
+        } 
+
+        class FRCDACustodian{
+
+             Custodian.nullFlavor => [None..0]
+             Custodian.typeId.nullFlavor => [None..0]
+             Custodian.typeId.assigningAuthorityName => [None..0]
+             Custodian.typeId.displayable => [None..0]
+             Custodian.assignedCustodian => [None..None]
+        } 
+
+        class FRCDADataEnterer{
+
+             DataEnterer.nullFlavor => [None..0]
+             DataEnterer.typeId.nullFlavor => [None..0]
+             DataEnterer.typeId.assigningAuthorityName => [None..0]
+             DataEnterer.typeId.displayable => [None..0]
+             DataEnterer.contextControlCode => [None..0]
+             DataEnterer.time => [1..None]
+             DataEnterer.time.value => [None..None]
+             DataEnterer.assignedEntity => [None..None]
+        } 
+
+        class FRCDADocumentationOf{
+
+             DocumentationOf.nullFlavor => [None..0]
+             DocumentationOf.typeId.nullFlavor => [None..0]
+             DocumentationOf.typeId.assigningAuthorityName => [None..0]
+             DocumentationOf.typeId.displayable => [None..0]
+             DocumentationOf.serviceEvent => [None..None]
+        } 
+
+        class FRCDAEncompassingEncounter{
+
+             EncompassingEncounter.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.typeId.displayable => [None..0]
+             EncompassingEncounter.id => [None..None]
+             EncompassingEncounter.code => [None..None]
+             EncompassingEncounter.code.nullFlavor => [None..0]
+             EncompassingEncounter.code.codeSystem => [1..None]
+             EncompassingEncounter.code.codeSystemVersion => [None..0]
+             EncompassingEncounter.code.displayName => [1..None]
+             EncompassingEncounter.code.sdtcValueSet => [None..0]
+             EncompassingEncounter.code.sdtcValueSetVersion => [None..0]
+             EncompassingEncounter.effectiveTime => [None..None]
+             EncompassingEncounter.sdtcAdmissionReferralSourceCode => [None..0]
+             EncompassingEncounter.dischargeDispositionCode => [None..None]
+             EncompassingEncounter.responsibleParty => [None..None]
+             EncompassingEncounter.responsibleParty.nullFlavor => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.responsibleParty.typeId.displayable => [None..0]
+             EncompassingEncounter.encounterParticipant => [None..None]
+             EncompassingEncounter.location => [1..None]
+             EncompassingEncounter.location.nullFlavor => [None..0]
+             EncompassingEncounter.location.typeId.nullFlavor => [None..0]
+             EncompassingEncounter.location.typeId.assigningAuthorityName => [None..0]
+             EncompassingEncounter.location.typeId.displayable => [None..0]
+             EncompassingEncounter.location.typeCode => [None..0]
+             EncompassingEncounter.location.healthCareFacility => [None..None]
+        } 
+
+        class FRCDAEncounterParticipant{
+
+             EncounterParticipant.typeId.nullFlavor => [None..0]
+             EncounterParticipant.typeId.assigningAuthorityName => [None..0]
+             EncounterParticipant.typeId.displayable => [None..0]
+             EncounterParticipant.typeCode => [None..None]
+             EncounterParticipant.time => [None..None]
+             EncounterParticipant.assignedEntity => [1..None]
+        } 
+
+        class FRCDAHealthCareFacility{
+
+             HealthCareFacility.nullFlavor => [None..0]
+             HealthCareFacility.typeId.nullFlavor => [None..0]
+             HealthCareFacility.typeId.assigningAuthorityName => [None..0]
+             HealthCareFacility.typeId.displayable => [None..0]
+             HealthCareFacility.id => [None..0]
+             HealthCareFacility.sdtcIdentifiedBy => [None..0]
+             HealthCareFacility.code => [1..None]
+             HealthCareFacility.code.nullFlavor => [None..0]
+             HealthCareFacility.code.code => [1..None]
+             HealthCareFacility.code.codeSystem => [1..None]
+             HealthCareFacility.code.codeSystemVersion => [None..0]
+             HealthCareFacility.code.displayName => [1..None]
+             HealthCareFacility.code.sdtcValueSet => [None..0]
+             HealthCareFacility.code.sdtcValueSetVersion => [None..0]
+             HealthCareFacility.code.translation => [None..1]
+             HealthCareFacility.code.translation.nullFlavor => [None..0]
+             HealthCareFacility.code.translation.code => [1..None]
+             HealthCareFacility.code.translation.codeSystem => [1..None]
+             HealthCareFacility.code.translation.codeSystemVersion => [None..0]
+             HealthCareFacility.code.translation.displayName => [1..None]
+             HealthCareFacility.code.translation.sdtcValueSet => [None..0]
+             HealthCareFacility.code.translation.sdtcValueSetVersion => [None..0]
+             HealthCareFacility.location => [None..None]
+        } 
+
+        class FRCDAInFulfillmentOf{
+
+             InFulfillmentOf.typeId.nullFlavor => [None..0]
+             InFulfillmentOf.typeId.assigningAuthorityName => [None..0]
+             InFulfillmentOf.typeId.displayable => [None..0]
+             InFulfillmentOf.order => [None..None]
+        } 
+
+        class FRCDAInformant{
+
+             Informant.nullFlavor => [None..0]
+             Informant.typeId.nullFlavor => [None..0]
+             Informant.typeId.assigningAuthorityName => [None..0]
+             Informant.typeId.displayable => [None..0]
+             Informant.contextControlCode => [None..0]
+             Informant.assignedEntity => [None..None]
+             Informant.relatedEntity => [None..None]
+        } 
+
+        class FRCDAInformationRecipient{
+
+             InformationRecipient.nullFlavor => [None..0]
+             InformationRecipient.typeId.nullFlavor => [None..0]
+             InformationRecipient.typeId.assigningAuthorityName => [None..0]
+             InformationRecipient.typeId.displayable => [None..0]
+             InformationRecipient.intendedRecipient => [None..None]
+        } 
+
+        class FRCDAIntendedRecipient{
+
+             IntendedRecipient.typeId.nullFlavor => [None..0]
+             IntendedRecipient.typeId.assigningAuthorityName => [None..0]
+             IntendedRecipient.typeId.displayable => [None..0]
+             IntendedRecipient.id => [None..None]
+             IntendedRecipient.id.assigningAuthorityName => [None..0]
+             IntendedRecipient.id.displayable => [None..0]
+             IntendedRecipient.id.root => [1..None]
+             IntendedRecipient.id.extension => [1..None]
+             IntendedRecipient.addr => [None..None]
+             IntendedRecipient.telecom => [None..None]
+             IntendedRecipient.informationRecipient => [None..None]
+             IntendedRecipient.receivedOrganization => [None..None]
+             IntendedRecipient.receivedOrganization.id.assigningAuthorityName => [None..0]
+             IntendedRecipient.receivedOrganization.id.displayable => [None..0]
+             IntendedRecipient.receivedOrganization.id.root => [None..None]
+        } 
+
+        class FRCDALegalAuthenticator{
+
+             LegalAuthenticator.nullFlavor => [None..0]
+             LegalAuthenticator.typeId.nullFlavor => [None..0]
+             LegalAuthenticator.typeId.assigningAuthorityName => [None..0]
+             LegalAuthenticator.typeId.displayable => [None..0]
+             LegalAuthenticator.contextControlCode => [None..0]
+             LegalAuthenticator.time => [None..None]
+             LegalAuthenticator.time.value => [None..None]
+             LegalAuthenticator.signatureCode => [None..None]
+             LegalAuthenticator.signatureCode.sdtcValueSet => [None..0]
+             LegalAuthenticator.signatureCode.sdtcValueSetVersion => [None..0]
+             LegalAuthenticator.sdtcSignatureText => [None..0]
+             LegalAuthenticator.assignedEntity => [None..None]
+             LegalAuthenticator.assignedEntity.code => [None..None]
+        } 
+
+        class FRCDAName{
+
+             PN.nullFlavor => [None..0]
+             PN.use => [None..0]
+             PN.item.delimiter => [None..0]
+             PN.item.family => [None..None]
+             PN.item.given => [None..1]
+             PN.item.prefix => [None..1]
+             PN.item.suffix => [None..1]
+             PN.item.xmlText => [None..0]
+             PN.validTime => [None..0]
+        } 
+
+        class FRCDAOrder{
+
+             Order.nullFlavor => [None..0]
+             Order.typeId.nullFlavor => [None..0]
+             Order.typeId.assigningAuthorityName => [None..0]
+             Order.typeId.displayable => [None..0]
+             Order.id => [None..None]
+             Order.id.nullFlavor => [None..0]
+             Order.id.assigningAuthorityName => [None..0]
+             Order.id.displayable => [None..0]
+             Order.id.root => [1..None]
+             Order.id.extension => [None..None]
+             Order.code => [None..0]
+             Order.priorityCode => [None..0]
+        } 
+
+        class FRCDAParentDocument{
+
+             ParentDocument.nullFlavor => [None..0]
+             ParentDocument.id => [None..1]
+             ParentDocument.id.nullFlavor => [None..0]
+             ParentDocument.id.assigningAuthorityName => [None..0]
+             ParentDocument.id.displayable => [None..0]
+             ParentDocument.id.root => [1..None]
+             ParentDocument.id.extension => [None..None]
+        } 
+
+        class FRCDAParticipant{
+
+             Participant1.typeId.nullFlavor => [None..0]
+             Participant1.typeId.assigningAuthorityName => [None..0]
+             Participant1.typeId.displayable => [None..0]
+             Participant1.typeCode => [None..None]
+             Participant1.contextControlCode => [None..0]
+             Participant1.functionCode => [None..None]
+             Participant1.functionCode.nullFlavor => [None..0]
+             Participant1.functionCode.code => [1..None]
+             Participant1.functionCode.codeSystem => [1..None]
+             Participant1.functionCode.codeSystemVersion => [None..0]
+             Participant1.functionCode.sdtcValueSet => [None..0]
+             Participant1.functionCode.sdtcValueSetVersion => [None..0]
+             Participant1.functionCode.originalText => [None..None]
+             Participant1.time => [1..None]
+             Participant1.time.operator => [None..0]
+             Participant1.time.low => [None..None]
+             Participant1.time.center => [None..0]
+             Participant1.time.width => [None..0]
+             Participant1.time.high => [None..None]
+             Participant1.associatedEntity => [None..None]
+        } 
+
+        class FRCDAPatientRole{
+
+             PatientRole.nullFlavor => [None..0]
+             PatientRole.realmCode => [None..0]
+             PatientRole.typeId => [None..0]
+             PatientRole.templateId => [None..0]
+             PatientRole.id => [None..None]
+             PatientRole.id.nullFlavor => [None..0]
+             PatientRole.id.assigningAuthorityName => [None..0]
+             PatientRole.id.displayable => [None..0]
+             PatientRole.id.root => [1..None]
+             PatientRole.id.extension => [None..None]
+             PatientRole.sdtcIdentifiedBy => [None..0]
+             PatientRole.addr => [None..None]
+             PatientRole.telecom => [None..None]
+             PatientRole.patient => [1..None]
+             PatientRole.providerOrganization => [None..0]
+        } 
+
+        class FRCDAPatient{
+
+             Patient.nullFlavor => [None..0]
+             Patient.typeId.nullFlavor => [None..0]
+             Patient.typeId.assigningAuthorityName => [None..0]
+             Patient.typeId.displayable => [None..0]
+             Patient.determinerCode => [None..0]
+             Patient.name => [1..1]
+             Patient.name.nullFlavor => [None..0]
+             Patient.administrativeGenderCode => [1..None]
+             Patient.birthTime => [1..None]
+             Patient.sdtcDeceasedInd => [None..None]
+             Patient.sdtcDeceasedTime => [None..None]
+             Patient.sdtcMultipleBirthInd => [None..None]
+             Patient.sdtcMultipleBirthOrderNumber => [None..None]
+             Patient.maritalStatusCode => [None..0]
+             Patient.religiousAffiliationCode => [None..0]
+             Patient.raceCode => [None..0]
+             Patient.sdtcRaceCode => [None..0]
+             Patient.ethnicGroupCode => [None..0]
+             Patient.sdtcEthnicGroupCode => [None..0]
+             Patient.guardian => [None..None]
+             Patient.birthplace => [None..None]
+             Patient.languageCommunication => [None..0]
+        } 
+
+        class FRCDAPerformer{
+
+             Performer1.typeId.nullFlavor => [None..0]
+             Performer1.typeId.assigningAuthorityName => [None..0]
+             Performer1.typeId.displayable => [None..0]
+             Performer1.typeCode => [None..None]
+             Performer1.functionCode => [None..None]
+             Performer1.time => [None..None]
+             Performer1.assignedEntity => [None..None]
+             Performer1.assignedEntity.code => [None..None]
+        } 
+
+        class FRCDARecordTarget{
+
+             RecordTarget.nullFlavor => [None..0]
+             RecordTarget.typeId.nullFlavor => [None..0]
+             RecordTarget.typeId.assigningAuthorityName => [None..0]
+             RecordTarget.typeId.displayable => [None..0]
+             RecordTarget.contextControlCode => [None..0]
+             RecordTarget.patientRole => [None..None]
+        } 
+
+        class FRCDARelatedDocument{
+
+             RelatedDocument.typeId.nullFlavor => [None..0]
+             RelatedDocument.typeId.assigningAuthorityName => [None..0]
+             RelatedDocument.typeId.displayable => [None..0]
+             RelatedDocument.typeCode => [None..None]
+             RelatedDocument.parentDocument => [None..None]
+        } 
+
+        class FRCDARelatedEntity{
+
+             RelatedEntity.nullFlavor => [None..0]
+             RelatedEntity.typeId.nullFlavor => [None..0]
+             RelatedEntity.typeId.assigningAuthorityName => [None..0]
+             RelatedEntity.typeId.displayable => [None..0]
+             RelatedEntity.classCode => [None..None]
+             RelatedEntity.code => [None..None]
+             RelatedEntity.code.nullFlavor => [None..0]
+             RelatedEntity.code.code => [1..None]
+             RelatedEntity.code.codeSystem => [1..None]
+             RelatedEntity.code.codeSystemVersion => [None..0]
+             RelatedEntity.code.displayName => [1..None]
+             RelatedEntity.code.sdtcValueSet => [None..0]
+             RelatedEntity.code.sdtcValueSetVersion => [None..0]
+             RelatedEntity.addr => [None..None]
+             RelatedEntity.telecom => [1..None]
+             RelatedEntity.relatedPerson => [1..None]
+        } 
+
+        class FRCDARepresentedCustodianOrganization{
+
+             CustodianOrganization.typeId.nullFlavor => [None..0]
+             CustodianOrganization.typeId.assigningAuthorityName => [None..0]
+             CustodianOrganization.typeId.displayable => [None..0]
+             CustodianOrganization.determinerCode => [None..0]
+             CustodianOrganization.id => [None..1]
+             CustodianOrganization.id.root => [None..None]
+             CustodianOrganization.id.extension => [None..None]
+             CustodianOrganization.name => [None..None]
+             CustodianOrganization.telecom => [None..None]
+             CustodianOrganization.sdtcTelecom => [None..0]
+             CustodianOrganization.addr => [None..None]
+        } 
+
+        class FRCDARepresentedOrganization{
+
+             Organization.typeId.nullFlavor => [None..0]
+             Organization.typeId.assigningAuthorityName => [None..0]
+             Organization.typeId.displayable => [None..0]
+             Organization.determinerCode => [None..0]
+             Organization.id => [None..None]
+             Organization.name => [None..None]
+             Organization.telecom => [None..None]
+             Organization.addr => [None..None]
+             Organization.standardIndustryClassCode => [None..None]
+             Organization.standardIndustryClassCode.nullFlavor => [None..0]
+             Organization.standardIndustryClassCode.code => [None..None]
+        } 
+
+        class FRCDAServiceEvent{
+
+             ServiceEvent.nullFlavor => [None..0]
+             ServiceEvent.typeId.nullFlavor => [None..0]
+             ServiceEvent.typeId.assigningAuthorityName => [None..0]
+             ServiceEvent.typeId.displayable => [None..0]
+             ServiceEvent.id => [None..None]
+             ServiceEvent.code => [None..None]
+             ServiceEvent.code.nullFlavor => [None..0]
+             ServiceEvent.code.code => [1..None]
+             ServiceEvent.code.codeSystem => [1..None]
+             ServiceEvent.code.codeSystemVersion => [None..0]
+             ServiceEvent.code.displayName => [1..None]
+             ServiceEvent.code.sdtcValueSet => [None..0]
+             ServiceEvent.code.sdtcValueSetVersion => [None..0]
+             ServiceEvent.code.translation => [None..None]
+             ServiceEvent.code.translation.nullFlavor => [None..0]
+             ServiceEvent.code.translation.codeSystemVersion => [None..0]
+             ServiceEvent.code.translation.sdtcValueSet => [None..0]
+             ServiceEvent.code.translation.sdtcValueSetVersion => [None..0]
+             ServiceEvent.code.translation.qualifier => [None..None]
+             ServiceEvent.effectiveTime => [None..None]
+             ServiceEvent.effectiveTime.nullFlavor => [None..0]
+             ServiceEvent.effectiveTime.operator => [None..0]
+             ServiceEvent.effectiveTime.low => [1..None]
+             ServiceEvent.effectiveTime.center => [None..0]
+             ServiceEvent.effectiveTime.width => [None..0]
+             ServiceEvent.effectiveTime.high => [None..None]
+             ServiceEvent.performer => [None..1]
+             ServiceEvent.performer.nullFlavor => [None..0]
+             ServiceEvent.performer.typeCode => [None..None]
         } 
 
         class FrCompositionDocument{
@@ -822,581 +690,6 @@ package IG #DDDDDD{
              Composition.section => [None..None]
         } 
 
-        class FrAssignedAuthor{
-
-             AssignedAuthor => [None..None]
-             AssignedAuthor.nullFlavor => [None..0]
-             AssignedAuthor.typeId.nullFlavor => [None..0]
-             AssignedAuthor.typeId.assigningAuthorityName => [None..0]
-             AssignedAuthor.typeId.displayable => [None..0]
-             AssignedAuthor.id => [None..None]
-             AssignedAuthor.id.nullFlavor => [None..0]
-             AssignedAuthor.id.assigningAuthorityName => [None..0]
-             AssignedAuthor.id.displayable => [None..0]
-             AssignedAuthor.id.root => [1..None]
-             AssignedAuthor.id.extension => [1..None]
-             AssignedAuthor.sdtcIdentifiedBy => [None..0]
-             AssignedAuthor.code => [None..None]
-             AssignedAuthor.addr => [None..None]
-             AssignedAuthor.telecom => [None..None]
-             AssignedAuthor.assignedPerson => [None..None]
-             AssignedAuthor.assignedAuthoringDevice => [None..None]
-             AssignedAuthor.representedOrganization => [None..None]
-        } 
-
-        class FrAssignedCustodian{
-
-             AssignedCustodian => [None..None]
-             AssignedCustodian.typeId.nullFlavor => [None..0]
-             AssignedCustodian.typeId.assigningAuthorityName => [None..0]
-             AssignedCustodian.typeId.displayable => [None..0]
-             AssignedCustodian.representedCustodianOrganization => [None..None]
-        } 
-
-        class FrAssignedEntity{
-
-             AssignedEntity => [None..None]
-             AssignedEntity.nullFlavor => [None..0]
-             AssignedEntity.typeId.nullFlavor => [None..0]
-             AssignedEntity.typeId.assigningAuthorityName => [None..0]
-             AssignedEntity.typeId.displayable => [None..0]
-             AssignedEntity.id => [None..1]
-             AssignedEntity.id.nullFlavor => [None..0]
-             AssignedEntity.id.assigningAuthorityName => [None..0]
-             AssignedEntity.id.displayable => [None..0]
-             AssignedEntity.id.root => [1..None]
-             AssignedEntity.id.extension => [1..None]
-             AssignedEntity.sdtcIdentifiedBy => [None..0]
-             AssignedEntity.code => [None..None]
-             AssignedEntity.code.nullFlavor => [None..0]
-             AssignedEntity.code.codeSystemVersion => [None..0]
-             AssignedEntity.code.sdtcValueSet => [None..0]
-             AssignedEntity.code.sdtcValueSetVersion => [None..0]
-             AssignedEntity.addr => [None..None]
-             AssignedEntity.telecom => [None..None]
-             AssignedEntity.assignedPerson => [None..None]
-             AssignedEntity.representedOrganization => [None..None]
-             AssignedEntity.sdtcPatient => [None..0]
-        } 
-
-        class FrAssociatedEntity{
-
-             AssociatedEntity => [None..None]
-             AssociatedEntity.nullFlavor => [None..0]
-             AssociatedEntity.typeId.nullFlavor => [None..0]
-             AssociatedEntity.typeId.assigningAuthorityName => [None..0]
-             AssociatedEntity.typeId.displayable => [None..0]
-             AssociatedEntity.classCode => [None..None]
-             AssociatedEntity.id => [None..None]
-             AssociatedEntity.id.root => [None..None]
-             AssociatedEntity.id.extension => [None..None]
-             AssociatedEntity.sdtcIdentifiedBy => [None..0]
-             AssociatedEntity.code => [None..None]
-             AssociatedEntity.addr => [None..None]
-             AssociatedEntity.telecom => [None..None]
-             AssociatedEntity.associatedPerson => [None..None]
-             AssociatedEntity.scopingOrganization => [None..None]
-        } 
-
-        class FrAuthenticator{
-
-             Authenticator => [None..None]
-             Authenticator.nullFlavor => [None..0]
-             Authenticator.typeId.nullFlavor => [None..0]
-             Authenticator.typeId.assigningAuthorityName => [None..0]
-             Authenticator.typeId.displayable => [None..0]
-             Authenticator.time => [None..None]
-             Authenticator.time.value => [None..None]
-             Authenticator.signatureCode => [None..None]
-             Authenticator.signatureCode.sdtcValueSet => [None..0]
-             Authenticator.signatureCode.sdtcValueSetVersion => [None..0]
-             Authenticator.sdtcSignatureText => [None..0]
-             Authenticator.assignedEntity => [None..None]
-        } 
-
-        class FrAuthor{
-
-             Author => [None..None]
-             Author.nullFlavor => [None..0]
-             Author.typeId.nullFlavor => [None..0]
-             Author.typeId.assigningAuthorityName => [None..0]
-             Author.typeId.displayable => [None..0]
-             Author.functionCode => [None..None]
-             Author.functionCode.nullFlavor => [None..0]
-             Author.functionCode.code => [1..None]
-             Author.functionCode.codeSystem => [1..None]
-             Author.functionCode.codeSystemVersion => [None..0]
-             Author.functionCode.sdtcValueSet => [None..0]
-             Author.functionCode.sdtcValueSetVersion => [None..0]
-             Author.functionCode.originalText => [None..None]
-             Author.time => [None..None]
-             Author.time.value => [1..None]
-             Author.assignedAuthor => [None..None]
-        } 
-
-        class FrAuthoringDevice{
-
-             AuthoringDevice.typeId.nullFlavor => [None..0]
-             AuthoringDevice.typeId.assigningAuthorityName => [None..0]
-             AuthoringDevice.typeId.displayable => [None..0]
-             AuthoringDevice.determinerCode => [None..0]
-             AuthoringDevice.manufacturerModelName => [1..None]
-             AuthoringDevice.softwareName => [1..None]
-        } 
-
-        class FrAuthorization{
-
-             Authorization => [None..None]
-             Authorization.typeId.nullFlavor => [None..0]
-             Authorization.typeId.assigningAuthorityName => [None..0]
-             Authorization.typeId.displayable => [None..0]
-             Authorization.consent => [None..None]
-             Authorization.consent.id => [None..None]
-             Authorization.consent.code => [1..None]
-             Authorization.consent.statusCode.code => [None..None]
-             Authorization.consent.statusCode.sdtcValueSet => [None..0]
-             Authorization.consent.statusCode.sdtcValueSetVersion => [None..0]
-        } 
-
-        class FrClinicalDocument{
-
-             ClinicalDocument => [None..None]
-             ClinicalDocument.realmCode => [1..1]
-             ClinicalDocument.typeId => [1..None]
-             ClinicalDocument.templateId => [3..None]
-             ClinicalDocument.id => [None..None]
-             ClinicalDocument.code => [None..None]
-             ClinicalDocument.title => [1..None]
-             ClinicalDocument.effectiveTime => [None..None]
-             ClinicalDocument.confidentialityCode => [None..None]
-             ClinicalDocument.languageCode => [1..None]
-             ClinicalDocument.setId => [1..None]
-             ClinicalDocument.versionNumber => [1..None]
-             ClinicalDocument.copyTime => [None..0]
-             ClinicalDocument.recordTarget => [None..1]
-             ClinicalDocument.author => [None..None]
-             ClinicalDocument.dataEnterer => [None..None]
-             ClinicalDocument.informant => [None..None]
-             ClinicalDocument.custodian => [None..None]
-             ClinicalDocument.informationRecipient => [None..None]
-             ClinicalDocument.legalAuthenticator => [1..None]
-             ClinicalDocument.authenticator => [None..None]
-             ClinicalDocument.participant => [None..None]
-             ClinicalDocument.inFulfillmentOf => [None..None]
-             ClinicalDocument.documentationOf => [1..None]
-             ClinicalDocument.relatedDocument => [None..1]
-             ClinicalDocument.authorization => [None..None]
-             ClinicalDocument.componentOf => [1..None]
-        } 
-
-        class FrComponentOf{
-
-             ComponentOf => [None..None]
-             ComponentOf.nullFlavor => [None..0]
-             ComponentOf.typeId.nullFlavor => [None..0]
-             ComponentOf.typeId.assigningAuthorityName => [None..0]
-             ComponentOf.typeId.displayable => [None..0]
-             ComponentOf.encompassingEncounter => [None..None]
-        } 
-
-        class FrCustodian{
-
-             Custodian.nullFlavor => [None..0]
-             Custodian.typeId.nullFlavor => [None..0]
-             Custodian.typeId.assigningAuthorityName => [None..0]
-             Custodian.typeId.displayable => [None..0]
-             Custodian.assignedCustodian => [None..None]
-        } 
-
-        class FrDataEnterer{
-
-             DataEnterer.nullFlavor => [None..0]
-             DataEnterer.typeId.nullFlavor => [None..0]
-             DataEnterer.typeId.assigningAuthorityName => [None..0]
-             DataEnterer.typeId.displayable => [None..0]
-             DataEnterer.contextControlCode => [None..0]
-             DataEnterer.time => [1..None]
-             DataEnterer.time.value => [None..None]
-             DataEnterer.assignedEntity => [None..None]
-        } 
-
-        class FrDocumentationOf{
-
-             DocumentationOf.nullFlavor => [None..0]
-             DocumentationOf.typeId.nullFlavor => [None..0]
-             DocumentationOf.typeId.assigningAuthorityName => [None..0]
-             DocumentationOf.typeId.displayable => [None..0]
-             DocumentationOf.serviceEvent => [None..None]
-        } 
-
-        class FrEncompassingEncounter{
-
-             EncompassingEncounter.typeId.nullFlavor => [None..0]
-             EncompassingEncounter.typeId.assigningAuthorityName => [None..0]
-             EncompassingEncounter.typeId.displayable => [None..0]
-             EncompassingEncounter.id => [None..None]
-             EncompassingEncounter.code => [None..None]
-             EncompassingEncounter.code.nullFlavor => [None..0]
-             EncompassingEncounter.code.codeSystem => [1..None]
-             EncompassingEncounter.code.codeSystemVersion => [None..0]
-             EncompassingEncounter.code.displayName => [1..None]
-             EncompassingEncounter.code.sdtcValueSet => [None..0]
-             EncompassingEncounter.code.sdtcValueSetVersion => [None..0]
-             EncompassingEncounter.effectiveTime => [None..None]
-             EncompassingEncounter.sdtcAdmissionReferralSourceCode => [None..0]
-             EncompassingEncounter.dischargeDispositionCode => [None..None]
-             EncompassingEncounter.responsibleParty => [None..None]
-             EncompassingEncounter.responsibleParty.nullFlavor => [None..0]
-             EncompassingEncounter.responsibleParty.typeId.nullFlavor => [None..0]
-             EncompassingEncounter.responsibleParty.typeId.assigningAuthorityName => [None..0]
-             EncompassingEncounter.responsibleParty.typeId.displayable => [None..0]
-             EncompassingEncounter.encounterParticipant => [None..None]
-             EncompassingEncounter.location => [1..None]
-             EncompassingEncounter.location.nullFlavor => [None..0]
-             EncompassingEncounter.location.typeId.nullFlavor => [None..0]
-             EncompassingEncounter.location.typeId.assigningAuthorityName => [None..0]
-             EncompassingEncounter.location.typeId.displayable => [None..0]
-             EncompassingEncounter.location.typeCode => [None..0]
-             EncompassingEncounter.location.healthCareFacility => [None..None]
-        } 
-
-        class FrEncounterParticipant{
-
-             EncounterParticipant.typeId.nullFlavor => [None..0]
-             EncounterParticipant.typeId.assigningAuthorityName => [None..0]
-             EncounterParticipant.typeId.displayable => [None..0]
-             EncounterParticipant.typeCode => [None..None]
-             EncounterParticipant.time => [None..None]
-             EncounterParticipant.assignedEntity => [1..None]
-        } 
-
-        class FrHealthCareFacility{
-
-             HealthCareFacility.nullFlavor => [None..0]
-             HealthCareFacility.typeId.nullFlavor => [None..0]
-             HealthCareFacility.typeId.assigningAuthorityName => [None..0]
-             HealthCareFacility.typeId.displayable => [None..0]
-             HealthCareFacility.id => [None..0]
-             HealthCareFacility.sdtcIdentifiedBy => [None..0]
-             HealthCareFacility.code => [1..None]
-             HealthCareFacility.code.nullFlavor => [None..0]
-             HealthCareFacility.code.code => [1..None]
-             HealthCareFacility.code.codeSystem => [1..None]
-             HealthCareFacility.code.codeSystemVersion => [None..0]
-             HealthCareFacility.code.displayName => [1..None]
-             HealthCareFacility.code.sdtcValueSet => [None..0]
-             HealthCareFacility.code.sdtcValueSetVersion => [None..0]
-             HealthCareFacility.code.translation => [None..1]
-             HealthCareFacility.code.translation.nullFlavor => [None..0]
-             HealthCareFacility.code.translation.code => [1..None]
-             HealthCareFacility.code.translation.codeSystem => [1..None]
-             HealthCareFacility.code.translation.codeSystemVersion => [None..0]
-             HealthCareFacility.code.translation.displayName => [1..None]
-             HealthCareFacility.code.translation.sdtcValueSet => [None..0]
-             HealthCareFacility.code.translation.sdtcValueSetVersion => [None..0]
-             HealthCareFacility.location => [None..None]
-        } 
-
-        class FrInFulfillmentOf{
-
-             InFulfillmentOf.typeId.nullFlavor => [None..0]
-             InFulfillmentOf.typeId.assigningAuthorityName => [None..0]
-             InFulfillmentOf.typeId.displayable => [None..0]
-             InFulfillmentOf.order => [None..None]
-        } 
-
-        class FrInformant{
-
-             Informant.nullFlavor => [None..0]
-             Informant.typeId.nullFlavor => [None..0]
-             Informant.typeId.assigningAuthorityName => [None..0]
-             Informant.typeId.displayable => [None..0]
-             Informant.contextControlCode => [None..0]
-             Informant.assignedEntity => [None..None]
-             Informant.relatedEntity => [None..None]
-        } 
-
-        class FrInformationRecipient{
-
-             InformationRecipient.nullFlavor => [None..0]
-             InformationRecipient.typeId.nullFlavor => [None..0]
-             InformationRecipient.typeId.assigningAuthorityName => [None..0]
-             InformationRecipient.typeId.displayable => [None..0]
-             InformationRecipient.intendedRecipient => [None..None]
-        } 
-
-        class FrIntendedRecipient{
-
-             IntendedRecipient.typeId.nullFlavor => [None..0]
-             IntendedRecipient.typeId.assigningAuthorityName => [None..0]
-             IntendedRecipient.typeId.displayable => [None..0]
-             IntendedRecipient.id => [None..None]
-             IntendedRecipient.id.assigningAuthorityName => [None..0]
-             IntendedRecipient.id.displayable => [None..0]
-             IntendedRecipient.id.root => [1..None]
-             IntendedRecipient.id.extension => [1..None]
-             IntendedRecipient.addr => [None..None]
-             IntendedRecipient.telecom => [None..None]
-             IntendedRecipient.informationRecipient => [None..None]
-             IntendedRecipient.receivedOrganization => [None..None]
-             IntendedRecipient.receivedOrganization.id.assigningAuthorityName => [None..0]
-             IntendedRecipient.receivedOrganization.id.displayable => [None..0]
-             IntendedRecipient.receivedOrganization.id.root => [None..None]
-        } 
-
-        class FrLegalAuthenticator{
-
-             LegalAuthenticator.nullFlavor => [None..0]
-             LegalAuthenticator.typeId.nullFlavor => [None..0]
-             LegalAuthenticator.typeId.assigningAuthorityName => [None..0]
-             LegalAuthenticator.typeId.displayable => [None..0]
-             LegalAuthenticator.contextControlCode => [None..0]
-             LegalAuthenticator.time => [None..None]
-             LegalAuthenticator.time.value => [None..None]
-             LegalAuthenticator.signatureCode => [None..None]
-             LegalAuthenticator.signatureCode.sdtcValueSet => [None..0]
-             LegalAuthenticator.signatureCode.sdtcValueSetVersion => [None..0]
-             LegalAuthenticator.sdtcSignatureText => [None..0]
-             LegalAuthenticator.assignedEntity => [None..None]
-             LegalAuthenticator.assignedEntity.code => [None..None]
-        } 
-
-        class FrName{
-
-             PN.nullFlavor => [None..0]
-             PN.use => [None..0]
-             PN.item.delimiter => [None..0]
-             PN.item.family => [None..None]
-             PN.item.given => [None..1]
-             PN.item.prefix => [None..1]
-             PN.item.suffix => [None..1]
-             PN.item.xmlText => [None..0]
-             PN.validTime => [None..0]
-        } 
-
-        class FrOrder{
-
-             Order.nullFlavor => [None..0]
-             Order.typeId.nullFlavor => [None..0]
-             Order.typeId.assigningAuthorityName => [None..0]
-             Order.typeId.displayable => [None..0]
-             Order.id => [None..None]
-             Order.id.nullFlavor => [None..0]
-             Order.id.assigningAuthorityName => [None..0]
-             Order.id.displayable => [None..0]
-             Order.id.root => [1..None]
-             Order.id.extension => [None..None]
-             Order.code => [None..0]
-             Order.priorityCode => [None..0]
-        } 
-
-        class FrParentDocument{
-
-             ParentDocument.nullFlavor => [None..0]
-             ParentDocument.id => [None..1]
-             ParentDocument.id.nullFlavor => [None..0]
-             ParentDocument.id.assigningAuthorityName => [None..0]
-             ParentDocument.id.displayable => [None..0]
-             ParentDocument.id.root => [1..None]
-             ParentDocument.id.extension => [None..None]
-        } 
-
-        class FrParticipant{
-
-             Participant1.typeId.nullFlavor => [None..0]
-             Participant1.typeId.assigningAuthorityName => [None..0]
-             Participant1.typeId.displayable => [None..0]
-             Participant1.typeCode => [None..None]
-             Participant1.contextControlCode => [None..0]
-             Participant1.functionCode => [None..None]
-             Participant1.functionCode.nullFlavor => [None..0]
-             Participant1.functionCode.code => [1..None]
-             Participant1.functionCode.codeSystem => [1..None]
-             Participant1.functionCode.codeSystemVersion => [None..0]
-             Participant1.functionCode.sdtcValueSet => [None..0]
-             Participant1.functionCode.sdtcValueSetVersion => [None..0]
-             Participant1.functionCode.originalText => [None..None]
-             Participant1.time => [1..None]
-             Participant1.time.operator => [None..0]
-             Participant1.time.low => [None..None]
-             Participant1.time.center => [None..0]
-             Participant1.time.width => [None..0]
-             Participant1.time.high => [None..None]
-             Participant1.associatedEntity => [None..None]
-        } 
-
-        class FrPatientRole{
-
-             PatientRole.nullFlavor => [None..0]
-             PatientRole.realmCode => [None..0]
-             PatientRole.typeId => [None..0]
-             PatientRole.templateId => [None..0]
-             PatientRole.id => [None..None]
-             PatientRole.id.nullFlavor => [None..0]
-             PatientRole.id.assigningAuthorityName => [None..0]
-             PatientRole.id.displayable => [None..0]
-             PatientRole.id.root => [1..None]
-             PatientRole.id.extension => [None..None]
-             PatientRole.sdtcIdentifiedBy => [None..0]
-             PatientRole.addr => [None..None]
-             PatientRole.telecom => [None..None]
-             PatientRole.patient => [1..None]
-             PatientRole.providerOrganization => [None..0]
-        } 
-
-        class FrPatient{
-
-             Patient.nullFlavor => [None..0]
-             Patient.typeId.nullFlavor => [None..0]
-             Patient.typeId.assigningAuthorityName => [None..0]
-             Patient.typeId.displayable => [None..0]
-             Patient.determinerCode => [None..0]
-             Patient.name => [1..1]
-             Patient.name.nullFlavor => [None..0]
-             Patient.administrativeGenderCode => [1..None]
-             Patient.birthTime => [1..None]
-             Patient.sdtcDeceasedInd => [None..None]
-             Patient.sdtcDeceasedTime => [None..None]
-             Patient.sdtcMultipleBirthInd => [None..None]
-             Patient.sdtcMultipleBirthOrderNumber => [None..None]
-             Patient.maritalStatusCode => [None..0]
-             Patient.religiousAffiliationCode => [None..0]
-             Patient.raceCode => [None..0]
-             Patient.sdtcRaceCode => [None..0]
-             Patient.ethnicGroupCode => [None..0]
-             Patient.sdtcEthnicGroupCode => [None..0]
-             Patient.guardian => [None..None]
-             Patient.birthplace => [None..None]
-             Patient.languageCommunication => [None..0]
-        } 
-
-        class FrPerformer{
-
-             Performer1.typeId.nullFlavor => [None..0]
-             Performer1.typeId.assigningAuthorityName => [None..0]
-             Performer1.typeId.displayable => [None..0]
-             Performer1.typeCode => [None..None]
-             Performer1.functionCode => [None..None]
-             Performer1.time => [None..None]
-             Performer1.assignedEntity => [None..None]
-             Performer1.assignedEntity.code => [None..None]
-        } 
-
-        class FrAssignedPerson{
-
-             Person => [None..None]
-             Person.nullFlavor => [None..0]
-             Person.typeId.nullFlavor => [None..0]
-             Person.typeId.assigningAuthorityName => [None..0]
-             Person.typeId.displayable => [None..0]
-             Person.determinerCode => [None..0]
-             Person.name => [1..1]
-             Person.sdtcDesc => [None..0]
-             Person.sdtcAsPatientRelationship => [None..0]
-        } 
-
-        class FrRecordTarget{
-
-             RecordTarget.nullFlavor => [None..0]
-             RecordTarget.typeId.nullFlavor => [None..0]
-             RecordTarget.typeId.assigningAuthorityName => [None..0]
-             RecordTarget.typeId.displayable => [None..0]
-             RecordTarget.contextControlCode => [None..0]
-             RecordTarget.patientRole => [None..None]
-        } 
-
-        class FrRelatedDocument{
-
-             RelatedDocument.typeId.nullFlavor => [None..0]
-             RelatedDocument.typeId.assigningAuthorityName => [None..0]
-             RelatedDocument.typeId.displayable => [None..0]
-             RelatedDocument.typeCode => [None..None]
-             RelatedDocument.parentDocument => [None..None]
-        } 
-
-        class FrRelatedEntity{
-
-             RelatedEntity.nullFlavor => [None..0]
-             RelatedEntity.typeId.nullFlavor => [None..0]
-             RelatedEntity.typeId.assigningAuthorityName => [None..0]
-             RelatedEntity.typeId.displayable => [None..0]
-             RelatedEntity.classCode => [None..None]
-             RelatedEntity.code => [None..None]
-             RelatedEntity.code.nullFlavor => [None..0]
-             RelatedEntity.code.code => [1..None]
-             RelatedEntity.code.codeSystem => [1..None]
-             RelatedEntity.code.codeSystemVersion => [None..0]
-             RelatedEntity.code.displayName => [1..None]
-             RelatedEntity.code.sdtcValueSet => [None..0]
-             RelatedEntity.code.sdtcValueSetVersion => [None..0]
-             RelatedEntity.addr => [None..None]
-             RelatedEntity.telecom => [1..None]
-             RelatedEntity.relatedPerson => [1..None]
-        } 
-
-        class FrRepresentedCustodianOrganization{
-
-             CustodianOrganization.typeId.nullFlavor => [None..0]
-             CustodianOrganization.typeId.assigningAuthorityName => [None..0]
-             CustodianOrganization.typeId.displayable => [None..0]
-             CustodianOrganization.determinerCode => [None..0]
-             CustodianOrganization.id => [None..1]
-             CustodianOrganization.id.root => [None..None]
-             CustodianOrganization.id.extension => [None..None]
-             CustodianOrganization.name => [None..None]
-             CustodianOrganization.telecom => [None..None]
-             CustodianOrganization.sdtcTelecom => [None..0]
-             CustodianOrganization.addr => [None..None]
-        } 
-
-        class FrRepresentedOrganization{
-
-             Organization.typeId.nullFlavor => [None..0]
-             Organization.typeId.assigningAuthorityName => [None..0]
-             Organization.typeId.displayable => [None..0]
-             Organization.determinerCode => [None..0]
-             Organization.id => [None..None]
-             Organization.name => [None..None]
-             Organization.telecom => [None..None]
-             Organization.addr => [None..None]
-             Organization.standardIndustryClassCode => [None..None]
-             Organization.standardIndustryClassCode.nullFlavor => [None..0]
-             Organization.standardIndustryClassCode.code => [None..None]
-        } 
-
-        class FrServiceEvent{
-
-             ServiceEvent.nullFlavor => [None..0]
-             ServiceEvent.typeId.nullFlavor => [None..0]
-             ServiceEvent.typeId.assigningAuthorityName => [None..0]
-             ServiceEvent.typeId.displayable => [None..0]
-             ServiceEvent.id => [None..None]
-             ServiceEvent.code => [None..None]
-             ServiceEvent.code.nullFlavor => [None..0]
-             ServiceEvent.code.code => [1..None]
-             ServiceEvent.code.codeSystem => [1..None]
-             ServiceEvent.code.codeSystemVersion => [None..0]
-             ServiceEvent.code.displayName => [1..None]
-             ServiceEvent.code.sdtcValueSet => [None..0]
-             ServiceEvent.code.sdtcValueSetVersion => [None..0]
-             ServiceEvent.code.translation => [None..None]
-             ServiceEvent.code.translation.nullFlavor => [None..0]
-             ServiceEvent.code.translation.codeSystemVersion => [None..0]
-             ServiceEvent.code.translation.sdtcValueSet => [None..0]
-             ServiceEvent.code.translation.sdtcValueSetVersion => [None..0]
-             ServiceEvent.code.translation.qualifier => [None..None]
-             ServiceEvent.effectiveTime => [None..None]
-             ServiceEvent.effectiveTime.nullFlavor => [None..0]
-             ServiceEvent.effectiveTime.operator => [None..0]
-             ServiceEvent.effectiveTime.low => [1..None]
-             ServiceEvent.effectiveTime.center => [None..0]
-             ServiceEvent.effectiveTime.width => [None..0]
-             ServiceEvent.effectiveTime.high => [None..None]
-             ServiceEvent.performer => [None..1]
-             ServiceEvent.performer.nullFlavor => [None..0]
-             ServiceEvent.performer.typeCode => [None..None]
-        } 
-
         class FrDeviceAuteurDocument{
 
              Device.identifier => [1..None]
@@ -1430,6 +723,713 @@ package IG #DDDDDD{
              HumanName.family => [1..None]
              HumanName.prefix => [None..None]
              HumanName.suffix => [None..None]
+        } 
+
+        class FRLMActeImagerie{
+
+             fr-lm-acte-imagerie => [None..None]
+             fr-lm-acte-imagerie.titreSection => [1..None]
+             fr-lm-acte-imagerie.sousSection.complicationsActe => [0..1]
+             fr-lm-acte-imagerie.sousSection.expositionsRadiations => [0..1]
+             fr-lm-acte-imagerie.sousSection.catalogueObjects => [1..1]
+             fr-lm-acte-imagerie.entree.techniqueImagerie => [1..1]
+             fr-lm-acte-imagerie.entree.administrationProduits => [0..*]
+        } 
+
+        class FRLMActe{
+
+             fr-lm-acte => [None..None]
+             fr-lm-acte.identifiant => [1..*]
+             fr-lm-acte.description => [1..1]
+             fr-lm-acte.code => [1..1]
+             fr-lm-acte.titre => [0..1]
+             fr-lm-acte.statut => [1..1]
+             fr-lm-acte.date => [0..1]
+             fr-lm-acte.priorite => [0..1]
+             fr-lm-acte.localisationAnatomique => [0..1]
+             fr-lm-acte.voieDAbord => [0..1]
+             fr-lm-acte.perfomer => [0..*]
+             fr-lm-acte.auteur => [0..*]
+             fr-lm-acte.informateur => [0..*]
+             fr-lm-acte.participant => [0..*]
+             fr-lm-acte.circonstances => [0..*]
+             fr-lm-acte.reason => [0..*]
+             fr-lm-acte.dispositifMedical => [0..*]
+             fr-lm-acte.difficulte => [0..1]
+             fr-lm-acte.scores => [0..*]
+        } 
+
+        class FRLMAddendum{
+
+             fr-lm-addendum => [None..None]
+             fr-lm-addendum.titreSection => [1..None]
+             fr-lm-addendum.sousSection => [None..0]
+             fr-lm-addendum.entree => [None..0]
+             fr-lm-addendum.auteur => [1..1]
+        } 
+
+        class FRLMAdministrationProduitDeSante{
+
+             fr-lm-administration-produit-de-sante => [None..None]
+             fr-lm-administration-produit-de-sante.identifiant => [1..1]
+             fr-lm-administration-produit-de-sante.description => [0..1]
+             fr-lm-administration-produit-de-sante.statut => [1..1]
+             fr-lm-administration-produit-de-sante.voieAdministration => [0..1]
+             fr-lm-administration-produit-de-sante.dose => [0..1]
+             fr-lm-administration-produit-de-sante.rythme => [0..1]
+             fr-lm-administration-produit-de-sante.medicament => [1..1]
+             fr-lm-administration-produit-de-sante.medicament.produit => [1..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.codeProduit => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.codeProduit.autreCodification => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.nomMarque => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.numeroLot => [0..1]
+        } 
+
+        class FRLMAuteur{
+
+             fr-lm-auteur => [1..None]
+             fr-lm-auteur.roleFonctionnel => [0..1]
+             fr-lm-auteur.horodatageParticipation => [1..1]
+             fr-lm-auteur.auteur[x] => [1..1]
+        } 
+
+        class FRLMAutorisationExposition{
+
+             fr-lm-autorisation-exposition => [None..None]
+             fr-lm-autorisation-exposition.code => [1..1]
+             fr-lm-autorisation-exposition.participant => [1..1]
+        } 
+
+        class FRLMCertitude{
+
+             fr-lm-certitude => [None..None]
+             fr-lm-certitude.identifiant => [1..1]
+             fr-lm-certitude.code => [1..1]
+             fr-lm-certitude.statut => [1..1]
+             fr-lm-certitude.date => [1..1]
+             fr-lm-certitude.descriptionNarrative => [1..1]
+             fr-lm-certitude.valeur => [1..1]
+        } 
+
+        class FRLMCommentaireER{
+
+             fr-lm-commentaire-er => [None..None]
+             fr-lm-commentaire-er.codeCommentaireER => [1..1]
+             fr-lm-commentaire-er.texteCommentaireER => [1..1]
+             fr-lm-commentaire-er.statutCommentaireER => [1..1]
+             fr-lm-commentaire-er.auteurCommentaireER => [0..1]
+        } 
+
+        class FRLMComparaisonExamensImagerie{
+
+             fr-lm-comparaison-examens-imagerie => [None..None]
+             fr-lm-comparaison-examens-imagerie.titreSection => [1..None]
+             fr-lm-comparaison-examens-imagerie.sousSection => [None..0]
+             fr-lm-comparaison-examens-imagerie.entree => [None..0]
+        } 
+
+        class FRLMComplicationsActe{
+
+             fr-lm-complications-acte => [None..None]
+             fr-lm-complications-acte.titreSection => [1..None]
+             fr-lm-complications-acte.sousSection => [None..0]
+             fr-lm-complications-acte.entree => [None..0]
+        } 
+
+        class FRLMConclusionExamenImagerie{
+
+             fr-lm-conclusion-examen-imagerie => [None..None]
+             fr-lm-conclusion-examen-imagerie.titreSection => [1..None]
+             fr-lm-conclusion-examen-imagerie.sousSection => [None..0]
+             fr-lm-conclusion-examen-imagerie.entree => [None..0]
+        } 
+
+        class FRLMConsentement{
+
+             fr-lm-consentement => [None..None]
+             fr-lm-consentement.identifiantConsentement => [0..*]
+             fr-lm-consentement.typeConsentement => [1..1]
+             fr-lm-consentement.statutConsentement => [1..1]
+        } 
+
+        class FRLMCorpsDocument{
+
+             fr-lm-corps-document => [None..None]
+             fr-lm-corps-document.acteImagerie => [0..*]
+             fr-lm-corps-document.addendum => [0..*]
+             fr-lm-corps-document.conclusions => [0..*]
+             fr-lm-corps-document.demandeExamenImagerie => [0..*]
+             fr-lm-corps-document.comparaisonExamensImagerie => [0..*]
+             fr-lm-corps-document.expositionRadiations => [0..*]
+             fr-lm-corps-document.informationsCliniques => [0..*]
+             fr-lm-corps-document.objectCatalog => [0..*]
+             fr-lm-corps-document.dispositifsMedicaux => [0..*]
+             fr-lm-corps-document.documentsAjoutes => [0..*]
+             fr-lm-corps-document.educationPatient => [0..*]
+             fr-lm-corps-document.resultatsExamensNonCode => [0..*]
+             fr-lm-corps-document.resultatsExamenImagerie => [0..*]
+        } 
+
+        class FRLMDemandeExamenImagerie{
+
+             fr-lm-demande-examen-imagerie => [None..None]
+             fr-lm-demande-examen-imagerie.titreSection => [1..None]
+             fr-lm-demande-examen-imagerie.sousSection => [None..0]
+             fr-lm-demande-examen-imagerie.entree => [None..0]
+        } 
+
+        class FRLMDestinatairePrevu{
+
+             fr-lm-destinataire-prevu-document => [None..None]
+             fr-lm-destinataire-prevu-document.destinataire => [0..*]
+        } 
+
+        class FRLMDispositifMedicalEntree{
+
+             fr-lm-dispositif-medical-entree => [None..None]
+             fr-lm-dispositif-medical-entree.identifiant => [1..*]
+             fr-lm-dispositif-medical-entree.description => [1..1]
+             fr-lm-dispositif-medical-entree.statut => [1..1]
+             fr-lm-dispositif-medical-entree.date => [1..1]
+             fr-lm-dispositif-medical-entree.renouvellement => [0..1]
+             fr-lm-dispositif-medical-entree.quantite => [0..1]
+             fr-lm-dispositif-medical-entree.duree => [0..1]
+             fr-lm-dispositif-medical-entree.performer => [0..*]
+             fr-lm-dispositif-medical-entree.auteur => [0..*]
+             fr-lm-dispositif-medical-entree.dispositifMedical => [1..*]
+             fr-lm-dispositif-medical-entree.affectionLongueDuree => [0..1]
+             fr-lm-dispositif-medical-entree.accidentTravail => [0..1]
+             fr-lm-dispositif-medical-entree.prevention => [0..1]
+             fr-lm-dispositif-medical-entree.nonRemboursable => [0..1]
+        } 
+
+        class FRLMDispositifMedical{
+
+             fr-lm-dispositif-medical => [None..None]
+             fr-lm-dispositif-medical.identifiant => [0..*]
+             fr-lm-dispositif-medical.type => [1..1]
+             fr-lm-dispositif-medical.type.code => [1..1]
+             fr-lm-dispositif-medical.type.code.autreCode => [0..*]
+        } 
+
+        class FRLMDispositifsMedicaux{
+
+             fr-lm-dispositifs-medicaux => [None..None]
+             fr-lm-dispositifs-medicaux.titreSection => [1..None]
+             fr-lm-dispositifs-medicaux.sousSection => [None..0]
+             fr-lm-dispositifs-medicaux.entree.dispositifsMedicaux => [0..*]
+        } 
+
+        class FRLMDocumentAttache{
+
+             fr-lm-document-attache => [None..None]
+             fr-lm-document-attache.identifiant => [1..1]
+             fr-lm-document-attache.code => [1..1]
+             fr-lm-document-attache.statut => [1..1]
+             fr-lm-document-attache.date => [0..1]
+             fr-lm-document-attache.typeDocumentAttache => [1..1]
+             fr-lm-document-attache.typeDocumentAttache.natureDocument => [1..1]
+             fr-lm-document-attache.documentAttache => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia.identifiant => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia.documentAttacheEncode => [1..1]
+        } 
+
+        class FRLMDocumentDeReference{
+
+             fr-lm-document-reference => [None..1]
+             fr-lm-document-reference.typeReference => [1..1]
+             fr-lm-document-reference.identifiantUniqueDocument => [1..1]
+        } 
+
+        class FRLMDocumentsAjoutes{
+
+             fr-lm-documents-ajoutes => [None..None]
+             fr-lm-documents-ajoutes.sousSection => [None..0]
+             fr-lm-documents-ajoutes.entree.simpleObservation => [0..1]
+             fr-lm-documents-ajoutes.entree.documentAttache => [1..*]
+        } 
+
+        class FRLMEducationPatient{
+
+             fr-lm-education-patient => [None..None]
+             fr-lm-education-patient.sousSection => [None..0]
+             fr-lm-education-patient.entree.acte => [0..*]
+             fr-lm-education-patient.entree.observation => [0..*]
+             fr-lm-education-patient.entree.reference => [0..*]
+        } 
+
+        class FRLMEnteteDocument{
+
+             fr-lm-entete-document => [1..1]
+             fr-lm-entete-document.identifiantUniqueDocument => [1..1]
+             fr-lm-entete-document.modeleDocument => [1..1]
+             fr-lm-entete-document.typeDocument => [1..1]
+             fr-lm-entete-document.titreDocument => [1..1]
+             fr-lm-entete-document.dateDeCreationDocument => [1..1]
+             fr-lm-entete-document.niveauConfidentialiteDocument => [1..1]
+             fr-lm-entete-document.languePrincipaleDocument => [1..1]
+             fr-lm-entete-document.identifiantLotDeVersionsDocument => [1..1]
+             fr-lm-entete-document.versionDocument => [1..1]
+             fr-lm-entete-document.statutDocument => [1..1]
+             fr-lm-entete-document.patient => [1..1]
+             fr-lm-entete-document.auteur => [1..*]
+             fr-lm-entete-document.operateurSaisie => [0..1]
+             fr-lm-entete-document.informateur => [0..*]
+             fr-lm-entete-document.structureConservation => [1..1]
+             fr-lm-entete-document.destinataire => [0..*]
+             fr-lm-entete-document.responsable => [1..1]
+             fr-lm-entete-document.validateur => [0..*]
+             fr-lm-entete-document.participant => [0..*]
+             fr-lm-entete-document.prescription => [0..*]
+             fr-lm-entete-document.evenement => [1..*]
+             fr-lm-entete-document.documentDeReference => [0..1]
+             fr-lm-entete-document.consentementAssocie => [0..*]
+             fr-lm-entete-document.priseEncharge => [1..1]
+        } 
+
+        class FRLMEvenement{
+
+             fr-lm-evenement => [1..None]
+             fr-lm-evenement.identifiantEvenement => [0..*]
+             fr-lm-evenement.codeEvenement => [0..1]
+             fr-lm-evenement.codeEvenement.id => [None..0]
+             fr-lm-evenement.codeEvenement.extension => [None..0]
+             fr-lm-evenement.codeEvenement.translation => [0..*]
+             fr-lm-evenement.dateHeureEvenement => [0..1]
+             fr-lm-evenement.executantEvenement => [0..1]
+             fr-lm-evenement.executantEvenement.roleFonctionnel => [0..1]
+             fr-lm-evenement.executantEvenement.dateHeureParticipation => [0..1]
+             fr-lm-evenement.executantEvenement.executant => [1..1]
+        } 
+
+        class FRLMExamenImagerie{
+
+             fr-lm-examen-imagerie => [None..None]
+             fr-lm-examen-imagerie.uuidInstanceExamen => [1..*]
+             fr-lm-examen-imagerie.codeActe => [1..1]
+             fr-lm-examen-imagerie.description => [0..1]
+             fr-lm-examen-imagerie.dateActe => [0..1]
+             fr-lm-examen-imagerie.serieImagerie => [1..1]
+             fr-lm-examen-imagerie.objectifsReferences => [0..*]
+        } 
+
+        class FRLMExpositionRadiations{
+
+             fr-lm-exposition-radiations => [None..None]
+             fr-lm-exposition-radiations.titreSection => [1..None]
+             fr-lm-exposition-radiations.sousSection => [None..0]
+             fr-lm-exposition-radiations.entree.autorisationExposition => [1..1]
+             fr-lm-exposition-radiations.entree.quantiteExposition => [0..*]
+        } 
+
+        class FRLMInformateur{
+
+             fr-lm-informateur => [None..None]
+             fr-lm-informateur.informateur => [1..1]
+        } 
+
+        class FRLMInformationsCliniques{
+
+             fr-lm-informations-cliniques => [None..None]
+             fr-lm-informations-cliniques.titreSection => [1..None]
+             fr-lm-informations-cliniques.sousSection => [None..0]
+             fr-lm-informations-cliniques.entree => [1..None]
+             fr-lm-informations-cliniques.entree.antecedentsMedicaux => [1..1]
+             fr-lm-informations-cliniques.entree.antecedentsChirurgicaux => [1..1]
+             fr-lm-informations-cliniques.entree.contreIndications => [0..1]
+             fr-lm-informations-cliniques.entree.probleme => [0..*]
+             fr-lm-informations-cliniques.entree.dispositifMedical => [0..*]
+             fr-lm-informations-cliniques.entree.statutGrossesse => [0..1]
+             fr-lm-informations-cliniques.entree.administrationProduitDeSante => [0..*]
+             fr-lm-informations-cliniques.entree.sexeClinique => [0..*]
+        } 
+
+        class FRLMObjectCatalog{
+
+             fr-lm-object-catalog => [None..None]
+             fr-lm-object-catalog.titreSection => [1..None]
+             fr-lm-object-catalog.sousSection => [None..0]
+             fr-lm-object-catalog.entree.examenImagerie => [0..*]
+        } 
+
+        class FRLMObservationGrossesse{
+
+             fr-lm-observation-grossesse => [None..None]
+             fr-lm-observation-grossesse.identifiant => [1..1]
+             fr-lm-observation-grossesse.code => [1..1]
+             fr-lm-observation-grossesse.description => [1..1]
+             fr-lm-observation-grossesse.statut => [1..1]
+             fr-lm-observation-grossesse.date => [1..1]
+             fr-lm-observation-grossesse.resultat => [1..1]
+        } 
+
+        class FRLMObservation{
+
+             fr-lm-observation => [None..None]
+             fr-lm-observation.observationIdentifiant => [1..1]
+             fr-lm-observation.observationCode => [1..1]
+             fr-lm-observation.observationDescription => [1..1]
+             fr-lm-observation.observationStatut => [1..1]
+             fr-lm-observation.observationDate => [0..1]
+             fr-lm-observation.observationNombreRenouvellements => [0..1]
+             fr-lm-observation.observationResultat => [0..*]
+             fr-lm-observation.observationInterpretation => [0..1]
+             fr-lm-observation.observationMethode => [0..1]
+             fr-lm-observation.observationLocalisationAnatomique => [0..1]
+             fr-lm-observation.observationAuteur => [0..1]
+        } 
+
+        class FRLMOperateurSaisie{
+
+             fr-lm-operateur-saisie => [None..1]
+             fr-lm-operateur-saisie.dateSaisie => [1..1]
+             fr-lm-operateur-saisie.operateurSaisie => [1..1]
+        } 
+
+        class FRLMParticipantCorps{
+
+             fr-lm-participant-corps => [None..None]
+             fr-lm-participant-corps.dateEtHeureParticipation => [0..1]
+             fr-lm-participant-corps.participantRole => [1..1]
+             fr-lm-participant-corps.participantRole.IdentifiantParticipant => [0..*]
+             fr-lm-participant-corps.participantRole.typeParticipant => [1..1]
+             fr-lm-participant-corps.participantRole.adresses => [0..*]
+             fr-lm-participant-corps.participantRole.coordonneesTelecom => [0..*]
+             fr-lm-participant-corps.participantRole.identiteParticipant => [0..1]
+             fr-lm-participant-corps.participantRole.identiteParticipant.ProfessionSpecialite => [0..1]
+             fr-lm-participant-corps.participantRole.identiteParticipant.nom => [0..*]
+             fr-lm-participant-corps.participantRole.identiteParticipant.description => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.categorie => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.nomModele => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.identifiant => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.code => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.description => [0..1]
+        } 
+
+        class FRLMParticipant{
+
+             fr-lm-participant => [None..None]
+             fr-lm-participant.typeParticipation => [1..1]
+             fr-lm-participant.roleFonctionnel => [0..1]
+             fr-lm-participant.dateDebutEtOuFinParticipation => [1..1]
+             fr-lm-participant.participant => [1..1]
+        } 
+
+        class FRLMPatientUsager{
+
+             fr-lm-patient-usager => [1..1]
+             fr-lm-patient-usager.identifiantPatient => [1..*]
+             fr-lm-patient-usager.adresse => [0..*]
+             fr-lm-patient-usager.coordonneesTelecom => [0..*]
+             fr-lm-patient-usager.personnePhysique => [1..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient => [1..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom => [1..*]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom => [1..*]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.listePrenoms => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.premierPrenom => [0..1]
+             fr-lm-patient-usager.personnePhysique.nomsPrenomsPatient.prenom.prenomUtilise => [0..1]
+             fr-lm-patient-usager.personnePhysique.sexe => [1..1]
+             fr-lm-patient-usager.personnePhysique.dateNaissance => [1..1]
+             fr-lm-patient-usager.personnePhysique.indicateurDeces => [0..1]
+             fr-lm-patient-usager.personnePhysique.dateDeces => [0..1]
+             fr-lm-patient-usager.personnePhysique.grossesseMultiple => [0..1]
+             fr-lm-patient-usager.personnePhysique.numeroOrdreNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.adresse => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.coordonneesTelecom => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient => [1..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom => [1..3]
+             fr-lm-patient-usager.personnePhysique.representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom => [0..*]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient.identifiant => [0..1]
+             fr-lm-patient-usager.personnePhysique.representantPatient.structureRepresentantPatient.nom => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
+             fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
+        } 
+
+        class FRLMPersonneStructureAuteur{
+
+             fr-lm-personne-structure-auteur => [None..None]
+             fr-lm-personne-structure-auteur.personne => [0..1]
+             fr-lm-personne-structure-auteur.personne.identifiantPersonne => [1..*]
+             fr-lm-personne-structure-auteur.personne.professionRole => [0..1]
+             fr-lm-personne-structure-auteur.personne.adresse => [0..*]
+             fr-lm-personne-structure-auteur.personne.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne => [1..1]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.nomPersonne => [1..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.prenomPersonne => [0..*]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.civilite => [0..1]
+             fr-lm-personne-structure-auteur.personne.IdentitePersonne.titre => [0..1]
+             fr-lm-personne-structure-auteur.structure => [0..1]
+             fr-lm-personne-structure-auteur.structure.identifiantStructure => [0..1]
+             fr-lm-personne-structure-auteur.structure.nomStructure => [0..1]
+             fr-lm-personne-structure-auteur.structure.adresse => [0..*]
+             fr-lm-personne-structure-auteur.structure.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure-auteur.structure.secteurActivite => [0..1]
+        } 
+
+        class FRLMPersonneStructure{
+
+             fr-lm-personne-structure => [None..None]
+             fr-lm-personne-structure.personne => [0..1]
+             fr-lm-personne-structure.personne.identifiantPersonne => [0..1]
+             fr-lm-personne-structure.personne.professionRole => [0..1]
+             fr-lm-personne-structure.personne.lien => [0..1]
+             fr-lm-personne-structure.personne.adresse => [0..*]
+             fr-lm-personne-structure.personne.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure.personne.IdentitePersonne => [0..1]
+             fr-lm-personne-structure.personne.IdentitePersonne.nomPersonne => [1..*]
+             fr-lm-personne-structure.personne.IdentitePersonne.prenomPersonne => [0..*]
+             fr-lm-personne-structure.personne.IdentitePersonne.civilite => [0..1]
+             fr-lm-personne-structure.personne.IdentitePersonne.titre => [0..1]
+             fr-lm-personne-structure.structure => [0..1]
+             fr-lm-personne-structure.structure.identifiantStructure => [0..1]
+             fr-lm-personne-structure.structure.nomStructure => [0..1]
+             fr-lm-personne-structure.structure.adresse => [0..*]
+             fr-lm-personne-structure.structure.coordonneesTelecom => [0..*]
+             fr-lm-personne-structure.structure.cadreExercice => [0..1]
+        } 
+
+        class FRLMPrescription{
+
+             fr-lm-prescription => [None..None]
+             fr-lm-prescription.identifiantPrescription => [1..1]
+             fr-lm-prescription.accessionNumber => [0..1]
+        } 
+
+        class FRLMPriseEncharge{
+
+             fr-lm-prise-en-charge => [1..1]
+             fr-lm-prise-en-charge.identifiantPriseEnCharge => [0..*]
+             fr-lm-prise-en-charge.typePriseEnCharge => [0..1]
+             fr-lm-prise-en-charge.dateDebutFinPriseEnCharge => [1..1]
+             fr-lm-prise-en-charge.typeSortie => [0..1]
+             fr-lm-prise-en-charge.responsablePriseEnCharge => [0..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge => [0..*]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.typeParticipation => [1..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.dateDebutFinParticipation => [0..1]
+             fr-lm-prise-en-charge.personneImpliqueePriseEnCharge.professionnelImplique => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.identifiantStructure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.nomStructure => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.adresse => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.coordonneesTelecom => [0..*]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.secteurActivite => [1..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement => [0..1]
+             fr-lm-prise-en-charge.lieuPriseEnCharge.structure.typeStructure => [0..1]
+        } 
+
+        class FRLMProbleme{
+
+             fr-lm-probleme => [None..None]
+             fr-lm-probleme.identifiant => [1..1]
+             fr-lm-probleme.type => [1..1]
+             fr-lm-probleme.description => [1..1]
+             fr-lm-probleme.problemeObserve => [1..1]
+             fr-lm-probleme.statut => [1..1]
+             fr-lm-probleme.dateProbleme => [1..1]
+             fr-lm-probleme.statutProbleme => [0..1]
+             fr-lm-probleme.severite => [0..1]
+             fr-lm-probleme.certitude => [0..1]
+             fr-lm-probleme.statutClinique => [0..1]
+             fr-lm-probleme.reference => [0..*]
+             fr-lm-probleme.reference.externalDocument => [1..1]
+             fr-lm-probleme.reference.externalDocument.identifiant => [1..1]
+             fr-lm-probleme.reference.externalDocument.text => [0..1]
+             fr-lm-probleme.reference.externalDocument.text.reference => [1..*]
+             fr-lm-probleme.commentaire => [0..1]
+        } 
+
+        class FRLMQuantiteExposition{
+
+             fr-lm-quantite-exposition => [None..None]
+             fr-lm-quantite-exposition.identifiant => [1..1]
+             fr-lm-quantite-exposition.code => [1..1]
+             fr-lm-quantite-exposition.description => [0..1]
+             fr-lm-quantite-exposition.statut => [1..1]
+             fr-lm-quantite-exposition.date => [0..1]
+             fr-lm-quantite-exposition.valeur => [1..1]
+             fr-lm-quantite-exposition.lateralite => [0..1]
+             fr-lm-quantite-exposition.lateralite.topographique => [0..1]
+             fr-lm-quantite-exposition.lateralite.topographique.nom => [1..1]
+             fr-lm-quantite-exposition.lateralite.topographique.valeur => [1..1]
+        } 
+
+        class FRLMReferenceInterne{
+
+             fr-lm-reference-interne => [None..None]
+             fr-lm-reference-interne.identifiant => [1..1]
+             fr-lm-reference-interne.code => [1..1]
+        } 
+
+        class FRLMReferencesExternes{
+
+             fr-lm-references-externes => [None..None]
+             fr-lm-references-externes.codeReferenceExterne => [1..1]
+             fr-lm-references-externes.blocNarratif => [1..1]
+             fr-lm-references-externes.reference => [1..*]
+             fr-lm-references-externes.reference.externalDocument => [1..1]
+             fr-lm-references-externes.reference.externalDocument.identifiant => [1..1]
+             fr-lm-references-externes.reference.externalDocument.text => [0..1]
+             fr-lm-references-externes.reference.externalDocument.text.reference => [0..1]
+        } 
+
+        class FRLMRencontre{
+
+             fr-lm-rencontre => [None..None]
+             fr-lm-rencontre.identifiant => [1..*]
+             fr-lm-rencontre.typeRencontre => [1..1]
+             fr-lm-rencontre.description => [0..1]
+             fr-lm-rencontre.dateRencontre => [0..1]
+             fr-lm-rencontre.confirmationRencontre => [0..1]
+             fr-lm-rencontre.executant => [0..*]
+             fr-lm-rencontre.auteur => [0..*]
+             fr-lm-rencontre.informateur => [0..*]
+             fr-lm-rencontre.participant => [0..1]
+             fr-lm-rencontre.autreParticipant => [0..1]
+        } 
+
+        class FRLMResponsable{
+
+             fr-lm-responsable => [1..1]
+             fr-lm-responsable.dateHeurePriseResponsabilite => [1..1]
+             fr-lm-responsable.responsable => [1..1]
+        } 
+
+        class FRLMResultatsExamenImagerie{
+
+             fr-lm-resultats-examen-imagerie => [None..None]
+             fr-lm-resultats-examen-imagerie.titreSection => [1..None]
+             fr-lm-resultats-examen-imagerie.sousSection => [None..0]
+             fr-lm-resultats-examen-imagerie.entree => [None..0]
+        } 
+
+        class FRLMResultatsExamensNonCode{
+
+             fr-lm-resultats-examens-non-code => [None..None]
+             fr-lm-resultats-examens-non-code.sousSection => [None..0]
+             fr-lm-resultats-examens-non-code.entree => [None..0]
+        } 
+
+        class FRLMSection{
+
+             fr-lm-section => [None..None]
+             fr-lm-section.codeSection => [1..1]
+             fr-lm-section.titreSection => [0..1]
+             fr-lm-section.blocNarratif => [1..1]
+             fr-lm-section.sousSection => [0..*]
+             fr-lm-section.entree => [0..*]
+        } 
+
+        class FRLMSerieImagerie{
+
+             fr-lm-serie-imagerie => [None..None]
+             fr-lm-serie-imagerie.uuidSerie => [1..*]
+             fr-lm-serie-imagerie.code => [1..1]
+             fr-lm-serie-imagerie.description => [0..1]
+             fr-lm-serie-imagerie.date => [0..1]
+             fr-lm-serie-imagerie.instanceSOP => [1..1]
+             fr-lm-serie-imagerie.referenceWado => [1..1]
+             fr-lm-serie-imagerie.referenceWado.iHEInvokeImage => [1..1]
+             fr-lm-serie-imagerie.referenceWado.typeMedia => [1..1]
+             fr-lm-serie-imagerie.referenceWado.reference => [1..1]
+        } 
+
+        class FRLMSeverite{
+
+             fr-lm-severite => [None..None]
+             fr-lm-severite.identifiantSeverite => [1..1]
+             fr-lm-severite.codeSeverite => [1..1]
+             fr-lm-severite.descriptionNarrative => [1..1]
+             fr-lm-severite.statutSeverite => [1..1]
+             fr-lm-severite.niveauSeverite => [1..1]
+        } 
+
+        class FRLMSOPInstance{
+
+             fr-lm-sop-instance => [None..None]
+             fr-lm-sop-instance.uuidSOPInstance => [1..*]
+             fr-lm-sop-instance.classeSOP => [1..1]
+             fr-lm-sop-instance.description => [0..1]
+             fr-lm-sop-instance.statut => [1..1]
+             fr-lm-sop-instance.date => [0..1]
+             fr-lm-sop-instance.nombreCadresReferences => [0..1]
+        } 
+
+        class FRLMStatutCliniquePatient{
+
+             fr-lm-statut-clinique-patient => [None..None]
+             fr-lm-statut-clinique-patient.codeStatutCliniquePatient => [1..1]
+             fr-lm-statut-clinique-patient.descriptionNarrative => [1..1]
+             fr-lm-statut-clinique-patient.statutEntree => [1..1]
+             fr-lm-statut-clinique-patient.statutCliniquePatient => [1..1]
+        } 
+
+        class FRLMStatutProbleme{
+
+             fr-lm-statut-probleme => [None..None]
+             fr-lm-statut-probleme.codeStatutProbleme => [1..1]
+             fr-lm-statut-probleme.descriptionNarrative => [1..1]
+             fr-lm-statut-probleme.statutEntree => [1..1]
+             fr-lm-statut-probleme.statutProbleme => [1..1]
+        } 
+
+        class FRLMStructureConservation{
+
+             fr-lm-structure-conservation => [1..1]
+             fr-lm-structure-conservation.structure => [1..1]
+             fr-lm-structure-conservation.structure.identifiantStructure => [1..1]
+             fr-lm-structure-conservation.structure.nomStructure => [0..1]
+             fr-lm-structure-conservation.structure.coordonneesTelecom => [0..1]
+             fr-lm-structure-conservation.structure.adresse => [0..1]
+        } 
+
+        class FRLMSystemeStructureAuteur{
+
+             fr-lm-systeme-structure-auteur => [None..None]
+             fr-lm-systeme-structure-auteur.systeme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.identifiantSysteme => [1..*]
+             fr-lm-systeme-structure-auteur.systeme.typeSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.nomModeleSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.systeme.nomSysteme => [1..1]
+             fr-lm-systeme-structure-auteur.structure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.identifiantStructure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.nomStructure => [1..1]
+             fr-lm-systeme-structure-auteur.structure.adresse => [0..*]
+             fr-lm-systeme-structure-auteur.structure.coordonneesTelecom => [0..*]
+             fr-lm-systeme-structure-auteur.structure.secteurActivite => [0..1]
+        } 
+
+        class FRLMTechniqueImagerie{
+
+             fr-lm-technique-imagerie => [None..None]
+             fr-lm-technique-imagerie.identifiant => [1..1]
+             fr-lm-technique-imagerie.codeActe => [1..1]
+             fr-lm-technique-imagerie.description => [0..1]
+             fr-lm-technique-imagerie.date => [0..1]
+             fr-lm-technique-imagerie.modaliteAcquisition => [1..*]
+             fr-lm-technique-imagerie.lateralite => [0..1]
+             fr-lm-technique-imagerie.lateralite.topographique => [0..1]
+             fr-lm-technique-imagerie.lateralite.topographique.nom => [1..1]
+             fr-lm-technique-imagerie.lateralite.topographique.valeur => [1..1]
+             fr-lm-technique-imagerie.participant => [0..1]
+        } 
+
+        class FRLMValidateur{
+
+             fr-lm-validateur => [None..None]
+             fr-lm-validateur.dateHeureAttestationValidite => [1..1]
+             fr-lm-validateur.validateur => [1..1]
         } 
 
         class FrLocationDocument{
@@ -1581,381 +1581,153 @@ package IG #DDDDDD{
 
 package "Ressources de base" #palegreen {
 
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Auteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Consentement
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> CorpsDocument
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> DestinatairePrevu
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> DispositifMedical
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> DocumentDeReference
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> EnteteDocument
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Evenement
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrActe
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrActeImagerie
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrAddendum
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrAdministrationProduitDeSante
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrAutorisationExposition
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrCertitude
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrCommentaireER
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrComparaisonExamensImagerie
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrComplicationsActe
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrConclusionExamenImagerie
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrDemandeExamenImagerie
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrDispositifMedicalEntry
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrDispositifsMedicaux
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrDocumentAttache
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrDocumentsAjoutes
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrEducationPatient
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrExamenImagerie
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrExpositionRadiations
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrInformationsCliniques
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrObjectCatalog
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrObservation
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrObservationGrossesse
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrParticipantCorps
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrProbleme
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrQuantiteExposition
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrReferenceInterne
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrReferencesExternes
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrRencontre
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrResultatsExamenImagerie
-
- class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Section" as  classe2eb9933e161ee98f021b2d27dc12810 
-
-    classe2eb9933e161ee98f021b2d27dc12810 --> FrResultatsExamensNonCode
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrSOPInstance
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrSerieImagerie
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrSeverite
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrStatutCliniquePatient
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrStatutProbleme
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FrTechniqueImagerie
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Informateur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> OperateurSaisie
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Participant
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PatientUsager
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PersonneStructure
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PersonneStructureAuteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Prescription
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> PriseEncharge
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Responsable
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Section
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> StructureConservation
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> SystemeStructureAuteur
-
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> Validateur
-
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
 
- class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
-
-    classd9daa32262ad3cdcf2aad9f33da44536 --> FrCompositionDocument
-
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor" as  class58510d48686a6398080b7be0a9488a07 
 
-    class58510d48686a6398080b7be0a9488a07 --> FrAssignedAuthor
+    class58510d48686a6398080b7be0a9488a07 --> FRCDAAssignedAuthor
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedCustodian" as  class9d6ae0bd4aff182e6679539d1b5e57dd 
 
-    class9d6ae0bd4aff182e6679539d1b5e57dd --> FrAssignedCustodian
+    class9d6ae0bd4aff182e6679539d1b5e57dd --> FRCDAAssignedCustodian
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedEntity" as  classa57c2cf8eee922b736f24aae263fb85a 
 
-    classa57c2cf8eee922b736f24aae263fb85a --> FrAssignedEntity
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/AssociatedEntity" as  classf02f59ca36afce3537fd13cedd8610bc 
-
-    classf02f59ca36afce3537fd13cedd8610bc --> FrAssociatedEntity
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Authenticator" as  class53108c7e3b2a59607cdb20ab0b268d03 
-
-    class53108c7e3b2a59607cdb20ab0b268d03 --> FrAuthenticator
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Author" as  class937cfe84638a385773bc82a876cf4a8d 
-
-    class937cfe84638a385773bc82a876cf4a8d --> FrAuthor
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/AuthoringDevice" as  classf46502fb30744212b0c5841a6e4ea035 
-
-    classf46502fb30744212b0c5841a6e4ea035 --> FrAuthoringDevice
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Authorization" as  class598114d4c6d4bf797def36d247d40839 
-
-    class598114d4c6d4bf797def36d247d40839 --> FrAuthorization
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument" as  class989be5c5fb811e081805dc5a32645079 
-
-    class989be5c5fb811e081805dc5a32645079 --> FrClinicalDocument
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/ComponentOf" as  class4277423a305ecb24dc9d37288c280772 
-
-    class4277423a305ecb24dc9d37288c280772 --> FrComponentOf
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Custodian" as  classd84e4a39bf094111de7518d5a5411c66 
-
-    classd84e4a39bf094111de7518d5a5411c66 --> FrCustodian
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/DataEnterer" as  class637494ebd710a0dd928d3bba66f7c36c 
-
-    class637494ebd710a0dd928d3bba66f7c36c --> FrDataEnterer
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/DocumentationOf" as  class0977267ea48347e7fb26a0e81e862268 
-
-    class0977267ea48347e7fb26a0e81e862268 --> FrDocumentationOf
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/EncompassingEncounter" as  class71895803bd5b89edafce351523a041e6 
-
-    class71895803bd5b89edafce351523a041e6 --> FrEncompassingEncounter
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/EncounterParticipant" as  class10428a590ddf9ce27b1fe90b22a362bd 
-
-    class10428a590ddf9ce27b1fe90b22a362bd --> FrEncounterParticipant
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/HealthCareFacility" as  class02cc646ca5601d63f73402bfbbfdc6eb 
-
-    class02cc646ca5601d63f73402bfbbfdc6eb --> FrHealthCareFacility
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/InFulfillmentOf" as  classe90f25fe105c3c9c4c47c62629a3765d 
-
-    classe90f25fe105c3c9c4c47c62629a3765d --> FrInFulfillmentOf
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Informant" as  class0bdf5ad046cc54eb3cb2ac8f5bc2f2c8 
-
-    class0bdf5ad046cc54eb3cb2ac8f5bc2f2c8 --> FrInformant
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/InformationRecipient" as  classb6fd1ae4a9b50563c83e48eaaf673af4 
-
-    classb6fd1ae4a9b50563c83e48eaaf673af4 --> FrInformationRecipient
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/IntendedRecipient" as  classb4c0abb01d11eefbc617aa004a0b6393 
-
-    classb4c0abb01d11eefbc617aa004a0b6393 --> FrIntendedRecipient
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator" as  class57f35676579cccc1659c4601fa19b43b 
-
-    class57f35676579cccc1659c4601fa19b43b --> FrLegalAuthenticator
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/PN" as  class91b9b68696e7cdd4a91365aa0d0d170c 
-
-    class91b9b68696e7cdd4a91365aa0d0d170c --> FrName
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Order" as  class358c910e07ad3f95a61b1dae6d4a35be 
-
-    class358c910e07ad3f95a61b1dae6d4a35be --> FrOrder
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/ParentDocument" as  class4313f3b50ac00c5473aecb642b99f6e4 
-
-    class4313f3b50ac00c5473aecb642b99f6e4 --> FrParentDocument
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Participant1" as  class2fd9a3b182710aa68f9e615904fe1537 
-
-    class2fd9a3b182710aa68f9e615904fe1537 --> FrParticipant
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/PatientRole" as  class1e213e8519f12110736b032cda341174 
-
-    class1e213e8519f12110736b032cda341174 --> FrPatientRole
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Patient" as  classa8889bb6f3999fb5243b3ed3b492e0c4 
-
-    classa8889bb6f3999fb5243b3ed3b492e0c4 --> FrPatient
-
- class "http://hl7.org/cda/stds/core/StructureDefinition/Performer1" as  class2322ea8c73e0b95c4de59f56ee36a694 
-
-    class2322ea8c73e0b95c4de59f56ee36a694 --> FrPerformer
+    classa57c2cf8eee922b736f24aae263fb85a --> FRCDAAssignedEntity
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/Person" as  classb14b9f756425869ebeb8ade0004931e1 
 
-    classb14b9f756425869ebeb8ade0004931e1 --> FrAssignedPerson
+    classb14b9f756425869ebeb8ade0004931e1 --> FRCDAAssignedPerson
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/AssociatedEntity" as  classf02f59ca36afce3537fd13cedd8610bc 
+
+    classf02f59ca36afce3537fd13cedd8610bc --> FRCDAAssociatedEntity
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Authenticator" as  class53108c7e3b2a59607cdb20ab0b268d03 
+
+    class53108c7e3b2a59607cdb20ab0b268d03 --> FRCDAAuthenticator
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Author" as  class937cfe84638a385773bc82a876cf4a8d 
+
+    class937cfe84638a385773bc82a876cf4a8d --> FRCDAAuthor
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/AuthoringDevice" as  classf46502fb30744212b0c5841a6e4ea035 
+
+    classf46502fb30744212b0c5841a6e4ea035 --> FRCDAAuthoringDevice
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Authorization" as  class598114d4c6d4bf797def36d247d40839 
+
+    class598114d4c6d4bf797def36d247d40839 --> FRCDAAuthorization
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/ClinicalDocument" as  class989be5c5fb811e081805dc5a32645079 
+
+    class989be5c5fb811e081805dc5a32645079 --> FRCDAClinicalDocument
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/ComponentOf" as  class4277423a305ecb24dc9d37288c280772 
+
+    class4277423a305ecb24dc9d37288c280772 --> FRCDAComponentOf
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Custodian" as  classd84e4a39bf094111de7518d5a5411c66 
+
+    classd84e4a39bf094111de7518d5a5411c66 --> FRCDACustodian
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/DataEnterer" as  class637494ebd710a0dd928d3bba66f7c36c 
+
+    class637494ebd710a0dd928d3bba66f7c36c --> FRCDADataEnterer
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/DocumentationOf" as  class0977267ea48347e7fb26a0e81e862268 
+
+    class0977267ea48347e7fb26a0e81e862268 --> FRCDADocumentationOf
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/EncompassingEncounter" as  class71895803bd5b89edafce351523a041e6 
+
+    class71895803bd5b89edafce351523a041e6 --> FRCDAEncompassingEncounter
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/EncounterParticipant" as  class10428a590ddf9ce27b1fe90b22a362bd 
+
+    class10428a590ddf9ce27b1fe90b22a362bd --> FRCDAEncounterParticipant
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/HealthCareFacility" as  class02cc646ca5601d63f73402bfbbfdc6eb 
+
+    class02cc646ca5601d63f73402bfbbfdc6eb --> FRCDAHealthCareFacility
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/InFulfillmentOf" as  classe90f25fe105c3c9c4c47c62629a3765d 
+
+    classe90f25fe105c3c9c4c47c62629a3765d --> FRCDAInFulfillmentOf
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Informant" as  class0bdf5ad046cc54eb3cb2ac8f5bc2f2c8 
+
+    class0bdf5ad046cc54eb3cb2ac8f5bc2f2c8 --> FRCDAInformant
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/InformationRecipient" as  classb6fd1ae4a9b50563c83e48eaaf673af4 
+
+    classb6fd1ae4a9b50563c83e48eaaf673af4 --> FRCDAInformationRecipient
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/IntendedRecipient" as  classb4c0abb01d11eefbc617aa004a0b6393 
+
+    classb4c0abb01d11eefbc617aa004a0b6393 --> FRCDAIntendedRecipient
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/LegalAuthenticator" as  class57f35676579cccc1659c4601fa19b43b 
+
+    class57f35676579cccc1659c4601fa19b43b --> FRCDALegalAuthenticator
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/PN" as  class91b9b68696e7cdd4a91365aa0d0d170c 
+
+    class91b9b68696e7cdd4a91365aa0d0d170c --> FRCDAName
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Order" as  class358c910e07ad3f95a61b1dae6d4a35be 
+
+    class358c910e07ad3f95a61b1dae6d4a35be --> FRCDAOrder
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/ParentDocument" as  class4313f3b50ac00c5473aecb642b99f6e4 
+
+    class4313f3b50ac00c5473aecb642b99f6e4 --> FRCDAParentDocument
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Participant1" as  class2fd9a3b182710aa68f9e615904fe1537 
+
+    class2fd9a3b182710aa68f9e615904fe1537 --> FRCDAParticipant
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/PatientRole" as  class1e213e8519f12110736b032cda341174 
+
+    class1e213e8519f12110736b032cda341174 --> FRCDAPatientRole
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Patient" as  classa8889bb6f3999fb5243b3ed3b492e0c4 
+
+    classa8889bb6f3999fb5243b3ed3b492e0c4 --> FRCDAPatient
+
+ class "http://hl7.org/cda/stds/core/StructureDefinition/Performer1" as  class2322ea8c73e0b95c4de59f56ee36a694 
+
+    class2322ea8c73e0b95c4de59f56ee36a694 --> FRCDAPerformer
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/RecordTarget" as  class0baedfe5573df35f7a6ee5934c45b818 
 
-    class0baedfe5573df35f7a6ee5934c45b818 --> FrRecordTarget
+    class0baedfe5573df35f7a6ee5934c45b818 --> FRCDARecordTarget
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/RelatedDocument" as  classddc7c43262268f3e7ef73c1c5ad6b514 
 
-    classddc7c43262268f3e7ef73c1c5ad6b514 --> FrRelatedDocument
+    classddc7c43262268f3e7ef73c1c5ad6b514 --> FRCDARelatedDocument
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/RelatedEntity" as  class0a3bfa693dae125e5c0a4e8cab321d9a 
 
-    class0a3bfa693dae125e5c0a4e8cab321d9a --> FrRelatedEntity
+    class0a3bfa693dae125e5c0a4e8cab321d9a --> FRCDARelatedEntity
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/CustodianOrganization" as  class958e4615d47e79ed7eef2368401c733a 
 
-    class958e4615d47e79ed7eef2368401c733a --> FrRepresentedCustodianOrganization
+    class958e4615d47e79ed7eef2368401c733a --> FRCDARepresentedCustodianOrganization
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/Organization" as  class70defb4802516f8b110654a1e3649ed7 
 
-    class70defb4802516f8b110654a1e3649ed7 --> FrRepresentedOrganization
+    class70defb4802516f8b110654a1e3649ed7 --> FRCDARepresentedOrganization
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/ServiceEvent" as  class21fc45b6eacaebf264ceab7c3130a980 
 
-    class21fc45b6eacaebf264ceab7c3130a980 --> FrServiceEvent
+    class21fc45b6eacaebf264ceab7c3130a980 --> FRCDAServiceEvent
+
+ class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
+
+    classd9daa32262ad3cdcf2aad9f33da44536 --> FrCompositionDocument
 
  class "Device" as  classe0ac20adce6ffee48c7151b070aa5737 
 
@@ -1968,6 +1740,234 @@ package "Ressources de base" #palegreen {
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name" as  classab70be087e84d984395444c4643fb763 
 
     classab70be087e84d984395444c4643fb763 --> HumanNameDocument
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMActeImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMActe
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMAddendum
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAdministrationProduitDeSante
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAutorisationExposition
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCertitude
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCommentaireER
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMComparaisonExamensImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMComplicationsActe
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMConclusionExamenImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMConsentement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCorpsDocument
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDemandeExamenImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDestinatairePrevu
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedicalEntree
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedical
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDispositifsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDocumentAttache
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDocumentDeReference
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDocumentsAjoutes
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMEducationPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEnteteDocument
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvenement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMExamenImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMExpositionRadiations
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMInformateur
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMInformationsCliniques
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMObjectCatalog
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMObservationGrossesse
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMObservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMOperateurSaisie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMParticipantCorps
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMParticipant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPatientUsager
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPersonneStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPersonneStructure
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPrescription
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPriseEncharge
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMProbleme
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMQuantiteExposition
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferenceInterne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferencesExternes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMRencontre
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMResponsable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsExamenImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsExamensNonCode
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSection
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSerieImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSeverite
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSOPInstance
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatutCliniquePatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatutProbleme
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStructureConservation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSystemeStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTechniqueImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMValidateur
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 

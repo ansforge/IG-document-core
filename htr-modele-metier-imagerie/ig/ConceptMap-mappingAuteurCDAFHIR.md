@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAuteurCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Auteur" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Auteur" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Auteur du document (humain ou système)](StructureDefinition-Auteur.md) to [CDA - author](StructureDefinition-fr-core-author.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Auteur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author`
 
 * **Source Code**: Auteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -44,7 +44,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - author](StructureDefinition-fr-core-author.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-author` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: author
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -85,7 +85,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

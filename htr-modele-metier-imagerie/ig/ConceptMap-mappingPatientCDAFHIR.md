@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPatientCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Patient/Usager" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Patient/Usager" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient` to [CDA - recordTarget](StructureDefinition-fr-core-record-target.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Patient` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target`
 
 * **Source Code**: Patient
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -117,7 +117,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - recordTarget](StructureDefinition-fr-core-record-target.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-record-target` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
 
 * **Source Code**: recordTarget.patientRole
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -227,7 +227,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

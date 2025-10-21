@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingmodelemetierCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : Entête d'un document |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : Entête d'un document |
 
  
 Ce ConceptMap présente trois groupes de mapping : 
@@ -20,7 +20,7 @@ Ce ConceptMap présente trois groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md) to [CDA - clinicalDocument](StructureDefinition-fr-core-clinical-document.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/EnteteDocument` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document`
 
 * **Source Code**: EnteteDocument.identifiantUniqueDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -97,7 +97,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - clinicalDocument](StructureDefinition-fr-core-clinical-document.md) to [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document` to [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
 
 * **Source Code**: ClinicalDocument.id
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -105,7 +105,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 3**Mapping from [CDA - clinicalDocument](StructureDefinition-fr-core-clinical-document.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 3**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: ClinicalDocument.templateId
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -214,7 +214,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

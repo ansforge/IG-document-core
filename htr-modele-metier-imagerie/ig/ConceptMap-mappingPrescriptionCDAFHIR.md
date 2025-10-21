@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPrescriptionCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Association du document à une prescription](StructureDefinition-Prescription.md) to [CDA - inFulfillmentOf](StructureDefinition-fr-core-inFulfillment-of.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Prescription` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of`
 
 * **Source Code**: Prescription
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -33,7 +33,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - inFulfillmentOf](StructureDefinition-fr-core-inFulfillment-of.md) to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-inFulfillment-of` to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
 
 * **Source Code**: inFulfillmentOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -59,7 +59,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

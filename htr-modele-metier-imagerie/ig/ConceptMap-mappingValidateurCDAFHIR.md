@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingValidateurCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Validateur" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Validateur" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap présente deux groupes de mapping :
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from [Modèle métier - Validateur du document](StructureDefinition-Validateur.md) to [CDA - authenticator](StructureDefinition-fr-core-authenticator.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator`
 
 * **Source Code**: Validateur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -36,7 +36,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - authenticator](StructureDefinition-fr-core-authenticator.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator` to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: authenticator
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -125,7 +125,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-14T08:46:07+00:00",
+  "date" : "2025-10-21T10:48:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
