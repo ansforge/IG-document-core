@@ -1,7 +1,7 @@
-Extension: FrActorExtension
+Extension: FRActorExtension
 Id: fr-actor-extension
-Title: "Extension - Fr Actor"
-Description: "Extension pour représenter un acteur impliqué dans le document avec son type et sa référence."
+Title: "FR Actor Extension"
+Description: "Extension permettant de représenter un acteur impliqué dans le document avec son type et sa référence."
 
 * ^context[+].type = #element
 * ^context[=].expression = "Resource"
@@ -20,5 +20,5 @@ Description: "Extension pour représenter un acteur impliqué dans le document a
 * extension[typeCode] ^short = "Type de participation"
 
 // Sous-extension actor
-* extension[actor].value[x] only Reference(FrPractitionerRoleDocument or Device or FrDeviceAuteurDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* extension[actor].value[x] only Reference(FRPractitionerRoleDocument or Device or FRDeviceAuteurDocument or FROrganizationDocument or FrRelatedPersonDocument or FRPatientINSDocument or FRPatientDocument)
 * extension[actor] ^short = "Référence vers le rôle du praticien dans le document"

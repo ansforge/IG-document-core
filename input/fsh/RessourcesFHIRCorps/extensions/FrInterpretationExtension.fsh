@@ -1,6 +1,6 @@
-Extension: FrInterpretationExtension
+Extension: FRInterpretationExtension
 Id: fr-interpretation-extension
-Title: "Extension - Fr Interpretation"
+Title: "FR Interpretation Extension"
 Description: "Extension permettant de spécifier une interprétation."
 * ^context[+].type = #element
 * ^context[=].expression = "FamilyMemberHistory"

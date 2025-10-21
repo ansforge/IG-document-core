@@ -1,6 +1,6 @@
-Extension: FrProcedurePriorityExtension
-Id: fr-priority-extension
-Title: "Extension - Fr Priority"
+Extension: FRProcedurePriorityExtension
+Id: fr-procedure-priority-extension
+Title: "FR Procedure Priority Extension"
 Description: "Extension permettant d’indiquer d'indique la priorité clinique de l’observation."
 * ^context[+].type = #element
 * ^context[=].expression = "Procedure"

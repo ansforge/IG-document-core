@@ -1,7 +1,7 @@
-Extension: FrImmunizationTypeExtension
+Extension: FRImmunizationTypeExtension
 Id: fr-immunization-type-extension
-Title: "Extension - Fr Immunization Type"
-Description: "Extension représentant le type de vaccination (ex: INITIMMUNIZ, BOOSTER, IMMUNIZ)."
+Title: "FR Immunization Type Extension"
+Description: "Extension permettant de représenter le type de vaccination (ex: INITIMMUNIZ, BOOSTER, IMMUNIZ)."
 * ^context.type = #element
 * ^context.expression = "Immunization"
 

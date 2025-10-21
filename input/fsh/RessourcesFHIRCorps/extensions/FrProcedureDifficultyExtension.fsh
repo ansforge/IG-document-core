@@ -1,6 +1,6 @@
-Extension: FrProcedureDifficultyExtension
-Id: fr-difficulty-extension
-Title: "Extension - Procedure Difficulty"
+Extension: FRProcedureDifficultyExtension
+Id: fr-procedure-difficulty-extension
+Title: "FR Procedure Difficulty Extension"
 Description: "Extension permettant d'indiquer la difficulté perçue ou mesurée d'un acte."
 
 * ^context[+].type = #element

@@ -1,7 +1,7 @@
-Extension: FrFamilyMemberHistoryBodySiteExtension
-Id: fr-body-site-extension
-Title: "Extension - Fr Body Site Extension"
-Description: "Extension pour indiquer la localisation anatomique d'une condition dans antécédents familiaux"
+Extension: FRFamilyMemberHistoryBodySiteExtension
+Id: fr-family-member-history-body-site-extension
+Title: "FR Family Member History Body Site Extension"
+Description: "Extension permettant d'indiquer la localisation anatomique d'une condition dans antécédents familiaux"
 
 * ^context[+].type = #element
 * ^context[=].expression = "FamilyMemberHistory"
