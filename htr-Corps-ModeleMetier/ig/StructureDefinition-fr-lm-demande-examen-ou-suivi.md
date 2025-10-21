@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-demande-examen
   "name" : "FRLMDemandeExamenOuSuivi",
   "title" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
   "status" : "draft",
-  "date" : "2025-10-21T08:19:27+00:00",
+  "date" : "2025-10-21T12:36:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

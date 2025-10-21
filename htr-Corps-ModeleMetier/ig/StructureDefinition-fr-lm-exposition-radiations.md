@@ -16,7 +16,7 @@ Section Exposition aux radiations
 
 **Usages:**
 
-* Use this Logical Model: [* Modèle logique métier du corps](StructureDefinition-FRLMCorpsDocument.md) and [Modèle logique métier - FR LM Acte d'imagerie](StructureDefinition-fr-lm-acte-imagerie.md)
+* Use this Logical Model: [Modèle logique métier - FR LM Acte d'imagerie](StructureDefinition-fr-lm-acte-imagerie.md) and [* Modèle logique métier du corps](StructureDefinition-fr-lm-corps-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-exposition-radiations)
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-exposition-rad
   "name" : "FRLMExpositionRadiations",
   "title" : "Modèle logique métier - FR LM Exposition aux radiations",
   "status" : "draft",
-  "date" : "2025-10-21T08:19:27+00:00",
+  "date" : "2025-10-21T12:36:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

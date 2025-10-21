@@ -16,7 +16,7 @@ Section Comparaison d’examens d’imagerie
 
 **Usages:**
 
-* Use this Logical Model: [* Modèle logique métier du corps](StructureDefinition-FRLMCorpsDocument.md)
+* Use this Logical Model: [* Modèle logique métier du corps](StructureDefinition-fr-lm-corps-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-comparaison-examens-imagerie)
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-comparaison-ex
   "name" : "FRLMComparaisonExamensImagerie",
   "title" : "Modèle logique métier - FR LM Comparaison d'examens d'imagerie",
   "status" : "draft",
-  "date" : "2025-10-21T08:19:27+00:00",
+  "date" : "2025-10-21T12:36:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

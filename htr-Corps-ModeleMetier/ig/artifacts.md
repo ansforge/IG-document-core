@@ -14,7 +14,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [Modèle logique métier - FR LM Auteur](StructureDefinition-fr-lm-auteur.md) | Auteur du document : ce peut être un professionnel, un patient/usager ou un système.* Pour un professionnel ou un système, la structure de rattachement doit être précisée.
  |
 | [Modèle logique métier - FR LM Consentement](StructureDefinition-fr-lm-consentement.md) | Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. |
-| [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu-document.md) | Personne déclarée comme destinataire prévu du document.* Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s). Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.
+| [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu.md) | Personne déclarée comme destinataire prévu du document.* Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s). Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.
  |
 | [Modèle logique métier - FR LM Document de référence](StructureDefinition-fr-lm-document-reference.md) | Référence un document existant (à remplacer ou transformé). |
 | [Modèle logique métier - FR LM En-tête document](StructureDefinition-fr-lm-entete-document.md) | Eléments de l’entête d’un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). |
@@ -180,7 +180,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 | | |
 | :--- | :--- |
-| [* Modèle logique métier du corps](StructureDefinition-FRLMCorpsDocument.md) | Eléments métier du corps d’un document |
+| [* Modèle logique métier du corps](StructureDefinition-fr-lm-corps-document.md) | Eléments métier du corps d’un document |
 | [Historique des actes](StructureDefinition-fr-lm-historique-des-actes.md) | Section Historique des actes |
 | [Modèle logique métier - FR LM Acte d'imagerie](StructureDefinition-fr-lm-acte-imagerie.md) | Section Acte d’imagerie |
 | [Modèle logique métier - FR LM Addendum](StructureDefinition-fr-lm-addendum.md) | Section Addendum |

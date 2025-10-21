@@ -16,7 +16,7 @@ Section Habitus et modes de vie
 
 **Usages:**
 
-* Use this Logical Model: [* Modèle logique métier du corps](StructureDefinition-FRLMCorpsDocument.md) and [Modèle logique métier - FR LM Habitus et modes de vie](StructureDefinition-fr-lm-habitus-mode-de-vie.md)
+* Use this Logical Model: [* Modèle logique métier du corps](StructureDefinition-fr-lm-corps-document.md) and [Modèle logique métier - FR LM Habitus et modes de vie](StructureDefinition-fr-lm-habitus-mode-de-vie.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-habitus-mode-de-vie)
 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-habitus-mode-d
   "name" : "FRLMHabitusModeDeVie",
   "title" : "Modèle logique métier - FR LM Habitus et modes de vie",
   "status" : "draft",
-  "date" : "2025-10-21T08:19:27+00:00",
+  "date" : "2025-10-21T12:36:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

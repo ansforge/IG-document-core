@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-entete-documen
   "name" : "FRLMEnteteDocument",
   "title" : "Modèle logique métier - FR LM En-tête document",
   "status" : "draft",
-  "date" : "2025-10-21T08:19:27+00:00",
+  "date" : "2025-10-21T12:36:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -286,7 +286,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-entete-documen
         "max" : "*",
         "type" : [
           {
-            "code" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu-document"
+            "code" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-destinataire-prevu"
           }
         ]
       },
