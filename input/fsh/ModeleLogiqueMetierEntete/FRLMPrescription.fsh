@@ -5,4 +5,4 @@ Description: "Association à une prescription à l’origine de l’acte dont r�
 Characteristics: #can-be-target	
 * . 0..*	 		
 * identifiantPrescription 1..1 Identifier "Identifiant de la prescription."		 				 			 		
-* accessionNumber  0..1 Identifier "Accession Number (Spécifique à l’imagerie)."	 		
+* accessionNumber 0..1 Identifier "Accession Number (Spécifique à l’imagerie)."	 		
