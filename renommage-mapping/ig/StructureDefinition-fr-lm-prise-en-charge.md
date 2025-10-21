@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prise-en-charg
   "name" : "FRLMPriseEncharge",
   "title" : "Modèle logique métier - FR LM Prise en charge",
   "status" : "draft",
-  "date" : "2025-10-21T13:27:14+00:00",
+  "date" : "2025-10-21T14:51:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
