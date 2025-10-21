@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Participant.csv), [E
   "name" : "Participant",
   "title" : "Modèle métier - Autres personnes / structures impliquées",
   "status" : "draft",
-  "date" : "2025-10-21T13:57:20+00:00",
+  "date" : "2025-10-21T14:02:08+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

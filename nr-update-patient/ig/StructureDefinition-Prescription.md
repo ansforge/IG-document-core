@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-Prescription.csv), [
   "name" : "Prescription",
   "title" : "Modèle métier - Association du document à une prescription",
   "status" : "draft",
-  "date" : "2025-10-21T13:57:20+00:00",
+  "date" : "2025-10-21T14:02:08+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
