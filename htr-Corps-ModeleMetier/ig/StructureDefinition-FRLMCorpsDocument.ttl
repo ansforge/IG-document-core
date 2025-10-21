@@ -1,0 +1,1230 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMCorpsDocument> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FRLMCorpsDocument"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure FRLMCorpsDocument</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de lélément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument\" title=\"Eléments métier du corps d'un document\">FRLMCorpsDocument</a><a name=\"FRLMCorpsDocument\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://build.fhir.org/types.html#Base\">Base</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">* Modèle logique métier du corps</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.allergiesEtHypersensibilites\" title=\"Section Allergies et hypersensibilités\">allergiesEtHypersensibilites</a><a name=\"FRLMCorpsDocument.allergiesEtHypersensibilites\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-allergies-et-hypersensibilites.html\">fr-lm-allergies-et-hypersensibilites</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Allergies et hypersensibilités<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.antecedentsFamiliaux\" title=\"Section Antécédents familiaux\">antecedentsFamiliaux</a><a name=\"FRLMCorpsDocument.antecedentsFamiliaux\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-antecedents-familiaux.html\">fr-lm-antecedents-familiaux</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Antécédents familiaux<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.antecedentsMedicaux\" title=\"Section Antécédents médicaux\">antecedentsMedicaux</a><a name=\"FRLMCorpsDocument.antecedentsMedicaux\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-antecedents-medicaux.html\">fr-lm-antecedents-medicaux</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Antécédents médicaux<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.codesAbarres\" title=\"Section Codes à barres\">codesAbarres</a><a name=\"FRLMCorpsDocument.codesAbarres\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-codes-a-barres.html\">fr-lm-codes-a-barres</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Codes à barres<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.commentaireNonCode\" title=\"Section Commentaire (Non-Codé)\">commentaireNonCode</a><a name=\"FRLMCorpsDocument.commentaireNonCode\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-commentaire-non-code.html\">fr-lm-commentaire-non-code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Commentaire (Non-Codé)<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.cRBIOChapitre\" title=\"section Compte rendu de biologie de 1er niveau\">cRBIOChapitre</a><a name=\"FRLMCorpsDocument.cRBIOChapitre\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-cr-bio-chapitre.html\">fr-lm-cr-bio-chapitre</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">section Compte rendu de biologie de 1er niveau<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.cRBIOSousChapitre\" title=\"Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)\">cRBIOSousChapitre</a><a name=\"FRLMCorpsDocument.cRBIOSousChapitre\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-cr-bio-sous-chapitre.html\">fr-lm-cr-bio-sous-chapitre</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.acteImagerie\" title=\"Section Acte d'imagerie\">acteImagerie</a><a name=\"FRLMCorpsDocument.acteImagerie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-acte-imagerie.html\">fr-lm-acte-imagerie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Acte d'imagerie<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.addendum\" title=\"Section Addendum\">addendum</a><a name=\"FRLMCorpsDocument.addendum\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-addendum.html\">fr-lm-addendum</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Addendum<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.conclusions\" title=\"Section Conclusions\">conclusions</a><a name=\"FRLMCorpsDocument.conclusions\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-conclusion-examen-imagerie.html\">fr-lm-conclusion-examen-imagerie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Conclusions<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.demandeExamenImagerie\" title=\"Section Demande d'examen\">demandeExamenImagerie</a><a name=\"FRLMCorpsDocument.demandeExamenImagerie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-demande-examen-imagerie.html\">fr-lm-demande-examen-imagerie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Demande d'examen<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.comparaisonExamensImagerie\" title=\"Section Examen comparatif\">comparaisonExamensImagerie</a><a name=\"FRLMCorpsDocument.comparaisonExamensImagerie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-comparaison-examens-imagerie.html\">fr-lm-comparaison-examens-imagerie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Examen comparatif<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.expositionRadiations\" title=\"Section Exposition aux radiations\">expositionRadiations</a><a name=\"FRLMCorpsDocument.expositionRadiations\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-exposition-radiations.html\">fr-lm-exposition-radiations</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Exposition aux radiations<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.informationsCliniques\" title=\"Section Informations cliniques\">informationsCliniques</a><a name=\"FRLMCorpsDocument.informationsCliniques\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-informations-cliniques.html\">fr-lm-informations-cliniques</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Informations cliniques<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.objectCatalog\" title=\"Section  Object catalog\">objectCatalog</a><a name=\"FRLMCorpsDocument.objectCatalog\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-object-catalog.html\">fr-lm-object-catalog</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section  Object catalog<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.directivesAnticipees\" title=\"Section Directives anticipées\">directivesAnticipees</a><a name=\"FRLMCorpsDocument.directivesAnticipees\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-directives-anticipees.html\">fr-lm-directives-anticipees</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Directives anticipées<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.dispensationMedicaments\" title=\"Section Dispensation médicaments\">dispensationMedicaments</a><a name=\"FRLMCorpsDocument.dispensationMedicaments\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-dispensation-medicaments.html\">fr-lm-dispensation-medicaments</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Dispensation médicaments<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.dispositifsMedicaux\" title=\"Section Dispositifs medicaux\">dispositifsMedicaux</a><a name=\"FRLMCorpsDocument.dispositifsMedicaux\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-dispositifs-medicaux.html\">fr-lm-dispositifs-medicaux</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Dispositifs medicaux<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.documentPDFCopie\" title=\"Section Document PDF Copie\">documentPDFCopie</a><a name=\"FRLMCorpsDocument.documentPDFCopie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-document-pdf-copie.html\">fr-lm-document-pdf-copie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Document PDF Copie<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.documentsAjoutes\" title=\"Section Documents ajoutés\">documentsAjoutes</a><a name=\"FRLMCorpsDocument.documentsAjoutes\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-documents-ajoutes.html\">fr-lm-documents-ajoutes</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Documents ajoutés<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.educationPatient\" title=\"Section Education du patient\">educationPatient</a><a name=\"FRLMCorpsDocument.educationPatient\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-education-patient.html\">fr-lm-education-patient</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Education du patient<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.effetsIndesirables\" title=\"Section Effets indesirables\">effetsIndesirables</a><a name=\"FRLMCorpsDocument.effetsIndesirables\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-effets-indesirables.html\">fr-lm-effets-indesirables</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Effets indesirables<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode\" title=\"Section Facteurs de risque professionnels non Codé\">facteursDeRisqueProfessionnelsNonCode</a><a name=\"FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-facteurs-de-risque-professionnels-non-code.html\">fr-lm-facteurs-de-risque-professionnels-non-code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Facteurs de risque professionnels non Codé<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.fonctionsPhysiques\" title=\"Section Fonctions physiques\">fonctionsPhysiques</a><a name=\"FRLMCorpsDocument.fonctionsPhysiques\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-fonctions-physiques.html\">fr-lm-fonctions-physiques</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Fonctions physiques<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.habitusModeDeVie\" title=\"Section Habitus et modes de vie\">habitusModeDeVie</a><a name=\"FRLMCorpsDocument.habitusModeDeVie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-habitus-mode-de-vie.html\">fr-lm-habitus-mode-de-vie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Habitus et modes de vie<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.historiqueDesActes\" title=\"Section Historique des actes\">historiqueDesActes</a><a name=\"FRLMCorpsDocument.historiqueDesActes\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-historique-des-actes.html\">fr-lm-historique-des-actes</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Historique des actes<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.historiqueDesGrossesses\" title=\"Section Historique des grossesses\">historiqueDesGrossesses</a><a name=\"FRLMCorpsDocument.historiqueDesGrossesses\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-historique-des-grossesses.html\">fr-lm-historique-des-grossesses</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Historique des grossesses<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.planSoins\" title=\"Section Plan de Soins\">planSoins</a><a name=\"FRLMCorpsDocument.planSoins\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-plan-soins.html\">fr-lm-plan-soins</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Plan de Soins<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.pointsDeVigilancesNonCode\" title=\"Section Points de Vigilances non code\">pointsDeVigilancesNonCode</a><a name=\"FRLMCorpsDocument.pointsDeVigilancesNonCode\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-points-de-vigilances-non-code.html\">fr-lm-points-de-vigilances-non-code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Points de Vigilances non code<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.prescriptionDispositifsMedicaux\" title=\"Section Prescription de dispositifs médicaux\">prescriptionDispositifsMedicaux</a><a name=\"FRLMCorpsDocument.prescriptionDispositifsMedicaux\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-prescription-dispositifs-medicaux.html\">fr-lm-prescription-dispositifs-medicaux</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Prescription de dispositifs médicaux<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.prescriptionMedicaments\" title=\"Section Prescription médicaments\">prescriptionMedicaments</a><a name=\"FRLMCorpsDocument.prescriptionMedicaments\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-prescription-medicaments.html\">fr-lm-prescription-medicaments</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Prescription médicaments<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.problemesActifs\" title=\"Section Problemès Actifs\">problemesActifs</a><a name=\"FRLMCorpsDocument.problemesActifs\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-problemes-actifs.html\">fr-lm-problemes-actifs</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Problemès Actifs<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.raisonRecommandationNonCode\" title=\"Section Raison de la recommandation (non Codé)\">raisonRecommandationNonCode</a><a name=\"FRLMCorpsDocument.raisonRecommandationNonCode\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-raison-recommandation-non-code.html\">fr-lm-raison-recommandation-non-code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Raison de la recommandation (non Codé)<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.raisonRecommandation\" title=\"Section Raison de la recommandation\">raisonRecommandation</a><a name=\"FRLMCorpsDocument.raisonRecommandation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-raison-recommandation.html\">fr-lm-raison-recommandation</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Raison de la recommandation<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention\" title=\"Section Résultats de laboratoire de biologie de seconde intention\">resultatsLaboratoireBiologieSecondeIntention</a><a name=\"FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-resultats-laboratoire-biologie-seconde-intention.html\">fr-lm-resultats-laboratoire-biologie-seconde-intention</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Résultats de laboratoire de biologie de seconde intention<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.resultatsEvenements\" title=\"Section Resultats d'évenements\">resultatsEvenements</a><a name=\"FRLMCorpsDocument.resultatsEvenements\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-resultats-evenements.html\">fr-lm-resultats-evenements</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Resultats d'évenements<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.resultatsExamensNonCode\" title=\"Section Resultats d'xamens (non Codée)\">resultatsExamensNonCode</a><a name=\"FRLMCorpsDocument.resultatsExamensNonCode\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-resultats-examens-non-code.html\">fr-lm-resultats-examens-non-code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Resultats d'xamens (non Codée)<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.resultatsExamens\" title=\"Section Résultats d'examens\">resultatsExamens</a><a name=\"FRLMCorpsDocument.resultatsExamens\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-resultats-examens.html\">fr-lm-resultats-examens</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Résultats d'examens<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.resultats\" title=\"Section Resultats\">resultats</a><a name=\"FRLMCorpsDocument.resultats\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-resultats.html\">fr-lm-resultats</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Resultats<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.signesVitaux\" title=\"Section Signes vitaux\">signesVitaux</a><a name=\"FRLMCorpsDocument.signesVitaux\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-signes-vitaux.html\">fr-lm-signes-vitaux</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Signes vitaux<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.statutDocument\" title=\"Section Statut du document\">statutDocument</a><a name=\"FRLMCorpsDocument.statutDocument\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-statut-document.html\">fr-lm-statut-document</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Statut du document<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.statutFonctionnel\" title=\"Section Statut fonctionnel\">statutFonctionnel</a><a name=\"FRLMCorpsDocument.statutFonctionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-statut-fonctionnel.html\">fr-lm-statut-fonctionnel</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Statut fonctionnel<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.traitements\" title=\"Section Traitement\">traitements</a><a name=\"FRLMCorpsDocument.traitements\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-traitement.html\">fr-lm-traitement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Traitement<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.traitementSortie\" title=\"Section Traitement à la sortie\">traitementSortie</a><a name=\"FRLMCorpsDocument.traitementSortie\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-traitement-sortie.html\">fr-lm-traitement-sortie</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Traitement à la sortie<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.traitementsAdministres\" title=\"Section Traitements administrés\">traitementsAdministres</a><a name=\"FRLMCorpsDocument.traitementsAdministres\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-traitements-administres.html\">fr-lm-traitements-administres</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Traitements administrés<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-FRLMCorpsDocument-definitions.html#FRLMCorpsDocument.vaccinations\" title=\"Section Vaccinations\">vaccinations</a><a name=\"FRLMCorpsDocument.vaccinations\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-fr-lm-vaccinations.html\">fr-lm-vaccinations</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Section Vaccinations<br/></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMCorpsDocument"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "FRLMCorpsDocument"] ; # 
+  fhir:title [ fhir:v "* Modèle logique métier du corps"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-10-21T08:19:27+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Eléments métier du corps d'un document"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMCorpsDocument"^^xsd:anyURI] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://hl7.org/fhir/StructureDefinition/Base"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/StructureDefinition/Base>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "4.0.1"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "FRLMCorpsDocument" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument" ] ;
+       fhir:short [ fhir:v "* Modèle logique métier du corps" ] ;
+       fhir:definition [ fhir:v "Eléments métier du corps d'un document" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.allergiesEtHypersensibilites" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.allergiesEtHypersensibilites" ] ;
+       fhir:short [ fhir:v "Section Allergies et hypersensibilités" ] ;
+       fhir:definition [ fhir:v "Section Allergies et hypersensibilités" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.allergiesEtHypersensibilites" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-allergies-et-hypersensibilites"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.antecedentsFamiliaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsFamiliaux" ] ;
+       fhir:short [ fhir:v "Section Antécédents familiaux" ] ;
+       fhir:definition [ fhir:v "Section Antécédents familiaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsFamiliaux" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-familiaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.antecedentsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Antécédents médicaux" ] ;
+       fhir:definition [ fhir:v "Section Antécédents médicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsMedicaux" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.codesAbarres" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.codesAbarres" ] ;
+       fhir:short [ fhir:v "Section Codes à barres" ] ;
+       fhir:definition [ fhir:v "Section Codes à barres" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.codesAbarres" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-codes-a-barres"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.commentaireNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.commentaireNonCode" ] ;
+       fhir:short [ fhir:v "Section Commentaire (Non-Codé)" ] ;
+       fhir:definition [ fhir:v "Section Commentaire (Non-Codé)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.commentaireNonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-commentaire-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.cRBIOChapitre" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOChapitre" ] ;
+       fhir:short [ fhir:v "section Compte rendu de biologie de 1er niveau" ] ;
+       fhir:definition [ fhir:v "section Compte rendu de biologie de 1er niveau" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOChapitre" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-cr-bio-chapitre"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.cRBIOSousChapitre" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOSousChapitre" ] ;
+       fhir:short [ fhir:v "Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)" ] ;
+       fhir:definition [ fhir:v "Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOSousChapitre" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-cr-bio-sous-chapitre"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.acteImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.acteImagerie" ] ;
+       fhir:short [ fhir:v "Section Acte d'imagerie" ] ;
+       fhir:definition [ fhir:v "Section Acte d'imagerie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.acteImagerie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-acte-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.addendum" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.addendum" ] ;
+       fhir:short [ fhir:v "Section Addendum" ] ;
+       fhir:definition [ fhir:v "Section Addendum" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.addendum" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-addendum"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.conclusions" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.conclusions" ] ;
+       fhir:short [ fhir:v "Section Conclusions" ] ;
+       fhir:definition [ fhir:v "Section Conclusions" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.conclusions" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-conclusion-examen-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.demandeExamenImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.demandeExamenImagerie" ] ;
+       fhir:short [ fhir:v "Section Demande d'examen" ] ;
+       fhir:definition [ fhir:v "Section Demande d'examen" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.demandeExamenImagerie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.comparaisonExamensImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.comparaisonExamensImagerie" ] ;
+       fhir:short [ fhir:v "Section Examen comparatif" ] ;
+       fhir:definition [ fhir:v "Section Examen comparatif" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.comparaisonExamensImagerie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-comparaison-examens-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.expositionRadiations" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.expositionRadiations" ] ;
+       fhir:short [ fhir:v "Section Exposition aux radiations" ] ;
+       fhir:definition [ fhir:v "Section Exposition aux radiations" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.expositionRadiations" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposition-radiations"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.informationsCliniques" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.informationsCliniques" ] ;
+       fhir:short [ fhir:v "Section Informations cliniques" ] ;
+       fhir:definition [ fhir:v "Section Informations cliniques" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.informationsCliniques" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informations-cliniques"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.objectCatalog" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.objectCatalog" ] ;
+       fhir:short [ fhir:v "Section  Object catalog" ] ;
+       fhir:definition [ fhir:v "Section  Object catalog" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.objectCatalog" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-object-catalog"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.directivesAnticipees" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.directivesAnticipees" ] ;
+       fhir:short [ fhir:v "Section Directives anticipées" ] ;
+       fhir:definition [ fhir:v "Section Directives anticipées" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.directivesAnticipees" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-directives-anticipees"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.dispensationMedicaments" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.dispensationMedicaments" ] ;
+       fhir:short [ fhir:v "Section Dispensation médicaments" ] ;
+       fhir:definition [ fhir:v "Section Dispensation médicaments" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.dispensationMedicaments" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispensation-medicaments"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.dispositifsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.dispositifsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Dispositifs medicaux" ] ;
+       fhir:definition [ fhir:v "Section Dispositifs medicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.dispositifsMedicaux" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositifs-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.documentPDFCopie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.documentPDFCopie" ] ;
+       fhir:short [ fhir:v "Section Document PDF Copie" ] ;
+       fhir:definition [ fhir:v "Section Document PDF Copie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.documentPDFCopie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-pdf-copie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.documentsAjoutes" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.documentsAjoutes" ] ;
+       fhir:short [ fhir:v "Section Documents ajoutés" ] ;
+       fhir:definition [ fhir:v "Section Documents ajoutés" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.documentsAjoutes" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-documents-ajoutes"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.educationPatient" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.educationPatient" ] ;
+       fhir:short [ fhir:v "Section Education du patient" ] ;
+       fhir:definition [ fhir:v "Section Education du patient" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.educationPatient" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-education-patient"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.effetsIndesirables" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.effetsIndesirables" ] ;
+       fhir:short [ fhir:v "Section Effets indesirables" ] ;
+       fhir:definition [ fhir:v "Section Effets indesirables" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.effetsIndesirables" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-effets-indesirables"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode" ] ;
+       fhir:short [ fhir:v "Section Facteurs de risque professionnels non Codé" ] ;
+       fhir:definition [ fhir:v "Section Facteurs de risque professionnels non Codé" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-facteurs-de-risque-professionnels-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.fonctionsPhysiques" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.fonctionsPhysiques" ] ;
+       fhir:short [ fhir:v "Section Fonctions physiques" ] ;
+       fhir:definition [ fhir:v "Section Fonctions physiques" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.fonctionsPhysiques" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-fonctions-physiques"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.habitusModeDeVie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.habitusModeDeVie" ] ;
+       fhir:short [ fhir:v "Section Habitus et modes de vie" ] ;
+       fhir:definition [ fhir:v "Section Habitus et modes de vie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.habitusModeDeVie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-habitus-mode-de-vie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.historiqueDesActes" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesActes" ] ;
+       fhir:short [ fhir:v "Section Historique des actes" ] ;
+       fhir:definition [ fhir:v "Section Historique des actes" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesActes" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-actes"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.historiqueDesGrossesses" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesGrossesses" ] ;
+       fhir:short [ fhir:v "Section Historique des grossesses" ] ;
+       fhir:definition [ fhir:v "Section Historique des grossesses" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesGrossesses" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-grossesses"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.planSoins" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.planSoins" ] ;
+       fhir:short [ fhir:v "Section Plan de Soins" ] ;
+       fhir:definition [ fhir:v "Section Plan de Soins" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.planSoins" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-plan-soins"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.pointsDeVigilancesNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.pointsDeVigilancesNonCode" ] ;
+       fhir:short [ fhir:v "Section Points de Vigilances non code" ] ;
+       fhir:definition [ fhir:v "Section Points de Vigilances non code" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.pointsDeVigilancesNonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-points-de-vigilances-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.prescriptionDispositifsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionDispositifsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Prescription de dispositifs médicaux" ] ;
+       fhir:definition [ fhir:v "Section Prescription de dispositifs médicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionDispositifsMedicaux" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-dispositifs-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.prescriptionMedicaments" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionMedicaments" ] ;
+       fhir:short [ fhir:v "Section Prescription médicaments" ] ;
+       fhir:definition [ fhir:v "Section Prescription médicaments" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionMedicaments" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-medicaments"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.problemesActifs" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.problemesActifs" ] ;
+       fhir:short [ fhir:v "Section Problemès Actifs" ] ;
+       fhir:definition [ fhir:v "Section Problemès Actifs" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.problemesActifs" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-problemes-actifs"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.raisonRecommandationNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandationNonCode" ] ;
+       fhir:short [ fhir:v "Section Raison de la recommandation (non Codé)" ] ;
+       fhir:definition [ fhir:v "Section Raison de la recommandation (non Codé)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandationNonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.raisonRecommandation" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandation" ] ;
+       fhir:short [ fhir:v "Section Raison de la recommandation" ] ;
+       fhir:definition [ fhir:v "Section Raison de la recommandation" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandation" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention" ] ;
+       fhir:short [ fhir:v "Section Résultats de laboratoire de biologie de seconde intention" ] ;
+       fhir:definition [ fhir:v "Section Résultats de laboratoire de biologie de seconde intention" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsEvenements" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsEvenements" ] ;
+       fhir:short [ fhir:v "Section Resultats d'évenements" ] ;
+       fhir:definition [ fhir:v "Section Resultats d'évenements" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.resultatsEvenements" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-evenements"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsExamensNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamensNonCode" ] ;
+       fhir:short [ fhir:v "Section Resultats d'xamens (non Codée)" ] ;
+       fhir:definition [ fhir:v "Section Resultats d'xamens (non Codée)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamensNonCode" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examens-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsExamens" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamens" ] ;
+       fhir:short [ fhir:v "Section Résultats d'examens" ] ;
+       fhir:definition [ fhir:v "Section Résultats d'examens" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamens" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examens"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultats" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultats" ] ;
+       fhir:short [ fhir:v "Section Resultats" ] ;
+       fhir:definition [ fhir:v "Section Resultats" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.resultats" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.signesVitaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.signesVitaux" ] ;
+       fhir:short [ fhir:v "Section Signes vitaux" ] ;
+       fhir:definition [ fhir:v "Section Signes vitaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.signesVitaux" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-signes-vitaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.statutDocument" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.statutDocument" ] ;
+       fhir:short [ fhir:v "Section Statut du document" ] ;
+       fhir:definition [ fhir:v "Section Statut du document" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.statutDocument" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-document"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.statutFonctionnel" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.statutFonctionnel" ] ;
+       fhir:short [ fhir:v "Section Statut fonctionnel" ] ;
+       fhir:definition [ fhir:v "Section Statut fonctionnel" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.statutFonctionnel" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-fonctionnel"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitements" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitements" ] ;
+       fhir:short [ fhir:v "Section Traitement" ] ;
+       fhir:definition [ fhir:v "Section Traitement" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.traitements" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitementSortie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitementSortie" ] ;
+       fhir:short [ fhir:v "Section Traitement à la sortie" ] ;
+       fhir:definition [ fhir:v "Section Traitement à la sortie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.traitementSortie" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-sortie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitementsAdministres" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitementsAdministres" ] ;
+       fhir:short [ fhir:v "Section Traitements administrés" ] ;
+       fhir:definition [ fhir:v "Section Traitements administrés" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.traitementsAdministres" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitements-administres"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.vaccinations" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.vaccinations" ] ;
+       fhir:short [ fhir:v "Section Vaccinations" ] ;
+       fhir:definition [ fhir:v "Section Vaccinations" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "FRLMCorpsDocument.vaccinations" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-vaccinations"^^xsd:anyURI ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "FRLMCorpsDocument" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument" ] ;
+       fhir:short [ fhir:v "* Modèle logique métier du corps" ] ;
+       fhir:definition [ fhir:v "Eléments métier du corps d'un document" ]
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.allergiesEtHypersensibilites" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.allergiesEtHypersensibilites" ] ;
+       fhir:short [ fhir:v "Section Allergies et hypersensibilités" ] ;
+       fhir:definition [ fhir:v "Section Allergies et hypersensibilités" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-allergies-et-hypersensibilites"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.antecedentsFamiliaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsFamiliaux" ] ;
+       fhir:short [ fhir:v "Section Antécédents familiaux" ] ;
+       fhir:definition [ fhir:v "Section Antécédents familiaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-familiaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.antecedentsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.antecedentsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Antécédents médicaux" ] ;
+       fhir:definition [ fhir:v "Section Antécédents médicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.codesAbarres" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.codesAbarres" ] ;
+       fhir:short [ fhir:v "Section Codes à barres" ] ;
+       fhir:definition [ fhir:v "Section Codes à barres" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-codes-a-barres"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.commentaireNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.commentaireNonCode" ] ;
+       fhir:short [ fhir:v "Section Commentaire (Non-Codé)" ] ;
+       fhir:definition [ fhir:v "Section Commentaire (Non-Codé)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-commentaire-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.cRBIOChapitre" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOChapitre" ] ;
+       fhir:short [ fhir:v "section Compte rendu de biologie de 1er niveau" ] ;
+       fhir:definition [ fhir:v "section Compte rendu de biologie de 1er niveau" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-cr-bio-chapitre"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.cRBIOSousChapitre" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.cRBIOSousChapitre" ] ;
+       fhir:short [ fhir:v "Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)" ] ;
+       fhir:definition [ fhir:v "Section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-cr-bio-sous-chapitre"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.acteImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.acteImagerie" ] ;
+       fhir:short [ fhir:v "Section Acte d'imagerie" ] ;
+       fhir:definition [ fhir:v "Section Acte d'imagerie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-acte-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.addendum" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.addendum" ] ;
+       fhir:short [ fhir:v "Section Addendum" ] ;
+       fhir:definition [ fhir:v "Section Addendum" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-addendum"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.conclusions" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.conclusions" ] ;
+       fhir:short [ fhir:v "Section Conclusions" ] ;
+       fhir:definition [ fhir:v "Section Conclusions" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-conclusion-examen-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.demandeExamenImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.demandeExamenImagerie" ] ;
+       fhir:short [ fhir:v "Section Demande d'examen" ] ;
+       fhir:definition [ fhir:v "Section Demande d'examen" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.comparaisonExamensImagerie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.comparaisonExamensImagerie" ] ;
+       fhir:short [ fhir:v "Section Examen comparatif" ] ;
+       fhir:definition [ fhir:v "Section Examen comparatif" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-comparaison-examens-imagerie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.expositionRadiations" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.expositionRadiations" ] ;
+       fhir:short [ fhir:v "Section Exposition aux radiations" ] ;
+       fhir:definition [ fhir:v "Section Exposition aux radiations" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposition-radiations"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.informationsCliniques" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.informationsCliniques" ] ;
+       fhir:short [ fhir:v "Section Informations cliniques" ] ;
+       fhir:definition [ fhir:v "Section Informations cliniques" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informations-cliniques"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.objectCatalog" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.objectCatalog" ] ;
+       fhir:short [ fhir:v "Section  Object catalog" ] ;
+       fhir:definition [ fhir:v "Section  Object catalog" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-object-catalog"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.directivesAnticipees" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.directivesAnticipees" ] ;
+       fhir:short [ fhir:v "Section Directives anticipées" ] ;
+       fhir:definition [ fhir:v "Section Directives anticipées" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-directives-anticipees"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.dispensationMedicaments" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.dispensationMedicaments" ] ;
+       fhir:short [ fhir:v "Section Dispensation médicaments" ] ;
+       fhir:definition [ fhir:v "Section Dispensation médicaments" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispensation-medicaments"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.dispositifsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.dispositifsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Dispositifs medicaux" ] ;
+       fhir:definition [ fhir:v "Section Dispositifs medicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositifs-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.documentPDFCopie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.documentPDFCopie" ] ;
+       fhir:short [ fhir:v "Section Document PDF Copie" ] ;
+       fhir:definition [ fhir:v "Section Document PDF Copie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-pdf-copie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.documentsAjoutes" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.documentsAjoutes" ] ;
+       fhir:short [ fhir:v "Section Documents ajoutés" ] ;
+       fhir:definition [ fhir:v "Section Documents ajoutés" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-documents-ajoutes"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.educationPatient" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.educationPatient" ] ;
+       fhir:short [ fhir:v "Section Education du patient" ] ;
+       fhir:definition [ fhir:v "Section Education du patient" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-education-patient"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.effetsIndesirables" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.effetsIndesirables" ] ;
+       fhir:short [ fhir:v "Section Effets indesirables" ] ;
+       fhir:definition [ fhir:v "Section Effets indesirables" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-effets-indesirables"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.facteursDeRisqueProfessionnelsNonCode" ] ;
+       fhir:short [ fhir:v "Section Facteurs de risque professionnels non Codé" ] ;
+       fhir:definition [ fhir:v "Section Facteurs de risque professionnels non Codé" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-facteurs-de-risque-professionnels-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.fonctionsPhysiques" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.fonctionsPhysiques" ] ;
+       fhir:short [ fhir:v "Section Fonctions physiques" ] ;
+       fhir:definition [ fhir:v "Section Fonctions physiques" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-fonctions-physiques"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.habitusModeDeVie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.habitusModeDeVie" ] ;
+       fhir:short [ fhir:v "Section Habitus et modes de vie" ] ;
+       fhir:definition [ fhir:v "Section Habitus et modes de vie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-habitus-mode-de-vie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.historiqueDesActes" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesActes" ] ;
+       fhir:short [ fhir:v "Section Historique des actes" ] ;
+       fhir:definition [ fhir:v "Section Historique des actes" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-actes"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.historiqueDesGrossesses" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.historiqueDesGrossesses" ] ;
+       fhir:short [ fhir:v "Section Historique des grossesses" ] ;
+       fhir:definition [ fhir:v "Section Historique des grossesses" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-grossesses"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.planSoins" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.planSoins" ] ;
+       fhir:short [ fhir:v "Section Plan de Soins" ] ;
+       fhir:definition [ fhir:v "Section Plan de Soins" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-plan-soins"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.pointsDeVigilancesNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.pointsDeVigilancesNonCode" ] ;
+       fhir:short [ fhir:v "Section Points de Vigilances non code" ] ;
+       fhir:definition [ fhir:v "Section Points de Vigilances non code" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-points-de-vigilances-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.prescriptionDispositifsMedicaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionDispositifsMedicaux" ] ;
+       fhir:short [ fhir:v "Section Prescription de dispositifs médicaux" ] ;
+       fhir:definition [ fhir:v "Section Prescription de dispositifs médicaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-dispositifs-medicaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.prescriptionMedicaments" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.prescriptionMedicaments" ] ;
+       fhir:short [ fhir:v "Section Prescription médicaments" ] ;
+       fhir:definition [ fhir:v "Section Prescription médicaments" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-medicaments"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.problemesActifs" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.problemesActifs" ] ;
+       fhir:short [ fhir:v "Section Problemès Actifs" ] ;
+       fhir:definition [ fhir:v "Section Problemès Actifs" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-problemes-actifs"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.raisonRecommandationNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandationNonCode" ] ;
+       fhir:short [ fhir:v "Section Raison de la recommandation (non Codé)" ] ;
+       fhir:definition [ fhir:v "Section Raison de la recommandation (non Codé)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.raisonRecommandation" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.raisonRecommandation" ] ;
+       fhir:short [ fhir:v "Section Raison de la recommandation" ] ;
+       fhir:definition [ fhir:v "Section Raison de la recommandation" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsLaboratoireBiologieSecondeIntention" ] ;
+       fhir:short [ fhir:v "Section Résultats de laboratoire de biologie de seconde intention" ] ;
+       fhir:definition [ fhir:v "Section Résultats de laboratoire de biologie de seconde intention" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsEvenements" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsEvenements" ] ;
+       fhir:short [ fhir:v "Section Resultats d'évenements" ] ;
+       fhir:definition [ fhir:v "Section Resultats d'évenements" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-evenements"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsExamensNonCode" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamensNonCode" ] ;
+       fhir:short [ fhir:v "Section Resultats d'xamens (non Codée)" ] ;
+       fhir:definition [ fhir:v "Section Resultats d'xamens (non Codée)" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examens-non-code"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultatsExamens" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultatsExamens" ] ;
+       fhir:short [ fhir:v "Section Résultats d'examens" ] ;
+       fhir:definition [ fhir:v "Section Résultats d'examens" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examens"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.resultats" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.resultats" ] ;
+       fhir:short [ fhir:v "Section Resultats" ] ;
+       fhir:definition [ fhir:v "Section Resultats" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.signesVitaux" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.signesVitaux" ] ;
+       fhir:short [ fhir:v "Section Signes vitaux" ] ;
+       fhir:definition [ fhir:v "Section Signes vitaux" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-signes-vitaux"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.statutDocument" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.statutDocument" ] ;
+       fhir:short [ fhir:v "Section Statut du document" ] ;
+       fhir:definition [ fhir:v "Section Statut du document" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-document"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.statutFonctionnel" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.statutFonctionnel" ] ;
+       fhir:short [ fhir:v "Section Statut fonctionnel" ] ;
+       fhir:definition [ fhir:v "Section Statut fonctionnel" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-fonctionnel"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitements" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitements" ] ;
+       fhir:short [ fhir:v "Section Traitement" ] ;
+       fhir:definition [ fhir:v "Section Traitement" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitementSortie" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitementSortie" ] ;
+       fhir:short [ fhir:v "Section Traitement à la sortie" ] ;
+       fhir:definition [ fhir:v "Section Traitement à la sortie" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-sortie"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.traitementsAdministres" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.traitementsAdministres" ] ;
+       fhir:short [ fhir:v "Section Traitements administrés" ] ;
+       fhir:definition [ fhir:v "Section Traitements administrés" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitements-administres"^^xsd:anyURI ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "FRLMCorpsDocument.vaccinations" ] ;
+       fhir:path [ fhir:v "FRLMCorpsDocument.vaccinations" ] ;
+       fhir:short [ fhir:v "Section Vaccinations" ] ;
+       fhir:definition [ fhir:v "Section Vaccinations" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-vaccinations"^^xsd:anyURI ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

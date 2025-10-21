@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FrCompositionDocument |
+| Draft as of 2025-10-21 | *Computable Name*:FrCompositionDocument |
 
  
 Ce profil est utilisé pour représenter un document médical. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
   "name" : "FrCompositionDocument",
   "title" : "Fr Composition Document",
   "status" : "draft",
-  "date" : "2025-10-13T08:32:48+00:00",
+  "date" : "2025-10-21T08:19:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -338,6 +338,22 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
         ]
       },
       {
+        "id" : "Composition.extension:basedOn",
+        "path" : "Composition.extension",
+        "sliceName" : "basedOn"
+      },
+      {
+        "id" : "Composition.extension:basedOn.value[x]",
+        "path" : "Composition.extension.value[x]",
+        "short" : "Association du document à une prescription",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/ServiceRequest"]
+          }
+        ]
+      },
+      {
         "id" : "Composition.identifier",
         "path" : "Composition.identifier",
         "short" : "Identifiant lot de versions",
@@ -501,6 +517,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
         "id" : "Composition.custodian",
         "path" : "Composition.custodian",
         "short" : "Structure chargée de la conservation du document",
+        "min" : 1,
         "type" : [
           {
             "code" : "Reference",
@@ -547,10 +564,65 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
         "min" : 1
       },
       {
+        "id" : "Composition.relatesTo.target[x]:targetIdentifier.system",
+        "path" : "Composition.relatesTo.target[x].system",
+        "min" : 1
+      },
+      {
+        "id" : "Composition.relatesTo.target[x]:targetIdentifier.value",
+        "path" : "Composition.relatesTo.target[x].value",
+        "min" : 1
+      },
+      {
         "id" : "Composition.relatesTo:replaced_document",
         "path" : "Composition.relatesTo",
         "sliceName" : "replaced_document",
         "max" : "1"
+      },
+      {
+        "id" : "Composition.relatesTo:replaced_document.target[x]:targetIdentifier",
+        "path" : "Composition.relatesTo.target[x]",
+        "sliceName" : "targetIdentifier",
+        "type" : [
+          {
+            "code" : "Identifier"
+          }
+        ]
+      },
+      {
+        "id" : "Composition.relatesTo:replaced_document.target[x]:targetIdentifier.type",
+        "path" : "Composition.relatesTo.target[x].type",
+        "min" : 1
+      },
+      {
+        "id" : "Composition.relatesTo:appended_document",
+        "path" : "Composition.relatesTo",
+        "sliceName" : "appended_document"
+      },
+      {
+        "id" : "Composition.relatesTo:appended_document.target[x]:targetIdentifier",
+        "path" : "Composition.relatesTo.target[x]",
+        "sliceName" : "targetIdentifier",
+        "type" : [
+          {
+            "code" : "Identifier"
+          }
+        ]
+      },
+      {
+        "id" : "Composition.relatesTo:appended_document.target[x]:targetIdentifier.type",
+        "path" : "Composition.relatesTo.target[x].type",
+        "min" : 1
+      },
+      {
+        "id" : "Composition.relatesTo:appended_document.target[x]:targetIdentifier.system",
+        "path" : "Composition.relatesTo.target[x].system",
+        "min" : 1
+      },
+      {
+        "id" : "Composition.relatesTo:appended_document.target[x]:targetIdentifier.value",
+        "path" : "Composition.relatesTo.target[x].value",
+        "min" : 1
       },
       {
         "id" : "Composition.relatesTo:transformed_document",

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-participation-type | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FRValueSetParticipationType |
+| Draft as of 2025-10-21 | *Computable Name*:FRValueSetParticipationType |
 
  
 Type de participation : destinataire 
@@ -22,7 +22,7 @@ Type de participation : destinataire
 
 Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
 
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v3-ParticipationType`](http://terminology.hl7.org/6.5.0/CodeSystem-v3-ParticipationType.html) version 📦5.0.0
+* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v3-ParticipationType`](http://terminology.hl7.org/6.5.0/CodeSystem-v3-ParticipationType.html)version 📦5.0.0
 
  
 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "FR ValueSet Participation Type",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T08:32:48+00:00",
+  "date" : "2025-10-21T08:19:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

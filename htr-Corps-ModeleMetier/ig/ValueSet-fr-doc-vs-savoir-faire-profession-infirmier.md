@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-savoir-faire-profession-infirmier | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FRValueSetSavoirFaireProfessionInfirmier |
+| Draft as of 2025-10-21 | *Computable Name*:FRValueSetSavoirFaireProfessionInfirmier |
 
  
 Savoir-faire pour la profession 60 (Infirmier) 
@@ -22,7 +22,7 @@ Savoir-faire pour la profession 60 (Infirmier)
 
 Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
 
-* Include tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-R38-SpecialiteOrdinale.html) version 📦20240531120000
+* Include tous les codes définis dans [`https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale`](https://interop.esante.gouv.fr/terminologies/1.2.0/CodeSystem-TRE-R38-SpecialiteOrdinale.html)version 📦20240531120000
 
  
 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Fr ValueSet Savoir-faire Profession Infirmier",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T08:32:48+00:00",
+  "date" : "2025-10-21T08:19:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

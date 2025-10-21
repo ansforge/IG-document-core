@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:FrPatientDocument |
+| Draft as of 2025-10-21 | *Computable Name*:FrPatientDocument |
 
  
 Ce profil représente le patient concerné par le document. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-document.
   "name" : "FrPatientDocument",
   "title" : "Fr Patient Document",
   "status" : "draft",
-  "date" : "2025-10-13T08:32:48+00:00",
+  "date" : "2025-10-21T08:19:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

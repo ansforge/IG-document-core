@@ -11,76 +11,76 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 | | |
 | :--- | :--- |
-| [Modèle logique métier de l'en-tête](StructureDefinition-EnteteDocument.md) | Eléments de l’entête d’un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). |
-| [Modèle métier - Association du document à une prescription](StructureDefinition-Prescription.md) | Association à une prescription à l’origine de l’acte dont résulte le document. |
-| [Modèle métier - Association du document à une prise en charge](StructureDefinition-PriseEncharge.md) | Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.* Exemples : 
+| [Modèle logique métier - FR LM Auteur](StructureDefinition-fr-lm-auteur.md) | Auteur du document : ce peut être un professionnel, un patient/usager ou un système.* Pour un professionnel ou un système, la structure de rattachement doit être précisée.
+ |
+| [Modèle logique métier - FR LM Consentement](StructureDefinition-fr-lm-consentement.md) | Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. |
+| [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu-document.md) | Personne déclarée comme destinataire prévu du document.* Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s). Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.
+ |
+| [Modèle logique métier - FR LM Document de référence](StructureDefinition-fr-lm-document-reference.md) | Référence un document existant (à remplacer ou transformé). |
+| [Modèle logique métier - FR LM En-tête document](StructureDefinition-fr-lm-entete-document.md) | Eléments de l’entête d’un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). |
+| [Modèle logique métier - FR LM Informateur](StructureDefinition-fr-lm-informateur.md) | Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé. |
+| [Modèle logique métier - FR LM Opérateur de saisie](StructureDefinition-fr-lm-operateur-saisie.md) | Opérateur de saisie de la totalité ou d’une partie du contenu du document. |
+| [Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant.md) | Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs. |
+| [Modèle logique métier - FR LM Patient Usager](StructureDefinition-fr-lm-patient-usager.md) | Patient/Usager concerné par le document. |
+| [Modèle logique métier - FR LM Personne et/ou Structure](StructureDefinition-fr-lm-personne-structure.md) | Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). |
+| [Modèle logique métier - FR LM Personne et/ou Structure Auteur](StructureDefinition-fr-lm-personne-structure-auteur.md) | Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). |
+| [Modèle logique métier - FR LM Prescription](StructureDefinition-fr-lm-prescription.md) | Association à une prescription à l’origine de l’acte dont résulte le document. |
+| [Modèle logique métier - FR LM Prise en charge](StructureDefinition-fr-lm-prise-en-charge.md) | Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.* Exemples : 
 * Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.
 * Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.
  
 * Pour un document d’expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n’a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d’activité.
  |
-| [Modèle métier - Auteur du document (humain ou système)](StructureDefinition-Auteur.md) | Auteur du document : ce peut être un professionnel, un patient/usager ou un système.* Pour un professionnel ou un système, la structure de rattachement doit être précisée.
- |
-| [Modèle métier - Autres personnes / structures impliquées](StructureDefinition-Participant.md) | Personne/Structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs. |
-| [Modèle métier - Consentement associé au document](StructureDefinition-Consentement.md) | Permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. |
-| [Modèle métier - Destinataire prévu du document](StructureDefinition-DestinatairePrevu.md) | Personne déclarée comme destinataire prévu du document.* Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s). Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l’envoyer à d’autres destinataires.
- |
-| [Modèle métier - Document de référence](StructureDefinition-DocumentDeReference.md) | Référence un document existant (à remplacer ou transformé). |
-| [Modèle métier - Informateur](StructureDefinition-Informateur.md) | Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé. |
-| [Modèle métier - Opérateur de saisie](StructureDefinition-OperateurSaisie.md) | Opérateur de saisie de la totalité ou d’une partie du contenu du document. |
-| [Modèle métier - Patient / Usager](StructureDefinition-PatientUsager.md) | Patient/Usager concerné par le document. |
-| [Modèle métier - Personne et/ou Structure](StructureDefinition-PersonneStructure.md) | Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). |
-| [Modèle métier - Personne et/ou Structure (Auteur)](StructureDefinition-PersonneStructureAuteur.md) | Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). |
-| [Modèle métier - Responsable du document](StructureDefinition-Responsable.md) | Représente le responsable du document, qui est :* soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel.
+| [Modèle logique métier - FR LM Responsable](StructureDefinition-fr-lm-responsable.md) | Représente le responsable du document, qui est :* soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel.
 * soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …).
 * soit le patient/usager responsable du document d’expression personnelle
 * soit le SNR responsable du document produit via ce SNR.
 * Soit le Dossier Pharmaceutique (DP) responsable des documents qu’il produit
  |
-| [Modèle métier - Structure chargée de la conservation du document](StructureDefinition-StructureConservation.md) | Structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie. |
-| [Modèle métier - Système / Structure](StructureDefinition-SystemeStructureAuteur.md) | Système auteur du document |
-| [Modèle métier - Validateur du document](StructureDefinition-Validateur.md) | Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N’est pas utilisé dans un document d’expression personnelle du patient/usager et un document produit par un système. |
-| [Modèle métier - Évènement documenté](StructureDefinition-Evenement.md) | Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant. |
+| [Modèle logique métier - FR LM Structure conservation](StructureDefinition-fr-lm-structure-conservation.md) | Structure chargée de la conservation du document, c’est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie. |
+| [Modèle logique métier - FR LM Système / Structure](StructureDefinition-fr-lm-systeme-structure-auteur.md) | Système auteur du document |
+| [Modèle logique métier - FR LM Validateur](StructureDefinition-fr-lm-validateur.md) | Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N’est pas utilisé dans un document d’expression personnelle du patient/usager et un document produit par un système. |
+| [Modèle logique métier - FR LM Évènement](StructureDefinition-fr-lm-evenement.md) | Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant. |
 
 ### Eléments CDA 
 
 | | |
 | :--- | :--- |
-| [CDA - assignedAuthor](StructureDefinition-fr-core-assigned-author.md) | L’élément de l’en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur. |
-| [CDA - assignedCustodian](StructureDefinition-fr-core-assigned-custodian.md) | L’élément de l’en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document. |
-| [CDA - assignedEntity](StructureDefinition-fr-core-assigned-entity.md) | L’élément de l’en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant. |
-| [CDA - assignedPerson](StructureDefinition-fr-core-person.md) | L’élément de l’en-tête du CDA assignedPerson permet de décrire une personne physique. |
-| [CDA - associatedEntity](StructureDefinition-fr-core-associated-entity.md) | L’élément de l’en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant. |
-| [CDA - authenticator](StructureDefinition-fr-core-authenticator.md) | L’élément de l’en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document. |
-| [CDA - author](StructureDefinition-fr-core-author.md) | L’élément de l’en-tête du CDA author permet d’enregistrer un auteur du document. |
-| [CDA - authoringDevice](StructureDefinition-fr-core-authoring-device.md) | L’élément de l’en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système. |
-| [CDA - authorization](StructureDefinition-fr-core-authorization.md) | L’élément de l’en-tête du CDA authorization permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. |
-| [CDA - clinicalDocument](StructureDefinition-fr-core-clinical-document.md) | L’élément de l’en-tête CDA ‘ClinicalDocument’ est l’élément racine d’un document médical. |
-| [CDA - componentOf](StructureDefinition-fr-core-component-of.md) | L’élément de l’en-tête du CDA componentOf permet d’associer le document à une prise en charge du patient/usager. |
-| [CDA - custodian](StructureDefinition-fr-core-custodian.md) | L’élément de l’en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document. |
-| [CDA - dataEnterer](StructureDefinition-fr-core-data-enterer.md) | L’élément de l’en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document. |
-| [CDA - documentationOf](StructureDefinition-fr-core-documentation-of.md) | L’élément de l’en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant. |
-| [CDA - encompassingEncounter](StructureDefinition-fr-core-encompassing-encounter.md) | L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure. |
-| [CDA - encounterParticipant](StructureDefinition-fr-core-encounter-participant.md) | L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge. |
-| [CDA - healthCareFacility](StructureDefinition-fr-core-health-care-facility.md) | L’élément de l’en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.). |
-| [CDA - informant](StructureDefinition-fr-core-informant.md) | L’élément de l’en-tête du CDA informant permet d’identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée. |
-| [CDA - informationRecipient](StructureDefinition-fr-core-information-recipient.md) | L’élément de l’en-tête du CDA informationRecipient permet d’enregistrer une personne déclarée comme destinataire prévu du document. |
-| [CDA - inFulfillmentOf](StructureDefinition-fr-core-inFulfillment-of.md) | L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription. |
-| [CDA - intendedRecipient](StructureDefinition-fr-core-intended-recipient.md) | L’élément de l’en-tête du CDA intendedRecipient permet d’enregistrer le destinataire prévu du document. |
-| [CDA - legalAuthenticator](StructureDefinition-fr-core-legal-authenticator.md) | L’élément de l’en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant. |
-| [CDA - Name](StructureDefinition-fr-core-name.md) | L’élément de l’en-tête du CDA correspond au nom d’une personne physique. |
-| [CDA - order](StructureDefinition-fr-core-order.md) | L’élément de l’en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document. |
-| [CDA - parentDocument](StructureDefinition-fr-core-parent-document.md) | L’élément de l’en-tête du CDA parentDocument permet de représenter le document de référence. |
-| [CDA - participant](StructureDefinition-fr-core-participant.md) | L’élément de l’en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs. |
-| [CDA - patient](StructureDefinition-fr-core-patient.md) | L’élément de l’en-tête du CDA patient permet de représenter une personne physique. |
-| [CDA - patientRole](StructureDefinition-fr-core-patient-role.md) | L’élément de l’en-tête du CDA patientRole permet de décrire le patient/usager. |
-| [CDA - performer](StructureDefinition-fr-core-performer.md) | L’élément de l’en-tête du CDA performer permet de représenter l’exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. |
-| [CDA - recordTarget](StructureDefinition-fr-core-record-target.md) | L’élément de l’en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document. |
-| [CDA - relatedDocument](StructureDefinition-fr-core-related-document.md) | L’élément de l’en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé). |
-| [CDA - relatedEntity](StructureDefinition-fr-core-related-entity.md) | L’élément de l’en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée. |
-| [CDA - representedCustodianOrganization](StructureDefinition-fr-core-represented-custodian-organization.md) | L’élément de l’en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l’identifiant, le nom, les adresses géopostales et de télécommunication. |
-| [CDA - representedOrganization](StructureDefinition-fr-core-represented-organization.md) | L’élément de l’en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel. |
-| [CDA - serviceEvent](StructureDefinition-fr-core-service-event.md) | L’élément de l’en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor. |
+| [CDA - assignedAuthor](StructureDefinition-fr-cda-assigned-author.md) | L’élément de l’en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur. |
+| [CDA - assignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md) | L’élément de l’en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document. |
+| [CDA - assignedEntity](StructureDefinition-fr-cda-assigned-entity.md) | L’élément de l’en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant. |
+| [CDA - assignedPerson](StructureDefinition-fr-cda-assigned-person.md) | L’élément de l’en-tête du CDA assignedPerson permet de décrire une personne physique. |
+| [CDA - associatedEntity](StructureDefinition-fr-cda-associated-entity.md) | L’élément de l’en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant. |
+| [CDA - authenticator](StructureDefinition-fr-cda-authenticator.md) | L’élément de l’en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document. |
+| [CDA - author](StructureDefinition-fr-cda-author.md) | L’élément de l’en-tête du CDA author permet d’enregistrer un auteur du document. |
+| [CDA - authoringDevice](StructureDefinition-fr-cda-authoring-device.md) | L’élément de l’en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système. |
+| [CDA - authorization](StructureDefinition-fr-cda-authorization.md) | L’élément de l’en-tête du CDA authorization permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. |
+| [CDA - clinicalDocument](StructureDefinition-fr-cda-clinical-document.md) | L’élément de l’en-tête CDA ‘ClinicalDocument’ est l’élément racine d’un document médical. |
+| [CDA - componentOf](StructureDefinition-fr-cda-component-of.md) | L’élément de l’en-tête du CDA componentOf permet d’associer le document à une prise en charge du patient/usager. |
+| [CDA - custodian](StructureDefinition-fr-cda-custodian.md) | L’élément de l’en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document. |
+| [CDA - dataEnterer](StructureDefinition-fr-cda-data-enterer.md) | L’élément de l’en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document. |
+| [CDA - documentationOf](StructureDefinition-fr-cda-documentation-of.md) | L’élément de l’en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant. |
+| [CDA - encompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md) | L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure. |
+| [CDA - encounterParticipant](StructureDefinition-fr-cda-encounter-participant.md) | L’élément de l’en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l’admission ou encore le professionnel ayant donné son avis quant à la prise en charge. |
+| [CDA - healthCareFacility](StructureDefinition-fr-cda-health-care-facility.md) | L’élément de l’en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.). |
+| [CDA - informant](StructureDefinition-fr-cda-informant.md) | L’élément de l’en-tête du CDA informant permet d’identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée. |
+| [CDA - informationRecipient](StructureDefinition-fr-cda-information-recipient.md) | L’élément de l’en-tête du CDA informationRecipient permet d’enregistrer une personne déclarée comme destinataire prévu du document. |
+| [CDA - inFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md) | L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription. |
+| [CDA - intendedRecipient](StructureDefinition-fr-cda-intended-recipient.md) | L’élément de l’en-tête du CDA intendedRecipient permet d’enregistrer le destinataire prévu du document. |
+| [CDA - legalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md) | L’élément de l’en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l’établissement participant. |
+| [CDA - Name](StructureDefinition-fr-cda-name.md) | L’élément de l’en-tête du CDA correspond au nom d’une personne physique. |
+| [CDA - order](StructureDefinition-fr-cda-order.md) | L’élément de l’en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document. |
+| [CDA - parentDocument](StructureDefinition-fr-cda-parent-document.md) | L’élément de l’en-tête du CDA parentDocument permet de représenter le document de référence. |
+| [CDA - participant](StructureDefinition-fr-cda-participant.md) | L’élément de l’en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs. |
+| [CDA - patient](StructureDefinition-fr-cda-patient.md) | L’élément de l’en-tête du CDA patient permet de représenter une personne physique. |
+| [CDA - patientRole](StructureDefinition-fr-cda-patient-role.md) | L’élément de l’en-tête du CDA patientRole permet de décrire le patient/usager. |
+| [CDA - performer](StructureDefinition-fr-cda-performer.md) | L’élément de l’en-tête du CDA performer permet de représenter l’exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal. |
+| [CDA - recordTarget](StructureDefinition-fr-cda-record-target.md) | L’élément de l’en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document. |
+| [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md) | L’élément de l’en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé). |
+| [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) | L’élément de l’en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée. |
+| [CDA - representedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md) | L’élément de l’en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l’identifiant, le nom, les adresses géopostales et de télécommunication. |
+| [CDA - representedOrganization](StructureDefinition-fr-cda-represented-organization.md) | L’élément de l’en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel. |
+| [CDA - serviceEvent](StructureDefinition-fr-cda-service-event.md) | L’élément de l’en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor. |
 
 ### Profils FHIR 
 
@@ -180,164 +180,162 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 | | |
 | :--- | :--- |
-| [* Modèle logique métier du corps](StructureDefinition-CorpsDocument.md) | Eléments métier du corps d’un document |
-| [* Section](StructureDefinition-Section.md) | Modèle logique métier : Section |
-| [Acte d'imagerie](StructureDefinition-FrActeImagerie.md) | Section Acte d’imagerie |
-| [Addendum](StructureDefinition-FrAddendum.md) | Section Addendum |
-| [Allergies et hypersensibilités](StructureDefinition-FrAllergiesEtHypersensibilites.md) | Section Allergies et hypersensibilités |
-| [Antécédents familiaux](StructureDefinition-FrAntecedentsFamiliaux.md) | Section Antécédents familiaux |
-| [Antécédents médicaux](StructureDefinition-FrAntecedentsMedicaux.md) | Section Antécédents médicaux |
-| [Antécédents obstétricaux](StructureDefinition-FrHistoriqueDesGrossesses.md) | Section Historique des grossesses |
-| [Codes à barres](StructureDefinition-FrCodesAbarres.md) | Section Codes à barres |
-| [Commentaire (non-codé)](StructureDefinition-FrCommentaireNonCode.md) | Modèle logique métier de la section Commentaire (non-codé) |
-| [Comparaison d'examens d'imagerie](StructureDefinition-FrComparaisonExamensImagerie.md) | Section Comparaison d’examens d’imagerie |
-| [Complications Acte](StructureDefinition-FrComplicationsActe.md) | Section Complications au cours de l’acte |
-| [Compte rendu de biologie de 1er niveau](StructureDefinition-FrCRBIOChapitre.md) | Section Compte rendu de biologie de 1er niveau |
-| [Conclusion examen d'imagerie](StructureDefinition-FrConclusionExamenImagerie.md) | Section Conclusion examen d’imagerie |
-| [Demande d'examen d'imagerie](StructureDefinition-FrDemandeExamenImagerie.md) | Section Demande d’examen d’imagerie |
-| [Directives-anticipées](StructureDefinition-FrDirectivesAnticipees.md) | Section Directives anticipées |
-| [Dispensation médicaments](StructureDefinition-FrDispensationMedicaments.md) | Section Dispensation médicaments |
-| [Dispositifs medicaux](StructureDefinition-FrDispositifsMedicaux.md) | Section Dispositifs medicaux |
-| [Document PDF copie](StructureDefinition-FrDocumentPDFCopie.md) | Section Document PDF-copie |
-| [Documents ajoutés](StructureDefinition-FrDocumentsAjoutes.md) | Section Documents ajoutés |
-| [Education du patient](StructureDefinition-FrEducationPatient.md) | Section Education du patient |
-| [Effets indesirables](StructureDefinition-FrEffetsIndesirables.md) | Section Effets indesirables |
-| [Exposition aux radiations](StructureDefinition-FrExpositionRadiations.md) | Section Exposition aux radiations |
-| [Facteurs de risque professionnels non code](StructureDefinition-FrFacteursDeRisqueProfessionnelsNonCode.md) | Section Facteurs de risque professionnels non code |
-| [Fonctions physiques](StructureDefinition-FrFonctionsPhysiques.md) | Section Fonctions physiques |
-| [Habitus et modes de vie](StructureDefinition-FrHabitusModeDeVie.md) | Section Habitus et modes de vie |
-| [Historique des actes](StructureDefinition-FrHistoriqueDesActes.md) | Section Historique des actes |
-| [Informations Cliniques](StructureDefinition-FrInformationsCliniques.md) | Section Informations Cliniques |
-| [Object Catalog](StructureDefinition-FrObjectCatalog.md) | Section Object Catalog |
-| [Plan de soins](StructureDefinition-FrPlanSoins.md) | Section Plan de soins |
-| [Prescription de dispositifs médicaux](StructureDefinition-FrPrescriptionDispositifsMedicaux.md) | Section Prescription de dispositifs médicaux |
-| [Prescription de médicaments](StructureDefinition-FrPrescriptionMedicaments.md) | Section Prescription de médicaments |
-| [Problèmes actifs](StructureDefinition-FrProblemesActifs.md) | Section Problèmes actifs |
-| [Raison de la recommandation](StructureDefinition-FrRaisonRecommandation.md) | Section Raison de la recommandation |
-| [Raison de la recommandation (non codée)](StructureDefinition-FrRaisonRecommandationNonCode.md) | Section Raison de la recommandation (non codée) |
-| [Résultats](StructureDefinition-FrResultats.md) | Section Résultats |
-| [Résultats d'examens](StructureDefinition-FrResultatsExamens.md) | Section Résultats d’examens |
-| [Résultats d'examens (non codée)](StructureDefinition-FrResultatsExamensNonCode.md) | Section Résultats d’examens (non codée) |
-| [Résultats d'événements](StructureDefinition-FrResultatsEvenements.md) | Section Résultats d’événements |
-| [Résultats de laboratoire de biologie de seconde intention](StructureDefinition-FrResultatsLaboratoireBiologieSecondeIntention.md) | Modèle logique métier de la section Résultats de laboratoire de biologie de seconde intention |
-| [Section Points de vigilance (non-codés)](StructureDefinition-FrPointsDeVigilancesNonCode.md) | Section Points de vigilance (non-codés) |
-| [Signes vitaux](StructureDefinition-FrSignesVitaux.md) | Section Signes vitaux |
-| [Sous-chapitre du compte rendu d'examens de biologie (section de 2nd niveau)](StructureDefinition-FrCRBIOSousChapitre.md) | Modèle logique métier de la section Sous-chapitre du compte rendu d’examens de biologie (section de 2nd niveau) |
-| [Statut du document](StructureDefinition-FrStatutDocument.md) | Section Statut du document |
-| [Statut fonctionnel](StructureDefinition-FrStatutFonctionnel.md) | Section Statut fonctionnel |
-| [Traitement](StructureDefinition-FrTraitement.md) | Entrée Traitement |
-| [Traitements administrés](StructureDefinition-FrTraitementsAdministres.md) | Section Traitements administrés |
-| [Traitements à la sortie](StructureDefinition-FrTraitementSortie.md) | Section Traitements à la sortie |
-| [Vaccinations](StructureDefinition-FrVaccinations.md) | Section Vaccinations |
+| [* Modèle logique métier du corps](StructureDefinition-FRLMCorpsDocument.md) | Eléments métier du corps d’un document |
+| [Historique des actes](StructureDefinition-fr-lm-historique-des-actes.md) | Section Historique des actes |
+| [Modèle logique métier - FR LM Acte d'imagerie](StructureDefinition-fr-lm-acte-imagerie.md) | Section Acte d’imagerie |
+| [Modèle logique métier - FR LM Addendum](StructureDefinition-fr-lm-addendum.md) | Section Addendum |
+| [Modèle logique métier - FR LM Allergies et hypersensibilités](StructureDefinition-fr-lm-allergies-et-hypersensibilites.md) | Section Allergies et hypersensibilités |
+| [Modèle logique métier - FR LM Antécédents familiaux](StructureDefinition-fr-lm-antecedents-familiaux.md) | Section Antécédents familiaux |
+| [Modèle logique métier - FR LM Antécédents médicaux](StructureDefinition-fr-lm-antecedents-medicaux.md) | Section Antécédents médicaux |
+| [Modèle logique métier - FR LM Antécédents obstétricaux](StructureDefinition-fr-lm-historique-des-grossesses.md) | Section Historique des grossesses |
+| [Modèle logique métier - FR LM Codes à barres](StructureDefinition-fr-lm-codes-a-barres.md) | Section Codes à barres |
+| [Modèle logique métier - FR LM Commentaire (non-codé)](StructureDefinition-fr-lm-commentaire-non-code.md) | Section Commentaire (non-codé) |
+| [Modèle logique métier - FR LM Comparaison d'examens d'imagerie](StructureDefinition-fr-lm-comparaison-examens-imagerie.md) | Section Comparaison d’examens d’imagerie |
+| [Modèle logique métier - FR LM Complications Acte](StructureDefinition-fr-lm-complications-acte.md) | Section Complications au cours de l’acte |
+| [Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau](StructureDefinition-fr-lm-cr-bio-chapitre.md) | Section Compte rendu de biologie de 1er niveau |
+| [Modèle logique métier - FR LM Conclusion examen d'imagerie](StructureDefinition-fr-lm-conclusion-examen-imagerie.md) | Section Conclusion examen d’imagerie |
+| [Modèle logique métier - FR LM Demande d'examen d'imagerie](StructureDefinition-fr-lm-demande-examen-imagerie.md) | Section Demande d’examen d’imagerie |
+| [Modèle logique métier - FR LM Directives-anticipées](StructureDefinition-fr-lm-directives-anticipees.md) | Section Directives anticipées |
+| [Modèle logique métier - FR LM Dispensation médicaments](StructureDefinition-fr-lm-dispensation-medicaments.md) | Section Dispensation médicaments |
+| [Modèle logique métier - FR LM Dispositifs medicaux](StructureDefinition-fr-lm-dispositifs-medicaux.md) | Section Dispositifs medicaux |
+| [Modèle logique métier - FR LM Document PDF copie](StructureDefinition-fr-lm-document-pdf-copie.md) | Section Document PDF-copie |
+| [Modèle logique métier - FR LM Documents ajoutés](StructureDefinition-fr-lm-documents-ajoutes.md) | Section Documents ajoutés |
+| [Modèle logique métier - FR LM Education du patient](StructureDefinition-fr-lm-education-patient.md) | Section Education du patient |
+| [Modèle logique métier - FR LM Effets indesirables](StructureDefinition-fr-lm-effets-indesirables.md) | Section Effets indesirables |
+| [Modèle logique métier - FR LM Exposition aux radiations](StructureDefinition-fr-lm-exposition-radiations.md) | Section Exposition aux radiations |
+| [Modèle logique métier - FR LM Facteurs de risque professionnels non code](StructureDefinition-fr-lm-facteurs-de-risque-professionnels-non-code.md) | Section Facteurs de risque professionnels non code |
+| [Modèle logique métier - FR LM Fonctions physiques](StructureDefinition-fr-lm-fonctions-physiques.md) | Section Fonctions physiques |
+| [Modèle logique métier - FR LM Habitus et modes de vie](StructureDefinition-fr-lm-habitus-mode-de-vie.md) | Section Habitus et modes de vie |
+| [Modèle logique métier - FR LM Informations Cliniques](StructureDefinition-fr-lm-informations-cliniques.md) | Section Informations Cliniques |
+| [Modèle logique métier - FR LM Object Catalog](StructureDefinition-fr-lm-object-catalog.md) | Section Object Catalog |
+| [Modèle logique métier - FR LM Plan de soins](StructureDefinition-fr-lm-plan-soins.md) | Section Plan de soins |
+| [Modèle logique métier - FR LM Points de vigilance (non-codés)](StructureDefinition-fr-lm-points-de-vigilances-non-code.md) | Section Points de vigilance (non-codés) |
+| [Modèle logique métier - FR LM Prescription de dispositifs médicaux](StructureDefinition-fr-lm-prescription-dispositifs-medicaux.md) | Section Prescription de dispositifs médicaux |
+| [Modèle logique métier - FR LM Prescription de médicaments](StructureDefinition-fr-lm-prescription-medicaments.md) | Section Prescription de médicaments |
+| [Modèle logique métier - FR LM Problèmes actifs](StructureDefinition-fr-lm-problemes-actifs.md) | Section Problèmes actifs |
+| [Modèle logique métier - FR LM Raison de la recommandation](StructureDefinition-fr-lm-raison-recommandation.md) | Section Raison de la recommandation |
+| [Modèle logique métier - FR LM Raison de la recommandation (non codée)](StructureDefinition-fr-lm-raison-recommandation-non-code.md) | Section Raison de la recommandation (non codée) |
+| [Modèle logique métier - FR LM Résultats](StructureDefinition-fr-lm-resultats.md) | Section Résultats |
+| [Modèle logique métier - FR LM Résultats d'examens](StructureDefinition-fr-lm-resultats-examens.md) | Section Résultats d’examens |
+| [Modèle logique métier - FR LM Résultats d'examens (non codée)](StructureDefinition-fr-lm-resultats-examens-non-code.md) | Section Résultats d’examens (non codée) |
+| [Modèle logique métier - FR LM Résultats d'événements](StructureDefinition-fr-lm-resultats-evenements.md) | Section Résultats d’événements |
+| [Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention](StructureDefinition-fr-lm-resultats-laboratoire-biologie-seconde-intention.md) | Section Résultats de laboratoire de biologie de seconde intention |
+| [Modèle logique métier - FR LM Section](StructureDefinition-fr-lm-section.md) | Section |
+| [Modèle logique métier - FR LM Signes vitaux](StructureDefinition-fr-lm-signes-vitaux.md) | Section Signes vitaux |
+| [Modèle logique métier - FR LM Sous-chapitre du compte rendu d'examens de biologie](StructureDefinition-fr-lm-cr-bio-sous-chapitre.md) | Modèle logique métier de la section Sous-chapitre du compte rendu d’examens de biologie (section de 2nd niveau) |
+| [Modèle logique métier - FR LM Statut du document](StructureDefinition-fr-lm-statut-document.md) | Section Statut du document |
+| [Modèle logique métier - FR LM Statut fonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md) | Section Statut fonctionnel |
+| [Modèle logique métier - FR LM Traitement](StructureDefinition-fr-lm-traitement.md) | Entrée Traitement |
+| [Modèle logique métier - FR LM Traitements administrés](StructureDefinition-fr-lm-traitements-administres.md) | Section Traitements administrés |
+| [Modèle logique métier - FR LM Traitements à la sortie](StructureDefinition-fr-lm-traitement-sortie.md) | Section Traitements à la sortie |
+| [Modèle logique métier - FR LM Vaccinations](StructureDefinition-fr-lm-vaccinations.md) | Section Vaccinations |
 
 ### Modèles logiques métier des entrées 
 
 | | |
 | :--- | :--- |
-| [Accident transfusionnel](StructureDefinition-FrAccidentsTransfusionnels.md) | Entrée Accident transfusionnel |
-| [Acte](StructureDefinition-FrActe.md) | Entrée Acte |
-| [Acte substitution](StructureDefinition-FrActeSubstitution.md) | Entrée Acte substitution |
-| [Administration de dérivés du sang](StructureDefinition-FrAdministrationDeDerivesDuSang.md) | Modèle logique métier de l’entrée Administration de dérivés du sang |
-| [Administration produit de sante](StructureDefinition-FrAdministrationProduitDeSante.md) | Entrée Administration produit de sante |
-| [Allergie, Hypersensibilité non allergique, Intolérance, Idiosyncrasie](StructureDefinition-FrAllergieOuHypersensibilite.md) | Entrée Allergie ou hypersensibilite |
-| [Antécédent familial observé](StructureDefinition-FrAntecedentFamilialObserve.md) | Entrée Antécédent familial |
-| [Antécédents familiaux](StructureDefinition-FrAntecedentsFamiliauxEntry.md) | Entrée Antécédents familiaux |
-| [Autorisation exposition](StructureDefinition-FrAutorisationExposition.md) | Entrée Autorisation exposition |
-| [Autorisation substitution](StructureDefinition-FrAutorisationSubstitution.md) | Entrée Autorisation substitution |
-| [Batterie d'examens de biologie médicale](StructureDefinition-FrBatterieExamensBiologieMedicale.md) | Entrée Batterie d’examens de biologie médicale |
-| [Certitude](StructureDefinition-FrCertitude.md) | Entrée Certitude |
-| [Commentaire](StructureDefinition-FrCommentaireER.md) | Entrée Commentaire |
-| [Criticite](StructureDefinition-FrCriticite.md) | Entrée Criticite |
-| [Demande d'examen ou de suivi / Objectif à atteindre](StructureDefinition-FrDemandeExamenOuSuivi.md) | Entrée Demande d’examen ou de suivi / Objectif à atteindre |
-| [Directive anticipée](StructureDefinition-FrDirectiveAnticipee.md) | Entrée Directive anticipée |
-| [Dispositif médical](StructureDefinition-FrDispositifMedicalEntry.md) | Entrée Dispositif médical |
-| [Document attaché](StructureDefinition-FrDocumentAttache.md) | Entrée Document attaché |
-| [Dose d'antigène](StructureDefinition-FrDoseAntigene.md) | Entrée Dose d’antigène |
-| [Effet indesirable](StructureDefinition-FrEffetIndesirable.md) | Entrée Effet indesirable |
-| [En rapport avec la prevention](StructureDefinition-FrEnRapportAvecLaPrevention.md) | Entrée En rapport avec la prevention |
-| [En rapport avec un accident travail](StructureDefinition-FrEnRapportAvecAccidentTravail.md) | Entrée En rapport avec un accident travail |
-| [En rapport avec une Affection Longue Durée (ALD)](StructureDefinition-FrEnRapportAvecALD.md) | Entrée En rapport avec une Affection Longue Durée (ALD) |
-| [Entrée Observation](StructureDefinition-FrObservation.md) | Entrée observation |
-| [Evaluation](StructureDefinition-FrEvaluation.md) | Entrée Evaluation |
-| [Evaluation Composant](StructureDefinition-FrEvaluationComposant.md) | Entrée Evaluation Composant |
-| [Evaluation Composant N2](StructureDefinition-FrEvaluationComposantN2.md) | Entrée Evaluation Composant N2 |
-| [Evolution effet indesirable](StructureDefinition-FrEvolutionEffetIndesirable.md) | Entrée Evolution effet indesirable |
-| [Evènements indésirables pendant l'hospitalisation](StructureDefinition-FrEvenementIndesirablePendantHospitalisation.md) | Entrée Evènements indésirables pendant l’hospitalisation |
-| [Evènements indésirables suite à l'administration de dérivés du sang](StructureDefinition-FrEvenementsIndesirablesSuiteAdministrationDerivesSang.md) | Entrée Evènements indésirables suite à l’administration de dérivés du sang |
-| [Examen Imagerie](StructureDefinition-FrExamenImagerie.md) | Entrée DICOM Examen Imagerie |
-| [Gravite effet indesirable](StructureDefinition-FrGraviteEffetIndesirable.md) | Entrée Gravite effet indesirable |
-| [Groupe de questionnaires d'évalutation](StructureDefinition-FrGroupDeQuestionnairesDevaluation.md) | Entrée Groupe de questionnaires d’évalutation |
-| [Habitus Mode de vie](StructureDefinition-FrHabitusModeDeVieEntry.md) | Entrée Habitus Mode de vie |
-| [Historique de la grossesse](StructureDefinition-FrHistoriqueGrossesse.md) | Entrée Historique de la grossesse |
-| [Hors Autorisation de Mise sur le Marché (AMM)](StructureDefinition-FrHorsAMM.md) | Entrée Hors Autorisation de Mise sur le Marché (AMM) |
-| [Identification de micro-organismes multirésistants](StructureDefinition-FrIdentificationDeMicroOrganismesMultiresistants.md) | Entrée Identification de micro-organismes multirésistants |
-| [Image illustrative](StructureDefinition-FrImageIllustrative.md) | Entrée Image illustrative. |
-| [Imputabilite effet indesirable](StructureDefinition-FrImputabiliteEffetIndesirable.md) | Entrée Imputabilite effet indesirable |
-| [Instruction au patient](StructureDefinition-FrInstructionAuPatient.md) | Entrée Instruction au patient |
-| [Instructions au dispensateur](StructureDefinition-FrInstructionsAuDispensateur.md) | Entrée Instructions au dispensateur |
-| [Instructions au patient](StructureDefinition-FrInstructionsPatient.md) | Entrée Instructions au patient |
-| [Isolat microbiologique](StructureDefinition-FrIsolatMicrobiologique.md) | Entrée Isolat microbiologique |
-| [Modalité d'entrée](StructureDefinition-FrModaliteEntree.md) | Entrée Modalité d’entrée |
-| [Modalité de sortie](StructureDefinition-FrModaliteSortie.md) | Entrée Modalité de sortie |
-| [Naissance](StructureDefinition-FrNaissance.md) | Entrée Naissance |
-| [Non remboursable](StructureDefinition-FrNonRemboursable.md) | Entrée Non remboursable |
-| [Notes du dispensateur](StructureDefinition-FrNotesDispensateur.md) | Entrée Notes du dispensateur |
-| [Observation sur la grossesse](StructureDefinition-FrObservationGrossesse.md) | Entrée Observation sur la grossesse |
-| [Prescription](StructureDefinition-FrPrescriptionEntry.md) | Entrée Prescription |
-| [Problème](StructureDefinition-FrProbleme.md) | Entrée Problème |
-| [Produit de santé](StructureDefinition-FrProduitSante.md) | Produit de santé |
-| [Prélèvement](StructureDefinition-FrPrelevement.md) | Entrée Prélèvement |
-| [Période de renouvellement de la prescription](StructureDefinition-FrPeriodeDeRenouvellement.md) | Entrée Période de renouvellement de la prescription |
-| [Quantité de produit](StructureDefinition-FrQuantiteProduit.md) | Entrée Quantité de produit |
-| [Quantité exposition](StructureDefinition-FrQuantiteExposition.md) | Entrée Quantité exposition |
-| [Rang de la vaccination](StructureDefinition-FrRangVaccination.md) | Entrée Rang de la vaccination |
-| [Recherche de micro organismes](StructureDefinition-FrRechercheDeMicroOrganismes.md) | Entrée Recherche de micro organismes |
-| [Rencontre](StructureDefinition-FrRencontre.md) | Entrée Rencontre |
-| [Resultats](StructureDefinition-FrResultatsEntry.md) | Entrée Resultats |
-| [Resultats d'examens de biologie medicale](StructureDefinition-FrResultatsExamensBiologieMedicale.md) | Entrée Resultats d’examens de biologie medicale |
-| [Référence interne](StructureDefinition-FrReferenceInterne.md) | Entrée Référence interne |
-| [Référence item plan traitement](StructureDefinition-FrReferenceItemPlanTraitement.md) | Entrée Référence item plan traitement |
-| [Référence item prescription](StructureDefinition-FrReferenceItemPrescription.md) | Entrée Référence item prescription |
-| [Références externes](StructureDefinition-FrReferencesExternes.md) | Entrée Références externes |
-| [Résultat d'examens de biologie / élement clinique pertinent](StructureDefinition-FrResultatExamensBiologieElementCliniquePertinent.md) | Entrée Résultat d’examens de biologie / élement clinique pertinent |
-| [Serie imagerie](StructureDefinition-FrSerieImagerie.md) | Entrée Serie imagerie |
-| [Signe vital](StructureDefinition-FrSigneVital.md) | Entrée Signe vital |
-| [Signe vital observé](StructureDefinition-FrSigneVitalObserve.md) | Entrée Signe vital observé |
-| [SOP Instance](StructureDefinition-FrSOPInstance.md) | Entrée SOP Instance |
-| [Statut](StructureDefinition-FrStatut.md) | Entrée Statut |
-| [Statut clinique du patient](StructureDefinition-FrStatutCliniquePatient.md) | Entrée Statut clinique du patient |
-| [Statut du document](StructureDefinition-FrStatutDocumentEntry.md) | Entrée Statut du document |
-| [Statut du problème](StructureDefinition-FrStatutProbleme.md) | Entrée Statut du problème. |
-| [Synthese medicale sejour](StructureDefinition-FrSyntheseMedicaleSejour.md) | Entrée Synthese medicale sejour |
-| [Sévérité](StructureDefinition-FrSeverite.md) | Entrée Sévérité. |
-| [Technique imagerie](StructureDefinition-FrTechniqueImagerie.md) | Entrée Technique imagerie |
-| [Traitement dispensé](StructureDefinition-FrTraitementDispense.md) | Entrée Traitement dispense |
-| [Traitement Prescrit](StructureDefinition-FrTraitementPrescrit.md) | Entrée Traitement prescrit |
-| [Traitement Prescrit Subordonnee](StructureDefinition-FrTraitementPrescritSubordonne.md) | Entrée Traitement prescrit subordonne |
-| [Traitement subordonné](StructureDefinition-FrTraitementSubordonne.md) | Entrée Traitement subordonné |
-| [Traitements](StructureDefinition-FrTraitements.md) | Section Traitements |
-| [Transfert du patient](StructureDefinition-FrTransfertDuPatient.md) | Entrée Transfert du patient |
-| [Transfusion de produits sanguins](StructureDefinition-FrTransfusionDeProduitsSanguins.md) | Entrée Transfusion de produits sanguins |
-| [Vaccin recommandé](StructureDefinition-FrVaccinRecommande.md) | Entrée Vaccin recommandé |
-| [Vaccination](StructureDefinition-FrVaccination.md) | Entrée Vaccination |
+| [Modèle logique métier - FR LM Accident transfusionnel](StructureDefinition-fr-lm-accidents-transfusionnels.md) | Entrée Accident transfusionnel |
+| [Modèle logique métier - FR LM Acte](StructureDefinition-fr-lm-acte.md) | Entrée Acte |
+| [Modèle logique métier - FR LM Acte substitution](StructureDefinition-fr-lm-acte-substitution.md) | Entrée Acte substitution |
+| [Modèle logique métier - FR LM Administration de dérivés du sang](StructureDefinition-fr-lm-administration-de-derives-du-sang.md) | Entrée Administration de dérivés du sang |
+| [Modèle logique métier - FR LM Administration produit de sante](StructureDefinition-fr-lm-administration-produit-de-sante.md) | Entrée Administration produit de sante |
+| [Modèle logique métier - FR LM Allergie ou Hypersensibilité](StructureDefinition-fr-lm-allergie-ou-hypersensibilite.md) | Entrée Allergie ou hypersensibilite |
+| [Modèle logique métier - FR LM Antécédent familial observé](StructureDefinition-fr-lm-antecedent-familial-observe.md) | Entrée Antécédent familial |
+| [Modèle logique métier - FR LM Antécédents familiaux](StructureDefinition-fr-lm-antecedents-familiaux-entree.md) | Entrée Antécédents familiaux |
+| [Modèle logique métier - FR LM Autorisation exposition](StructureDefinition-fr-lm-autorisation-exposition.md) | Entrée Autorisation exposition |
+| [Modèle logique métier - FR LM Autorisation substitution](StructureDefinition-fr-lm-autorisation-substitution.md) | Entrée Autorisation substitution |
+| [Modèle logique métier - FR LM Batterie d'examens de biologie médicale](StructureDefinition-fr-lm-batterie-examens-biologie-medicale.md) | Entrée Batterie d’examens de biologie médicale |
+| [Modèle logique métier - FR LM Certitude](StructureDefinition-fr-lm-certitude.md) | Entrée Certitude |
+| [Modèle logique métier - FR LM Commentaire](StructureDefinition-fr-lm-commentaire-er.md) | Entrée Commentaire |
+| [Modèle logique métier - FR LM Criticite](StructureDefinition-fr-lm-criticite.md) | Entrée Criticite |
+| [Modèle logique métier - FR LM Demande d'examen ou de suivi](StructureDefinition-fr-lm-demande-examen-ou-suivi.md) | Entrée Demande d’examen ou de suivi / Objectif à atteindre |
+| [Modèle logique métier - FR LM Directive anticipée](StructureDefinition-fr-lm-directive-anticipee.md) | Entrée Directive anticipée |
+| [Modèle logique métier - FR LM Dispositif médical](StructureDefinition-fr-lm-dispositif-medical-entree.md) | Entrée Dispositif médical |
+| [Modèle logique métier - FR LM Document attaché](StructureDefinition-fr-lm-document-attache.md) | Entrée Document attaché |
+| [Modèle logique métier - FR LM Dose d'antigène](StructureDefinition-fr-lm-dose-antigene.md) | Entrée Dose d’antigène |
+| [Modèle logique métier - FR LM Effet indesirable](StructureDefinition-fr-lm-effet-indesirable.md) | Entrée Effet indesirable |
+| [Modèle logique métier - FR LM En rapport avec la prevention](StructureDefinition-fr-lm-en-rapport-avec-la-prevention.md) | Entrée En rapport avec la prevention |
+| [Modèle logique métier - FR LM En rapport avec un accident travail](StructureDefinition-fr-lm-en-rapport-avec-accident-travail.md) | Entrée En rapport avec un accident travail |
+| [Modèle logique métier - FR LM En rapport avec une Affection Longue Durée (ALD)](StructureDefinition-fr-lm-en-rapport-avec-ald.md) | Entrée En rapport avec une Affection Longue Durée (ALD) |
+| [Modèle logique métier - FR LM Evaluation](StructureDefinition-fr-lm-evaluation.md) | Entrée Evaluation |
+| [Modèle logique métier - FR LM Evaluation Composant](StructureDefinition-fr-lm-evaluation-composant.md) | Entrée Evaluation Composant |
+| [Modèle logique métier - FR LM Evaluation Composant N2](StructureDefinition-fr-lm-evaluation-composant-n2.md) | Entrée Evaluation Composant N2 |
+| [Modèle logique métier - FR LM Evolution effet indesirable](StructureDefinition-fr-lm-evolution-effet-indesirable.md) | Entrée Evolution effet indesirable |
+| [Modèle logique métier - FR LM Evènements indésirables pendant l'hospitalisation](StructureDefinition-fr-lm-evenement-indesirable-pendant-hospitalisation.md) | Entrée Evènements indésirables pendant l’hospitalisation |
+| [Modèle logique métier - FR LM Evènements indésirables suite à l'administration de dérivés du sang](StructureDefinition-fr-lm-evenements-indesirables-suite-administration-derives-sang.md) | Entrée Evènements indésirables suite à l’administration de dérivés du sang |
+| [Modèle logique métier - FR LM Examen Imagerie](StructureDefinition-fr-lm-examen-imagerie.md) | Entrée DICOM Examen Imagerie |
+| [Modèle logique métier - FR LM Gravite effet indesirable](StructureDefinition-fr-lm-gravite-effet-indesirable.md) | Entrée Gravite effet indesirable |
+| [Modèle logique métier - FR LM Groupe de questionnaires d'évalutation](StructureDefinition-fr-lm-group-de-questionnaires-devaluation.md) | Entrée Groupe de questionnaires d’évalutation |
+| [Modèle logique métier - FR LM Habitus Mode de vie](StructureDefinition-fr-lm-habitus-mode-de-vie-entree.md) | Entrée Habitus Mode de vie |
+| [Modèle logique métier - FR LM Historique de la grossesse](StructureDefinition-fr-lm-historique-grossesse.md) | Entrée Historique de la grossesse |
+| [Modèle logique métier - FR LM Hors Autorisation de Mise sur le Marché (AMM)](StructureDefinition-fr-lm-hors-amm.md) | Entrée Hors Autorisation de Mise sur le Marché (AMM) |
+| [Modèle logique métier - FR LM Identification de micro-organismes multirésistants](StructureDefinition-fr-lm-identification-de-micro-organismes-multiresistants.md) | Entrée Identification de micro-organismes multirésistants |
+| [Modèle logique métier - FR LM Image illustrative](StructureDefinition-fr-lm-image-illustrative.md) | Entrée Image illustrative. |
+| [Modèle logique métier - FR LM Imputabilite effet indesirable](StructureDefinition-fr-lm-imputabilite-effet-indesirable.md) | Entrée Imputabilite effet indesirable |
+| [Modèle logique métier - FR LM Instruction au patient](StructureDefinition-fr-lm-instruction-au-patient.md) | Entrée Instruction au patient |
+| [Modèle logique métier - FR LM Instructions au dispensateur](StructureDefinition-fr-lm-instructions-au-dispensateur.md) | Entrée Instructions au dispensateur |
+| [Modèle logique métier - FR LM Instructions au patient](StructureDefinition-fr-lm-instructions-patient.md) | Entrée Instructions au patient |
+| [Modèle logique métier - FR LM Isolat microbiologique](StructureDefinition-fr-lm-isolat-microbiologique.md) | Entrée Isolat microbiologique |
+| [Modèle logique métier - FR LM Modalité d'entrée](StructureDefinition-fr-lm-modalite-entree.md) | Entrée Modalité d’entrée |
+| [Modèle logique métier - FR LM Modalité de sortie](StructureDefinition-fr-lm-modalite-sortie.md) | Entrée Modalité de sortie |
+| [Modèle logique métier - FR LM Naissance](StructureDefinition-fr-lm-naissance.md) | Entrée Naissance |
+| [Modèle logique métier - FR LM Notes du dispensateur](StructureDefinition-fr-lm-notes-dispensateur.md) | Entrée Notes du dispensateur |
+| [Modèle logique métier - FR LM Observation](StructureDefinition-fr-lm-observation.md) | Entrée observation |
+| [Modèle logique métier - FR LM Observation sur la grossesse](StructureDefinition-fr-lm-observation-grossesse.md) | Entrée Observation sur la grossesse |
+| [Modèle logique métier - FR LM Prescription](StructureDefinition-fr-lm-prescription-entree.md) | Entrée Prescription |
+| [Modèle logique métier - FR LM Problème](StructureDefinition-fr-lm-probleme.md) | Entrée Problème |
+| [Modèle logique métier - FR LM Produit de santé](StructureDefinition-fr-lm-produit-sante.md) | Produit de santé |
+| [Modèle logique métier - FR LM Prélèvement](StructureDefinition-fr-lm-prelevement.md) | Entrée Prélèvement |
+| [Modèle logique métier - FR LM Période de renouvellement de la prescription](StructureDefinition-fr-lm-periode-de-renouvellement.md) | Entrée Période de renouvellement de la prescription |
+| [Modèle logique métier - FR LM Quantité de produit](StructureDefinition-fr-lm-quantite-produit.md) | Entrée Quantité de produit |
+| [Modèle logique métier - FR LM Quantité exposition](StructureDefinition-fr-lm-quantite-exposition.md) | Entrée Quantité exposition |
+| [Modèle logique métier - FR LM Rang de la vaccination](StructureDefinition-fr-lm-rang-vaccination.md) | Entrée Rang de la vaccination |
+| [Modèle logique métier - FR LM Recherche de micro organismes](StructureDefinition-fr-lm-recherche-de-micro-organismes.md) | Entrée Recherche de micro organismes |
+| [Modèle logique métier - FR LM Rencontre](StructureDefinition-fr-lm-rencontre.md) | Entrée Rencontre |
+| [Modèle logique métier - FR LM Resultats](StructureDefinition-fr-lm-resultats-entree.md) | Entrée Resultats |
+| [Modèle logique métier - FR LM Resultats d'examens de biologie medicale](StructureDefinition-fr-lm-resultats-examens-biologie-medicale.md) | Entrée Resultats d’examens de biologie medicale |
+| [Modèle logique métier - FR LM Référence interne](StructureDefinition-fr-lm-reference-interne.md) | Entrée Référence interne |
+| [Modèle logique métier - FR LM Référence item plan traitement](StructureDefinition-fr-lm-reference-item-plan-traitement.md) | Entrée Référence item plan traitement |
+| [Modèle logique métier - FR LM Référence item prescription](StructureDefinition-fr-lm-reference-item-prescription.md) | Entrée Référence item prescription |
+| [Modèle logique métier - FR LM Références externes](StructureDefinition-fr-lm-references-externes.md) | Entrée Références externes |
+| [Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent](StructureDefinition-fr-lm-resultat-examens-biologie-element-clinique-pertinent.md) | Entrée Résultat d’examens de biologie / élement clinique pertinent |
+| [Modèle logique métier - FR LM Serie imagerie](StructureDefinition-fr-lm-serie-imagerie.md) | Entrée Serie imagerie |
+| [Modèle logique métier - FR LM Signe vital](StructureDefinition-fr-lm-signe-vital.md) | Entrée Signe vital |
+| [Modèle logique métier - FR LM Signe vital observé](StructureDefinition-fr-lm-signe-vital-observe.md) | Entrée Signe vital observé |
+| [Modèle logique métier - FR LM SOP Instance](StructureDefinition-fr-lm-sop-instance.md) | Entrée SOP Instance |
+| [Modèle logique métier - FR LM Statut](StructureDefinition-fr-lm-statut.md) | Entrée Statut |
+| [Modèle logique métier - FR LM Statut clinique du patient](StructureDefinition-fr-lm-statut-clinique-patient.md) | Entrée Statut clinique du patient |
+| [Modèle logique métier - FR LM Statut du document](StructureDefinition-fr-lm-statut-document-entree.md) | Entrée Statut du document |
+| [Modèle logique métier - FR LM Statut du problème](StructureDefinition-fr-lm-statut-probleme.md) | Entrée Statut du problème. |
+| [Modèle logique métier - FR LM Synthese medicale sejour](StructureDefinition-fr-lm-synthese-medicale-sejour.md) | Entrée Synthese medicale sejour |
+| [Modèle logique métier - FR LM Sévérité](StructureDefinition-fr-lm-severite.md) | Entrée Sévérité. |
+| [Modèle logique métier - FR LM Technique imagerie](StructureDefinition-fr-lm-technique-imagerie.md) | Entrée Technique imagerie |
+| [Modèle logique métier - FR LM Traitement dispensé](StructureDefinition-fr-lm-traitement-dispense.md) | Entrée Traitement dispense |
+| [Modèle logique métier - FR LM Traitement Prescrit](StructureDefinition-fr-lm-traitement-prescrit.md) | Entrée Traitement prescrit |
+| [Modèle logique métier - FR LM Traitement Prescrit Subordonnee](StructureDefinition-fr-lm-traitement-prescrit-subordonne.md) | Entrée Traitement prescrit subordonne |
+| [Modèle logique métier - FR LM Traitement subordonné](StructureDefinition-fr-lm-traitement-subordonne.md) | Entrée Traitement subordonné |
+| [Modèle logique métier - FR LM Traitements](StructureDefinition-fr-lm-traitements.md) | Section Traitements |
+| [Modèle logique métier - FR LM Transfert du patient](StructureDefinition-fr-lm-transfert-du-patient.md) | Entrée Transfert du patient |
+| [Modèle logique métier - FR LM Transfusion de produits sanguins](StructureDefinition-fr-lm-transfusion-de-produits-sanguins.md) | Entrée Transfusion de produits sanguins |
+| [Modèle logique métier - FR LM Vaccin recommandé](StructureDefinition-fr-lm-vaccin-recommande.md) | Entrée Vaccin recommandé |
+| [Modèle logique métier - FR LM Vaccination](StructureDefinition-fr-lm-vaccination.md) | Entrée Vaccination |
+| [Non remboursable](StructureDefinition-fr-lm-non-remboursable.md) | Modèle logique métier - FR LM Entrée Non remboursable |
 
 ### Modèles logiques métier des éléments transversaux 
 
 | | |
 | :--- | :--- |
-| [Auteur APSR](StructureDefinition-AuteurAPSR.md) | Modèle logique métier de l’élément Auteur APSR* La structure de cet élément est identique à celle de l’élément Auteur
- |
-| [Dispositif médical](StructureDefinition-DispositifMedical.md) | Modèle logique métier Dispositif médical |
-| [Informant APSR](StructureDefinition-InformantAPSR.md) | Modèle logique métier de l’élément Informant APSR* La structure de cet élément est identique à celle de l’élément Iformateur
- |
-| [Laboratoire exécutant](StructureDefinition-LaboratoireExecutant.md) | Modèle logique métier de l’élément Laboratoire exécutant |
-| [Participant](StructureDefinition-FrParticipantCorps.md) | Modèle logique métier de l’élément Participant |
-| [Participant APSR](StructureDefinition-ParticipantAPSR.md) | Modèle logique métier de l’élément Participant APSR |
-| [Patient avec sujet non humain](StructureDefinition-PatientSujetNonHumain.md) | Modèle logique métier de l’élément Patient avec sujet non humain |
-| [Performer](StructureDefinition-Performer.md) | Modèle logique métier de l’élément Performer |
-| [Sujet](StructureDefinition-Sujet.md) | Modèle logique métier de l’élément Sujet |
-| [Sujet non humain](StructureDefinition-SujetNonHumain.md) | Modèle logique métier de l’élément Sujet non humain |
-| [Échantillon prélevé](StructureDefinition-EchantillonPreleve.md) | Modèle logique métier Échantillon prélevé |
+| [Modèle logique métier - Dispositif médical](StructureDefinition-fr-lm-dispositif-medical.md) | Dispositif médical |
+| [Modèle logique métier - FR LM Auteur APSR](StructureDefinition-fr-lm-auteur-apsr.md) | Auteur APSR, la structure de cet élément est identique à celle de l’élément Auteur |
+| [Modèle logique métier - FR LM Informant APSR](StructureDefinition-fr-lm-informant-apsr.md) | Informant APSR, la structure de cet élément est identique à celle de l’élément Iformateur |
+| [Modèle logique métier - FR LM Laboratoire exécutant](StructureDefinition-fr-lm-laboratoire-executant.md) | Laboratoire exécutant |
+| [Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant-corps.md) | Participant |
+| [Modèle logique métier - FR LM Participant APSR](StructureDefinition-fr-lm-participant-apsr.md) | Participant APSR |
+| [Modèle logique métier - FR LM Patient avec sujet non humain](StructureDefinition-fr-lm-patient-sujet-non-humain.md) | Patient avec sujet non humain |
+| [Modèle logique métier - FR LM Performer](StructureDefinition-fr-lm-performer.md) | de l’élément Performer |
+| [Modèle logique métier - FR LM Sujet](StructureDefinition-fr-lm-sujet.md) | Sujet |
+| [Modèle logique métier - FR LM Sujet non humain](StructureDefinition-fr-lm-sujet-non-humain.md) | Sujet non humain |
+| [Modèle logique métier - FR LM Échantillon prélevé](StructureDefinition-fr-lm-echantillon-preleve.md) | Échantillon prélevé |
 
 ### Structures: Logical Models 
 
@@ -345,7 +343,7 @@ These define data models that represent the domain covered by this implementatio
 
 | | |
 | :--- | :--- |
-| [Résultats d'examen d'imagerie](StructureDefinition-FrResultatsExamenImagerie.md) | Section Résultats d’examen d’imagerie |
+| [Modèle logique métier - FR LM Résultats d'examen d'imagerie](StructureDefinition-fr-lm-resultats-examen-imagerie.md) | Section Résultats d’examen d’imagerie |
 
 ### Terminology: Value Sets 
 

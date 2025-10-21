@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingSystemeFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-13 | *Computable Name*:Mapping Métier/CDA/FHIR : "Système / Structure Auteur" |
+| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Système / Structure Auteur" |
 
  
 Ce ConceptMap de l’élément SystemeStructureAuteur présente deux groupes de mapping : 
@@ -19,7 +19,7 @@ Ce ConceptMap de l’élément SystemeStructureAuteur présente deux groupes de 
 
 Mapping from (non spécifié) to (non spécifié)
 
-**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Systeme` to [CDA - assignedAuthor](StructureDefinition-fr-core-assigned-author.md)
+**Group 1**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Systeme` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author`
 
 * **Source Code**: Systeme.identificationAuteur
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -57,7 +57,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - assignedAuthor](StructureDefinition-fr-core-assigned-author.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document`
+**Group 2**Mapping from `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-assigned-author` to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-document`
 
 * **Source Code**: assignedAuthor
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -114,7 +114,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-13T08:32:48+00:00",
+  "date" : "2025-10-21T08:19:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
