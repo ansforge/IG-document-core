@@ -11,20 +11,20 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/DocumentDeReference"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document"									
-* group[=].element[+].code = #DocumentDeReference							
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-reference"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document"									
+* group[=].element[+].code = #FRLMDocumentDeReference							
 * group[=].element[=].target.code = #relatedDocument
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #DocumentDeReference.typeReference								
+* group[=].element[+].code = #FRLMDocumentDeReference.typeReference								
 * group[=].element[=].target.code = #relatedDocument@typeCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #DocumentDeReference.identifiantUniqueDocument								
+* group[=].element[+].code = #FRLMDocumentDeReference.identifiantUniqueDocument								
 * group[=].element[=].target.code = #relatedDocument.parentDocument.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-related-document"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
 * group[=].element[+].code = #relatedDocument						
 * group[=].element[=].target.code = #Composition.relatesTo
