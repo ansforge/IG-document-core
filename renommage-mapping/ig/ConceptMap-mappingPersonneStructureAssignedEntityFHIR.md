@@ -53,7 +53,7 @@ Mapping from (non spécifié) to (non spécifié)
   * **Target Code**: assignedEntity.assignedPerson.name.suffix
 * **Source Code**: FRLMPersonneStructure.structure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Target Code**: FRLMPersonneStructure.representedOrganization
+  * **Target Code**: assignedEntity.representedOrganization
 * **Source Code**: FRLMPersonneStructure.structure.identifiantStructure
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
   * **Target Code**: assignedEntity.representedOrganization.id
@@ -153,7 +153,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T12:29:29+00:00",
+  "date" : "2025-10-21T13:02:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -277,7 +277,7 @@ Mapping from (non spécifié) to (non spécifié)
           "code" : "FRLMPersonneStructure.structure",
           "target" : [
             {
-              "code" : "FRLMPersonneStructure.representedOrganization",
+              "code" : "assignedEntity.representedOrganization",
               "equivalence" : "equivalent"
             }
           ]
