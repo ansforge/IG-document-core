@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
   "name" : "FRBundleDocument",
   "title" : "FR Bundle Document",
   "status" : "draft",
-  "date" : "2025-10-21T21:35:58+00:00",
+  "date" : "2025-10-21T22:51:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -140,7 +140,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
           ],
           "rules" : "open"
         },
-        "short" : "Ressource Entry dans le FrBundleDocument",
+        "short" : "Ressource Entry dans le FRBundleDocument",
         "definition" : "Une ressource Entry incluse dans le bundle de ressources du document",
         "comment" : "Doit contenir la Composition comme première entrée",
         "min" : 7,

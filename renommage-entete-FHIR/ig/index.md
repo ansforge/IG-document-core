@@ -94,7 +94,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-10-21T21:35:58+00:00",
+  "date" : "2025-10-21T22:51:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -1594,7 +1594,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
           "reference" : "StructureDefinition/fr-human-name-document"
         },
         "name" : "FR Human Name Document",
-        "description" : "FRHumanNameDocument correspond au type de données HumanName utilisé dans le document.",
+        "description" : "Ce profil correspond au type de données HumanName utilisé dans le document.",
         "exampleBoolean" : false,
         "groupingId" : "Data Type FHIR"
       },

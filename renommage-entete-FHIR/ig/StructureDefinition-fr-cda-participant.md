@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-participant.c
   "name" : "FRCDAParticipant",
   "title" : "CDA - participant",
   "status" : "draft",
-  "date" : "2025-10-21T21:35:58+00:00",
+  "date" : "2025-10-21T22:51:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

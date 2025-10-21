@@ -12,7 +12,7 @@
 | Draft as of 2025-10-21 | *Computable Name*:FRHumanNameDocument |
 
  
-FRHumanNameDocument correspond au type de données HumanName utilisé dans le document. 
+Ce profil correspond au type de données HumanName utilisé dans le document. 
 
 **Usages:**
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-human-name-docume
   "name" : "FRHumanNameDocument",
   "title" : "FR Human Name Document",
   "status" : "draft",
-  "date" : "2025-10-21T21:35:58+00:00",
+  "date" : "2025-10-21T22:51:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -54,7 +54,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-human-name-docume
       ]
     }
   ],
-  "description" : "FRHumanNameDocument correspond au type de données HumanName utilisé dans le document.",
+  "description" : "Ce profil correspond au type de données HumanName utilisé dans le document.",
   "jurisdiction" : [
     {
       "coding" : [

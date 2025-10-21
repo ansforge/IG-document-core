@@ -95,7 +95,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T21:35:58+00:00",
+  "date" : "2025-10-21T22:51:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

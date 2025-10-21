@@ -102,7 +102,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 | | |
 | :--- | :--- |
-| [FR Human Name Document](StructureDefinition-fr-human-name-document.md) | FRHumanNameDocument correspond au type de données HumanName utilisé dans le document. |
+| [FR Human Name Document](StructureDefinition-fr-human-name-document.md) | Ce profil correspond au type de données HumanName utilisé dans le document. |
 
 ### Extensions FHIR 
 
