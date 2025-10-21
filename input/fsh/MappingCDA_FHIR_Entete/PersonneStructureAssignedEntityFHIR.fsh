@@ -46,7 +46,7 @@ Description: """Ce ConceptMap de l'élément PersonneStructure présente deux gr
 * group[=].element[=].target.equivalence = #equivalent
 //Structure
 * group[=].element[+].code = #FRLMPersonneStructure.structure					
-* group[=].element[=].target.code = #FRLMPersonneStructure.representedOrganization
+* group[=].element[=].target.code = #assignedEntity.representedOrganization
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMPersonneStructure.structure.identifiantStructure					
 * group[=].element[=].target.code = #assignedEntity.representedOrganization.id
