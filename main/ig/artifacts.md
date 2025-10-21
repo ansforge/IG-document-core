@@ -184,13 +184,6 @@ These define sets of codes used by systems conforming to this implementation gui
 | :--- | :--- |
 | [FR ValueSet Participation Type](ValueSet-fr-doc-vs-participation-type.md) | Type de participation : destinataire |
 | [Fr ValueSet RolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md) | Pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle). |
-| [Fr ValueSet Savoir-faire Profession Chirurgien-Dentiste](ValueSet-fr-doc-vs-savoir-faire-profession-chirurgien-dentiste.md) | Savoir-faire pour la profession 40 (Chirurgien-Dentiste) |
-| [Fr ValueSet Savoir-faire Profession Infirmier](ValueSet-fr-doc-vs-savoir-faire-profession-infirmier.md) | Savoir-faire pour la profession 60 (Infirmier) |
-| [Fr ValueSet Savoir-faire Profession Pharmacien](ValueSet-fr-doc-vs-savoir-faire-profession-pharmacien.md) | Savoir-faire pour la profession 21 (Pharmacien) |
-| [Fr ValueSet Type Savoir-faire Profession Chirurgien-Dentiste](ValueSet-fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste.md) | Type Savoir-faire pour la profession 40 (Chirurgien-Dentiste) |
-| [Fr ValueSet Type Savoir-faire Profession Infirmier](ValueSet-fr-doc-vs-type-savoir-faire-profession-infirmier.md) | Type Savoir-faire pour la profession 60 (Infirmier) |
-| [Fr ValueSet Type Savoir-faire Profession Medecin](ValueSet-fr-doc-vs-type-savoir-faire-profession-medecin.md) | Type Savoir-faire pour la profession 10 (Médecin) |
-| [Fr ValueSet Type Savoir-faire Profession Pharmacien](ValueSet-fr-doc-vs-type-savoir-faire-profession-pharmacien.md) | Type Savoir-faire pour la profession 21 (Pharmacien) |
 
 ### Example: Example Instances 
 

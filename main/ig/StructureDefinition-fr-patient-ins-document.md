@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-ins-docum
   "name" : "FrPatientINSDocument",
   "title" : "Fr Patient INS Document",
   "status" : "draft",
-  "date" : "2025-10-21T08:14:34+00:00",
+  "date" : "2025-10-21T15:23:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -103,43 +103,6 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-ins-docum
   "differential" : {
     "element" : [
       {
-        "id" : "Patient.name:usualName",
-        "path" : "Patient.name",
-        "sliceName" : "usualName"
-      },
-      {
-        "id" : "Patient.name:usualName.family",
-        "path" : "Patient.name.family",
-        "short" : "Nom utilisé"
-      },
-      {
-        "id" : "Patient.name:usualName.given",
-        "path" : "Patient.name.given",
-        "short" : "Prénom utilisé",
-        "max" : "1"
-      },
-      {
-        "id" : "Patient.name:officialName",
-        "path" : "Patient.name",
-        "sliceName" : "officialName"
-      },
-      {
-        "id" : "Patient.name:officialName.extension:birth-list-given-name",
-        "path" : "Patient.name.extension",
-        "sliceName" : "birth-list-given-name",
-        "short" : "Liste des prénoms de l'acte de naissance"
-      },
-      {
-        "id" : "Patient.name:officialName.family",
-        "path" : "Patient.name.family",
-        "short" : "Nom de naissance"
-      },
-      {
-        "id" : "Patient.name:officialName.given",
-        "path" : "Patient.name.given",
-        "short" : "Premier prénom de l'acte de naissance"
-      },
-      {
         "id" : "Patient.contact.relationship:Role",
         "path" : "Patient.contact.relationship",
         "sliceName" : "Role",
@@ -179,29 +142,6 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-ins-docum
             "targetProfile" : [
               "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document"
             ]
-          }
-        ],
-        "constraint" : [
-          {
-            "key" : "pat-gp-1",
-            "severity" : "error",
-            "human" : "Le generalPractitioner doit être un PractitionerRole contenant un code[typeCode] fixé à 'INF'.",
-            "expression" : "resolve().code.coding.where(code='INF').exists()",
-            "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document"
-          },
-          {
-            "key" : "pat-gp-2",
-            "severity" : "error",
-            "human" : "Le generalPractitioner doit être un PractitionerRole contenant un code[functionCode] fixé à 'PCP'.",
-            "expression" : "resolve().code.coding.where(code='PCP').exists()",
-            "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document"
-          },
-          {
-            "key" : "pat-gp-3",
-            "severity" : "error",
-            "human" : "Le generalPractitioner doit être un PractitionerRole contenant un code[classCode] fixé à 'PROV'.",
-            "expression" : "resolve().code.coding.where(code='PROV').exists()",
-            "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document"
           }
         ]
       }

@@ -995,13 +995,6 @@ package IG #DDDDDD{
 
         class FrPatientINSDocument{
 
-             Patient.name:usualName => [None..None]
-             Patient.name:usualName.family => [None..None]
-             Patient.name:usualName.given => [None..1]
-             Patient.name:officialName => [None..None]
-             Patient.name:officialName.extension:birth-list-given-name => <&plus>[None..None]
-             Patient.name:officialName.family => [None..None]
-             Patient.name:officialName.given => [None..None]
              Patient.contact.relationship:Role => [None..None]
              Patient.contact.relationship:RelationType => [None..None]
              Patient.contact.name => [1..None]
@@ -1015,22 +1008,6 @@ package IG #DDDDDD{
              Practitioner.name.family => [1..None]
              Practitioner.name.given => [None..1]
              Practitioner.qualification:savoirFaire => [None..None]
-             Practitioner.qualification:savoirFaire/professionMedecin => [0..1]
-             Practitioner.qualification:savoirFaire/professionMedecin.code.coding => [None..None]
-             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:savoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionMedecin.code.coding:typeSavoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionPharmacien => [0..1]
-             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding => [None..None]
-             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:savoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionPharmacien.code.coding:typeSavoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionChirurgienDentiste => [0..1]
-             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding => [None..None]
-             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:savoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionChirurgienDentiste.code.coding:typeSavoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionInfirmier => [0..1]
-             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding => [None..None]
-             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:savoirFaire => [0..1]
-             Practitioner.qualification:savoirFaire/professionInfirmier.code.coding:typeSavoirFaire => [0..1]
              Practitioner.qualification:role => [0..1]
              Practitioner.qualification:role.code.coding => [None..None]
         } 
@@ -1083,34 +1060,6 @@ package IG #DDDDDD{
         class FRValueSetParticipationType  
 
      FrCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
-
-        class FRValueSetTypeSavoirFaireProfessionMedecin  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionMedecin
-
-        class FRValueSetSavoirFaireProfessionPharmacien  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionPharmacien
-
-        class FRValueSetTypeSavoirFaireProfessionPharmacien  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionPharmacien
-
-        class FRValueSetSavoirFaireProfessionChirurgienDentiste  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionChirurgienDentiste
-
-        class FRValueSetTypeSavoirFaireProfessionChirurgienDentiste  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionChirurgienDentiste
-
-        class FRValueSetSavoirFaireProfessionInfirmier  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetSavoirFaireProfessionInfirmier
-
-        class FRValueSetTypeSavoirFaireProfessionInfirmier  
-
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetTypeSavoirFaireProfessionInfirmier
 
         class FRValueSetRolePriseCharge  
 

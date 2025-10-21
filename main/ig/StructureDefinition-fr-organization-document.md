@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-organization-docu
   "name" : "FrOrganizationDocument",
   "title" : "Fr Organization Document",
   "status" : "draft",
-  "date" : "2025-10-21T08:14:34+00:00",
+  "date" : "2025-10-21T15:23:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

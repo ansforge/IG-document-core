@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
   "name" : "FrCompositionDocument",
   "title" : "Fr Composition Document",
   "status" : "draft",
-  "date" : "2025-10-21T08:14:34+00:00",
+  "date" : "2025-10-21T15:23:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -413,7 +413,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
         "id" : "Composition.author",
         "path" : "Composition.author",
         "short" : "Auteur du document",
-        "definition" : "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs.",
+        "definition" : "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FrPractitionerRoleDocument).",
         "type" : [
           {
             "code" : "Reference",

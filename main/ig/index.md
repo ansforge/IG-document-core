@@ -51,7 +51,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md)...Show 95 more,[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu-document.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[FRValueSetSavoirFaireProfessionChirurgienDentiste](ValueSet-fr-doc-vs-savoir-faire-profession-chirurgien-dentiste.md),[FRValueSetSavoirFaireProfessionInfirmier](ValueSet-fr-doc-vs-savoir-faire-profession-infirmier.md),[FRValueSetSavoirFaireProfessionPharmacien](ValueSet-fr-doc-vs-savoir-faire-profession-pharmacien.md),[FRValueSetTypeSavoirFaireProfessionChirurgienDentiste](ValueSet-fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste.md),[FRValueSetTypeSavoirFaireProfessionInfirmier](ValueSet-fr-doc-vs-type-savoir-faire-profession-infirmier.md),[FRValueSetTypeSavoirFaireProfessionMedecin](ValueSet-fr-doc-vs-type-savoir-faire-profession-medecin.md),[FRValueSetTypeSavoirFaireProfessionPharmacien](ValueSet-fr-doc-vs-type-savoir-faire-profession-pharmacien.md),[FrAuthorTimeExtension](StructureDefinition-fr-author-time.md),[FrBundleDocument](StructureDefinition-fr-bundle-document.md),[FrCompositionDocument](StructureDefinition-fr-composition-document.md),[FrDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FrEncounterDocument](StructureDefinition-fr-encounter-document.md),[FrLocationDocument](StructureDefinition-fr-location-document.md),[FrOrganizationDocument](StructureDefinition-fr-organization-document.md),[FrPatientDocument](StructureDefinition-fr-patient-document.md),[FrPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FrPerformerEvent](StructureDefinition-fr-performer-event.md),[FrPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FrPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FrRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[HumanNameDocument](StructureDefinition-fr-human-name-document.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md)...Show 88 more,[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu-document.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[FrAuthorTimeExtension](StructureDefinition-fr-author-time.md),[FrBundleDocument](StructureDefinition-fr-bundle-document.md),[FrCompositionDocument](StructureDefinition-fr-composition-document.md),[FrDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FrEncounterDocument](StructureDefinition-fr-encounter-document.md),[FrLocationDocument](StructureDefinition-fr-location-document.md),[FrOrganizationDocument](StructureDefinition-fr-organization-document.md),[FrPatientDocument](StructureDefinition-fr-patient-document.md),[FrPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FrPerformerEvent](StructureDefinition-fr-performer-event.md),[FrPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FrPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FrRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[HumanNameDocument](StructureDefinition-fr-human-name-document.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
 
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
@@ -94,7 +94,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-10-21T08:14:34+00:00",
+  "date" : "2025-10-21T15:23:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -1729,104 +1729,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         },
         "name" : "Fr ValueSet RolePriseCharge",
         "description" : "Pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle).",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-chirurgien-dentiste"
-        },
-        "name" : "Fr ValueSet Savoir-faire Profession Chirurgien-Dentiste",
-        "description" : "Savoir-faire pour la profession 40 (Chirurgien-Dentiste)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-infirmier"
-        },
-        "name" : "Fr ValueSet Savoir-faire Profession Infirmier",
-        "description" : "Savoir-faire pour la profession 60 (Infirmier)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-savoir-faire-profession-pharmacien"
-        },
-        "name" : "Fr ValueSet Savoir-faire Profession Pharmacien",
-        "description" : "Savoir-faire pour la profession 21 (Pharmacien)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-type-savoir-faire-profession-chirurgien-dentiste"
-        },
-        "name" : "Fr ValueSet Type Savoir-faire Profession Chirurgien-Dentiste",
-        "description" : "Type Savoir-faire pour la profession 40 (Chirurgien-Dentiste)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-type-savoir-faire-profession-infirmier"
-        },
-        "name" : "Fr ValueSet Type Savoir-faire Profession Infirmier",
-        "description" : "Type Savoir-faire pour la profession 60 (Infirmier)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-type-savoir-faire-profession-medecin"
-        },
-        "name" : "Fr ValueSet Type Savoir-faire Profession Medecin",
-        "description" : "Type Savoir-faire pour la profession 10 (Médecin)",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
-          }
-        ],
-        "reference" : {
-          "reference" : "ValueSet/fr-doc-vs-type-savoir-faire-profession-pharmacien"
-        },
-        "name" : "Fr ValueSet Type Savoir-faire Profession Pharmacien",
-        "description" : "Type Savoir-faire pour la profession 21 (Pharmacien)",
         "exampleBoolean" : false
       },
       {
