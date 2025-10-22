@@ -1,8 +1,7 @@
-// StructureDefinition for PractitionerRoleDocument
-Profile: FrPractitionerRoleDocument
+Profile: FRPractitionerRoleDocument
 Parent: AsPractitionerRoleProfile
 Id: fr-practitionerRole-document
-Title: "Fr PractitionerRole Document"
+Title: "FR PractitionerRole Document"
 Description: "Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical."
 
 // slice : Rôle fonctionnel du professionnel de santé
@@ -20,6 +19,6 @@ Description: "Ce profil représente les professionnels de santé et leurs rôles
 * code[typeCode].coding from $JDV_J144-ParticipationType-CISIS (required)
 * code[typeCode] ^short = "Type de participation"
 * practitioner 1..1 
-* practitioner only Reference(FrPractitionerDocument)
+* practitioner only Reference(FRPractitionerDocument)
 * organization 1..1
-* organization only Reference(FrOrganizationDocument)
+* organization only Reference(FROrganizationDocument)

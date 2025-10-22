@@ -1,8 +1,7 @@
-// StructureDefinition for EncounterDocument
-Profile: FrEncounterDocument
+Profile: FREncounterDocument
 Parent: FRCoreEncounterProfile
 Id: fr-encounter-document
-Title: "Fr Encounter Document"
+Title: "FR Encounter Document"
 Description: "Ce profil représente l'association du document à une prise en charge."
 * type 0..1
 * type ^short = "Type de prise en charge"
@@ -24,7 +23,7 @@ Description: "Ce profil représente l'association du document à une prise en ch
 * participant[responsibleParty].type.coding.system = "https://mos.esante.gouv.fr/NOS/TRE_A13-HL7ParticipationType/FHIR/TRE-A13-HL7ParticipationType"
 * participant[responsibleParty].individual 1..1
 * participant[responsibleParty].individual ^short = "Entité responsable de la prise en charge"
-* participant[responsibleParty].individual only Reference(FrPractitionerRoleDocument)
+* participant[responsibleParty].individual only Reference(FRPractitionerRoleDocument)
 
 
 // Personne impliquée dans la prise en charge : encounterParticipant
@@ -34,8 +33,8 @@ Description: "Ce profil représente l'association du document à une prise en ch
 * participant[encounterParticipant].type from $JDV_J140-EncounterParticipationType-CISIS (required)
 * participant[encounterParticipant].individual 1..1
 * participant[encounterParticipant].individual ^short = "Professionnel impliqué"
-* participant[encounterParticipant].individual only Reference(FrPractitionerRoleDocument)
+* participant[encounterParticipant].individual only Reference(FRPractitionerRoleDocument)
 
 * location 1..1 
 * location ^short = "Lieu de la prise en charge"
-* location.location only Reference(FrLocationDocument)
+* location.location only Reference(FRLocationDocument)

@@ -1,8 +1,7 @@
-// StructureDefinition for DeviceDocument
-Profile: FrDeviceAuteurDocument
+Profile: FRDeviceAuteurDocument
 Parent: Device
 Id: fr-device-auteur-document
-Title: "Fr Device Document"
+Title: "FR Device Document"
 Description: "Ce profil représente le système auteur du document."
 * identifier 1..*
 * type ^short = "Profession / savoir-faire ou rôle"
@@ -12,4 +11,4 @@ Description: "Ce profil représente le système auteur du document."
 * deviceName.type ^short = "Nom du système"
 * owner 1..1
 * owner ^short = "Structure" 
-* owner only Reference(FrOrganizationDocument)
+* owner only Reference(FROrganizationDocument)

@@ -1,8 +1,7 @@
-// StructureDefinition for HumanNameDocument
-Profile: HumanNameDocument
+Profile: FRHumanNameDocument
 Parent: FRCoreHumanNameProfile
 Id: fr-human-name-document
-Title: "Human Name Document"
+Title: "FR Human Name Document"
 Description: "Ce profil correspond au type de données HumanName utilisé dans le document."
 * family 1..
 * prefix ^short = "Civilité"
