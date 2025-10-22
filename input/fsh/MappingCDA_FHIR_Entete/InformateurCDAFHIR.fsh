@@ -11,23 +11,23 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Informateur"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant"									
-* group[=].element[+].code = #Informateur								
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant"									
+* group[=].element[+].code = #FRLMInformateur								
 * group[=].element[=].target.code = #informant
 * group[=].element[=].target.equivalence = #equivalent
 // Mapping pour assignedEntity
-* group[=].element[+].code = #Informateur.informateur								
+* group[=].element[+].code = #FRLMInformateur.informateur								
 * group[=].element[=].target.code = #informant.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément informateur est de type PersonneStructure."
 // Mapping pour relatedEntity
-* group[=].element[+].code = #Informateur.informateur								
+* group[=].element[+].code = #FRLMInformateur.informateur								
 * group[=].element[=].target.code = #informant.relatedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément informateur est de type PersonneStructure."
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-informant"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant"					
 * group[=].target = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"									
 * group[=].element[+].code = #informant					
 * group[=].element[=].target.code = #extension:InformantExtension						
