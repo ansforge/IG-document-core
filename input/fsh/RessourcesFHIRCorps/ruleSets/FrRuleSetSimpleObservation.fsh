@@ -1,4 +1,4 @@
-RuleSet: FrRuleSetSimpleObservation
+RuleSet: FRRuleSetSimpleObservation
 // Contraintes pour Observation - Fr Simple Observation
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical(FrSimpleObservation)
@@ -14,7 +14,7 @@ RuleSet: FrRuleSetSimpleObservation
 * code ^short = "Code de l'observation"
 
 * subject 1..1 MS
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FRPatientINSDocument or FRPatientDocument)
 * subject ^short = "Patient concerné"
 
 * effective[x] 1..1 MS
@@ -25,11 +25,11 @@ RuleSet: FrRuleSetSimpleObservation
 
 * performer 0..* MS
 * performer only Reference(
-    FrPractitionerRoleDocument 
-    or FrOrganizationDocument 
-    or FrPractitionerRoleDocument 
-    or FrPatientINSDocument 
-    or FrPatientDocument
+    FRPractitionerRoleDocument 
+    or FROrganizationDocument 
+    or FRPractitionerRoleDocument 
+    or FRPatientINSDocument 
+    or FRPatientDocument
 )
 * performer ^short = "Auteur de l’observation"
 
@@ -44,5 +44,5 @@ RuleSet: FrRuleSetSimpleObservation
 * note MS
 * note ^short = "Commentaire"
 
-* encounter only Reference (FrEncounter or FrEncounterEvent)
+* encounter only Reference (FREncounterDocument or FREncounterEventDocument)
 * encounter ^short = "Rencontre de soins durant laquelle cette observation a été effectuée"

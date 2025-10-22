@@ -1,6 +1,5 @@
-// StructureDefinition for Patient Document
-Profile: FrPatientDocument
+Profile: FRPatientDocument
 Parent: FRCorePatientProfile
 Id: fr-patient-document
-Title: "Fr Patient Document"
+Title: "FR Patient Document"
 Description: "Ce profil représente le patient concerné par le document."

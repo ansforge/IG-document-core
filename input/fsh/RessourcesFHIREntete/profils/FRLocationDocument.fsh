@@ -1,8 +1,7 @@
-// StructureDefinition for LocationDocument
-Profile: FrLocationDocument
+Profile: FRLocationDocument
 Parent: FRCoreLocationProfile
 Id: fr-location-document
-Title: "Fr Location Document"
+Title: "FR Location Document"
 Description: "Ce profil représente le lieu de la prise en charge."
 
 // Slicing : type 
