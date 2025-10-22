@@ -1,8 +1,7 @@
-// StructureDefinition for Patient INS Document
-Profile: FrPatientINSDocument
+Profile: FRPatientINSDocument
 Parent: FRCorePatientINSProfile
 Id: fr-patient-ins-document
-Title: "Fr Patient INS Document"
+Title: "FR Patient INS Document"
 Description: "Ce profil représente le patient concerné par le document."
 
 * contact
@@ -13,4 +12,4 @@ Description: "Ce profil représente le patient concerné par le document."
   * relationship[RelationType] from $JDV_J11_RelationPatient_CISIS  (required)
   * relationship[Role] from $jdv-role-informateur-cisis (required)
 
-* generalPractitioner only Reference(FrPractitionerDocument)
+* generalPractitioner only Reference(FRPractitionerDocument)

@@ -1,8 +1,7 @@
-// StructureDefinition for PractitionerDocument
-Profile: FrPractitionerDocument
+Profile: FRPractitionerDocument
 Parent: AsPractitionerProfile
 Id: fr-practitioner-document
-Title: "Fr Practitioner Document"
+Title: "FR Practitioner Document"
 Description: "Ce profil permet de décrire un professionnel de santé dans le cadre d'un document médical"
 * identifier 1..* 
 * name 1..1
