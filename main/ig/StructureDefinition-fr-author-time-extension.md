@@ -1,15 +1,15 @@
-# Fr Author Time Extension - ANS IG document core v0.1.0
+# FR Author Time Extension - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Author Time Extension**
+* **FR Author Time Extension**
 
-## Extension: Fr Author Time Extension 
+## Extension: FR Author Time Extension 
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrAuthorTimeExtension |
+| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension | *Version*:0.1.0 |
+| Draft as of 2025-10-22 | *Computable Name*:FRAuthorTimeExtension |
 
 Extension permettant d’ajouter un horodatage (TS) à l’élément author d’une Composition.
 
@@ -19,9 +19,9 @@ Extension permettant d’ajouter un horodatage (TS) à l’élément author d’
 
 **Usages:**
 
-* Use this Extension: [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+* Use this Extension: [FR Composition Document](StructureDefinition-fr-composition-document.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-author-time)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-author-time-extension)
 
 ### Formal Views of Extension Content
 
@@ -29,7 +29,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  
 
-Other representations of profile: [CSV](StructureDefinition-fr-author-time.csv), [Excel](StructureDefinition-fr-author-time.xlsx), [Schematron](StructureDefinition-fr-author-time.sch) 
+Other representations of profile: [CSV](StructureDefinition-fr-author-time-extension.csv), [Excel](StructureDefinition-fr-author-time-extension.xlsx), [Schematron](StructureDefinition-fr-author-time-extension.sch) 
 
 #### Constraints
 
@@ -40,13 +40,13 @@ Other representations of profile: [CSV](StructureDefinition-fr-author-time.csv),
 ```json
 {
   "resourceType" : "StructureDefinition",
-  "id" : "fr-author-time",
-  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time",
+  "id" : "fr-author-time-extension",
+  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension",
   "version" : "0.1.0",
-  "name" : "FrAuthorTimeExtension",
-  "title" : "Fr Author Time Extension",
+  "name" : "FRAuthorTimeExtension",
+  "title" : "FR Author Time Extension",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-author-time.csv),
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension"
       },
       {
         "id" : "Extension.value[x]",

@@ -1,22 +1,22 @@
-# Human Name Document - ANS IG document core v0.1.0
+# FR Human Name Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Human Name Document**
+* **FR Human Name Document**
 
-## Data Type Profile: Human Name Document 
+## Data Type Profile: FR Human Name Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-human-name-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:HumanNameDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRHumanNameDocument |
 
  
 Ce profil correspond au type de données HumanName utilisé dans le document. 
 
 **Usages:**
 
-* Use this DataType Profile: [Fr Patient INS Document](StructureDefinition-fr-patient-ins-document.md), [Fr Practitioner Document](StructureDefinition-fr-practitioner-document.md) and [Fr RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
+* Use this DataType Profile: [FR Patient INS Document](StructureDefinition-fr-patient-ins-document.md), [FR Practitioner Document](StructureDefinition-fr-practitioner-document.md) and [FR RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-human-name-document)
 
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-human-name-docume
   "id" : "fr-human-name-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-human-name-document",
   "version" : "0.1.0",
-  "name" : "HumanNameDocument",
-  "title" : "Human Name Document",
+  "name" : "FRHumanNameDocument",
+  "title" : "FR Human Name Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

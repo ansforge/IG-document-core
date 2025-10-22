@@ -1,23 +1,23 @@
-# Fr Location Document - ANS IG document core v0.1.0
+# FR Location Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Location Document**
+* **FR Location Document**
 
-## Resource Profile: Fr Location Document 
+## Resource Profile: FR Location Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrLocationDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRLocationDocument |
 
  
 Ce profil représente le lieu de la prise en charge. 
 
 **Usages:**
 
-* Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Encounter Document](StructureDefinition-fr-encounter-document.md)
+* Use this Profile: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
+* Refer to this Profile: [FR Encounter Document](StructureDefinition-fr-encounter-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-location-document)
 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-location-document
   "id" : "fr-location-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document",
   "version" : "0.1.0",
-  "name" : "FrLocationDocument",
-  "title" : "Fr Location Document",
+  "name" : "FRLocationDocument",
+  "title" : "FR Location Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

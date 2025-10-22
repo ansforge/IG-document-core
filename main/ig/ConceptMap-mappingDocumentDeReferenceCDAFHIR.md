@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDocumentDeReferenceCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "DocumentDeReference" |
+| Draft as of 2025-10-22 | *Computable Name*:Mapping Métier/CDA/FHIR : "DocumentDeReference" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -33,7 +33,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md) to [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+**Group 2**Mapping from [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
 
 * **Source Code**: relatedDocument
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -59,7 +59,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

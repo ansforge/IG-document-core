@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-doc-vs-role-prise-charge | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FRValueSetRolePriseCharge |
+| Draft as of 2025-10-22 | *Computable Name*:FRValueSetRolePriseCharge |
 
  
 Pour les professions 41 (Assistant de service social) et 99 (Acteur caractérisé par son rôle). 
 
  **References** 
 
-* [Fr Practitioner Document](StructureDefinition-fr-practitioner-document.md)
+* [FR Practitioner Document](StructureDefinition-fr-practitioner-document.md)
 
 ### Logical Definition (CLD)
 
@@ -58,7 +58,7 @@ Profil: [Shareable ValueSet](http://hl7.org/fhir/R4/shareablevalueset.html)
   "title" : "Fr ValueSet RolePriseCharge",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

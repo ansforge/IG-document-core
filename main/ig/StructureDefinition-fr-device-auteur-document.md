@@ -1,23 +1,23 @@
-# Fr Device Document - ANS IG document core v0.1.0
+# FR Device Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Device Document**
+* **FR Device Document**
 
-## Resource Profile: Fr Device Document 
+## Resource Profile: FR Device Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrDeviceAuteurDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRDeviceAuteurDocument |
 
  
 Ce profil représente le système auteur du document. 
 
 **Usages:**
 
-* Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+* Use this Profile: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
+* Refer to this Profile: [FR Composition Document](StructureDefinition-fr-composition-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-device-auteur-document)
 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-device-auteur-doc
   "id" : "fr-device-auteur-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document",
   "version" : "0.1.0",
-  "name" : "FrDeviceAuteurDocument",
-  "title" : "Fr Device Document",
+  "name" : "FRDeviceAuteurDocument",
+  "title" : "FR Device Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

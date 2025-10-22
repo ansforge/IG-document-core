@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-represented-organization | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FRCDARepresentedOrganization |
+| Draft as of 2025-10-22 | *Computable Name*:FRCDARepresentedOrganization |
 
  
 L’élément de l’en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-represented-o
   "name" : "FRCDARepresentedOrganization",
   "title" : "CDA - representedOrganization",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

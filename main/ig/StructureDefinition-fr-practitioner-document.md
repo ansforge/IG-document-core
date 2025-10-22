@@ -1,23 +1,23 @@
-# Fr Practitioner Document - ANS IG document core v0.1.0
+# FR Practitioner Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Practitioner Document**
+* **FR Practitioner Document**
 
-## Resource Profile: Fr Practitioner Document 
+## Resource Profile: FR Practitioner Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrPractitionerDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRPractitionerDocument |
 
  
 Ce profil permet de décrire un professionnel de santé dans le cadre d’un document médical 
 
 **Usages:**
 
-* Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Patient INS Document](StructureDefinition-fr-patient-ins-document.md) and [Fr PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+* Use this Profile: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
+* Refer to this Profile: [FR Patient INS Document](StructureDefinition-fr-patient-ins-document.md) and [FR PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-practitioner-document)
 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitioner-docu
   "id" : "fr-practitioner-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document",
   "version" : "0.1.0",
-  "name" : "FrPractitionerDocument",
-  "title" : "Fr Practitioner Document",
+  "name" : "FRPractitionerDocument",
+  "title" : "FR Practitioner Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

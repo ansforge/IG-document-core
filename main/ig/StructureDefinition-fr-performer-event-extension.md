@@ -1,15 +1,15 @@
-# Fr Performer Event - ANS IG document core v0.1.0
+# FR Performer Event Extension - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Performer Event**
+* **FR Performer Event Extension**
 
-## Extension: Fr Performer Event 
+## Extension: FR Performer Event Extension 
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrPerformerEvent |
+| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension | *Version*:0.1.0 |
+| Draft as of 2025-10-22 | *Computable Name*:FRPerformerEventExtension |
 
 Extension permettant d’ajouter un performer à l’élément event d’une Composition.
 
@@ -19,9 +19,9 @@ Extension permettant d’ajouter un performer à l’élément event d’une Com
 
 **Usages:**
 
-* Use this Extension: [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+* Use this Extension: [FR Composition Document](StructureDefinition-fr-composition-document.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-performer-event)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-performer-event-extension)
 
 ### Formal Views of Extension Content
 
@@ -29,7 +29,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  
 
-Other representations of profile: [CSV](StructureDefinition-fr-performer-event.csv), [Excel](StructureDefinition-fr-performer-event.xlsx), [Schematron](StructureDefinition-fr-performer-event.sch) 
+Other representations of profile: [CSV](StructureDefinition-fr-performer-event-extension.csv), [Excel](StructureDefinition-fr-performer-event-extension.xlsx), [Schematron](StructureDefinition-fr-performer-event-extension.sch) 
 
 #### Constraints
 
@@ -40,13 +40,13 @@ Other representations of profile: [CSV](StructureDefinition-fr-performer-event.c
 ```json
 {
   "resourceType" : "StructureDefinition",
-  "id" : "fr-performer-event",
-  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event",
+  "id" : "fr-performer-event-extension",
+  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension",
   "version" : "0.1.0",
-  "name" : "FrPerformerEvent",
-  "title" : "Fr Performer Event",
+  "name" : "FRPerformerEventExtension",
+  "title" : "FR Performer Event Extension",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-performer-event.c
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension"
       },
       {
         "id" : "Extension.value[x]",

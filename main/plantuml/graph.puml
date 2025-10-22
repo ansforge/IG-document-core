@@ -7,7 +7,7 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class FrBundleDocument{
+        class FRBundleDocument{
 
              Bundle.identifier => [1..None]
              Bundle.type => [None..None]
@@ -609,7 +609,7 @@ package IG #DDDDDD{
              ServiceEvent.performer.typeCode => [None..None]
         } 
 
-        class FrCompositionDocument{
+        class FRCompositionDocument{
 
              Composition.meta.profile => [None..None]
              Composition.meta.profile:canonical => [0..1]
@@ -690,7 +690,7 @@ package IG #DDDDDD{
              Composition.section => [None..None]
         } 
 
-        class FrDeviceAuteurDocument{
+        class FRDeviceAuteurDocument{
 
              Device.identifier => [1..None]
              Device.deviceName.name => [None..None]
@@ -699,7 +699,7 @@ package IG #DDDDDD{
              Device.owner => [1..None]
         } 
 
-        class FrEncounterDocument{
+        class FREncounterDocument{
 
              Encounter.type => [None..None]
              Encounter.participant => [None..None]
@@ -718,7 +718,7 @@ package IG #DDDDDD{
              Encounter.location.location => [None..None]
         } 
 
-        class HumanNameDocument{
+        class FRHumanNameDocument{
 
              HumanName.family => [1..None]
              HumanName.prefix => [None..None]
@@ -970,7 +970,7 @@ package IG #DDDDDD{
              fr-lm-validateur.validateur => [1..1]
         } 
 
-        class FrLocationDocument{
+        class FRLocationDocument{
 
              Location.name => [None..None]
              Location.type => [None..None]
@@ -982,18 +982,18 @@ package IG #DDDDDD{
              Location.address => [None..None]
         } 
 
-        class FrOrganizationDocument{
+        class FROrganizationDocument{
 
              Organization.identifier => [None..None]
              Organization.type:standardIndustryClassCode => [0..1]
         } 
 
-        class FrPatientDocument{
+        class FRPatientDocument{
 
              Patient => [None..None]
         } 
 
-        class FrPatientINSDocument{
+        class FRPatientINSDocument{
 
              Patient.contact.relationship:Role => [None..None]
              Patient.contact.relationship:RelationType => [None..None]
@@ -1001,7 +1001,7 @@ package IG #DDDDDD{
              Patient.generalPractitioner => [None..None]
         } 
 
-        class FrPractitionerDocument{
+        class FRPractitionerDocument{
 
              Practitioner.identifier => [1..None]
              Practitioner.name => [1..1]
@@ -1012,7 +1012,7 @@ package IG #DDDDDD{
              Practitioner.qualification:role.code.coding => [None..None]
         } 
 
-        class FrPractitionerRoleDocument{
+        class FRPractitionerRoleDocument{
 
              PractitionerRole.practitioner => [1..None]
              PractitionerRole.organization => [1..None]
@@ -1024,7 +1024,7 @@ package IG #DDDDDD{
              PractitionerRole.code:typeCode.coding => [None..None]
         } 
 
-        class FrRelatedPersonDocument{
+        class FRRelatedPersonDocument{
 
              RelatedPerson.relationship:Role => [None..None]
              RelatedPerson.relationship:Role.coding.code => [None..None]
@@ -1037,17 +1037,17 @@ package IG #DDDDDD{
      }
      package extension #paleturquoise {
 
-     FrCompositionDocument -[#black,dashed,thickness=2]-> FrAuthorTimeExtension
-     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
-     FrCompositionDocument -[#black,dashed,thickness=2]-> FrPerformerEvent
+     FRCompositionDocument -[#black,dashed,thickness=2]-> FRAuthorTimeExtension
+     FRCompositionDocument -[#black,dashed,thickness=2]-> FRPerformerEventExtension
+     FRCompositionDocument -[#black,dashed,thickness=2]-> FRPerformerEventExtension
 
-        class FrAuthorTimeExtension{
+        class FRAuthorTimeExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
           Extension.value[x] => [None..None]
         } 
-        class FrPerformerEvent{
+        class FRPerformerEventExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
@@ -1059,18 +1059,18 @@ package IG #DDDDDD{
 
         class FRValueSetParticipationType  
 
-     FrCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
+     FRCompositionDocument -[#black,dotted,thickness=2]-> FRValueSetParticipationType
 
         class FRValueSetRolePriseCharge  
 
-     FrPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetRolePriseCharge
+     FRPractitionerDocument -[#black,dotted,thickness=2]-> FRValueSetRolePriseCharge
        }
 
 package "Ressources de base" #palegreen {
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 
-    class94c51f19c37f96ed231f5a0ae512b2a8 --> FrBundleDocument
+    class94c51f19c37f96ed231f5a0ae512b2a8 --> FRBundleDocument
 
  class "http://hl7.org/cda/stds/core/StructureDefinition/AssignedAuthor" as  class58510d48686a6398080b7be0a9488a07 
 
@@ -1214,19 +1214,19 @@ package "Ressources de base" #palegreen {
 
  class "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/clinical-document-composition" as  classd9daa32262ad3cdcf2aad9f33da44536 
 
-    classd9daa32262ad3cdcf2aad9f33da44536 --> FrCompositionDocument
+    classd9daa32262ad3cdcf2aad9f33da44536 --> FRCompositionDocument
 
  class "Device" as  classe0ac20adce6ffee48c7151b070aa5737 
 
-    classe0ac20adce6ffee48c7151b070aa5737 --> FrDeviceAuteurDocument
+    classe0ac20adce6ffee48c7151b070aa5737 --> FRDeviceAuteurDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter" as  class67c94c9a57029ce118810d8d7e718509 
 
-    class67c94c9a57029ce118810d8d7e718509 --> FrEncounterDocument
+    class67c94c9a57029ce118810d8d7e718509 --> FREncounterDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name" as  classab70be087e84d984395444c4643fb763 
 
-    classab70be087e84d984395444c4643fb763 --> HumanNameDocument
+    classab70be087e84d984395444c4643fb763 --> FRHumanNameDocument
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -1302,30 +1302,30 @@ package "Ressources de base" #palegreen {
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location" as  class505b865d93b3b02ed3aff95e782d498a 
 
-    class505b865d93b3b02ed3aff95e782d498a --> FrLocationDocument
+    class505b865d93b3b02ed3aff95e782d498a --> FRLocationDocument
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization" as  class02104d9d29574b85b8bdd491de969f0d 
 
-    class02104d9d29574b85b8bdd491de969f0d --> FrOrganizationDocument
+    class02104d9d29574b85b8bdd491de969f0d --> FROrganizationDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient" as  classcb72a5551de902d7716887df67489a97 
 
-    classcb72a5551de902d7716887df67489a97 --> FrPatientDocument
+    classcb72a5551de902d7716887df67489a97 --> FRPatientDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins" as  class4183c8825d56dc7b36e75f7f711f8b6b 
 
-    class4183c8825d56dc7b36e75f7f711f8b6b --> FrPatientINSDocument
+    class4183c8825d56dc7b36e75f7f711f8b6b --> FRPatientINSDocument
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner" as  class8e95a74d3099b6c1bdd4ef690920bb75 
 
-    class8e95a74d3099b6c1bdd4ef690920bb75 --> FrPractitionerDocument
+    class8e95a74d3099b6c1bdd4ef690920bb75 --> FRPractitionerDocument
 
  class "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole" as  class409d7284b1fcd82a5ca90685afaba163 
 
-    class409d7284b1fcd82a5ca90685afaba163 --> FrPractitionerRoleDocument
+    class409d7284b1fcd82a5ca90685afaba163 --> FRPractitionerRoleDocument
 
  class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person" as  class73d64d75d9b8829a511eb36c46458829 
 
-    class73d64d75d9b8829a511eb36c46458829 --> FrRelatedPersonDocument
+    class73d64d75d9b8829a511eb36c46458829 --> FRRelatedPersonDocument
 }
 @enduml

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-encompassing-encounter | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FRCDAEncompassingEncounter |
+| Draft as of 2025-10-22 | *Computable Name*:FRCDAEncompassingEncounter |
 
  
 L’élément de l’en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-encompassing-
   "name" : "FRCDAEncompassingEncounter",
   "title" : "CDA - encompassingEncounter",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

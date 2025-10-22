@@ -1,17 +1,17 @@
 "Profile","Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
-"fr-author-time","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+"fr-author-time-extension","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Horodatage de la participation de l’auteur.","Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-author-time","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+"fr-author-time-extension","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"fr-author-time","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+"fr-author-time-extension","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-author-time","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"fr-author-time","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","dateTime {[]} {[]}
+"fr-author-time-extension","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"fr-author-time-extension","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","dateTime {[]} {[]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-bundle-document","Bundle","Bundle","","","",0,*,"","","","null {[]} {[]}
@@ -77,7 +77,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Reference details for the link","The reference details for the link.","","","","","","","","","",,,,,"",,,,"Bundle.link.url",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-bundle-document","Bundle.entry","Bundle.entry","","","",7,*,"Y","","Y","BackboneElement {[]} {[]}
-","Ressource Entry dans le FrBundleDocument","Une ressource Entry incluse dans le bundle de ressources du document","Doit contenir la Composition comme première entrée","","","","","","","","",,,,,"","type:resource}
+","Ressource Entry dans le FRBundleDocument","Une ressource Entry incluse dans le bundle de ressources du document","Doit contenir la Composition comme première entrée","","","","","","","","",,,,,"","type:resource}
 profile:resource}","",,"open","Bundle.entry",0,*,"","bdl-5:must be a resource unless there's a request or response {resource.exists() or request.exists() or response.exists()}
 bdl-8:fullUrl cannot be a version specific reference {fullUrl.contains('/_history/').not()}ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}"
 "fr-bundle-document","Bundle.entry.id","Bundle.entry.id","","","",0,1,"","","","string {[]} {[]}
@@ -3816,7 +3816,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 ","Date de création","The composition editing time, when the composition was last logically changed by the author.","The Last Modified Date on the composition may be after the date of the document was attested without being changed.","dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging.","","","","","","","",,,,,"",,,,"Composition.date",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-composition-document","Composition.author","Composition.author","","","",1,*,"Y","","Y","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document], CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document]]}
-","Auteur du document","author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FrPractitionerRoleDocument).","","Identifies who is responsible for the content.","","","","","","","",,,,,"",,,,"Composition.author",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Auteur du document","author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FRPractitionerRoleDocument).","","Identifies who is responsible for the content.","","","","","","","",,,,,"",,,,"Composition.author",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-composition-document","Composition.author.id","Composition.author.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -3824,7 +3824,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-composition-document","Composition.author.extension:time","Composition.author.extension","time","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time]]} {[]}
+"fr-composition-document","Composition.author.extension:time","Composition.author.extension","time","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension]]} {[]}
 ","Horodatage de la participation de l’auteur.","Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "fr-composition-document","Composition.author.reference","Composition.author.reference","","","",0,1,"","","Y","string {[]} {[]}
@@ -4116,7 +4116,7 @@ Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Compositi
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-composition-document","Composition.event.extension:performer","Composition.event.extension","performer","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
+"fr-composition-document","Composition.event.extension:performer","Composition.event.extension","performer","","",0,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension]]} {[]}
 ","Exécutant de l’évènement documenté","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -4144,7 +4144,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-composition-document","Composition.event:principalEvent.extension:performer","Composition.event.extension","performer","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event]]} {[]}
+"fr-composition-document","Composition.event:principalEvent.extension:performer","Composition.event.extension","performer","","",1,1,"","","","Extension {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension]]} {[]}
 ","Exécutant de l'évènement documenté principal","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -7653,23 +7653,23 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "fr-patient-ins-document","Patient.link.type","Patient.link.type","","","",1,1,"","","Y","code {[]} {[]}
 ","replaced-by | replaces | refer | seealso","The type of link between this patient resource and another patient resource.","","","","","","","","","",,"required","The type of link between this patient resource and another patient resource.","http://hl7.org/fhir/ValueSet/link-type|4.0.1","",,,,"Patient.link.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"fr-performer-event","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+"fr-performer-event-extension","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Exécutant de l’évènement documenté","Extension permettant d'ajouter un performer à l'élément event d'une Composition.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-performer-event","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+"fr-performer-event-extension","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"fr-performer-event","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+"fr-performer-event-extension","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"fr-performer-event","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"fr-performer-event","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+"fr-performer-event-extension","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"fr-performer-event-extension","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
 boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"","type:$this}
 ","",,"open","Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"fr-performer-event","Extension.value[x]:valueReference","Extension.value[x]","valueReference","","",0,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document]]}
+"fr-performer-event-extension","Extension.value[x]:valueReference","Extension.value[x]","valueReference","","",0,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document]]}
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "fr-practitioner-document","Practitioner","Practitioner","","","",0,*,"","","","null {[]} {[]}

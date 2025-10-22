@@ -1,23 +1,23 @@
-# Fr Composition Document - ANS IG document core v0.1.0
+# FR Composition Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Composition Document**
+* **FR Composition Document**
 
-## Resource Profile: Fr Composition Document 
+## Resource Profile: FR Composition Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrCompositionDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRCompositionDocument |
 
  
 Ce profil est utilisé pour représenter un document médical. 
 
 **Usages:**
 
-* Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Composition Document](StructureDefinition-fr-composition-document.md)
+* Use this Profile: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
+* Refer to this Profile: [FR Composition Document](StructureDefinition-fr-composition-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-composition-document)
 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
   "id" : "fr-composition-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
   "version" : "0.1.0",
-  "name" : "FrCompositionDocument",
-  "title" : "Fr Composition Document",
+  "name" : "FRCompositionDocument",
+  "title" : "FR Composition Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -413,7 +413,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
         "id" : "Composition.author",
         "path" : "Composition.author",
         "short" : "Auteur du document",
-        "definition" : "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FrPractitionerRoleDocument).",
+        "definition" : "author permet d’enregistrer un auteur du document. Un document peut avoir un ou plusieurs auteurs. Un professionnel de santé auteur d'un document est toujours dans une situation d'exercice donnée (FRPractitionerRoleDocument).",
         "type" : [
           {
             "code" : "Reference",
@@ -441,7 +441,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time"
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension"
             ]
           }
         ]
@@ -674,7 +674,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event"
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension"
             ]
           }
         ]
@@ -713,7 +713,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-composition-docum
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event"
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension"
             ]
           }
         ]

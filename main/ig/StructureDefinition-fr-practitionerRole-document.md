@@ -1,23 +1,23 @@
-# Fr PractitionerRole Document - ANS IG document core v0.1.0
+# FR PractitionerRole Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr PractitionerRole Document**
+* **FR PractitionerRole Document**
 
-## Resource Profile: Fr PractitionerRole Document 
+## Resource Profile: FR PractitionerRole Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrPractitionerRoleDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRPractitionerRoleDocument |
 
  
 Ce profil représente les professionnels de santé et leurs rôles dans le cadre d’un document médical. 
 
 **Usages:**
 
-* Use this Profile: [Fr Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Refer to this Profile: [Fr Composition Document](StructureDefinition-fr-composition-document.md), [Fr Encounter Document](StructureDefinition-fr-encounter-document.md) and [Fr Performer Event](StructureDefinition-fr-performer-event.md)
+* Use this Profile: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
+* Refer to this Profile: [FR Composition Document](StructureDefinition-fr-composition-document.md), [FR Encounter Document](StructureDefinition-fr-encounter-document.md) and [FR Performer Event Extension](StructureDefinition-fr-performer-event-extension.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-practitionerRole-document)
 
@@ -39,10 +39,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitionerRole-
   "id" : "fr-practitionerRole-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document",
   "version" : "0.1.0",
-  "name" : "FrPractitionerRoleDocument",
-  "title" : "Fr PractitionerRole Document",
+  "name" : "FRPractitionerRoleDocument",
+  "title" : "FR PractitionerRole Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

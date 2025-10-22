@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-10-21T17:18:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-22T08:56:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1714,10 +1714,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-author-time" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-author-time-extension" ]
        ] ;
-       fhir:name [ fhir:v "Fr Author Time Extension" ] ;
+       fhir:name [ fhir:v "FR Author Time Extension" ] ;
        fhir:description [ fhir:v "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1736,7 +1736,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-bundle-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Bundle Document" ] ;
+       fhir:name [ fhir:v "FR Bundle Document" ] ;
        fhir:description [ fhir:v "Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1755,7 +1755,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-composition-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Composition Document" ] ;
+       fhir:name [ fhir:v "FR Composition Document" ] ;
        fhir:description [ fhir:v "Ce profil est utilisé pour représenter un document médical." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1774,7 +1774,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-device-auteur-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Device Document" ] ;
+       fhir:name [ fhir:v "FR Device Document" ] ;
        fhir:description [ fhir:v "Ce profil représente le système auteur du document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1793,13 +1793,32 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-encounter-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Encounter Document" ] ;
+       fhir:name [ fhir:v "FR Encounter Document" ] ;
        fhir:description [ fhir:v "Ce profil représente l'association du document à une prise en charge." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-human-name-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-human-name-document" ]
+       ] ;
+       fhir:name [ fhir:v "FR Human Name Document" ] ;
+       fhir:description [ fhir:v "Ce profil correspond au type de données HumanName utilisé dans le document." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Data Type FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1812,7 +1831,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-location-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Location Document" ] ;
+       fhir:name [ fhir:v "FR Location Document" ] ;
        fhir:description [ fhir:v "Ce profil représente le lieu de la prise en charge." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1831,7 +1850,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-organization-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-organization-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Organization Document" ] ;
+       fhir:name [ fhir:v "FR Organization Document" ] ;
        fhir:description [ fhir:v "Ce profil représente la structure pour le compte de laquelle intervient le professionnel." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1850,7 +1869,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-patient-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Patient Document" ] ;
+       fhir:name [ fhir:v "FR Patient Document" ] ;
        fhir:description [ fhir:v "Ce profil représente le patient concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1869,7 +1888,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-patient-ins-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Patient INS Document" ] ;
+       fhir:name [ fhir:v "FR Patient INS Document" ] ;
        fhir:description [ fhir:v "Ce profil représente le patient concerné par le document." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1885,10 +1904,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-performer-event" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-performer-event-extension" ]
        ] ;
-       fhir:name [ fhir:v "Fr Performer Event" ] ;
+       fhir:name [ fhir:v "FR Performer Event Extension" ] ;
        fhir:description [ fhir:v "Extension permettant d'ajouter un performer à l'élément event d'une Composition." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1907,7 +1926,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-practitioner-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr Practitioner Document" ] ;
+       fhir:name [ fhir:v "FR Practitioner Document" ] ;
        fhir:description [ fhir:v "Ce profil permet de décrire un professionnel de santé dans le cadre d'un document médical" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1926,7 +1945,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-practitionerRole-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr PractitionerRole Document" ] ;
+       fhir:name [ fhir:v "FR PractitionerRole Document" ] ;
        fhir:description [ fhir:v "Ce profil représente les professionnels de santé et leurs rôles dans le cadre d'un document médical." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1945,7 +1964,7 @@
          fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-related-person-document> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-related-person-document" ]
        ] ;
-       fhir:name [ fhir:v "Fr RelatedPerson Document" ] ;
+       fhir:name [ fhir:v "FR RelatedPerson Document" ] ;
        fhir:description [ fhir:v "Ce profil représente l'informateur non professionnel." ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1988,25 +2007,6 @@
          a fhir:boolean ;
          fhir:v false
        ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:complex-type"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-human-name-document> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-human-name-document" ]
-       ] ;
-       fhir:name [ fhir:v "Human Name Document" ] ;
-       fhir:description [ fhir:v "Ce profil correspond au type de données HumanName utilisé dans le document." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Data Type FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

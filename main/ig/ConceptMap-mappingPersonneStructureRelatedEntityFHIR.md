@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
+| Draft as of 2025-10-22 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapping: 
@@ -55,7 +55,7 @@ Mapping from (non spécifié) to (non spécifié)
 
 -------
 
-**Group 2**Mapping from [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to [Fr RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
+**Group 2**Mapping from [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to [FR RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
 
 * **Source Code**: relatedEntity
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -136,7 +136,7 @@ Mapping from (non spécifié) to (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

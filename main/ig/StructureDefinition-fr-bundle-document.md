@@ -1,15 +1,15 @@
-# Fr Bundle Document - ANS IG document core v0.1.0
+# FR Bundle Document - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Fr Bundle Document**
+* **FR Bundle Document**
 
-## Resource Profile: Fr Bundle Document 
+## Resource Profile: FR Bundle Document 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document | *Version*:0.1.0 |
-| Draft as of 2025-10-21 | *Computable Name*:FrBundleDocument |
+| Draft as of 2025-10-22 | *Computable Name*:FRBundleDocument |
 
  
 Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document. 
@@ -38,10 +38,10 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
   "id" : "fr-bundle-document",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document",
   "version" : "0.1.0",
-  "name" : "FrBundleDocument",
-  "title" : "Fr Bundle Document",
+  "name" : "FRBundleDocument",
+  "title" : "FR Bundle Document",
   "status" : "draft",
-  "date" : "2025-10-21T17:18:21+00:00",
+  "date" : "2025-10-22T08:56:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -140,7 +140,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-bundle-document.c
           ],
           "rules" : "open"
         },
-        "short" : "Ressource Entry dans le FrBundleDocument",
+        "short" : "Ressource Entry dans le FRBundleDocument",
         "definition" : "Une ressource Entry incluse dans le bundle de ressources du document",
         "comment" : "Doit contenir la Composition comme première entrée",
         "min" : 7,
