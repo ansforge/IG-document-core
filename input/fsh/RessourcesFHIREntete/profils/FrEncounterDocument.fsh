@@ -1,7 +1,7 @@
 // StructureDefinition for EncounterDocument
 Profile: FrEncounterDocument
 Parent: FRCoreEncounterProfile
-Id: fr-encounter-care-document
+Id: fr-encounter-document
 Title: "Fr Encounter Document"
 Description: "Ce profil représente l'association du document à une prise en charge."
 * type 0..1
