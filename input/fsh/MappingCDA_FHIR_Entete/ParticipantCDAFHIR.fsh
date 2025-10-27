@@ -11,27 +11,27 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Participant"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant"									
-* group[=].element[+].code = #Participant							
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant"									
+* group[=].element[+].code = #FRLMParticipant							
 * group[=].element[=].target.code = #participant
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Participant.typeParticipation								
+* group[=].element[+].code = #FRLMParticipant.typeParticipation								
 * group[=].element[=].target.code = #participant@typeCode 
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Participant.roleFonctionnel								
+* group[=].element[+].code = #FRLMParticipant.roleFonctionnel								
 * group[=].element[=].target.code = #participant.functionCode 
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Participant.dateDebutEtOuFinParticipation							
+* group[=].element[+].code = #FRLMParticipant.dateDebutEtOuFinParticipation							
 * group[=].element[=].target.code = #participant.time
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Participant.participant					
+* group[=].element[+].code = #FRLMParticipant.participant					
 * group[=].element[=].target.code = #participant.associatedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément participant est de type PersonneStructure"
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-participant"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant"					
 * group[=].target = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension"									
 * group[=].element[+].code = #participant				
 * group[=].element[=].target.code = #extension:ParticipantExtension						
