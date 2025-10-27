@@ -129,7 +129,7 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * custodian ^short = "Structure chargée de la conservation du document"
 * custodian only Reference(FROrganizationDocument)
 * encounter 1..1 MS
-* encounter only Reference(FREncounterDocument)
+* encounter only Reference(FREncounterCareDocument)
 
 * section 1..* MS
 * section ^slicing.discriminator[0].type = #value
