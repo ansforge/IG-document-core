@@ -53,7 +53,7 @@ Description: "Ce profil permet d’assembler les éléments de l’en-tête et d
 
 // Définition de l'entrée encounter
 * entry contains encounter 1..*
-* entry[encounter].resource only FREncounterDocument
+* entry[encounter].resource only FREncounterCareDocument
 
 // Définition de l'entrée location
 * entry contains location 1..*
