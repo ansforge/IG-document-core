@@ -1,8 +1,8 @@
-Profile: FrObservationAdmissionMode
+Profile: FRObservationAdmissionModeDocument
 Parent: Observation
-Id: fr-observation-admission-mode
-Title: "Observation - Fr Admission mode"
-Description: "FrObservationAdmissionMode Observation décrivant la modalité d'entrée du patient."
+Id: fr-observation-admission-mode-document
+Title: "Observation - FR Observation Admission Mode Document"
+Description: "FRObservationAdmissionModeDocument Observation décrivant la modalité d'entrée du patient."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -19,6 +19,6 @@ Description: "FrObservationAdmissionMode Observation décrivant la modalité d'e
 
 // Participation d’un auteur
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Participation d'un auteur au document"
 * performer.extension[author].extension[type].valueCode = #AUT

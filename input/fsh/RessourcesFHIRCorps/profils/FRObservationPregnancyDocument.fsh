@@ -1,8 +1,8 @@
-Profile:  FrObservationPregnancy 
+Profile:  FRObservationPregnancyDocument
 Parent: Observation
-Id: fr-observation-pregnancy 
-Title: "Observation - Fr Observation Pregnancy "
-Description: "FrObservationPregnancy permet d'apporter des informations relatives aux grossesses actuelle ou passées."
+Id: fr-observation-pregnancy-document
+Title: "Observation - FR Observation Pregnancy Document"
+Description: "FRObservationPregnancyDocument permet d'apporter des informations relatives aux grossesses actuelle ou passées."
 
 
 * code ^short = "Ce code peut provenir du JDV_ObservationGrossesse_CISIS (1.2.250.1.213.1.1.5.500).
@@ -11,7 +11,7 @@ Description: "FrObservationPregnancy permet d'apporter des informations relative
   * ^short = "Résultat de l’observation effectuée. 
   - Valeur peut être issue du JDV_StatutGrossesse_CISIS (1.2.250.1.213.1.1.5.671) pour le statut de grossesse si le code de l'entrée est '11449-6'."
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation
 
 * obeys obs-pregnancy-status-value
 

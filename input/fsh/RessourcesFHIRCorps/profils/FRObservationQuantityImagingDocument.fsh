@@ -1,8 +1,8 @@
-Profile: FrObservationQuantityDICOM
+Profile: FRObservationQuantityImagingDocument
 Parent: Observation
-Id: fr-observation-quantity-dicom
-Title: "Observation - Fr Quantity DICOM"
-Description: "FrObservationQuantityDICOM permet d'enregistrer les mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques en précisant : 
+Id: fr-observation-quantity-imaging-document
+Title: "Observation - FR Observation Quantity Imaging Document"
+Description: "FRObservationQuantityImagingDocument permet d'enregistrer les mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques en précisant : 
 le type de la mesure, la localisation anatomique / latéralité / topographie, la quantité, si la mesure quantitative est basée sur les données d’une image, une référence à l’image peut être précisée dans la partie narrative."
 
 * identifier 1..1 MS
@@ -15,7 +15,7 @@ le type de la mesure, la localisation anatomique / latéralité / topographie, l
 * code ^short = "Code de l'observation"
 
 * subject 1..1 MS
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FRPatientINSDocument or FRPatientDocument)
 * subject ^short = "Patient concerné"
 
 * effective[x] 1..1 MS

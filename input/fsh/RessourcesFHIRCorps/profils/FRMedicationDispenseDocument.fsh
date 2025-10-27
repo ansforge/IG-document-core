@@ -1,9 +1,9 @@
 // Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
-Profile: FrMedicationDispense
+Profile: FRMedicationDispenseDocument
 Parent: MedicationDispense
-Id: fr-medication-dispense
-Title: "MedicationDispense - Fr Dispense Item"
-Description: "FrMedicationDispenseDocument permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription."
+Id: fr-medication-dispense-document
+Title: "MedicationDispense - FR Medication Dispense Document"
+Description: "FRMedicationDispenseDocument permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
@@ -16,14 +16,14 @@ Description: "FrMedicationDispenseDocument permet de décrire un traitement disp
   * unit from FrValueSetEDQM
 
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FrMedication)
+* medication[x] only CodeableConcept or Reference(FRMedicationDocument)
   * ^short = "Médicament délivré"
 * authorizingPrescription 0..1 MS 
   * ^short = "Référence de la prescription"
-* authorizingPrescription only Reference (FrMedicationRequest)
+* authorizingPrescription only Reference (FRMedicationRequestDocument)
 * supportingInformation 0..1 MS 
   * ^short = "Posologie"
-* supportingInformation only Reference (FrMedicationAdministration)
+* supportingInformation only Reference (FRMedicationAdministrationDocument)
 * dosageInstruction.patientInstruction MS 
   * ^short = "Instructions au patient"
 * dosageInstruction.additionalInstruction MS 

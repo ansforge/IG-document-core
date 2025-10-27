@@ -1,8 +1,8 @@
-Profile: FrObservationBloodProductTransfusion
+Profile: FRObservationBloodProductTransfusionDocument
 Parent: Observation
-Id: fr-observation-blood-product-transfusion
-Title: "Observation - Fr Blood Product Transfusion"
-Description: "FrObservationBloodProductTransfusion permet d'indiquer s'il a eu ou pas transfusion de produit sanguin."
+Id: fr-observation-blood-product-transfusion-document
+Title: "Observation - FR Blood Product Transfusion Document"
+Description: "FRObservationBloodProductTransfusionDocument permet d'indiquer s'il a eu ou pas transfusion de produit sanguin."
 
 * code.coding.system = "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis"
 * code.coding.code = #MED-145
@@ -13,13 +13,13 @@ Description: "FrObservationBloodProductTransfusion permet d'indiquer s'il a eu o
   * ^short = "Transfusion de produit sanguin."
 
 * performer MS
-* performer.extension contains FrActorExtension named author 0..1
+* performer.extension contains FRActorExtension named author 0..1
 * performer.extension[author] ^short = "Auteur de l’observation"
 * performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
-    FrPractitionerRoleDocument
-    or FrOrganizationDocument
-    or FrPractitionerRoleDocument
-    or FrPatientINSDocument
+    FRPractitionerRoleDocument
+    or FROrganizationDocument
+    or FRPractitionerRoleDocument
+    or FRPatientINSDocument
     )
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

@@ -1,8 +1,8 @@
-Profile: FrObservationRelatedToPrevention
+Profile: FRObservationRelatedToPreventionDocument
 Parent: Observation
-Id: fr-related-to-prevention
-Title: "Observation - Fr Related to prevention"
-Description: "FrObservationRelatedToPrevention permet d'indiquer si l'élément auquel elle est associée est en rapport avec la prévention."
+Id: fr-observation-related-to-prevention-document
+Title: "Observation - FR Observation Related To Prevention Document"
+Description: "FRObservationRelatedToPreventionDocument permet d'indiquer si l'élément auquel elle est associée est en rapport avec la prévention."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -18,14 +18,14 @@ value='true' : le traitement est prescrit dans le cadre d'une prévention
 value='false' : le traitement n'est pas prescrit dans le cadre d'une prévention
 """
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur de l’observation"
 * performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
-    FrPractitionerRoleDocument 
-    or FrOrganizationDocument 
-    or FrPractitionerRoleDocument 
-    or FrPatientINSDocument 
-    or FrPatientDocument)
+    FRPractitionerRoleDocument 
+    or FROrganizationDocument 
+    or FRPractitionerRoleDocument 
+    or FRPatientINSDocument 
+    or FRPatientDocument)
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

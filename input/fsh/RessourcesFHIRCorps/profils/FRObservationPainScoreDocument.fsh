@@ -1,8 +1,8 @@
-Profile: FrObservationPainScore 
+Profile: FRObservationPainScoreDocument
 Parent: Observation
-Id: fr-observation-pain-score
-Title: "Observation - Fr Pain Score"
-Description: "FrObservationPainScore permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10."
+Id: fr-observation-pain-score-document
+Title: "Observation - FR Observation Pain Score Document"
+Description: "FRObservationPainScoreDocument permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10."
 
 * identifier 1..1 MS
 * identifier ^short = "Identifiant de l'observation"

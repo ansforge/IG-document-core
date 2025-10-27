@@ -1,8 +1,8 @@
-Profile: FrObservationDischargeDisposition
+Profile: FRObservationDischargeDispositionDocument
 Parent: Observation
-Id: fr-observation-discharge-disposition
-Title: "Observation - Fr Discharge disposition"
-Description: "FrObservationDischargeDisposition Observation décrivant la modalité de sortie du patient."
+Id: fr-observation-discharge-disposition-document
+Title: "Observation - FR Observation Discharge Disposition Document"
+Description: "FRObservationDischargeDispositionDocument Observation décrivant la modalité de sortie du patient."
 
 // Code de l'observation
 * code MS
@@ -17,6 +17,6 @@ Description: "FrObservationDischargeDisposition Observation décrivant la modali
 
 // Participation d’un auteur
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Participation d'un auteur au document"
 * performer.extension[author].extension[type].valueCode = #AUT

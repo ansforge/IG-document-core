@@ -1,8 +1,8 @@
-Profile: FrObservationMedicalSummary 
+Profile: FRObservationMedicalSummaryDocument
 Parent: Observation
-Id: fr-observation-medical-summary
-Title: "Observation - Fr Medical Summary"
-Description: "FrObservationMedicalSummary permet de fournir, sous forme textuelle, une synthèse médicale du séjour."
+Id: fr-observation-medical-summary-document
+Title: "Observation - FR Observation Medical Summary Document"
+Description: "FRObservationMedicalSummaryDocument permet de fournir, sous forme textuelle, une synthèse médicale du séjour."
 
 * code.coding.system = "https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis"
 * code.coding.code = #MED-142
@@ -13,14 +13,14 @@ Description: "FrObservationMedicalSummary permet de fournir, sous forme textuell
   * ^short = "Synthèse médicale du séjour (sous forme textuelle)"
 
 * performer MS
-* performer.extension contains FrActorExtension named author 0..1
+* performer.extension contains FRActorExtension named author 0..1
 * performer.extension[author] ^short = "Auteur de l’observation"
 * performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
-    FrPractitionerRoleDocument
-    or FrOrganizationDocument
-    or FrPractitionerRoleDocument
-    or FrPatientINSDocument
+    FRPractitionerRoleDocument
+    or FROrganizationDocument
+    or FRPractitionerRoleDocument
+    or FRPatientINSDocument
     )
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

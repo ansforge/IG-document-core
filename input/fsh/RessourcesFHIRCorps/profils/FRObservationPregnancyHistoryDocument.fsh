@@ -1,8 +1,8 @@
-Profile: FrObservationPregnancyHistory 
+Profile: FRObservationPregnancyHistoryDocument
 Parent: Observation
-Id: fr-observation-pregnancy-history 
-Title: "Observation - Fr Pregnancy History  "
-Description: "FrObservationPregnancyHistory permet de regrouper les observations relatives à un épisode de grossesse."
+Id: fr-observation-pregnancy-history-document
+Title: "Observation - FR Observation Pregnancy History Document"
+Description: "FRObservationPregnancyHistoryDocument permet de regrouper les observations relatives à un épisode de grossesse."
 
 * identifier 1..1 MS 
   * ^short = "Identifiant de l'observation"
@@ -19,6 +19,6 @@ Description: "FrObservationPregnancyHistory permet de regrouper les observations
 
 * hasMember 1..* MS
   * ^short = "Informations relatives à la grossesse"
-* hasMember only Reference(FrObservationPregnancy or FrObservationBirthEvent) 
+* hasMember only Reference(FRObservationPregnancyDocument or FRObservationBirthEventDocument) 
 
 * value[x] 0..0

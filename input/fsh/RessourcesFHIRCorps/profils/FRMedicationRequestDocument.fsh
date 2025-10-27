@@ -1,10 +1,10 @@
 // Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
-Profile: FrMedicationRequest
+Profile: FRMedicationRequestDocument
 Parent: MedicationRequest
-Id: fr-medication-request
-Title: "MedicationRequest - Fr Traitement Prescrit"
+Id: fr-medication-request-document
+Title: "MedicationRequest - FR Medication Request Document"
 Description: "
- - FrMedicationRequest permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
+ - FRMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * intent = #order
@@ -53,35 +53,35 @@ Description: "
   * maxDosePerPeriod.numerator 1..1 MS
   * maxDosePerPeriod.denominator 1..1 MS
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FrMedication or FrMedicationsCombinaison)
+* medication[x] only CodeableConcept or Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
   * ^short = "Produit de santé"
 
 // --- Auteur ---
 * requester MS
-* requester.extension contains FrActorExtension named author 0..1 
+* requester.extension contains FRActorExtension named author 0..1 
 * requester.extension[author] ^short = "Auteur du document Prescription"
 * requester.extension[author].extension[type].valueCode = #AUT
-* requester.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* requester.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 // --- Prescripteur ---
 * performer MS
-* performer.extension contains FrActorExtension named prescripteur 0..1
+* performer.extension contains FRActorExtension named prescripteur 0..1
 * performer.extension[prescripteur] ^short = "Prescripteur"
 * performer.extension[prescripteur].extension[type].valueCode = #PRF
-* performer.extension[prescripteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[prescripteur].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * authoredOn MS
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
-* reasonReference only Reference(FrCondition or Observation)
+* reasonReference only Reference(FRConditionDocument or Observation)
 
 // document externe 
 * instantiatesUri ^short = "Référence de la prescription"
 
 * basedOn 0..1 MS
   * ^short = "Référence à un item du plan de traitement. Une copie du plan de traitement médicamenteux."
-* basedOn only Reference(FrMedicationRequest)
+* basedOn only Reference(FRMedicationRequestDocument)
 
 * dosageInstruction.additionalInstruction ^slicing.discriminator.type = #pattern
 * dosageInstruction.additionalInstruction ^slicing.discriminator.path = "$this"
@@ -128,18 +128,18 @@ Description: "
     nonRemboursable 0..1 and
     horsAMM 0..1
 
-* reasonReference[ald] only Reference(FrCondition)
+* reasonReference[ald] only Reference(FRConditionDocument)
 * reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)."
 * reasonReference[ald] ^definition = "S'il s'agit d'une Affection Longue Durée (ALD) il faut préciser le problème"
 
-* reasonReference[accidentTravail] only Reference(FrObservationWorkRelatedAccident)
+* reasonReference[accidentTravail] only Reference(FRObservationWorkRelatedAccidentDocument)
 * reasonReference[accidentTravail] ^short = "En rapport avec accident travail"
 
-* reasonReference[prevention] only Reference(FrObservationRelatedToPrevention)
+* reasonReference[prevention] only Reference(FRObservationRelatedToPreventionDocument)
 * reasonReference[prevention] ^short = "En rapport avec la prévention"
 
-* reasonReference[nonRemboursable] only Reference(FrObservationNotCovered)
+* reasonReference[nonRemboursable] only Reference(FRObservationNotCoveredDocument)
 * reasonReference[nonRemboursable] ^short = "Non remboursable"
 
-* extension contains FrMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
+* extension contains FRMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
 * extension[horsAMM] ^short = "Hors Autorisation de mise sur le marché"

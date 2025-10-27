@@ -1,8 +1,8 @@
-Profile: FrObservationAntenatalTestingAndSurveillanceBattery
+Profile: FRObservationAntenatalTestingAndSurveillanceBatteryDocument
 Parent: Observation
-Id: fr-antenatal-testing-and-surveillance-battery
-Title: "Observation - Fr Antenatal testing and surveillance battery"
-Description: "FrObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux."
+Id: fr-observation-antenatal-testing-and-surveillance-battery-document
+Title: "Observation - FR Observation Antenatal Testing And Surveillance Battery Document"
+Description: "FRObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -14,10 +14,10 @@ Description: "FrObservationAntenatalTestingAndSurveillanceBattery permet de list
 
 // Auteur
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur"
 * performer.extension[author].extension[type].valueCode = #AUT
-* performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * component MS
 * component ^short = "Observations"
