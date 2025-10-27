@@ -1,8 +1,8 @@
-Profile: FrCondition
+Profile: FRConditionDocument
 Parent: Condition
-Id: fr-condition
-Title: "Condition - Fr Condition"
-Description: "FrCondition est un profil utilisé pour décrire un problème du patient (une pathologie par exemple)."
+Id: fr-condition-document
+Title: "Condition - FR Condition Document"
+Description: "FRConditionDocument est un profil utilisé pour décrire un problème du patient (une pathologie par exemple)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -28,7 +28,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 """
 * subject MS
 * subject ^short = "Patient concerné"
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FRPatientINSDocument or FRPatientDocument)
 
 * onset[x] 1..1 MS
 * onsetDateTime
@@ -39,10 +39,10 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 * abatementDateTime ^short = "Date de fin du problème (si applicable)"
 
 * recorder MS
-* recorder.extension contains FrActorExtension named author 0..1
+* recorder.extension contains FRActorExtension named author 0..1
 * recorder.extension[author] ^short = "Auteur du problème"
 * recorder.extension[author].extension[type].valueCode = #AUT
-* recorder.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* recorder.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * bodySite
 * bodySite ^short = "Localisation anatomique"
@@ -53,7 +53,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 * severity ^short = "Sévérité"
 * severity from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis
 
-* evidence.detail only Reference(FrDocumentReference)
+* evidence.detail only Reference(FRDocumentReferenceDocument)
 
 * stage.summary MS
 * stage.summary ^short = "Statut clinique du patient"

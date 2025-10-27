@@ -1,10 +1,10 @@
-Profile: FrImmunization
+Profile: FRImmunizationDocument
 Parent: Immunization
-Id: fr-immunization
-Title: "Immunization - Fr Immunization"
-Description: "FrImmunization permet de décrire l'administration d'un vaccin. 
+Id: fr-immunization-document
+Title: "Immunization - FR Immunization Document"
+Description: "FRImmunizationDocument permet de décrire l'administration d'un vaccin. 
  - Il permet également de décrire pourquoi un vaccin n'a pas été réalisé.
- - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FrMedicationAdministrationDocument sauf mentions précisées ci-après."
+ - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRMedicationAdministrationDocument sauf mentions précisées ci-après."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1 MS
@@ -37,7 +37,7 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * vaccineCode.coding ^slicing.description = "Slice CIS et autres codifications"
 
 * vaccineCode MS
-* vaccineCode only FrDocumentCodeableConcept
+* vaccineCode only FRCodeableConceptDocument
 * vaccineCode ^short = "Vaccin. Code du produit de santé"
 // Slice CIS obligatoire
 * vaccineCode.coding contains cis 1..1
@@ -59,23 +59,23 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 
 * performer MS
 * performer.actor.extension contains
-    FrActorExtension named author 1..1 and
-    FrActorExtension named executant 0..1
+    FRActorExtension named author 1..1 and
+    FRActorExtension named executant 0..1
 
 // --- Auteur ---
 * performer.actor.extension[author] ^short = "Auteur de la vaccination (personne ayant validé médicalement que la vaccination a été réalisée)"
 * performer.actor.extension[author].extension[type].valueCode = #AUT
-* performer.actor.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 // --- Exécutant ---
 * performer.actor.extension[executant] ^short = "Exécutant"
 * performer.actor.extension[executant].extension[type].valueCode = #PRF
-* performer.actor.extension[executant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.actor.extension[executant].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 //Prescription
 * extension contains $immunization-basedOn-r5 named basedOnRequestR5 0..1
 * extension[basedOnRequestR5].valueReference 1..1
-* extension[basedOnRequestR5].valueReference only Reference (FrMedicationRequest)
+* extension[basedOnRequestR5].valueReference only Reference (FRMedicationRequestDocument)
 * extension[basedOnRequestR5] ^short = "Prescription"
 
 * protocolApplied MS
@@ -86,13 +86,13 @@ Description: "FrImmunization permet de décrire l'administration d'un vaccin.
 * protocolApplied.doseNumberPositiveInt ^short = "Rang de la vaccination"
 
 * reasonReference MS
-* reasonReference only Reference(FrCondition) 
+* reasonReference only Reference(FRConditionDocument) 
   * ^short = "Réaction observée suite au vaccin"
 
 // Dose d'antigène
 // Problème dataType : codeableReference 
 /* * extension contains $immunization-administeredProduct-r5 named ImmunizationAdministeredProductR5 0..*
-* extension[ImmunizationAdministeredProductR5].extension[reference].valueReference only Reference(FrMedication)
+* extension[ImmunizationAdministeredProductR5].extension[reference].valueReference only Reference(FRMedicationDocument)
  */
 * note 0..1 MS
   * ^short = "Commentaire"

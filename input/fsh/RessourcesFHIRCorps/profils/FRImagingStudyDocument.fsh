@@ -1,8 +1,8 @@
-Profile: FrImagingStudyDICOM
+Profile: FRImagingStudyDocument
 Parent: ImagingStudy
-Id: fr-imaging-study-dicom
-Title: "ImagingStudy - Fr Imaging study DICOM"
-Description: "FrImagingStudyDICOM (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.
+Id: fr-imaging-study-document
+Title: "ImagingStudy - FR Imaging study Document"
+Description: "FRImagingStudyDocument (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.
 L’examen est composé d'une ou de plusieurs séries d’images médicales."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
@@ -49,9 +49,9 @@ SOP parente du SOP subordonnée et faire un slicing sur instance  */
 * series.instance[subordonnee].number ^short = "Cadres référencés"
 
 * series.endpoint ^short = "Référence WADO"
-* series.endpoint only Reference(FrEndpointWadoDICOM) // ==> Création du profil fsh FrEndpointWadoDICOM avec un parent Endpoint
+* series.endpoint only Reference(FREndpointWadoDocument)
 
 //  Proposition 1 pour Objectifs de référence
 * reasonReference 0..1 MS
 * reasonReference ^short = "Objectifs de référence"
-* reasonReference only Reference(FrObservationPurposeOfReferenceDICOM) 
+* reasonReference only Reference(FRObservationPurposeOfReferenceDocument) 

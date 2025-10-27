@@ -1,8 +1,8 @@
-Profile: FrEncounterEvent
-Parent: FrEncounter
-Id: fr-encounter-event
-Title: "Encouter - Fr Event"
-Description: "FrEncounterEvent est un profil de type encounter permettant de conserver les données d’activités liées à un patient / usager, dérivé de FrEncounter.
+Profile: FREncounterEventDocument
+Parent: FREncounterDocument
+Id: fr-encounter-event-document
+Title: "Encouter - FR Encounter Event Document"
+Description: "FREncounterEventDocument est un profil de type encounter permettant de conserver les données d’activités liées à un patient / usager, dérivé de FREncounterDocument.
  - Il peut s'agir d'un évènement passé ou à venir."
 
 * period 
@@ -16,7 +16,7 @@ Description: "FrEncounterEvent est un profil de type encounter permettant de con
  - Le JDV dépend du volet utilisant ce profil (les précisions sont alors fournies dans le volet correspondant). 
  - Si pas d'information utiliser le code Wolf ‘Aucun’."
  
-* type only FrDocumentCodeableConcept  
+* type only FRCodeableConceptDocument
  
 * extension contains http://hl7.org/fhir/StructureDefinition/note named commentaire 0..*
 * priority 0..0 

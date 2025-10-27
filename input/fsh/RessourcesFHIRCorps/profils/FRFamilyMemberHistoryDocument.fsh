@@ -1,8 +1,8 @@
-Profile: FrFamilyMemberHistory
+Profile: FRFamilyMemberHistoryDocument
 Parent: FamilyMemberHistory
-Id: fr-family-member-history
-Title: "FamilyMemberHistory - Fr Family member history"
-Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…)."
+Id: fr-family-member-history-document
+Title: "FamilyMemberHistory - FR Family Member History Document"
+Description: "FRFamilyMemberHistoryDocument est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -16,7 +16,7 @@ Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des inf
 
 * patient 1..1 MS
 * patient ^short = "Patient concerné"
-* patient only Reference(FrPatientINSDocument or FrPatientDocument)
+* patient only Reference(FRPatientINSDocument or FRPatientDocument)
 
 * date MS
 * date ^short = "Date de la mise à jour de l'historique"
@@ -31,13 +31,13 @@ Description: "FrFamilyMemberHistory est un profil utilisé pour apporter des inf
 * condition.outcome ^short = "Résultat de l'observation effectuée"
 
 * condition.extension contains
-    FrFamilyMemberHistoryBodySiteExtension named bodySite 0..1 MS and
-    FrInterpretationExtension named interpretation 0..1 MS and
-    FrMethodExtension named method 0..1 MS and
-    FrActorExtension named author 0..1 MS
+    FRFamilyMemberHistoryBodySiteExtension named bodySite 0..1 MS and
+    FRInterpretationExtension named interpretation 0..1 MS and
+    FRMethodExtension named method 0..1 MS and
+    FRActorExtension named author 0..1 MS
 
 * condition.extension[bodySite] ^short = "Localisation anatomique"
 
 * condition.extension[author] ^short = "Auteur"
 * condition.extension[author].extension[type].valueCode = #AUT
-* condition.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrPatientINSDocument or FrDeviceAuteurDocument or FrPatientDocument)
+* condition.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument or FRPatientINSDocument or FRDeviceAuteurDocument or FRPatientDocument)

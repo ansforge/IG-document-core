@@ -1,8 +1,8 @@
-Profile: FrMedia
+Profile: FRMediaDocument
 Parent: Media
-Id: fr-media
-Title: "Media - Fr Media"
-Description: "FrMedia permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64   "
+Id: fr-media-document
+Title: "Media - FR Media Document"
+Description: "FRMediaDocument permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64   "
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -20,23 +20,23 @@ Description: "FrMedia permet de positionner une image de type gif, jpeg, png ou 
 
 // Sujet concerné
 * subject MS
-* subject only Reference(FrPatientINSDocument or FrSpecimen)
+* subject only Reference(FRPatientINSDocument or FRSpecimenDocument)
 * subject ^short = "Patient ou specimen concerné par l'image"
 
 // actor (performer, informant, author, participant)
 * operator MS
 * operator.extension contains
-    FrActorExtension named performer 0..* and
-    FrActorExtension named author 0..* and
-    FrActorExtension named informant 0..* and
-    FrActorExtension named participant 0..*
+    FRActorExtension named performer 0..* and
+    FRActorExtension named author 0..* and
+    FRActorExtension named informant 0..* and
+    FRActorExtension named participant 0..*
 
 * operator.extension[performer] ^short = "Performer : Personne ayant réalisé l’acte"
 * operator.extension[performer].extension[type].valueCode = #PRF
 
 * operator.extension[author] ^short = "Auteur du média"
 * operator.extension[author].extension[type].valueCode = #AUT
-* operator.extension[author].extension[actor].valueReference only Reference(FrDeviceAuteurDocument or FrPractitionerRoleDocument)
+* operator.extension[author].extension[actor].valueReference only Reference(FRDeviceAuteurDocument or FRPractitionerRoleDocument)
 
 * operator.extension[informant] ^short = "Informateur"
 * operator.extension[informant].extension[type].valueCode = #INF

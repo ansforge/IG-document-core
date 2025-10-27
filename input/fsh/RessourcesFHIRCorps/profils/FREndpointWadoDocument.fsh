@@ -1,8 +1,8 @@
-Profile: FrEndpointWadoDICOM
+Profile: FREndpointWadoDocument
 Parent: Endpoint
-Id: fr-endpoint-wado-dicom
-Title: "endpoint - Fr Endpoint Wado DICOM"
-Description: "FrEndpointWadoDICOM permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID"
+Id: fr-endpoint-wado-document
+Title: "Endpoint - FR Endpoint Wado Document"
+Description: "FREndpointWadoDocument permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()

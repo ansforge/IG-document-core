@@ -1,8 +1,8 @@
-Profile: FrDeviceRequest
+Profile: FRDeviceRequestDocument
 Parent: DeviceRequest
-Id: fr-device-request
-Title: "DeviceRequest - Fr Medical Device request"
-Description: "FrDeviceRequest représente une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
+Id: fr-device-request-document
+Title: "DeviceRequest - FR Device request Document"
+Description: "FRDeviceRequestDocument représente une demande de dispositif médical (DM) qui n’a pas encore été dispensé."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -31,8 +31,8 @@ Description: "FrDeviceRequest représente une demande de dispositif médical (DM
 // Prescripteur
 * requester MS
 * requester ^short = "Prescripteur"
-* requester.extension contains FrActorExtension named prescripteur 0..1
-* requester.extension[prescripteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* requester.extension contains FRActorExtension named prescripteur 0..1
+* requester.extension[prescripteur].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 // Dispositif médical
 * codeReference MS
@@ -53,18 +53,18 @@ Description: "FrDeviceRequest représente une demande de dispositif médical (DM
     EnRapportAvecLaPrevention 0..1 and
     NonRemboursable 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FrObservationRelatedToLongTermCondition)
+* reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "En rapport avec une Affection Longue Durée (ALD)"
 * reasonReference[EnRapportAvecALD]  MS
 
-* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationWorkRelatedAccident)
+* reasonReference[EnRapportAvecAccidentTravail] only Reference(FRObservationWorkRelatedAccidentDocument)
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "En rapport avec accident travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationRelatedToPrevention)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FRObservationRelatedToPreventionDocument)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FrObservationNotCovered)
+* reasonReference[NonRemboursable] only Reference(FRObservationNotCoveredDocument)
 * reasonReference[NonRemboursable] ^short = "Non remboursable"
 * reasonReference[NonRemboursable] MS

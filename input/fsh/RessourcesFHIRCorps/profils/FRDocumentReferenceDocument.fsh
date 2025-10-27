@@ -1,8 +1,8 @@
-Profile: FrDocumentReference
+Profile: FRDocumentReferenceDocument
 Parent: DocumentReference
-Id: fr-document-reference
-Title: "DocumentReference - Fr Document reference"
-Description: "DocumentReference restreint pour les documents PDF."
+Id: fr-document-reference-document
+Title: "DocumentReference - FR Document reference Document"
+Description: "FRDocumentReferenceDocument restreint pour les documents PDF."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -35,7 +35,7 @@ Description: "DocumentReference restreint pour les documents PDF."
 
 * context.encounter MS
 * context.encounter ^short = "Contexte clinique du document" 
-* context.encounter only Reference(FrEncounterEvent)
+* context.encounter only Reference(FREncounterEventDocument)
 
 * context.related MS
 * context.related ^short = "Ressources ou identifiants liés" 

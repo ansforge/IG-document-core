@@ -1,8 +1,8 @@
-Profile: FrSeviceRequest
+Profile: FRSeviceRequestDocument
 Parent: ServiceRequest
-Id: fr-service-request
-Title: "ServiceRequest - Fr Request for examination or follow-up"
-Description: "Ce profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins."
+Id: fr-service-request-document
+Title: "ServiceRequest - FR Service Request Document"
+Description: "FRSeviceRequestDocument profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -29,16 +29,16 @@ Si la demande est un objectif à atteindre : 'GOL = plan'
 * bodySite MS
 * bodySite ^short = "Cible"
 
-* extension contains FrInterpretationExtension named interpretation 0..1
+* extension contains FRInterpretationExtension named interpretation 0..1
 * extension[interpretation] MS
 * extension[interpretation] ^short = "Interprétation"
 
-* extension contains FrMethodExtension named method 0..1 
+* extension contains FRMethodExtension named method 0..1 
 * extension[method] MS
 * extension[method] ^short = "Méthode"
 
 * requester MS
-* requester.extension contains FrActorExtension named author 0..1
+* requester.extension contains FRActorExtension named author 0..1
 * requester.extension[author] ^short = "Auteur de la demande"
 * requester.extension[author].extension[type].valueCode = #AUT
-* requester.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or Device or FrDeviceAuteurDocument or FrOrganizationDocument or FrRelatedPersonDocument or FrPatientINSDocument or FrPatientDocument)
+* requester.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument or Device or FRDeviceAuteurDocument or FROrganizationDocument or FRRelatedPersonDocument or FRPatientINSDocument or FRPatientDocument)

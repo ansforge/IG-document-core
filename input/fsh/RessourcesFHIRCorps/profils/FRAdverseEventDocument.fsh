@@ -1,8 +1,8 @@
-Profile: FrAdverseEvent
+Profile: FRAdverseEventDocument
 Parent: AdverseEvent
-Id: fr-adverse-event
-Title: "AdverseEvent - Fr adverse event"
-Description: "FrAdverseEvent permet de décrire un effet indésirable prévisible lié à un médicament"
+Id: fr-adverse-event-document
+Title: "AdverseEvent - FR adverse event Document"
+Description: "FRAdverseEventDocument permet de décrire un effet indésirable prévisible lié à un médicament"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -21,11 +21,11 @@ Description: "FrAdverseEvent permet de décrire un effet indésirable prévisibl
 
 * suspectEntity ^short = "Agent soupçonné d’être à l’origine de l’événement indésirable"
 * suspectEntity.instance 1..1 MS
-* suspectEntity.instance only Reference(FrMedicationAdministration)
+* suspectEntity.instance only Reference(FRMedicationAdministrationDocument)
 * suspectEntity.instance ^short = "Médicament, substance incriminée, posologie"
 
 * resultingCondition MS
-* resultingCondition only Reference(FrCondition)
+* resultingCondition only Reference(FRConditionDocument)
 * resultingCondition ^short = "Réaction observée"
 
 * suspectEntity.causality 0..1 MS

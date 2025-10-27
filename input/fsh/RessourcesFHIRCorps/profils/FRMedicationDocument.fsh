@@ -1,14 +1,14 @@
-Profile: FrMedication
+Profile: FRMedicationDocument
 Parent: Medication
-Id: fr-medication
-Title: "Medication - Fr Product"
-Description: "FrMedication permet de décrire un médicament ou un vaccin."
+Id: fr-medication-document
+Title: "Medication - FR Medication Document"
+Description: "FRMedicationDocument permet de décrire un médicament ou un vaccin."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * code 1..1 MS
   * ^short = "Code du produit de santé"
-* code only FrDocumentCodeableConcept
+* code only FRDocumentCodeableConceptDocument
 * code.coding ^short = "Autres codifications (CIP, UCD, ATC, MV)"
 * code.coding.system from FrValueSetVaccineTranslation (required) 
 
@@ -52,13 +52,13 @@ Description: "FrMedication permet de décrire un médicament ou un vaccin."
   * itemCodeableConcept MS
   * itemCodeableConcept from https://smt.esante.gouv.fr/terminologie-sms?vs
   * itemCodeableConcept ^short = "Code SMS de la substance active"
-  * itemCodeableConcept.extension contains FrSubstanceName named NomSubstance 1..1 MS
+  * itemCodeableConcept.extension contains FRSubstanceNameExtension named NomSubstance 1..1 MS
   // * itemCodeableConcept.text MS
   //  * * itemCodeableConcept.text ^short = "Nom de la substance" ==> Supprimer l'extension FrSubstanceName ?
 
-Extension: FrSubstanceName
-Id: fr-substance-name
-Title: "Fr Substance Name"
+Extension: FRSubstanceNameExtension
+Id: fr-substance-name-extension
+Title: "FR Substance Name Extension"
 Description: "Nom de la substance active, à utiliser en complément d’un codage."
 * ^status = #active
 * ^context.type = #element

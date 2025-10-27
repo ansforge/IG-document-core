@@ -1,8 +1,8 @@
-Profile: FrDiagnosticReport
+Profile: FRDiagnosticReportDocument
 Parent: DiagnosticReport
-Id: fr-diagnostic-report
-Title: "DiagnosticReport - Fr Results"
-Description: "FrDiagnosticReport est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)."
+Id: fr-diagnostic-report-document
+Title: "DiagnosticReport - FR Diagnostic Report Document"
+Description: "FRDiagnosticReportDocument est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
@@ -21,14 +21,14 @@ Description: "FrDiagnosticReport est un profil permettant de regrouper les types
 * performer.extension contains $event-performerFunction named performerFunction 1..1
 * performer.extension[performerFunction] 1..1
 * performer.extension[performerFunction].valueCodeableConcept.coding.code = #PPRF "primary performe"
-* performer only Reference (FrPractitionerDocument or FrPractitionerRoleDocument or FrOrganizationDocument)
+* performer only Reference (FRPractitionerDocument or FRPractitionerRoleDocument or FROrganizationDocument)
 
 * resultsInterpreter MS
   * ^short = "Auteur"
 * resultsInterpreter.extension contains $event-performerFunction named performerFunction 1..1
 * resultsInterpreter.extension[performerFunction] 1..1
 * resultsInterpreter.extension[performerFunction].valueCodeableConcept.coding.code = #AUT "author (originator)"
-* resultsInterpreter only Reference (FrPractitionerDocument or FrPractitionerRoleDocument or FrOrganizationDocument)
+* resultsInterpreter only Reference (FRPractitionerDocument or FRPractitionerRoleDocument or FROrganizationDocument)
 * result 1..* MS
   * ^short = "Resultat"
-* result only Reference (FrObservationResult)
+* result only Reference (FRObservationResultDocument)

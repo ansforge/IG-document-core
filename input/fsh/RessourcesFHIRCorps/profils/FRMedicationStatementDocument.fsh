@@ -1,18 +1,18 @@
-Profile: FrMedicationStatement
+Profile: FRMedicationStatementDocument
 Parent: MedicationStatement
-Id: fr-medication-statement
-Title: "MedicationStatement - Fr Medication"
+Id: fr-medication-statement-document
+Title: "MedicationStatement - FR Medication Statement Document"
 Description: "
- - FrMedicationStatement permet de décrire les modalités d'administration d'un médicament au patient.
+ - FRMedicationStatementDocument permet de décrire les modalités d'administration d'un médicament au patient.
  - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
  - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..* MS
   * ^short = "Identifiant. L'entrée Traitement doit être identifiée de manière unique."
-* basedOn only Reference(FrMedicationRequest)
+* basedOn only Reference(FRMedicationRequestDocument)
 * basedOn ^short = "Prescription"
-* partOf only Reference(FrMedicationAdministration)
+* partOf only Reference(FRMedicationAdministrationDocument)
 * category MS
   * ^short = "Acte ou situation"
 * status 1..1 MS
@@ -54,12 +54,12 @@ Description: "
   * ^short = "Instruction au patient"
 // Médicament
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FrMedication or FrMedicationsCombinaison)
+* medication[x] only CodeableConcept or Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
 
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
-* reasonReference only Reference(FrCondition or Observation)
+* reasonReference only Reference(FRConditionDocument or Observation)
 
 * note 0..1 MS
 * note ^short = "Permet de décrire les conditions préalables à l'utilisation du médicament."

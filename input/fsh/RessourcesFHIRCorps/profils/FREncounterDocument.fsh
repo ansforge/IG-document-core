@@ -1,8 +1,8 @@
-Profile: FrEncounter
+Profile: FREncounterDocument
 Parent: Encounter
-Id: fr-encounter
-Title: "Encounter - Fr Encounter"
-Description: "FrEncounter est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir"
+Id: fr-encounter-document
+Title: "Encounter - FR Encounter Document"
+Description: "FREncounterDocument est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -33,14 +33,14 @@ code='CS', display='callback for scheduling'
 Sinon, l'élément 'priority' n'est pas fourni.
 """
 
-* subject only Reference(FrPatientINSDocument or FrPatientDocument)
+* subject only Reference(FRPatientINSDocument or FRPatientDocument)
 
 * participant MS
 * participant ^short = "Liste des participants impliqués dans la rencontre"
 * participant.individual.extension contains
-    FrActorExtension named executant 0..* and
-    FrActorExtension named author 0..* and
-    FrActorExtension named informant 0..*
+    FRActorExtension named executant 0..* and
+    FRActorExtension named author 0..* and
+    FRActorExtension named informant 0..*
 
 * participant.individual.extension[executant] ^short = "Exécutant : 
 Si la rencontre est réalisée :
@@ -56,4 +56,4 @@ Sinon : l'exécutant n'est pas obligatoire mais peut être renseigné"
 
 * location 0..1 MS
 * location ^short = "Lieu d'exécution"
-* location.location only Reference(FrLocationDocument)
+* location.location only Reference(FRLocationDocument)

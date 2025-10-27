@@ -1,8 +1,8 @@
-Profile: FrAllergyIntolerance
+Profile: FRAllergyIntoleranceDocument
 Parent: AllergyIntolerance
-Id: fr-allergie-intolerance
-Title: "AllergyIntolerance - Fr Allergy and intolerance"
-Description: "FrAllergyIntolerance est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie."
+Id: fr-allergie-intolerance-document
+Title: "AllergyIntolerance - FR Allergy and intolerance Document"
+Description: "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -32,7 +32,7 @@ Description: "FrAllergyIntolerance est un profil utilisé pourdécrire une aller
 
 * patient MS
 * patient ^short = "Patient concerné par l'allergie ou intolérance"
-* patient only Reference(FrPatientINSDocument or FrPatientDocument)
+* patient only Reference(FRPatientINSDocument or FRPatientDocument)
 
 * reaction MS
 * reaction ^short = "Réaction observée"

@@ -1,8 +1,8 @@
-Profile: FrDeviceUseStatement
+Profile: FRDeviceUseStatementDocument
 Parent: DeviceUseStatement
-Id: fr-device-use-statement
-Title: "DeviceUseStatement - Fr Medical Device information"
-Description: "FrDeviceUseStatement représente les informations sur un dispositif médical"
+Id: fr-device-use-statement-document
+Title: "DeviceUseStatement - FR Device Use Statement Document"
+Description: "FRDeviceUseStatementDocument représente les informations sur un dispositif médical"
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -18,10 +18,10 @@ Sous la forme UID (UUID ou OID)."
 // Dispensateur  
 * source MS
 * source ^short = "Dispensateur"
-* source.extension contains FrActorExtension named performer 0..1
+* source.extension contains FRActorExtension named performer 0..1
 * source.extension[performer] ^short = "Dispensateur: référence au professionnel de santé ou à l'organisation ayant initié ou dispensé le dispositif"
 * source.extension[performer].extension[type].valueCode = #PRF
-* source.extension[performer].extension[actor].valueReference only Reference(FrPractitionerRoleDocument or FrOrganizationDocument)
+* source.extension[performer].extension[actor].valueReference only Reference(FRPractitionerRoleDocument or FROrganizationDocument)
 
 // Élément device
 * device MS
@@ -42,18 +42,18 @@ Sous la forme UID (UUID ou OID)."
     EnRapportAvecLaPrevention 0..1 and
     NonRemboursable 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FrObservationRelatedToLongTermCondition)
+* reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "Observation indiquant que l'utilisation est en rapport avec une ALD"
 * reasonReference[EnRapportAvecALD] MS
 
-* reasonReference[EnRapportAvecAccidentTravail] only Reference(FrObservationWorkRelatedAccident)
+* reasonReference[EnRapportAvecAccidentTravail] only Reference(FRObservationWorkRelatedAccidentDocument)
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "Observation indiquant que l'utilisation est en rapport avec un accident de travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FrObservationRelatedToPrevention)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FRObservationRelatedToPreventionDocument)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "Observation indiquant que l'utilisation est liée à la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FrObservationNotCovered)
+* reasonReference[NonRemboursable] only Reference(FRObservationNotCoveredDocument)
 * reasonReference[NonRemboursable] ^short = "Observation indiquant que le dispositif n'est pas remboursable"
 * reasonReference[NonRemboursable] MS 

@@ -1,9 +1,9 @@
-Profile: FrMedicationAdministration
+Profile: FRMedicationAdministrationDocument
 Parent: MedicationAdministration
-Id: fr-medication-administration
-Title: "MedicationAdministration - Fr Medication"
+Id: fr-medication-administration-document
+Title: "MedicationAdministration - FR Medication Administration Document"
 Description: "
- - FrMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.
+ - FRMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.
  - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.
  - Si le traitement est en attente d’administration c’est-à dire qu’il a été prescrit."
 
@@ -27,7 +27,7 @@ Description: "
 
 * dosage
   // Dosages progressifs ou fractionnés
-  * extension contains FrMedicationAdministrationSequenceExtension named sequence 0..*
+  * extension contains FRMedicationAdministrationSequenceExtension named sequence 0..*
   // Dosages conditionnels
   //* extension contains http://hl7.org/fhir/StructureDefinition/note named dosagesConditionnels 0..* 
   * route MS
@@ -48,7 +48,7 @@ Description: "
 
 // Médicament
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FrMedication or FrMedicationsCombinaison)
+* medication[x] only CodeableConcept or Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
 
 // Instruction au patient
 * dosage.text MS
@@ -57,9 +57,9 @@ Description: "
 // Motif du traitement
 * reasonReference MS
   * ^short = "Motif du traitement"
-* reasonReference only Reference(FrCondition or Observation)
+* reasonReference only Reference(FRConditionDocument or Observation)
 
-* request only Reference(FrMedicationRequest)
+* request only Reference(FRMedicationRequestDocument)
 * request ^short = "Prescription"
 
 * note 0..1 MS

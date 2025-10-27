@@ -1,8 +1,8 @@
-Profile: FrDiagnosticReportBIOChapter
+Profile: FRDiagnosticReportBIOChapterDocument
 Parent: DiagnosticReport
-Id: fr-diagnostic-report-bio-chapter
-Title: "DiagnosticReport - Fr Diagnostic Report BIO chapter"
-Description: "FrDiagnosticReportBIOChapter utilisé pour représenter un CR de biologie"
+Id: fr-diagnostic-report-bio-chapter-document
+Title: "DiagnosticReport - FR Diagnostic Report BIO chapter Document"
+Description: "FRDiagnosticReportBIOChapterDocument utilisé pour représenter un CR de biologie"
 
 * code 1..1 MS 
 * code ^short = "Type de document"
@@ -14,31 +14,31 @@ Description: "FrDiagnosticReportBIOChapter utilisé pour représenter un CR de b
 * status ^short = "Statut du rapport de BIO (final, partial ...)"
 
 * performer 1..* MS
-* performer.extension contains FrActorExtension named author 1..*
+* performer.extension contains FRActorExtension named author 1..*
 * performer.extension[author] ^short = "Auteur du compte-rendu de BIO (Médecin - Biologie médicale)"
 * performer.extension[author].extension[type].valueCode = #AUT
-* performer.extension[author].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * resultsInterpreter MS
 * resultsInterpreter ^short = "Interpréteur de résultat primaire"
-* resultsInterpreter only Reference(FrPractitionerRoleDocument)
+* resultsInterpreter only Reference(FRPractitionerRoleDocument)
 
 * encounter MS
 * encounter ^short = "L’événement de soins auquel se rapporte ce compte rendu de laboratoire (moment où l’examen a été prescrit)."
-* encounter only Reference(FrEncounter)
+* encounter only Reference(FREncounterDocument)
 
 * subject MS
 * subject 1..1
 * subject ^short = "Sujet concerné"
-* subject only Reference(FrPatientINSDocument)
+* subject only Reference(FRPatientINSDocument)
 
 * specimen MS
-* specimen only Reference(FrSpecimen)
+* specimen only Reference(FRSpecimenDocument)
 * specimen ^short = "Échantillons sur lesquels repose ce compte rendu."
 
 * result 1..* MS
 * result ^short = "Résultats"
-* result only Reference(FrObservationLaboratoryReportResults)
+* result only Reference(FRObservationLaboratoryReportResultsDocument)
 
 * presentedForm 1..1 MS
 * presentedForm ^short = "Copie du document"

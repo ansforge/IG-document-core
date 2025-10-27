@@ -1,8 +1,8 @@
-Profile: FrAdvanceDirective
+Profile: FRAdvanceDirectiveDocument
 Parent: Consent
-Id: fr-advance-directive
-Title: "Consent - Fr Advance directive"
-Description: "FrAdvanceDirective permet  d’indiquer si les directives anticipées du patient.
+Id: fr-advance-directive-document
+Title: "Consent - FR Advance directive Document"
+Description: "FRAdvanceDirectiveDocument permet  d’indiquer si les directives anticipées du patient.
 Article L1111-11 du Code de la Santé Publique : 
 « Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un 
 jour hors d'état d'exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne 
@@ -37,7 +37,7 @@ Le type de la directive identifiée permet d’indiquer l’autorisation ou la n
 * source[x] ^short = "Documents"
 * sourceReference MS
 * sourceReference ^short = "Référence à un document externe"
-* sourceReference only Reference(FrDocumentReference)
+* sourceReference only Reference(FRDocumentReferenceDocument)
 
 // Document encapsulé en B64 //
 * sourceAttachment MS
