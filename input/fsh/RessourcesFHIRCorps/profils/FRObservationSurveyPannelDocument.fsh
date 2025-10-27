@@ -1,8 +1,8 @@
-Profile: FrObservationSurveyPannel
+Profile: FRObservationSurveyPannelDocument
 Parent: Observation
-Id: fr-observation-survey-pannel
-Title: "Observation - Fr Survey pannel"
-Description: "FrObservationSurveyPannel permet de rassembler des observations de questionnaires."
+Id: fr-observation-survey-pannel-document
+Title: "Observation - FR Observation Survey Pannel Document"
+Description: "FRObservationSurveyPannelDocument permet de rassembler des observations de questionnaires."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -18,5 +18,5 @@ Description: "FrObservationSurveyPannel permet de rassembler des observations de
 * effectiveDateTime ^short = "Date de l'entrée"
 
 * hasMember 1..* MS
-* hasMember only Reference(FrObservationSurvey)
+* hasMember only Reference(FRObservationSurveyDocument)
 * hasMember ^short = "Évaluations"
