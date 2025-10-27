@@ -1,6 +1,5 @@
 Logical: FRLMDispositifMedical
 //Parent: EHDSDevice
-Id: fr-lm-dispositif-medical
 Title: "Modèle logique métier - Dispositif médical"
 Description: """Dispositif médical"""
 Characteristics: #can-be-target
