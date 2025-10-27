@@ -7,6 +7,18 @@ Description: "FRSeviceRequestDocument profil permet de porter des demandes d'exa
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
+* category 1..*
+* category ^short = "Catégorie de la demande"
+
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+
+* identifier contains accessionNumber 0..1
+* identifier[accessionNumber] only FRAccessionNumberIdentifierImagingDocument
+* identifier[accessionNumber] ^short = "Accession Number de la demande d’examen d’imagerie"
+
 * intent MS
 * intent ^short = 
 """
@@ -19,6 +31,7 @@ Si la demande est un objectif à atteindre : 'GOL = plan'
 * code.coding ^short = "Type de la demande : Si aucun code n'est trouvé dans des terminologies existantes, utiliser le code : GEN-092.04.20 'Autre demande d’examen ou de suivi'"
 //Si aucun code n'est trouvé dans des terminologies existantes, utiliser le code : GEN-092.04.20
 //* code.concept = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.04.20 "Autre demande d’examen ou de suivi"
+* category ^short = "Catégorie de la demande"
 * occurrence[x] 1..1 MS
 * occurrence[x] ^short = "Date prévisionnelle de l'examen, du suivi, de l'objectif"
 * orderDetail 0..1 MS
