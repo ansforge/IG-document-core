@@ -1,8 +1,8 @@
-Profile: FrTaskProfessionalTransport
+Profile: FRTaskProfessionalTransportDocument
 Parent: Task
-Id: fr-task-professional-transport
-Title: "Task - Fr Task Professional Transport"
-Description: "FrTaskProfessionalTransport permet de décrire le transport d'un professionnel lors d’un déplacement."
+Id: fr-task-professional-transport-document
+Title: "Task - FR Task Professional Transport Document"
+Description: "FRTaskProfessionalTransportDocument permet de décrire le transport d'un professionnel lors d’un déplacement."
 
 * identifier 1..1 MS
   * ^short = "Identifiant du transport"
@@ -35,19 +35,19 @@ Description: "FrTaskProfessionalTransport permet de décrire le transport d'un p
 
 * owner MS
 * owner.extension contains
-    FrActorExtension named transporteur 0..1 and
-    FrActorExtension named professionnelConcerne 1..1
+    FRActorExtension named transporteur 0..1 and
+    FRActorExtension named professionnelConcerne 1..1
 
 // --- transporteur ---
 * owner.extension[transporteur] ^short = "Transporteur"
 * owner.extension[transporteur].extension[type].valueCode = #PRF
-* owner.extension[transporteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* owner.extension[transporteur].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 * owner.extension[transporteur].extension[typeCode].valueCodeableConcept.coding.code = #PRF
 
 //le Professionnel concerné
 * owner.extension[professionnelConcerne] ^short = "le Professionnel concerné"
 * owner.extension[professionnelConcerne].extension[type].valueCode = #PART
-* owner.extension[professionnelConcerne].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* owner.extension[professionnelConcerne].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 * owner.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
 * owner.extension[professionnelConcerne].extension[typeCode].valueCodeableConcept.coding.code = #RCV 
 

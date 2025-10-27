@@ -1,8 +1,8 @@
-Profile: FrSpecimen
+Profile: FRSpecimenDocument
 Parent: Specimen
-Id: fr-specimen
-Title: "Specimen - Fr Specimen"
-Description: "FrSpecimen est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
+Id: fr-specimen-document
+Title: "Specimen - FR Specimen Document"
+Description: "FRSpecimenDocument est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -49,9 +49,9 @@ codeSystemName='LOINC'
 * receivedTime MS
 * receivedTime ^short = "Date de réception de l'échantillon"
 
-* parent only Reference(FrSpecimen)
+* parent only Reference(FRSpecimenDocument)
 
-* collection.collector only Reference(FrPractitionerRoleDocument or FrPractitionerDocument)
+* collection.collector only Reference(FRPractitionerRoleDocument or FRPractitionerDocument)
 * collection.collector ^short = "Organisation prélevante"
 * collection.collected[x] MS
 * collection.collected[x] ^short = """

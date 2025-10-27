@@ -1,8 +1,8 @@
-Profile: FrObservationSurvey
+Profile: FRObservationSurveyDocument
 Parent: Observation
-Id: fr-observation-survey
-Title: "Observation - Fr Survey"
-Description: "FrObservationSurvey permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple)."
+Id: fr-observation-survey-document
+Title: "Observation - FR Observation Survey Document"
+Description: "FRObservationSurveyDocument permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple)."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -14,7 +14,7 @@ Description: "FrObservationSurvey permet de rapporter un résultat (score) répo
 * category.coding.code = #survey
 
 * code MS
-* code only FrDocumentCodeableConcept
+* code only FRDocumentCodeableConceptDocument
 * code ^short = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
 Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOINC et décrire le type d'évaluation en texte libre."
 
@@ -26,28 +26,28 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 
 * performer MS
 * performer.extension contains
-    FrActorExtension named Evaluateur 0..1 and
-    FrActorExtension named Auteur 0..1 and
-    FrActorExtension named Participant 0..1
+    FRActorExtension named Evaluateur 0..1 and
+    FRActorExtension named Auteur 0..1 and
+    FRActorExtension named Participant 0..1
 
 // Evaluateur
 * performer.extension[Evaluateur] MS
 * performer.extension[Evaluateur] ^short = "Evaluateur"
 * performer.extension[Evaluateur].extension[type].valueCode = #PRF
-* performer.extension[Evaluateur].extension[actor].valueReference only Reference(FrOrganizationDocument)
+* performer.extension[Evaluateur].extension[actor].valueReference only Reference(FROrganizationDocument)
 * performer.extension[Evaluateur].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-participant-additionnel-resultat-cisis (required)
 
 // auteur
 * performer.extension[Auteur] MS
 * performer.extension[Auteur] ^short = "Auteur de l'évaluation"
 * performer.extension[Auteur].extension[type].valueCode = #AUT
-* performer.extension[Auteur].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[Auteur].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 // Participant
 * performer.extension[Participant] MS
 * performer.extension[Participant] ^short = "Responsable de l'évaluation"
 * performer.extension[Participant].extension[type].valueCode = #PART
-* performer.extension[Participant].extension[actor].valueReference only Reference(FrPractitionerRoleDocument)
+* performer.extension[Participant].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 * performer.extension[Participant].extension[typeCode].valueCodeableConcept.coding.code = #RESP
 
 // ----------------------
@@ -87,7 +87,7 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 
 * derivedFrom 0..1 MS
 * derivedFrom ^short = "Statut de l’évaluation"
-* derivedFrom only Reference(FrObservationStatus)
+* derivedFrom only Reference(FRObservationStatusDocument)
 
 // Commentaires
 * note ^short = "Commentaires (Annotations)"

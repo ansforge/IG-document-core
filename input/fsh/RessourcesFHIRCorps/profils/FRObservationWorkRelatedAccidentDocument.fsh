@@ -1,8 +1,8 @@
-Profile: FrObservationWorkRelatedAccident
+Profile: FRObservationWorkRelatedAccidentDocument
 Parent: Observation
-Id: fr-work-related-accident
-Title: "Observation - Fr work related accident"
-Description: "FrObservationWorkRelatedAccident permet d'indiquer si l'élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle."
+Id: fr-observation-work-related-accident-document
+Title: "Observation - FR Observation Work Related Accident Document"
+Description: "FRObservationWorkRelatedAccidentDocument permet d'indiquer si l'élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -19,14 +19,14 @@ value='false' : le traitement n'est pas prescrit dans le cadre d'un accident du 
 """
 
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur de l’observation"
 * performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
-    FrPractitionerRoleDocument 
-    or FrOrganizationDocument 
-    or FrPractitionerRoleDocument 
-    or FrPatientINSDocument 
-    or FrPatientDocument)
+    FRPractitionerRoleDocument 
+    or FROrganizationDocument 
+    or FRPractitionerRoleDocument 
+    or FRPatientINSDocument 
+    or FRPatientDocument)
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

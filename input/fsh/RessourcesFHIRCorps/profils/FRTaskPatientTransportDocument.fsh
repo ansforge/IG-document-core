@@ -1,8 +1,8 @@
-Profile: FrTaskPatientTransport
+Profile: FRTaskPatientTransportDocument
 Parent: Task
-Id: fr-task-patient-transport
-Title: "Task - Fr Patient Transport"
-Description: "FrTaskPatientTransport permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
+Id: fr-task-patient-transport-document
+Title: "Task - FR Task Patient Transport Document"
+Description: "FRTaskPatientTransportDocument permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)."
 
 * identifier 1..1 MS
   * ^short = "Identifiant du transport"
@@ -55,9 +55,9 @@ Description: "FrTaskPatientTransport permet de décrire le transport d'un patien
 
 // Événement
 //* encounter 1..1
-* encounter only Reference(FrEncounterEvent)
+* encounter only Reference(FREncounterEventDocument)
 
 // transporteur
 * owner MS
 * owner ^short = "Transporteur"
-* owner only Reference(FrPractitionerRoleDocument or FrOrganizationDocument)
+* owner only Reference(FRPractitionerRoleDocument or FROrganizationDocument)

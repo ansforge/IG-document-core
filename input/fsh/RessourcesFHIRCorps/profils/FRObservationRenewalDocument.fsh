@@ -1,8 +1,8 @@
-Profile: FrObservationRenewal
+Profile: FRObservationRenewalDocument
 Parent: Observation
-Id: fr-observation-renewal
-Title: "Observation - Fr Renewal"
-Description: "FrObservationRenewal est utilisée pour représenter le renouvellement de l'acte."
+Id: fr-observation-renewal-document
+Title: "Observation - FR Observation Renewal Document"
+Description: "FRObservationRenewalDocument est utilisée pour représenter le renouvellement de l'acte."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -15,8 +15,8 @@ Description: "FrObservationRenewal est utilisée pour représenter le renouvelle
 
 // Participation d’un auteur
 * performer MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Participation d'un auteur au document"
 * performer.extension[author].extension[type].valueCode = #AUT
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

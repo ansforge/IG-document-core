@@ -1,8 +1,8 @@
-Profile: FrObservationTransfusionAccidents
+Profile: FRObservationTransfusionAccidentsDocument
 Parent: Observation
-Id: fr-transfusion-accidents
-Title: "Observation - Fr Transfusion accidents"
-Description: "FrObservationTransfusionAccidents est un profil utilisé pour décrire un accident transfusionnel."
+Id: fr-observation-transfusion-accidents-document
+Title: "Observation - FR Observation Transfusion Accidents Document"
+Description: "FRObservationTransfusionAccidentsDocument est un profil utilisé pour décrire un accident transfusionnel."
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -16,8 +16,8 @@ Description: "FrObservationTransfusionAccidents est un profil utilisé pour déc
 
 // Auteur
 * performer MS
-* performer.extension contains FrActorExtension named author 0..1
+* performer.extension contains FRActorExtension named author 0..1
 * performer.extension[author] ^short = "Participation d'un auteur au document"
 * performer.extension[author].extension[type].valueCode = #AUT
 
-* insert FrRuleSetSimpleObservation
+* insert FRRuleSetSimpleObservation

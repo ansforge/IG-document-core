@@ -1,8 +1,8 @@
-Profile: FrObservationVitalSignsPanel
+Profile: FRObservationVitalSignsPanelDocument
 Parent: http://hl7.org/fhir/StructureDefinition/vitalspanel
-Id: fr-Observation-vital-signs-panel
-Title: "Observation - Fr Vital signs panel"
-Description: "FrObservationVitalSignsPanel permet de regrouper des informations relatives aux mesures cliniques du patient."
+Id: fr-Observation-vital-signs-panel-document
+Title: "Observation - FR Observation Vital Signs Panel Document"
+Description: "FRObservationVitalSignsPanelDocument permet de regrouper des informations relatives aux mesures cliniques du patient."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
@@ -17,14 +17,14 @@ Description: "FrObservationVitalSignsPanel permet de regrouper des informations 
 * performer MS
   * ^short = "Auteur"
 * performer 0..1 MS
-* performer.extension contains FrActorExtension named author 0..*
+* performer.extension contains FRActorExtension named author 0..*
 * performer.extension[author] ^short = "Auteur de l’observation"
 * performer.extension[author].extension[type].valueCode = #AUT
 * performer.extension[author].extension[actor].valueReference only Reference(
-    FrPractitionerRoleDocument
-    or FrOrganizationDocument
-    or FrPractitionerRoleDocument
-    or FrPatientINSDocument
+    FRPractitionerRoleDocument
+    or FROrganizationDocument
+    or FRPractitionerRoleDocument
+    or FRPatientINSDocument
     )
 * hasMember MS 
-* hasMember only Reference (FrObservationVitalSigns)
+* hasMember only Reference (FRObservationVitalSignsDocument)
