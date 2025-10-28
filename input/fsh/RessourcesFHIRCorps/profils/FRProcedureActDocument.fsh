@@ -10,6 +10,10 @@ Description: "FRProcedureActDocument est un profil utilisé pour décrire un act
 * identifier 1..* MS
 * identifier ^short = "Identifiant"
 
+* partOf MS
+* partOf ^short = "Références vers des Observations de scores associés à l'acte" 
+* partOf only Reference(Observation)
+
 * status MS
 * status ^short = "Statut de l'acte"
 
@@ -96,7 +100,5 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
 
 // Difficulté Observation / Scores Observation
 * extension contains
-    FRProcedureDifficultyExtension named difficulte 0..1 MS and
-    FRProcedureScoreExtension named scores 0..* MS
+    FRProcedureDifficultyExtension named difficulte 0..1 MS
 * extension[difficulte] ^short = "Référence vers une Observation représentant la difficulté"
-* extension[scores] ^short = "Références vers des Observations de scores associés" 
