@@ -1,3 +1,6 @@
+/* Ce DataType existe déjà côté HL7 (Imaging Report Europe).
+Lors de la publication de la version HL7 correspondante, remplacer
+ce profil par la version officielle.*/ 
 Profile: FRAccessionNumberIdentifierImagingDocument
 Parent: Identifier
 Id: fr-accession-number-identifier-imaging-document
