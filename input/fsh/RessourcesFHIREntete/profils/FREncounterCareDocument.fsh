@@ -1,7 +1,7 @@
-Profile: FREncounterDocument
+Profile: FREncounterCareDocument
 Parent: FRCoreEncounterProfile
-Id: fr-encounter-document
-Title: "FR Encounter Document"
+Id: fr-encounter-care-document
+Title: "FR Encounter Care Document"
 Description: "Ce profil représente l'association du document à une prise en charge."
 * type 0..1
 * type ^short = "Type de prise en charge"
