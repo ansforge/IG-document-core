@@ -1,3 +1,4 @@
+/* Equivalents EHDSMedicationAdministration précisés en commentaires pour chaque donnée métier */
 Logical: FRLMTraitement
 Id: fr-lm-traitement
 //Parent: EHDSMedicationAdministration	

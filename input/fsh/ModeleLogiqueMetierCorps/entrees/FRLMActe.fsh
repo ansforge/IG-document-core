@@ -1,3 +1,4 @@
+/* Equivalents EHDSProcedure précisés en commentaires pour chaque donnée métier */
 Logical: FRLMActe
 Id: fr-lm-acte
 //Parent: EHDSProcedure

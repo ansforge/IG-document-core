@@ -1,7 +1,7 @@
 Logical: FRLMParticipantAPSR
 Id: fr-lm-participant-apsr
 Title: "Modèle logique métier - FR LM Participant APSR"
-Description: """Participant APSR"""
+Description: """Participant APSR(Anatomic Pathology Structured Report)"""
 * periodeParticipation 0..1 dateTime "Période de participation"		 		
 * participantRole  1..1 BackboneElement "Participant APSR"
   * IdentifiantParticipant 0..* Identifier "Identifiant du participant"

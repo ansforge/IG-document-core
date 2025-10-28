@@ -1,3 +1,4 @@
+/* Equivalents EHDSServiceRequest précisés en commentaires pour chaque donnée métier */
 Logical: FRLMDemandeExamenOuSuivi
 Id: fr-lm-demande-examen-ou-suivi
 //Parent: EHDSServiceRequest
@@ -13,7 +14,7 @@ Characteristics: #can-be-target
 * description 1..1 string "Description narrative de l'entrée"
 //serviceStatut
 * statutDemande 1..1 code "Statut de la demande"
-//occurance[x] dateTime
+//occurrence[x] dateTime
 * date 1..1 dateTime "Date prévisionnelle de l'examen, du suivi, de l'objectif"
 // Absent du modèle EHDS / Pas d’équivalent FHIR
 * resultat 0..1 CodeableConcept "Résultat de la demande"

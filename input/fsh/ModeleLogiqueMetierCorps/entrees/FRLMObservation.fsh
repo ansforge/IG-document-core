@@ -1,3 +1,4 @@
+/* Equivalents EHDSObservation précisés en commentaires pour chaque donnée métier */
 Logical: FRLMObservation
 Id: fr-lm-observation
 //Parent: EHDSObservation
@@ -11,8 +12,9 @@ Characteristics: #can-be-target
 * observationCode 1..1 CodeableConcept "Code de l'observation"
 // n'est pas utilisé EHDSObservation
 * observationDescription 1..1 Narrative "Description narrative de l'observation"
-// performer
+// status
 * observationStatut 1..1 code "Statut de l'observation"
+// observationDate[x]
 * observationDate 0..1 dateTime "Date de l'observation"
 * observationNombreRenouvellements 0..1 Range "Nombre de renouvellements possibles" 
 //observationResult : 0..1

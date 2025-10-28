@@ -1,3 +1,4 @@
+/* Equivalents EHDSSpecimen précisés en commentaires pour chaque donnée métier */
 Logical: FRLMPrelevement
 Id: fr-lm-prelevement
 //Parent: EHDSSpecimen
@@ -5,7 +6,7 @@ Title: "Modèle logique métier - FR LM Prélèvement"
 Description: """Entrée Prélèvement"""
 Characteristics: #can-be-target
 
-//  EHDSSpecimen.collectionProcedure. FHIR R4 : processing.procedure ou R5 : collection.procedure ?
+// EHDSSpecimen.collectionProcedure. FHIR R4 : processing.procedure ou R5 : collection.procedure ?
 * actePrelevement 0..1 CodeableConcept "Acte de prélèvement"
 // EHDSSpecimen.collectionPeriod
 * datePrelevement 1..1 dateTime "Date du prélèvement"

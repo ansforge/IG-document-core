@@ -1,3 +1,4 @@
+/* Equivalents EHDSImmunization précisés en commentaires pour chaque donnée métier */
 Logical: FRLMVaccination
 Id: fr-lm-vaccination
 //Parent : EHDSImmunization

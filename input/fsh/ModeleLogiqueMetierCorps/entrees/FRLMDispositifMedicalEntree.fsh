@@ -1,3 +1,4 @@
+/* Equivalents EHDSDeviceUse précisés en commentaires pour chaque donnée métier */
 Logical: FRLMDispositifMedicalEntree
 Id: fr-lm-dispositif-medical-entree
 //Parent: EHDSDeviceUse

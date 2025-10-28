@@ -1,3 +1,4 @@
+/* Equivalents EHDSDeviceUse précisés en commentaires pour chaque donnée métier */
 Logical: FRLMDocumentAttache
 Id: fr-lm-document-attache
 //Parent: EHDSAttachment	

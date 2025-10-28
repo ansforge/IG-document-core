@@ -1,3 +1,4 @@
+/* Equivalents EHDSAllergyIntolerance précisés en commentaires pour chaque donnée métier */
 Logical: FRLMAllergieOuHypersensibilite
 Id: fr-lm-allergie-ou-hypersensibilite
 ///Parent: EHDSAllergyIntolerance

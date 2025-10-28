@@ -1,3 +1,4 @@
+/* Equivalents EHDSCondition précisés en commentaires pour chaque donnée métier */
 Logical: FRLMProbleme
 Id: fr-lm-probleme
 //Parent: EHDSCondition

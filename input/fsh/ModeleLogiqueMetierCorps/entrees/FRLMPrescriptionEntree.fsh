@@ -1,3 +1,4 @@
+/* Equivalents EHDSDosaging précisés en commentaires pour chaque donnée métier */
 Logical: FRLMPrescriptionEntree
 Id: fr-lm-prescription-entree
 //Parent : EHDSDosaging
