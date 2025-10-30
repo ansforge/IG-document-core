@@ -8,9 +8,7 @@ Description: "FRPregnancyHistoryDocument  est une liste contenant soit un évén
 * identifier 1..1 MS 
   * ^short = "Identifiant"
 * code 1..1 MS
-* code.coding.system = "http://snomed.info/sct/"
-* code.coding.code = #118185001
-* code.coding.display = "constatation à propos de la grossesse"
+* code = $SCT#118185001 "constatation à propos de la grossesse"
 * status 1..1 MS
 * status = #current
 * date 1..1 MS 

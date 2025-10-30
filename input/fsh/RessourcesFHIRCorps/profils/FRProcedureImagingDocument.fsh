@@ -11,7 +11,6 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * identifier 1..1 MS
 * identifier ^short = "Identifiant"
 
-
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
 * basedOn  0..* MS
 * basedOn ^slicing.discriminator.type = #pattern  

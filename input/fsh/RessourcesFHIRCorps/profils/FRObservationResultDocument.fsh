@@ -19,13 +19,9 @@ Description: "FRObservationResultDocument permet d'indiquer le résultat observ�
   * ^short = "Observation effectuée"
 * referenceRange MS
   * ^short = "Intervalles de référence"
-// Slicing sur interpretation dans referenceRange
-* interpretation ^slicing.discriminator.type = #pattern
-* interpretation ^slicing.discriminator.path = "$this"
-* interpretation ^slicing.rules = #open
 
-* interpretation contains observationRange  0..1
-* interpretation[observationRange] ^short = "Interprétation"
+* interpretation ^short = "Interprétation"
+* interpretation from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis
 
 * performer MS
 * performer.extension contains FRActorExtension named author 0..*
