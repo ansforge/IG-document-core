@@ -50,20 +50,27 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * series.modality from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis
 
 * series.bodySite 1..1 MS
-* series.bodySite only FRDocumentCodingDocument
 * series.bodySite ^short = "Localisation anatomique"
 * series.bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
 
-* series.bodySite.extension[qualifier].extension[name] 1..1 
-* series.bodySite.extension[qualifier].extension[name].valueCodeableConcept = $SCT#106233006 "modificateur topographique"
-* series.bodySite.extension[qualifier].extension[value] 1..1
-* series.bodySite.extension[qualifier].extension[value].valueCodeableConcept.coding.system from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis
+/* // Solution 1 à utiliser dans FRProcedureImagingDocument et la supprimer de ce profil : Modificateurs topographiques
+* bodySite.extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named ModificateurTopographique 0..1 MS
+* bodySite.extension[ModificateurTopographique] ^short = "Modificateurs topographiques"
+// Utiliser BodyStructure.locationQualifier pour fixer le VS https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis
+* bodySite.extension[ModificateurTopographique].valueReference only Reference(FRBodyStructureDocument)
+ */
 
-/* 
-// Localisation anatomique et Modificateurs topographiques
-* extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named ModificateurTopographique 0..1 MS
-* extension[ModificateurTopographique] ^short = "Modificateurs topographiques"
-* extension[ModificateurTopographique].valueReference only Reference(BodyStructure) */
+/* // Solution 2 : Modificateurs topographiques
+* extension contains $imagingStudy-bodySite-r5 named bodySiteR5 1..1
+* extension[bodySiteR5].valueReference 1..1
+* extension[bodySiteR5].valueReference only Reference (BodyStructure)
+* extension[bodySiteR5] ^short = "Localisation anatomique et Modificateurs topographiques"
+*/
+
+ // Solution 3 : Modificateurs topographiques
+* series.laterality 1..1 MS
+* series.laterality ^short = "modificateur topographique"
+* series.laterality from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis
 
 * series.instance 1..* MS
 
