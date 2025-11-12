@@ -17,12 +17,6 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * identifier contains studyInstanceUid 1..*
 * identifier[studyInstanceUid] only FRStudyInstanceUidIdentifierDocument
 
-/* * procedureCode 1..1 MS
-* procedureCode ^short = "Code de l'acte"
-* procedureCode.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
-* procedureCode.coding.code = #113014
-* procedureCode.coding.display = "Examen" */
-
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
 * basedOn  0..* MS
 * basedOn ^slicing.discriminator.type = #pattern  
@@ -31,7 +25,6 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * basedOn contains serviceRequestAccessionNumber 0..*
 * basedOn[serviceRequestAccessionNumber] only Reference(FRSeviceRequestDocument)
 * basedOn[serviceRequestAccessionNumber] ^short = "Référence à la demande d'examen contenant l'Accession Number"
-
 
 * started MS
 * started ^short = "Date de l'acte"
