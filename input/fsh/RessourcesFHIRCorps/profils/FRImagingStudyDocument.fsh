@@ -8,15 +8,20 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
+* ^slicing.discriminator.type = #value
+* ^slicing.discriminator.path = "system"
+* ^slicing.rules = #open
+* ^slicing.ordered = false
 * identifier 1..* MS
 * identifier ^short = "Study Instance UUID"
+* identifier contains studyInstanceUid 1..*
+* identifier[studyInstanceUid] only FRStudyInstanceUidIdentifierDocument
 
 /* * procedureCode 1..1 MS
 * procedureCode ^short = "Code de l'acte"
 * procedureCode.coding.system = "http://dicom.nema.org/resources/ontology/DCM"
 * procedureCode.coding.code = #113014
 * procedureCode.coding.display = "Examen" */
-
 
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
 * basedOn  0..* MS
