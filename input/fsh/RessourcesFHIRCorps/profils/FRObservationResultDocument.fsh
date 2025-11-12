@@ -34,4 +34,7 @@ Description: "FRObservationResultDocument permet d'indiquer le r√©sultat observ√
     or FRPatientINSDocument
     )
 
+* note MS
+* note ^short = "Commentaires"
+
 * insert FRRuleSetSimpleObservation
