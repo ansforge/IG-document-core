@@ -58,6 +58,9 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performer.actor.extension[Participant].extension[actor].valueReference only Reference(FRPractitionerRoleDocument or Device)
 * performer.actor.extension[Participant].extension[typeCode].valueCodeableConcept from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis
  */
+ // à mettre à jour, utiliser complication.text au lieu de complicationDetail
+/* 
 * complicationDetail MS
-* complicationDetail only Reference(FRConditionDocument)
-* complicationDetail ^short = "Complications survenues au cours de l'acte d'imagerie"
+* complicationDetail only Reference(FRConditionDocument) 
+*/
+* complication.text ^short = "Complications survenues au cours de l'acte d'imagerie"
