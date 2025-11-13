@@ -9,4 +9,4 @@ Description: "DataType définissant l’UID de l’instance Study (0020,000D) d'
 * system = "urn:dicom:uid"
 * value 1..1
 * type 0..1
-* type = MissingDicomTerminology#0020000D // "Study Instance UID"
+* type.coding.code = #0020000D // "Study Instance UID"
