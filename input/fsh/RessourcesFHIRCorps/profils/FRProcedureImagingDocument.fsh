@@ -43,12 +43,12 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performer ^slicing.discriminator.path = "$this"
 * performer ^slicing.rules = #open
 * performer 0..* MS
-  * function 1..1
-* performer contains performer 0..* and dispositif-medical 0..*
-* performer[performer]
-  * actor only Reference(FRPractitionerRoleDocument)
-* performer[dispositif-medical]
-  * actor only Reference(Device)
+* performer.function 1..1
+* performer contains participant 0..* and dispositif-medical 0..*
+* performer[participant].actor only Reference(FRPractitionerRoleDocument)
+* performer[participant] ^short = "Participant à l'acte d'imagerie"
+* performer[dispositif-medical].actor only Reference(Device)
+* performer[dispositif-medical] ^short = "Dispositif médical utilisé lors de l'acte d'imagerie"
 /* 
 * performer MS
 * performer ^short = "Participant"
