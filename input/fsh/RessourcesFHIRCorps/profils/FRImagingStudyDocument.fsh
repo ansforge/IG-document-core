@@ -47,6 +47,7 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * series.modality ^short = "Modalité d'acquisition de la série d'acte"
 * series.modality from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis
 
+// ImagingStudy.series.bodySite est une nouvelle donnée qui n'était pas présente en CDA ==> à garder dans le profil FHIR ?
 * series.bodySite 1..1 MS
 * series.bodySite ^short = "Localisation anatomique"
 * series.bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
@@ -71,10 +72,10 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * series.laterality from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis
 
 * series.instance 1..* MS
-
 * series.instance ^short = "Url permettant d’accéder aux images sur la Drim box source"
 * series.instance.sopClass from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis (required)
-* series.instance.number ^short = "Cadres référencés"
+* series.instance.extension contains FRNumberOfFramesExtension named number-of-frames 0..1
+* series.instance.extension[number-of-frames] ^short = "Nombre de cadres dans une instance d'image"
 
 * series.endpoint ^short = "Référence WADO"
 * series.endpoint only Reference(FREndpointWadoDocument)
