@@ -13,7 +13,7 @@ Description: "Extension permettant de représenter un acteur impliqué dans le d
 
 // Sous-extension type
 * extension[type].value[x] only code
-* extension[type].valueCode from FrValueSetActorType (required)
+* extension[type].valueCode from FRValueSetActorTypeDocument (required)
 * extension[type] ^short = "Type d'acteur (AUT, PRF, PART, INF)"
 
 * extension[typeCode].value[x] only CodeableConcept
