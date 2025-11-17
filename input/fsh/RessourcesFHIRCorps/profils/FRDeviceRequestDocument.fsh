@@ -50,8 +50,7 @@ Description: "FRDeviceRequestDocument représente une demande de dispositif méd
 * reasonReference contains
     EnRapportAvecALD 0..1 and
     EnRapportAvecAccidentTravail 0..1 and
-    EnRapportAvecLaPrevention 0..1 and
-    NonRemboursable 0..1
+    EnRapportAvecLaPrevention 0..1
 
 * reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "En rapport avec une Affection Longue Durée (ALD)"
@@ -65,6 +64,5 @@ Description: "FRDeviceRequestDocument représente une demande de dispositif méd
 * reasonReference[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FRObservationNotCoveredDocument)
-* reasonReference[NonRemboursable] ^short = "Non remboursable"
-* reasonReference[NonRemboursable] MS
+* extension contains FRNotCoveredExtension named notCovered 0..1
+* extension[notCovered] ^short = "DM prescrit n'est remboursable / remboursable"

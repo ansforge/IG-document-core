@@ -39,8 +39,7 @@ Sous la forme UID (UUID ou OID)."
 * reasonReference contains
     EnRapportAvecALD 0..1 and
     EnRapportAvecAccidentTravail 0..1 and
-    EnRapportAvecLaPrevention 0..1 and
-    NonRemboursable 0..1
+    EnRapportAvecLaPrevention 0..1
 
 * reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "Observation indiquant que l'utilisation est en rapport avec une ALD"
@@ -54,6 +53,5 @@ Sous la forme UID (UUID ou OID)."
 * reasonReference[EnRapportAvecLaPrevention] ^short = "Observation indiquant que l'utilisation est liée à la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
-* reasonReference[NonRemboursable] only Reference(FRObservationNotCoveredDocument)
-* reasonReference[NonRemboursable] ^short = "Observation indiquant que le dispositif n'est pas remboursable"
-* reasonReference[NonRemboursable] MS 
+* extension contains FRNotCoveredExtension named notCovered 0..1
+* extension[notCovered] ^short = "DM n'est remboursable / remboursable"
