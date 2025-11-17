@@ -23,17 +23,6 @@ Description: "FRObservationResultDocument permet d'indiquer le résultat observ�
 * interpretation ^short = "Interprétation"
 * interpretation from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis
 
-* performer MS
-* performer.extension contains FRActorExtension named author 0..*
-* performer.extension[author] ^short = "Auteur de l’observation"
-* performer.extension[author].extension[type].valueCode = #AUT
-* performer.extension[author].extension[actor].valueReference only Reference(
-    FRPractitionerRoleDocument
-    or FROrganizationDocument
-    or FRPractitionerRoleDocument
-    or FRPatientINSDocument
-    )
-
 * note MS
 * note ^short = "Commentaires"
 

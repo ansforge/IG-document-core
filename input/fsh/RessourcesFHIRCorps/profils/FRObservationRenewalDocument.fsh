@@ -13,10 +13,4 @@ Description: "FRObservationRenewalDocument est utilisée pour représenter le re
 * valueCodeableConcept 1..1 MS
 * value[x] only CodeableConcept
 
-// Participation d’un auteur
-* performer MS
-* performer.extension contains FRActorExtension named author 0..*
-* performer.extension[author] ^short = "Participation d'un auteur au document"
-* performer.extension[author].extension[type].valueCode = #AUT
-
 * insert FRRuleSetSimpleObservation

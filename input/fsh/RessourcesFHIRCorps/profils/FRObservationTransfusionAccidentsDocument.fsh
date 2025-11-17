@@ -14,10 +14,4 @@ Description: "FRObservationTransfusionAccidentsDocument est un profil utilisé p
 * valueString 1..1 MS
 * valueString ^short = "Description sous forme textuelle de l'accident transfusionnel"
 
-// Auteur
-* performer MS
-* performer.extension contains FRActorExtension named author 0..1
-* performer.extension[author] ^short = "Participation d'un auteur au document"
-* performer.extension[author].extension[type].valueCode = #AUT
-
 * insert FRRuleSetSimpleObservation
