@@ -12,15 +12,4 @@ Description: "FRObservationMedicalSummaryDocument permet de fournir, sous forme 
 * valueString 1..1 MS
   * ^short = "Synthèse médicale du séjour (sous forme textuelle)"
 
-* performer MS
-* performer.extension contains FRActorExtension named author 0..1
-* performer.extension[author] ^short = "Auteur de l’observation"
-* performer.extension[author].extension[type].valueCode = #AUT
-* performer.extension[author].extension[actor].valueReference only Reference(
-    FRPractitionerRoleDocument
-    or FROrganizationDocument
-    or FRPractitionerRoleDocument
-    or FRPatientINSDocument
-    )
-
 * insert FRRuleSetSimpleObservation
