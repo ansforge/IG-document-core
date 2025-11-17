@@ -120,9 +120,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
     renouvellement 0..1 and
     ald 0..1 and
     accidentTravail 0..1 and
-    prevention 0..1 and
-    nonRemboursable 0..1 and
-    horsAMM 0..1
+    prevention 0..1
 
 * reasonReference[ald] only Reference(FRConditionDocument)
 * reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)."
@@ -139,3 +137,6 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 
 * extension contains FRMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
 * extension[horsAMM] ^short = "Hors Autorisation de mise sur le marché"
+
+* extension contains FRNotCoveredExtension named notCovered 0..1
+* extension[notCovered] ^short = "Traitement prescrit n'est remboursable / remboursable"
