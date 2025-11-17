@@ -3,8 +3,7 @@ Profile: FRMedicationRequestDocument
 Parent: MedicationRequest
 Id: fr-medication-request-document
 Title: "MedicationRequest - FR Medication Request Document"
-Description: "
- - FRMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
+Description: "FRMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration."
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * intent = #order
@@ -56,19 +55,16 @@ Description: "
 * medication[x] only CodeableConcept or Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
   * ^short = "Produit de santé"
 
-// --- Auteur ---
-* requester MS
-* requester.extension contains FRActorExtension named author 0..1 
-* requester.extension[author] ^short = "Auteur du document Prescription"
-* requester.extension[author].extension[type].valueCode = #AUT
-* requester.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
-
 // --- Prescripteur ---
-* performer MS
-* performer.extension contains FRActorExtension named prescripteur 0..1
-* performer.extension[prescripteur] ^short = "Prescripteur"
-* performer.extension[prescripteur].extension[type].valueCode = #PRF
-* performer.extension[prescripteur].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
+* requester MS
+* requester ^short = "Prescripteur"
+* requester only Reference(FRPractitionerRoleDocument)
+
+// Auteur du document Prescription
+* extension contains FrActorExtension named author 0..1 MS
+* extension[author] ^short = "Auteur du document Prescription"
+* extension[author].extension[type].valueCode = #AUT
+* extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * authoredOn MS
 // Motif du traitement
