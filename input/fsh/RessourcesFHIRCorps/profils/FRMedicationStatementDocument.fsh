@@ -30,7 +30,7 @@ Description: "
   // Dosages conditionnels
   * asNeeded[x] MS 
   * route MS
-  * route from FrValueSetEDQM
+  * route from FRValueSetEDQMDocument
   * route ^short = "Voie d'administration"
   * route ^binding.description = "EDQM - Standard terms / classe ROA (0.4.0.127.0.16.1.1.2.1)" 
   * site MS

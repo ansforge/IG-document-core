@@ -9,7 +9,7 @@ Description: "FRDiagnosticReportDocument est un profil permettant de regrouper l
 * identifier ^short = "Identifiant"
 * code MS
   * ^short = "Type de résultat. Codee n LOINC."
-* code from FrValueSetResultType (required) // VS à remplacer par le JDV ANS à créer par Alain
+* code from FRValueSetResultTypeDocument (required) // VS à remplacer par le JDV ANS à créer par Alain
 * status MS
 * status ^short = "Statut"
 * status = #final
