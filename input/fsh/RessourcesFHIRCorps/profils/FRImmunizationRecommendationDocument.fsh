@@ -23,17 +23,16 @@ Description: "FRImmunizationRecommendationDocument permet de décrire une vaccin
   * vaccineCode.coding ^slicing.description = "Slice CIS et autres codifications"
 
   * vaccineCode MS
-  * vaccineCode only FRCodeableConceptDocument
   * vaccineCode ^short = "Vaccin. Code du produit de santé"
   // Slice CIS obligatoire
   * vaccineCode.coding contains cis 1..1
   * vaccineCode.coding[cis].system 1..1
-  * vaccineCode.coding[cis].system = "urn:oid:1.2.250.1.213.2.3.1"
+  * vaccineCode.coding[cis].system = "https://smt.esante.gouv.fr/terminologie-bdpm"
 
   // Slice (autres codifications)
   * vaccineCode.coding contains translation 0..*
+  * vaccineCode.coding[translation] from FRValueSetMedicationTranslationDocument (required)
   * vaccineCode.coding[translation].system 1..1
-  * vaccineCode.coding[translation].system from FrValueSetVaccineTranslation (required)
 
  // Référence vers le profil FRVaccinationDocument
   * supportingImmunization only Reference(FRImmunizationDocument)
