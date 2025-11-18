@@ -6,14 +6,14 @@ Description: "FRObservationVitalSignsPanelDocument permet de regrouper des infor
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
-* identifier ^short = "Identifiant de l'entrée"
+* identifier ^short = "Identifiant"
 * code MS 
 * status MS
-* status ^short = "Statut de l’entrée"
+* status ^short = "Statut"
 * status = #final
 * effective[x] only dateTime
 * effectiveDateTime MS
-  * ^short = "Date de l'entrée"
+  * ^short = "Date"
 * performer MS
   * ^short = "Auteur"
 * performer 0..1 MS

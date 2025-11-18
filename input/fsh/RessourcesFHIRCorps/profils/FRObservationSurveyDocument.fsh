@@ -13,8 +13,12 @@ Description: "FRObservationSurveyDocument permet de rapporter un résultat (scor
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.code = #survey
 
+* status ^short = "Statut métier de l’évaluation"
+* status.extension contains FRStatusReasonExtension   
+    named statusReason 0..1
+* status.extension[statusReason] ^short = "Motif du statut métier"
+
 * code MS
-* code only FRDocumentCodeableConceptDocument
 * code ^short = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
 Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOINC et décrire le type d'évaluation en texte libre."
 
@@ -84,10 +88,6 @@ Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOI
 
 * hasMember MS
 * hasMember ^short = "Référence interne"
-
-* derivedFrom 0..1 MS
-* derivedFrom ^short = "Statut de l’évaluation"
-* derivedFrom only Reference(FRObservationStatusDocument)
 
 // Commentaires
 * note ^short = "Commentaires (Annotations)"

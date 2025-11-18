@@ -7,7 +7,7 @@ Description: "FRObservationWorkRelatedAccidentDocument permet d'indiquer si l'é
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
-* code ^short = "Catégorie de l'entrée"
+* code ^short = "Type de l'observation"
 * code MS
 * code = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-180 "En rapport avec un accident du travail ou une maladie professionnelle"
 * value[x] only boolean
@@ -17,5 +17,4 @@ Résultat de l'observation : pourra prendre l'une des deux valeurs suivantes :
 value='true' : le traitement est prescrit dans le cadre d'un accident du travail
 value='false' : le traitement n'est pas prescrit dans le cadre d'un accident du travail
 """
-
 * insert FRRuleSetSimpleObservation

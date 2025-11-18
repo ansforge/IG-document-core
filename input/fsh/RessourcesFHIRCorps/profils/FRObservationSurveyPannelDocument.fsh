@@ -8,14 +8,14 @@ Description: "FRObservationSurveyPannelDocument permet de rassembler des observa
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 * identifier 1..* MS
-* identifier ^short = "Identifiant de l'entrée"
+* identifier ^short = "Identifiant"
 
 * status MS
 * status = #final
-* status ^short = "Statut de l'entrée"
+* status ^short = "Statut de l'ensemble des évaluations"
 
 * effectiveDateTime 1..1 MS
-* effectiveDateTime ^short = "Date de l'entrée"
+* effectiveDateTime ^short = "Date"
 
 * hasMember 1..* MS
 * hasMember only Reference(FRObservationSurveyDocument)

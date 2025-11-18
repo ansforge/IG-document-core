@@ -61,7 +61,6 @@ La date et heure de prélèvement doit être renseignée si elle est connue. En 
 
 * collection.bodySite MS
 * collection.bodySite ^short = "Localisation anatomique"
-* collection.bodySite only CodeableConcept
 * collection.bodySite.coding 1..1
 * collection.bodySite.coding.system = "http://snomed.info/sct"
 

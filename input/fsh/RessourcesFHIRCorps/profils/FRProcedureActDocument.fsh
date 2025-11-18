@@ -46,13 +46,11 @@ jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes c
     TargetSiteCode 0..* 
 
 * bodySite[ApproachSiteCode] ^short = "Voie d’abord"
-* bodySite[ApproachSiteCode] only CodeableConcept
 * bodySite[ApproachSiteCode].coding 1..1
 * bodySite[ApproachSiteCode].coding.system = "http://snomed.info/sct"
 //* bodySite[ApproachSiteCode].coding[0].code = #XYZ (remplacez par le code réel SNOMED pour voie d’abord)
 
 * bodySite[TargetSiteCode] ^short = "Localisation anatomique"
-* bodySite[TargetSiteCode] only CodeableConcept
 * bodySite[TargetSiteCode].coding 1..1
 * bodySite[TargetSiteCode].coding.system = "http://snomed.info/sct" 
 

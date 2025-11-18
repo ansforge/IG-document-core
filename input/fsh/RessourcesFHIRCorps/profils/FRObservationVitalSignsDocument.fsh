@@ -8,7 +8,7 @@ Description: "
 
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 * identifier 1..1  MS
-* identifier ^short = "Identifiant de l'entrée"
+* identifier ^short = "Identifiant"
 * code MS 
 * code ^short = "Signe vital observé"
 * code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-signe-vital-cisis
