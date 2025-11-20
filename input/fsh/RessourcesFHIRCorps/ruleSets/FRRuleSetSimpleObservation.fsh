@@ -50,5 +50,5 @@ RuleSet: FRRuleSetSimpleObservation
 * note MS
 * note ^short = "Commentaire"
 
-* encounter only Reference (FREncounterDocument or FREncounterEventDocument)
+* encounter only Reference (FREncounterDocument)
 * encounter ^short = "Rencontre de soins durant laquelle cette observation a été effectuée"
