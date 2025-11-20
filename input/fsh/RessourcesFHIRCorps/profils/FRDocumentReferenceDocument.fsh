@@ -33,9 +33,5 @@ Description: "FRDocumentReferenceDocument restreint pour les documents PDF."
 * content.attachment.data ^short = "Representation en B64"
 * content.attachment.url ^short = "URI"
 
-* context.encounter MS
-* context.encounter ^short = "Contexte clinique du document" 
-* context.encounter only Reference(FREncounterEventDocument)
-
 * context.related MS
 * context.related ^short = "Ressources ou identifiants liés" 
