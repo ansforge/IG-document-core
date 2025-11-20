@@ -53,10 +53,6 @@ Description: "FRTaskPatientTransportDocument permet de décrire le transport d'u
 * executionPeriod.start 1..1
 * executionPeriod.end 1..1
 
-// Événement
-//* encounter 1..1
-* encounter only Reference(FREncounterEventDocument)
-
 // transporteur
 * owner MS
 * owner ^short = "Transporteur"
