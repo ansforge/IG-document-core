@@ -18,8 +18,6 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 * code MS
 * code ^short = "Code d'identification de l'analyse ou de l'observation"
 * code.text ^short = "Référence à l'expression verbale dans la partie visualisable du compte-rendu"
-
-* code only FRDocumentCodeableConceptDocument
 * code.coding ^short = "Code d'identification d'attente national ou code de portée locale"
 
 // Date et heure du résultat
