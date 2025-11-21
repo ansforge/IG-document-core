@@ -14,7 +14,7 @@ Si aucun code approprié n’est disponible, l’acte peut être décrit en text
 // CCAM
 * include codes from system https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-ccam
 
-// NCIT (Intervention par défaut)
+// NCIT (Intervention)
 * http://ncit.nci.nih.gov#C25218
 
 // CISIS absent/unknown
