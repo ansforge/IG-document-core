@@ -117,10 +117,10 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 * reasonReference ^slicing.rules = #open
 
 * reasonReference contains
-    renouvellement 0..1 and
     ald 0..1 and
     accidentTravail 0..1 and
-    prevention 0..1
+    prevention 0..1 and
+    nonRemboursable 0..1
 
 * reasonReference[ald] only Reference(FRConditionDocument)
 * reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)."
