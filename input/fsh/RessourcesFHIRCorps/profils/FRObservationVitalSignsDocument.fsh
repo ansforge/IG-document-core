@@ -36,6 +36,13 @@ Description: "
     or FRPractitionerRoleDocument
     or FRPatientINSDocument
     )
+    
+/* * component.value[x] only Quantity
+* component.valueQuantity 1..1 MS
+* component.valueQuantity.unit from FRValueSetUCUMDocument (required)
+  * ^short = "Unité de la mesure" */
+
 * component.value[x] only Quantity
 * component.valueQuantity 1..1 MS
-  * ^short = "Observation effectuée. Terminologie utilisée : UCUM (2.16.840.1.113883.6.8)."
+* component.valueQuantity.system = "http://unitsofmeasure.org" 
+  * ^short = "Valeur quantitative du signe vital"

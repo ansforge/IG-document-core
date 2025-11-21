@@ -18,7 +18,7 @@ L'un des identifiants est visible sur l'échantillon matériel (par exemple en c
 
 // à discuter avec Nicolas RISS si on doit mettre le JDV en required extensible ou bien preferred
 // Si specimen provenant du corps du patient :
-* type from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis (preferred)
+* type from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis (extensible)
 
 * status MS
 * status ^short = "Statut du specimen"

@@ -18,13 +18,14 @@ Description: "FRProcedureActDocument est un profil utilisé pour décrire un act
 * status ^short = "Statut de l'acte"
 
 * code 1..1 MS
-* code ^short = "Code d'acte :
-Aussi utilisé pour indiquer qu'il n'y a pas d'acte, ou qu'on ne sait pas s'il y en a.
-Terminologie CCAM (1.2.250.1.215.300.1) si possible.
-Si l'acte n'est pas trouvé dans la terminologie CCAM, 
-utiliser le code='C25218', displayName='Intervention', codeSystem='2.16.840.1.113883.3.26.1.1', codeSystemName='NCIT' et décrire l'acte sous forme de texte libre dans la partie narrative avec une référence vers l'entrée correspondante.
-ou
-jdv-absent-or-unknown-procedure-cisis (1.2.250.1.213.1.1.5.665) pour les actes chirurgicaux"
+* code ^short = "Code d'acte"
+* code from FRValueSetProcedureCodeDocument (extensible)
+* code ^comment = """
+Aussi utilisé pour indiquer qu'il n'y a pas d'acte ou qu'on ne sait pas s'il y en a.
+Si l'acte n'est pas trouvé dans CCAM, utiliser le code NCIT 'C25218' (Intervention)
+et décrire l'acte en texte libre dans la partie narrative.
+Pour les actes chirurgicaux inconnus, utiliser jdv-absent-or-unknown-procedure-cisis.
+"""
 
 * subject MS
 * subject only Reference(FRPatientINSDocument or FRPatientDocument)

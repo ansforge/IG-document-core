@@ -19,8 +19,13 @@ Description: "FRObservationSurveyDocument permet de rapporter un résultat (scor
 * status.extension[statusReason] ^short = "Motif du statut métier"
 
 * code MS
-* code ^short = "Type d'évaluation : LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre.
-Si non trouvé : utiliser le code '54522-8' (Statut fonctionnel) du système LOINC et décrire le type d'évaluation en texte libre."
+* code from FRValueSetEvaluationTypeDocument (extensible)
+* code ^short = "Type d'évaluation"
+* code ^comment = """
+Si aucun code approprié n’est trouvé dans les systèmes proposés,
+utiliser le code LOINC '54522-8' (Statut fonctionnel),
+et préciser le type d’évaluation exact dans un texte libre.
+"""
 
 * value[x] 1..1 MS
 * value[x] ^short = "Valeur de l'évaluation"
