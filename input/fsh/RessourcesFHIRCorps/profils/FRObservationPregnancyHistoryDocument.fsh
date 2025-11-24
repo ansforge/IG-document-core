@@ -7,7 +7,7 @@ Description: "FRObservationPregnancyHistoryDocument permet de regrouper les obse
 * identifier 1..1 MS 
   * ^short = "Identifiant de l'observation"
 * code 1..1 MS
-* code.coding.system = "http://snomed.info/sct/"
+* code.coding.system = $SCT
 * code.coding.code = #118185001
 * code.coding.display = "constatation à propos de la grossesse"
 * status 1..1

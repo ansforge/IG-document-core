@@ -8,7 +8,7 @@ Description: "FRObservationPainScoreDocument permet d'enregistrer l'évaluation 
 * identifier ^short = "Identifiant de l'observation"
 
 * code MS
-* code.coding.system = "https://loinc.org/"
+* code.coding.system = $LNC
 * code.coding.code = #38208-5
 * code.coding.display = "Sévérité de la douleur"
 * status MS

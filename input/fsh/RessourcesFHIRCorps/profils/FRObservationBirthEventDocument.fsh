@@ -6,7 +6,7 @@ Description: "FRObservationBirthEventDocument est un profil qui permet de rassem
 
 * code 1..1 MS 
   * ^short = "Code de l'observation"
-* code.coding.system = "http://snomed.info/sct/"
+* code.coding.system = "http://snomed.info/sct"
 * code.coding.code = #118215003
 * code.coding.display = "observation sur l'accouchement"
 * status 1..1
