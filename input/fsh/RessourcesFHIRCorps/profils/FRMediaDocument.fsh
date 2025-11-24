@@ -7,12 +7,11 @@ Description: "FRMediaDocument permet de positionner une image de type gif, jpeg,
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
+* content MS
 // Langue du contenu
-* content.language 0..1
+* content.language MS
 * content.language ^short = "Langue de l'image (RFC 5646)"
-
 // Contenu image encodé en Base64
-* content 1..1
 * content.contentType MS
 * content.contentType ^short = "Type MIME du média"
 * content.data MS
@@ -45,18 +44,18 @@ Description: "FRMediaDocument permet de positionner une image de type gif, jpeg,
 * operator.extension[participant].extension[type].valueCode = #PART
 
 // EntryRelationship
-* basedOn 0..* 
+* basedOn MS
 * basedOn only Reference(ServiceRequest or CarePlan)
 * basedOn ^short = "Acte ou plan de soins à l'origine de l'image"
 
 // Reference
-* partOf 0..* 
+* partOf MS
 * partOf only Reference(Observation or DiagnosticReport or Procedure)
 * partOf ^short = "Lien avec une ressource clinique"
 
 /* Précondition
 Proposition 1 : utiliser reasonCode */ 
-* reasonCode 0..*
+* reasonCode MS
 * reasonCode ^short = "Contexte ou justification de l'image (précondition)"
 
 // Proposition 2 : utiliser note.text si besoin d'un texte libre

@@ -14,7 +14,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
   * ^short = "Statut du compte-rendu d'imagerie"
 
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
-* basedOn  0..* MS
+* basedOn MS
 * basedOn ^slicing.discriminator.type = #pattern  
 * basedOn ^slicing.discriminator.path = "$this"
 * basedOn ^slicing.rules = #open
@@ -44,7 +44,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * resultsInterpreter.extension[author].extension[type].valueCode = #AUT
 * resultsInterpreter.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
-* result 0..* MS
+* result MS
 * result only Reference(Observation)
 * result ^short = "Résultats de l'acte d'imagerie"
 

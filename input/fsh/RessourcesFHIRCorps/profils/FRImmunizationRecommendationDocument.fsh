@@ -37,7 +37,7 @@ Description: "FRImmunizationRecommendationDocument permet de décrire une vaccin
  // Référence vers le profil FRVaccinationDocument
   * supportingImmunization only Reference(FRImmunizationDocument)
   // Rang de la vaccination
-  * seriesDosesPositiveInt 0..1 MS
+  * seriesDosesPositiveInt MS
   // ou utilisation de l'extesion FHIR : Note  http://hl7.org/fhir/StructureDefinition/note?
   * description MS
     * ^short = "Commentaire"

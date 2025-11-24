@@ -81,7 +81,7 @@ Description: "FRImmunizationDocument permet de décrire l'administration d'un va
 // Type de vaccination
 * protocolApplied.series from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
 // Rang de la vaccination 
-* protocolApplied.doseNumberPositiveInt 1..1
+* protocolApplied.doseNumberPositiveInt MS
 * protocolApplied.doseNumberPositiveInt ^short = "Rang de la vaccination"
 
 * reasonReference MS

@@ -20,7 +20,7 @@ Description: "FRAdverseEventDocument permet de décrire un effet indésirable pr
 * suspectEntity 1..* MS
 
 * suspectEntity ^short = "Agent soupçonné d’être à l’origine de l’événement indésirable"
-* suspectEntity.instance 1..1 MS
+* suspectEntity.instance MS
 * suspectEntity.instance only Reference(FRMedicationAdministrationDocument)
 * suspectEntity.instance ^short = "Médicament, substance incriminée, posologie"
 

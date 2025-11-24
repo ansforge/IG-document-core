@@ -15,7 +15,7 @@ Description: "
 * partOf only Reference(FRMedicationAdministrationDocument)
 * category MS
   * ^short = "Acte ou situation"
-* status 1..1 MS
+* status MS
   * ^short = "Statut"
 * status = #completed
 * effective[x] only Period

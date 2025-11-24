@@ -4,13 +4,13 @@ Id: fr-diagnostic-report-bio-chapter-document
 Title: "DiagnosticReport - FR Diagnostic Report BIO chapter Document"
 Description: "FRDiagnosticReportBIOChapterDocument utilisé pour représenter un CR de biologie"
 
-* code 1..1 MS 
+* code MS 
 * code ^short = "Type de document"
 * category 1..1 MS
 * category ^short = "Codes des chapitres de CR BIO"
 * effective[x] 1..1 MS
 * effective[x] ^short = "Date et heure de création du document"
-* status 1..1 MS
+* status MS
 * status ^short = "Statut du rapport de BIO (final, partial ...)"
 
 * performer 1..* MS

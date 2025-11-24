@@ -34,7 +34,7 @@ Si pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/Value
 * onsetDateTime
 * onsetDateTime ^short = "Date de début du problème"
 
-* abatement[x] 0..1 MS
+* abatement[x] MS
 * abatementDateTime MS
 * abatementDateTime ^short = "Date de fin du problème (si applicable)"
 

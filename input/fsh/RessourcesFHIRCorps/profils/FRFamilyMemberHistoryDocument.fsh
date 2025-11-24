@@ -14,7 +14,7 @@ Description: "FRFamilyMemberHistoryDocument est un profil utilisé pour apporter
 * relationship ^short = "Lien avec un autre sujet"
 * relationship from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis
 
-* patient 1..1 MS
+* patient MS
 * patient ^short = "Patient concerné"
 * patient only Reference(FRPatientINSDocument or FRPatientDocument)
 

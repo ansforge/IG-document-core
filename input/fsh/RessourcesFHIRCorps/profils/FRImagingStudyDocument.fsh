@@ -18,7 +18,7 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 * identifier[studyInstanceUid] only FRStudyInstanceUidIdentifierDocument
 
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
-* basedOn  0..* MS
+* basedOn MS
 * basedOn ^slicing.discriminator.type = #pattern  
 * basedOn ^slicing.discriminator.path = "$this"
 * basedOn ^slicing.rules = #open
