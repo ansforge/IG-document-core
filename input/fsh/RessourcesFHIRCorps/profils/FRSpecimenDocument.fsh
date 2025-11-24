@@ -64,7 +64,7 @@ La date et heure de prélèvement doit être renseignée si elle est connue. En 
 * collection.bodySite.coding 1..1
 * collection.bodySite.coding.system = "http://snomed.info/sct"
 
-* container 0..* MS
+* container MS
 * container ^short = "Dispositif utilisé"
 * container.type 1..1 MS
 * container.type ^short = "Code du dispositif"

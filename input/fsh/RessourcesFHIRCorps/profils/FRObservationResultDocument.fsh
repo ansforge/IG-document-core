@@ -7,7 +7,7 @@ Description: "FRObservationResultDocument permet d'indiquer le résultat observ�
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
 // Demande d'examen associée à l'observation
-* basedOn  0..* MS
+* basedOn MS
 * basedOn ^slicing.discriminator.type = #pattern  
 * basedOn ^slicing.discriminator.path = "$this"
 * basedOn ^slicing.rules = #open

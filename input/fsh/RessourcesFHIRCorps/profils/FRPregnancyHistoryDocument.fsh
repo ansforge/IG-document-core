@@ -9,7 +9,7 @@ Description: "FRPregnancyHistoryDocument  est une liste contenant soit un évén
   * ^short = "Identifiant"
 * code 1..1 MS
 * code = $SCT#118185001 "constatation à propos de la grossesse"
-* status 1..1 MS
+* status MS
 * status = #current
 * date 1..1 MS 
   * ^short = "Période de la grossesse"
