@@ -17,7 +17,7 @@ Description: "FRObservationRadiationExposureDocument permet d'enregistrer les in
 * identifier[radiationUID] ^short = "Radiation Exposures UID"
 
 // référence à la demande d'examen d'imagerie contenant l'Accession Number comme identifiant
-* basedOn  0..* MS
+* basedOn MS
 * basedOn ^slicing.discriminator.type = #pattern  
 * basedOn ^slicing.discriminator.path = "$this"
 * basedOn ^slicing.rules = #open
@@ -57,7 +57,7 @@ Description: "FRObservationRadiationExposureDocument permet d'enregistrer les in
 * component.valueQuantity from http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units (required)
 
 // Device utilisé pour l’irradiation
-* device 0..1 MS
+* device MS
 * device only Reference(Device)
 * device ^short = "Modalité d’irradiation utilisée pour l’exposition aux rayonnements"
 

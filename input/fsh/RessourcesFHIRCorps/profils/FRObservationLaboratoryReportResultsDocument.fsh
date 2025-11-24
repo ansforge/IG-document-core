@@ -7,7 +7,7 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical() 
 
-* status 1..1 MS
+* status MS
 * status ^short = "Niveau de complétude :
 - 'final' si le résultat est présent
 - 'cancelled' dans le cas où l'élément d'examen n’a pu être et ne sera pas réalisé"
@@ -21,7 +21,7 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 * code.coding ^short = "Code d'identification d'attente national ou code de portée locale"
 
 // Date et heure du résultat
-* effective[x] 0..1 MS
+* effective[x] MS
 * effective[x] only dateTime or Period
 * effective[x] ^short = "Date et heure du résultat"
 * effectivePeriod.start ^short = "Début de la période"
@@ -57,7 +57,6 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 
 * specimen MS
 * specimen ^short = "Prélèvement"
-* specimen 0..1
 * specimen only Reference(FRSpecimenDocument)
 
 * performer MS
@@ -108,7 +107,7 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 //------------------------------------
 // Commentaire (annotation)
 //------------------------------------
-* note 0..* MS
+* note MS
 * note ^short = "Commentaires associés à l'observation"
 
 //------------------------------------
@@ -125,7 +124,7 @@ Description: "FRObservationLaboratoryReportResultsDocument décrit un résultat 
 * hasMember only Reference(FRObservationLaboratoryReportResultsDocument)
 * hasMember ^short = "Lien vers batterie d’examens ou résultats d’examens cliniquement pertinents ou isolat microbiologique"
 
-* value[x] 0..1 MS
+* value[x] MS
 * value[x] ^short = "Valeur du résultat :
 Le type de valeur (value[x]) est choisi dynamiquement. 
 Les autres attributs qui qualifient cette valeur (comme par exemple l'unité : unit) dépendent du type de donnée choisi. 

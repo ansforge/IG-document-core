@@ -6,12 +6,11 @@ Description: "FRObservationPregnancyHistoryDocument permet de regrouper les obse
 
 * identifier 1..1 MS 
   * ^short = "Identifiant de l'observation"
-* code 1..1 MS
+* code MS
 * code.coding.system = $SCT
 * code.coding.code = #118185001
 * code.coding.display = "constatation à propos de la grossesse"
-* status 1..1
-  * ^short = "Statut de l'observation"
+* status ^short = "Statut de l'observation"
 * status = #final
 * effective[x] 1..1 MS
 * effective[x] only dateTime
