@@ -8,10 +8,10 @@ L’examen est composé d'une ou de plusieurs séries d’images médicales."
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
 
-* ^slicing.discriminator.type = #value
-* ^slicing.discriminator.path = "system"
-* ^slicing.rules = #open
-* ^slicing.ordered = false
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
 * identifier 1..* MS
 * identifier ^short = "Study Instance UUID"
 * identifier contains studyInstanceUid 1..*
