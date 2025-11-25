@@ -15,6 +15,7 @@ Cette page contient la liste des profils FHIR définis dans le guide **ANS IG Do
         OR Title LIKE 'Device%'
         OR Title LIKE 'Procedure%'
         OR Title LIKE 'Medication%'
+        OR Title LIKE 'MedicationStatement%'
         OR Title LIKE 'MedicationAdministration%'
         OR Title LIKE 'MedicationRequest%'
         OR Title LIKE 'AllergyIntolerance%'
@@ -31,6 +32,12 @@ Cette page contient la liste des profils FHIR définis dans le guide **ANS IG Do
         OR Title LIKE 'DeviceRequest%'
         OR Title LIKE 'DeviceUseStatement%'
         OR Title LIKE 'DiagnosticReport%'
+        OR Title LIKE 'List%'
+        OR Title LIKE 'Task%'
+        OR Title LIKE 'ImagingStudy%'
+        OR Title LIKE 'Immunization%'
+        OR Title LIKE 'ImmunizationRecommendation%'
+        OR Title LIKE 'Media%'
       )
   ",
   "class": "lines",
