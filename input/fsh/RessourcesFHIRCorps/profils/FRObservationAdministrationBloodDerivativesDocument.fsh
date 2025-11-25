@@ -11,9 +11,4 @@ Description: "FRObservationAdministrationBloodDerivativesDocument est un profil 
 * valueBoolean 1..1 MS
 * valueBoolean ^short = "Administration de dérivés du sang"
 
-// Auteur
-* performer.extension[author].extension[actor] ^short = "Dans code[functionCode] de FRPractitionerRoleDocument on trouve le rôle fonctionnel de l'auteur :
-Si l'auteur est le patient/usager : ne pas utiliser l'élément code[functionCode]
-Si l'auteur n'est pas le patient :Valeur issue du https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS."
-
 * insert FRRuleSetSimpleObservation

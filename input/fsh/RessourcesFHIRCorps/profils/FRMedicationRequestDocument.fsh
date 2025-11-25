@@ -34,7 +34,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
   // Dosages conditionnels
   * asNeeded[x] MS 
   * route MS
-  * route from FrValueSetEDQM
+  * route from FRValueSetEDQM
   * route ^short = "Voie d'administration"
   * site MS
   * site ^short = "Région anatomique d'administration"
@@ -61,7 +61,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 * requester only Reference(FRPractitionerRoleDocument)
 
 // Auteur du document Prescription
-* extension contains FrActorExtension named author 0..1 MS
+* extension contains FRActorExtension named author 0..1 MS
 * extension[author] ^short = "Auteur du document Prescription"
 * extension[author].extension[type].valueCode = #AUT
 * extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
@@ -119,8 +119,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 * reasonReference contains
     ald 0..1 and
     accidentTravail 0..1 and
-    prevention 0..1 and
-    nonRemboursable 0..1
+    prevention 0..1
 
 * reasonReference[ald] only Reference(FRConditionDocument)
 * reasonReference[ald] ^short = "En rapport avec une Affection Longue Durée (ALD)."
@@ -131,9 +130,6 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 
 * reasonReference[prevention] only Reference(FRObservationRelatedToPreventionDocument)
 * reasonReference[prevention] ^short = "En rapport avec la prévention"
-
-* reasonReference[nonRemboursable] only Reference(FRObservationNotCoveredDocument)
-* reasonReference[nonRemboursable] ^short = "Non remboursable"
 
 * extension contains FRMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
 * extension[horsAMM] ^short = "Hors Autorisation de mise sur le marché"

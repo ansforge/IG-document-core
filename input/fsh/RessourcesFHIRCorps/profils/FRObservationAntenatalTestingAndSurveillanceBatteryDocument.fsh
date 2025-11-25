@@ -1,6 +1,6 @@
 Profile: FRObservationAntenatalTestingAndSurveillanceBatteryDocument
 Parent: Observation
-Id: fr-observation-antenatal-testing-and-surveillance-battery-document
+Id: fr-observation-antenatal-testing-surveillance-battery-document
 Title: "Observation - FR Observation Antenatal Testing And Surveillance Battery Document"
 Description: "FRObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux."
 
