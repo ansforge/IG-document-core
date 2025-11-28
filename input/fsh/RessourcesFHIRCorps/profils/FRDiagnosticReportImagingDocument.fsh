@@ -68,12 +68,6 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * extension contains FRImagingProcedureExtension named procedure 0..* MS
 * extension[procedure] ^short = "Technique d'imagerie"
 
-// si conclusion codée et qu'on veut faire référence à (Observation or FRConditionDocument  or FRDocumentReferenceDocument)
-// sinon si la conclusion est codée de type CodeableConcept utiliser diagnosticReport.conclusionCode 
-// sinon utiliser diagnosticReport.conclusion si la conclusion non codée
-/* * extension contains FRConclusionExtension named impression 0..* MS
-* extension[impression] ^short = "Conclusions sur l'examen d'imagerie" */
-
 * extension contains FREducationPatientExtension named informationDuPatient 0..* MS
 * extension[informationDuPatient] ^short = "Informations du patient"
 
@@ -99,13 +93,6 @@ Description: "Imaging procedure used for the imaging acquisition"
 Context: DiagnosticReport
 * value[x] only Reference(FRProcedureImagingDocument)
 
-/* Extension: FRConclusionExtension
-Title: "FR Conclusion Extension"
-Id: fr-conclusion-extension
-Description: "Conclusions sur l'examen d'imagerie"
-Context: DiagnosticReport
-* value[x] only Reference(Observation or FRConditionDocument  or FRDocumentReferenceDocument)
- */
 Extension: FREducationPatientExtension
 Title: "FR Education Patient Extension"
 Id: fr-education-patient-extension

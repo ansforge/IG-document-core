@@ -51,16 +51,5 @@ Description: "FRMedicationDocument permet de décrire un médicament ou un vacci
   * itemCodeableConcept MS
   * itemCodeableConcept from https://smt.esante.gouv.fr/terminologie-sms?vs
   * itemCodeableConcept ^short = "Code SMS de la substance active"
-  * itemCodeableConcept.extension contains FRSubstanceNameExtension named NomSubstance 1..1 MS
-  // * itemCodeableConcept.text MS
-  //  * * itemCodeableConcept.text ^short = "Nom de la substance" ==> Supprimer l'extension FrSubstanceName ?
-
-Extension: FRSubstanceNameExtension
-Id: fr-substance-name-extension
-Title: "FR Substance Name Extension"
-Description: "Nom de la substance active, à utiliser en complément d’un codage."
-* ^status = #active
-* ^context.type = #element
-* ^context.expression = "Medication.ingredient.item"
-* value[x] only string
-* valueString 1..1
+  * itemCodeableConcept.text MS
+  * itemCodeableConcept.text ^short = "Nom de la substance"
