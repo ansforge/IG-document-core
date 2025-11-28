@@ -35,6 +35,9 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * performed[x] MS
 * performed[x] ^short = "Date de l'acte"
 
+* reasonReference ^short = "La justification que la procédure a été effectuée"
+* reasonReference only Reference(FRDiagnosticReportImagingDocument)
+
 * bodySite MS
 * bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
 * bodySite ^short = "Localisation anatomique"
