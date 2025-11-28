@@ -19,7 +19,6 @@ Description: "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire u
 * onsetPeriod MS
 * onsetPeriod ^short = "Dates de début et de fin"
 * onsetPeriod.start 1..1
-* onsetPeriod.end 0..1
 
 * criticality MS
 * criticality ^short = "Criticité"
