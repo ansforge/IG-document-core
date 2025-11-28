@@ -71,6 +71,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * extension contains FREducationPatientExtension named informationDuPatient 0..* MS
 * extension[informationDuPatient] ^short = "Informations du patient"
 
+// Création des extensions utilisées dans le profil FRDiagnosticReportImagingDocument en suivant la même structure que HL7 Europe DiagnosticReportEuImaging
 Extension: FRComparisonStudiesExtension
 Title: "FR Comparison Studies Extension"
 Id: fr-comparison-studies-extension
