@@ -128,7 +128,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
 * reasonReference[accidentTravail] only Reference(FRObservationWorkRelatedAccidentDocument)
 * reasonReference[accidentTravail] ^short = "En rapport avec accident travail"
 
-* reasonReference[prevention] only Reference(FRObservationRelatedToPreventionDocument)
+* reasonReference[prevention] only Reference(FRConditionDocument)
 * reasonReference[prevention] ^short = "En rapport avec la prévention"
 
 * extension contains FRMedicationRequestOutOfNomenclatureExtension named horsAMM 1..1
