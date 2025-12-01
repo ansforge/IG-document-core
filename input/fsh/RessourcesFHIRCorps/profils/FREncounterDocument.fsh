@@ -57,3 +57,11 @@ Sinon : l'exécutant n'est pas obligatoire mais peut être renseigné"
 * location 0..1 MS
 * location ^short = "Lieu d'exécution"
 * location.location only Reference(FRLocationDocument)
+
+* hospitalization MS
+* hospitalization ^short = "Informations sur l'hospitalisation associée à la rencontre"
+* hospitalization.admitSource ^short = "Modalité d'entrée du patient lors de la rencontre"
+* hospitalization.admitSource from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis (required)
+* hospitalization.dischargeDisposition ^short = "Modalité de sortie du patient lors de la rencontre: 
+Valeur provenant du jdv-modalite-sortie-cisis ou autre JDV spécifique à un volet"
+* hospitalization.dischargeDisposition from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-sortie-cisis (preferred)
