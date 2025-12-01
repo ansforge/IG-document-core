@@ -41,7 +41,7 @@ Sous la forme UID (UUID ou OID)."
     EnRapportAvecAccidentTravail 0..1 and
     EnRapportAvecLaPrevention 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
+* reasonReference[EnRapportAvecALD] only Reference(FRConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "Observation indiquant que l'utilisation est en rapport avec une ALD"
 * reasonReference[EnRapportAvecALD] MS
 
@@ -49,7 +49,7 @@ Sous la forme UID (UUID ou OID)."
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "Observation indiquant que l'utilisation est en rapport avec un accident de travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FRObservationRelatedToPreventionDocument)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FRConditionDocument)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "Observation indiquant que l'utilisation est liée à la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 

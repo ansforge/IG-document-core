@@ -52,7 +52,7 @@ Description: "FRDeviceRequestDocument représente une demande de dispositif méd
     EnRapportAvecAccidentTravail 0..1 and
     EnRapportAvecLaPrevention 0..1
 
-* reasonReference[EnRapportAvecALD] only Reference(FRObservationRelatedToLongTermConditionDocument)
+* reasonReference[EnRapportAvecALD] only Reference(FRConditionDocument)
 * reasonReference[EnRapportAvecALD] ^short = "En rapport avec une Affection Longue Durée (ALD)"
 * reasonReference[EnRapportAvecALD]  MS
 
@@ -60,7 +60,7 @@ Description: "FRDeviceRequestDocument représente une demande de dispositif méd
 * reasonReference[EnRapportAvecAccidentTravail] ^short = "En rapport avec accident travail"
 * reasonReference[EnRapportAvecAccidentTravail] MS
 
-* reasonReference[EnRapportAvecLaPrevention] only Reference(FRObservationRelatedToPreventionDocument)
+* reasonReference[EnRapportAvecLaPrevention] only Reference(FRConditionDocument)
 * reasonReference[EnRapportAvecLaPrevention] ^short = "En rapport avec la prévention"
 * reasonReference[EnRapportAvecLaPrevention] MS
 
