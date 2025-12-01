@@ -1,6 +1,4 @@
 // Une étude devra être faite dans un second temps pour aligner ces profils à ceux d'InteropSanté
-
-
 Profile: FRMedicationsCombinaisonDocument
 Parent: Medication
 Id: fr-medications-combinaison-document
