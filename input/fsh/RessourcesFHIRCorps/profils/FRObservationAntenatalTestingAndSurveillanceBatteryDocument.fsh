@@ -9,7 +9,7 @@ Description: "FRObservationAntenatalTestingAndSurveillanceBattery permet de list
 
 * code MS
 * code ^short = "Type de l'observation"
-// Code LOINC incorrect dans IHE PCC, un change proposal a été créé pour IHE qui date du 29/20/2021 pour coriger ce code LOINC
+// Code LOINC incorrect dans IHE PCC, un change proposal a été créé pour IHE qui date du 29/20/2021 pour corriger ce code LOINC
 * code = $LNC#XX-ANTENATALTESTINGBATTERY "ANTENATAL TESTING AND SURVEILLANCE BATTERY"
 * effective[x] ^short = "Date de l'examen ou de la surveillance"
 
