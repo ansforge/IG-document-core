@@ -1,3 +1,6 @@
+// Une étude sera à faire pour aligner les profils de signes vitaux avec mesures de santé - https://interop.esante.gouv.fr/ig/fhir/mesures/
+
+
 Profile: FRObservationVitalSignsDocument
 Parent: http://hl7.org/fhir/StructureDefinition/vitalsigns
 Id: fr-observation-vital-signs-document
