@@ -1,8 +1,7 @@
-// StructureDefinition for RelatedPersonDocument
-Profile: FrRelatedPersonDocument
+Profile: FRRelatedPersonDocument
 Parent: FRCoreRelatedPersonProfile
 Id: fr-related-person-document
-Title: "Fr RelatedPerson Document"
+Title: "FR RelatedPerson Document"
 Description: "Ce profil représente l'informateur non professionnel."
 
 * relationship[Role].coding.code = #CON

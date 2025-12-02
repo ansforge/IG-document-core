@@ -21,7 +21,7 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
   generate-json: 'false'
 
 dependencies:
-  hl7.cda.uv.core: 2.0.0-sd
+  hl7.cda.uv.core: 2.0.1-sd
   ans.fr.terminologies: latest
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.extensions.r5: 4.0.1
@@ -77,7 +77,7 @@ menu:
         FHIR: ressourcesFHIR-struc-gen.html
         Mapping CDA / FHIR: mappingCDA-FHIR-struc-gen.html
     Entête document:
-        Modèle logique métier: StructureDefinition-EnteteDocument.html
+        Modèle logique métier: StructureDefinition-fr-lm-entete-document.html
         CDA: ressourcesCDA-entete.html
         FHIR: ressourcesFHIR-entete.html
         Mapping Métier/CDA/FHIR: mappingCDA-FHIR-entete.html
@@ -164,8 +164,8 @@ groups:
       - StructureDefinition/fr-cda-encounter-participant
       - StructureDefinition/fr-cda-health-care-facility
 
-  Ressources FHIR:
-    name: Profils FHIR
+  Ressources FHIR entête:
+    name: Profils FHIR entête
     resources:
       - StructureDefinition/fr-bundle-document
       - StructureDefinition/fr-composition-document
@@ -175,7 +175,7 @@ groups:
       - StructureDefinition/fr-practitioner-document
       - StructureDefinition/fr-organization-document
       - StructureDefinition/fr-device-auteur-document
-      - StructureDefinition/fr-encounter-document
+      - StructureDefinition/fr-encounter-care-document
       - StructureDefinition/fr-location-document
       - StructureDefinition/fr-related-person-document
 
@@ -187,8 +187,8 @@ groups:
   Extensions FHIR:
     name: Extensions FHIR
     resources:
-      - StructureDefinition/fr-author-time
-      - StructureDefinition/fr-performer-event
+      - StructureDefinition/fr-author-time-extension
+      - StructureDefinition/fr-performer-event-extension
       
   Mapping:
     name: Concept Maps
@@ -377,3 +377,39 @@ groups:
      - StructureDefinition/FRLMDispositifMedical
      - StructureDefinition/fr-lm-echantillon-preleve
 
+  Binary/BIO-CR-BIO-2024.01-Microbiologie-V1:
+    name: BIO-CR-BIO_2024.01_Microbiologie_V1
+    description: Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eDISP-MED-2024.01:
+    name: eDISP-MED-2024.01
+    description: eDispensation de médicaments (eDISP-MED-2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eP-MED-DM-2024.01-PosoStruct:
+    name: eP-MED-DM_2024.01_PosoStruct
+    description: ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/eP-MED-DM-2024.01-PosoNonStruct:
+    name: eP-MED-DM_2024.01_PosoNonStruct
+    description: ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+#   Binary/IMG-CR-IMG-2024.01:
+#     name: IMG-CR-IMG
+#     description: Compte-rendu d'examen d'imagerie médicale (IMG_CR_IMG_2024.01)
+#     exampleBoolean: true
+#     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/IPS-FR-2024.01:
+    name: IPS-FR
+    description: Volet International Patient Summary - France (IPS-FR_2024.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+  Binary/LDL-SES-2022.01:
+    name: LDL-SES_2022.01
+    description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
+    exampleBoolean: true
+    profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+    

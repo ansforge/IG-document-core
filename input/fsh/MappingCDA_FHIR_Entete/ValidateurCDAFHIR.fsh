@@ -11,21 +11,21 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Validateur"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator"									
-* group[=].element[+].code = #Validateur							
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-validateur"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator"									
+* group[=].element[+].code = #FRLMValidateur							
 * group[=].element[=].target.code = #authenticator
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Validateur.dateHeureAttestationValidite								
+* group[=].element[+].code = #FRLMValidateur.dateHeureAttestationValidite								
 * group[=].element[=].target.code = #authenticator.time
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Validateur.validateur								
+* group[=].element[+].code = #FRLMValidateur.validateur								
 * group[=].element[=].target.code = #authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément validateur est de type : PersonneStructure"
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-authenticator"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"									
 * group[=].element[+].code = #authenticator				
 * group[=].element[=].target.code = #Composition.attester						
