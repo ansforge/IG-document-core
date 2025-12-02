@@ -11,35 +11,35 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier to CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/Evenement"					
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of"									
-* group[=].element[+].code = #Evenement								
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-evenement"					
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of"									
+* group[=].element[+].code = #FRLMEvenement								
 * group[=].element[=].target.code = #documentationOf
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.identifiantEvenement						
+* group[=].element[+].code = #FRLMEvenement.identifiantEvenement						
 * group[=].element[=].target.code = #documentationOf.serviceEvent.id
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.codeEvenement							
+* group[=].element[+].code = #FRLMEvenement.codeEvenement							
 * group[=].element[=].target.code = #documentationOf.serviceEvent.code
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.dateHeureEvenement							
+* group[=].element[+].code = #FRLMEvenement.dateHeureEvenement							
 * group[=].element[=].target.code = #documentationOf.serviceEvent.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.executantEvenement							
+* group[=].element[+].code = #FRLMEvenement.executantEvenement							
 * group[=].element[=].target.code = #documentationOf.serviceEvent.performer@typeCode="PRF"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.executantEvenement.roleFonctionnel							
+* group[=].element[+].code = #FRLMEvenement.executantEvenement.roleFonctionnel							
 * group[=].element[=].target.code = #documentationOf.serviceEvent.performer.functionCode
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.executantEvenement.dateHeureParticipation								
+* group[=].element[+].code = #FRLMEvenement.executantEvenement.dateHeureParticipation								
 * group[=].element[=].target.code = #documentationOf.serviceEvent.performer.time
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Evenement.executantEvenement.executant							
+* group[=].element[+].code = #FRLMEvenement.executantEvenement.executant							
 * group[=].element[=].target.code = #documentationOf.serviceEvent.performer.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA to FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-documentation-of"					
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of"					
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"									
 * group[=].element[+].code = #documentationOf								
 * group[=].element[=].target.code = #Composition.event

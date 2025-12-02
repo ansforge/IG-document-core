@@ -13,3 +13,4 @@ Characteristics: #can-be-target
 * entree
   * techniqueImagerie 1..1 FRLMTechniqueImagerie "Entrée technique d'imagerie"
   * administrationProduits 0..* FRLMAdministrationProduitDeSante "Produits de santé administrés pendant l'acte d'imagerie"
+
