@@ -1,7 +1,7 @@
 Logical: FRLMCorpsDocument		
 Id: fr-lm-corps-document					
-Title: "* Modèle logique métier du corps"				
-Description: "Eléments métier du corps d'un document"	
+Title: "Modèle logique métier - FR LM Corps document"				
+Description: "Eléments métier du corps d'un document contenant les sections du document."	
 
 * allergiesEtHypersensibilites 0..* FRLMAllergiesEtHypersensibilites  "Section Allergies et hypersensibilités"
 * antecedentsFamiliaux  0..* FRLMAntecedentsFamiliaux "Section Antécédents familiaux"
