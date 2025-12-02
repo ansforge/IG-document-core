@@ -23,8 +23,4 @@ Characteristics: #can-be-target
   * observationMedia 1..1 Base "Observation média"
     * identifiant 1..1 Identifier "Identifiant de l’observationMedia"
 //EHDSAttachment.data
-<<<<<<< HEAD
     * documentAttacheEncode 1..1 base64Binary "Document attaché encodé en Base64"
-=======
-    * documentAttacheEncode 1..1 base64Binary "Document attaché encodé en Base64"
->>>>>>> 5e0db1b74db1f7070b04b37fcf6def2b1b99bfe7

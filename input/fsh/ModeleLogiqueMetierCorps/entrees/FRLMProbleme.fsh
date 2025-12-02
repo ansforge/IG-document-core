@@ -38,8 +38,4 @@ Characteristics: #can-be-target
 * resolutionCircumstances 0..0
 * anatomicLocation 0..0
 * stage 0..0
-<<<<<<< HEAD
 */
-=======
-*/
->>>>>>> 5e0db1b74db1f7070b04b37fcf6def2b1b99bfe7

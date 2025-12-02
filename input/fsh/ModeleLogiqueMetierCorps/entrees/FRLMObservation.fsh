@@ -12,14 +12,9 @@ Characteristics: #can-be-target
 * observationCode 1..1 CodeableConcept "Code de l'observation"
 // n'est pas utilisé EHDSObservation
 * observationDescription 1..1 Narrative "Description narrative de l'observation"
-<<<<<<< HEAD
-// performer
-* observationStatut 1..1 code "Statut de l'observation"
-=======
 // status
 * observationStatut 1..1 code "Statut de l'observation"
 // observationDate[x]
->>>>>>> 5e0db1b74db1f7070b04b37fcf6def2b1b99bfe7
 * observationDate 0..1 dateTime "Date de l'observation"
 * observationNombreRenouvellements 0..1 Range "Nombre de renouvellements possibles" 
 //observationResult : 0..1
@@ -32,8 +27,4 @@ Characteristics: #can-be-target
 * observationLocalisationAnatomique 0..1 CodeableConcept "Localisation anatomique"
   * ^binding.description = "SNOMED CT (2.16.840.1.113883.6.96)" 
 //performer
-<<<<<<< HEAD
 * observationAuteur 0..1 FRLMAuteur "Auteur de l'observation"
-=======
-* observationAuteur 0..1 FRLMAuteur "Auteur de l'observation"
->>>>>>> 5e0db1b74db1f7070b04b37fcf6def2b1b99bfe7

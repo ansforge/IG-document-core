@@ -36,8 +36,4 @@ Characteristics: #can-be-target
 * prevention 0..1 Base  "Entrée En rapport avec la prevention"
 // créer un modèle métier pour l'entrée Non remboursable
 // en FHIR : DeviceUseStatement.reasonReference
-<<<<<<< HEAD
 * nonRemboursable 0..1 Base  "Entrée Non remboursable"
-=======
-* nonRemboursable 0..1 Base  "Entrée Non remboursable"
->>>>>>> 5e0db1b74db1f7070b04b37fcf6def2b1b99bfe7
