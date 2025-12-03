@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-en-rapport-avec-accident-travail | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRLMEnRapportAvecAccidentTravail |
+| Draft as of 2025-12-03 | *Computable Name*:FRLMEnRapportAvecAccidentTravail |
 
  
 Entrée En rapport avec un accident travail 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-en-rapport-ave
   "name" : "FRLMEnRapportAvecAccidentTravail",
   "title" : "Modèle logique métier - FR LM En rapport avec un accident travail",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

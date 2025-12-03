@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-order | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRCDAOrder |
+| Draft as of 2025-12-03 | *Computable Name*:FRCDAOrder |
 
  
 L’élément de l’en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-order.csv), [
   "name" : "FRCDAOrder",
   "title" : "CDA - order",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

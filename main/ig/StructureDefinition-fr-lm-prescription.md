@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRLMPrescription |
+| Draft as of 2025-12-03 | *Computable Name*:FRLMPrescription |
 
  
 Association à une prescription à l’origine de l’acte dont résulte le document. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prescription.c
   "name" : "FRLMPrescription",
   "title" : "Modèle logique métier - FR LM Prescription",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

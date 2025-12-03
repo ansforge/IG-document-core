@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-service-event | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRCDAServiceEvent |
+| Draft as of 2025-12-03 | *Computable Name*:FRCDAServiceEvent |
 
  
 L’élément de l’en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. L’occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l’attribut nullFlavor. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-service-event
   "name" : "FRCDAServiceEvent",
   "title" : "CDA - serviceEvent",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

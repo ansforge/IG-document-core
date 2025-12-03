@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authorization | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRCDAAuthorization |
+| Draft as of 2025-12-03 | *Computable Name*:FRCDAAuthorization |
 
  
 L’élément de l’en-tête du CDA authorization permet de documenter qu’un consentement éclairé a été obtenu et d’indiquer quel type de consentement a été fourni. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-authorization
   "name" : "FRCDAAuthorization",
   "title" : "CDA - authorization",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

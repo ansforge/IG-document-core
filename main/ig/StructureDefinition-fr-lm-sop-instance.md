@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-sop-instance | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRLMSOPInstance |
+| Draft as of 2025-12-03 | *Computable Name*:FRLMSOPInstance |
 
  
 Entrée SOP Instance 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-sop-instance.c
   "name" : "FRLMSOPInstance",
   "title" : "Modèle logique métier - FR LM SOP Instance",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-medicaments | *Version*:0.1.0 |
-| Draft as of 2025-12-02 | *Computable Name*:FRLMPrescriptionMedicaments |
+| Draft as of 2025-12-03 | *Computable Name*:FRLMPrescriptionMedicaments |
 
  
 Section Prescription de médicaments 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prescription-m
   "name" : "FRLMPrescriptionMedicaments",
   "title" : "Modèle logique métier - FR LM Prescription de médicaments",
   "status" : "draft",
-  "date" : "2025-12-02T18:26:21+00:00",
+  "date" : "2025-12-03T15:31:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
