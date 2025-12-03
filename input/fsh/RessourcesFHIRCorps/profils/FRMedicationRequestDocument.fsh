@@ -34,7 +34,7 @@ Description: "FRMedicationRequestDocument permet de décrire un traitement presc
   // Dosages conditionnels
   * asNeeded[x] MS 
   * route MS
-  * route from FRValueSetEDQM
+  * route from FRValueSetEDQMDocument
   * route ^short = "Voie d'administration"
   * site MS
   * site ^short = "Région anatomique d'administration"
