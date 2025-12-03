@@ -16,7 +16,7 @@ FRObservationResultDocument permet d’indiquer le résultat observé.
 
 **Utilisations:**
 
-* Référer à ce Profil: [DiagnosticReport - FR Diagnostic Report Document](StructureDefinition-fr-diagnostic-report-document.md)
+* Référer à ce Profil: [DiagnosticReport - FR Diagnostic Report Document](StructureDefinition-fr-diagnostic-report-document.md) and [DiagnosticReport - FR Diagnostic Report Imaging Document](StructureDefinition-fr-diagnostic-report-imaging-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-observation-result-document)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-resul
   "name" : "FRObservationResultDocument",
   "title" : "Observation - FR Observation Result Document",
   "status" : "draft",
-  "date" : "2025-12-03T16:46:30+00:00",
+  "date" : "2025-12-03T16:47:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

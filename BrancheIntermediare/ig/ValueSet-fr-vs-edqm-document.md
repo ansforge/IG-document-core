@@ -61,7 +61,7 @@ Ce jeu de valeurs (ValueSet) a 1,297 codes. Pour garder la publication gérable,
   "title" : "ValueSet - FR ValueSet EDQM Document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-03T16:46:30+00:00",
+  "date" : "2025-12-03T16:47:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-radia
   "name" : "FRObservationRadiationExposureDocument",
   "title" : "Observation - FR Observation Radiation Exposure Document",
   "status" : "draft",
-  "date" : "2025-12-03T16:46:30+00:00",
+  "date" : "2025-12-03T16:47:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

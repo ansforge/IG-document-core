@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
   "name" : "FRDiagnosticReportImagingDocument",
   "title" : "DiagnosticReport - FR Diagnostic Report Imaging Document",
   "status" : "draft",
-  "date" : "2025-12-03T16:46:30+00:00",
+  "date" : "2025-12-03T16:47:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -332,6 +332,14 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
         "id" : "DiagnosticReport.result",
         "path" : "DiagnosticReport.result",
         "short" : "Résultats de l'acte d'imagerie",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-result-document"
+            ]
+          }
+        ],
         "mustSupport" : true
       },
       {

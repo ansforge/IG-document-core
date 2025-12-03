@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-comparison-studie
   "name" : "FRComparisonStudiesExtension",
   "title" : "FR Comparison Studies Extension",
   "status" : "draft",
-  "date" : "2025-12-03T16:46:30+00:00",
+  "date" : "2025-12-03T16:47:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
