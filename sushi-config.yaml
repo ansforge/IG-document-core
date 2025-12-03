@@ -21,7 +21,7 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
   generate-json: 'false'
 
 dependencies:
-  hl7.cda.uv.core: 2.0.0-sd
+  hl7.cda.uv.core: 2.0.1-sd
   ans.fr.terminologies: latest
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.extensions.r5: 4.0.1
@@ -184,30 +184,85 @@ groups:
   Ressources FHIR corps:
       name: Profils FHIR corps
       resources:
-         - StructureDefinition/fr-observation-transfusion-accidents-document
-         - StructureDefinition/fr-observation-work-related-accident-document
-         - StructureDefinition/fr-observation-survey-document
-         - StructureDefinition/fr-observation-survey-pannel-document
-         - StructureDefinition/fr-observation-social-history-document
-         - StructureDefinition/fr-procedure-imaging-document
-         - StructureDefinition/fr-procedure-act-document
-         - StructureDefinition/fr-specimen-document
-         - StructureDefinition/fr-pregnancy-history-document
-         - StructureDefinition/fr-observation-result-document
-         - StructureDefinition/fr-task-patient-transport-document
-         - StructureDefinition/fr-Observation-vital-signs-panel-document
-         - StructureDefinition/fr-observation-vital-signs-document
-
+        - StructureDefinition/fr-advance-directive-document
+        - StructureDefinition/fr-adverse-event-document
+        - StructureDefinition/fr-allergie-intolerance-document
+        - StructureDefinition/fr-care-plan-document
+        - StructureDefinition/fr-condition-document
+        - StructureDefinition/fr-device-request-document
+        - StructureDefinition/fr-device-use-statement-document
+        - StructureDefinition/fr-diagnostic-report-document
+        - StructureDefinition/fr-diagnostic-report-bio-chapter-document
+        - StructureDefinition/fr-diagnostic-report-imaging-document
+        - StructureDefinition/fr-document-reference-document
+        - StructureDefinition/fr-encounter-document
+        - StructureDefinition/fr-endpoint-wado-document
+        - StructureDefinition/fr-family-member-history-document
+        - StructureDefinition/fr-imaging-study-document
+        - StructureDefinition/fr-immunization-document
+        - StructureDefinition/fr-immunization-recommendation-document
+        - StructureDefinition/fr-media-document
+        - StructureDefinition/fr-medication-document
+        - StructureDefinition/fr-medication-administration-document
+        - StructureDefinition/fr-medication-statement-document
+        - StructureDefinition/fr-service-request-document
+        - StructureDefinition/fr-medication-dispense-document
+        - StructureDefinition/fr-medication-request-document
+        - StructureDefinition/fr-medications-combinaison-document
+        - StructureDefinition/fr-observation-administration-blood-derivatives-document
+        - StructureDefinition/fr-observation-antenatal-testing-surveillance-battery-document
+        - StructureDefinition/fr-observation-birth-event-document
+        - StructureDefinition/fr-observation-blood-product-transfusion-document
+        - StructureDefinition/fr-observation-contra-indications-document
+        - StructureDefinition/fr-observation-laboratory-report-results-document
+        - StructureDefinition/fr-observation-medical-summary-document
+        - StructureDefinition/fr-observation-microorganism-detection-document
+        - StructureDefinition/fr-observation-pregnancy-history-document
+        - StructureDefinition/fr-observation-pain-score-document
+        - StructureDefinition/fr-observation-pregnancy-document
+        - StructureDefinition/fr-observation-radiation-exposure-document
+        - StructureDefinition/fr-observation-transfusion-accidents-document
+        - StructureDefinition/fr-observation-work-related-accident-document
+        - StructureDefinition/fr-observation-survey-document
+        - StructureDefinition/fr-observation-survey-pannel-document
+        - StructureDefinition/fr-observation-social-history-document
+        - StructureDefinition/fr-procedure-imaging-document
+        - StructureDefinition/fr-procedure-act-document
+        - StructureDefinition/fr-specimen-document
+        - StructureDefinition/fr-pregnancy-history-document
+        - StructureDefinition/fr-observation-result-document
+        - StructureDefinition/fr-task-patient-transport-document
+        - StructureDefinition/fr-Observation-vital-signs-panel-document
+        - StructureDefinition/fr-observation-vital-signs-document
+  
   Data Type FHIR:
     name: Data Type Profiles 
     resources:
       - StructureDefinition/fr-human-name-document
+      - StructureDefinition/fr-accession-number-identifier-imaging-document
+      - StructureDefinition/fr-study-instance-uid-identifier-document
 
   Extensions FHIR entête:
     name: Extensions FHIR entête
     resources:
-      - StructureDefinition/fr-author-time
-      - StructureDefinition/fr-performer-event
+      - StructureDefinition/fr-author-time-extension
+      - StructureDefinition/fr-performer-event-extension
+
+  Extensions FHIR corps:
+    name: Extensions FHIR corps
+    resources:
+      - StructureDefinition/fr-actor-extension
+      - StructureDefinition/fr-family-member-history-body-site-extension
+      - StructureDefinition/fr-procedure-difficulty-extension
+      - StructureDefinition/fr-interpretation-extension
+      - StructureDefinition/fr-method-extension
+      - StructureDefinition/fr-procedure-priority-extension
+      - StructureDefinition/fr-medication-administration-sequence-extension
+      - StructureDefinition/fr-immunization-type-extension
+      - StructureDefinition/fr-medication-request-out-of-nomenclature-extension
+      - StructureDefinition/fr-number-of-frames-extension
+      - StructureDefinition/fr-not-covered-extension
+      - StructureDefinition/fr-status-reason-extension
 
   Mapping:
     name: Concept Maps
@@ -276,3 +331,4 @@ resources:
     description: Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)
     exampleBoolean: true
     profile: https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document
+    
