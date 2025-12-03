@@ -45,7 +45,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * resultsInterpreter.extension[author].extension[actor].valueReference only Reference(FRPractitionerRoleDocument)
 
 * result MS
-* result only Reference(Observation)
+* result only Reference(FRObservationResultDocument)
 * result ^short = "Résultats de l'acte d'imagerie"
 
 // si conclusion non codée
