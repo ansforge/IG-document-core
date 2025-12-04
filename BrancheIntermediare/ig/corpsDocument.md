@@ -5,7 +5,7 @@
 
 ## Corps d'un document
 
-* [Modèles logiques](./modelesLogiquesMetier-corps.md)
+* [Modèles logiques](StructureDefinition-fr-lm-corps-document.md)
 * [CDA](./ressourcesCDA-corps.md)
 * [FHIR](./ressourcesFHIR-corps.md)
 * [Mapping CDA / FHIR](./mappingCDA-FHIR-corps.md)

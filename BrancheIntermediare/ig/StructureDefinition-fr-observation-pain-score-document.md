@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pain-score-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRObservationPainScoreDocument |
+| Draft as of 2025-12-04 | *Computable Name*:FRObservationPainScoreDocument |
 
  
 FRObservationPainScoreDocument permet d’enregistrer l’évaluation du patient de sa douleur sur une échelle de 1 à 10. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-pain-
   "name" : "FRObservationPainScoreDocument",
   "title" : "Observation - FR Observation Pain Score Document",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

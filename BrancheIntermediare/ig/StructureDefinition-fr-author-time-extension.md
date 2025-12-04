@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-author-time-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRAuthorTimeExtension |
+| Draft as of 2025-12-04 | *Computable Name*:FRAuthorTimeExtension |
 
 Extension permettant d’ajouter un horodatage (TS) à l’élément author d’une Composition.
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-author-time-exten
   "name" : "FRAuthorTimeExtension",
   "title" : "FR Author Time Extension",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

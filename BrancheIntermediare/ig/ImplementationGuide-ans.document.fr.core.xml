@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-12-03T16:47:23+00:00"/>
+  <date value="2025-12-04T14:08:40+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -508,8 +508,17 @@
         <valueString value="true"/>
       </extension>
     </extension>
-    <grouping id="Modèles logiques">
-      <name value="Modèle logique métier"/>
+    <grouping id="Modèles logiques de l'entête du document">
+      <name value="Modèle logique métier de l'entête du document"/>
+    </grouping>
+    <grouping id="Modèle métier du Corps d'un document(Sections)">
+      <name value="Modèles logiques métier des sections"/>
+    </grouping>
+    <grouping id="Modèle métier du Corps d'un document(Entrées)">
+      <name value="Modèles logiques métier des entrées"/>
+    </grouping>
+    <grouping id="Modèle métier du Corps d'un document(Eléments transversaux)">
+      <name value="Modèles logiques métier des éléments transversaux"/>
     </grouping>
     <grouping id="Ressources CDA">
       <name value="Eléments CDA"/>
@@ -531,6 +540,30 @@
     </grouping>
     <grouping id="Mapping">
       <name value="Concept Maps"/>
+    </grouping>
+    <grouping id="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1">
+      <name value="BIO-CR-BIO_2024.01_Microbiologie_V1"/>
+      <description value="Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"/>
+    </grouping>
+    <grouping id="Binary/eDISP-MED-2024.01">
+      <name value="eDISP-MED-2024.01"/>
+      <description value="eDispensation de médicaments (eDISP-MED-2024.01)"/>
+    </grouping>
+    <grouping id="Binary/eP-MED-DM-2024.01-PosoStruct">
+      <name value="eP-MED-DM_2024.01_PosoStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+    </grouping>
+    <grouping id="Binary/eP-MED-DM-2024.01-PosoNonStruct">
+      <name value="eP-MED-DM_2024.01_PosoNonStruct"/>
+      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
+    </grouping>
+    <grouping id="Binary/IPS-FR-2024.01">
+      <name value="IPS-FR"/>
+      <description value="Volet International Patient Summary - France (IPS-FR_2024.01)"/>
+    </grouping>
+    <grouping id="Binary/LDL-SES-2022.01">
+      <name value="LDL-SES_2022.01"/>
+      <description value="Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"/>
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -555,28 +588,6 @@
       <description value="FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR corps"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/BIO-CR-BIO-2024.01-glycemie-mole"/>
-      </reference>
-      <name value="BIO-CR-BIO_2024.01_Glycemie_mole"/>
-      <description value="Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"/>
-      </reference>
-      <name value="BIO-CR-BIO_2024.01_Microbiologie_V1"/>
-      <description value="Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1108,17 +1119,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/eDISP-MED-2024.01"/>
-      </reference>
-      <name value="eDISP-MED-2024.01"/>
-      <description value="eDispensation de médicaments (eDISP-MED-2024.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1140,28 +1140,6 @@
       <description value="FREndpointWadoDocument permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID"/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR corps"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/eP-MED-DM-2024.01-PosoNonStruct"/>
-      </reference>
-      <name value="eP-MED-DM_2024.01_PosoNonStruct"/>
-      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/eP-MED-DM-2024.01-PosoStruct"/>
-      </reference>
-      <name value="eP-MED-DM_2024.01_PosoStruct"/>
-      <description value="ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1579,6 +1557,18 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-historique-des-actes"/>
+      </reference>
+      <name value="Historique des actes"/>
+      <description value="Section Historique des actes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -1612,28 +1602,6 @@
       <description value="FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée.&#xA; - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). &#xA; - Une vaccination prévue dépend d'un plan accepté et à venir.&#xA; - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRVaccinationDocument."/>
       <exampleBoolean value="false"/>
       <groupingId value="Ressources FHIR corps"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/IPS-FR-2024.01"/>
-      </reference>
-      <name value="IPS-FR"/>
-      <description value="Volet International Patient Summary - France (IPS-FR_2024.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Binary"/>
-      </extension>
-      <reference>
-        <reference value="Binary/LDL-SES-2022.01"/>
-      </reference>
-      <name value="LDL-SES_2022.01"/>
-      <description value="Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1976,12 +1944,336 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/FRLMDispositifMedical"/>
+      </reference>
+      <name value="Modèle logique métier - Dispositif médical"/>
+      <description value="Dispositif médical"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-accidents-transfusionnels"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Accident transfusionnel"/>
+      <description value="Entrée Accident transfusionnel"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-acte"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Acte"/>
+      <description value="Entrée Acte"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-acte-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Acte d'imagerie"/>
+      <description value="Section Acte d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-acte-substitution"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Acte substitution"/>
+      <description value="Entrée Acte substitution"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-addendum"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Addendum"/>
+      <description value="Section Addendum"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-administration-de-derives-du-sang"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Administration de dérivés du sang"/>
+      <description value="Entrée Administration de dérivés du sang"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-administration-produit-de-sante"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Administration produit de sante"/>
+      <description value="Entrée Administration produit de sante"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-allergie-ou-hypersensibilite"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Allergie ou Hypersensibilité"/>
+      <description value="Entrée Allergie ou hypersensibilite"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-allergies-et-hypersensibilites"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Allergies et hypersensibilités"/>
+      <description value="Section Allergies et hypersensibilités"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-antecedent-familial-observe"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Antécédent familial observé"/>
+      <description value="Entrée Antécédent familial"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-antecedents-familiaux-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Antécédents familiaux"/>
+      <description value="Entrée Antécédents familiaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-antecedents-familiaux"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Antécédents familiaux"/>
+      <description value="Section Antécédents familiaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-antecedents-medicaux"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Antécédents médicaux"/>
+      <description value="Section Antécédents médicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-historique-des-grossesses"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Antécédents obstétricaux"/>
+      <description value="Section Historique des grossesses"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/fr-lm-auteur"/>
       </reference>
       <name value="Modèle logique métier - FR LM Auteur"/>
       <description value="Auteur du document : ce peut être un professionnel, un patient/usager ou un système. &#xA;- Pour un professionnel ou un système, la structure de rattachement doit être précisée."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-auteur-apsr"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Auteur APSR"/>
+      <description value="Auteur APSR (Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Auteur"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-autorisation-exposition"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Autorisation exposition"/>
+      <description value="Entrée Autorisation exposition"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-autorisation-substitution"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Autorisation substitution"/>
+      <description value="Entrée Autorisation substitution"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-batterie-examens-biologie-medicale"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Batterie d'examens de biologie médicale"/>
+      <description value="Entrée Batterie d'examens de biologie médicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-certitude"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Certitude"/>
+      <description value="Entrée Certitude"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-codes-a-barres"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Codes à barres"/>
+      <description value="Section Codes à barres"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-commentaire-er"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Commentaire"/>
+      <description value="Entrée Commentaire"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-commentaire-non-code"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Commentaire (non-codé)"/>
+      <description value="Section Commentaire (non-codé)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-comparaison-examens-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Comparaison d'examens d'imagerie"/>
+      <description value="Section Comparaison d'examens d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-complications-acte"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Complications Acte"/>
+      <description value="Section Complications au cours de l'acte"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-cr-bio-chapitre"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau"/>
+      <description value="Section Compte rendu de biologie de 1er niveau"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-conclusion-examen-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Conclusion examen d'imagerie"/>
+      <description value="Section Conclusion examen d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1993,19 +2285,139 @@
       <name value="Modèle logique métier - FR LM Consentement"/>
       <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-lm-destinataire-prevu-document"/>
+        <reference value="StructureDefinition/fr-lm-corps-document"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Corps document"/>
+      <description value="Eléments métier du corps d'un document contenant les sections du document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-criticite"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Criticite"/>
+      <description value="Entrée Criticite"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-demande-examen-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Demande d'examen d'imagerie"/>
+      <description value="Section Demande d'examen d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-demande-examen-ou-suivi"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Demande d'examen ou de suivi"/>
+      <description value="Entrée Demande d'examen ou de suivi / Objectif à atteindre"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-destinataire-prevu"/>
       </reference>
       <name value="Modèle logique métier - FR LM Destinataire prévu"/>
       <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-directive-anticipee"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Directive anticipée"/>
+      <description value="Entrée Directive anticipée"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-directives-anticipees"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Directives-anticipées"/>
+      <description value="Section Directives anticipées"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dispensation-medicaments"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Dispensation médicaments"/>
+      <description value="Section Dispensation médicaments"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dispositif-medical-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Dispositif médical"/>
+      <description value="Entrée Dispositif médical"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dispositifs-medicaux"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Dispositifs medicaux"/>
+      <description value="Section Dispositifs medicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-document-attache"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Document attaché"/>
+      <description value="Entrée Document attaché"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2017,7 +2429,115 @@
       <name value="Modèle logique métier - FR LM Document de référence"/>
       <description value="Référence un document existant (à remplacer ou transformé)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-document-pdf-copie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Document PDF copie"/>
+      <description value="Section Document PDF-copie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-documents-ajoutes"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Documents ajoutés"/>
+      <description value="Section Documents ajoutés"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dose-antigene"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Dose d'antigène"/>
+      <description value="Entrée Dose d'antigène"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-education-patient"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Education du patient"/>
+      <description value="Section Education du patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-effet-indesirable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Effet indesirable"/>
+      <description value="Entrée Effet indesirable"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-effets-indesirables"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Effets indesirables"/>
+      <description value="Section Effets indesirables"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-en-rapport-avec-la-prevention"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM En rapport avec la prevention"/>
+      <description value="Entrée En rapport avec la prevention"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-en-rapport-avec-accident-travail"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM En rapport avec un accident travail"/>
+      <description value="Entrée En rapport avec un accident travail"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-en-rapport-avec-ald"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM En rapport avec une Affection Longue Durée (ALD)"/>
+      <description value="Entrée En rapport avec une Affection Longue Durée (ALD)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2029,7 +2549,247 @@
       <name value="Modèle logique métier - FR LM En-tête document"/>
       <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evaluation"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evaluation"/>
+      <description value="Entrée Evaluation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evaluation-composant"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evaluation Composant"/>
+      <description value="Entrée Evaluation Composant"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evaluation-composant-n2"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evaluation Composant N2"/>
+      <description value="Entrée Evaluation Composant N2"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evolution-effet-indesirable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evolution effet indesirable"/>
+      <description value="Entrée Evolution effet indesirable"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evenement-indesirable-pendant-hospitalisation"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evènements indésirables pendant l'hospitalisation"/>
+      <description value="Entrée Evènements indésirables pendant l'hospitalisation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-evenements-indesirables-suite-administration-derives-sang"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Evènements indésirables suite à l'administration de dérivés du sang"/>
+      <description value="Entrée Evènements indésirables suite à l'administration de dérivés du sang"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-examen-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Examen Imagerie"/>
+      <description value="Entrée DICOM Examen Imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-exposition-radiations"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Exposition aux radiations"/>
+      <description value="Section Exposition aux radiations"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-facteurs-de-risque-professionnels-non-code"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Facteurs de risque professionnels non code"/>
+      <description value="Section Facteurs de risque professionnels non code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-fonctions-physiques"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Fonctions physiques"/>
+      <description value="Section Fonctions physiques"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-gravite-effet-indesirable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Gravite effet indesirable"/>
+      <description value="Entrée Gravite effet indesirable"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-group-de-questionnaires-devaluation"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Groupe de questionnaires d'évalutation"/>
+      <description value="Entrée Groupe de questionnaires d'évalutation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-habitus-mode-de-vie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Habitus et modes de vie"/>
+      <description value="Section Habitus et modes de vie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-habitus-mode-de-vie-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Habitus Mode de vie"/>
+      <description value="Entrée Habitus Mode de vie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-historique-grossesse"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Historique de la grossesse"/>
+      <description value="Entrée Historique de la grossesse"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-hors-amm"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Hors Autorisation de Mise sur le Marché (AMM)"/>
+      <description value="Entrée Hors Autorisation de Mise sur le Marché (AMM)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-identification-de-micro-organismes-multiresistants"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Identification de micro-organismes multirésistants"/>
+      <description value="Entrée Identification de micro-organismes multirésistants"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-image-illustrative"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Image illustrative"/>
+      <description value="Entrée Image illustrative."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-imputabilite-effet-indesirable"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Imputabilite effet indesirable"/>
+      <description value="Entrée Imputabilite effet indesirable"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-informant-apsr"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Informant APSR"/>
+      <description value="Informant APSR(Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Informateur"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2041,7 +2801,163 @@
       <name value="Modèle logique métier - FR LM Informateur"/>
       <description value="Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-informations-cliniques"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Informations Cliniques"/>
+      <description value="Section Informations Cliniques"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-instruction-au-patient"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Instruction au patient"/>
+      <description value="Entrée Instruction au patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-instructions-au-dispensateur"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Instructions au dispensateur"/>
+      <description value="Entrée Instructions au dispensateur"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-instructions-patient"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Instructions au patient"/>
+      <description value="Entrée Instructions au patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-isolat-microbiologique"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Isolat microbiologique"/>
+      <description value="Entrée Isolat microbiologique"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-laboratoire-executant"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Laboratoire exécutant"/>
+      <description value="Laboratoire exécutant"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-modalite-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Modalité d'entrée"/>
+      <description value="Entrée Modalité d'entrée"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-modalite-sortie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Modalité de sortie"/>
+      <description value="Entrée Modalité de sortie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-naissance"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Naissance"/>
+      <description value="Entrée Naissance"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-notes-dispensateur"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Notes du dispensateur"/>
+      <description value="Entrée Notes du dispensateur"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-object-catalog"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Object Catalog"/>
+      <description value="Section Object Catalog"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Observation"/>
+      <description value="Entrée observation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-grossesse"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Observation sur la grossesse"/>
+      <description value="Entrée Observation sur la grossesse"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2053,7 +2969,19 @@
       <name value="Modèle logique métier - FR LM Opérateur de saisie"/>
       <description value="Opérateur de saisie de la totalité ou d'une partie du contenu du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-participant-corps"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Participant"/>
+      <description value="Participant"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2065,7 +2993,31 @@
       <name value="Modèle logique métier - FR LM Participant"/>
       <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-participant-apsr"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Participant APSR"/>
+      <description value="Participant APSR(Anatomic Pathology Structured Report)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-sujet-non-humain"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Patient avec sujet non humain"/>
+      <description value="Patient avec sujet non humain"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2077,7 +3029,19 @@
       <name value="Modèle logique métier - FR LM Patient Usager"/>
       <description value="Patient/Usager concerné par le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-performer"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Performer"/>
+      <description value="Performer"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2089,7 +3053,7 @@
       <name value="Modèle logique métier - FR LM Personne et/ou Structure"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2101,7 +3065,43 @@
       <name value="Modèle logique métier - FR LM Personne et/ou Structure Auteur"/>
       <description value="Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-plan-soins"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Plan de soins"/>
+      <description value="Section Plan de soins"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-points-de-vigilances-non-code"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Points de vigilance (non-codés)"/>
+      <description value="Section Points de vigilance (non-codés)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prescription-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prescription"/>
+      <description value="Entrée Prescription"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2113,7 +3113,31 @@
       <name value="Modèle logique métier - FR LM Prescription"/>
       <description value="Association à une prescription à l’origine de l’acte dont résulte le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prescription-dispositifs-medicaux"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prescription de dispositifs médicaux"/>
+      <description value="Section Prescription de dispositifs médicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prescription-medicaments"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prescription de médicaments"/>
+      <description value="Section Prescription de médicaments"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2125,7 +3149,151 @@
       <name value="Modèle logique métier - FR LM Prise en charge"/>
       <description value="Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.&#xA; - Exemples :&#xA;   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.&#xA;   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.&#xA; - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-probleme"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Problème"/>
+      <description value="Entrée Problème"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-problemes-actifs"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Problèmes actifs"/>
+      <description value="Section Problèmes actifs"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-produit-sante"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Produit de santé"/>
+      <description value="Produit de santé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prelevement"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Prélèvement"/>
+      <description value="Entrée Prélèvement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-periode-de-renouvellement"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Période de renouvellement de la prescription"/>
+      <description value="Entrée Période de renouvellement de la prescription"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-quantite-produit"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Quantité de produit"/>
+      <description value="Entrée Quantité de produit"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-quantite-exposition"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Quantité exposition"/>
+      <description value="Entrée Quantité exposition"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-raison-recommandation"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Raison de la recommandation"/>
+      <description value="Section Raison de la recommandation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-raison-recommandation-non-code"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Raison de la recommandation (non codée)"/>
+      <description value="Section Raison de la recommandation (non codée)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-rang-vaccination"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Rang de la vaccination"/>
+      <description value="Entrée Rang de la vaccination"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-recherche-de-micro-organismes"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Recherche de micro organismes"/>
+      <description value="Entrée Recherche de micro organismes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-rencontre"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Rencontre"/>
+      <description value="Entrée Rencontre"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2137,7 +3305,319 @@
       <name value="Modèle logique métier - FR LM Responsable"/>
       <description value="Représente le responsable du document, qui est : &#xA; - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. &#xA; - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). &#xA; - soit le patient/usager responsable du document d'expression personnelle &#xA; - soit le SNR responsable du document produit via ce SNR. &#xA; - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Resultats"/>
+      <description value="Entrée Resultats"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-examens-biologie-medicale"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Resultats d'examens de biologie medicale"/>
+      <description value="Entrée Resultats d'examens de biologie medicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-reference-interne"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Référence interne"/>
+      <description value="Entrée Référence interne"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-reference-item-plan-traitement"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Référence item plan traitement"/>
+      <description value="Entrée Référence item plan traitement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-reference-item-prescription"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Référence item prescription"/>
+      <description value="Entrée Référence item prescription"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-references-externes"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Références externes"/>
+      <description value="Entrée Références externes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent"/>
+      <description value="Entrée Résultat d'examens de biologie / élement clinique pertinent"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats"/>
+      <description value="Section Résultats"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-examen-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats d'examen d'imagerie"/>
+      <description value="Section Résultats d'examen d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-examens"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats d'examens"/>
+      <description value="Section Résultats d'examens"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-examens-non-code"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats d'examens (non codée)"/>
+      <description value="Section Résultats d'examens (non codée)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-evenements"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats d'événements"/>
+      <description value="Section Résultats d'événements"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention"/>
+      <description value="Section Résultats de laboratoire de biologie de seconde intention"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-section"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Section"/>
+      <description value="Section"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-serie-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Serie imagerie"/>
+      <description value="Entrée Serie imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-signe-vital"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Signe vital"/>
+      <description value="Entrée Signe vital"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-signe-vital-observe"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Signe vital observé"/>
+      <description value="Entrée Signe vital observé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-signes-vitaux"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Signes vitaux"/>
+      <description value="Section Signes vitaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-sop-instance"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM SOP Instance"/>
+      <description value="Entrée SOP Instance"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-cr-bio-sous-chapitre"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Sous-chapitre du compte rendu d'examens de biologie"/>
+      <description value="Modèle logique métier de la section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut"/>
+      <description value="Entrée Statut"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut-clinique-patient"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut clinique du patient"/>
+      <description value="Entrée Statut clinique du patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut-document-entree"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut du document"/>
+      <description value="Entrée Statut du document"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut-document"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut du document"/>
+      <description value="Section Statut du document"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut-probleme"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut du problème"/>
+      <description value="Entrée Statut du problème."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-statut-fonctionnel"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Statut fonctionnel"/>
+      <description value="Section Statut fonctionnel"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2149,7 +3629,43 @@
       <name value="Modèle logique métier - FR LM Structure conservation"/>
       <description value="Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-sujet"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Sujet"/>
+      <description value="Sujet"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-sujet-non-humain"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Sujet non humain"/>
+      <description value="Sujet non humain"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-synthese-medicale-sejour"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Synthese medicale sejour"/>
+      <description value="Entrée Synthese medicale sejour"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2161,7 +3677,187 @@
       <name value="Modèle logique métier - FR LM Système / Structure"/>
       <description value="Système auteur du document"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-severite"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Sévérité"/>
+      <description value="Entrée Sévérité."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-technique-imagerie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Technique imagerie"/>
+      <description value="Entrée Technique imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitement"/>
+      <description value="Entrée Traitement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement-dispense"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitement dispensé"/>
+      <description value="Entrée Traitement dispense"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement-prescrit"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitement Prescrit"/>
+      <description value="Entrée Traitement prescrit"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement-prescrit-subordonne"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitement Prescrit Subordonnee"/>
+      <description value="Entrée Traitement prescrit subordonne"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement-subordonne"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitement subordonné"/>
+      <description value="Entrée Traitement subordonné"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitements"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitements"/>
+      <description value="Section Traitements"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitements-administres"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitements administrés"/>
+      <description value="Section Traitements administrés"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-traitement-sortie"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Traitements à la sortie"/>
+      <description value="Section Traitements à la sortie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-transfert-du-patient"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Transfert du patient"/>
+      <description value="Entrée Transfert du patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-transfusion-de-produits-sanguins"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Transfusion de produits sanguins"/>
+      <description value="Entrée Transfusion de produits sanguins"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-vaccin-recommande"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Vaccin recommandé"/>
+      <description value="Entrée Vaccin recommandé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-vaccination"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Vaccination"/>
+      <description value="Entrée Vaccination"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-vaccinations"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Vaccinations"/>
+      <description value="Section Vaccinations"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Sections)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2173,7 +3869,19 @@
       <name value="Modèle logique métier - FR LM Validateur"/>
       <description value="Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-echantillon-preleve"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Échantillon prélevé"/>
+      <description value="Échantillon prélevé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Eléments transversaux)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2185,7 +3893,19 @@
       <name value="Modèle logique métier - FR LM Évènement"/>
       <description value="Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Modèles logiques"/>
+      <groupingId value="Modèles logiques de l'entête du document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-non-remboursable"/>
+      </reference>
+      <name value="Non remboursable"/>
+      <description value="Modèle logique métier - FR LM Entrée Non remboursable"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèle métier du Corps d'un document(Entrées)"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2564,6 +4284,62 @@
       <description value="Codes autorisés pour indiquer le type d'évaluation.&#xA;Inclut LOINC, ICF, et permet d'autres systèmes si aucun code approprié n'est trouvé."/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BIO-CR-BIO-2024.01-glycemie-mole"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/IPS-FR-2024.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/LDL-SES-2022.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eDISP-MED-2024.01"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoNonStruct"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/eP-MED-DM-2024.01-PosoStruct"/>
+      </reference>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -2666,14 +4442,6 @@
         <nameUrl value="corpsDocument.html"/>
         <title value="Corps d'un document"/>
         <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="modelesLogiquesMetier-corps.html"/>
-          </extension>
-          <nameUrl value="modelesLogiquesMetier-corps.html"/>
-          <title value="Modèle logique métier"/>
-          <generation value="markdown"/>
-        </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="ressourcesCDA-corps.html"/>

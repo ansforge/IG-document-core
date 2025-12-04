@@ -7,6 +7,15 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
+        class FRLMDispositifMedical{
+
+             FRLMDispositifMedical => [None..None]
+             FRLMDispositifMedical.identifiant => [0..*]
+             FRLMDispositifMedical.type => [1..1]
+             FRLMDispositifMedical.type.code => [1..1]
+             FRLMDispositifMedical.type.code.autreCode => [0..*]
+        } 
+
         class FRObservationVitalSignsPanelDocument{
 
              Observation => [None..None]
@@ -1105,12 +1114,262 @@ package IG #DDDDDD{
              ImmunizationRecommendation.recommendation.supportingPatientInformation => [None..None]
         } 
 
+        class FRLMAccidentsTransfusionnels{
+
+             fr-lm-accidents-transfusionnels => [None..None]
+             fr-lm-accidents-transfusionnels.identifiant => [1..1]
+             fr-lm-accidents-transfusionnels.code => [1..1]
+             fr-lm-accidents-transfusionnels.description => [1..1]
+             fr-lm-accidents-transfusionnels.statut => [1..1]
+             fr-lm-accidents-transfusionnels.date => [1..1]
+             fr-lm-accidents-transfusionnels.valeur => [1..1]
+             fr-lm-accidents-transfusionnels.auteur => [0..1]
+        } 
+
+        class FRLMActeImagerie{
+
+             fr-lm-acte-imagerie => [None..None]
+             fr-lm-acte-imagerie.titreSection => [1..None]
+             fr-lm-acte-imagerie.sousSection.complicationsActe => [0..1]
+             fr-lm-acte-imagerie.sousSection.expositionsRadiations => [0..1]
+             fr-lm-acte-imagerie.sousSection.catalogueObjects => [1..1]
+             fr-lm-acte-imagerie.entree.techniqueImagerie => [1..1]
+             fr-lm-acte-imagerie.entree.administrationProduits => [0..*]
+        } 
+
+        class FRLMActeSubstitution{
+
+             fr-lm-acte-substitution => [None..None]
+             fr-lm-acte-substitution.code => [1..1]
+             fr-lm-acte-substitution.statut => [1..1]
+        } 
+
+        class FRLMActe{
+
+             fr-lm-acte => [None..None]
+             fr-lm-acte.identifiant => [1..*]
+             fr-lm-acte.description => [1..1]
+             fr-lm-acte.code => [1..1]
+             fr-lm-acte.titre => [0..1]
+             fr-lm-acte.statut => [1..1]
+             fr-lm-acte.date => [0..1]
+             fr-lm-acte.priorite => [0..1]
+             fr-lm-acte.localisationAnatomique => [0..1]
+             fr-lm-acte.voieDAbord => [0..1]
+             fr-lm-acte.perfomer => [0..*]
+             fr-lm-acte.auteur => [0..*]
+             fr-lm-acte.informateur => [0..*]
+             fr-lm-acte.participant => [0..*]
+             fr-lm-acte.circonstances => [0..*]
+             fr-lm-acte.reason => [0..*]
+             fr-lm-acte.dispositifMedical => [0..*]
+             fr-lm-acte.difficulte => [0..1]
+             fr-lm-acte.scores => [0..*]
+        } 
+
+        class FRLMAddendum{
+
+             fr-lm-addendum => [None..None]
+             fr-lm-addendum.titreSection => [1..None]
+             fr-lm-addendum.sousSection => [None..0]
+             fr-lm-addendum.entree => [None..0]
+             fr-lm-addendum.auteur => [1..1]
+        } 
+
+        class FRLMAdministrationDeDerivesDuSang{
+
+             fr-lm-administration-de-derives-du-sang => [None..None]
+             fr-lm-administration-de-derives-du-sang.identifiant => [1..1]
+             fr-lm-administration-de-derives-du-sang.code => [1..1]
+             fr-lm-administration-de-derives-du-sang.description => [1..1]
+             fr-lm-administration-de-derives-du-sang.statut => [1..1]
+             fr-lm-administration-de-derives-du-sang.date => [1..1]
+             fr-lm-administration-de-derives-du-sang.valeur => [1..1]
+             fr-lm-administration-de-derives-du-sang.auteur => [0..1]
+        } 
+
+        class FRLMAdministrationProduitDeSante{
+
+             fr-lm-administration-produit-de-sante => [None..None]
+             fr-lm-administration-produit-de-sante.identifiant => [1..1]
+             fr-lm-administration-produit-de-sante.description => [0..1]
+             fr-lm-administration-produit-de-sante.statut => [1..1]
+             fr-lm-administration-produit-de-sante.voieAdministration => [0..1]
+             fr-lm-administration-produit-de-sante.dose => [0..1]
+             fr-lm-administration-produit-de-sante.rythme => [0..1]
+             fr-lm-administration-produit-de-sante.medicament => [1..1]
+             fr-lm-administration-produit-de-sante.medicament.produit => [1..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.codeProduit => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.codeProduit.autreCodification => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.nomMarque => [0..1]
+             fr-lm-administration-produit-de-sante.medicament.produit.numeroLot => [0..1]
+        } 
+
+        class FRLMAllergieOuHypersensibilite{
+
+             fr-lm-allergie-ou-hypersensibilite => [None..None]
+             fr-lm-allergie-ou-hypersensibilite.identifiant => [1..*]
+             fr-lm-allergie-ou-hypersensibilite.description => [1..1]
+             fr-lm-allergie-ou-hypersensibilite.type => [1..1]
+             fr-lm-allergie-ou-hypersensibilite.statut => [0..1]
+             fr-lm-allergie-ou-hypersensibilite.date => [1..1]
+             fr-lm-allergie-ou-hypersensibilite.participant => [0..1]
+             fr-lm-allergie-ou-hypersensibilite.probleme => [0..*]
+             fr-lm-allergie-ou-hypersensibilite.statutClique => [0..1]
+             fr-lm-allergie-ou-hypersensibilite.certitude => [0..1]
+             fr-lm-allergie-ou-hypersensibilite.criticite => [0..1]
+        } 
+
+        class FRLMAllergiesEtHypersensibilites{
+
+             fr-lm-allergies-et-hypersensibilites => [None..None]
+             fr-lm-allergies-et-hypersensibilites.titreSection => [1..None]
+             fr-lm-allergies-et-hypersensibilites.sousSection => [None..0]
+             fr-lm-allergies-et-hypersensibilites.entree => [1..None]
+             fr-lm-allergies-et-hypersensibilites.entree.allergieOuHypersensibilite => [1..*]
+        } 
+
+        class FRLMAntecedentFamilialObserve{
+
+             fr-lm-antecedent-familial-observe => [None..None]
+             fr-lm-antecedent-familial-observe.identifiant => [1..1]
+             fr-lm-antecedent-familial-observe.code => [1..1]
+             fr-lm-antecedent-familial-observe.descriptionNarrative => [1..1]
+             fr-lm-antecedent-familial-observe.statut => [1..1]
+             fr-lm-antecedent-familial-observe.horodatage => [0..1]
+             fr-lm-antecedent-familial-observe.resultat => [1..1]
+             fr-lm-antecedent-familial-observe.interpretation => [0..1]
+             fr-lm-antecedent-familial-observe.methode => [0..1]
+             fr-lm-antecedent-familial-observe.site => [0..1]
+             fr-lm-antecedent-familial-observe.auteur => [0..1]
+        } 
+
+        class FRLMAntecedentsFamiliauxEntree{
+
+             fr-lm-antecedents-familiaux-entree => [None..None]
+             fr-lm-antecedents-familiaux-entree.statut => [1..1]
+             fr-lm-antecedents-familiaux-entree.identificationParent => [1..1]
+             fr-lm-antecedents-familiaux-entree.participant => [0..*]
+             fr-lm-antecedents-familiaux-entree.antecedentFamilialObserve => [1..*]
+        } 
+
+        class FRLMAntecedentsFamiliaux{
+
+             fr-lm-antecedents-familiaux => [None..None]
+             fr-lm-antecedents-familiaux.sousSection => [None..0]
+             fr-lm-antecedents-familiaux.entree => [1..None]
+             fr-lm-antecedents-familiaux.entree.antecedentsFamiliaux => [1..*]
+        } 
+
+        class FRLMAntecedentsMedicaux{
+
+             fr-lm-antecedents-medicaux => [None..None]
+             fr-lm-antecedents-medicaux.titreSection => [1..None]
+             fr-lm-antecedents-medicaux.sousSection => [None..0]
+             fr-lm-antecedents-medicaux.entree => [1..None]
+             fr-lm-antecedents-medicaux.entree.problemes => [1..*]
+        } 
+
+        class FRLMAuteurAPSR{
+
+             fr-lm-auteur-apsr => [None..None]
+        } 
+
         class FRLMAuteur{
 
              fr-lm-auteur => [1..None]
              fr-lm-auteur.roleFonctionnel => [0..1]
              fr-lm-auteur.horodatageParticipation => [1..1]
              fr-lm-auteur.auteur[x] => [1..1]
+        } 
+
+        class FRLMAutorisationExposition{
+
+             fr-lm-autorisation-exposition => [None..None]
+             fr-lm-autorisation-exposition.code => [1..1]
+             fr-lm-autorisation-exposition.participant => [1..1]
+        } 
+
+        class FRLMAutorisationSubstitution{
+
+             fr-lm-autorisation-substitution => [None..None]
+             fr-lm-autorisation-substitution.typeSubstitution => [1..1]
+             fr-lm-autorisation-substitution.statut => [1..1]
+        } 
+
+        class FRLMBatterieExamensBiologieMedicale{
+
+             fr-lm-batterie-examens-biologie-medicale => [None..None]
+             fr-lm-batterie-examens-biologie-medicale.identifiant => [0..1]
+             fr-lm-batterie-examens-biologie-medicale.codeBatterieExamen => [0..1]
+             fr-lm-batterie-examens-biologie-medicale.statut => [1..1]
+             fr-lm-batterie-examens-biologie-medicale.dateExamen => [0..1]
+             fr-lm-batterie-examens-biologie-medicale.choice[x] => [0..1]
+             fr-lm-batterie-examens-biologie-medicale.laboratoireExecutant => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.auteur => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.participant => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.prelevement => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.resultatElementCliniquePertinent => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.imageIllustrative => [0..*]
+             fr-lm-batterie-examens-biologie-medicale.commentaire => [0..*]
+        } 
+
+        class FRLMCertitude{
+
+             fr-lm-certitude => [None..None]
+             fr-lm-certitude.identifiant => [1..1]
+             fr-lm-certitude.code => [1..1]
+             fr-lm-certitude.statut => [1..1]
+             fr-lm-certitude.date => [1..1]
+             fr-lm-certitude.descriptionNarrative => [1..1]
+             fr-lm-certitude.valeur => [1..1]
+        } 
+
+        class FRLMCodesAbarres{
+
+             fr-lm-codes-a-barres => [None..None]
+             fr-lm-codes-a-barres.sousSection => [None..0]
+             fr-lm-codes-a-barres.entree.imageIllustrative => [0..*]
+        } 
+
+        class FRLMCommentaireER{
+
+             fr-lm-commentaire-er => [None..None]
+             fr-lm-commentaire-er.codeCommentaireER => [1..1]
+             fr-lm-commentaire-er.texteCommentaireER => [1..1]
+             fr-lm-commentaire-er.statutCommentaireER => [1..1]
+             fr-lm-commentaire-er.auteurCommentaireER => [0..1]
+        } 
+
+        class FRLMCommentaireNonCode{
+
+             fr-lm-commentaire-non-code => [None..None]
+             fr-lm-commentaire-non-code.sousSection => [None..0]
+             fr-lm-commentaire-non-code.entree => [None..0]
+        } 
+
+        class FRLMComparaisonExamensImagerie{
+
+             fr-lm-comparaison-examens-imagerie => [None..None]
+             fr-lm-comparaison-examens-imagerie.titreSection => [1..None]
+             fr-lm-comparaison-examens-imagerie.sousSection => [None..0]
+             fr-lm-comparaison-examens-imagerie.entree => [None..0]
+        } 
+
+        class FRLMComplicationsActe{
+
+             fr-lm-complications-acte => [None..None]
+             fr-lm-complications-acte.titreSection => [1..None]
+             fr-lm-complications-acte.sousSection => [None..0]
+             fr-lm-complications-acte.entree => [None..0]
+        } 
+
+        class FRLMConclusionExamenImagerie{
+
+             fr-lm-conclusion-examen-imagerie => [None..None]
+             fr-lm-conclusion-examen-imagerie.titreSection => [1..None]
+             fr-lm-conclusion-examen-imagerie.sousSection => [None..0]
+             fr-lm-conclusion-examen-imagerie.entree => [None..0]
         } 
 
         class FRLMConsentement{
@@ -1121,10 +1380,197 @@ package IG #DDDDDD{
              fr-lm-consentement.statutConsentement => [1..1]
         } 
 
+        class FRLMCorpsDocument{
+
+             fr-lm-corps-document => [None..None]
+             fr-lm-corps-document.allergiesEtHypersensibilites => [0..*]
+             fr-lm-corps-document.antecedentsFamiliaux => [0..*]
+             fr-lm-corps-document.antecedentsMedicaux => [0..*]
+             fr-lm-corps-document.codesAbarres => [0..*]
+             fr-lm-corps-document.commentaireNonCode => [0..*]
+             fr-lm-corps-document.cRBIOChapitre => [0..*]
+             fr-lm-corps-document.cRBIOSousChapitre => [0..*]
+             fr-lm-corps-document.acteImagerie => [0..*]
+             fr-lm-corps-document.addendum => [0..*]
+             fr-lm-corps-document.conclusions => [0..*]
+             fr-lm-corps-document.demandeExamenImagerie => [0..*]
+             fr-lm-corps-document.comparaisonExamensImagerie => [0..*]
+             fr-lm-corps-document.expositionRadiations => [0..*]
+             fr-lm-corps-document.informationsCliniques => [0..*]
+             fr-lm-corps-document.objectCatalog => [0..*]
+             fr-lm-corps-document.directivesAnticipees => [0..*]
+             fr-lm-corps-document.dispensationMedicaments => [0..*]
+             fr-lm-corps-document.dispositifsMedicaux => [0..*]
+             fr-lm-corps-document.documentPDFCopie => [0..*]
+             fr-lm-corps-document.documentsAjoutes => [0..*]
+             fr-lm-corps-document.educationPatient => [0..*]
+             fr-lm-corps-document.effetsIndesirables => [0..*]
+             fr-lm-corps-document.facteursDeRisqueProfessionnelsNonCode => [0..*]
+             fr-lm-corps-document.fonctionsPhysiques => [0..*]
+             fr-lm-corps-document.habitusModeDeVie => [0..*]
+             fr-lm-corps-document.historiqueDesActes => [0..*]
+             fr-lm-corps-document.historiqueDesGrossesses => [0..*]
+             fr-lm-corps-document.planSoins => [0..*]
+             fr-lm-corps-document.pointsDeVigilancesNonCode => [0..*]
+             fr-lm-corps-document.prescriptionDispositifsMedicaux => [0..*]
+             fr-lm-corps-document.prescriptionMedicaments => [0..*]
+             fr-lm-corps-document.problemesActifs => [0..*]
+             fr-lm-corps-document.raisonRecommandationNonCode => [0..*]
+             fr-lm-corps-document.raisonRecommandation => [0..*]
+             fr-lm-corps-document.resultatsLaboratoireBiologieSecondeIntention => [0..*]
+             fr-lm-corps-document.resultatsEvenements => [0..*]
+             fr-lm-corps-document.resultatsExamensNonCode => [0..*]
+             fr-lm-corps-document.resultatsExamens => [0..*]
+             fr-lm-corps-document.resultats => [0..*]
+             fr-lm-corps-document.signesVitaux => [0..*]
+             fr-lm-corps-document.statutDocument => [0..*]
+             fr-lm-corps-document.statutFonctionnel => [0..*]
+             fr-lm-corps-document.traitements => [0..*]
+             fr-lm-corps-document.traitementSortie => [0..*]
+             fr-lm-corps-document.traitementsAdministres => [0..*]
+             fr-lm-corps-document.vaccinations => [0..*]
+             fr-lm-corps-document.resultatsExamenImagerie => [0..*]
+        } 
+
+        class FRLMCRBIOChapitre{
+
+             fr-lm-cr-bio-chapitre => [None..None]
+             fr-lm-cr-bio-chapitre.sousSection => [None..0]
+             fr-lm-cr-bio-chapitre.entree => [None..0]
+             fr-lm-cr-bio-chapitre.choice[x] => [1..*]
+        } 
+
+        class FRLMCRBIOSousChapitre{
+
+             fr-lm-cr-bio-sous-chapitre => [None..None]
+             fr-lm-cr-bio-sous-chapitre.sousSection => [None..0]
+             fr-lm-cr-bio-sous-chapitre.entree => [1..1]
+             fr-lm-cr-bio-sous-chapitre.entree.resultatsExamensBiologieMedicale => [1..1]
+        } 
+
+        class FRLMCriticite{
+
+             fr-lm-criticite => [None..None]
+             fr-lm-criticite.identifiant => [1..1]
+             fr-lm-criticite.code => [1..1]
+             fr-lm-criticite.statut => [1..1]
+             fr-lm-criticite.date => [1..1]
+             fr-lm-criticite.descriptionNarrative => [1..1]
+             fr-lm-criticite.valeur => [1..1]
+        } 
+
+        class FRLMDemandeExamenImagerie{
+
+             fr-lm-demande-examen-imagerie => [None..None]
+             fr-lm-demande-examen-imagerie.titreSection => [1..None]
+             fr-lm-demande-examen-imagerie.sousSection => [None..0]
+             fr-lm-demande-examen-imagerie.entree => [None..0]
+        } 
+
+        class FRLMDemandeExamenOuSuivi{
+
+             fr-lm-demande-examen-ou-suivi => [None..None]
+             fr-lm-demande-examen-ou-suivi.identifiant => [1..1]
+             fr-lm-demande-examen-ou-suivi.typeDemande => [1..1]
+             fr-lm-demande-examen-ou-suivi.description => [1..1]
+             fr-lm-demande-examen-ou-suivi.statutDemande => [1..1]
+             fr-lm-demande-examen-ou-suivi.date => [1..1]
+             fr-lm-demande-examen-ou-suivi.resultat => [0..1]
+             fr-lm-demande-examen-ou-suivi.interpretation => [0..1]
+             fr-lm-demande-examen-ou-suivi.methode => [0..1]
+             fr-lm-demande-examen-ou-suivi.cible => [0..1]
+             fr-lm-demande-examen-ou-suivi.auteur => [0..1]
+        } 
+
         class FRLMDestinatairePrevu{
 
-             fr-lm-destinataire-prevu-document => [None..None]
-             fr-lm-destinataire-prevu-document.destinataire => [0..*]
+             fr-lm-destinataire-prevu => [None..None]
+             fr-lm-destinataire-prevu.destinataire => [0..*]
+        } 
+
+        class FRLMDirectiveAnticipee{
+
+             fr-lm-directive-anticipee => [None..None]
+             fr-lm-directive-anticipee.identifiant => [1..1]
+             fr-lm-directive-anticipee.code => [1..1]
+             fr-lm-directive-anticipee.description => [1..1]
+             fr-lm-directive-anticipee.statut => [1..1]
+             fr-lm-directive-anticipee.date => [1..1]
+             fr-lm-directive-anticipee.valeurDirectiveIdentifiee => [0..1]
+             fr-lm-directive-anticipee.reference => [0..1]
+             fr-lm-directive-anticipee.documentEncapsule => [0..1]
+             fr-lm-directive-anticipee.documentEncapsule.observationMedia => [1..1]
+             fr-lm-directive-anticipee.documentEncapsule.observationMedia.identifiant => [0..1]
+             fr-lm-directive-anticipee.documentEncapsule.observationMedia.documentEncapsuleEncode => [0..1]
+        } 
+
+        class FRLMDirectivesAnticipees{
+
+             fr-lm-directives-anticipees => [None..None]
+             fr-lm-directives-anticipees.titreSection => [1..None]
+             fr-lm-directives-anticipees.sousSection => [None..0]
+             fr-lm-directives-anticipees.entree.directiveAnticipee => [0..*]
+        } 
+
+        class FRLMDispensationMedicaments{
+
+             fr-lm-dispensation-medicaments => [None..None]
+             fr-lm-dispensation-medicaments.titreSection => [1..None]
+             fr-lm-dispensation-medicaments.sousSection => [None..0]
+             fr-lm-dispensation-medicaments.entree => [1..None]
+             fr-lm-dispensation-medicaments.entree.traitementDispense => [1..*]
+             fr-lm-dispensation-medicaments.auteur => [1..1]
+        } 
+
+        class FRLMDispositifMedicalEntree{
+
+             fr-lm-dispositif-medical-entree => [None..None]
+             fr-lm-dispositif-medical-entree.identifiant => [1..*]
+             fr-lm-dispositif-medical-entree.description => [1..1]
+             fr-lm-dispositif-medical-entree.statut => [1..1]
+             fr-lm-dispositif-medical-entree.date => [1..1]
+             fr-lm-dispositif-medical-entree.renouvellement => [0..1]
+             fr-lm-dispositif-medical-entree.quantite => [0..1]
+             fr-lm-dispositif-medical-entree.duree => [0..1]
+             fr-lm-dispositif-medical-entree.performer => [0..*]
+             fr-lm-dispositif-medical-entree.auteur => [0..*]
+             fr-lm-dispositif-medical-entree.dispositifMedical => [1..*]
+             fr-lm-dispositif-medical-entree.affectionLongueDuree => [0..1]
+             fr-lm-dispositif-medical-entree.accidentTravail => [0..1]
+             fr-lm-dispositif-medical-entree.prevention => [0..1]
+             fr-lm-dispositif-medical-entree.nonRemboursable => [0..1]
+        } 
+
+        class FRLMDispositifsMedicaux{
+
+             fr-lm-dispositifs-medicaux => [None..None]
+             fr-lm-dispositifs-medicaux.titreSection => [1..None]
+             fr-lm-dispositifs-medicaux.sousSection => [None..0]
+             fr-lm-dispositifs-medicaux.entree.dispositifsMedicaux => [0..*]
+        } 
+
+        class FRLMDocumentAttache{
+
+             fr-lm-document-attache => [None..None]
+             fr-lm-document-attache.identifiant => [1..1]
+             fr-lm-document-attache.code => [1..1]
+             fr-lm-document-attache.statut => [1..1]
+             fr-lm-document-attache.date => [0..1]
+             fr-lm-document-attache.typeDocumentAttache => [1..1]
+             fr-lm-document-attache.typeDocumentAttache.natureDocument => [1..1]
+             fr-lm-document-attache.documentAttache => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia.identifiant => [1..1]
+             fr-lm-document-attache.documentAttache.observationMedia.documentAttacheEncode => [1..1]
+        } 
+
+        class FRLMDocumentPDFCopie{
+
+             fr-lm-document-pdf-copie => [None..None]
+             fr-lm-document-pdf-copie.titreSection => [1..None]
+             fr-lm-document-pdf-copie.sousSection => [None..0]
+             fr-lm-document-pdf-copie.entree => [1..1]
+             fr-lm-document-pdf-copie.entree.documentAttache => [1..1]
         } 
 
         class FRLMDocumentDeReference{
@@ -1132,6 +1578,101 @@ package IG #DDDDDD{
              fr-lm-document-reference => [None..1]
              fr-lm-document-reference.typeReference => [1..1]
              fr-lm-document-reference.identifiantUniqueDocument => [1..1]
+        } 
+
+        class FRLMDocumentsAjoutes{
+
+             fr-lm-documents-ajoutes => [None..None]
+             fr-lm-documents-ajoutes.sousSection => [None..0]
+             fr-lm-documents-ajoutes.entree.simpleObservation => [0..1]
+             fr-lm-documents-ajoutes.entree.documentAttache => [1..*]
+        } 
+
+        class FRLMDoseAntigene{
+
+             fr-lm-dose-antigene => [None..None]
+             fr-lm-dose-antigene.identifiant => [1..1]
+             fr-lm-dose-antigene.doseAntigene => [1..1]
+             fr-lm-dose-antigene.antigene => [1..1]
+        } 
+
+        class FRLMEchantillonPreleve{
+
+             fr-lm-echantillon-preleve => [None..None]
+             fr-lm-echantillon-preleve.identifiant => [1..1]
+             fr-lm-echantillon-preleve.echantillon => [1..1]
+             fr-lm-echantillon-preleve.echantillon.code => [1..1]
+             fr-lm-echantillon-preleve.echantillon.quantite => [0..1]
+        } 
+
+        class FRLMEducationPatient{
+
+             fr-lm-education-patient => [None..None]
+             fr-lm-education-patient.sousSection => [None..0]
+             fr-lm-education-patient.entree.acte => [0..*]
+             fr-lm-education-patient.entree.observation => [0..*]
+             fr-lm-education-patient.entree.reference => [0..*]
+        } 
+
+        class FRLMEffetIndesirable{
+
+             fr-lm-effet-indesirable => [None..None]
+             fr-lm-effet-indesirable.identifiant => [1..*]
+             fr-lm-effet-indesirable.typeEffetIndesirable => [1..1]
+             fr-lm-effet-indesirable.description => [1..1]
+             fr-lm-effet-indesirable.statut => [1..1]
+             fr-lm-effet-indesirable.dateDebutFin => [0..1]
+             fr-lm-effet-indesirable.valeur => [1..1]
+             fr-lm-effet-indesirable.traitement => [1..1]
+             fr-lm-effet-indesirable.probleme => [0..*]
+             fr-lm-effet-indesirable.imputabiliteEffetIndesirable => [0..1]
+             fr-lm-effet-indesirable.graviteEffetIndesirable => [1..1]
+             fr-lm-effet-indesirable.evolutionEffetIndesirable => [0..1]
+        } 
+
+        class FRLMEffetsIndesirables{
+
+             fr-lm-effets-indesirables => [None..None]
+             fr-lm-effets-indesirables.titreSection => [1..None]
+             fr-lm-effets-indesirables.sousSection => [None..0]
+             fr-lm-effets-indesirables.entree => [1..None]
+             fr-lm-effets-indesirables.entree.effetIndesirable => [1..*]
+        } 
+
+        class FRLMEnRapportAvecAccidentTravail{
+
+             fr-lm-en-rapport-avec-accident-travail => [None..None]
+             fr-lm-en-rapport-avec-accident-travail.identifiant => [1..1]
+             fr-lm-en-rapport-avec-accident-travail.code => [1..1]
+             fr-lm-en-rapport-avec-accident-travail.description => [1..1]
+             fr-lm-en-rapport-avec-accident-travail.statut => [1..1]
+             fr-lm-en-rapport-avec-accident-travail.horodatage => [0..1]
+             fr-lm-en-rapport-avec-accident-travail.resultat => [1..1]
+             fr-lm-en-rapport-avec-accident-travail.auteur => [0..1]
+        } 
+
+        class FRLMEnRapportAvecALD{
+
+             fr-lm-en-rapport-avec-ald => [None..None]
+             fr-lm-en-rapport-avec-ald.identifiant => [1..1]
+             fr-lm-en-rapport-avec-ald.code => [1..1]
+             fr-lm-en-rapport-avec-ald.description => [1..1]
+             fr-lm-en-rapport-avec-ald.statut => [1..1]
+             fr-lm-en-rapport-avec-ald.horodatage => [0..1]
+             fr-lm-en-rapport-avec-ald.resultat => [1..1]
+             fr-lm-en-rapport-avec-ald.auteur => [0..1]
+        } 
+
+        class FRLMEnRapportAvecLaPrevention{
+
+             fr-lm-en-rapport-avec-la-prevention => [None..None]
+             fr-lm-en-rapport-avec-la-prevention.identifiant => [1..1]
+             fr-lm-en-rapport-avec-la-prevention.code => [1..1]
+             fr-lm-en-rapport-avec-la-prevention.description => [1..1]
+             fr-lm-en-rapport-avec-la-prevention.statut => [1..1]
+             fr-lm-en-rapport-avec-la-prevention.horodatage => [0..1]
+             fr-lm-en-rapport-avec-la-prevention.resultat => [1..1]
+             fr-lm-en-rapport-avec-la-prevention.auteur => [0..1]
         } 
 
         class FRLMEnteteDocument{
@@ -1163,6 +1704,63 @@ package IG #DDDDDD{
              fr-lm-entete-document.priseEncharge => [1..1]
         } 
 
+        class FRLMEvaluationComposantN2{
+
+             fr-lm-evaluation-composant-n2 => [None..None]
+             fr-lm-evaluation-composant-n2.identifiant => [1..1]
+             fr-lm-evaluation-composant-n2.codeEvaluation => [1..1]
+             fr-lm-evaluation-composant-n2.description => [1..1]
+             fr-lm-evaluation-composant-n2.statut => [1..1]
+             fr-lm-evaluation-composant-n2.horodatage => [1..1]
+             fr-lm-evaluation-composant-n2.resultat => [1..1]
+             fr-lm-evaluation-composant-n2.interpretation => [0..*]
+             fr-lm-evaluation-composant-n2.commentaire => [0..*]
+        } 
+
+        class FRLMEvaluationComposant{
+
+             fr-lm-evaluation-composant => [None..None]
+             fr-lm-evaluation-composant.identifiant => [1..1]
+             fr-lm-evaluation-composant.codeEvaluation => [1..1]
+             fr-lm-evaluation-composant.description => [1..1]
+             fr-lm-evaluation-composant.statut => [1..1]
+             fr-lm-evaluation-composant.horodatage => [1..1]
+             fr-lm-evaluation-composant.resultat => [1..1]
+             fr-lm-evaluation-composant.interpretation => [0..1]
+             fr-lm-evaluation-composant.composantEvaluation => [0..*]
+             fr-lm-evaluation-composant.commentaire => [0..*]
+        } 
+
+        class FRLMEvaluation{
+
+             fr-lm-evaluation => [None..None]
+             fr-lm-evaluation.identifiant => [1..1]
+             fr-lm-evaluation.typeEvaluation => [1..1]
+             fr-lm-evaluation.description => [1..1]
+             fr-lm-evaluation.statut => [1..1]
+             fr-lm-evaluation.date => [1..1]
+             fr-lm-evaluation.interpretation => [0..1]
+             fr-lm-evaluation.evaluateur => [0..1]
+             fr-lm-evaluation.auteurEvaluation => [0..1]
+             fr-lm-evaluation.responsableEvaluation => [0..1]
+             fr-lm-evaluation.evaluationComposant => [0..*]
+             fr-lm-evaluation.statutEvaluation => [0..1]
+             fr-lm-evaluation.commentaire => [0..*]
+             fr-lm-evaluation.referenceInterne => [0..*]
+        } 
+
+        class FRLMEvenementIndesirablePendantHospitalisation{
+
+             fr-lm-evenement-indesirable-pendant-hospitalisation => [None..None]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.identifiant => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.code => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.description => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.statut => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.date => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.valeur => [1..1]
+             fr-lm-evenement-indesirable-pendant-hospitalisation.auteur => [0..1]
+        } 
+
         class FRLMEvenement{
 
              fr-lm-evenement => [1..None]
@@ -1178,10 +1776,359 @@ package IG #DDDDDD{
              fr-lm-evenement.executantEvenement.executant => [1..1]
         } 
 
+        class FRLMEvenementsIndesirablesSuiteAdministrationDerivesSang{
+
+             fr-lm-evenements-indesirables-suite-administration-derives-sang => [None..None]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.identifiant => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.code => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.description => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.statut => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.date => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.valeur => [1..1]
+             fr-lm-evenements-indesirables-suite-administration-derives-sang.auteur => [0..1]
+        } 
+
+        class FRLMEvolutionEffetIndesirable{
+
+             fr-lm-evolution-effet-indesirable => [None..None]
+             fr-lm-evolution-effet-indesirable.code => [1..1]
+             fr-lm-evolution-effet-indesirable.description => [1..1]
+             fr-lm-evolution-effet-indesirable.statut => [1..1]
+             fr-lm-evolution-effet-indesirable.evolution => [1..1]
+        } 
+
+        class FRLMExamenImagerie{
+
+             fr-lm-examen-imagerie => [None..None]
+             fr-lm-examen-imagerie.uuidInstanceExamen => [1..*]
+             fr-lm-examen-imagerie.codeActe => [1..1]
+             fr-lm-examen-imagerie.description => [0..1]
+             fr-lm-examen-imagerie.dateActe => [0..1]
+             fr-lm-examen-imagerie.serieImagerie => [1..1]
+             fr-lm-examen-imagerie.objectifsReferences => [0..*]
+        } 
+
+        class FRLMExpositionRadiations{
+
+             fr-lm-exposition-radiations => [None..None]
+             fr-lm-exposition-radiations.titreSection => [1..None]
+             fr-lm-exposition-radiations.sousSection => [None..0]
+             fr-lm-exposition-radiations.entree.autorisationExposition => [1..1]
+             fr-lm-exposition-radiations.entree.quantiteExposition => [0..*]
+        } 
+
+        class FRLMFacteursDeRisqueProfessionnelsNonCode{
+
+             fr-lm-facteurs-de-risque-professionnels-non-code => [None..None]
+             fr-lm-facteurs-de-risque-professionnels-non-code.sousSection => [None..0]
+             fr-lm-facteurs-de-risque-professionnels-non-code.entree => [None..0]
+        } 
+
+        class FRLMFonctionsPhysiques{
+
+             fr-lm-fonctions-physiques => [None..None]
+             fr-lm-fonctions-physiques.sousSection => [None..0]
+             fr-lm-fonctions-physiques.entree.groupeQuestionnairesEvaluation => [0..*]
+             fr-lm-fonctions-physiques.entree.evalutation => [0..*]
+        } 
+
+        class FRLMGraviteEffetIndesirable{
+
+             fr-lm-gravite-effet-indesirable => [None..None]
+             fr-lm-gravite-effet-indesirable.code => [1..1]
+             fr-lm-gravite-effet-indesirable.description => [1..1]
+             fr-lm-gravite-effet-indesirable.statut => [1..1]
+             fr-lm-gravite-effet-indesirable.niveauGravite => [1..1]
+        } 
+
+        class FRLMGroupDeQuestionnairesDevaluation{
+
+             fr-lm-group-de-questionnaires-devaluation => [None..None]
+             fr-lm-group-de-questionnaires-devaluation.identifiant => [1..*]
+             fr-lm-group-de-questionnaires-devaluation.code => [1..1]
+             fr-lm-group-de-questionnaires-devaluation.statut => [1..1]
+             fr-lm-group-de-questionnaires-devaluation.horodatage => [1..1]
+             fr-lm-group-de-questionnaires-devaluation.valeur => [1..1]
+             fr-lm-group-de-questionnaires-devaluation.evaluation => [1..*]
+        } 
+
+        class FRLMHabitusModeDeVieEntree{
+
+             fr-lm-habitus-mode-de-vie-entree => [None..None]
+             fr-lm-habitus-mode-de-vie-entree.identifiant => [1..1]
+             fr-lm-habitus-mode-de-vie-entree.code => [1..1]
+             fr-lm-habitus-mode-de-vie-entree.description => [1..1]
+             fr-lm-habitus-mode-de-vie-entree.statut => [1..1]
+             fr-lm-habitus-mode-de-vie-entree.horodatage => [0..1]
+             fr-lm-habitus-mode-de-vie-entree.resultat => [1..1]
+        } 
+
+        class FRLMHabitusModeDeVie{
+
+             fr-lm-habitus-mode-de-vie => [None..None]
+             fr-lm-habitus-mode-de-vie.titreSection => [1..None]
+             fr-lm-habitus-mode-de-vie.sousSection => [None..0]
+             fr-lm-habitus-mode-de-vie.entree.habitusModeDeVieEntry => [0..*]
+        } 
+
+        class FRLMHistoriqueDesActes{
+
+             fr-lm-historique-des-actes => [None..None]
+             fr-lm-historique-des-actes.titreSection => [1..None]
+             fr-lm-historique-des-actes.sousSection => [None..0]
+             fr-lm-historique-des-actes.entree => [1..None]
+             fr-lm-historique-des-actes.entree.actes => [1..*]
+             fr-lm-historique-des-actes.entree.references => [1..*]
+        } 
+
+        class FRLMHistoriqueDesGrossesses{
+
+             fr-lm-historique-des-grossesses => [None..None]
+             fr-lm-historique-des-grossesses.titreSection => [1..None]
+             fr-lm-historique-des-grossesses.sousSection => [None..0]
+             fr-lm-historique-des-grossesses.entree[x] => [1..*]
+        } 
+
+        class FRLMHistoriqueGrossesse{
+
+             fr-lm-historique-grossesse => [None..None]
+             fr-lm-historique-grossesse.identifiant => [1..1]
+             fr-lm-historique-grossesse.code => [1..1]
+             fr-lm-historique-grossesse.statut => [1..1]
+             fr-lm-historique-grossesse.periodeGrossesse => [1..1]
+             fr-lm-historique-grossesse.choice[x] => [1..*]
+        } 
+
+        class FRLMHorsAMM{
+
+             fr-lm-hors-amm => [None..None]
+             fr-lm-hors-amm.identifiant => [1..1]
+             fr-lm-hors-amm.code => [1..1]
+             fr-lm-hors-amm.description => [1..1]
+             fr-lm-hors-amm.statut => [1..1]
+             fr-lm-hors-amm.horodatage => [0..1]
+             fr-lm-hors-amm.resultat => [1..1]
+             fr-lm-hors-amm.auteur => [0..*]
+        } 
+
+        class FRLMIdentificationDeMicroOrganismesMultiresistants{
+
+             fr-lm-identification-de-micro-organismes-multiresistants => [None..None]
+             fr-lm-identification-de-micro-organismes-multiresistants.identifiant => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.code => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.description => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.statut => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.date => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.valeur => [1..1]
+             fr-lm-identification-de-micro-organismes-multiresistants.auteur => [0..1]
+        } 
+
+        class FRLMImageIllustrative{
+
+             fr-lm-image-illustrative => [None..None]
+             fr-lm-image-illustrative.identifiant => [0..*]
+             fr-lm-image-illustrative.langue => [0..1]
+             fr-lm-image-illustrative.imageEncodee => [1..1]
+             fr-lm-image-illustrative.imageEncodee.mediaType => [1..1]
+             fr-lm-image-illustrative.imageEncodee.representation => [1..1]
+             fr-lm-image-illustrative.subject => [0..*]
+             fr-lm-image-illustrative.specimen => [0..*]
+             fr-lm-image-illustrative.performer => [0..*]
+             fr-lm-image-illustrative.auteur => [0..*]
+             fr-lm-image-illustrative.informant => [0..*]
+             fr-lm-image-illustrative.participant => [0..*]
+             fr-lm-image-illustrative.entryRelationship => [0..*]
+             fr-lm-image-illustrative.reference => [0..*]
+             fr-lm-image-illustrative.precondition => [0..*]
+        } 
+
+        class FRLMImputabiliteEffetIndesirable{
+
+             fr-lm-imputabilite-effet-indesirable => [None..None]
+             fr-lm-imputabilite-effet-indesirable.code => [1..1]
+             fr-lm-imputabilite-effet-indesirable.description => [1..1]
+             fr-lm-imputabilite-effet-indesirable.statut => [1..1]
+             fr-lm-imputabilite-effet-indesirable.niveauImputabilite => [1..1]
+        } 
+
+        class FRLMInformantAPSR{
+
+             fr-lm-informant-apsr => [None..None]
+        } 
+
         class FRLMInformateur{
 
              fr-lm-informateur => [None..None]
              fr-lm-informateur.informateur => [1..1]
+        } 
+
+        class FRLMInformationsCliniques{
+
+             fr-lm-informations-cliniques => [None..None]
+             fr-lm-informations-cliniques.titreSection => [1..None]
+             fr-lm-informations-cliniques.sousSection => [None..0]
+             fr-lm-informations-cliniques.entree => [1..None]
+             fr-lm-informations-cliniques.entree.antecedentsMedicaux => [1..1]
+             fr-lm-informations-cliniques.entree.antecedentsChirurgicaux => [1..1]
+             fr-lm-informations-cliniques.entree.contreIndications => [0..1]
+             fr-lm-informations-cliniques.entree.probleme => [0..*]
+             fr-lm-informations-cliniques.entree.dispositifMedical => [0..*]
+             fr-lm-informations-cliniques.entree.statutGrossesse => [0..1]
+             fr-lm-informations-cliniques.entree.administrationProduitDeSante => [0..*]
+             fr-lm-informations-cliniques.entree.sexeClinique => [0..*]
+        } 
+
+        class FRLMInstructionAuPatient{
+
+             fr-lm-instruction-au-patient => [None..None]
+             fr-lm-instruction-au-patient.identifiant => [1..1]
+             fr-lm-instruction-au-patient.codeInstructionPatient => [1..1]
+             fr-lm-instruction-au-patient.descriptionInstructionPatient => [1..1]
+             fr-lm-instruction-au-patient.statutInstructionPatient => [1..1]
+             fr-lm-instruction-au-patient.horodatageinstructionPatient => [0..1]
+             fr-lm-instruction-au-patient.valeurInstructionPatient => [0..*]
+        } 
+
+        class FRLMInstructionsAuDispensateur{
+
+             fr-lm-instructions-au-dispensateur => [None..None]
+             fr-lm-instructions-au-dispensateur.identifiant => [1..1]
+             fr-lm-instructions-au-dispensateur.codeInstructionsDispensateurt => [1..1]
+             fr-lm-instructions-au-dispensateur.descriptionInstructionsDispensateur => [1..1]
+             fr-lm-instructions-au-dispensateur.statutInstructionsDispensateur => [1..1]
+        } 
+
+        class FRLMInstructionsPatient{
+
+             fr-lm-instructions-patient => [None..None]
+             fr-lm-instructions-patient.identifiant => [1..1]
+             fr-lm-instructions-patient.codeInstructionsPatient => [1..1]
+             fr-lm-instructions-patient.descriptionInstructionsPatient => [1..1]
+             fr-lm-instructions-patient.statutInstructionsPatient => [1..1]
+             fr-lm-instructions-patient.instructionPatient => [0..*]
+        } 
+
+        class FRLMIsolatMicrobiologique{
+
+             fr-lm-isolat-microbiologique => [None..None]
+             fr-lm-isolat-microbiologique.identifiant => [0..1]
+             fr-lm-isolat-microbiologique.codeIsolat => [0..1]
+             fr-lm-isolat-microbiologique.statut => [1..1]
+             fr-lm-isolat-microbiologique.dateateResultat => [0..1]
+             fr-lm-isolat-microbiologique.choice[x] => [0..1]
+             fr-lm-isolat-microbiologique.isolatMicrobiologique => [1..1]
+             fr-lm-isolat-microbiologique.isolatMicrobiologique.isolat => [1..1]
+             fr-lm-isolat-microbiologique.isolatMicrobiologique.isolat.identifiant => [1..1]
+             fr-lm-isolat-microbiologique.isolatMicrobiologique.isolat.agent => [1..1]
+             fr-lm-isolat-microbiologique.isolatMicrobiologique.isolat.agent.code => [1..1]
+             fr-lm-isolat-microbiologique.laboratoireExecutant => [0..*]
+             fr-lm-isolat-microbiologique.auteur => [0..*]
+             fr-lm-isolat-microbiologique.valideur => [0..1]
+             fr-lm-isolat-microbiologique.responsable => [0..1]
+             fr-lm-isolat-microbiologique.dispositifAutomatique => [0..*]
+             fr-lm-isolat-microbiologique.batterieExamensDeBiologieMedicale => [0..*]
+             fr-lm-isolat-microbiologique.resultatElementCliniquePertinent => [0..*]
+             fr-lm-isolat-microbiologique.imageIllustrative => [0..*]
+             fr-lm-isolat-microbiologique.commentaire => [0..*]
+        } 
+
+        class FRLMLaboratoireExecutant{
+
+             fr-lm-laboratoire-executant => [None..None]
+             fr-lm-laboratoire-executant.dateExecution => [1..1]
+             fr-lm-laboratoire-executant.executant => [1..1]
+        } 
+
+        class FRLMModaliteEntree{
+
+             fr-lm-modalite-entree => [None..None]
+             fr-lm-modalite-entree.identifiant => [1..1]
+             fr-lm-modalite-entree.code => [1..1]
+             fr-lm-modalite-entree.description => [1..1]
+             fr-lm-modalite-entree.statut => [1..1]
+             fr-lm-modalite-entree.date => [1..1]
+             fr-lm-modalite-entree.modaliteEntree => [1..1]
+             fr-lm-modalite-entree.auteur => [0..*]
+        } 
+
+        class FRLMModaliteSortie{
+
+             fr-lm-modalite-sortie => [None..None]
+             fr-lm-modalite-sortie.identifiant => [1..1]
+             fr-lm-modalite-sortie.code => [1..1]
+             fr-lm-modalite-sortie.description => [1..1]
+             fr-lm-modalite-sortie.statut => [1..1]
+             fr-lm-modalite-sortie.date => [1..1]
+             fr-lm-modalite-sortie.modaliteSortie => [1..1]
+             fr-lm-modalite-sortie.auteur => [0..1]
+        } 
+
+        class FRLMNaissance{
+
+             fr-lm-naissance => [None..None]
+             fr-lm-naissance.identifiant => [1..1]
+             fr-lm-naissance.code => [1..1]
+             fr-lm-naissance.statut => [1..1]
+             fr-lm-naissance.periode => [1..1]
+             fr-lm-naissance.resultat => [1..1]
+             fr-lm-naissance.identificationNouveauNe => [1..1]
+             fr-lm-naissance.observationNaissance => [1..*]
+        } 
+
+        class FRLMNonRemboursable{
+
+             fr-lm-non-remboursable => [None..None]
+             fr-lm-non-remboursable.identifiant => [1..1]
+             fr-lm-non-remboursable.code => [1..1]
+             fr-lm-non-remboursable.description => [1..1]
+             fr-lm-non-remboursable.statut => [1..1]
+             fr-lm-non-remboursable.horodatage => [0..1]
+             fr-lm-non-remboursable.resultat => [1..1]
+             fr-lm-non-remboursable.auteur => [0..*]
+        } 
+
+        class FRLMNotesDispensateur{
+
+             fr-lm-notes-dispensateur => [None..None]
+             fr-lm-notes-dispensateur.identifiant => [0..*]
+             fr-lm-notes-dispensateur.code => [1..1]
+             fr-lm-notes-dispensateur.description => [1..1]
+             fr-lm-notes-dispensateur.statut => [1..1]
+        } 
+
+        class FRLMObjectCatalog{
+
+             fr-lm-object-catalog => [None..None]
+             fr-lm-object-catalog.titreSection => [1..None]
+             fr-lm-object-catalog.sousSection => [None..0]
+             fr-lm-object-catalog.entree.examenImagerie => [0..*]
+        } 
+
+        class FRLMObservationGrossesse{
+
+             fr-lm-observation-grossesse => [None..None]
+             fr-lm-observation-grossesse.identifiant => [1..1]
+             fr-lm-observation-grossesse.code => [1..1]
+             fr-lm-observation-grossesse.description => [1..1]
+             fr-lm-observation-grossesse.statut => [1..1]
+             fr-lm-observation-grossesse.date => [1..1]
+             fr-lm-observation-grossesse.resultat => [1..1]
+        } 
+
+        class FRLMObservation{
+
+             fr-lm-observation => [None..None]
+             fr-lm-observation.observationIdentifiant => [1..1]
+             fr-lm-observation.observationCode => [1..1]
+             fr-lm-observation.observationDescription => [1..1]
+             fr-lm-observation.observationStatut => [1..1]
+             fr-lm-observation.observationDate => [0..1]
+             fr-lm-observation.observationNombreRenouvellements => [0..1]
+             fr-lm-observation.observationResultat => [0..*]
+             fr-lm-observation.observationInterpretation => [0..1]
+             fr-lm-observation.observationMethode => [0..1]
+             fr-lm-observation.observationLocalisationAnatomique => [0..1]
+             fr-lm-observation.observationAuteur => [0..1]
         } 
 
         class FRLMOperateurSaisie{
@@ -1191,6 +2138,45 @@ package IG #DDDDDD{
              fr-lm-operateur-saisie.operateurSaisie => [1..1]
         } 
 
+        class FRLMParticipantAPSR{
+
+             fr-lm-participant-apsr => [None..None]
+             fr-lm-participant-apsr.periodeParticipation => [0..1]
+             fr-lm-participant-apsr.participantRole => [1..1]
+             fr-lm-participant-apsr.participantRole.IdentifiantParticipant => [0..*]
+             fr-lm-participant-apsr.participantRole.adresses => [0..*]
+             fr-lm-participant-apsr.participantRole.coordonneesTelecom => [0..*]
+             fr-lm-participant-apsr.participantRole.identiteParticipant => [0..1]
+             fr-lm-participant-apsr.participantRole.identiteParticipant.nom => [1..*]
+             fr-lm-participant-apsr.participantRole.dispositifAutomatique => [0..1]
+             fr-lm-participant-apsr.participantRole.dispositifAutomatique.categorie => [0..1]
+             fr-lm-participant-apsr.participantRole.dispositifAutomatique.nomModele => [0..1]
+             fr-lm-participant-apsr.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
+        } 
+
+        class FRLMParticipantCorps{
+
+             fr-lm-participant-corps => [None..None]
+             fr-lm-participant-corps.dateEtHeureParticipation => [0..1]
+             fr-lm-participant-corps.participantRole => [1..1]
+             fr-lm-participant-corps.participantRole.IdentifiantParticipant => [0..*]
+             fr-lm-participant-corps.participantRole.typeParticipant => [1..1]
+             fr-lm-participant-corps.participantRole.adresses => [0..*]
+             fr-lm-participant-corps.participantRole.coordonneesTelecom => [0..*]
+             fr-lm-participant-corps.participantRole.identiteParticipant => [0..1]
+             fr-lm-participant-corps.participantRole.identiteParticipant.ProfessionSpecialite => [0..1]
+             fr-lm-participant-corps.participantRole.identiteParticipant.nom => [0..*]
+             fr-lm-participant-corps.participantRole.identiteParticipant.description => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.categorie => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.nomModele => [0..1]
+             fr-lm-participant-corps.participantRole.dispositifAutomatique.nomLogiciel => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.identifiant => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.code => [0..1]
+             fr-lm-participant-corps.participantRole.Organisation.description => [0..1]
+        } 
+
         class FRLMParticipant{
 
              fr-lm-participant => [None..None]
@@ -1198,6 +2184,13 @@ package IG #DDDDDD{
              fr-lm-participant.roleFonctionnel => [0..1]
              fr-lm-participant.dateDebutEtOuFinParticipation => [1..1]
              fr-lm-participant.participant => [1..1]
+        } 
+
+        class FRLMPatientSujetNonHumain{
+
+             fr-lm-patient-sujet-non-humain => [None..None]
+             fr-lm-patient-sujet-non-humain.sujet => [1..1]
+             fr-lm-patient-sujet-non-humain.adresse => [1..1]
         } 
 
         class FRLMPatientUsager{
@@ -1235,6 +2228,20 @@ package IG #DDDDDD{
              fr-lm-patient-usager.personnePhysique.lieuNaissance.nomLieuNaissance => [0..1]
              fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance => [0..1]
              fr-lm-patient-usager.personnePhysique.lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance => [0..1]
+        } 
+
+        class FRLMPerformer{
+
+             fr-lm-performer => [None..None]
+             fr-lm-performer.roleFonctionnel => [0..1]
+             fr-lm-performer.dateExecution => [1..1]
+             fr-lm-performer.executant => [1..1]
+        } 
+
+        class FRLMPeriodeDeRenouvellement{
+
+             fr-lm-periode-de-renouvellement => [None..None]
+             fr-lm-periode-de-renouvellement.periodeRenouvellement => [1..1]
         } 
 
         class FRLMPersonneStructureAuteur{
@@ -1280,6 +2287,68 @@ package IG #DDDDDD{
              fr-lm-personne-structure.structure.cadreExercice => [0..1]
         } 
 
+        class FRLMPlanSoins{
+
+             fr-lm-plan-soins => [None..None]
+             fr-lm-plan-soins.titreSection => [1..None]
+             fr-lm-plan-soins.sousSection => [None..0]
+             fr-lm-plan-soins.entree.actes => [0..*]
+             fr-lm-plan-soins.entree.demandeExamenOuSuivi => [0..*]
+             fr-lm-plan-soins.entree.traitement => [0..*]
+             fr-lm-plan-soins.entree.vaccinRecommande => [0..*]
+             fr-lm-plan-soins.entree.rencontre => [0..*]
+        } 
+
+        class FRLMPointsDeVigilancesNonCode{
+
+             fr-lm-points-de-vigilances-non-code => [None..None]
+             fr-lm-points-de-vigilances-non-code.titreSection => [1..None]
+             fr-lm-points-de-vigilances-non-code.sousSection => [None..0]
+             fr-lm-points-de-vigilances-non-code.entree => [None..0]
+        } 
+
+        class FRLMPrelevement{
+
+             fr-lm-prelevement => [None..None]
+             fr-lm-prelevement.actePrelevement => [0..1]
+             fr-lm-prelevement.datePrelevement => [1..1]
+             fr-lm-prelevement.localisationPrelevement => [0..1]
+             fr-lm-prelevement.perfomer => [0..1]
+             fr-lm-prelevement.echantillonPreleve => [0..1]
+             fr-lm-prelevement.dispositifUtilise => [0..*]
+             fr-lm-prelevement.produitUtilise => [0..*]
+             fr-lm-prelevement.dateReceptionEchantillon => [1..1]
+        } 
+
+        class FRLMPrescriptionDispositifsMedicaux{
+
+             fr-lm-prescription-dispositifs-medicaux => [None..None]
+             fr-lm-prescription-dispositifs-medicaux.sousSection => [None..0]
+             fr-lm-prescription-dispositifs-medicaux.entree => [1..None]
+             fr-lm-prescription-dispositifs-medicaux.entree.dispositifMedical => [1..*]
+             fr-lm-prescription-dispositifs-medicaux.auteur => [0..1]
+        } 
+
+        class FRLMPrescriptionEntree{
+
+             fr-lm-prescription-entree => [None..None]
+             fr-lm-prescription-entree.identifiantPrescription => [1..1]
+             fr-lm-prescription-entree.nombreRenouvellements => [0..1]
+             fr-lm-prescription-entree.quantitePrescription => [0..1]
+             fr-lm-prescription-entree.auteurPrescription => [0..1]
+             fr-lm-prescription-entree.dispensateurPrescription => [0..*]
+             fr-lm-prescription-entree.instructionsAuDispensateur => [0..1]
+        } 
+
+        class FRLMPrescriptionMedicaments{
+
+             fr-lm-prescription-medicaments => [None..None]
+             fr-lm-prescription-medicaments.sousSection => [None..0]
+             fr-lm-prescription-medicaments.entree => [1..None]
+             fr-lm-prescription-medicaments.entree.traitementPrescrit => [1..*]
+             fr-lm-prescription-medicaments.auteur => [0..1]
+        } 
+
         class FRLMPrescription{
 
              fr-lm-prescription => [None..None]
@@ -1310,11 +2379,425 @@ package IG #DDDDDD{
              fr-lm-prise-en-charge.lieuPriseEnCharge.structure.typeStructure => [0..1]
         } 
 
+        class FRLMProbleme{
+
+             fr-lm-probleme => [None..None]
+             fr-lm-probleme.identifiant => [1..1]
+             fr-lm-probleme.type => [1..1]
+             fr-lm-probleme.description => [1..1]
+             fr-lm-probleme.problemeObserve => [1..1]
+             fr-lm-probleme.statut => [1..1]
+             fr-lm-probleme.dateProbleme => [1..1]
+             fr-lm-probleme.statutProbleme => [0..1]
+             fr-lm-probleme.severite => [0..1]
+             fr-lm-probleme.certitude => [0..1]
+             fr-lm-probleme.statutClinique => [0..1]
+             fr-lm-probleme.reference => [0..*]
+             fr-lm-probleme.reference.externalDocument => [1..1]
+             fr-lm-probleme.reference.externalDocument.identifiant => [1..1]
+             fr-lm-probleme.reference.externalDocument.text => [0..1]
+             fr-lm-probleme.reference.externalDocument.text.reference => [1..*]
+             fr-lm-probleme.commentaire => [0..1]
+        } 
+
+        class FRLMProblemesActifs{
+
+             fr-lm-problemes-actifs => [None..None]
+             fr-lm-problemes-actifs.titreSection => [1..None]
+             fr-lm-problemes-actifs.sousSection => [None..0]
+             fr-lm-problemes-actifs.entree => [1..None]
+             fr-lm-problemes-actifs.entree.problemes => [1..*]
+        } 
+
+        class FRLMProduitSante{
+
+             fr-lm-produit-sante => [None..None]
+             fr-lm-produit-sante.medicament => [1..1]
+             fr-lm-produit-sante.medicament.codeProduit => [1..1]
+             fr-lm-produit-sante.medicament.codeProduit.autreCodification => [0..*]
+             fr-lm-produit-sante.medicament.nomProduit => [1..1]
+             fr-lm-produit-sante.medicament.formeGalenique => [0..1]
+             fr-lm-produit-sante.medicament.numeroLot => [0..1]
+             fr-lm-produit-sante.medicament.dateExpiration => [0..1]
+             fr-lm-produit-sante.medicament.conditionnement => [0..1]
+             fr-lm-produit-sante.medicament.equivalentGenerique => [0..*]
+             fr-lm-produit-sante.medicament.substanceActive => [0..*]
+        } 
+
+        class FRLMQuantiteExposition{
+
+             fr-lm-quantite-exposition => [None..None]
+             fr-lm-quantite-exposition.identifiant => [1..1]
+             fr-lm-quantite-exposition.code => [1..1]
+             fr-lm-quantite-exposition.description => [0..1]
+             fr-lm-quantite-exposition.statut => [1..1]
+             fr-lm-quantite-exposition.date => [0..1]
+             fr-lm-quantite-exposition.valeur => [1..1]
+             fr-lm-quantite-exposition.lateralite => [0..1]
+             fr-lm-quantite-exposition.lateralite.topographique => [0..1]
+             fr-lm-quantite-exposition.lateralite.topographique.nom => [1..1]
+             fr-lm-quantite-exposition.lateralite.topographique.valeur => [1..1]
+        } 
+
+        class FRLMQuantiteProduit{
+
+             fr-lm-quantite-produit => [None..None]
+             fr-lm-quantite-produit.independant => [1..1]
+             fr-lm-quantite-produit.quantiteProduit => [1..1]
+        } 
+
+        class FRLMRaisonRecommandationNonCode{
+
+             fr-lm-raison-recommandation-non-code => [None..None]
+             fr-lm-raison-recommandation-non-code.sousSection => [None..0]
+             fr-lm-raison-recommandation-non-code.entree => [None..0]
+        } 
+
+        class FRLMRaisonRecommandation{
+
+             fr-lm-raison-recommandation => [None..None]
+             fr-lm-raison-recommandation.sousSection => [None..0]
+             fr-lm-raison-recommandation.entree => [1..None]
+             fr-lm-raison-recommandation.entree.observation => [1..1]
+             fr-lm-raison-recommandation.entree.problemes => [1..*]
+        } 
+
+        class FRLMRangVaccination{
+
+             fr-lm-rang-vaccination => [None..None]
+             fr-lm-rang-vaccination.identifiantRangVaccination => [0..*]
+             fr-lm-rang-vaccination.codeRangVaccination => [1..1]
+             fr-lm-rang-vaccination.derivationRangVaccination => [0..1]
+             fr-lm-rang-vaccination.descriptionRangVaccination => [0..1]
+             fr-lm-rang-vaccination.statutRangVaccination => [1..1]
+             fr-lm-rang-vaccination.dateRangVaccination => [0..1]
+             fr-lm-rang-vaccination.prioriteRangVaccination => [0..1]
+             fr-lm-rang-vaccination.nombreRenouvellements => [0..1]
+             fr-lm-rang-vaccination.languageRangVaccination => [0..1]
+             fr-lm-rang-vaccination.rangVaccination => [1..1]
+        } 
+
+        class FRLMRechercheDeMicroOrganismes{
+
+             fr-lm-recherche-de-micro-organismes => [None..None]
+             fr-lm-recherche-de-micro-organismes.identifiant => [1..1]
+             fr-lm-recherche-de-micro-organismes.code => [1..1]
+             fr-lm-recherche-de-micro-organismes.description => [1..1]
+             fr-lm-recherche-de-micro-organismes.statut => [1..1]
+             fr-lm-recherche-de-micro-organismes.date => [1..1]
+             fr-lm-recherche-de-micro-organismes.valeur => [1..1]
+             fr-lm-recherche-de-micro-organismes.auteur => [0..1]
+        } 
+
+        class FRLMReferenceInterne{
+
+             fr-lm-reference-interne => [None..None]
+             fr-lm-reference-interne.identifiant => [1..1]
+             fr-lm-reference-interne.code => [1..1]
+        } 
+
+        class FRLMReferenceItemPlanTraitement{
+
+             fr-lm-reference-item-plan-traitement => [None..None]
+             fr-lm-reference-item-plan-traitement.identifiant => [1..1]
+             fr-lm-reference-item-plan-traitement.code => [1..1]
+             fr-lm-reference-item-plan-traitement.produitSante => [1..1]
+             fr-lm-reference-item-plan-traitement.auteur => [0..1]
+             fr-lm-reference-item-plan-traitement.traitementPrescrit => [1..1]
+             fr-lm-reference-item-plan-traitement.reference => [0..1]
+             fr-lm-reference-item-plan-traitement.reference.externalDocument => [1..1]
+             fr-lm-reference-item-plan-traitement.reference.externalDocument.identifiant => [1..1]
+        } 
+
+        class FRLMReferenceItemPrescription{
+
+             fr-lm-reference-item-prescription => [None..None]
+             fr-lm-reference-item-prescription.identifiant => [1..1]
+             fr-lm-reference-item-prescription.code => [1..1]
+             fr-lm-reference-item-prescription.produitSante => [1..1]
+             fr-lm-reference-item-prescription.auteur => [0..1]
+             fr-lm-reference-item-prescription.traitementPrescrit => [0..1]
+             fr-lm-reference-item-prescription.reference => [0..1]
+             fr-lm-reference-item-prescription.reference.externalDocument => [1..1]
+             fr-lm-reference-item-prescription.reference.externalDocument.identifiant => [1..1]
+        } 
+
+        class FRLMReferencesExternes{
+
+             fr-lm-references-externes => [None..None]
+             fr-lm-references-externes.codeReferenceExterne => [1..1]
+             fr-lm-references-externes.blocNarratif => [1..1]
+             fr-lm-references-externes.reference => [1..*]
+             fr-lm-references-externes.reference.externalDocument => [1..1]
+             fr-lm-references-externes.reference.externalDocument.identifiant => [1..1]
+             fr-lm-references-externes.reference.externalDocument.text => [0..1]
+             fr-lm-references-externes.reference.externalDocument.text.reference => [0..1]
+        } 
+
+        class FRLMRencontre{
+
+             fr-lm-rencontre => [None..None]
+             fr-lm-rencontre.identifiant => [1..*]
+             fr-lm-rencontre.typeRencontre => [1..1]
+             fr-lm-rencontre.description => [0..1]
+             fr-lm-rencontre.dateRencontre => [0..1]
+             fr-lm-rencontre.confirmationRencontre => [0..1]
+             fr-lm-rencontre.executant => [0..*]
+             fr-lm-rencontre.auteur => [0..*]
+             fr-lm-rencontre.informateur => [0..*]
+             fr-lm-rencontre.participant => [0..1]
+             fr-lm-rencontre.autreParticipant => [0..1]
+        } 
+
         class FRLMResponsable{
 
              fr-lm-responsable => [1..1]
              fr-lm-responsable.dateHeurePriseResponsabilite => [1..1]
              fr-lm-responsable.responsable => [1..1]
+        } 
+
+        class FRLMResultatExamensBiologieElementCliniquePertinent{
+
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent => [None..None]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.identifiant => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.codeIdentification => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.statut => [1..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.dateResultat => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.valeurResultat => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.interpretation => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.methode => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.choice[x] => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.laboratoireExecutant => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.auteur => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.valideur => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.responsable => [0..1]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.dispositifAutomatique => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.commentaire => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.prelevement => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.resultatsAnterieurs => [0..*]
+             fr-lm-resultat-examens-biologie-element-clinique-pertinent.intervallesReference => [0..1]
+        } 
+
+        class FRLMResultatsEntry{
+
+             fr-lm-resultats-entree => [None..None]
+             fr-lm-resultats-entree.identifiant => [1..1]
+             fr-lm-resultats-entree.code => [1..1]
+             fr-lm-resultats-entree.statut => [1..1]
+             fr-lm-resultats-entree.date => [0..1]
+             fr-lm-resultats-entree.executant => [0..*]
+             fr-lm-resultats-entree.auteur => [0..*]
+             fr-lm-resultats-entree.resultat => [1..*]
+        } 
+
+        class FRLMResultatsEvenements{
+
+             fr-lm-resultats-evenements => [None..None]
+             fr-lm-resultats-evenements.sousSection => [None..0]
+             fr-lm-resultats-evenements.entree.observation => [1..*]
+             fr-lm-resultats-evenements.entree.transfertPatient => [0..*]
+             fr-lm-resultats-evenements.entree.probleme => [0..*]
+        } 
+
+        class FRLMResultatsExamenImagerie{
+
+             fr-lm-resultats-examen-imagerie => [None..None]
+             fr-lm-resultats-examen-imagerie.titreSection => [1..None]
+             fr-lm-resultats-examen-imagerie.sousSection => [None..0]
+             fr-lm-resultats-examen-imagerie.entree => [None..0]
+        } 
+
+        class FRLMResultatsExamensBiologieMedicale{
+
+             fr-lm-resultats-examens-biologie-medicale => [None..None]
+             fr-lm-resultats-examens-biologie-medicale.code => [1..1]
+             fr-lm-resultats-examens-biologie-medicale.statut => [1..1]
+             fr-lm-resultats-examens-biologie-medicale.dateResultat => [0..1]
+             fr-lm-resultats-examens-biologie-medicale.choice[x] => [0..1]
+             fr-lm-resultats-examens-biologie-medicale.laboratoireExecutant => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.auteur => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.valideur => [0..1]
+             fr-lm-resultats-examens-biologie-medicale.responsable => [0..1]
+             fr-lm-resultats-examens-biologie-medicale.dispositifAutomatique => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.prelevement => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.batterieExamensDeBiologieMedicale => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.isolatMicrobiologique => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.resultatElementCliniquePertinent => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.imageIllustrative => [0..*]
+             fr-lm-resultats-examens-biologie-medicale.commentaire => [0..*]
+        } 
+
+        class FRLMResultatsExamensNonCode{
+
+             fr-lm-resultats-examens-non-code => [None..None]
+             fr-lm-resultats-examens-non-code.sousSection => [None..0]
+             fr-lm-resultats-examens-non-code.entree => [None..0]
+        } 
+
+        class FRLMResultatsExamens{
+
+             fr-lm-resultats-examens => [None..None]
+             fr-lm-resultats-examens.sousSection => [None..0]
+             fr-lm-resultats-examens.entree.actes => [1..*]
+             fr-lm-resultats-examens.entree.referencesExternes => [0..*]
+             fr-lm-resultats-examens.entree.observation => [0..*]
+        } 
+
+        class FRLMResultatsLaboratoireBiologieSecondeIntention{
+
+             fr-lm-resultats-laboratoire-biologie-seconde-intention => [None..None]
+             fr-lm-resultats-laboratoire-biologie-seconde-intention.sousSection => [None..0]
+             fr-lm-resultats-laboratoire-biologie-seconde-intention.entree.observation => [0..1]
+             fr-lm-resultats-laboratoire-biologie-seconde-intention.entree.documentAttache => [1..*]
+        } 
+
+        class FRLMResultats{
+
+             fr-lm-resultats => [None..None]
+             fr-lm-resultats.titreSection => [1..None]
+             fr-lm-resultats.sousSection => [None..0]
+             fr-lm-resultats.entree.resultatsEntry => [0..*]
+        } 
+
+        class FRLMSection{
+
+             fr-lm-section => [None..None]
+             fr-lm-section.codeSection => [1..1]
+             fr-lm-section.titreSection => [0..1]
+             fr-lm-section.blocNarratif => [1..1]
+             fr-lm-section.sousSection => [0..*]
+             fr-lm-section.entree => [0..*]
+        } 
+
+        class FRLMSerieImagerie{
+
+             fr-lm-serie-imagerie => [None..None]
+             fr-lm-serie-imagerie.uuidSerie => [1..*]
+             fr-lm-serie-imagerie.code => [1..1]
+             fr-lm-serie-imagerie.description => [0..1]
+             fr-lm-serie-imagerie.date => [0..1]
+             fr-lm-serie-imagerie.instanceSOP => [1..1]
+             fr-lm-serie-imagerie.referenceWado => [1..1]
+             fr-lm-serie-imagerie.referenceWado.iHEInvokeImage => [1..1]
+             fr-lm-serie-imagerie.referenceWado.typeMedia => [1..1]
+             fr-lm-serie-imagerie.referenceWado.reference => [1..1]
+        } 
+
+        class FRLMSeverite{
+
+             fr-lm-severite => [None..None]
+             fr-lm-severite.identifiantSeverite => [1..1]
+             fr-lm-severite.codeSeverite => [1..1]
+             fr-lm-severite.descriptionNarrative => [1..1]
+             fr-lm-severite.statutSeverite => [1..1]
+             fr-lm-severite.niveauSeverite => [1..1]
+        } 
+
+        class FRLMSigneVitalObserve{
+
+             fr-lm-signe-vital-observe => [None..None]
+             fr-lm-signe-vital-observe.identifiant => [1..1]
+             fr-lm-signe-vital-observe.code => [1..1]
+             fr-lm-signe-vital-observe.description => [1..1]
+             fr-lm-signe-vital-observe.statut => [1..1]
+             fr-lm-signe-vital-observe.date => [1..1]
+             fr-lm-signe-vital-observe.observationEffectuee => [1..1]
+             fr-lm-signe-vital-observe.interpretation => [0..1]
+             fr-lm-signe-vital-observe.methodeUtilisee => [0..1]
+             fr-lm-signe-vital-observe.siteObservation => [0..1]
+             fr-lm-signe-vital-observe.auteur => [0..1]
+        } 
+
+        class FRLMSigneVital{
+
+             fr-lm-signe-vital => [None..None]
+             fr-lm-signe-vital.identifiant => [1..1]
+             fr-lm-signe-vital.code => [1..1]
+             fr-lm-signe-vital.statut => [1..1]
+             fr-lm-signe-vital.date => [1..1]
+             fr-lm-signe-vital.auteur => [0..*]
+             fr-lm-signe-vital.signeVital => [1..*]
+        } 
+
+        class FRLMSignesVitaux{
+
+             fr-lm-signes-vitaux => [None..None]
+             fr-lm-signes-vitaux.titreSection => [1..None]
+             fr-lm-signes-vitaux.sousSection => [None..0]
+             fr-lm-signes-vitaux.entree => [1..None]
+             fr-lm-signes-vitaux.entree.signesVitauxEntry => [1..*]
+        } 
+
+        class FRLMSOPInstance{
+
+             fr-lm-sop-instance => [None..None]
+             fr-lm-sop-instance.uuidSOPInstance => [1..*]
+             fr-lm-sop-instance.classeSOP => [1..1]
+             fr-lm-sop-instance.description => [0..1]
+             fr-lm-sop-instance.statut => [1..1]
+             fr-lm-sop-instance.date => [0..1]
+             fr-lm-sop-instance.nombreCadresReferences => [0..1]
+        } 
+
+        class FRLMStatutCliniquePatient{
+
+             fr-lm-statut-clinique-patient => [None..None]
+             fr-lm-statut-clinique-patient.codeStatutCliniquePatient => [1..1]
+             fr-lm-statut-clinique-patient.descriptionNarrative => [1..1]
+             fr-lm-statut-clinique-patient.statutEntree => [1..1]
+             fr-lm-statut-clinique-patient.statutCliniquePatient => [1..1]
+        } 
+
+        class FRLMStatutDocumentEntree{
+
+             fr-lm-statut-document-entree => [None..None]
+             fr-lm-statut-document-entree.identifiant => [1..1]
+             fr-lm-statut-document-entree.code => [1..1]
+             fr-lm-statut-document-entree.description => [1..1]
+             fr-lm-statut-document-entree.statut => [1..1]
+             fr-lm-statut-document-entree.date => [1..1]
+             fr-lm-statut-document-entree.statutDocument => [1..1]
+             fr-lm-statut-document-entree.auteur => [0..1]
+        } 
+
+        class FRLMStatutDocument{
+
+             fr-lm-statut-document => [None..None]
+             fr-lm-statut-document.titreSection => [1..None]
+             fr-lm-statut-document.sousSection => [None..0]
+             fr-lm-statut-document.entree => [1..1]
+             fr-lm-statut-document.entree.statutDocument => [1..1]
+        } 
+
+        class FRLMStatutFonctionnel{
+
+             fr-lm-statut-fonctionnel => [None..None]
+             fr-lm-statut-fonctionnel.titreSection => [1..None]
+             fr-lm-statut-fonctionnel.sousSection => [None..0]
+             fr-lm-statut-fonctionnel.entree.groupeQuestionnairesEvaluation => [0..*]
+             fr-lm-statut-fonctionnel.auteur => [0..*]
+             fr-lm-statut-fonctionnel.informateur => [0..*]
+        } 
+
+        class FRLMStatutProbleme{
+
+             fr-lm-statut-probleme => [None..None]
+             fr-lm-statut-probleme.codeStatutProbleme => [1..1]
+             fr-lm-statut-probleme.descriptionNarrative => [1..1]
+             fr-lm-statut-probleme.statutEntree => [1..1]
+             fr-lm-statut-probleme.statutProbleme => [1..1]
+        } 
+
+        class FRLMStatut{
+
+             fr-lm-statut => [None..None]
+             fr-lm-statut.identifiant => [1..1]
+             fr-lm-statut.code => [1..1]
+             fr-lm-statut.description => [1..1]
+             fr-lm-statut.statut => [1..1]
+             fr-lm-statut.date => [1..1]
+             fr-lm-statut.interpretation => [0..1]
+             fr-lm-statut.auteur => [0..1]
         } 
 
         class FRLMStructureConservation{
@@ -1325,6 +2808,46 @@ package IG #DDDDDD{
              fr-lm-structure-conservation.structure.nomStructure => [0..1]
              fr-lm-structure-conservation.structure.coordonneesTelecom => [0..1]
              fr-lm-structure-conservation.structure.adresse => [0..1]
+        } 
+
+        class FRLMSujetNonHumain{
+
+             fr-lm-sujet-non-humain => [None..None]
+             fr-lm-sujet-non-humain.sujet => [1..1]
+             fr-lm-sujet-non-humain.adresse => [1..1]
+        } 
+
+        class FRLMSujet{
+
+             fr-lm-sujet => [None..None]
+             fr-lm-sujet.lienPatient => [1..1]
+             fr-lm-sujet.adresse => [0..*]
+             fr-lm-sujet.telecom => [0..*]
+             fr-lm-sujet.sujet => [0..*]
+             fr-lm-sujet.sujet.identifiants => [0..*]
+             fr-lm-sujet.sujet.nomPrenom => [0..*]
+             fr-lm-sujet.sujet.nomPrenom.nom => [0..*]
+             fr-lm-sujet.sujet.nomPrenom.prenom => [0..*]
+             fr-lm-sujet.sujet.nomPrenom.civilite => [0..1]
+             fr-lm-sujet.sujet.nomPrenom.titre => [0..1]
+             fr-lm-sujet.sujet.sexeSujet => [0..1]
+             fr-lm-sujet.sujet.dateNaissanceSujet => [0..1]
+             fr-lm-sujet.sujet.sujetDecede => [0..1]
+             fr-lm-sujet.sujet.dateHeureDeces => [0..1]
+             fr-lm-sujet.sujet.naissanceMultiple => [0..1]
+             fr-lm-sujet.sujet.rangNaissance => [0..1]
+        } 
+
+        class FRLMSyntheseMedicaleSejour{
+
+             fr-lm-synthese-medicale-sejour => [None..None]
+             fr-lm-synthese-medicale-sejour.identifiant => [1..1]
+             fr-lm-synthese-medicale-sejour.code => [1..1]
+             fr-lm-synthese-medicale-sejour.description => [1..1]
+             fr-lm-synthese-medicale-sejour.statut => [1..1]
+             fr-lm-synthese-medicale-sejour.date => [1..1]
+             fr-lm-synthese-medicale-sejour.statutDocument => [1..1]
+             fr-lm-synthese-medicale-sejour.auteur => [0..*]
         } 
 
         class FRLMSystemeStructureAuteur{
@@ -1341,6 +2864,210 @@ package IG #DDDDDD{
              fr-lm-systeme-structure-auteur.structure.adresse => [0..*]
              fr-lm-systeme-structure-auteur.structure.coordonneesTelecom => [0..*]
              fr-lm-systeme-structure-auteur.structure.secteurActivite => [0..1]
+        } 
+
+        class FRLMTechniqueImagerie{
+
+             fr-lm-technique-imagerie => [None..None]
+             fr-lm-technique-imagerie.identifiant => [1..1]
+             fr-lm-technique-imagerie.codeActe => [1..1]
+             fr-lm-technique-imagerie.description => [0..1]
+             fr-lm-technique-imagerie.date => [0..1]
+             fr-lm-technique-imagerie.modaliteAcquisition => [1..*]
+             fr-lm-technique-imagerie.lateralite => [0..1]
+             fr-lm-technique-imagerie.lateralite.topographique => [0..1]
+             fr-lm-technique-imagerie.lateralite.topographique.nom => [1..1]
+             fr-lm-technique-imagerie.lateralite.topographique.valeur => [1..1]
+             fr-lm-technique-imagerie.participant => [0..1]
+        } 
+
+        class FRLMTraitementDispense{
+
+             fr-lm-traitement-dispense => [None..None]
+             fr-lm-traitement-dispense.identifiant => [1..1]
+             fr-lm-traitement-dispense.code => [0..1]
+             fr-lm-traitement-dispense.description => [1..1]
+             fr-lm-traitement-dispense.quantite => [1..1]
+             fr-lm-traitement-dispense.medicamentDelivre => [1..1]
+             fr-lm-traitement-dispense.referencePrescription => [0..1]
+             fr-lm-traitement-dispense.traitement => [0..1]
+             fr-lm-traitement-dispense.instructionsPatient => [0..1]
+             fr-lm-traitement-dispense.notesDispensateur => [0..1]
+             fr-lm-traitement-dispense.substitution => [0..1]
+        } 
+
+        class FRLMTraitementPrescritSubordonne{
+
+             fr-lm-traitement-prescrit-subordonne => [None..None]
+             fr-lm-traitement-prescrit-subordonne.identifiant => [1..*]
+             fr-lm-traitement-prescrit-subordonne.description => [1..1]
+             fr-lm-traitement-prescrit-subordonne.status => [1..1]
+             fr-lm-traitement-prescrit-subordonne.frequenceAdministration => [0..1]
+             fr-lm-traitement-prescrit-subordonne.dose => [0..1]
+             fr-lm-traitement-prescrit-subordonne.rythmeAdministration[x] => [0..1]
+             fr-lm-traitement-prescrit-subordonne.produitSante => [1..1]
+             fr-lm-traitement-prescrit-subordonne.precondition => [0..*]
+        } 
+
+        class FRLMTraitementPrescrit{
+
+             fr-lm-traitement-prescrit => [None..None]
+             fr-lm-traitement-prescrit.identifiant => [1..*]
+             fr-lm-traitement-prescrit.code => [0..1]
+             fr-lm-traitement-prescrit.description => [1..1]
+             fr-lm-traitement-prescrit.status => [1..1]
+             fr-lm-traitement-prescrit.dureeTraitement => [0..1]
+             fr-lm-traitement-prescrit.frequenceAdministration => [0..1]
+             fr-lm-traitement-prescrit.nombreRenouvellement => [0..1]
+             fr-lm-traitement-prescrit.voieAdministration => [0..1]
+             fr-lm-traitement-prescrit.regionAnatomique => [0..*]
+             fr-lm-traitement-prescrit.dose => [0..1]
+             fr-lm-traitement-prescrit.rythmeAdministration[x] => [0..1]
+             fr-lm-traitement-prescrit.doseMaximale[x] => [0..*]
+             fr-lm-traitement-prescrit.produitSante => [1..1]
+             fr-lm-traitement-prescrit.prescripteur => [0..1]
+             fr-lm-traitement-prescrit.auteur => [0..1]
+             fr-lm-traitement-prescrit.motifTraitement => [0..*]
+             fr-lm-traitement-prescrit.traitementPrescritSubordonnee => [0..*]
+             fr-lm-traitement-prescrit.referenceItemPlanTraitement => [0..*]
+             fr-lm-traitement-prescrit.instructionsPatient => [0..1]
+             fr-lm-traitement-prescrit.instructionsDispensateur => [0..1]
+             fr-lm-traitement-prescrit.quantiteProduit => [0..1]
+             fr-lm-traitement-prescrit.autorisationSubstitution => [1..1]
+             fr-lm-traitement-prescrit.periodeRenouvellement => [0..1]
+             fr-lm-traitement-prescrit.enRapportAvecALD => [1..1]
+             fr-lm-traitement-prescrit.enRapportAvecAccidentTravail => [1..1]
+             fr-lm-traitement-prescrit.enRapportAvecPrevention => [1..1]
+             fr-lm-traitement-prescrit.nonRemboursable => [1..1]
+             fr-lm-traitement-prescrit.horsAMM => [1..1]
+             fr-lm-traitement-prescrit.referencePrescription => [0..*]
+             fr-lm-traitement-prescrit.precondition => [0..1]
+        } 
+
+        class FRLMTraitementSortie{
+
+             fr-lm-traitement-sortie => [None..None]
+             fr-lm-traitement-sortie.sousSection => [None..0]
+             fr-lm-traitement-sortie.entree => [1..None]
+             fr-lm-traitement-sortie.entree.traitementSortie => [1..*]
+        } 
+
+        class FRLMTraitementSubordonne{
+
+             fr-lm-traitement-subordonne => [None..None]
+             fr-lm-traitement-subordonne.identifiantTraitement => [1..*]
+             fr-lm-traitement-subordonne.descriptionTraitement => [1..1]
+             fr-lm-traitement-subordonne.statutTraitement => [1..1]
+             fr-lm-traitement-subordonne.doseAadministrer => [0..1]
+             fr-lm-traitement-subordonne.rythmeAdministration => [0..1]
+             fr-lm-traitement-subordonne.medicamentTraitement => [1..1]
+             fr-lm-traitement-subordonne.preconditionTraitement => [0..*]
+        } 
+
+        class FRLMTraitement{
+
+             fr-lm-traitement => [None..None]
+             fr-lm-traitement.identifiant => [1..*]
+             fr-lm-traitement.code => [0..1]
+             fr-lm-traitement.note => [1..1]
+             fr-lm-traitement.status => [1..1]
+             fr-lm-traitement.occurancePeriod => [0..1]
+             fr-lm-traitement.occuranceDateTim => [0..1]
+             fr-lm-traitement.dosage => [0..1]
+             fr-lm-traitement.dosage.route => [0..1]
+             fr-lm-traitement.dosage.site => [0..*]
+             fr-lm-traitement.dosage.dose => [0..1]
+             fr-lm-traitement.dosage.rate[x] => [0..1]
+             fr-lm-traitement.medicament => [1..1]
+             fr-lm-traitement.reason => [0..*]
+             fr-lm-traitement.prescription => [0..*]
+             fr-lm-traitement.subordinateTreatment => [0..*]
+             fr-lm-traitement.instructionsPatient => [0..1]
+             fr-lm-traitement.precondition => [0..1]
+        } 
+
+        class FRLMTraitementsAdministres{
+
+             fr-lm-traitements-administres => [None..None]
+             fr-lm-traitements-administres.sousSection => [None..0]
+             fr-lm-traitements-administres.entree => [1..None]
+             fr-lm-traitements-administres.entree.traitementAdministre => [1..*]
+        } 
+
+        class FRLMTraitements{
+
+             fr-lm-traitements => [None..None]
+             fr-lm-traitements.titreSection => [1..None]
+             fr-lm-traitements.sousSection => [None..0]
+             fr-lm-traitements.entree => [1..None]
+             fr-lm-traitements.entree.traitements => [1..*]
+        } 
+
+        class FRLMTransfertDuPatient{
+
+             fr-lm-transfert-du-patient => [None..None]
+             fr-lm-transfert-du-patient.identifiant => [1..1]
+             fr-lm-transfert-du-patient.code => [1..1]
+             fr-lm-transfert-du-patient.description => [1..1]
+             fr-lm-transfert-du-patient.statut => [1..1]
+             fr-lm-transfert-du-patient.dateTransfert => [0..1]
+             fr-lm-transfert-du-patient.destination => [0..1]
+        } 
+
+        class FRLMTransfusionDeProduitsSanguins{
+
+             fr-lm-transfusion-de-produits-sanguins => [None..None]
+             fr-lm-transfusion-de-produits-sanguins.identifiant => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.code => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.description => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.statut => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.date => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.transfusionProduitSanguin => [1..1]
+             fr-lm-transfusion-de-produits-sanguins.auteur => [0..1]
+        } 
+
+        class FRLMVaccinRecommande{
+
+             fr-lm-vaccin-recommande => [None..None]
+             fr-lm-vaccin-recommande.identifiantVaccinRecommande => [1..1]
+             fr-lm-vaccin-recommande.codeVaccinRecommande => [1..1]
+             fr-lm-vaccin-recommande.descriptionNarrativeVaccinRecommande => [1..1]
+             fr-lm-vaccin-recommande.statutVaccinRecommande => [1..1]
+             fr-lm-vaccin-recommande.periodeVaccination => [1..1]
+             fr-lm-vaccin-recommande.voieAdministration => [0..1]
+             fr-lm-vaccin-recommande.regionAnatomique => [0..*]
+             fr-lm-vaccin-recommande.doseAdministree => [0..1]
+             fr-lm-vaccin-recommande.vaccin => [1..1]
+             fr-lm-vaccin-recommande.prescription => [0..1]
+             fr-lm-vaccin-recommande.rangVaccination => [0..1]
+             fr-lm-vaccin-recommande.commentaire => [0..1]
+        } 
+
+        class FRLMVaccination{
+
+             fr-lm-vaccination => [None..None]
+             fr-lm-vaccination.identifiant => [1..1]
+             fr-lm-vaccination.code => [1..1]
+             fr-lm-vaccination.description => [1..1]
+             fr-lm-vaccination.statut => [1..1]
+             fr-lm-vaccination.dateVaccination => [1..1]
+             fr-lm-vaccination.voieAadministration => [0..1]
+             fr-lm-vaccination.regionAnatomique => [0..*]
+             fr-lm-vaccination.doseVaccination => [0..1]
+             fr-lm-vaccination.vaccin => [1..1]
+             fr-lm-vaccination.prescription => [0..1]
+             fr-lm-vaccination.rangVaccination => [0..1]
+             fr-lm-vaccination.reaction => [0..*]
+             fr-lm-vaccination.commentaire => [0..1]
+             fr-lm-vaccination.DoseAntigene => [0..*]
+        } 
+
+        class FRLMVaccinations{
+
+             fr-lm-vaccinations => [None..None]
+             fr-lm-vaccinations.titreSection => [1..None]
+             fr-lm-vaccinations.sousSection => [None..0]
+             fr-lm-vaccinations.entree.vaccinations => [1..*]
         } 
 
         class FRLMValidateur{
@@ -2438,6 +4165,10 @@ package IG #DDDDDD{
 
 package "Ressources de base" #palegreen {
 
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedical
+
  class "vitalspanel" as  class48cc96dc575369fad67347d24c304310 
 
     class48cc96dc575369fad67347d24c304310 --> FRObservationVitalSignsPanelDocument
@@ -2676,7 +4407,103 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMAccidentsTransfusionnels
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMActeImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMActeSubstitution
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMActe
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMAddendum
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAdministrationDeDerivesDuSang
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAdministrationProduitDeSante
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAllergieOuHypersensibilite
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMAllergiesEtHypersensibilites
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAntecedentFamilialObserve
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAntecedentsFamiliauxEntree
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMAntecedentsFamiliaux
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMAntecedentsMedicaux
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur" as  classaa1c8ded8b4cfe416db8f3c908c98d1e 
+
+    classaa1c8ded8b4cfe416db8f3c908c98d1e --> FRLMAuteurAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAutorisationExposition
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMAutorisationSubstitution
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMBatterieExamensBiologieMedicale
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCertitude
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMCodesAbarres
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCommentaireER
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMCommentaireNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMComparaisonExamensImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMComplicationsActe
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMConclusionExamenImagerie
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2684,11 +4511,99 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMCorpsDocument
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMCRBIOChapitre
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMCRBIOSousChapitre
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMCriticite
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDemandeExamenImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDemandeExamenOuSuivi
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMDestinatairePrevu
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMDirectiveAnticipee
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDirectivesAnticipees
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDispensationMedicaments
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedicalEntree
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDispositifsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDocumentAttache
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDocumentPDFCopie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMDocumentDeReference
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMDocumentsAjoutes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDoseAntigene
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEchantillonPreleve
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMEducationPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEffetIndesirable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMEffetsIndesirables
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEnRapportAvecAccidentTravail
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEnRapportAvecALD
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEnRapportAvecLaPrevention
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2696,11 +4611,155 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMEvaluationComposantN2
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvaluationComposant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvaluation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvenementIndesirablePendantHospitalisation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMEvenement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMEvenementsIndesirablesSuiteAdministrationDerivesSang
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMEvolutionEffetIndesirable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMExamenImagerie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMExpositionRadiations
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMFacteursDeRisqueProfessionnelsNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMFonctionsPhysiques
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMGraviteEffetIndesirable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMGroupDeQuestionnairesDevaluation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMHabitusModeDeVieEntree
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMHabitusModeDeVie
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMHistoriqueDesActes
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMHistoriqueDesGrossesses
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMHistoriqueGrossesse
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMHorsAMM
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMIdentificationDeMicroOrganismesMultiresistants
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMImageIllustrative
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMImputabiliteEffetIndesirable
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur" as  class1d508046db7453b6825783418f4da64b 
+
+    class1d508046db7453b6825783418f4da64b --> FRLMInformantAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMInformateur
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMInformationsCliniques
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMInstructionAuPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMInstructionsAuDispensateur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMInstructionsPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMIsolatMicrobiologique
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMLaboratoireExecutant
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMModaliteEntree
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMModaliteSortie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMNaissance
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMNonRemboursable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMNotesDispensateur
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMObjectCatalog
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMObservationGrossesse
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMObservation
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2708,11 +4767,31 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMParticipantAPSR
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMParticipantCorps
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMParticipant
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMPatientSujetNonHumain
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMPatientUsager
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPerformer
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPeriodeDeRenouvellement
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2721,6 +4800,30 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> FRLMPersonneStructure
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMPlanSoins
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMPointsDeVigilancesNonCode
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPrelevement
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMPrescriptionDispositifsMedicaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMPrescriptionEntree
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMPrescriptionMedicaments
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2732,7 +4835,151 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMProbleme
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMProblemesActifs
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMProduitSante
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMQuantiteExposition
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMQuantiteProduit
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMRaisonRecommandationNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMRaisonRecommandation
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMRangVaccination
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMRechercheDeMicroOrganismes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferenceInterne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferenceItemPlanTraitement
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferenceItemPrescription
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMReferencesExternes
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMRencontre
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMResponsable
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMResultatExamensBiologieElementCliniquePertinent
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMResultatsEntry
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsEvenements
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsExamenImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMResultatsExamensBiologieMedicale
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsExamensNonCode
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsExamens
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultatsLaboratoireBiologieSecondeIntention
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMResultats
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSection
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSerieImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSeverite
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSigneVitalObserve
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSigneVital
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMSignesVitaux
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSOPInstance
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatutCliniquePatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatutDocumentEntree
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMStatutDocument
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMStatutFonctionnel
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatutProbleme
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMStatut
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
@@ -2740,7 +4987,75 @@ package "Ressources de base" #palegreen {
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
+    class095a1b43effec73955e31e790438de49 --> FRLMSujetNonHumain
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSujet
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMSyntheseMedicaleSejour
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
     class095a1b43effec73955e31e790438de49 --> FRLMSystemeStructureAuteur
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTechniqueImagerie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTraitementDispense
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTraitementPrescritSubordonne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTraitementPrescrit
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMTraitementSortie
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTraitementSubordonne
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTraitement
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMTraitementsAdministres
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMTraitements
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTransfertDuPatient
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMTransfusionDeProduitsSanguins
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMVaccinRecommande
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMVaccination
+
+ class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
+
+    class5dabea989fe22a905d8f89cc210527f2 --> FRLMVaccinations
 
  class "Base" as  class095a1b43effec73955e31e790438de49 
 

@@ -9,14 +9,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRLMInformateur |
+| Draft as of 2025-12-04 | *Computable Name*:FRLMInformateur |
 
  
 Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d’urgence, aidant, aidé. 
 
 **Utilisations:**
 
-* Utiliser ce Modèle logique: [Modèle logique métier - FR LM En-tête document](StructureDefinition-fr-lm-entete-document.md)
+* Dérivé de ce Modèle logique: [Modèle logique métier - FR LM Informant APSR](StructureDefinition-fr-lm-informant-apsr.md)
+* Utiliser ce Modèle logique: [Modèle logique métier - FR LM Acte](StructureDefinition-fr-lm-acte.md), [Modèle logique métier - FR LM En-tête document](StructureDefinition-fr-lm-entete-document.md), [Modèle logique métier - FR LM Rencontre](StructureDefinition-fr-lm-rencontre.md) and [Modèle logique métier - FR LM Statut fonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-informateur)
 
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-informateur.cs
   "name" : "FRLMInformateur",
   "title" : "Modèle logique métier - FR LM Informateur",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

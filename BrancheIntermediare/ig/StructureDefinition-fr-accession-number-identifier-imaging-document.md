@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-accession-number-identifier-imaging-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRAccessionNumberIdentifierImagingDocument |
+| Draft as of 2025-12-04 | *Computable Name*:FRAccessionNumberIdentifierImagingDocument |
 
  
 DataType définissant l’Accession Number d’une demande d’examen d’imagerie. Il s’agit d’un identifiant unique attribué à chaque demande d’examen. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-accession-number-
   "name" : "FRAccessionNumberIdentifierImagingDocument",
   "title" : "FR Accession Number Identifier Imaging Document",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

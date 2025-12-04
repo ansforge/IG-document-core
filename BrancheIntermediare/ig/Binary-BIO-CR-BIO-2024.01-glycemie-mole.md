@@ -1,10 +1,10 @@
-# BIO-CR-BIO_2024.01_Glycemie_mole - ANS IG document core v0.1.0
+#  - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **BIO-CR-BIO_2024.01_Glycemie_mole**
+* ****
 
-## Example Binary: BIO-CR-BIO_2024.01_Glycemie_mole
+## Binary: 
 
 ```
 

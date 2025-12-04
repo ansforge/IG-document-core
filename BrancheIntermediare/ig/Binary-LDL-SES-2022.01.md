@@ -1,10 +1,10 @@
-# LDL-SES_2022.01 - ANS IG document core v0.1.0
+#  - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **LDL-SES_2022.01**
+* ****
 
-## Example Binary: LDL-SES_2022.01
+## Binary: 
 
 ```
 

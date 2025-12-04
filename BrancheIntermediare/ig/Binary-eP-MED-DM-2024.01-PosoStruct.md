@@ -1,10 +1,10 @@
-# eP-MED-DM_2024.01_PosoStruct - ANS IG document core v0.1.0
+#  - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **eP-MED-DM_2024.01_PosoStruct**
+* ****
 
-## Example Binary: eP-MED-DM_2024.01_PosoStruct
+## Binary: 
 
 ```
 

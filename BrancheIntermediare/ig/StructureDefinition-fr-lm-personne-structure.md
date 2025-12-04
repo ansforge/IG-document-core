@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRLMPersonneStructure |
+| Draft as of 2025-12-04 | *Computable Name*:FRLMPersonneStructure |
 
  
 Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). 
 
 **Utilisations:**
 
-* Utiliser ce Modèle logique: [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu-document.md), [Modèle logique métier - FR LM Évènement](StructureDefinition-fr-lm-evenement.md), [Modèle logique métier - FR LM Informateur](StructureDefinition-fr-lm-informateur.md), [Modèle logique métier - FR LM Opérateur de saisie](StructureDefinition-fr-lm-operateur-saisie.md)...Show 4 more,[Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant.md),[Modèle logique métier - FR LM Prise en charge](StructureDefinition-fr-lm-prise-en-charge.md),[Modèle logique métier - FR LM Responsable](StructureDefinition-fr-lm-responsable.md)and[Modèle logique métier - FR LM Validateur](StructureDefinition-fr-lm-validateur.md)
+* Utiliser ce Modèle logique: [Modèle logique métier - FR LM Acte](StructureDefinition-fr-lm-acte.md), [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu.md), [Modèle logique métier - FR LM Dispositif médical](StructureDefinition-fr-lm-dispositif-medical-entree.md), [Modèle logique métier - FR LM Evaluation](StructureDefinition-fr-lm-evaluation.md)...Show 12 more,[Modèle logique métier - FR LM Évènement](StructureDefinition-fr-lm-evenement.md),[Modèle logique métier - FR LM Informateur](StructureDefinition-fr-lm-informateur.md),[Modèle logique métier - FR LM Laboratoire exécutant](StructureDefinition-fr-lm-laboratoire-executant.md),[Modèle logique métier - FR LM Opérateur de saisie](StructureDefinition-fr-lm-operateur-saisie.md),[Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant.md),[Modèle logique métier - FR LM Performer](StructureDefinition-fr-lm-performer.md),[Modèle logique métier - FR LM Prélèvement](StructureDefinition-fr-lm-prelevement.md),[Modèle logique métier - FR LM Prescription](StructureDefinition-fr-lm-prescription-entree.md),[Modèle logique métier - FR LM Prise en charge](StructureDefinition-fr-lm-prise-en-charge.md),[Modèle logique métier - FR LM Rencontre](StructureDefinition-fr-lm-rencontre.md),[Modèle logique métier - FR LM Responsable](StructureDefinition-fr-lm-responsable.md)and[Modèle logique métier - FR LM Validateur](StructureDefinition-fr-lm-validateur.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-personne-structure)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-personne-struc
   "name" : "FRLMPersonneStructure",
   "title" : "Modèle logique métier - FR LM Personne et/ou Structure",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

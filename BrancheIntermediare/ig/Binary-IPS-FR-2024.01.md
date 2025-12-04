@@ -1,10 +1,10 @@
-# IPS-FR - ANS IG document core v0.1.0
+#  - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **IPS-FR**
+* ****
 
-## Example Binary: IPS-FR
+## Binary: 
 
 ```
 

@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-04 | *Computable Name*:ExampleIG |
 
  **Guide de mise en œuvre des documents dématérialisés produits en France dans le domaine sanitaire et le domaine médico-social.**
  Implementation guides of dematerialized health and medico-social documents produced in France. 
@@ -77,7 +77,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRAccessionNumberIdentifierImagingDocument](StructureDefinition-fr-accession-number-identifier-imaging-document.md)...Show 163 more,[FRActorExtension](StructureDefinition-fr-actor-extension.md),[FRAdvanceDirectiveDocument](StructureDefinition-fr-advance-directive-document.md),[FRAdverseEventDocument](StructureDefinition-fr-adverse-event-document.md),[FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md),[FRAuthorTimeExtension](StructureDefinition-fr-author-time-extension.md),[FRBundleDocument](StructureDefinition-fr-bundle-document.md),[FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md),[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRCarePlanDocument](StructureDefinition-fr-care-plan-document.md),[FRComparisonStudiesExtension](StructureDefinition-fr-comparison-studies-extension.md),[FRCompositionDocument](StructureDefinition-fr-composition-document.md),[FRConditionDocument](StructureDefinition-fr-condition-document.md),[FRDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FRDeviceRequestDocument](StructureDefinition-fr-device-request-document.md),[FRDeviceUseStatementDocument](StructureDefinition-fr-device-use-statement-document.md),[FRDiagnosticReportBIOChapterDocument](StructureDefinition-fr-diagnostic-report-bio-chapter-document.md),[FRDiagnosticReportDocument](StructureDefinition-fr-diagnostic-report-document.md),[FRDiagnosticReportImagingDocument](StructureDefinition-fr-diagnostic-report-imaging-document.md),[FRDocumentReferenceDocument](StructureDefinition-fr-document-reference-document.md),[FREducationPatientExtension](StructureDefinition-fr-education-patient-extension.md),[FREncounterCareDocument](StructureDefinition-fr-encounter-care-document.md),[FREncounterDocument](StructureDefinition-fr-encounter-document.md),[FREndpointWadoDocument](StructureDefinition-fr-endpoint-wado-document.md),[FRFamilyMemberHistoryBodySiteExtension](StructureDefinition-fr-family-member-history-body-site-extension.md),[FRFamilyMemberHistoryDocument](StructureDefinition-fr-family-member-history-document.md),[FRHumanNameDocument](StructureDefinition-fr-human-name-document.md),[FRImagingProcedureExtension](StructureDefinition-fr-imaging-procedure-extension.md),[FRImagingStudyDocument](StructureDefinition-fr-imaging-study-document.md),[FRImmunizationDocument](StructureDefinition-fr-immunization-document.md),[FRImmunizationRecommendationDocument](StructureDefinition-fr-immunization-recommendation-document.md),[FRImmunizationTypeExtension](StructureDefinition-fr-immunization-type-extension.md),[FRInterpretationExtension](StructureDefinition-fr-interpretation-extension.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu-document.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRLocationDocument](StructureDefinition-fr-location-document.md),[FRMediaDocument](StructureDefinition-fr-media-document.md),[FRMedicationAdministrationDocument](StructureDefinition-fr-medication-administration-document.md),[FRMedicationAdministrationSequenceExtension](StructureDefinition-fr-medication-administration-sequence-extension.md),[FRMedicationDispenseDocument](StructureDefinition-fr-medication-dispense-document.md),[FRMedicationDocument](StructureDefinition-fr-medication-document.md),[FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md),[FRMedicationRequestOutOfNomenclatureExtension](StructureDefinition-fr-medication-request-out-of-nomenclature-extension.md),[FRMedicationStatementDocument](StructureDefinition-fr-medication-statement-document.md),[FRMedicationsCombinaisonDocument](StructureDefinition-fr-medications-combinaison-document.md),[FRMethodExtension](StructureDefinition-fr-method-extension.md),[FRNotCoveredExtension](StructureDefinition-fr-not-covered-extension.md),[FRNumberOfFramesExtension](StructureDefinition-fr-number-of-frames-extension.md),[FRObservationAdministrationBloodDerivativesDocument](StructureDefinition-fr-observation-administration-blood-derivatives-document.md),[FRObservationAntenatalTestingAndSurveillanceBatteryDocument](StructureDefinition-fr-observation-antenatal-testing-surveillance-battery-document.md),[FRObservationBirthEventDocument](StructureDefinition-fr-observation-birth-event-document.md),[FRObservationBloodProductTransfusionDocument](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationLaboratoryReportResultsDocument](StructureDefinition-fr-observation-laboratory-report-results-document.md),[FRObservationMedicalSummaryDocument](StructureDefinition-fr-observation-medical-summary-document.md),[FRObservationMicroorganismDetectionDocument](StructureDefinition-fr-observation-microorganism-detection-document.md),[FRObservationPainScoreDocument](StructureDefinition-fr-observation-pain-score-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationPregnancyHistoryDocument](StructureDefinition-fr-observation-pregnancy-history-document.md),[FRObservationRadiationExposureDocument](StructureDefinition-fr-observation-radiation-exposure-document.md),[FRObservationResultDocument](StructureDefinition-fr-observation-result-document.md),[FRObservationSocialHistoryDocument](StructureDefinition-fr-observation-social-history-document.md),[FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md),[FRObservationSurveyPannelDocument](StructureDefinition-fr-observation-survey-pannel-document.md),[FRObservationTransfusionAccidentsDocument](StructureDefinition-fr-observation-transfusion-accidents-document.md),[FRObservationVitalSignsDocument](StructureDefinition-fr-observation-vital-signs-document.md),[FRObservationVitalSignsPanelDocument](StructureDefinition-fr-Observation-vital-signs-panel-document.md),[FRObservationWorkRelatedAccidentDocument](StructureDefinition-fr-observation-work-related-accident-document.md),[FROrganizationDocument](StructureDefinition-fr-organization-document.md),[FRPatientDocument](StructureDefinition-fr-patient-document.md),[FRPatientHistoryExtension](StructureDefinition-fr-patient-history-extension.md),[FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FRPerformerEventExtension](StructureDefinition-fr-performer-event-extension.md),[FRPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FRPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FRPregnancyHistoryDocument](StructureDefinition-fr-pregnancy-history-document.md),[FRProcedureActDocument](StructureDefinition-fr-procedure-act-document.md),[FRProcedureDifficultyExtension](StructureDefinition-fr-procedure-difficulty-extension.md),[FRProcedureImagingDocument](StructureDefinition-fr-procedure-imaging-document.md),[FRProcedurePriorityExtension](StructureDefinition-fr-procedure-priority-extension.md),[FRRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[FRSeviceRequestDocument](StructureDefinition-fr-service-request-document.md),[FRSpecimenDocument](StructureDefinition-fr-specimen-document.md),[FRStatusReasonExtension](StructureDefinition-fr-status-reason-extension.md),[FRStudyInstanceUidIdentifierDocument](StructureDefinition-fr-study-instance-uid-identifier-document.md),[FRTaskPatientTransportDocument](StructureDefinition-fr-task-patient-transport-document.md),[FRValueSetActorTypeDocument](ValueSet-fr-vs-actor-type-document.md),[FRValueSetAllergySubstanceDocument](ValueSet-fr-vs-allergy-substance.md),[FRValueSetEDQMDocument](ValueSet-fr-vs-edqm-document.md),[FRValueSetEvaluationTypeDocument](ValueSet-fr-vs-evaluation-type.md),[FRValueSetMedicationTranslationDocument](ValueSet-fr-vs-medication-translation-document.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetProcedureCodeDocument](ValueSet-fr-vs-procedure-code.md),[FRValueSetResultTypeDocument](ValueSet-fr-vs-result-type-document.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRAccessionNumberIdentifierImagingDocument](StructureDefinition-fr-accession-number-identifier-imaging-document.md)...Show 310 more,[FRActorExtension](StructureDefinition-fr-actor-extension.md),[FRAdvanceDirectiveDocument](StructureDefinition-fr-advance-directive-document.md),[FRAdverseEventDocument](StructureDefinition-fr-adverse-event-document.md),[FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md),[FRAuthorTimeExtension](StructureDefinition-fr-author-time-extension.md),[FRBundleDocument](StructureDefinition-fr-bundle-document.md),[FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md),[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRCarePlanDocument](StructureDefinition-fr-care-plan-document.md),[FRComparisonStudiesExtension](StructureDefinition-fr-comparison-studies-extension.md),[FRCompositionDocument](StructureDefinition-fr-composition-document.md),[FRConditionDocument](StructureDefinition-fr-condition-document.md),[FRDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FRDeviceRequestDocument](StructureDefinition-fr-device-request-document.md),[FRDeviceUseStatementDocument](StructureDefinition-fr-device-use-statement-document.md),[FRDiagnosticReportBIOChapterDocument](StructureDefinition-fr-diagnostic-report-bio-chapter-document.md),[FRDiagnosticReportDocument](StructureDefinition-fr-diagnostic-report-document.md),[FRDiagnosticReportImagingDocument](StructureDefinition-fr-diagnostic-report-imaging-document.md),[FRDocumentReferenceDocument](StructureDefinition-fr-document-reference-document.md),[FREducationPatientExtension](StructureDefinition-fr-education-patient-extension.md),[FREncounterCareDocument](StructureDefinition-fr-encounter-care-document.md),[FREncounterDocument](StructureDefinition-fr-encounter-document.md),[FREndpointWadoDocument](StructureDefinition-fr-endpoint-wado-document.md),[FRFamilyMemberHistoryBodySiteExtension](StructureDefinition-fr-family-member-history-body-site-extension.md),[FRFamilyMemberHistoryDocument](StructureDefinition-fr-family-member-history-document.md),[FRHumanNameDocument](StructureDefinition-fr-human-name-document.md),[FRImagingProcedureExtension](StructureDefinition-fr-imaging-procedure-extension.md),[FRImagingStudyDocument](StructureDefinition-fr-imaging-study-document.md),[FRImmunizationDocument](StructureDefinition-fr-immunization-document.md),[FRImmunizationRecommendationDocument](StructureDefinition-fr-immunization-recommendation-document.md),[FRImmunizationTypeExtension](StructureDefinition-fr-immunization-type-extension.md),[FRInterpretationExtension](StructureDefinition-fr-interpretation-extension.md),[FRLMAccidentsTransfusionnels](StructureDefinition-fr-lm-accidents-transfusionnels.md),[FRLMActe](StructureDefinition-fr-lm-acte.md),[FRLMActeImagerie](StructureDefinition-fr-lm-acte-imagerie.md),[FRLMActeSubstitution](StructureDefinition-fr-lm-acte-substitution.md),[FRLMAddendum](StructureDefinition-fr-lm-addendum.md),[FRLMAdministrationDeDerivesDuSang](StructureDefinition-fr-lm-administration-de-derives-du-sang.md),[FRLMAdministrationProduitDeSante](StructureDefinition-fr-lm-administration-produit-de-sante.md),[FRLMAllergieOuHypersensibilite](StructureDefinition-fr-lm-allergie-ou-hypersensibilite.md),[FRLMAllergiesEtHypersensibilites](StructureDefinition-fr-lm-allergies-et-hypersensibilites.md),[FRLMAntecedentFamilialObserve](StructureDefinition-fr-lm-antecedent-familial-observe.md),[FRLMAntecedentsFamiliaux](StructureDefinition-fr-lm-antecedents-familiaux.md),[FRLMAntecedentsFamiliauxEntree](StructureDefinition-fr-lm-antecedents-familiaux-entree.md),[FRLMAntecedentsMedicaux](StructureDefinition-fr-lm-antecedents-medicaux.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMAuteurAPSR](StructureDefinition-fr-lm-auteur-apsr.md),[FRLMAutorisationExposition](StructureDefinition-fr-lm-autorisation-exposition.md),[FRLMAutorisationSubstitution](StructureDefinition-fr-lm-autorisation-substitution.md),[FRLMBatterieExamensBiologieMedicale](StructureDefinition-fr-lm-batterie-examens-biologie-medicale.md),[FRLMCRBIOChapitre](StructureDefinition-fr-lm-cr-bio-chapitre.md),[FRLMCRBIOSousChapitre](StructureDefinition-fr-lm-cr-bio-sous-chapitre.md),[FRLMCertitude](StructureDefinition-fr-lm-certitude.md),[FRLMCodesAbarres](StructureDefinition-fr-lm-codes-a-barres.md),[FRLMCommentaireER](StructureDefinition-fr-lm-commentaire-er.md),[FRLMCommentaireNonCode](StructureDefinition-fr-lm-commentaire-non-code.md),[FRLMComparaisonExamensImagerie](StructureDefinition-fr-lm-comparaison-examens-imagerie.md),[FRLMComplicationsActe](StructureDefinition-fr-lm-complications-acte.md),[FRLMConclusionExamenImagerie](StructureDefinition-fr-lm-conclusion-examen-imagerie.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMCorpsDocument](StructureDefinition-fr-lm-corps-document.md),[FRLMCriticite](StructureDefinition-fr-lm-criticite.md),[FRLMDemandeExamenImagerie](StructureDefinition-fr-lm-demande-examen-imagerie.md),[FRLMDemandeExamenOuSuivi](StructureDefinition-fr-lm-demande-examen-ou-suivi.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu.md),[FRLMDirectiveAnticipee](StructureDefinition-fr-lm-directive-anticipee.md),[FRLMDirectivesAnticipees](StructureDefinition-fr-lm-directives-anticipees.md),[FRLMDispensationMedicaments](StructureDefinition-fr-lm-dispensation-medicaments.md),[FRLMDispositifMedical](StructureDefinition-FRLMDispositifMedical.md),[FRLMDispositifMedicalEntree](StructureDefinition-fr-lm-dispositif-medical-entree.md),[FRLMDispositifsMedicaux](StructureDefinition-fr-lm-dispositifs-medicaux.md),[FRLMDocumentAttache](StructureDefinition-fr-lm-document-attache.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMDocumentPDFCopie](StructureDefinition-fr-lm-document-pdf-copie.md),[FRLMDocumentsAjoutes](StructureDefinition-fr-lm-documents-ajoutes.md),[FRLMDoseAntigene](StructureDefinition-fr-lm-dose-antigene.md),[FRLMEchantillonPreleve](StructureDefinition-fr-lm-echantillon-preleve.md),[FRLMEducationPatient](StructureDefinition-fr-lm-education-patient.md),[FRLMEffetIndesirable](StructureDefinition-fr-lm-effet-indesirable.md),[FRLMEffetsIndesirables](StructureDefinition-fr-lm-effets-indesirables.md),[FRLMEnRapportAvecALD](StructureDefinition-fr-lm-en-rapport-avec-ald.md),[FRLMEnRapportAvecAccidentTravail](StructureDefinition-fr-lm-en-rapport-avec-accident-travail.md),[FRLMEnRapportAvecLaPrevention](StructureDefinition-fr-lm-en-rapport-avec-la-prevention.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvaluation](StructureDefinition-fr-lm-evaluation.md),[FRLMEvaluationComposant](StructureDefinition-fr-lm-evaluation-composant.md),[FRLMEvaluationComposantN2](StructureDefinition-fr-lm-evaluation-composant-n2.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMEvenementIndesirablePendantHospitalisation](StructureDefinition-fr-lm-evenement-indesirable-pendant-hospitalisation.md),[FRLMEvenementsIndesirablesSuiteAdministrationDerivesSang](StructureDefinition-fr-lm-evenements-indesirables-suite-administration-derives-sang.md),[FRLMEvolutionEffetIndesirable](StructureDefinition-fr-lm-evolution-effet-indesirable.md),[FRLMExamenImagerie](StructureDefinition-fr-lm-examen-imagerie.md),[FRLMExpositionRadiations](StructureDefinition-fr-lm-exposition-radiations.md),[FRLMFacteursDeRisqueProfessionnelsNonCode](StructureDefinition-fr-lm-facteurs-de-risque-professionnels-non-code.md),[FRLMFonctionsPhysiques](StructureDefinition-fr-lm-fonctions-physiques.md),[FRLMGraviteEffetIndesirable](StructureDefinition-fr-lm-gravite-effet-indesirable.md),[FRLMGroupDeQuestionnairesDevaluation](StructureDefinition-fr-lm-group-de-questionnaires-devaluation.md),[FRLMHabitusModeDeVie](StructureDefinition-fr-lm-habitus-mode-de-vie.md),[FRLMHabitusModeDeVieEntree](StructureDefinition-fr-lm-habitus-mode-de-vie-entree.md),[FRLMHistoriqueDesActes](StructureDefinition-fr-lm-historique-des-actes.md),[FRLMHistoriqueDesGrossesses](StructureDefinition-fr-lm-historique-des-grossesses.md),[FRLMHistoriqueGrossesse](StructureDefinition-fr-lm-historique-grossesse.md),[FRLMHorsAMM](StructureDefinition-fr-lm-hors-amm.md),[FRLMIdentificationDeMicroOrganismesMultiresistants](StructureDefinition-fr-lm-identification-de-micro-organismes-multiresistants.md),[FRLMImageIllustrative](StructureDefinition-fr-lm-image-illustrative.md),[FRLMImputabiliteEffetIndesirable](StructureDefinition-fr-lm-imputabilite-effet-indesirable.md),[FRLMInformantAPSR](StructureDefinition-fr-lm-informant-apsr.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMInformationsCliniques](StructureDefinition-fr-lm-informations-cliniques.md),[FRLMInstructionAuPatient](StructureDefinition-fr-lm-instruction-au-patient.md),[FRLMInstructionsAuDispensateur](StructureDefinition-fr-lm-instructions-au-dispensateur.md),[FRLMInstructionsPatient](StructureDefinition-fr-lm-instructions-patient.md),[FRLMIsolatMicrobiologique](StructureDefinition-fr-lm-isolat-microbiologique.md),[FRLMLaboratoireExecutant](StructureDefinition-fr-lm-laboratoire-executant.md),[FRLMModaliteEntree](StructureDefinition-fr-lm-modalite-entree.md),[FRLMModaliteSortie](StructureDefinition-fr-lm-modalite-sortie.md),[FRLMNaissance](StructureDefinition-fr-lm-naissance.md),[FRLMNonRemboursable](StructureDefinition-fr-lm-non-remboursable.md),[FRLMNotesDispensateur](StructureDefinition-fr-lm-notes-dispensateur.md),[FRLMObjectCatalog](StructureDefinition-fr-lm-object-catalog.md),[FRLMObservation](StructureDefinition-fr-lm-observation.md),[FRLMObservationGrossesse](StructureDefinition-fr-lm-observation-grossesse.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMParticipantAPSR](StructureDefinition-fr-lm-participant-apsr.md),[FRLMParticipantCorps](StructureDefinition-fr-lm-participant-corps.md),[FRLMPatientSujetNonHumain](StructureDefinition-fr-lm-patient-sujet-non-humain.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPerformer](StructureDefinition-fr-lm-performer.md),[FRLMPeriodeDeRenouvellement](StructureDefinition-fr-lm-periode-de-renouvellement.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPlanSoins](StructureDefinition-fr-lm-plan-soins.md),[FRLMPointsDeVigilancesNonCode](StructureDefinition-fr-lm-points-de-vigilances-non-code.md),[FRLMPrelevement](StructureDefinition-fr-lm-prelevement.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPrescriptionDispositifsMedicaux](StructureDefinition-fr-lm-prescription-dispositifs-medicaux.md),[FRLMPrescriptionEntree](StructureDefinition-fr-lm-prescription-entree.md),[FRLMPrescriptionMedicaments](StructureDefinition-fr-lm-prescription-medicaments.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMProbleme](StructureDefinition-fr-lm-probleme.md),[FRLMProblemesActifs](StructureDefinition-fr-lm-problemes-actifs.md),[FRLMProduitSante](StructureDefinition-fr-lm-produit-sante.md),[FRLMQuantiteExposition](StructureDefinition-fr-lm-quantite-exposition.md),[FRLMQuantiteProduit](StructureDefinition-fr-lm-quantite-produit.md),[FRLMRaisonRecommandation](StructureDefinition-fr-lm-raison-recommandation.md),[FRLMRaisonRecommandationNonCode](StructureDefinition-fr-lm-raison-recommandation-non-code.md),[FRLMRangVaccination](StructureDefinition-fr-lm-rang-vaccination.md),[FRLMRechercheDeMicroOrganismes](StructureDefinition-fr-lm-recherche-de-micro-organismes.md),[FRLMReferenceInterne](StructureDefinition-fr-lm-reference-interne.md),[FRLMReferenceItemPlanTraitement](StructureDefinition-fr-lm-reference-item-plan-traitement.md),[FRLMReferenceItemPrescription](StructureDefinition-fr-lm-reference-item-prescription.md),[FRLMReferencesExternes](StructureDefinition-fr-lm-references-externes.md),[FRLMRencontre](StructureDefinition-fr-lm-rencontre.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMResultatExamensBiologieElementCliniquePertinent](StructureDefinition-fr-lm-resultat-examens-biologie-element-clinique-pertinent.md),[FRLMResultats](StructureDefinition-fr-lm-resultats.md),[FRLMResultatsEntry](StructureDefinition-fr-lm-resultats-entree.md),[FRLMResultatsEvenements](StructureDefinition-fr-lm-resultats-evenements.md),[FRLMResultatsExamenImagerie](StructureDefinition-fr-lm-resultats-examen-imagerie.md),[FRLMResultatsExamens](StructureDefinition-fr-lm-resultats-examens.md),[FRLMResultatsExamensBiologieMedicale](StructureDefinition-fr-lm-resultats-examens-biologie-medicale.md),[FRLMResultatsExamensNonCode](StructureDefinition-fr-lm-resultats-examens-non-code.md),[FRLMResultatsLaboratoireBiologieSecondeIntention](StructureDefinition-fr-lm-resultats-laboratoire-biologie-seconde-intention.md),[FRLMSOPInstance](StructureDefinition-fr-lm-sop-instance.md),[FRLMSection](StructureDefinition-fr-lm-section.md),[FRLMSerieImagerie](StructureDefinition-fr-lm-serie-imagerie.md),[FRLMSeverite](StructureDefinition-fr-lm-severite.md),[FRLMSigneVital](StructureDefinition-fr-lm-signe-vital.md),[FRLMSigneVitalObserve](StructureDefinition-fr-lm-signe-vital-observe.md),[FRLMSignesVitaux](StructureDefinition-fr-lm-signes-vitaux.md),[FRLMStatut](StructureDefinition-fr-lm-statut.md),[FRLMStatutCliniquePatient](StructureDefinition-fr-lm-statut-clinique-patient.md),[FRLMStatutDocument](StructureDefinition-fr-lm-statut-document.md),[FRLMStatutDocumentEntree](StructureDefinition-fr-lm-statut-document-entree.md),[FRLMStatutFonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md),[FRLMStatutProbleme](StructureDefinition-fr-lm-statut-probleme.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSujet](StructureDefinition-fr-lm-sujet.md),[FRLMSujetNonHumain](StructureDefinition-fr-lm-sujet-non-humain.md),[FRLMSyntheseMedicaleSejour](StructureDefinition-fr-lm-synthese-medicale-sejour.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMTechniqueImagerie](StructureDefinition-fr-lm-technique-imagerie.md),[FRLMTraitement](StructureDefinition-fr-lm-traitement.md),[FRLMTraitementDispense](StructureDefinition-fr-lm-traitement-dispense.md),[FRLMTraitementPrescrit](StructureDefinition-fr-lm-traitement-prescrit.md),[FRLMTraitementPrescritSubordonne](StructureDefinition-fr-lm-traitement-prescrit-subordonne.md),[FRLMTraitementSortie](StructureDefinition-fr-lm-traitement-sortie.md),[FRLMTraitementSubordonne](StructureDefinition-fr-lm-traitement-subordonne.md),[FRLMTraitements](StructureDefinition-fr-lm-traitements.md),[FRLMTraitementsAdministres](StructureDefinition-fr-lm-traitements-administres.md),[FRLMTransfertDuPatient](StructureDefinition-fr-lm-transfert-du-patient.md),[FRLMTransfusionDeProduitsSanguins](StructureDefinition-fr-lm-transfusion-de-produits-sanguins.md),[FRLMVaccinRecommande](StructureDefinition-fr-lm-vaccin-recommande.md),[FRLMVaccination](StructureDefinition-fr-lm-vaccination.md),[FRLMVaccinations](StructureDefinition-fr-lm-vaccinations.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRLocationDocument](StructureDefinition-fr-location-document.md),[FRMediaDocument](StructureDefinition-fr-media-document.md),[FRMedicationAdministrationDocument](StructureDefinition-fr-medication-administration-document.md),[FRMedicationAdministrationSequenceExtension](StructureDefinition-fr-medication-administration-sequence-extension.md),[FRMedicationDispenseDocument](StructureDefinition-fr-medication-dispense-document.md),[FRMedicationDocument](StructureDefinition-fr-medication-document.md),[FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md),[FRMedicationRequestOutOfNomenclatureExtension](StructureDefinition-fr-medication-request-out-of-nomenclature-extension.md),[FRMedicationStatementDocument](StructureDefinition-fr-medication-statement-document.md),[FRMedicationsCombinaisonDocument](StructureDefinition-fr-medications-combinaison-document.md),[FRMethodExtension](StructureDefinition-fr-method-extension.md),[FRNotCoveredExtension](StructureDefinition-fr-not-covered-extension.md),[FRNumberOfFramesExtension](StructureDefinition-fr-number-of-frames-extension.md),[FRObservationAdministrationBloodDerivativesDocument](StructureDefinition-fr-observation-administration-blood-derivatives-document.md),[FRObservationAntenatalTestingAndSurveillanceBatteryDocument](StructureDefinition-fr-observation-antenatal-testing-surveillance-battery-document.md),[FRObservationBirthEventDocument](StructureDefinition-fr-observation-birth-event-document.md),[FRObservationBloodProductTransfusionDocument](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationLaboratoryReportResultsDocument](StructureDefinition-fr-observation-laboratory-report-results-document.md),[FRObservationMedicalSummaryDocument](StructureDefinition-fr-observation-medical-summary-document.md),[FRObservationMicroorganismDetectionDocument](StructureDefinition-fr-observation-microorganism-detection-document.md),[FRObservationPainScoreDocument](StructureDefinition-fr-observation-pain-score-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationPregnancyHistoryDocument](StructureDefinition-fr-observation-pregnancy-history-document.md),[FRObservationRadiationExposureDocument](StructureDefinition-fr-observation-radiation-exposure-document.md),[FRObservationResultDocument](StructureDefinition-fr-observation-result-document.md),[FRObservationSocialHistoryDocument](StructureDefinition-fr-observation-social-history-document.md),[FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md),[FRObservationSurveyPannelDocument](StructureDefinition-fr-observation-survey-pannel-document.md),[FRObservationTransfusionAccidentsDocument](StructureDefinition-fr-observation-transfusion-accidents-document.md),[FRObservationVitalSignsDocument](StructureDefinition-fr-observation-vital-signs-document.md),[FRObservationVitalSignsPanelDocument](StructureDefinition-fr-Observation-vital-signs-panel-document.md),[FRObservationWorkRelatedAccidentDocument](StructureDefinition-fr-observation-work-related-accident-document.md),[FROrganizationDocument](StructureDefinition-fr-organization-document.md),[FRPatientDocument](StructureDefinition-fr-patient-document.md),[FRPatientHistoryExtension](StructureDefinition-fr-patient-history-extension.md),[FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FRPerformerEventExtension](StructureDefinition-fr-performer-event-extension.md),[FRPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FRPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FRPregnancyHistoryDocument](StructureDefinition-fr-pregnancy-history-document.md),[FRProcedureActDocument](StructureDefinition-fr-procedure-act-document.md),[FRProcedureDifficultyExtension](StructureDefinition-fr-procedure-difficulty-extension.md),[FRProcedureImagingDocument](StructureDefinition-fr-procedure-imaging-document.md),[FRProcedurePriorityExtension](StructureDefinition-fr-procedure-priority-extension.md),[FRRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[FRSeviceRequestDocument](StructureDefinition-fr-service-request-document.md),[FRSpecimenDocument](StructureDefinition-fr-specimen-document.md),[FRStatusReasonExtension](StructureDefinition-fr-status-reason-extension.md),[FRStudyInstanceUidIdentifierDocument](StructureDefinition-fr-study-instance-uid-identifier-document.md),[FRTaskPatientTransportDocument](StructureDefinition-fr-task-patient-transport-document.md),[FRValueSetActorTypeDocument](ValueSet-fr-vs-actor-type-document.md),[FRValueSetAllergySubstanceDocument](ValueSet-fr-vs-allergy-substance.md),[FRValueSetEDQMDocument](ValueSet-fr-vs-edqm-document.md),[FRValueSetEvaluationTypeDocument](ValueSet-fr-vs-evaluation-type.md),[FRValueSetMedicationTranslationDocument](ValueSet-fr-vs-medication-translation-document.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetProcedureCodeDocument](ValueSet-fr-vs-procedure-code.md),[FRValueSetResultTypeDocument](ValueSet-fr-vs-result-type-document.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
 
 
 * Publications of the World Health Organization enjoy copyright protection in accordance with the provisions of Protocol 2 of the Universal Copyright Convention. All rights reserved.
@@ -148,7 +148,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -942,8 +942,20 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
     ],
     "grouping" : [
       {
-        "id" : "Modèles logiques",
-        "name" : "Modèle logique métier"
+        "id" : "Modèles logiques de l'entête du document",
+        "name" : "Modèle logique métier de l'entête du document"
+      },
+      {
+        "id" : "Modèle métier du Corps d'un document(Sections)",
+        "name" : "Modèles logiques métier des sections"
+      },
+      {
+        "id" : "Modèle métier du Corps d'un document(Entrées)",
+        "name" : "Modèles logiques métier des entrées"
+      },
+      {
+        "id" : "Modèle métier du Corps d'un document(Eléments transversaux)",
+        "name" : "Modèles logiques métier des éléments transversaux"
       },
       {
         "id" : "Ressources CDA",
@@ -972,6 +984,36 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
       {
         "id" : "Mapping",
         "name" : "Concept Maps"
+      },
+      {
+        "id" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1",
+        "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
+        "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"
+      },
+      {
+        "id" : "Binary/eDISP-MED-2024.01",
+        "name" : "eDISP-MED-2024.01",
+        "description" : "eDispensation de médicaments (eDISP-MED-2024.01)"
+      },
+      {
+        "id" : "Binary/eP-MED-DM-2024.01-PosoStruct",
+        "name" : "eP-MED-DM_2024.01_PosoStruct",
+        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
+      },
+      {
+        "id" : "Binary/eP-MED-DM-2024.01-PosoNonStruct",
+        "name" : "eP-MED-DM_2024.01_PosoNonStruct",
+        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
+      },
+      {
+        "id" : "Binary/IPS-FR-2024.01",
+        "name" : "IPS-FR",
+        "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)"
+      },
+      {
+        "id" : "Binary/LDL-SES-2022.01",
+        "name" : "LDL-SES_2022.01",
+        "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"
       }
     ],
     "resource" : [
@@ -1004,34 +1046,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie.",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR corps"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
-        },
-        "name" : "BIO-CR-BIO_2024.01_Glycemie_mole",
-        "description" : "Compte-rendu d’examens de biologie médicale autoprésentable (BIO-CR-BIO_Glycémie mole_1_2021.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
-        },
-        "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
-        "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
       },
       {
         "extension" : [
@@ -1697,20 +1711,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eDISP-MED-2024.01"
-        },
-        "name" : "eDISP-MED-2024.01",
-        "description" : "eDispensation de médicaments (eDISP-MED-2024.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -1736,34 +1736,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "FREndpointWadoDocument permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR corps"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
-        },
-        "name" : "eP-MED-DM_2024.01_PosoNonStruct",
-        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
-        },
-        "name" : "eP-MED-DM_2024.01_PosoStruct",
-        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
       },
       {
         "extension" : [
@@ -2288,6 +2260,21 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-historique-des-actes"
+        },
+        "name" : "Historique des actes",
+        "description" : "Section Historique des actes",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -2328,34 +2315,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée.\n - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). \n - Une vaccination prévue dépend d'un plan accepté et à venir.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRVaccinationDocument.",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR corps"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/IPS-FR-2024.01"
-        },
-        "name" : "IPS-FR",
-        "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/LDL-SES-2022.01"
-        },
-        "name" : "LDL-SES_2022.01",
-        "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
       },
       {
         "extension" : [
@@ -2785,12 +2744,417 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
           }
         ],
         "reference" : {
+          "reference" : "StructureDefinition/FRLMDispositifMedical"
+        },
+        "name" : "Modèle logique métier - Dispositif médical",
+        "description" : "Dispositif médical",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-accidents-transfusionnels"
+        },
+        "name" : "Modèle logique métier - FR LM Accident transfusionnel",
+        "description" : "Entrée Accident transfusionnel",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-acte"
+        },
+        "name" : "Modèle logique métier - FR LM Acte",
+        "description" : "Entrée Acte",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-acte-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Acte d'imagerie",
+        "description" : "Section Acte d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-acte-substitution"
+        },
+        "name" : "Modèle logique métier - FR LM Acte substitution",
+        "description" : "Entrée Acte substitution",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-addendum"
+        },
+        "name" : "Modèle logique métier - FR LM Addendum",
+        "description" : "Section Addendum",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-administration-de-derives-du-sang"
+        },
+        "name" : "Modèle logique métier - FR LM Administration de dérivés du sang",
+        "description" : "Entrée Administration de dérivés du sang",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-administration-produit-de-sante"
+        },
+        "name" : "Modèle logique métier - FR LM Administration produit de sante",
+        "description" : "Entrée Administration produit de sante",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-allergie-ou-hypersensibilite"
+        },
+        "name" : "Modèle logique métier - FR LM Allergie ou Hypersensibilité",
+        "description" : "Entrée Allergie ou hypersensibilite",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-allergies-et-hypersensibilites"
+        },
+        "name" : "Modèle logique métier - FR LM Allergies et hypersensibilités",
+        "description" : "Section Allergies et hypersensibilités",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-antecedent-familial-observe"
+        },
+        "name" : "Modèle logique métier - FR LM Antécédent familial observé",
+        "description" : "Entrée Antécédent familial",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-antecedents-familiaux-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Antécédents familiaux",
+        "description" : "Entrée Antécédents familiaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-antecedents-familiaux"
+        },
+        "name" : "Modèle logique métier - FR LM Antécédents familiaux",
+        "description" : "Section Antécédents familiaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-antecedents-medicaux"
+        },
+        "name" : "Modèle logique métier - FR LM Antécédents médicaux",
+        "description" : "Section Antécédents médicaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-historique-des-grossesses"
+        },
+        "name" : "Modèle logique métier - FR LM Antécédents obstétricaux",
+        "description" : "Section Historique des grossesses",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
           "reference" : "StructureDefinition/fr-lm-auteur"
         },
         "name" : "Modèle logique métier - FR LM Auteur",
         "description" : "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-auteur-apsr"
+        },
+        "name" : "Modèle logique métier - FR LM Auteur APSR",
+        "description" : "Auteur APSR (Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Auteur",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-autorisation-exposition"
+        },
+        "name" : "Modèle logique métier - FR LM Autorisation exposition",
+        "description" : "Entrée Autorisation exposition",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-autorisation-substitution"
+        },
+        "name" : "Modèle logique métier - FR LM Autorisation substitution",
+        "description" : "Entrée Autorisation substitution",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
+        },
+        "name" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
+        "description" : "Entrée Batterie d'examens de biologie médicale",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-certitude"
+        },
+        "name" : "Modèle logique métier - FR LM Certitude",
+        "description" : "Entrée Certitude",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-codes-a-barres"
+        },
+        "name" : "Modèle logique métier - FR LM Codes à barres",
+        "description" : "Section Codes à barres",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-commentaire-er"
+        },
+        "name" : "Modèle logique métier - FR LM Commentaire",
+        "description" : "Entrée Commentaire",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-commentaire-non-code"
+        },
+        "name" : "Modèle logique métier - FR LM Commentaire (non-codé)",
+        "description" : "Section Commentaire (non-codé)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-comparaison-examens-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Comparaison d'examens d'imagerie",
+        "description" : "Section Comparaison d'examens d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-complications-acte"
+        },
+        "name" : "Modèle logique métier - FR LM Complications Acte",
+        "description" : "Section Complications au cours de l'acte",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-cr-bio-chapitre"
+        },
+        "name" : "Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau",
+        "description" : "Section Compte rendu de biologie de 1er niveau",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-conclusion-examen-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Conclusion examen d'imagerie",
+        "description" : "Section Conclusion examen d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
       },
       {
         "extension" : [
@@ -2805,7 +3169,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Consentement",
         "description" : "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
       },
       {
         "extension" : [
@@ -2815,12 +3179,162 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
           }
         ],
         "reference" : {
-          "reference" : "StructureDefinition/fr-lm-destinataire-prevu-document"
+          "reference" : "StructureDefinition/fr-lm-corps-document"
+        },
+        "name" : "Modèle logique métier - FR LM Corps document",
+        "description" : "Eléments métier du corps d'un document contenant les sections du document.",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-criticite"
+        },
+        "name" : "Modèle logique métier - FR LM Criticite",
+        "description" : "Entrée Criticite",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-demande-examen-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Demande d'examen d'imagerie",
+        "description" : "Section Demande d'examen d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-demande-examen-ou-suivi"
+        },
+        "name" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
+        "description" : "Entrée Demande d'examen ou de suivi / Objectif à atteindre",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-destinataire-prevu"
         },
         "name" : "Modèle logique métier - FR LM Destinataire prévu",
         "description" : "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-directive-anticipee"
+        },
+        "name" : "Modèle logique métier - FR LM Directive anticipée",
+        "description" : "Entrée Directive anticipée",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-directives-anticipees"
+        },
+        "name" : "Modèle logique métier - FR LM Directives-anticipées",
+        "description" : "Section Directives anticipées",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-dispensation-medicaments"
+        },
+        "name" : "Modèle logique métier - FR LM Dispensation médicaments",
+        "description" : "Section Dispensation médicaments",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-dispositif-medical-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Dispositif médical",
+        "description" : "Entrée Dispositif médical",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-dispositifs-medicaux"
+        },
+        "name" : "Modèle logique métier - FR LM Dispositifs medicaux",
+        "description" : "Section Dispositifs medicaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-document-attache"
+        },
+        "name" : "Modèle logique métier - FR LM Document attaché",
+        "description" : "Entrée Document attaché",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -2835,7 +3349,142 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Document de référence",
         "description" : "Référence un document existant (à remplacer ou transformé).",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-document-pdf-copie"
+        },
+        "name" : "Modèle logique métier - FR LM Document PDF copie",
+        "description" : "Section Document PDF-copie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-documents-ajoutes"
+        },
+        "name" : "Modèle logique métier - FR LM Documents ajoutés",
+        "description" : "Section Documents ajoutés",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-dose-antigene"
+        },
+        "name" : "Modèle logique métier - FR LM Dose d'antigène",
+        "description" : "Entrée Dose d'antigène",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-education-patient"
+        },
+        "name" : "Modèle logique métier - FR LM Education du patient",
+        "description" : "Section Education du patient",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-effet-indesirable"
+        },
+        "name" : "Modèle logique métier - FR LM Effet indesirable",
+        "description" : "Entrée Effet indesirable",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-effets-indesirables"
+        },
+        "name" : "Modèle logique métier - FR LM Effets indesirables",
+        "description" : "Section Effets indesirables",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-en-rapport-avec-la-prevention"
+        },
+        "name" : "Modèle logique métier - FR LM En rapport avec la prevention",
+        "description" : "Entrée En rapport avec la prevention",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-en-rapport-avec-accident-travail"
+        },
+        "name" : "Modèle logique métier - FR LM En rapport avec un accident travail",
+        "description" : "Entrée En rapport avec un accident travail",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-en-rapport-avec-ald"
+        },
+        "name" : "Modèle logique métier - FR LM En rapport avec une Affection Longue Durée (ALD)",
+        "description" : "Entrée En rapport avec une Affection Longue Durée (ALD)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -2850,7 +3499,307 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM En-tête document",
         "description" : "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evaluation"
+        },
+        "name" : "Modèle logique métier - FR LM Evaluation",
+        "description" : "Entrée Evaluation",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evaluation-composant"
+        },
+        "name" : "Modèle logique métier - FR LM Evaluation Composant",
+        "description" : "Entrée Evaluation Composant",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evaluation-composant-n2"
+        },
+        "name" : "Modèle logique métier - FR LM Evaluation Composant N2",
+        "description" : "Entrée Evaluation Composant N2",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evolution-effet-indesirable"
+        },
+        "name" : "Modèle logique métier - FR LM Evolution effet indesirable",
+        "description" : "Entrée Evolution effet indesirable",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evenement-indesirable-pendant-hospitalisation"
+        },
+        "name" : "Modèle logique métier - FR LM Evènements indésirables pendant l'hospitalisation",
+        "description" : "Entrée Evènements indésirables pendant l'hospitalisation",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-evenements-indesirables-suite-administration-derives-sang"
+        },
+        "name" : "Modèle logique métier - FR LM Evènements indésirables suite à l'administration de dérivés du sang",
+        "description" : "Entrée Evènements indésirables suite à l'administration de dérivés du sang",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-examen-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Examen Imagerie",
+        "description" : "Entrée DICOM Examen Imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-exposition-radiations"
+        },
+        "name" : "Modèle logique métier - FR LM Exposition aux radiations",
+        "description" : "Section Exposition aux radiations",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-facteurs-de-risque-professionnels-non-code"
+        },
+        "name" : "Modèle logique métier - FR LM Facteurs de risque professionnels non code",
+        "description" : "Section Facteurs de risque professionnels non code",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-fonctions-physiques"
+        },
+        "name" : "Modèle logique métier - FR LM Fonctions physiques",
+        "description" : "Section Fonctions physiques",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-gravite-effet-indesirable"
+        },
+        "name" : "Modèle logique métier - FR LM Gravite effet indesirable",
+        "description" : "Entrée Gravite effet indesirable",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-group-de-questionnaires-devaluation"
+        },
+        "name" : "Modèle logique métier - FR LM Groupe de questionnaires d'évalutation",
+        "description" : "Entrée Groupe de questionnaires d'évalutation",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-habitus-mode-de-vie"
+        },
+        "name" : "Modèle logique métier - FR LM Habitus et modes de vie",
+        "description" : "Section Habitus et modes de vie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-habitus-mode-de-vie-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Habitus Mode de vie",
+        "description" : "Entrée Habitus Mode de vie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-historique-grossesse"
+        },
+        "name" : "Modèle logique métier - FR LM Historique de la grossesse",
+        "description" : "Entrée Historique de la grossesse",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-hors-amm"
+        },
+        "name" : "Modèle logique métier - FR LM Hors Autorisation de Mise sur le Marché (AMM)",
+        "description" : "Entrée Hors Autorisation de Mise sur le Marché (AMM)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-identification-de-micro-organismes-multiresistants"
+        },
+        "name" : "Modèle logique métier - FR LM Identification de micro-organismes multirésistants",
+        "description" : "Entrée Identification de micro-organismes multirésistants",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-image-illustrative"
+        },
+        "name" : "Modèle logique métier - FR LM Image illustrative",
+        "description" : "Entrée Image illustrative.",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-imputabilite-effet-indesirable"
+        },
+        "name" : "Modèle logique métier - FR LM Imputabilite effet indesirable",
+        "description" : "Entrée Imputabilite effet indesirable",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-informant-apsr"
+        },
+        "name" : "Modèle logique métier - FR LM Informant APSR",
+        "description" : "Informant APSR(Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Informateur",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
       },
       {
         "extension" : [
@@ -2865,7 +3814,202 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Informateur",
         "description" : "Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-informations-cliniques"
+        },
+        "name" : "Modèle logique métier - FR LM Informations Cliniques",
+        "description" : "Section Informations Cliniques",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-instruction-au-patient"
+        },
+        "name" : "Modèle logique métier - FR LM Instruction au patient",
+        "description" : "Entrée Instruction au patient",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-instructions-au-dispensateur"
+        },
+        "name" : "Modèle logique métier - FR LM Instructions au dispensateur",
+        "description" : "Entrée Instructions au dispensateur",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-instructions-patient"
+        },
+        "name" : "Modèle logique métier - FR LM Instructions au patient",
+        "description" : "Entrée Instructions au patient",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-isolat-microbiologique"
+        },
+        "name" : "Modèle logique métier - FR LM Isolat microbiologique",
+        "description" : "Entrée Isolat microbiologique",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-laboratoire-executant"
+        },
+        "name" : "Modèle logique métier - FR LM Laboratoire exécutant",
+        "description" : "Laboratoire exécutant",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-modalite-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Modalité d'entrée",
+        "description" : "Entrée Modalité d'entrée",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-modalite-sortie"
+        },
+        "name" : "Modèle logique métier - FR LM Modalité de sortie",
+        "description" : "Entrée Modalité de sortie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-naissance"
+        },
+        "name" : "Modèle logique métier - FR LM Naissance",
+        "description" : "Entrée Naissance",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-notes-dispensateur"
+        },
+        "name" : "Modèle logique métier - FR LM Notes du dispensateur",
+        "description" : "Entrée Notes du dispensateur",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-object-catalog"
+        },
+        "name" : "Modèle logique métier - FR LM Object Catalog",
+        "description" : "Section Object Catalog",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-observation"
+        },
+        "name" : "Modèle logique métier - FR LM Observation",
+        "description" : "Entrée observation",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-observation-grossesse"
+        },
+        "name" : "Modèle logique métier - FR LM Observation sur la grossesse",
+        "description" : "Entrée Observation sur la grossesse",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -2880,7 +4024,22 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Opérateur de saisie",
         "description" : "Opérateur de saisie de la totalité ou d'une partie du contenu du document.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-participant-corps"
+        },
+        "name" : "Modèle logique métier - FR LM Participant",
+        "description" : "Participant",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
       },
       {
         "extension" : [
@@ -2895,7 +4054,37 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Participant",
         "description" : "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-participant-apsr"
+        },
+        "name" : "Modèle logique métier - FR LM Participant APSR",
+        "description" : "Participant APSR(Anatomic Pathology Structured Report)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-patient-sujet-non-humain"
+        },
+        "name" : "Modèle logique métier - FR LM Patient avec sujet non humain",
+        "description" : "Patient avec sujet non humain",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
       },
       {
         "extension" : [
@@ -2910,7 +4099,22 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Patient Usager",
         "description" : "Patient/Usager concerné par le document.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-performer"
+        },
+        "name" : "Modèle logique métier - FR LM Performer",
+        "description" : "Performer",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
       },
       {
         "extension" : [
@@ -2925,7 +4129,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Personne et/ou Structure",
         "description" : "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
       },
       {
         "extension" : [
@@ -2940,7 +4144,52 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Personne et/ou Structure Auteur",
         "description" : "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-plan-soins"
+        },
+        "name" : "Modèle logique métier - FR LM Plan de soins",
+        "description" : "Section Plan de soins",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-points-de-vigilances-non-code"
+        },
+        "name" : "Modèle logique métier - FR LM Points de vigilance (non-codés)",
+        "description" : "Section Points de vigilance (non-codés)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-prescription-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Prescription",
+        "description" : "Entrée Prescription",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -2955,7 +4204,37 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Prescription",
         "description" : "Association à une prescription à l’origine de l’acte dont résulte le document.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-prescription-dispositifs-medicaux"
+        },
+        "name" : "Modèle logique métier - FR LM Prescription de dispositifs médicaux",
+        "description" : "Section Prescription de dispositifs médicaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-prescription-medicaments"
+        },
+        "name" : "Modèle logique métier - FR LM Prescription de médicaments",
+        "description" : "Section Prescription de médicaments",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
       },
       {
         "extension" : [
@@ -2970,7 +4249,187 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Prise en charge",
         "description" : "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.\n - Exemples :\n   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.\n   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.\n - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-probleme"
+        },
+        "name" : "Modèle logique métier - FR LM Problème",
+        "description" : "Entrée Problème",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-problemes-actifs"
+        },
+        "name" : "Modèle logique métier - FR LM Problèmes actifs",
+        "description" : "Section Problèmes actifs",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-produit-sante"
+        },
+        "name" : "Modèle logique métier - FR LM Produit de santé",
+        "description" : "Produit de santé",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-prelevement"
+        },
+        "name" : "Modèle logique métier - FR LM Prélèvement",
+        "description" : "Entrée Prélèvement",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-periode-de-renouvellement"
+        },
+        "name" : "Modèle logique métier - FR LM Période de renouvellement de la prescription",
+        "description" : "Entrée Période de renouvellement de la prescription",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-quantite-produit"
+        },
+        "name" : "Modèle logique métier - FR LM Quantité de produit",
+        "description" : "Entrée Quantité de produit",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-quantite-exposition"
+        },
+        "name" : "Modèle logique métier - FR LM Quantité exposition",
+        "description" : "Entrée Quantité exposition",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-raison-recommandation"
+        },
+        "name" : "Modèle logique métier - FR LM Raison de la recommandation",
+        "description" : "Section Raison de la recommandation",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-raison-recommandation-non-code"
+        },
+        "name" : "Modèle logique métier - FR LM Raison de la recommandation (non codée)",
+        "description" : "Section Raison de la recommandation (non codée)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-rang-vaccination"
+        },
+        "name" : "Modèle logique métier - FR LM Rang de la vaccination",
+        "description" : "Entrée Rang de la vaccination",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-recherche-de-micro-organismes"
+        },
+        "name" : "Modèle logique métier - FR LM Recherche de micro organismes",
+        "description" : "Entrée Recherche de micro organismes",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-rencontre"
+        },
+        "name" : "Modèle logique métier - FR LM Rencontre",
+        "description" : "Entrée Rencontre",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -2985,7 +4444,397 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Responsable",
         "description" : "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Resultats",
+        "description" : "Entrée Resultats",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-examens-biologie-medicale"
+        },
+        "name" : "Modèle logique métier - FR LM Resultats d'examens de biologie medicale",
+        "description" : "Entrée Resultats d'examens de biologie medicale",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-reference-interne"
+        },
+        "name" : "Modèle logique métier - FR LM Référence interne",
+        "description" : "Entrée Référence interne",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-reference-item-plan-traitement"
+        },
+        "name" : "Modèle logique métier - FR LM Référence item plan traitement",
+        "description" : "Entrée Référence item plan traitement",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-reference-item-prescription"
+        },
+        "name" : "Modèle logique métier - FR LM Référence item prescription",
+        "description" : "Entrée Référence item prescription",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-references-externes"
+        },
+        "name" : "Modèle logique métier - FR LM Références externes",
+        "description" : "Entrée Références externes",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
+        },
+        "name" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
+        "description" : "Entrée Résultat d'examens de biologie / élement clinique pertinent",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats",
+        "description" : "Section Résultats",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-examen-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats d'examen d'imagerie",
+        "description" : "Section Résultats d'examen d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-examens"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats d'examens",
+        "description" : "Section Résultats d'examens",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-examens-non-code"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats d'examens (non codée)",
+        "description" : "Section Résultats d'examens (non codée)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-evenements"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats d'événements",
+        "description" : "Section Résultats d'événements",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"
+        },
+        "name" : "Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention",
+        "description" : "Section Résultats de laboratoire de biologie de seconde intention",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-section"
+        },
+        "name" : "Modèle logique métier - FR LM Section",
+        "description" : "Section",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-serie-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Serie imagerie",
+        "description" : "Entrée Serie imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-signe-vital"
+        },
+        "name" : "Modèle logique métier - FR LM Signe vital",
+        "description" : "Entrée Signe vital",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-signe-vital-observe"
+        },
+        "name" : "Modèle logique métier - FR LM Signe vital observé",
+        "description" : "Entrée Signe vital observé",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-signes-vitaux"
+        },
+        "name" : "Modèle logique métier - FR LM Signes vitaux",
+        "description" : "Section Signes vitaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-sop-instance"
+        },
+        "name" : "Modèle logique métier - FR LM SOP Instance",
+        "description" : "Entrée SOP Instance",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-cr-bio-sous-chapitre"
+        },
+        "name" : "Modèle logique métier - FR LM Sous-chapitre du compte rendu d'examens de biologie",
+        "description" : "Modèle logique métier de la section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut"
+        },
+        "name" : "Modèle logique métier - FR LM Statut",
+        "description" : "Entrée Statut",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut-clinique-patient"
+        },
+        "name" : "Modèle logique métier - FR LM Statut clinique du patient",
+        "description" : "Entrée Statut clinique du patient",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut-document-entree"
+        },
+        "name" : "Modèle logique métier - FR LM Statut du document",
+        "description" : "Entrée Statut du document",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut-document"
+        },
+        "name" : "Modèle logique métier - FR LM Statut du document",
+        "description" : "Section Statut du document",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut-probleme"
+        },
+        "name" : "Modèle logique métier - FR LM Statut du problème",
+        "description" : "Entrée Statut du problème.",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-statut-fonctionnel"
+        },
+        "name" : "Modèle logique métier - FR LM Statut fonctionnel",
+        "description" : "Section Statut fonctionnel",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
       },
       {
         "extension" : [
@@ -3000,7 +4849,52 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Structure conservation",
         "description" : "Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-sujet"
+        },
+        "name" : "Modèle logique métier - FR LM Sujet",
+        "description" : "Sujet",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-sujet-non-humain"
+        },
+        "name" : "Modèle logique métier - FR LM Sujet non humain",
+        "description" : "Sujet non humain",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-synthese-medicale-sejour"
+        },
+        "name" : "Modèle logique métier - FR LM Synthese medicale sejour",
+        "description" : "Entrée Synthese medicale sejour",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -3015,7 +4909,232 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Système / Structure",
         "description" : "Système auteur du document",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-severite"
+        },
+        "name" : "Modèle logique métier - FR LM Sévérité",
+        "description" : "Entrée Sévérité.",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-technique-imagerie"
+        },
+        "name" : "Modèle logique métier - FR LM Technique imagerie",
+        "description" : "Entrée Technique imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement"
+        },
+        "name" : "Modèle logique métier - FR LM Traitement",
+        "description" : "Entrée Traitement",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement-dispense"
+        },
+        "name" : "Modèle logique métier - FR LM Traitement dispensé",
+        "description" : "Entrée Traitement dispense",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement-prescrit"
+        },
+        "name" : "Modèle logique métier - FR LM Traitement Prescrit",
+        "description" : "Entrée Traitement prescrit",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement-prescrit-subordonne"
+        },
+        "name" : "Modèle logique métier - FR LM Traitement Prescrit Subordonnee",
+        "description" : "Entrée Traitement prescrit subordonne",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement-subordonne"
+        },
+        "name" : "Modèle logique métier - FR LM Traitement subordonné",
+        "description" : "Entrée Traitement subordonné",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitements"
+        },
+        "name" : "Modèle logique métier - FR LM Traitements",
+        "description" : "Section Traitements",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitements-administres"
+        },
+        "name" : "Modèle logique métier - FR LM Traitements administrés",
+        "description" : "Section Traitements administrés",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-traitement-sortie"
+        },
+        "name" : "Modèle logique métier - FR LM Traitements à la sortie",
+        "description" : "Section Traitements à la sortie",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-transfert-du-patient"
+        },
+        "name" : "Modèle logique métier - FR LM Transfert du patient",
+        "description" : "Entrée Transfert du patient",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-transfusion-de-produits-sanguins"
+        },
+        "name" : "Modèle logique métier - FR LM Transfusion de produits sanguins",
+        "description" : "Entrée Transfusion de produits sanguins",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-vaccin-recommande"
+        },
+        "name" : "Modèle logique métier - FR LM Vaccin recommandé",
+        "description" : "Entrée Vaccin recommandé",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-vaccination"
+        },
+        "name" : "Modèle logique métier - FR LM Vaccination",
+        "description" : "Entrée Vaccination",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-vaccinations"
+        },
+        "name" : "Modèle logique métier - FR LM Vaccinations",
+        "description" : "Section Vaccinations",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Sections)"
       },
       {
         "extension" : [
@@ -3030,7 +5149,22 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Validateur",
         "description" : "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-echantillon-preleve"
+        },
+        "name" : "Modèle logique métier - FR LM Échantillon prélevé",
+        "description" : "Échantillon prélevé",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
       },
       {
         "extension" : [
@@ -3045,7 +5179,22 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Évènement",
         "description" : "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant.",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques"
+        "groupingId" : "Modèles logiques de l'entête du document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:logical"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-lm-non-remboursable"
+        },
+        "name" : "Non remboursable",
+        "description" : "Modèle logique métier - FR LM Entrée Non remboursable",
+        "exampleBoolean" : false,
+        "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
       },
       {
         "extension" : [
@@ -3519,6 +5668,83 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "ValueSet – FR ValueSet Type d'évaluation",
         "description" : "Codes autorisés pour indiquer le type d'évaluation.\nInclut LOINC, ICF, et permet d'autres systèmes si aucun code approprié n'est trouvé.",
         "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/IPS-FR-2024.01"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/LDL-SES-2022.01"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eDISP-MED-2024.01"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
+        }
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
+        }
       }
     ],
     "page" : {
@@ -3668,17 +5894,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
           "title" : "Corps d'un document",
           "generation" : "markdown",
           "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "modelesLogiquesMetier-corps.html"
-                }
-              ],
-              "nameUrl" : "modelesLogiquesMetier-corps.html",
-              "title" : "Modèle logique métier",
-              "generation" : "markdown"
-            },
             {
               "extension" : [
                 {

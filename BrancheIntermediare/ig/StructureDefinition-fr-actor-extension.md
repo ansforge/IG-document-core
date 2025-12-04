@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRActorExtension |
+| Draft as of 2025-12-04 | *Computable Name*:FRActorExtension |
 
 Extension permettant de représenter un acteur impliqué dans le document avec son type et sa référence.
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-actor-extension.c
   "name" : "FRActorExtension",
   "title" : "FR Actor Extension",
   "status" : "draft",
-  "date" : "2025-12-03T16:47:23+00:00",
+  "date" : "2025-12-04T14:08:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
