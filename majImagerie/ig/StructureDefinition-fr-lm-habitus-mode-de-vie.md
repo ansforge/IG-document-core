@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-habitus-mode-d
   "name" : "FRLMHabitusModeDeVie",
   "title" : "Modèle logique métier - FR LM Habitus et modes de vie",
   "status" : "draft",
-  "date" : "2025-12-05T09:37:33+00:00",
+  "date" : "2025-12-05T10:47:15+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

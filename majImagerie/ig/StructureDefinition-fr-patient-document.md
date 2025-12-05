@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-document.
   "name" : "FRPatientDocument",
   "title" : "FR Patient Document",
   "status" : "draft",
-  "date" : "2025-12-05T09:37:33+00:00",
+  "date" : "2025-12-05T10:47:15+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

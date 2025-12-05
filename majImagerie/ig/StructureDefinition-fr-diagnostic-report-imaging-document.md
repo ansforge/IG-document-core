@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
   "name" : "FRDiagnosticReportImagingDocument",
   "title" : "DiagnosticReport - FR Diagnostic Report Imaging Document",
   "status" : "draft",
-  "date" : "2025-12-05T09:37:33+00:00",
+  "date" : "2025-12-05T10:47:15+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -325,7 +325,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
           "rules" : "open"
         },
         "short" : "Résultats d'examen (actuels ou antérieurs)",
-        "comment" : "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans FRObservationResultDocument.note",
+        "comment" : "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans une note",
         "type" : [
           {
             "code" : "Reference",
