@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRDeviceAuteurDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRDeviceAuteurDocument |
 
  
 Ce profil représente le système auteur du document. 
@@ -17,7 +17,7 @@ Ce profil représente le système auteur du document.
 **Utilisations:**
 
 * Utiliser ce Profil: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Référer à ce Profil: [FR Composition Document](StructureDefinition-fr-composition-document.md)
+* Référer à ce Profil: [FR Actor Extension](StructureDefinition-fr-actor-extension.md), [FR Composition Document](StructureDefinition-fr-composition-document.md), [FamilyMemberHistory - FR Family Member History Document](StructureDefinition-fr-family-member-history-document.md), [Media - FR Media Document](StructureDefinition-fr-media-document.md) and [FR Patient History Extension](StructureDefinition-fr-patient-history-extension.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-device-auteur-document)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-device-auteur-doc
   "name" : "FRDeviceAuteurDocument",
   "title" : "FR Device Document",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

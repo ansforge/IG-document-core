@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-administration-de-derives-du-sang | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRLMAdministrationDeDerivesDuSang |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMAdministrationDeDerivesDuSang |
 
  
 Entrée Administration de dérivés du sang 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-administration
   "name" : "FRLMAdministrationDeDerivesDuSang",
   "title" : "Modèle logique métier - FR LM Administration de dérivés du sang",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

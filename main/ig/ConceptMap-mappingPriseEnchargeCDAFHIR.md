@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPriseEnchargeCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prise en charge" |
+| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prise en charge" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
@@ -88,7 +88,7 @@ Mapping de (non spécifié) vers (non spécifié)
 
 -------
 
-**Groupe 2**Mapping de [CDA - componentOf](StructureDefinition-fr-cda-component-of.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document`
+**Groupe 2**Mapping de [CDA - componentOf](StructureDefinition-fr-cda-component-of.md) to [Encounter - FR Encounter Document](StructureDefinition-fr-encounter-document.md)
 
 * **Code source**: componentOf
   * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
@@ -165,7 +165,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

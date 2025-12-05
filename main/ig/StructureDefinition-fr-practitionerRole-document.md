@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRPractitionerRoleDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRPractitionerRoleDocument |
 
  
 Ce profil représente les professionnels de santé et leurs rôles dans le cadre d’un document médical. 
@@ -17,7 +17,7 @@ Ce profil représente les professionnels de santé et leurs rôles dans le cadre
 **Utilisations:**
 
 * Utiliser ce Profil: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Référer à ce Profil: [FR Composition Document](StructureDefinition-fr-composition-document.md), [FR Encounter Care Document](StructureDefinition-fr-encounter-care-document.md) and [FR Performer Event Extension](StructureDefinition-fr-performer-event-extension.md)
+* Référer à ce Profil: [Observation - FR Observation Vital Signs Panel Document](StructureDefinition-fr-Observation-vital-signs-panel-document.md), [FR Actor Extension](StructureDefinition-fr-actor-extension.md), [FR Composition Document](StructureDefinition-fr-composition-document.md), [Condition - FR Condition Document](StructureDefinition-fr-condition-document.md)...Show 29 more,[DeviceRequest - FR Device request Document](StructureDefinition-fr-device-request-document.md),[DeviceUseStatement - FR Device Use Statement Document](StructureDefinition-fr-device-use-statement-document.md),[DiagnosticReport - FR Diagnostic Report BIO chapter Document](StructureDefinition-fr-diagnostic-report-bio-chapter-document.md),[DiagnosticReport - FR Diagnostic Report Document](StructureDefinition-fr-diagnostic-report-document.md),[DiagnosticReport - FR Diagnostic Report Imaging Document](StructureDefinition-fr-diagnostic-report-imaging-document.md),[FR Encounter Care Document](StructureDefinition-fr-encounter-care-document.md),[FamilyMemberHistory - FR Family Member History Document](StructureDefinition-fr-family-member-history-document.md),[Immunization - FR Immunization Document](StructureDefinition-fr-immunization-document.md),[Media - FR Media Document](StructureDefinition-fr-media-document.md),[MedicationRequest - FR Medication Request Document](StructureDefinition-fr-medication-request-document.md),[Observation - FR Observation Administration Blood Derivatives Document](StructureDefinition-fr-observation-administration-blood-derivatives-document.md),[Observation - FR Observation Antenatal Testing And Surveillance Battery Document](StructureDefinition-fr-observation-antenatal-testing-surveillance-battery-document.md),[Observation - FR Blood Product Transfusion Document](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[Observation - FR Observation Contra Indications Document](StructureDefinition-fr-observation-contra-indications-document.md),[Observation - FR Observation Laboratory Report Results Document](StructureDefinition-fr-observation-laboratory-report-results-document.md),[Observation - FR Observation Medical Summary Document](StructureDefinition-fr-observation-medical-summary-document.md),[Observation - FR Observation Microorganism Detection Document](StructureDefinition-fr-observation-microorganism-detection-document.md),[Observation - FR Observation Pregnancy Document](StructureDefinition-fr-observation-pregnancy-document.md),[Observation - FR Observation Radiation Exposure Document](StructureDefinition-fr-observation-radiation-exposure-document.md),[Observation - FR Observation Result Document](StructureDefinition-fr-observation-result-document.md),[Observation - FR Observation Survey Document](StructureDefinition-fr-observation-survey-document.md),[Observation - FR Observation Transfusion Accidents Document](StructureDefinition-fr-observation-transfusion-accidents-document.md),[Observation - FR Observation Vital Signs Document](StructureDefinition-fr-observation-vital-signs-document.md),[Observation - FR Observation Work Related Accident Document](StructureDefinition-fr-observation-work-related-accident-document.md),[FR Performer Event Extension](StructureDefinition-fr-performer-event-extension.md),[Procedure - FR Procedure Act Document](StructureDefinition-fr-procedure-act-document.md),[Procedure - FR Procedure Imaging Document](StructureDefinition-fr-procedure-imaging-document.md),[Specimen - FR Specimen Document](StructureDefinition-fr-specimen-document.md)and[Task - FR Task Patient Transport Document](StructureDefinition-fr-task-patient-transport-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-practitionerRole-document)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitionerRole-
   "name" : "FRPractitionerRoleDocument",
   "title" : "FR PractitionerRole Document",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

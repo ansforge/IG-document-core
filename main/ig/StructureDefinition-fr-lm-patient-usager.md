@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-usager | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRLMPatientUsager |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMPatientUsager |
 
  
 Patient/Usager concerné par le document. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-patient-usager
   "name" : "FRLMPatientUsager",
   "title" : "Modèle logique métier - FR LM Patient Usager",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

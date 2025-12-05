@@ -1,10 +1,10 @@
-#  - ANS IG document core v0.1.0
+# eDISP-MED-2024.01 - ANS IG document core v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* ****
+* **eDISP-MED-2024.01**
 
-## Binary: 
+## Example Binary: eDISP-MED-2024.01
 
 ```
 

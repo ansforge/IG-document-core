@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-03T15:31:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-05T10:54:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -62,24 +62,6 @@
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
      fhir:version [ fhir:v "7.0.0" ]
   ] [
-     fhir:id [ fhir:v "hl7ext" ] ;
-     fhir:extension ( [
-       fhir:url [
-         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ;
-         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment>
-       ] ;
-       fhir:value [
-         a fhir:Markdown ;
-         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
-       ]
-     ] ) ;
-     fhir:uri [
-       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
-       fhir:l <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
-     ] ;
-     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
-     fhir:version [ fhir:v "5.2.0" ]
-  ] [
      fhir:id [ fhir:v "hl7_cda_uv_core" ] ;
      fhir:uri [
        fhir:v "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core"^^xsd:anyURI ;
@@ -104,6 +86,14 @@
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
      fhir:version [ fhir:v "2.1.0" ]
   ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_extensions_r4" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
+  ] [
      fhir:id [ fhir:v "ans_fhir_fr_annuaire" ] ;
      fhir:uri [
        fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"^^xsd:anyURI ;
@@ -119,6 +109,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.fhir-clinical-document" ] ;
      fhir:version [ fhir:v "1.0.0" ]
+  ] [
+     fhir:id [ fhir:v "ihe_pharm_mpd" ] ;
+     fhir:uri [
+       fhir:v "https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd"^^xsd:anyURI ;
+       fhir:l <https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd>
+     ] ;
+     fhir:packageId [ fhir:v "ihe.pharm.mpd" ] ;
+     fhir:version [ fhir:v "1.0.0-comment-2" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1446,40 +1444,132 @@
        fhir:id [ fhir:v "Ressources FHIR entête" ] ;
        fhir:name [ fhir:v "Profils FHIR entête" ]
      ] [
+       fhir:id [ fhir:v "Ressources FHIR corps" ] ;
+       fhir:name [ fhir:v "Profils FHIR corps" ]
+     ] [
        fhir:id [ fhir:v "Data Type FHIR" ] ;
        fhir:name [ fhir:v "Data Type Profiles" ]
      ] [
-       fhir:id [ fhir:v "Extensions FHIR" ] ;
-       fhir:name [ fhir:v "Extensions FHIR" ]
+       fhir:id [ fhir:v "Extensions FHIR entête" ] ;
+       fhir:name [ fhir:v "Extensions FHIR entête" ]
+     ] [
+       fhir:id [ fhir:v "Extensions FHIR corps" ] ;
+       fhir:name [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:id [ fhir:v "Mapping" ] ;
        fhir:name [ fhir:v "Concept Maps" ]
-     ] [
-       fhir:id [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ] ;
-       fhir:name [ fhir:v "BIO-CR-BIO_2024.01_Microbiologie_V1" ] ;
-       fhir:description [ fhir:v "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eDISP-MED-2024.01" ] ;
-       fhir:name [ fhir:v "eDISP-MED-2024.01" ] ;
-       fhir:description [ fhir:v "eDispensation de médicaments (eDISP-MED-2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ] ;
-       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoStruct" ] ;
-       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ] ;
-       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoNonStruct" ] ;
-       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/IPS-FR-2024.01" ] ;
-       fhir:name [ fhir:v "IPS-FR" ] ;
-       fhir:description [ fhir:v "Volet International Patient Summary - France (IPS-FR_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/LDL-SES-2022.01" ] ;
-       fhir:name [ fhir:v "LDL-SES_2022.01" ] ;
-       fhir:description [ fhir:v "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)" ]
      ] ) ;
      fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-adverse-event-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-adverse-event-document" ]
+       ] ;
+       fhir:name [ fhir:v "AdverseEvent - FR adverse event Document" ] ;
+       fhir:description [ fhir:v "FRAdverseEventDocument permet de décrire un effet indésirable prévisible lié à un médicament" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-allergie-intolerance-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-allergie-intolerance-document" ]
+       ] ;
+       fhir:name [ fhir:v "AllergyIntolerance - FR Allergy and intolerance Document" ] ;
+       fhir:description [ fhir:v "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-Microbiologie-V1> ;
+         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ]
+       ] ;
+       fhir:name [ fhir:v "BIO-CR-BIO_2024.01_Microbiologie_V1" ] ;
+       fhir:description [ fhir:v "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-body-structure-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-body-structure-document" ]
+       ] ;
+       fhir:name [ fhir:v "BodyStructure - FR Body Structure Document" ] ;
+       fhir:description [ fhir:v "FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-care-plan-document" ]
+       ] ;
+       fhir:name [ fhir:v "CarePlan - FR Care Plan Document" ] ;
+       fhir:description [ fhir:v "FRCarePlanDocument est un profil permettant d’enregistrer une référence à un traitement dans un plan de traitement." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
        fhir:extension ( [
          fhir:url [
            fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
@@ -2257,6 +2347,358 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-condition-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-condition-document" ]
+       ] ;
+       fhir:name [ fhir:v "Condition - FR Condition Document" ] ;
+       fhir:description [ fhir:v "FRConditionDocument est un profil utilisé pour décrire un problème du patient (une pathologie par exemple)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-advance-directive-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-advance-directive-document" ]
+       ] ;
+       fhir:name [ fhir:v "Consent - FR Advance directive Document" ] ;
+       fhir:description [ fhir:v "FRAdvanceDirectiveDocument permet  d’indiquer si les directives anticipées du patient.\nArticle L1111-11 du Code de la Santé Publique : \n« Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un \njour hors d'état d'exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne \nrelative à sa fin de vie en ce qui concerne les conditions de la poursuite, de la limitation, \nde l'arrêt ou du refus de traitement ou d'acte médicaux.»" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-request-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-device-request-document" ]
+       ] ;
+       fhir:name [ fhir:v "DeviceRequest - FR Device request Document" ] ;
+       fhir:description [ fhir:v "FRDeviceRequestDocument représente une demande de dispositif médical (DM) qui n’a pas encore été dispensé." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-use-statement-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-device-use-statement-document" ]
+       ] ;
+       fhir:name [ fhir:v "DeviceUseStatement - FR Device Use Statement Document" ] ;
+       fhir:description [ fhir:v "FRDeviceUseStatementDocument représente les informations sur un dispositif médical" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-bio-chapter-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-diagnostic-report-bio-chapter-document" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport - FR Diagnostic Report BIO chapter Document" ] ;
+       fhir:description [ fhir:v "FRDiagnosticReportBIOChapterDocument utilisé pour représenter un CR de biologie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-diagnostic-report-document" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport - FR Diagnostic Report Document" ] ;
+       fhir:description [ fhir:v "FRDiagnosticReportDocument est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-diagnostic-report-imaging-document" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport - FR Diagnostic Report Imaging Document" ] ;
+       fhir:description [ fhir:v "Le profil FRDiagnosticReportImagingDocument est dédié aux comptes rendus d’imagerie.\nCe document représente le rapport d’un examen d’imagerie. Il constitue la ressource principale qui fait référence à l’ensemble des données produites lors de l’examen d’imagerie." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-document-reference-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-document-reference-document" ]
+       ] ;
+       fhir:name [ fhir:v "DocumentReference - FR Document reference Document" ] ;
+       fhir:description [ fhir:v "FRDocumentReferenceDocument restreint pour les documents PDF." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eDISP-MED-2024.01> ;
+         fhir:reference [ fhir:v "Binary/eDISP-MED-2024.01" ]
+       ] ;
+       fhir:name [ fhir:v "eDISP-MED-2024.01" ] ;
+       fhir:description [ fhir:v "eDispensation de médicaments (eDISP-MED-2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-encounter-document" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter - FR Encounter Document" ] ;
+       fhir:description [ fhir:v "FREncounterDocument est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-endpoint-wado-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-endpoint-wado-document" ]
+       ] ;
+       fhir:name [ fhir:v "Endpoint - FR Endpoint Wado Document" ] ;
+       fhir:description [ fhir:v "FREndpointWadoDocument permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoNonStruct> ;
+         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ]
+       ] ;
+       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoNonStruct" ] ;
+       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoStruct> ;
+         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ]
+       ] ;
+       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoStruct" ] ;
+       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-family-member-history-document" ]
+       ] ;
+       fhir:name [ fhir:v "FamilyMemberHistory - FR Family Member History Document" ] ;
+       fhir:description [ fhir:v "FRFamilyMemberHistoryDocument est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-accession-number-identifier-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-accession-number-identifier-document" ]
+       ] ;
+       fhir:name [ fhir:v "FR Accession Number Identifier Document" ] ;
+       fhir:description [ fhir:v "DataType définissant l'Accession Number d'une demande d'examen. Il s'agit d'un identifiant unique attribué à chaque demande d'examen." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Data Type FHIR" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-actor-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Actor Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant de représenter un acteur impliqué dans le document avec son type et sa référence." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:extension"
          ]
        ] ) ;
@@ -2270,7 +2712,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -2293,6 +2735,27 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-comparison-studies-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-comparison-studies-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Comparison Studies Extension" ] ;
+       fhir:description [ fhir:v "Examen de comparaison radiologique" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -2367,6 +2830,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-body-site-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-family-member-history-body-site-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Family Member History Body Site Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer la localisation anatomique d'une condition dans antécédents familiaux" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:complex-type"
          ]
        ] ) ;
@@ -2389,6 +2874,71 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-procedure-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-imaging-procedure-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Imaging Procedure Extension" ] ;
+       fhir:description [ fhir:v "Imaging procedure used for the imaging acquisition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-immunization-type-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-immunization-type-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Immunization Type Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant de représenter le type de vaccination (ex: INITIMMUNIZ, BOOSTER, IMMUNIZ)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-interpretation-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-interpretation-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Interpretation Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant de spécifier une interprétation." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2403,6 +2953,116 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-sequence-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-administration-sequence-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Medication Administration Sequence Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer l’ordre d’une prise dans le cadre d’un schéma de traitement comportant des dosages progressifs ou fractionnés dans le contexte de MedicationAdministration. La valeur est un entier (integer) représentant le numéro de séquence de l’administration." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-request-out-of-nomenclature-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-request-out-of-nomenclature-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Medication Request Out Of Nomenclature Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer si le traitement prescrit est hors autorisation de mise sur le marché (AMM)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-method-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-method-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Method Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d’indiquer la méthode utilisée : techniques biologiques (ex. : titration, agglutination…), techniques d’imagerie dans les demandes d'examen (ultrasound, tomographie, IRM…), des méthodes de mesure spécifiques, etc." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-not-covered-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-not-covered-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Not Covered Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer si le traitement est non remboursable." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-number-of-frames-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-number-of-frames-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Number of Frames Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d’indiquer le nombre de cadres référencés dans une instance ImagingStudy, conforme aux exigences du modèle logique Xt-EHR." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -2455,6 +3115,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-history-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-patient-history-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Patient History Extension" ] ;
+       fhir:description [ fhir:v "Historique médical du patient pertinent pour l'examen d'imagerie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2490,7 +3171,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Extensions FHIR" ]
+       fhir:groupingId [ fhir:v "Extensions FHIR entête" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -2543,6 +3224,50 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-difficulty-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-difficulty-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Procedure Difficulty Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer la difficulté perçue ou mesurée d'un acte." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-priority-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-priority-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Procedure Priority Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d’indiquer d'indique la priorité clinique de l’observation." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2557,6 +3282,50 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-status-reason-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-status-reason-extension" ]
+       ] ;
+       fhir:name [ fhir:v "FR Status Reason Extension" ] ;
+       fhir:description [ fhir:v "Extension permettant d'indiquer le motif du statut métier d'une évaluation." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Extensions FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:complex-type"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-study-instance-uid-identifier-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-study-instance-uid-identifier-document" ]
+       ] ;
+       fhir:name [ fhir:v "FR Study Instance Uid Identifier Document" ] ;
+       fhir:description [ fhir:v "DataType définissant l’UID de l’instance Study (0020,000D) d'une demande d'examen d'imagerie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Data Type FHIR" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -2621,6 +3390,138 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-imaging-study-document" ]
+       ] ;
+       fhir:name [ fhir:v "ImagingStudy - FR Imaging study Document" ] ;
+       fhir:description [ fhir:v "FRImagingStudyDocument (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.\nL’examen est composé d'une ou de plusieurs séries d’images médicales." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-immunization-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-immunization-document" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization - FR Immunization Document" ] ;
+       fhir:description [ fhir:v "FRImmunizationDocument permet de décrire l'administration d'un vaccin. \n - Il permet également de décrire pourquoi un vaccin n'a pas été réalisé.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRMedicationAdministrationDocument sauf mentions précisées ci-après." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-immunization-recommendation-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-immunization-recommendation-document" ]
+       ] ;
+       fhir:name [ fhir:v "ImmunizationRecommendation - FR Immunization Recommendation Document" ] ;
+       fhir:description [ fhir:v "FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée.\n - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). \n - Une vaccination prévue dépend d'un plan accepté et à venir.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRVaccinationDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/IPS-FR-2024.01> ;
+         fhir:reference [ fhir:v "Binary/IPS-FR-2024.01" ]
+       ] ;
+       fhir:name [ fhir:v "IPS-FR" ] ;
+       fhir:description [ fhir:v "Volet International Patient Summary - France (IPS-FR_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/LDL-SES-2022.01> ;
+         fhir:reference [ fhir:v "Binary/LDL-SES-2022.01" ]
+       ] ;
+       fhir:name [ fhir:v "LDL-SES_2022.01" ] ;
+       fhir:description [ fhir:v "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-pregnancy-history-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-pregnancy-history-document" ]
+       ] ;
+       fhir:name [ fhir:v "List - FR Pregnancy History Document" ] ;
+       fhir:description [ fhir:v "FRPregnancyHistoryDocument  est une liste contenant soit un événement de naissance, soit une observation sur la grossesse, mais pas les deux." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -3061,6 +3962,160 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Mapping" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-media-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-media-document" ]
+       ] ;
+       fhir:name [ fhir:v "Media - FR Media Document" ] ;
+       fhir:description [ fhir:v "FRMediaDocument permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-document" ]
+       ] ;
+       fhir:name [ fhir:v "Medication - FR Medication Document" ] ;
+       fhir:description [ fhir:v "FRMedicationDocument permet de décrire un médicament ou un vaccin." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medications-combinaison-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medications-combinaison-document" ]
+       ] ;
+       fhir:name [ fhir:v "Medication - FR Medications Combinaison Document" ] ;
+       fhir:description [ fhir:v "FRMedicationsCombinaisonDocument permet de décrire une combinaison de médicaments ou de vaccins." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-administration-document" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationAdministration - FR Medication Administration Document" ] ;
+       fhir:description [ fhir:v "\n - FRMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.\n - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement est en attente d’administration c’est-à dire qu’il a été prescrit." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-dispense-document" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationDispense - FR Medication Dispense Document" ] ;
+       fhir:description [ fhir:v "FRMedicationDispenseDocument permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-request-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-request-document" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationRequest - FR Medication Request Document" ] ;
+       fhir:description [ fhir:v "FRMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-statement-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-medication-statement-document" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationStatement - FR Medication Statement Document" ] ;
+       fhir:description [ fhir:v "\n - FRMedicationStatementDocument permet de décrire les modalités d'administration d'un médicament au patient.\n - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6677,12 +7732,694 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Binary"
+           fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-Microbiologie-V1> ;
-         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-blood-product-transfusion-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-blood-product-transfusion-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Blood Product Transfusion Document" ] ;
+       fhir:description [ fhir:v "FRObservationBloodProductTransfusionDocument permet d'indiquer s'il a eu ou pas transfusion de produit sanguin." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-administration-blood-derivatives-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-administration-blood-derivatives-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Administration Blood Derivatives Document" ] ;
+       fhir:description [ fhir:v "FRObservationAdministrationBloodDerivativesDocument est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-antenatal-testing-surveillance-battery-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-antenatal-testing-surveillance-battery-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Antenatal Testing And Surveillance Battery Document" ] ;
+       fhir:description [ fhir:v "FRObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-birth-event-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-birth-event-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Birth Event Document" ] ;
+       fhir:description [ fhir:v "FRObservationBirthEventDocument est un profil qui permet de rassembler les observations relatives à une naissance." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-contra-indications-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-contra-indications-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Contra Indications Document" ] ;
+       fhir:description [ fhir:v "FRObservationContraIndicationsDocument permet d'apporter des informations relatives aux contre-indications médicales du patient dans le cadre d'un examen d'imagerie." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-laboratory-report-results-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Laboratory Report Results Document" ] ;
+       fhir:description [ fhir:v "FRObservationLaboratoryReportResultsDocument décrit un résultat d’examen de biologie médicale." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-medical-summary-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-medical-summary-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Medical Summary Document" ] ;
+       fhir:description [ fhir:v "FRObservationMedicalSummaryDocument permet de fournir, sous forme textuelle, une synthèse médicale du séjour." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-microorganism-detection-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-microorganism-detection-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Microorganism Detection Document" ] ;
+       fhir:description [ fhir:v "FRObservationMicroorganismDetectionDocument permet d'indiquer si une recherche de micro-organismes multirésistants ou émergents a été effectuée ou pas." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pain-score-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-pain-score-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Pain Score Document" ] ;
+       fhir:description [ fhir:v "FRObservationPainScoreDocument permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-pregnancy-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Pregnancy Document" ] ;
+       fhir:description [ fhir:v "FRObservationPregnancyDocument permet d'apporter des informations relatives aux grossesses actuelle ou passées." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-history-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-pregnancy-history-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Pregnancy History Document" ] ;
+       fhir:description [ fhir:v "FRObservationPregnancyHistoryDocument permet de regrouper les observations relatives à un épisode de grossesse." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-radiation-exposure-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-radiation-exposure-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Radiation Exposure Document" ] ;
+       fhir:description [ fhir:v "FRObservationRadiationExposureDocument permet d'enregistrer les informations relatives à l’exposition du patient aux rayonnements et les informations de radioprotection." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-result-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-result-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Result Document" ] ;
+       fhir:description [ fhir:v "FRObservationResultDocument permet d'indiquer le résultat observé." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-social-history-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-social-history-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Social History Document" ] ;
+       fhir:description [ fhir:v "FRObservationSocialHistoryDocument décrit les habitudes de vie du patient (Habitus / Mode de vie)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-survey-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-survey-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Survey Document" ] ;
+       fhir:description [ fhir:v "FRObservationSurveyDocument permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-survey-pannel-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-survey-pannel-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Survey Pannel Document" ] ;
+       fhir:description [ fhir:v "FRObservationSurveyPannelDocument permet de rassembler des observations de questionnaires." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-transfusion-accidents-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-transfusion-accidents-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Transfusion Accidents Document" ] ;
+       fhir:description [ fhir:v "FRObservationTransfusionAccidentsDocument est un profil utilisé pour décrire un accident transfusionnel." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-vital-signs-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-vital-signs-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Vital Signs Document" ] ;
+       fhir:description [ fhir:v "\n - FRObservationVitalSignsDocument permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.\n - Il est basée sur la ressource Observation qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Observation-vital-signs-panel-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-Observation-vital-signs-panel-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Vital Signs Panel Document" ] ;
+       fhir:description [ fhir:v "FRObservationVitalSignsPanelDocument permet de regrouper des informations relatives aux mesures cliniques du patient." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-work-related-accident-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-observation-work-related-accident-document" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - FR Observation Work Related Accident Document" ] ;
+       fhir:description [ fhir:v "FRObservationWorkRelatedAccidentDocument permet d'indiquer si l'élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-act-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-act-document" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure - FR Procedure Act Document" ] ;
+       fhir:description [ fhir:v "FRProcedureActDocument est un profil utilisé pour décrire un acte planifié ou réalisé." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-procedure-imaging-document" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure - FR Procedure Imaging Document" ] ;
+       fhir:description [ fhir:v "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-service-request-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-service-request-document" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest - FR Service Request Document" ] ;
+       fhir:description [ fhir:v "FRSeviceRequestDocument profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-specimen-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-specimen-document" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen - FR Specimen Document" ] ;
+       fhir:description [ fhir:v "FRSpecimenDocument est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-task-patient-transport-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-task-patient-transport-document" ]
+       ] ;
+       fhir:name [ fhir:v "Task - FR Task Patient Transport Document" ] ;
+       fhir:description [ fhir:v "FRTaskPatientTransportDocument permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-actor-type-document> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-actor-type-document" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet - FR ValueSet Actor Type Document" ] ;
+       fhir:description [ fhir:v "Jeu de valeurs pour les types d'acteurs." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-edqm-document> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-edqm-document" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet - FR ValueSet EDQM Document" ] ;
+       fhir:description [ fhir:v "ValueSet basé sur le CodeSystem EDQM fourni par SMT" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-medication-translation-document> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-medication-translation-document" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet - FR ValueSet Medication Translation Document" ] ;
+       fhir:description [ fhir:v "Systèmes autorisés pour les autres codifications." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-result-type-document> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-result-type-document" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet - FR ValueSet Result Type Document" ] ;
+       fhir:description [ fhir:v "ValueSet contenant les codes LOINC autorisés pour les types de résultats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-allergy-substance> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-allergy-substance" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet – FR ValueSet Allergy Substance Document" ] ;
+       fhir:description [ fhir:v "Jeu de valeurs permettant de coder l’agent responsable d’une allergie :\n- Médicaments : CIP ou UCD\n- Substances : SMS\n- Aliments : CIM-11 Chapitre X Extensions – Allergènes ou substances non médicinales\n- Agents environnementaux ou physiques : idem CIM-11 Chapitre X Extensions\n- Allergènes pouvant induire une contre-indication vaccinale : jdv-allergie-vaccin-cisis" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-procedure-code> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-procedure-code" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet – FR ValueSet Codes d’actes" ] ;
+       fhir:description [ fhir:v "Codes autorisés pour indiquer un acte.\nInclut :\n- Terminologie CCAM\n- NCIT (code C25218 : 'Intervention') si l'acte n'est pas trouvé dans CCAM\n- CISIS jdv-absent-or-unknown-procedure-cisis pour actes chirurgicaux inconnus ou absents.\n\nSi aucun code approprié n’est disponible, l’acte peut être décrit en texte libre." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-evaluation-type> ;
+         fhir:reference [ fhir:v "ValueSet/fr-vs-evaluation-type" ]
+       ] ;
+       fhir:name [ fhir:v "ValueSet – FR ValueSet Type d'évaluation" ] ;
+       fhir:description [ fhir:v "Codes autorisés pour indiquer le type d'évaluation.\nInclut LOINC, ICF, et permet d'autres systèmes si aucun code approprié n'est trouvé." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -6698,81 +8435,6 @@
        fhir:reference [
          fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-glycemie-mole> ;
          fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-glycemie-mole" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/IPS-FR-2024.01> ;
-         fhir:reference [ fhir:v "Binary/IPS-FR-2024.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/LDL-SES-2022.01> ;
-         fhir:reference [ fhir:v "Binary/LDL-SES-2022.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eDISP-MED-2024.01> ;
-         fhir:reference [ fhir:v "Binary/eDISP-MED-2024.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoNonStruct> ;
-         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoStruct> ;
-         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ]
        ]
      ] ) ;
      fhir:page [

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-ins-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRPatientINSDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRPatientINSDocument |
 
  
 Ce profil représente le patient concerné par le document. 
@@ -17,7 +17,7 @@ Ce profil représente le patient concerné par le document.
 **Utilisations:**
 
 * Utiliser ce Profil: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Référer à ce Profil: [FR Composition Document](StructureDefinition-fr-composition-document.md)
+* Référer à ce Profil: [Observation - FR Observation Vital Signs Panel Document](StructureDefinition-fr-Observation-vital-signs-panel-document.md), [FR Actor Extension](StructureDefinition-fr-actor-extension.md), [AllergyIntolerance - FR Allergy and intolerance Document](StructureDefinition-fr-allergie-intolerance-document.md), [FR Composition Document](StructureDefinition-fr-composition-document.md)...Show 20 more,[Condition - FR Condition Document](StructureDefinition-fr-condition-document.md),[DiagnosticReport - FR Diagnostic Report BIO chapter Document](StructureDefinition-fr-diagnostic-report-bio-chapter-document.md),[DiagnosticReport - FR Diagnostic Report Imaging Document](StructureDefinition-fr-diagnostic-report-imaging-document.md),[Encounter - FR Encounter Document](StructureDefinition-fr-encounter-document.md),[FamilyMemberHistory - FR Family Member History Document](StructureDefinition-fr-family-member-history-document.md),[Media - FR Media Document](StructureDefinition-fr-media-document.md),[Observation - FR Observation Administration Blood Derivatives Document](StructureDefinition-fr-observation-administration-blood-derivatives-document.md),[Observation - FR Blood Product Transfusion Document](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[Observation - FR Observation Contra Indications Document](StructureDefinition-fr-observation-contra-indications-document.md),[Observation - FR Observation Laboratory Report Results Document](StructureDefinition-fr-observation-laboratory-report-results-document.md),[Observation - FR Observation Medical Summary Document](StructureDefinition-fr-observation-medical-summary-document.md),[Observation - FR Observation Microorganism Detection Document](StructureDefinition-fr-observation-microorganism-detection-document.md),[Observation - FR Observation Pregnancy Document](StructureDefinition-fr-observation-pregnancy-document.md),[Observation - FR Observation Radiation Exposure Document](StructureDefinition-fr-observation-radiation-exposure-document.md),[Observation - FR Observation Result Document](StructureDefinition-fr-observation-result-document.md),[Observation - FR Observation Transfusion Accidents Document](StructureDefinition-fr-observation-transfusion-accidents-document.md),[Observation - FR Observation Vital Signs Document](StructureDefinition-fr-observation-vital-signs-document.md),[Observation - FR Observation Work Related Accident Document](StructureDefinition-fr-observation-work-related-accident-document.md),[Procedure - FR Procedure Act Document](StructureDefinition-fr-procedure-act-document.md)and[Procedure - FR Procedure Imaging Document](StructureDefinition-fr-procedure-imaging-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-patient-ins-document)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-ins-docum
   "name" : "FRPatientINSDocument",
   "title" : "FR Patient INS Document",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -102,6 +102,22 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-ins-docum
   "derivation" : "constraint",
   "differential" : {
     "element" : [
+      {
+        "id" : "Patient.extension:sex-for-clinical-use",
+        "path" : "Patient.extension",
+        "sliceName" : "sex-for-clinical-use",
+        "short" : "Sexe clinique du patient",
+        "min" : 0,
+        "max" : "*",
+        "type" : [
+          {
+            "code" : "Extension",
+            "profile" : [
+              "http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"
+            ]
+          }
+        ]
+      },
       {
         "id" : "Patient.contact.relationship:Role",
         "path" : "Patient.contact.relationship",

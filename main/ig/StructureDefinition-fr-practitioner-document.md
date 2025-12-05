@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRPractitionerDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRPractitionerDocument |
 
  
 Ce profil permet de décrire un professionnel de santé dans le cadre d’un document médical 
@@ -17,7 +17,7 @@ Ce profil permet de décrire un professionnel de santé dans le cadre d’un doc
 **Utilisations:**
 
 * Utiliser ce Profil: [FR Bundle Document](StructureDefinition-fr-bundle-document.md)
-* Référer à ce Profil: [FR Patient INS Document](StructureDefinition-fr-patient-ins-document.md) and [FR PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
+* Référer à ce Profil: [DiagnosticReport - FR Diagnostic Report Document](StructureDefinition-fr-diagnostic-report-document.md), [FR Patient INS Document](StructureDefinition-fr-patient-ins-document.md), [FR PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md) and [Specimen - FR Specimen Document](StructureDefinition-fr-specimen-document.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-practitioner-document)
 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-practitioner-docu
   "name" : "FRPractitionerDocument",
   "title" : "FR Practitioner Document",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

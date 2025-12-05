@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-effets-indesirables | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:FRLMEffetsIndesirables |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMEffetsIndesirables |
 
  
 Section Effets indesirables 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-effets-indesir
   "name" : "FRLMEffetsIndesirables",
   "title" : "Modèle logique métier - FR LM Effets indesirables",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

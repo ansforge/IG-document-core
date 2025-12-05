@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core | *Version*:0.1.0 |
-| Draft as of 2025-12-03 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-05 | *Computable Name*:ExampleIG |
 
  **Guide de mise en œuvre des documents dématérialisés produits en France dans le domaine sanitaire et le domaine médico-social.**
  Implementation guides of dematerialized health and medico-social documents produced in France. 
@@ -49,21 +49,74 @@ Les principales ressources syntaxiques utilisées dans le CI-SIS sont :
 
 Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
 
+* [CC BY-NC-ND 3.0 IGO](https://creativecommons.org/licenses/by-nc-nd/3.0/igo/legalcode) 
+
+* [Classification internationale des maladies et des problèmes de santé connexes - 10ème révision - Version française à usage PMSI (Programme Médicalisé des Systèmes d'Information)](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-cim-10.html): [FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md)
+
+
+* [CC BY-ND 3.0 IGO](https://creativecommons.org/licenses/by-nd/3.0/igo/legalcode) 
+
+* [Classification anatomique, thérapeutique et chimique](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-atc.html): [FRImmunizationDocument](StructureDefinition-fr-immunization-document.md), [FRImmunizationRecommendationDocument](StructureDefinition-fr-immunization-recommendation-document.md), [FRMedicationDocument](StructureDefinition-fr-medication-document.md) and [FRValueSetMedicationTranslationDocument](ValueSet-fr-vs-medication-translation-document.md)
+
+
+* [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) 
+
+* [Standard Terms Data Base Dictionnaire européen multilingue de termes normalisés descripteurs de médicaments](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-standardterms.html): [FRImmunizationDocument](StructureDefinition-fr-immunization-document.md), [FRMedicationAdministrationDocument](StructureDefinition-fr-medication-administration-document.md)...Show 5 more,[FRMedicationDispenseDocument](StructureDefinition-fr-medication-dispense-document.md),[FRMedicationDocument](StructureDefinition-fr-medication-document.md),[FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md),[FRMedicationStatementDocument](StructureDefinition-fr-medication-statement-document.md)and[FRValueSetEDQMDocument](ValueSet-fr-vs-edqm-document.md)
+
+
+* [LOv2](https://github.com/etalab/licence-ouverte/blob/master/LO.md) 
+
+* [Base de données publique du médicament](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-bdpm.html): [FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md), [FRImmunizationDocument](StructureDefinition-fr-immunization-document.md)...Show 4 more,[FRImmunizationRecommendationDocument](StructureDefinition-fr-immunization-recommendation-document.md),[FRMedicationDocument](StructureDefinition-fr-medication-document.md),[FRValueSetAllergySubstanceDocument](ValueSet-fr-vs-allergy-substance.md)and[FRValueSetMedicationTranslationDocument](ValueSet-fr-vs-medication-translation-document.md)
+* [Classification Commune des Actes Médicaux](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-ccam.html): [FRProcedureActDocument](StructureDefinition-fr-procedure-act-document.md) and [FRValueSetProcedureCodeDocument](ValueSet-fr-vs-procedure-code.md)
+
+
+* Copyright HL7. Licensed under creative commons public domain
+
+* [specimenType](http://terminology.hl7.org/5.2.0/CodeSystem-v2-0487.html): [FRSpecimenDocument](StructureDefinition-fr-specimen-document.md)
+
+
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRAuthorTimeExtension](StructureDefinition-fr-author-time-extension.md)...Show 235 more,[FRBundleDocument](StructureDefinition-fr-bundle-document.md),[FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md),[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRCompositionDocument](StructureDefinition-fr-composition-document.md),[FRDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FREncounterCareDocument](StructureDefinition-fr-encounter-care-document.md),[FRHumanNameDocument](StructureDefinition-fr-human-name-document.md),[FRLMAccidentsTransfusionnels](StructureDefinition-fr-lm-accidents-transfusionnels.md),[FRLMActe](StructureDefinition-fr-lm-acte.md),[FRLMActeImagerie](StructureDefinition-fr-lm-acte-imagerie.md),[FRLMActeSubstitution](StructureDefinition-fr-lm-acte-substitution.md),[FRLMAddendum](StructureDefinition-fr-lm-addendum.md),[FRLMAdministrationDeDerivesDuSang](StructureDefinition-fr-lm-administration-de-derives-du-sang.md),[FRLMAdministrationProduitDeSante](StructureDefinition-fr-lm-administration-produit-de-sante.md),[FRLMAllergieOuHypersensibilite](StructureDefinition-fr-lm-allergie-ou-hypersensibilite.md),[FRLMAllergiesEtHypersensibilites](StructureDefinition-fr-lm-allergies-et-hypersensibilites.md),[FRLMAntecedentFamilialObserve](StructureDefinition-fr-lm-antecedent-familial-observe.md),[FRLMAntecedentsFamiliaux](StructureDefinition-fr-lm-antecedents-familiaux.md),[FRLMAntecedentsFamiliauxEntree](StructureDefinition-fr-lm-antecedents-familiaux-entree.md),[FRLMAntecedentsMedicaux](StructureDefinition-fr-lm-antecedents-medicaux.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMAuteurAPSR](StructureDefinition-fr-lm-auteur-apsr.md),[FRLMAutorisationExposition](StructureDefinition-fr-lm-autorisation-exposition.md),[FRLMAutorisationSubstitution](StructureDefinition-fr-lm-autorisation-substitution.md),[FRLMBatterieExamensBiologieMedicale](StructureDefinition-fr-lm-batterie-examens-biologie-medicale.md),[FRLMCRBIOChapitre](StructureDefinition-fr-lm-cr-bio-chapitre.md),[FRLMCRBIOSousChapitre](StructureDefinition-fr-lm-cr-bio-sous-chapitre.md),[FRLMCertitude](StructureDefinition-fr-lm-certitude.md),[FRLMCodesAbarres](StructureDefinition-fr-lm-codes-a-barres.md),[FRLMCommentaireER](StructureDefinition-fr-lm-commentaire-er.md),[FRLMCommentaireNonCode](StructureDefinition-fr-lm-commentaire-non-code.md),[FRLMComparaisonExamensImagerie](StructureDefinition-fr-lm-comparaison-examens-imagerie.md),[FRLMComplicationsActe](StructureDefinition-fr-lm-complications-acte.md),[FRLMConclusionExamenImagerie](StructureDefinition-fr-lm-conclusion-examen-imagerie.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMCorpsDocument](StructureDefinition-fr-lm-corps-document.md),[FRLMCriticite](StructureDefinition-fr-lm-criticite.md),[FRLMDemandeExamenImagerie](StructureDefinition-fr-lm-demande-examen-imagerie.md),[FRLMDemandeExamenOuSuivi](StructureDefinition-fr-lm-demande-examen-ou-suivi.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu.md),[FRLMDirectiveAnticipee](StructureDefinition-fr-lm-directive-anticipee.md),[FRLMDirectivesAnticipees](StructureDefinition-fr-lm-directives-anticipees.md),[FRLMDispensationMedicaments](StructureDefinition-fr-lm-dispensation-medicaments.md),[FRLMDispositifMedical](StructureDefinition-FRLMDispositifMedical.md),[FRLMDispositifMedicalEntree](StructureDefinition-fr-lm-dispositif-medical-entree.md),[FRLMDispositifsMedicaux](StructureDefinition-fr-lm-dispositifs-medicaux.md),[FRLMDocumentAttache](StructureDefinition-fr-lm-document-attache.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMDocumentPDFCopie](StructureDefinition-fr-lm-document-pdf-copie.md),[FRLMDocumentsAjoutes](StructureDefinition-fr-lm-documents-ajoutes.md),[FRLMDoseAntigene](StructureDefinition-fr-lm-dose-antigene.md),[FRLMEchantillonPreleve](StructureDefinition-fr-lm-echantillon-preleve.md),[FRLMEducationPatient](StructureDefinition-fr-lm-education-patient.md),[FRLMEffetIndesirable](StructureDefinition-fr-lm-effet-indesirable.md),[FRLMEffetsIndesirables](StructureDefinition-fr-lm-effets-indesirables.md),[FRLMEnRapportAvecALD](StructureDefinition-fr-lm-en-rapport-avec-ald.md),[FRLMEnRapportAvecAccidentTravail](StructureDefinition-fr-lm-en-rapport-avec-accident-travail.md),[FRLMEnRapportAvecLaPrevention](StructureDefinition-fr-lm-en-rapport-avec-la-prevention.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvaluation](StructureDefinition-fr-lm-evaluation.md),[FRLMEvaluationComposant](StructureDefinition-fr-lm-evaluation-composant.md),[FRLMEvaluationComposantN2](StructureDefinition-fr-lm-evaluation-composant-n2.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMEvenementIndesirablePendantHospitalisation](StructureDefinition-fr-lm-evenement-indesirable-pendant-hospitalisation.md),[FRLMEvenementsIndesirablesSuiteAdministrationDerivesSang](StructureDefinition-fr-lm-evenements-indesirables-suite-administration-derives-sang.md),[FRLMEvolutionEffetIndesirable](StructureDefinition-fr-lm-evolution-effet-indesirable.md),[FRLMExamenImagerie](StructureDefinition-fr-lm-examen-imagerie.md),[FRLMExpositionRadiations](StructureDefinition-fr-lm-exposition-radiations.md),[FRLMFacteursDeRisqueProfessionnelsNonCode](StructureDefinition-fr-lm-facteurs-de-risque-professionnels-non-code.md),[FRLMFonctionsPhysiques](StructureDefinition-fr-lm-fonctions-physiques.md),[FRLMGraviteEffetIndesirable](StructureDefinition-fr-lm-gravite-effet-indesirable.md),[FRLMGroupDeQuestionnairesDevaluation](StructureDefinition-fr-lm-group-de-questionnaires-devaluation.md),[FRLMHabitusModeDeVie](StructureDefinition-fr-lm-habitus-mode-de-vie.md),[FRLMHabitusModeDeVieEntree](StructureDefinition-fr-lm-habitus-mode-de-vie-entree.md),[FRLMHistoriqueDesActes](StructureDefinition-fr-lm-historique-des-actes.md),[FRLMHistoriqueDesGrossesses](StructureDefinition-fr-lm-historique-des-grossesses.md),[FRLMHistoriqueGrossesse](StructureDefinition-fr-lm-historique-grossesse.md),[FRLMHorsAMM](StructureDefinition-fr-lm-hors-amm.md),[FRLMIdentificationDeMicroOrganismesMultiresistants](StructureDefinition-fr-lm-identification-de-micro-organismes-multiresistants.md),[FRLMImageIllustrative](StructureDefinition-fr-lm-image-illustrative.md),[FRLMImputabiliteEffetIndesirable](StructureDefinition-fr-lm-imputabilite-effet-indesirable.md),[FRLMInformantAPSR](StructureDefinition-fr-lm-informant-apsr.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMInformationsCliniques](StructureDefinition-fr-lm-informations-cliniques.md),[FRLMInstructionAuPatient](StructureDefinition-fr-lm-instruction-au-patient.md),[FRLMInstructionsAuDispensateur](StructureDefinition-fr-lm-instructions-au-dispensateur.md),[FRLMInstructionsPatient](StructureDefinition-fr-lm-instructions-patient.md),[FRLMIsolatMicrobiologique](StructureDefinition-fr-lm-isolat-microbiologique.md),[FRLMLaboratoireExecutant](StructureDefinition-fr-lm-laboratoire-executant.md),[FRLMModaliteEntree](StructureDefinition-fr-lm-modalite-entree.md),[FRLMModaliteSortie](StructureDefinition-fr-lm-modalite-sortie.md),[FRLMNaissance](StructureDefinition-fr-lm-naissance.md),[FRLMNonRemboursable](StructureDefinition-fr-lm-non-remboursable.md),[FRLMNotesDispensateur](StructureDefinition-fr-lm-notes-dispensateur.md),[FRLMObjectCatalog](StructureDefinition-fr-lm-object-catalog.md),[FRLMObservation](StructureDefinition-fr-lm-observation.md),[FRLMObservationGrossesse](StructureDefinition-fr-lm-observation-grossesse.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMParticipantAPSR](StructureDefinition-fr-lm-participant-apsr.md),[FRLMParticipantCorps](StructureDefinition-fr-lm-participant-corps.md),[FRLMPatientSujetNonHumain](StructureDefinition-fr-lm-patient-sujet-non-humain.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPerformer](StructureDefinition-fr-lm-performer.md),[FRLMPeriodeDeRenouvellement](StructureDefinition-fr-lm-periode-de-renouvellement.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPlanSoins](StructureDefinition-fr-lm-plan-soins.md),[FRLMPointsDeVigilancesNonCode](StructureDefinition-fr-lm-points-de-vigilances-non-code.md),[FRLMPrelevement](StructureDefinition-fr-lm-prelevement.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPrescriptionDispositifsMedicaux](StructureDefinition-fr-lm-prescription-dispositifs-medicaux.md),[FRLMPrescriptionEntree](StructureDefinition-fr-lm-prescription-entree.md),[FRLMPrescriptionMedicaments](StructureDefinition-fr-lm-prescription-medicaments.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMProbleme](StructureDefinition-fr-lm-probleme.md),[FRLMProblemesActifs](StructureDefinition-fr-lm-problemes-actifs.md),[FRLMProduitSante](StructureDefinition-fr-lm-produit-sante.md),[FRLMQuantiteExposition](StructureDefinition-fr-lm-quantite-exposition.md),[FRLMQuantiteProduit](StructureDefinition-fr-lm-quantite-produit.md),[FRLMRaisonRecommandation](StructureDefinition-fr-lm-raison-recommandation.md),[FRLMRaisonRecommandationNonCode](StructureDefinition-fr-lm-raison-recommandation-non-code.md),[FRLMRangVaccination](StructureDefinition-fr-lm-rang-vaccination.md),[FRLMRechercheDeMicroOrganismes](StructureDefinition-fr-lm-recherche-de-micro-organismes.md),[FRLMReferenceInterne](StructureDefinition-fr-lm-reference-interne.md),[FRLMReferenceItemPlanTraitement](StructureDefinition-fr-lm-reference-item-plan-traitement.md),[FRLMReferenceItemPrescription](StructureDefinition-fr-lm-reference-item-prescription.md),[FRLMReferencesExternes](StructureDefinition-fr-lm-references-externes.md),[FRLMRencontre](StructureDefinition-fr-lm-rencontre.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMResultatExamensBiologieElementCliniquePertinent](StructureDefinition-fr-lm-resultat-examens-biologie-element-clinique-pertinent.md),[FRLMResultats](StructureDefinition-fr-lm-resultats.md),[FRLMResultatsEntry](StructureDefinition-fr-lm-resultats-entree.md),[FRLMResultatsEvenements](StructureDefinition-fr-lm-resultats-evenements.md),[FRLMResultatsExamenImagerie](StructureDefinition-fr-lm-resultats-examen-imagerie.md),[FRLMResultatsExamens](StructureDefinition-fr-lm-resultats-examens.md),[FRLMResultatsExamensBiologieMedicale](StructureDefinition-fr-lm-resultats-examens-biologie-medicale.md),[FRLMResultatsExamensNonCode](StructureDefinition-fr-lm-resultats-examens-non-code.md),[FRLMResultatsLaboratoireBiologieSecondeIntention](StructureDefinition-fr-lm-resultats-laboratoire-biologie-seconde-intention.md),[FRLMSOPInstance](StructureDefinition-fr-lm-sop-instance.md),[FRLMSection](StructureDefinition-fr-lm-section.md),[FRLMSerieImagerie](StructureDefinition-fr-lm-serie-imagerie.md),[FRLMSeverite](StructureDefinition-fr-lm-severite.md),[FRLMSigneVital](StructureDefinition-fr-lm-signe-vital.md),[FRLMSigneVitalObserve](StructureDefinition-fr-lm-signe-vital-observe.md),[FRLMSignesVitaux](StructureDefinition-fr-lm-signes-vitaux.md),[FRLMStatut](StructureDefinition-fr-lm-statut.md),[FRLMStatutCliniquePatient](StructureDefinition-fr-lm-statut-clinique-patient.md),[FRLMStatutDocument](StructureDefinition-fr-lm-statut-document.md),[FRLMStatutDocumentEntree](StructureDefinition-fr-lm-statut-document-entree.md),[FRLMStatutFonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md),[FRLMStatutProbleme](StructureDefinition-fr-lm-statut-probleme.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSujet](StructureDefinition-fr-lm-sujet.md),[FRLMSujetNonHumain](StructureDefinition-fr-lm-sujet-non-humain.md),[FRLMSyntheseMedicaleSejour](StructureDefinition-fr-lm-synthese-medicale-sejour.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMTechniqueImagerie](StructureDefinition-fr-lm-technique-imagerie.md),[FRLMTraitement](StructureDefinition-fr-lm-traitement.md),[FRLMTraitementDispense](StructureDefinition-fr-lm-traitement-dispense.md),[FRLMTraitementPrescrit](StructureDefinition-fr-lm-traitement-prescrit.md),[FRLMTraitementPrescritSubordonne](StructureDefinition-fr-lm-traitement-prescrit-subordonne.md),[FRLMTraitementSortie](StructureDefinition-fr-lm-traitement-sortie.md),[FRLMTraitementSubordonne](StructureDefinition-fr-lm-traitement-subordonne.md),[FRLMTraitements](StructureDefinition-fr-lm-traitements.md),[FRLMTraitementsAdministres](StructureDefinition-fr-lm-traitements-administres.md),[FRLMTransfertDuPatient](StructureDefinition-fr-lm-transfert-du-patient.md),[FRLMTransfusionDeProduitsSanguins](StructureDefinition-fr-lm-transfusion-de-produits-sanguins.md),[FRLMVaccinRecommande](StructureDefinition-fr-lm-vaccin-recommande.md),[FRLMVaccination](StructureDefinition-fr-lm-vaccination.md),[FRLMVaccinations](StructureDefinition-fr-lm-vaccinations.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRLocationDocument](StructureDefinition-fr-location-document.md),[FROrganizationDocument](StructureDefinition-fr-organization-document.md),[FRPatientDocument](StructureDefinition-fr-patient-document.md),[FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FRPerformerEventExtension](StructureDefinition-fr-performer-event-extension.md),[FRPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FRPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FRRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [FRAccessionNumberIdentifierDocument](StructureDefinition-fr-accession-number-identifier-document.md)...Show 310 more,[FRActorExtension](StructureDefinition-fr-actor-extension.md),[FRAdvanceDirectiveDocument](StructureDefinition-fr-advance-directive-document.md),[FRAdverseEventDocument](StructureDefinition-fr-adverse-event-document.md),[FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md),[FRAuthorTimeExtension](StructureDefinition-fr-author-time-extension.md),[FRBodyStructureDocument](StructureDefinition-fr-body-structure-document.md),[FRBundleDocument](StructureDefinition-fr-bundle-document.md),[FRCDAAssignedAuthor](StructureDefinition-fr-cda-assigned-author.md),[FRCDAAssignedCustodian](StructureDefinition-fr-cda-assigned-custodian.md),[FRCDAAssignedEntity](StructureDefinition-fr-cda-assigned-entity.md),[FRCDAAssignedPerson](StructureDefinition-fr-cda-assigned-person.md),[FRCDAAssociatedEntity](StructureDefinition-fr-cda-associated-entity.md),[FRCDAAuthenticator](StructureDefinition-fr-cda-authenticator.md),[FRCDAAuthor](StructureDefinition-fr-cda-author.md),[FRCDAAuthoringDevice](StructureDefinition-fr-cda-authoring-device.md),[FRCDAAuthorization](StructureDefinition-fr-cda-authorization.md),[FRCDAClinicalDocument](StructureDefinition-fr-cda-clinical-document.md),[FRCDAComponentOf](StructureDefinition-fr-cda-component-of.md),[FRCDACustodian](StructureDefinition-fr-cda-custodian.md),[FRCDADataEnterer](StructureDefinition-fr-cda-data-enterer.md),[FRCDADocumentationOf](StructureDefinition-fr-cda-documentation-of.md),[FRCDAEncompassingEncounter](StructureDefinition-fr-cda-encompassing-encounter.md),[FRCDAEncounterParticipant](StructureDefinition-fr-cda-encounter-participant.md),[FRCDAHealthCareFacility](StructureDefinition-fr-cda-health-care-facility.md),[FRCDAInFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md),[FRCDAInformant](StructureDefinition-fr-cda-informant.md),[FRCDAInformationRecipient](StructureDefinition-fr-cda-information-recipient.md),[FRCDAIntendedRecipient](StructureDefinition-fr-cda-intended-recipient.md),[FRCDALegalAuthenticator](StructureDefinition-fr-cda-legal-authenticator.md),[FRCDAName](StructureDefinition-fr-cda-name.md),[FRCDAOrder](StructureDefinition-fr-cda-order.md),[FRCDAParentDocument](StructureDefinition-fr-cda-parent-document.md),[FRCDAParticipant](StructureDefinition-fr-cda-participant.md),[FRCDAPatient](StructureDefinition-fr-cda-patient.md),[FRCDAPatientRole](StructureDefinition-fr-cda-patient-role.md),[FRCDAPerformer](StructureDefinition-fr-cda-performer.md),[FRCDARecordTarget](StructureDefinition-fr-cda-record-target.md),[FRCDARelatedDocument](StructureDefinition-fr-cda-related-document.md),[FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md),[FRCDARepresentedCustodianOrganization](StructureDefinition-fr-cda-represented-custodian-organization.md),[FRCDARepresentedOrganization](StructureDefinition-fr-cda-represented-organization.md),[FRCDAServiceEvent](StructureDefinition-fr-cda-service-event.md),[FRCarePlanDocument](StructureDefinition-fr-care-plan-document.md),[FRComparisonStudiesExtension](StructureDefinition-fr-comparison-studies-extension.md),[FRCompositionDocument](StructureDefinition-fr-composition-document.md),[FRConditionDocument](StructureDefinition-fr-condition-document.md),[FRDeviceAuteurDocument](StructureDefinition-fr-device-auteur-document.md),[FRDeviceRequestDocument](StructureDefinition-fr-device-request-document.md),[FRDeviceUseStatementDocument](StructureDefinition-fr-device-use-statement-document.md),[FRDiagnosticReportBIOChapterDocument](StructureDefinition-fr-diagnostic-report-bio-chapter-document.md),[FRDiagnosticReportDocument](StructureDefinition-fr-diagnostic-report-document.md),[FRDiagnosticReportImagingDocument](StructureDefinition-fr-diagnostic-report-imaging-document.md),[FRDocumentReferenceDocument](StructureDefinition-fr-document-reference-document.md),[FREncounterCareDocument](StructureDefinition-fr-encounter-care-document.md),[FREncounterDocument](StructureDefinition-fr-encounter-document.md),[FREndpointWadoDocument](StructureDefinition-fr-endpoint-wado-document.md),[FRFamilyMemberHistoryBodySiteExtension](StructureDefinition-fr-family-member-history-body-site-extension.md),[FRFamilyMemberHistoryDocument](StructureDefinition-fr-family-member-history-document.md),[FRHumanNameDocument](StructureDefinition-fr-human-name-document.md),[FRImagingProcedureExtension](StructureDefinition-fr-imaging-procedure-extension.md),[FRImagingStudyDocument](StructureDefinition-fr-imaging-study-document.md),[FRImmunizationDocument](StructureDefinition-fr-immunization-document.md),[FRImmunizationRecommendationDocument](StructureDefinition-fr-immunization-recommendation-document.md),[FRImmunizationTypeExtension](StructureDefinition-fr-immunization-type-extension.md),[FRInterpretationExtension](StructureDefinition-fr-interpretation-extension.md),[FRLMAccidentsTransfusionnels](StructureDefinition-fr-lm-accidents-transfusionnels.md),[FRLMActe](StructureDefinition-fr-lm-acte.md),[FRLMActeImagerie](StructureDefinition-fr-lm-acte-imagerie.md),[FRLMActeSubstitution](StructureDefinition-fr-lm-acte-substitution.md),[FRLMAddendum](StructureDefinition-fr-lm-addendum.md),[FRLMAdministrationDeDerivesDuSang](StructureDefinition-fr-lm-administration-de-derives-du-sang.md),[FRLMAdministrationProduitDeSante](StructureDefinition-fr-lm-administration-produit-de-sante.md),[FRLMAllergieOuHypersensibilite](StructureDefinition-fr-lm-allergie-ou-hypersensibilite.md),[FRLMAllergiesEtHypersensibilites](StructureDefinition-fr-lm-allergies-et-hypersensibilites.md),[FRLMAntecedentFamilialObserve](StructureDefinition-fr-lm-antecedent-familial-observe.md),[FRLMAntecedentsFamiliaux](StructureDefinition-fr-lm-antecedents-familiaux.md),[FRLMAntecedentsFamiliauxEntree](StructureDefinition-fr-lm-antecedents-familiaux-entree.md),[FRLMAntecedentsMedicaux](StructureDefinition-fr-lm-antecedents-medicaux.md),[FRLMAuteur](StructureDefinition-fr-lm-auteur.md),[FRLMAuteurAPSR](StructureDefinition-fr-lm-auteur-apsr.md),[FRLMAutorisationExposition](StructureDefinition-fr-lm-autorisation-exposition.md),[FRLMAutorisationSubstitution](StructureDefinition-fr-lm-autorisation-substitution.md),[FRLMBatterieExamensBiologieMedicale](StructureDefinition-fr-lm-batterie-examens-biologie-medicale.md),[FRLMCRBIOChapitre](StructureDefinition-fr-lm-cr-bio-chapitre.md),[FRLMCRBIOSousChapitre](StructureDefinition-fr-lm-cr-bio-sous-chapitre.md),[FRLMCertitude](StructureDefinition-fr-lm-certitude.md),[FRLMCodesAbarres](StructureDefinition-fr-lm-codes-a-barres.md),[FRLMCommentaireER](StructureDefinition-fr-lm-commentaire-er.md),[FRLMCommentaireNonCode](StructureDefinition-fr-lm-commentaire-non-code.md),[FRLMComparaisonExamensImagerie](StructureDefinition-fr-lm-comparaison-examens-imagerie.md),[FRLMComplicationsActe](StructureDefinition-fr-lm-complications-acte.md),[FRLMConclusionExamenImagerie](StructureDefinition-fr-lm-conclusion-examen-imagerie.md),[FRLMConsentement](StructureDefinition-fr-lm-consentement.md),[FRLMCorpsDocument](StructureDefinition-fr-lm-corps-document.md),[FRLMCriticite](StructureDefinition-fr-lm-criticite.md),[FRLMDemandeExamenImagerie](StructureDefinition-fr-lm-demande-examen-imagerie.md),[FRLMDemandeExamenOuSuivi](StructureDefinition-fr-lm-demande-examen-ou-suivi.md),[FRLMDestinatairePrevu](StructureDefinition-fr-lm-destinataire-prevu.md),[FRLMDirectiveAnticipee](StructureDefinition-fr-lm-directive-anticipee.md),[FRLMDirectivesAnticipees](StructureDefinition-fr-lm-directives-anticipees.md),[FRLMDispensationMedicaments](StructureDefinition-fr-lm-dispensation-medicaments.md),[FRLMDispositifMedical](StructureDefinition-FRLMDispositifMedical.md),[FRLMDispositifMedicalEntree](StructureDefinition-fr-lm-dispositif-medical-entree.md),[FRLMDispositifsMedicaux](StructureDefinition-fr-lm-dispositifs-medicaux.md),[FRLMDocumentAttache](StructureDefinition-fr-lm-document-attache.md),[FRLMDocumentDeReference](StructureDefinition-fr-lm-document-reference.md),[FRLMDocumentPDFCopie](StructureDefinition-fr-lm-document-pdf-copie.md),[FRLMDocumentsAjoutes](StructureDefinition-fr-lm-documents-ajoutes.md),[FRLMDoseAntigene](StructureDefinition-fr-lm-dose-antigene.md),[FRLMEchantillonPreleve](StructureDefinition-fr-lm-echantillon-preleve.md),[FRLMEducationPatient](StructureDefinition-fr-lm-education-patient.md),[FRLMEffetIndesirable](StructureDefinition-fr-lm-effet-indesirable.md),[FRLMEffetsIndesirables](StructureDefinition-fr-lm-effets-indesirables.md),[FRLMEnRapportAvecALD](StructureDefinition-fr-lm-en-rapport-avec-ald.md),[FRLMEnRapportAvecAccidentTravail](StructureDefinition-fr-lm-en-rapport-avec-accident-travail.md),[FRLMEnRapportAvecLaPrevention](StructureDefinition-fr-lm-en-rapport-avec-la-prevention.md),[FRLMEnteteDocument](StructureDefinition-fr-lm-entete-document.md),[FRLMEvaluation](StructureDefinition-fr-lm-evaluation.md),[FRLMEvaluationComposant](StructureDefinition-fr-lm-evaluation-composant.md),[FRLMEvaluationComposantN2](StructureDefinition-fr-lm-evaluation-composant-n2.md),[FRLMEvenement](StructureDefinition-fr-lm-evenement.md),[FRLMEvenementIndesirablePendantHospitalisation](StructureDefinition-fr-lm-evenement-indesirable-pendant-hospitalisation.md),[FRLMEvenementsIndesirablesSuiteAdministrationDerivesSang](StructureDefinition-fr-lm-evenements-indesirables-suite-administration-derives-sang.md),[FRLMEvolutionEffetIndesirable](StructureDefinition-fr-lm-evolution-effet-indesirable.md),[FRLMExamenImagerie](StructureDefinition-fr-lm-examen-imagerie.md),[FRLMExpositionRadiations](StructureDefinition-fr-lm-exposition-radiations.md),[FRLMFacteursDeRisqueProfessionnelsNonCode](StructureDefinition-fr-lm-facteurs-de-risque-professionnels-non-code.md),[FRLMFonctionsPhysiques](StructureDefinition-fr-lm-fonctions-physiques.md),[FRLMGraviteEffetIndesirable](StructureDefinition-fr-lm-gravite-effet-indesirable.md),[FRLMGroupDeQuestionnairesDevaluation](StructureDefinition-fr-lm-group-de-questionnaires-devaluation.md),[FRLMHabitusModeDeVie](StructureDefinition-fr-lm-habitus-mode-de-vie.md),[FRLMHabitusModeDeVieEntree](StructureDefinition-fr-lm-habitus-mode-de-vie-entree.md),[FRLMHistoriqueDesActes](StructureDefinition-fr-lm-historique-des-actes.md),[FRLMHistoriqueDesGrossesses](StructureDefinition-fr-lm-historique-des-grossesses.md),[FRLMHistoriqueGrossesse](StructureDefinition-fr-lm-historique-grossesse.md),[FRLMHorsAMM](StructureDefinition-fr-lm-hors-amm.md),[FRLMIdentificationDeMicroOrganismesMultiresistants](StructureDefinition-fr-lm-identification-de-micro-organismes-multiresistants.md),[FRLMImageIllustrative](StructureDefinition-fr-lm-image-illustrative.md),[FRLMImputabiliteEffetIndesirable](StructureDefinition-fr-lm-imputabilite-effet-indesirable.md),[FRLMInformantAPSR](StructureDefinition-fr-lm-informant-apsr.md),[FRLMInformateur](StructureDefinition-fr-lm-informateur.md),[FRLMInformationsCliniques](StructureDefinition-fr-lm-informations-cliniques.md),[FRLMInstructionAuPatient](StructureDefinition-fr-lm-instruction-au-patient.md),[FRLMInstructionsAuDispensateur](StructureDefinition-fr-lm-instructions-au-dispensateur.md),[FRLMInstructionsPatient](StructureDefinition-fr-lm-instructions-patient.md),[FRLMIsolatMicrobiologique](StructureDefinition-fr-lm-isolat-microbiologique.md),[FRLMLaboratoireExecutant](StructureDefinition-fr-lm-laboratoire-executant.md),[FRLMModaliteEntree](StructureDefinition-fr-lm-modalite-entree.md),[FRLMModaliteSortie](StructureDefinition-fr-lm-modalite-sortie.md),[FRLMNaissance](StructureDefinition-fr-lm-naissance.md),[FRLMNonRemboursable](StructureDefinition-fr-lm-non-remboursable.md),[FRLMNotesDispensateur](StructureDefinition-fr-lm-notes-dispensateur.md),[FRLMObjectCatalog](StructureDefinition-fr-lm-object-catalog.md),[FRLMObservation](StructureDefinition-fr-lm-observation.md),[FRLMObservationGrossesse](StructureDefinition-fr-lm-observation-grossesse.md),[FRLMOperateurSaisie](StructureDefinition-fr-lm-operateur-saisie.md),[FRLMParticipant](StructureDefinition-fr-lm-participant.md),[FRLMParticipantAPSR](StructureDefinition-fr-lm-participant-apsr.md),[FRLMParticipantCorps](StructureDefinition-fr-lm-participant-corps.md),[FRLMPatientSujetNonHumain](StructureDefinition-fr-lm-patient-sujet-non-humain.md),[FRLMPatientUsager](StructureDefinition-fr-lm-patient-usager.md),[FRLMPerformer](StructureDefinition-fr-lm-performer.md),[FRLMPeriodeDeRenouvellement](StructureDefinition-fr-lm-periode-de-renouvellement.md),[FRLMPersonneStructure](StructureDefinition-fr-lm-personne-structure.md),[FRLMPersonneStructureAuteur](StructureDefinition-fr-lm-personne-structure-auteur.md),[FRLMPlanSoins](StructureDefinition-fr-lm-plan-soins.md),[FRLMPointsDeVigilancesNonCode](StructureDefinition-fr-lm-points-de-vigilances-non-code.md),[FRLMPrelevement](StructureDefinition-fr-lm-prelevement.md),[FRLMPrescription](StructureDefinition-fr-lm-prescription.md),[FRLMPrescriptionDispositifsMedicaux](StructureDefinition-fr-lm-prescription-dispositifs-medicaux.md),[FRLMPrescriptionEntree](StructureDefinition-fr-lm-prescription-entree.md),[FRLMPrescriptionMedicaments](StructureDefinition-fr-lm-prescription-medicaments.md),[FRLMPriseEncharge](StructureDefinition-fr-lm-prise-en-charge.md),[FRLMProbleme](StructureDefinition-fr-lm-probleme.md),[FRLMProblemesActifs](StructureDefinition-fr-lm-problemes-actifs.md),[FRLMProduitSante](StructureDefinition-fr-lm-produit-sante.md),[FRLMQuantiteExposition](StructureDefinition-fr-lm-quantite-exposition.md),[FRLMQuantiteProduit](StructureDefinition-fr-lm-quantite-produit.md),[FRLMRaisonRecommandation](StructureDefinition-fr-lm-raison-recommandation.md),[FRLMRaisonRecommandationNonCode](StructureDefinition-fr-lm-raison-recommandation-non-code.md),[FRLMRangVaccination](StructureDefinition-fr-lm-rang-vaccination.md),[FRLMRechercheDeMicroOrganismes](StructureDefinition-fr-lm-recherche-de-micro-organismes.md),[FRLMReferenceInterne](StructureDefinition-fr-lm-reference-interne.md),[FRLMReferenceItemPlanTraitement](StructureDefinition-fr-lm-reference-item-plan-traitement.md),[FRLMReferenceItemPrescription](StructureDefinition-fr-lm-reference-item-prescription.md),[FRLMReferencesExternes](StructureDefinition-fr-lm-references-externes.md),[FRLMRencontre](StructureDefinition-fr-lm-rencontre.md),[FRLMResponsable](StructureDefinition-fr-lm-responsable.md),[FRLMResultatExamensBiologieElementCliniquePertinent](StructureDefinition-fr-lm-resultat-examens-biologie-element-clinique-pertinent.md),[FRLMResultats](StructureDefinition-fr-lm-resultats.md),[FRLMResultatsEntry](StructureDefinition-fr-lm-resultats-entree.md),[FRLMResultatsEvenements](StructureDefinition-fr-lm-resultats-evenements.md),[FRLMResultatsExamenImagerie](StructureDefinition-fr-lm-resultats-examen-imagerie.md),[FRLMResultatsExamens](StructureDefinition-fr-lm-resultats-examens.md),[FRLMResultatsExamensBiologieMedicale](StructureDefinition-fr-lm-resultats-examens-biologie-medicale.md),[FRLMResultatsExamensNonCode](StructureDefinition-fr-lm-resultats-examens-non-code.md),[FRLMResultatsLaboratoireBiologieSecondeIntention](StructureDefinition-fr-lm-resultats-laboratoire-biologie-seconde-intention.md),[FRLMSOPInstance](StructureDefinition-fr-lm-sop-instance.md),[FRLMSection](StructureDefinition-fr-lm-section.md),[FRLMSerieImagerie](StructureDefinition-fr-lm-serie-imagerie.md),[FRLMSeverite](StructureDefinition-fr-lm-severite.md),[FRLMSigneVital](StructureDefinition-fr-lm-signe-vital.md),[FRLMSigneVitalObserve](StructureDefinition-fr-lm-signe-vital-observe.md),[FRLMSignesVitaux](StructureDefinition-fr-lm-signes-vitaux.md),[FRLMStatut](StructureDefinition-fr-lm-statut.md),[FRLMStatutCliniquePatient](StructureDefinition-fr-lm-statut-clinique-patient.md),[FRLMStatutDocument](StructureDefinition-fr-lm-statut-document.md),[FRLMStatutDocumentEntree](StructureDefinition-fr-lm-statut-document-entree.md),[FRLMStatutFonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md),[FRLMStatutProbleme](StructureDefinition-fr-lm-statut-probleme.md),[FRLMStructureConservation](StructureDefinition-fr-lm-structure-conservation.md),[FRLMSujet](StructureDefinition-fr-lm-sujet.md),[FRLMSujetNonHumain](StructureDefinition-fr-lm-sujet-non-humain.md),[FRLMSyntheseMedicaleSejour](StructureDefinition-fr-lm-synthese-medicale-sejour.md),[FRLMSystemeStructureAuteur](StructureDefinition-fr-lm-systeme-structure-auteur.md),[FRLMTechniqueImagerie](StructureDefinition-fr-lm-technique-imagerie.md),[FRLMTraitement](StructureDefinition-fr-lm-traitement.md),[FRLMTraitementDispense](StructureDefinition-fr-lm-traitement-dispense.md),[FRLMTraitementPrescrit](StructureDefinition-fr-lm-traitement-prescrit.md),[FRLMTraitementPrescritSubordonne](StructureDefinition-fr-lm-traitement-prescrit-subordonne.md),[FRLMTraitementSortie](StructureDefinition-fr-lm-traitement-sortie.md),[FRLMTraitementSubordonne](StructureDefinition-fr-lm-traitement-subordonne.md),[FRLMTraitements](StructureDefinition-fr-lm-traitements.md),[FRLMTraitementsAdministres](StructureDefinition-fr-lm-traitements-administres.md),[FRLMTransfertDuPatient](StructureDefinition-fr-lm-transfert-du-patient.md),[FRLMTransfusionDeProduitsSanguins](StructureDefinition-fr-lm-transfusion-de-produits-sanguins.md),[FRLMVaccinRecommande](StructureDefinition-fr-lm-vaccin-recommande.md),[FRLMVaccination](StructureDefinition-fr-lm-vaccination.md),[FRLMVaccinations](StructureDefinition-fr-lm-vaccinations.md),[FRLMValidateur](StructureDefinition-fr-lm-validateur.md),[FRLocationDocument](StructureDefinition-fr-location-document.md),[FRMediaDocument](StructureDefinition-fr-media-document.md),[FRMedicationAdministrationDocument](StructureDefinition-fr-medication-administration-document.md),[FRMedicationAdministrationSequenceExtension](StructureDefinition-fr-medication-administration-sequence-extension.md),[FRMedicationDispenseDocument](StructureDefinition-fr-medication-dispense-document.md),[FRMedicationDocument](StructureDefinition-fr-medication-document.md),[FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md),[FRMedicationRequestOutOfNomenclatureExtension](StructureDefinition-fr-medication-request-out-of-nomenclature-extension.md),[FRMedicationStatementDocument](StructureDefinition-fr-medication-statement-document.md),[FRMedicationsCombinaisonDocument](StructureDefinition-fr-medications-combinaison-document.md),[FRMethodExtension](StructureDefinition-fr-method-extension.md),[FRNotCoveredExtension](StructureDefinition-fr-not-covered-extension.md),[FRNumberOfFramesExtension](StructureDefinition-fr-number-of-frames-extension.md),[FRObservationAdministrationBloodDerivativesDocument](StructureDefinition-fr-observation-administration-blood-derivatives-document.md),[FRObservationAntenatalTestingAndSurveillanceBatteryDocument](StructureDefinition-fr-observation-antenatal-testing-surveillance-battery-document.md),[FRObservationBirthEventDocument](StructureDefinition-fr-observation-birth-event-document.md),[FRObservationBloodProductTransfusionDocument](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationLaboratoryReportResultsDocument](StructureDefinition-fr-observation-laboratory-report-results-document.md),[FRObservationMedicalSummaryDocument](StructureDefinition-fr-observation-medical-summary-document.md),[FRObservationMicroorganismDetectionDocument](StructureDefinition-fr-observation-microorganism-detection-document.md),[FRObservationPainScoreDocument](StructureDefinition-fr-observation-pain-score-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationPregnancyHistoryDocument](StructureDefinition-fr-observation-pregnancy-history-document.md),[FRObservationRadiationExposureDocument](StructureDefinition-fr-observation-radiation-exposure-document.md),[FRObservationResultDocument](StructureDefinition-fr-observation-result-document.md),[FRObservationSocialHistoryDocument](StructureDefinition-fr-observation-social-history-document.md),[FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md),[FRObservationSurveyPannelDocument](StructureDefinition-fr-observation-survey-pannel-document.md),[FRObservationTransfusionAccidentsDocument](StructureDefinition-fr-observation-transfusion-accidents-document.md),[FRObservationVitalSignsDocument](StructureDefinition-fr-observation-vital-signs-document.md),[FRObservationVitalSignsPanelDocument](StructureDefinition-fr-Observation-vital-signs-panel-document.md),[FRObservationWorkRelatedAccidentDocument](StructureDefinition-fr-observation-work-related-accident-document.md),[FROrganizationDocument](StructureDefinition-fr-organization-document.md),[FRPatientDocument](StructureDefinition-fr-patient-document.md),[FRPatientHistoryExtension](StructureDefinition-fr-patient-history-extension.md),[FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md),[FRPerformerEventExtension](StructureDefinition-fr-performer-event-extension.md),[FRPractitionerDocument](StructureDefinition-fr-practitioner-document.md),[FRPractitionerRoleDocument](StructureDefinition-fr-practitionerRole-document.md),[FRPregnancyHistoryDocument](StructureDefinition-fr-pregnancy-history-document.md),[FRProcedureActDocument](StructureDefinition-fr-procedure-act-document.md),[FRProcedureDifficultyExtension](StructureDefinition-fr-procedure-difficulty-extension.md),[FRProcedureImagingDocument](StructureDefinition-fr-procedure-imaging-document.md),[FRProcedurePriorityExtension](StructureDefinition-fr-procedure-priority-extension.md),[FRRelatedPersonDocument](StructureDefinition-fr-related-person-document.md),[FRSeviceRequestDocument](StructureDefinition-fr-service-request-document.md),[FRSpecimenDocument](StructureDefinition-fr-specimen-document.md),[FRStatusReasonExtension](StructureDefinition-fr-status-reason-extension.md),[FRStudyInstanceUidIdentifierDocument](StructureDefinition-fr-study-instance-uid-identifier-document.md),[FRTaskPatientTransportDocument](StructureDefinition-fr-task-patient-transport-document.md),[FRValueSetActorTypeDocument](ValueSet-fr-vs-actor-type-document.md),[FRValueSetAllergySubstanceDocument](ValueSet-fr-vs-allergy-substance.md),[FRValueSetEDQMDocument](ValueSet-fr-vs-edqm-document.md),[FRValueSetEvaluationTypeDocument](ValueSet-fr-vs-evaluation-type.md),[FRValueSetMedicationTranslationDocument](ValueSet-fr-vs-medication-translation-document.md),[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md),[FRValueSetProcedureCodeDocument](ValueSet-fr-vs-procedure-code.md),[FRValueSetResultTypeDocument](ValueSet-fr-vs-result-type-document.md),[FRValueSetRolePriseCharge](ValueSet-fr-doc-vs-role-prise-charge.md),[Mapping Métier/CDA/FHIR : Entête d'un document](ConceptMap-mappingmodelemetierCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Auteur"](ConceptMap-mappingAuteurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Consentement"](ConceptMap-mappingConsentementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Destinataire prévu"](ConceptMap-mappingDestinatairePrevuCDAFHIR.md),[Mapping Métier/CDA/FHIR : "DocumentDeReference"](ConceptMap-mappingDocumentDeReferenceCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Evènement documenté"](ConceptMap-mappingEvenementCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Informateur"](ConceptMap-mappingInformateurCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Opérateur de saisie"](ConceptMap-mappingOperateurSaisieCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Participant"](ConceptMap-mappingParticipantCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Patient/Usager"](ConceptMap-mappingPatientCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"](ConceptMap-mappingPersonneStructureAssignedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"](ConceptMap-mappingPersonneStructureAuteurFHIR.md),[Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"](ConceptMap-mappingPersonneStructureRelatedEntityFHIR.md),[Mapping Métier/CDA/FHIR : "Prescription"](ConceptMap-mappingPrescriptionCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Prise en charge"](ConceptMap-mappingPriseEnchargeCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Responsable du document"](ConceptMap-mappingResponsableCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"](ConceptMap-mappingStructureConservationCDAFHIR.md),[Mapping Métier/CDA/FHIR : "Système / Structure Auteur"](ConceptMap-mappingSystemeFHIR.md),[Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md)and[Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md)
+
+
+* Publications of the World Health Organization enjoy copyright protection in accordance with the provisions of Protocol 2 of the Universal Copyright Convention. All rights reserved.
+
+* [International Classification of Functioning, Disability and Health](http://terminology.hl7.org/6.5.0/CodeSystem-ICF.html): [FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md) and [FRValueSetEvaluationTypeDocument](ValueSet-fr-vs-evaluation-type.md)
+
+
+* The WHO grants a license for "commercial and non-commercial use" of ICD-11CC BY-ND 3.0 IGODetailed information can be found here: [[https://icd.who.int/en/docs/icd11-license.pdf](https://icd.who.int/en/docs/icd11-license.pdf)](https://icd.who.int/en/docs/icd11-license.pdf) Contact licensing@who.int to obtain further information.
+
+* [International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS)](http://terminology.hl7.org/6.5.0/CodeSystem-ICD11MMS.html): [FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md) and [FRValueSetAllergySubstanceDocument](ValueSet-fr-vs-allergy-substance.md)
+
+
+* These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright Â© 2011 by the National Electrical Manufacturers Association.
+
+* DICOM Controlled Terminology Definitions: [FRImagingStudyDocument](StructureDefinition-fr-imaging-study-document.md) and [FRObservationRadiationExposureDocument](StructureDefinition-fr-observation-radiation-exposure-document.md)
 
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
-* [LOINC](http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html): [FRCompositionDocument](StructureDefinition-fr-composition-document.md)
+* [LOINC](http://terminology.hl7.org/6.5.0/CodeSystem-v3-loinc.html): [FRAdvanceDirectiveDocument](StructureDefinition-fr-advance-directive-document.md), [FRCompositionDocument](StructureDefinition-fr-composition-document.md)...Show 11 more,[FRDiagnosticReportDocument](StructureDefinition-fr-diagnostic-report-document.md),[FRDiagnosticReportImagingDocument](StructureDefinition-fr-diagnostic-report-imaging-document.md),[FRObservationAntenatalTestingAndSurveillanceBatteryDocument](StructureDefinition-fr-observation-antenatal-testing-surveillance-battery-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationRadiationExposureDocument](StructureDefinition-fr-observation-radiation-exposure-document.md),[FRObservationSocialHistoryDocument](StructureDefinition-fr-observation-social-history-document.md),[FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md),[FRObservationVitalSignsDocument](StructureDefinition-fr-observation-vital-signs-document.md),[FRProcedureImagingDocument](StructureDefinition-fr-procedure-imaging-document.md),[FRValueSetEvaluationTypeDocument](ValueSet-fr-vs-evaluation-type.md)and[FRValueSetResultTypeDocument](ValueSet-fr-vs-result-type-document.md)
+
+
+* This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).
+
+* [SNOMED Clinical Terms&reg; (SNOMED CT&reg;)](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-900000000000207008-20251001.html): [FRAdvanceDirectiveDocument](StructureDefinition-fr-advance-directive-document.md), [FRAdverseEventDocument](StructureDefinition-fr-adverse-event-document.md)...Show 14 more,[FRAllergyIntoleranceDocument](StructureDefinition-fr-allergie-intolerance-document.md),[FRBodyStructureDocument](StructureDefinition-fr-body-structure-document.md),[FRConditionDocument](StructureDefinition-fr-condition-document.md),[FREncounterDocument](StructureDefinition-fr-encounter-document.md),[FRFamilyMemberHistoryDocument](StructureDefinition-fr-family-member-history-document.md),[FRImagingStudyDocument](StructureDefinition-fr-imaging-study-document.md),[FRImmunizationDocument](StructureDefinition-fr-immunization-document.md),[FRMedicationAdministrationDocument](StructureDefinition-fr-medication-administration-document.md),[FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md),[FRMedicationStatementDocument](StructureDefinition-fr-medication-statement-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationPainScoreDocument](StructureDefinition-fr-observation-pain-score-document.md),[FRPregnancyHistoryDocument](StructureDefinition-fr-pregnancy-history-document.md)and[FRProcedureImagingDocument](StructureDefinition-fr-procedure-imaging-document.md)
 
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
 * [identifierType](http://terminology.hl7.org/7.0.0/CodeSystem-v2-0203.html): [FRPatientDocument](StructureDefinition-fr-patient-document.md) and [FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md)
-* [ParticipationType](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html): [FRCompositionDocument](StructureDefinition-fr-composition-document.md) and [FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md)
+* [ActCode](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActCode.html): [FRImmunizationDocument](StructureDefinition-fr-immunization-document.md), [FRImmunizationTypeExtension](StructureDefinition-fr-immunization-type-extension.md) and [FRMedicationDispenseDocument](StructureDefinition-fr-medication-dispense-document.md)
+* [ActPriority](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ActPriority.html): [FRProcedurePriorityExtension](StructureDefinition-fr-procedure-priority-extension.md)
+* [ObservationInterpretation](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ObservationInterpretation.html): [FRInterpretationExtension](StructureDefinition-fr-interpretation-extension.md), [FRObservationAdministrationBloodDerivativesDocument](StructureDefinition-fr-observation-administration-blood-derivatives-document.md)...Show 10 more,[FRObservationBloodProductTransfusionDocument](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationLaboratoryReportResultsDocument](StructureDefinition-fr-observation-laboratory-report-results-document.md),[FRObservationMedicalSummaryDocument](StructureDefinition-fr-observation-medical-summary-document.md),[FRObservationMicroorganismDetectionDocument](StructureDefinition-fr-observation-microorganism-detection-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationResultDocument](StructureDefinition-fr-observation-result-document.md),[FRObservationTransfusionAccidentsDocument](StructureDefinition-fr-observation-transfusion-accidents-document.md),[FRObservationVitalSignsDocument](StructureDefinition-fr-observation-vital-signs-document.md)and[FRObservationWorkRelatedAccidentDocument](StructureDefinition-fr-observation-work-related-accident-document.md)
+* [ObservationMethod](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ObservationMethod.html): [FRMethodExtension](StructureDefinition-fr-method-extension.md), [FRObservationAdministrationBloodDerivativesDocument](StructureDefinition-fr-observation-administration-blood-derivatives-document.md)...Show 8 more,[FRObservationBloodProductTransfusionDocument](StructureDefinition-fr-observation-blood-product-transfusion-document.md),[FRObservationContraIndicationsImagingDocument](StructureDefinition-fr-observation-contra-indications-document.md),[FRObservationMedicalSummaryDocument](StructureDefinition-fr-observation-medical-summary-document.md),[FRObservationMicroorganismDetectionDocument](StructureDefinition-fr-observation-microorganism-detection-document.md),[FRObservationPregnancyDocument](StructureDefinition-fr-observation-pregnancy-document.md),[FRObservationResultDocument](StructureDefinition-fr-observation-result-document.md),[FRObservationTransfusionAccidentsDocument](StructureDefinition-fr-observation-transfusion-accidents-document.md)and[FRObservationWorkRelatedAccidentDocument](StructureDefinition-fr-observation-work-related-accident-document.md)
+* [ParticipationType](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html): [FRActorExtension](StructureDefinition-fr-actor-extension.md), [FRCompositionDocument](StructureDefinition-fr-composition-document.md)...Show 4 more,[FRObservationLaboratoryReportResultsDocument](StructureDefinition-fr-observation-laboratory-report-results-document.md),[FRObservationSurveyDocument](StructureDefinition-fr-observation-survey-document.md),[FRValueSetActorTypeDocument](ValueSet-fr-vs-actor-type-document.md)and[FRValueSetParticipationType](ValueSet-fr-doc-vs-participation-type.md)
 * [RoleClass](http://terminology.hl7.org/7.0.0/CodeSystem-v3-RoleClass.html): [FRCDARelatedEntity](StructureDefinition-fr-cda-related-entity.md) and [FRPatientINSDocument](StructureDefinition-fr-patient-ins-document.md)
+* [RoleCode](http://terminology.hl7.org/7.0.0/CodeSystem-v3-RoleCode.html): [FRFamilyMemberHistoryDocument](StructureDefinition-fr-family-member-history-document.md)
+* [SpecimenType](http://terminology.hl7.org/7.0.0/CodeSystem-v3-SpecimenType.html): [FRSpecimenDocument](StructureDefinition-fr-specimen-document.md)
+* [Substance Admin Substitution](http://terminology.hl7.org/7.0.0/CodeSystem-v3-substanceAdminSubstitution.html): [FRMedicationRequestDocument](StructureDefinition-fr-medication-request-document.md)
 
 
 Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://smt.esante.gouv.fr/) de l’ANS précisent la licence d’utilisation associée.
@@ -71,6 +124,7 @@ Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://s
 Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner auprès de l’unité de production.
 
 ### Dépendances
+
 
 
 
@@ -94,7 +148,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-12-03T15:31:39+00:00",
+  "date" : "2025-12-05T10:54:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -135,18 +189,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
       "version" : "7.0.0"
     },
     {
-      "id" : "hl7ext",
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
-          "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
-        }
-      ],
-      "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-      "packageId" : "hl7.fhir.uv.extensions.r4",
-      "version" : "5.2.0"
-    },
-    {
       "id" : "hl7_cda_uv_core",
       "uri" : "http://hl7.org/cda/stds/core/ImplementationGuide/hl7.cda.uv.core",
       "packageId" : "hl7.cda.uv.core",
@@ -165,6 +207,12 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
       "version" : "2.1.0"
     },
     {
+      "id" : "hl7_fhir_uv_extensions_r4",
+      "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "packageId" : "hl7.fhir.uv.extensions.r4",
+      "version" : "5.2.0"
+    },
+    {
       "id" : "ans_fhir_fr_annuaire",
       "uri" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire",
       "packageId" : "ans.fhir.fr.annuaire",
@@ -175,6 +223,12 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
       "uri" : "http://hl7.org/fhir/uv/fhir-clinical-document/ImplementationGuide/hl7.fhir.uv.fhir-clinical-document",
       "packageId" : "hl7.fhir.uv.fhir-clinical-document",
       "version" : "1.0.0"
+    },
+    {
+      "id" : "ihe_pharm_mpd",
+      "uri" : "https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd",
+      "packageId" : "ihe.pharm.mpd",
+      "version" : "1.0.0-comment-2"
     }
   ],
   "definition" : {
@@ -912,49 +966,101 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Profils FHIR entête"
       },
       {
+        "id" : "Ressources FHIR corps",
+        "name" : "Profils FHIR corps"
+      },
+      {
         "id" : "Data Type FHIR",
         "name" : "Data Type Profiles"
       },
       {
-        "id" : "Extensions FHIR",
-        "name" : "Extensions FHIR"
+        "id" : "Extensions FHIR entête",
+        "name" : "Extensions FHIR entête"
+      },
+      {
+        "id" : "Extensions FHIR corps",
+        "name" : "Extensions FHIR corps"
       },
       {
         "id" : "Mapping",
         "name" : "Concept Maps"
-      },
-      {
-        "id" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1",
-        "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
-        "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"
-      },
-      {
-        "id" : "Binary/eDISP-MED-2024.01",
-        "name" : "eDISP-MED-2024.01",
-        "description" : "eDispensation de médicaments (eDISP-MED-2024.01)"
-      },
-      {
-        "id" : "Binary/eP-MED-DM-2024.01-PosoStruct",
-        "name" : "eP-MED-DM_2024.01_PosoStruct",
-        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
-      },
-      {
-        "id" : "Binary/eP-MED-DM-2024.01-PosoNonStruct",
-        "name" : "eP-MED-DM_2024.01_PosoNonStruct",
-        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
-      },
-      {
-        "id" : "Binary/IPS-FR-2024.01",
-        "name" : "IPS-FR",
-        "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)"
-      },
-      {
-        "id" : "Binary/LDL-SES-2022.01",
-        "name" : "LDL-SES_2022.01",
-        "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"
       }
     ],
     "resource" : [
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-adverse-event-document"
+        },
+        "name" : "AdverseEvent - FR adverse event Document",
+        "description" : "FRAdverseEventDocument permet de décrire un effet indésirable prévisible lié à un médicament",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-allergie-intolerance-document"
+        },
+        "name" : "AllergyIntolerance - FR Allergy and intolerance Document",
+        "description" : "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
+        },
+        "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
+        "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-body-structure-document"
+        },
+        "name" : "BodyStructure - FR Body Structure Document",
+        "description" : "FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-care-plan-document"
+        },
+        "name" : "CarePlan - FR Care Plan Document",
+        "description" : "FRCarePlanDocument est un profil permettant d’enregistrer une référence à un traitement dans un plan de traitement.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
       {
         "extension" : [
           {
@@ -1484,6 +1590,243 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-condition-document"
+        },
+        "name" : "Condition - FR Condition Document",
+        "description" : "FRConditionDocument est un profil utilisé pour décrire un problème du patient (une pathologie par exemple).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-advance-directive-document"
+        },
+        "name" : "Consent - FR Advance directive Document",
+        "description" : "FRAdvanceDirectiveDocument permet  d’indiquer si les directives anticipées du patient.\nArticle L1111-11 du Code de la Santé Publique : \n« Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un \njour hors d'état d'exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne \nrelative à sa fin de vie en ce qui concerne les conditions de la poursuite, de la limitation, \nde l'arrêt ou du refus de traitement ou d'acte médicaux.»",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-device-request-document"
+        },
+        "name" : "DeviceRequest - FR Device request Document",
+        "description" : "FRDeviceRequestDocument représente une demande de dispositif médical (DM) qui n’a pas encore été dispensé.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-device-use-statement-document"
+        },
+        "name" : "DeviceUseStatement - FR Device Use Statement Document",
+        "description" : "FRDeviceUseStatementDocument représente les informations sur un dispositif médical",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-diagnostic-report-bio-chapter-document"
+        },
+        "name" : "DiagnosticReport - FR Diagnostic Report BIO chapter Document",
+        "description" : "FRDiagnosticReportBIOChapterDocument utilisé pour représenter un CR de biologie",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-diagnostic-report-document"
+        },
+        "name" : "DiagnosticReport - FR Diagnostic Report Document",
+        "description" : "FRDiagnosticReportDocument est un profil permettant de regrouper les types des résultats classés par type d’examens (BIO, IMG, etc…).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-diagnostic-report-imaging-document"
+        },
+        "name" : "DiagnosticReport - FR Diagnostic Report Imaging Document",
+        "description" : "Le profil FRDiagnosticReportImagingDocument est dédié aux comptes rendus d’imagerie.\nCe document représente le rapport d’un examen d’imagerie. Il constitue la ressource principale qui fait référence à l’ensemble des données produites lors de l’examen d’imagerie.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-document-reference-document"
+        },
+        "name" : "DocumentReference - FR Document reference Document",
+        "description" : "FRDocumentReferenceDocument restreint pour les documents PDF.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eDISP-MED-2024.01"
+        },
+        "name" : "eDISP-MED-2024.01",
+        "description" : "eDispensation de médicaments (eDISP-MED-2024.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-encounter-document"
+        },
+        "name" : "Encounter - FR Encounter Document",
+        "description" : "FREncounterDocument est un profil permettant de conserver les modalités d'une rencontre du patient. Il peut s'agir d'une rencontre passée ou à venir",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-endpoint-wado-document"
+        },
+        "name" : "Endpoint - FR Endpoint Wado Document",
+        "description" : "FREndpointWadoDocument permet d'enregistrer les références Wado, les types de média et le type de connection IHE IID",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
+        },
+        "name" : "eP-MED-DM_2024.01_PosoNonStruct",
+        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
+        },
+        "name" : "eP-MED-DM_2024.01_PosoStruct",
+        "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-family-member-history-document"
+        },
+        "name" : "FamilyMemberHistory - FR Family Member History Document",
+        "description" : "FRFamilyMemberHistoryDocument est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:complex-type"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-accession-number-identifier-document"
+        },
+        "name" : "FR Accession Number Identifier Document",
+        "description" : "DataType définissant l'Accession Number d'une demande d'examen. Il s'agit d'un identifiant unique attribué à chaque demande d'examen.",
+        "exampleBoolean" : false,
+        "groupingId" : "Data Type FHIR"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-actor-extension"
+        },
+        "name" : "FR Actor Extension",
+        "description" : "Extension permettant de représenter un acteur impliqué dans le document avec son type et sa référence.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:extension"
           }
         ],
@@ -1493,7 +1836,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "FR Author Time Extension",
         "description" : "Extension permettant d'ajouter un horodatage (TS) à l'élément author d'une Composition.",
         "exampleBoolean" : false,
-        "groupingId" : "Extensions FHIR"
+        "groupingId" : "Extensions FHIR entête"
       },
       {
         "extension" : [
@@ -1509,6 +1852,20 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "Ce profil permet d’assembler les éléments de l’en-tête et du corps d’un document.",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR entête"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-comparison-studies-extension"
+        },
+        "name" : "FR Comparison Studies Extension",
+        "description" : "Examen de comparaison radiologique",
+        "exampleBoolean" : false
       },
       {
         "extension" : [
@@ -1559,6 +1916,21 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-family-member-history-body-site-extension"
+        },
+        "name" : "FR Family Member History Body Site Extension",
+        "description" : "Extension permettant d'indiquer la localisation anatomique d'une condition dans antécédents familiaux",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:complex-type"
           }
         ],
@@ -1574,6 +1946,50 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-imaging-procedure-extension"
+        },
+        "name" : "FR Imaging Procedure Extension",
+        "description" : "Imaging procedure used for the imaging acquisition",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-immunization-type-extension"
+        },
+        "name" : "FR Immunization Type Extension",
+        "description" : "Extension permettant de représenter le type de vaccination (ex: INITIMMUNIZ, BOOSTER, IMMUNIZ).",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-interpretation-extension"
+        },
+        "name" : "FR Interpretation Extension",
+        "description" : "Extension permettant de spécifier une interprétation.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -1584,6 +2000,81 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "Ce profil représente le lieu de la prise en charge.",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR entête"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-administration-sequence-extension"
+        },
+        "name" : "FR Medication Administration Sequence Extension",
+        "description" : "Extension permettant d'indiquer l’ordre d’une prise dans le cadre d’un schéma de traitement comportant des dosages progressifs ou fractionnés dans le contexte de MedicationAdministration. La valeur est un entier (integer) représentant le numéro de séquence de l’administration.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-request-out-of-nomenclature-extension"
+        },
+        "name" : "FR Medication Request Out Of Nomenclature Extension",
+        "description" : "Extension permettant d'indiquer si le traitement prescrit est hors autorisation de mise sur le marché (AMM)",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-method-extension"
+        },
+        "name" : "FR Method Extension",
+        "description" : "Extension permettant d’indiquer la méthode utilisée : techniques biologiques (ex. : titration, agglutination…), techniques d’imagerie dans les demandes d'examen (ultrasound, tomographie, IRM…), des méthodes de mesure spécifiques, etc.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-not-covered-extension"
+        },
+        "name" : "FR Not Covered Extension",
+        "description" : "Extension permettant d'indiquer si le traitement est non remboursable.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-number-of-frames-extension"
+        },
+        "name" : "FR Number of Frames Extension",
+        "description" : "Extension permettant d’indiquer le nombre de cadres référencés dans une instance ImagingStudy, conforme aux exigences du modèle logique Xt-EHR.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
       },
       {
         "extension" : [
@@ -1619,6 +2110,20 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-patient-history-extension"
+        },
+        "name" : "FR Patient History Extension",
+        "description" : "Historique médical du patient pertinent pour l'examen d'imagerie",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -1643,7 +2148,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "FR Performer Event Extension",
         "description" : "Extension permettant d'ajouter un performer à l'élément event d'une Composition.",
         "exampleBoolean" : false,
-        "groupingId" : "Extensions FHIR"
+        "groupingId" : "Extensions FHIR entête"
       },
       {
         "extension" : [
@@ -1679,6 +2184,36 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-procedure-difficulty-extension"
+        },
+        "name" : "FR Procedure Difficulty Extension",
+        "description" : "Extension permettant d'indiquer la difficulté perçue ou mesurée d'un acte.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-procedure-priority-extension"
+        },
+        "name" : "FR Procedure Priority Extension",
+        "description" : "Extension permettant d’indiquer d'indique la priorité clinique de l’observation.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -1689,6 +2224,36 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "Ce profil représente l'informateur non professionnel.",
         "exampleBoolean" : false,
         "groupingId" : "Ressources FHIR entête"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:extension"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-status-reason-extension"
+        },
+        "name" : "FR Status Reason Extension",
+        "description" : "Extension permettant d'indiquer le motif du statut métier d'une évaluation.",
+        "exampleBoolean" : false,
+        "groupingId" : "Extensions FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:complex-type"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-study-instance-uid-identifier-document"
+        },
+        "name" : "FR Study Instance Uid Identifier Document",
+        "description" : "DataType définissant l’UID de l’instance Study (0020,000D) d'une demande d'examen d'imagerie",
+        "exampleBoolean" : false,
+        "groupingId" : "Data Type FHIR"
       },
       {
         "extension" : [
@@ -1732,6 +2297,94 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "Section Historique des actes",
         "exampleBoolean" : false,
         "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-imaging-study-document"
+        },
+        "name" : "ImagingStudy - FR Imaging study Document",
+        "description" : "FRImagingStudyDocument (DICOM Part 20 - Study Act) contient les informations DICOM d’un examen d’imagerie réalisé sur un patient.\nL’examen est composé d'une ou de plusieurs séries d’images médicales.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-immunization-document"
+        },
+        "name" : "Immunization - FR Immunization Document",
+        "description" : "FRImmunizationDocument permet de décrire l'administration d'un vaccin. \n - Il permet également de décrire pourquoi un vaccin n'a pas été réalisé.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRMedicationAdministrationDocument sauf mentions précisées ci-après.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-immunization-recommendation-document"
+        },
+        "name" : "ImmunizationRecommendation - FR Immunization Recommendation Document",
+        "description" : "FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée.\n - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). \n - Une vaccination prévue dépend d'un plan accepté et à venir.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRVaccinationDocument.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/IPS-FR-2024.01"
+        },
+        "name" : "IPS-FR",
+        "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Binary"
+          }
+        ],
+        "reference" : {
+          "reference" : "Binary/LDL-SES-2022.01"
+        },
+        "name" : "LDL-SES_2022.01",
+        "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-pregnancy-history-document"
+        },
+        "name" : "List - FR Pregnancy History Document",
+        "description" : "FRPregnancyHistoryDocument  est une liste contenant soit un événement de naissance, soit une observation sur la grossesse, mais pas les deux.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
       },
       {
         "extension" : [
@@ -2032,6 +2685,111 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "description" : "Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap.",
         "exampleBoolean" : false,
         "groupingId" : "Mapping"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-media-document"
+        },
+        "name" : "Media - FR Media Document",
+        "description" : "FRMediaDocument permet de positionner une image de type gif, jpeg, png ou bm. Elle est encodée en base 64",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-document"
+        },
+        "name" : "Medication - FR Medication Document",
+        "description" : "FRMedicationDocument permet de décrire un médicament ou un vaccin.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medications-combinaison-document"
+        },
+        "name" : "Medication - FR Medications Combinaison Document",
+        "description" : "FRMedicationsCombinaisonDocument permet de décrire une combinaison de médicaments ou de vaccins.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-administration-document"
+        },
+        "name" : "MedicationAdministration - FR Medication Administration Document",
+        "description" : "\n - FRMedicationAdministrationDocument permert de décrire les modalités d'administration d'un médicament au patient.\n - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement est en attente d’administration c’est-à dire qu’il a été prescrit.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-dispense-document"
+        },
+        "name" : "MedicationDispense - FR Medication Dispense Document",
+        "description" : "FRMedicationDispenseDocument permet de décrire un traitement dispensé avec notamment le médicament dispensé, la quantité et la référence de la prescription.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-request-document"
+        },
+        "name" : "MedicationRequest - FR Medication Request Document",
+        "description" : "FRMedicationRequestDocument permet de décrire un traitement prescrit avec notamment le médicament, le mode d’administration, la quantité, la durée et la fréquence d'administration.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-medication-statement-document"
+        },
+        "name" : "MedicationStatement - FR Medication Statement Document",
+        "description" : "\n - FRMedicationStatementDocument permet de décrire les modalités d'administration d'un médicament au patient.\n - Il permet de décrire notamment le médicament, le mode d'administration, la quantité, la durée et la fréquence d'administration.\n - Si le traitement a déjà été administré ou si information rapporté par le patient ou si aucun traitement.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
       },
       {
         "extension" : [
@@ -4497,12 +5255,474 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
+            "valueString" : "StructureDefinition:resource"
           }
         ],
         "reference" : {
-          "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
-        }
+          "reference" : "StructureDefinition/fr-observation-blood-product-transfusion-document"
+        },
+        "name" : "Observation - FR Blood Product Transfusion Document",
+        "description" : "FRObservationBloodProductTransfusionDocument permet d'indiquer s'il a eu ou pas transfusion de produit sanguin.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-administration-blood-derivatives-document"
+        },
+        "name" : "Observation - FR Observation Administration Blood Derivatives Document",
+        "description" : "FRObservationAdministrationBloodDerivativesDocument est un profil utilisé pour indiquer s'il y a eu ou pas une administration de dérivés du sang.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-antenatal-testing-surveillance-battery-document"
+        },
+        "name" : "Observation - FR Observation Antenatal Testing And Surveillance Battery Document",
+        "description" : "FRObservationAntenatalTestingAndSurveillanceBattery permet de lister les examens et surveillances prénataux.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-birth-event-document"
+        },
+        "name" : "Observation - FR Observation Birth Event Document",
+        "description" : "FRObservationBirthEventDocument est un profil qui permet de rassembler les observations relatives à une naissance.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-contra-indications-document"
+        },
+        "name" : "Observation - FR Observation Contra Indications Document",
+        "description" : "FRObservationContraIndicationsDocument permet d'apporter des informations relatives aux contre-indications médicales du patient dans le cadre d'un examen d'imagerie.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-laboratory-report-results-document"
+        },
+        "name" : "Observation - FR Observation Laboratory Report Results Document",
+        "description" : "FRObservationLaboratoryReportResultsDocument décrit un résultat d’examen de biologie médicale.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-medical-summary-document"
+        },
+        "name" : "Observation - FR Observation Medical Summary Document",
+        "description" : "FRObservationMedicalSummaryDocument permet de fournir, sous forme textuelle, une synthèse médicale du séjour.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-microorganism-detection-document"
+        },
+        "name" : "Observation - FR Observation Microorganism Detection Document",
+        "description" : "FRObservationMicroorganismDetectionDocument permet d'indiquer si une recherche de micro-organismes multirésistants ou émergents a été effectuée ou pas.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-pain-score-document"
+        },
+        "name" : "Observation - FR Observation Pain Score Document",
+        "description" : "FRObservationPainScoreDocument permet d'enregistrer l'évaluation du patient de sa douleur sur une échelle de 1 à 10.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-pregnancy-document"
+        },
+        "name" : "Observation - FR Observation Pregnancy Document",
+        "description" : "FRObservationPregnancyDocument permet d'apporter des informations relatives aux grossesses actuelle ou passées.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-pregnancy-history-document"
+        },
+        "name" : "Observation - FR Observation Pregnancy History Document",
+        "description" : "FRObservationPregnancyHistoryDocument permet de regrouper les observations relatives à un épisode de grossesse.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-radiation-exposure-document"
+        },
+        "name" : "Observation - FR Observation Radiation Exposure Document",
+        "description" : "FRObservationRadiationExposureDocument permet d'enregistrer les informations relatives à l’exposition du patient aux rayonnements et les informations de radioprotection.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-result-document"
+        },
+        "name" : "Observation - FR Observation Result Document",
+        "description" : "FRObservationResultDocument permet d'indiquer le résultat observé.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-social-history-document"
+        },
+        "name" : "Observation - FR Observation Social History Document",
+        "description" : "FRObservationSocialHistoryDocument décrit les habitudes de vie du patient (Habitus / Mode de vie).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-survey-document"
+        },
+        "name" : "Observation - FR Observation Survey Document",
+        "description" : "FRObservationSurveyDocument permet de rapporter un résultat (score) répondant à une question faisant partie d'une évaluation (questionnaire d'enquête par exemple).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-survey-pannel-document"
+        },
+        "name" : "Observation - FR Observation Survey Pannel Document",
+        "description" : "FRObservationSurveyPannelDocument permet de rassembler des observations de questionnaires.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-transfusion-accidents-document"
+        },
+        "name" : "Observation - FR Observation Transfusion Accidents Document",
+        "description" : "FRObservationTransfusionAccidentsDocument est un profil utilisé pour décrire un accident transfusionnel.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-vital-signs-document"
+        },
+        "name" : "Observation - FR Observation Vital Signs Document",
+        "description" : "\n - FRObservationVitalSignsDocument permet d'indiquer les informations détaillées relatives à une mesure clinique spécifique.\n - Il est basée sur la ressource Observation qu'elle spécialise en portant des contraintes sur les vocabulaires des éléments 'code' et 'value'.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-Observation-vital-signs-panel-document"
+        },
+        "name" : "Observation - FR Observation Vital Signs Panel Document",
+        "description" : "FRObservationVitalSignsPanelDocument permet de regrouper des informations relatives aux mesures cliniques du patient.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-observation-work-related-accident-document"
+        },
+        "name" : "Observation - FR Observation Work Related Accident Document",
+        "description" : "FRObservationWorkRelatedAccidentDocument permet d'indiquer si l'élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-procedure-act-document"
+        },
+        "name" : "Procedure - FR Procedure Act Document",
+        "description" : "FRProcedureActDocument est un profil utilisé pour décrire un acte planifié ou réalisé.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-procedure-imaging-document"
+        },
+        "name" : "Procedure - FR Procedure Imaging Document",
+        "description" : "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-service-request-document"
+        },
+        "name" : "ServiceRequest - FR Service Request Document",
+        "description" : "FRSeviceRequestDocument profil permet de porter des demandes d'examens (analyses biologiques, évaluations, étude d'imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d'un plan de soins.",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-specimen-document"
+        },
+        "name" : "Specimen - FR Specimen Document",
+        "description" : "FRSpecimenDocument est un profil utilisé pour décrire le prélèvement et l'échantillon biologique (le matériel).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/fr-task-patient-transport-document"
+        },
+        "name" : "Task - FR Task Patient Transport Document",
+        "description" : "FRTaskPatientTransportDocument permet de décrire le transport d'un patient/usager lors d'un déplacement (entrée ou sortie d'hôpital, ...).",
+        "exampleBoolean" : false,
+        "groupingId" : "Ressources FHIR corps"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-actor-type-document"
+        },
+        "name" : "ValueSet - FR ValueSet Actor Type Document",
+        "description" : "Jeu de valeurs pour les types d'acteurs.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-edqm-document"
+        },
+        "name" : "ValueSet - FR ValueSet EDQM Document",
+        "description" : "ValueSet basé sur le CodeSystem EDQM fourni par SMT",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-medication-translation-document"
+        },
+        "name" : "ValueSet - FR ValueSet Medication Translation Document",
+        "description" : "Systèmes autorisés pour les autres codifications.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-result-type-document"
+        },
+        "name" : "ValueSet - FR ValueSet Result Type Document",
+        "description" : "ValueSet contenant les codes LOINC autorisés pour les types de résultats",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-allergy-substance"
+        },
+        "name" : "ValueSet – FR ValueSet Allergy Substance Document",
+        "description" : "Jeu de valeurs permettant de coder l’agent responsable d’une allergie :\n- Médicaments : CIP ou UCD\n- Substances : SMS\n- Aliments : CIM-11 Chapitre X Extensions – Allergènes ou substances non médicinales\n- Agents environnementaux ou physiques : idem CIM-11 Chapitre X Extensions\n- Allergènes pouvant induire une contre-indication vaccinale : jdv-allergie-vaccin-cisis",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-procedure-code"
+        },
+        "name" : "ValueSet – FR ValueSet Codes d’actes",
+        "description" : "Codes autorisés pour indiquer un acte.\nInclut :\n- Terminologie CCAM\n- NCIT (code C25218 : 'Intervention') si l'acte n'est pas trouvé dans CCAM\n- CISIS jdv-absent-or-unknown-procedure-cisis pour actes chirurgicaux inconnus ou absents.\n\nSi aucun code approprié n’est disponible, l’acte peut être décrit en texte libre.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ValueSet"
+          }
+        ],
+        "reference" : {
+          "reference" : "ValueSet/fr-vs-evaluation-type"
+        },
+        "name" : "ValueSet – FR ValueSet Type d'évaluation",
+        "description" : "Codes autorisés pour indiquer le type d'évaluation.\nInclut LOINC, ICF, et permet d'autres systèmes si aucun code approprié n'est trouvé.",
+        "exampleBoolean" : false
       },
       {
         "extension" : [
@@ -4513,61 +5733,6 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         ],
         "reference" : {
           "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
-        }
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/IPS-FR-2024.01"
-        }
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/LDL-SES-2022.01"
-        }
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eDISP-MED-2024.01"
-        }
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
-        }
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "Binary"
-          }
-        ],
-        "reference" : {
-          "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
         }
       }
     ],
