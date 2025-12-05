@@ -3,7 +3,7 @@ Parent: Procedure
 Id: fr-procedure-imaging-document
 Title: "Procedure - FR Procedure Imaging Document"
 Description: "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :
-acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte "
+acte d'imagerie, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte "
 
 // mettre le bon canonical à partir de HL7 Europe Base and Core FHIR IG
 //* ^extension[$imposeProfile].valueCanonical = Canonical()
@@ -41,6 +41,9 @@ acte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité
 * bodySite MS
 * bodySite from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis
 * bodySite ^short = "Localisation anatomique"
+* bodySite.extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named precisionTopographique 0..1 MS
+* bodySite.extension[precisionTopographique] ^short = "Modificateurs topographiques"
+* bodySite.extension[precisionTopographique].valueReference only Reference(FRBodyStructureDocument) 
 
 * performer ^slicing.discriminator.type = #pattern  
 * performer ^slicing.discriminator.path = "$this"

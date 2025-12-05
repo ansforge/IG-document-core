@@ -24,6 +24,6 @@ Description: "FRObservationResultDocument permet d'indiquer le résultat observ�
 * interpretation from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis
 
 * note MS
-* note ^short = "Commentaires"
+* note ^short = "Commentaires (résultats d'examen non codés)"
 
 * insert FRRuleSetSimpleObservation

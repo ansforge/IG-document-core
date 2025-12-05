@@ -12,4 +12,8 @@ Description: "Ce profil représente le patient concerné par le document."
   * relationship[RelationType] from $JDV_J11_RelationPatient_CISIS  (required)
   * relationship[Role] from $jdv-role-informateur-cisis (required)
 
+* extension contains
+    $sexForClinicalUse named sex-for-clinical-use 0..*
+* extension[sex-for-clinical-use] ^short = "Sexe clinique du patient"
+
 * generalPractitioner only Reference(FRPractitionerDocument)
