@@ -48,7 +48,7 @@ Description: "
 
 // Médicament
 * medication[x] MS
-* medication[x] only CodeableConcept or Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
+* medication[x] only Reference(FRMedicationDocument or FRMedicationsCombinaisonDocument)
 
 // Instruction au patient
 * dosage.text MS

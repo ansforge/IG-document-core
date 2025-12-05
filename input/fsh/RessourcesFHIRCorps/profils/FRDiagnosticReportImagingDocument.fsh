@@ -46,15 +46,26 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 
 * result MS
 * result only Reference(FRObservationResultDocument)
-* result ^short = "Résultats de l'acte d'imagerie"
+* result ^short = "Résultats d'examen (actuels ou antérieurs)"
+* result ^comment = "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans FRObservationResultDocument.note"
 
-// si conclusion non codée
+// Slicing des résultats d'examen en résultats actuels et résultats antérieurs
+* result ^slicing.discriminator.type = #pattern
+* result ^slicing.discriminator.path = "reference"
+* result ^slicing.ordered = false
+* result ^slicing.rules = #open
+
+* result contains resultatActuel 0..1 and resultatAnterieur 0..1
+
+// Slice : résultats actuels
+* result[resultatActuel] ^short = "Résultats actuels de l'examen d'imagerie"
+
+// Slice : résultats antérieurs
+* result[resultatAnterieur] ^short = "Résultats antérieurs"
+
+// La conclusion est non codée
 * conclusion MS
 * conclusion ^short = "Conclusions cliniques et interprétations du rapport d’imagerie."
-
-// si conclusion codée
-* conclusionCode MS
-* conclusionCode ^short = "Conclusions codées du rapport d’imagerie."
 
 * imagingStudy only Reference(FRImagingStudyDocument)
 * imagingStudy ^short = "Acte d'imagerie associé au compte-rendu"
@@ -68,10 +79,10 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * extension contains FRImagingProcedureExtension named procedure 0..* MS
 * extension[procedure] ^short = "Technique d'imagerie"
 
-* extension contains FREducationPatientExtension named informationDuPatient 0..* MS
-* extension[informationDuPatient] ^short = "Informations du patient"
+/* Création des extensions utilisées dans le profil FRDiagnosticReportImagingDocument en suivant
+ la même structure que HL7 Europe DiagnosticReportEuImaging */
 
-// Création des extensions utilisées dans le profil FRDiagnosticReportImagingDocument en suivant la même structure que HL7 Europe DiagnosticReportEuImaging
+// Aujourd'hui, la comparaison des examens d'imagerie avec des examens antérieur représentée dans une note textuelle dans FRImagingStudyDocument (comparaison non codée)
 Extension: FRComparisonStudiesExtension
 Title: "FR Comparison Studies Extension"
 Id: fr-comparison-studies-extension
@@ -85,7 +96,7 @@ Id: fr-patient-history-extension
 Description: "Historique médical du patient pertinent pour l'examen d'imagerie"
 Context: DiagnosticReport
 //* value[x] only Reference(Resource)
-* value[x] only Reference(FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument or FRConditionDocument or Observation or FRDeviceAuteurDocument or FRMedicationAdministrationDocument or FRDocumentReferenceDocument)
+* value[x] only Reference(FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument or FRConditionDocument or Observation or FRDeviceAuteurDocument or FRMedicationAdministrationDocument)
 
 Extension: FRImagingProcedureExtension
 Title: "FR Imaging Procedure Extension"
@@ -93,10 +104,3 @@ Id: fr-imaging-procedure-extension
 Description: "Imaging procedure used for the imaging acquisition"
 Context: DiagnosticReport
 * value[x] only Reference(FRProcedureImagingDocument)
-
-Extension: FREducationPatientExtension
-Title: "FR Education Patient Extension"
-Id: fr-education-patient-extension
-Description: "Informations du patient"
-Context: DiagnosticReport
-* value[x] only Reference(FRProcedureActDocument or Observation or FRDocumentReferenceDocument)

@@ -47,6 +47,12 @@ Description: "FRObservationRadiationExposureDocument permet d'enregistrer les in
 * effective[x] 1..1 MS
 * effective[x] ^short = "Date de début de l'exposition aux radiations"
 
+* bodySite 1..1 MS
+* bodySite ^short = "Localisation anatomique en SNOMED CT"
+* bodySite.extension contains http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure named precisionTopographique 0..1 MS
+* bodySite.extension[precisionTopographique] ^short = "Modificateurs topographiques"
+* bodySite.extension[precisionTopographique].valueReference only Reference(FRBodyStructureDocument) 
+
 // Mesures quantitatives telles que les mesures linéaires, les mesures de surface, de volume et numériques
 * component ^short = "Mesures quantitatives liées à l'exposition aux rayonnements"
 * component.code from https://smt.esante.gouv.fr/fhir/ValueSet/jdv-quantite-exposition-rayonnements-cisis (required)
@@ -54,7 +60,6 @@ Description: "FRObservationRadiationExposureDocument permet d'enregistrer les in
 * component.value[x] only Quantity
 * component.valueQuantity MS
 * component.valueQuantity ^short = "Quantité mesurée"
-* component.valueQuantity from http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units (required)
 
 // Device utilisé pour l’irradiation
 * device MS
@@ -66,7 +71,7 @@ Description: "FRObservationRadiationExposureDocument permet d'enregistrer les in
 * performer ^slicing.discriminator.path = "reference"
 * performer ^slicing.rules = #closed
 
-* performer contains professionnelAuthorisantExposition 1..1 MS
-* performer[professionnelAuthorisantExposition] only Reference(FRPractitionerRoleDocument)
+* performer contains professionnelAutorisantExposition 1..1 MS
+* performer[professionnelAutorisantExposition] only Reference(FRPractitionerRoleDocument)
 * performer 1..1 MS
-* performer[professionnelAuthorisantExposition] ^short = "Identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements"
+* performer[professionnelAutorisantExposition] ^short = "Identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements"

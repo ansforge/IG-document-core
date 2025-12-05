@@ -16,7 +16,7 @@ Description: "FRSeviceRequestDocument profil permet de porter des demandes d'exa
 * identifier ^slicing.ordered = false
 
 * identifier contains accessionNumber 0..1
-* identifier[accessionNumber] only FRAccessionNumberIdentifierImagingDocument
+* identifier[accessionNumber] only FRAccessionNumberIdentifierDocument
 * identifier[accessionNumber] ^short = "Accession Number de la demande d’examen d’imagerie"
 
 * intent MS
