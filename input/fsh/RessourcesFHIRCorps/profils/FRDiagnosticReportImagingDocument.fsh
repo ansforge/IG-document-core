@@ -47,7 +47,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 * result MS
 * result only Reference(FRObservationResultDocument)
 * result ^short = "Résultats d'examen (actuels ou antérieurs)"
-* result ^comment = "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans FRObservationResultDocument.note"
+* result ^comment = "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans une note"
 
 // Slicing des résultats d'examen en résultats actuels et résultats antérieurs
 * result ^slicing.discriminator.type = #pattern
@@ -82,7 +82,7 @@ Ce document représente le rapport d’un examen d’imagerie. Il constitue la r
 /* Création des extensions utilisées dans le profil FRDiagnosticReportImagingDocument en suivant
  la même structure que HL7 Europe DiagnosticReportEuImaging */
 
-// Aujourd'hui, la comparaison des examens d'imagerie avec des examens antérieur représentée dans une note textuelle dans FRImagingStudyDocument (comparaison non codée)
+// Aujourd'hui, la comparaison des examens d'imagerie avec des examens antérieur est représentée dans une note textuelle (comparaison non codée)
 Extension: FRComparisonStudiesExtension
 Title: "FR Comparison Studies Extension"
 Id: fr-comparison-studies-extension
