@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-04T14:08:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-05T10:50:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1458,30 +1458,6 @@
      ] [
        fhir:id [ fhir:v "Mapping" ] ;
        fhir:name [ fhir:v "Concept Maps" ]
-     ] [
-       fhir:id [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ] ;
-       fhir:name [ fhir:v "BIO-CR-BIO_2024.01_Microbiologie_V1" ] ;
-       fhir:description [ fhir:v "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eDISP-MED-2024.01" ] ;
-       fhir:name [ fhir:v "eDISP-MED-2024.01" ] ;
-       fhir:description [ fhir:v "eDispensation de médicaments (eDISP-MED-2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ] ;
-       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoStruct" ] ;
-       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ] ;
-       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoNonStruct" ] ;
-       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/IPS-FR-2024.01" ] ;
-       fhir:name [ fhir:v "IPS-FR" ] ;
-       fhir:description [ fhir:v "Volet International Patient Summary - France (IPS-FR_2024.01)" ]
-     ] [
-       fhir:id [ fhir:v "Binary/LDL-SES-2022.01" ] ;
-       fhir:name [ fhir:v "LDL-SES_2022.01" ] ;
-       fhir:description [ fhir:v "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)" ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
@@ -1522,6 +1498,50 @@
        ] ;
        fhir:name [ fhir:v "AllergyIntolerance - FR Allergy and intolerance Document" ] ;
        fhir:description [ fhir:v "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-Microbiologie-V1> ;
+         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ]
+       ] ;
+       fhir:name [ fhir:v "BIO-CR-BIO_2024.01_Microbiologie_V1" ] ;
+       fhir:description [ fhir:v "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-body-structure-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-body-structure-document" ]
+       ] ;
+       fhir:name [ fhir:v "BodyStructure - FR Body Structure Document" ] ;
+       fhir:description [ fhir:v "FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2503,6 +2523,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eDISP-MED-2024.01> ;
+         fhir:reference [ fhir:v "Binary/eDISP-MED-2024.01" ]
+       ] ;
+       fhir:name [ fhir:v "eDISP-MED-2024.01" ] ;
+       fhir:description [ fhir:v "eDispensation de médicaments (eDISP-MED-2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2547,6 +2589,50 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoNonStruct> ;
+         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ]
+       ] ;
+       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoNonStruct" ] ;
+       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoStruct> ;
+         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ]
+       ] ;
+       fhir:name [ fhir:v "eP-MED-DM_2024.01_PosoStruct" ] ;
+       fhir:description [ fhir:v "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -2573,11 +2659,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-accession-number-identifier-imaging-document> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-accession-number-identifier-imaging-document" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-accession-number-identifier-document> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-accession-number-identifier-document" ]
        ] ;
-       fhir:name [ fhir:v "FR Accession Number Identifier Imaging Document" ] ;
-       fhir:description [ fhir:v "DataType définissant l'Accession Number d'une demande d'examen d'imagerie. Il s'agit d'un identifiant unique attribué à chaque demande d'examen." ] ;
+       fhir:name [ fhir:v "FR Accession Number Identifier Document" ] ;
+       fhir:description [ fhir:v "DataType définissant l'Accession Number d'une demande d'examen. Il s'agit d'un identifiant unique attribué à chaque demande d'examen." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2714,27 +2800,6 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR entête" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-education-patient-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-education-patient-extension" ]
-       ] ;
-       fhir:name [ fhir:v "FR Education Patient Extension" ] ;
-       fhir:description [ fhir:v "Informations du patient" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -3391,6 +3456,50 @@
          fhir:v false
        ] ;
        fhir:groupingId [ fhir:v "Ressources FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/IPS-FR-2024.01> ;
+         fhir:reference [ fhir:v "Binary/IPS-FR-2024.01" ]
+       ] ;
+       fhir:name [ fhir:v "IPS-FR" ] ;
+       fhir:description [ fhir:v "Volet International Patient Summary - France (IPS-FR_2024.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Binary"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/LDL-SES-2022.01> ;
+         fhir:reference [ fhir:v "Binary/LDL-SES-2022.01" ]
+       ] ;
+       fhir:name [ fhir:v "LDL-SES_2022.01" ] ;
+       fhir:description [ fhir:v "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -8093,7 +8202,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-procedure-imaging-document" ]
        ] ;
        fhir:name [ fhir:v "Procedure - FR Procedure Imaging Document" ] ;
-       fhir:description [ fhir:v "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte" ] ;
+       fhir:description [ fhir:v "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -8324,98 +8433,8 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-Microbiologie-V1> ;
-         fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/BIO-CR-BIO-2024.01-glycemie-mole> ;
          fhir:reference [ fhir:v "Binary/BIO-CR-BIO-2024.01-glycemie-mole" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/IPS-FR-2024.01> ;
-         fhir:reference [ fhir:v "Binary/IPS-FR-2024.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/LDL-SES-2022.01> ;
-         fhir:reference [ fhir:v "Binary/LDL-SES-2022.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eDISP-MED-2024.01> ;
-         fhir:reference [ fhir:v "Binary/eDISP-MED-2024.01" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoNonStruct> ;
-         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoNonStruct" ]
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Binary"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/Binary/eP-MED-DM-2024.01-PosoStruct> ;
-         fhir:reference [ fhir:v "Binary/eP-MED-DM-2024.01-PosoStruct" ]
        ]
      ] ) ;
      fhir:page [

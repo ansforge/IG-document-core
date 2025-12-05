@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -723,36 +723,6 @@
     {
       "id" : "Mapping",
       "name" : "Concept Maps"
-    },
-    {
-      "id" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1",
-      "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
-      "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)"
-    },
-    {
-      "id" : "Binary/eDISP-MED-2024.01",
-      "name" : "eDISP-MED-2024.01",
-      "description" : "eDispensation de médicaments (eDISP-MED-2024.01)"
-    },
-    {
-      "id" : "Binary/eP-MED-DM-2024.01-PosoStruct",
-      "name" : "eP-MED-DM_2024.01_PosoStruct",
-      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
-    },
-    {
-      "id" : "Binary/eP-MED-DM-2024.01-PosoNonStruct",
-      "name" : "eP-MED-DM_2024.01_PosoNonStruct",
-      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)"
-    },
-    {
-      "id" : "Binary/IPS-FR-2024.01",
-      "name" : "IPS-FR",
-      "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)"
-    },
-    {
-      "id" : "Binary/LDL-SES-2022.01",
-      "name" : "LDL-SES_2022.01",
-      "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)"
     }],
     "resource" : [{
       "extension" : [{
@@ -777,6 +747,31 @@
       },
       "name" : "AllergyIntolerance - FR Allergy and intolerance Document",
       "description" : "FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie.",
+      "exampleBoolean" : false,
+      "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
+      },
+      "name" : "BIO-CR-BIO_2024.01_Microbiologie_V1",
+      "description" : "Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-body-structure-document"
+      },
+      "name" : "BodyStructure - FR Body Structure Document",
+      "description" : "FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR corps"
     },
@@ -1355,6 +1350,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eDISP-MED-2024.01"
+      },
+      "name" : "eDISP-MED-2024.01",
+      "description" : "eDispensation de médicaments (eDISP-MED-2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1381,6 +1388,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
+      },
+      "name" : "eP-MED-DM_2024.01_PosoNonStruct",
+      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
+      },
+      "name" : "eP-MED-DM_2024.01_PosoStruct",
+      "description" : "ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1397,10 +1428,10 @@
         "valueString" : "StructureDefinition:complex-type"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-accession-number-identifier-imaging-document"
+        "reference" : "StructureDefinition/fr-accession-number-identifier-document"
       },
-      "name" : "FR Accession Number Identifier Imaging Document",
-      "description" : "DataType définissant l'Accession Number d'une demande d'examen d'imagerie. Il s'agit d'un identifiant unique attribué à chaque demande d'examen.",
+      "name" : "FR Accession Number Identifier Document",
+      "description" : "DataType définissant l'Accession Number d'une demande d'examen. Il s'agit d'un identifiant unique attribué à chaque demande d'examen.",
       "exampleBoolean" : false,
       "groupingId" : "Data Type FHIR"
     },
@@ -1480,18 +1511,6 @@
       "description" : "Ce profil représente le système auteur du document.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR entête"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-education-patient-extension"
-      },
-      "name" : "FR Education Patient Extension",
-      "description" : "Informations du patient",
-      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1878,6 +1897,30 @@
       "description" : "FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée.\n - Une vaccination proposée est une proposition qui est utilisée dans la prise de décisions (elle peut apparaître comme une contribution ou un résultat provenant de l'aide à la décision clinique). \n - Une vaccination prévue dépend d'un plan accepté et à venir.\n - Ce profil hérite de la structuration, des contraintes et des vocabulaires définis dans le profil FRVaccinationDocument.",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR corps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/IPS-FR-2024.01"
+      },
+      "name" : "IPS-FR",
+      "description" : "Volet International Patient Summary - France (IPS-FR_2024.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Binary"
+      }],
+      "reference" : {
+        "reference" : "Binary/LDL-SES-2022.01"
+      },
+      "name" : "LDL-SES_2022.01",
+      "description" : "Document Lettre de liaison à la sortie d'un établissement de soins (LDL-SES_2022.01)",
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-core-clinical-document"
     },
     {
       "extension" : [{
@@ -4657,7 +4700,7 @@
         "reference" : "StructureDefinition/fr-procedure-imaging-document"
       },
       "name" : "Procedure - FR Procedure Imaging Document",
-      "description" : "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, modalité d'acquisition, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte",
+      "description" : "FRProcedureImagingDocument permet d'enregistrer les différents paramètres de l’acquisition d’image :\nacte d'imagerie, localisation anatomique / latéralité / topographie, d'autres paramètres de l'acte",
       "exampleBoolean" : false,
       "groupingId" : "Ressources FHIR corps"
     },
@@ -4790,61 +4833,7 @@
         "valueString" : "Binary"
       }],
       "reference" : {
-        "reference" : "Binary/BIO-CR-BIO-2024.01-Microbiologie-V1"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
         "reference" : "Binary/BIO-CR-BIO-2024.01-glycemie-mole"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/IPS-FR-2024.01"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/LDL-SES-2022.01"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/eDISP-MED-2024.01"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/eP-MED-DM-2024.01-PosoNonStruct"
-      }
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Binary"
-      }],
-      "reference" : {
-        "reference" : "Binary/eP-MED-DM-2024.01-PosoStruct"
       }
     }],
     "page" : {

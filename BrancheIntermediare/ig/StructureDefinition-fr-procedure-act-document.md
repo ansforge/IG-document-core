@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-act-document | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRProcedureActDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRProcedureActDocument |
 
  
 FRProcedureActDocument est un profil utilisé pour décrire un acte planifié ou réalisé. 
 
 **Utilisations:**
 
-* Référer à ce Profil: [FR Education Patient Extension](StructureDefinition-fr-education-patient-extension.md)
+* Ce Profil nest utilisé par aucun profil dans ce guide dimplémentation
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-procedure-act-document)
 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-procedure-act-doc
   "name" : "FRProcedureActDocument",
   "title" : "Procedure - FR Procedure Act Document",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

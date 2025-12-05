@@ -266,6 +266,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | :--- | :--- |
 | [AdverseEvent - FR adverse event Document](StructureDefinition-fr-adverse-event-document.md) | FRAdverseEventDocument permet de décrire un effet indésirable prévisible lié à un médicament |
 | [AllergyIntolerance - FR Allergy and intolerance Document](StructureDefinition-fr-allergie-intolerance-document.md) | FRAllergyIntoleranceDocument est un profil utilisé pourdécrire une allergie ou une hypersensibilité non allergique ou une intolérance ou une idiosyncrasie. |
+| [BodyStructure - FR Body Structure Document](StructureDefinition-fr-body-structure-document.md) | FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique. |
 | [CarePlan - FR Care Plan Document](StructureDefinition-fr-care-plan-document.md) | FRCarePlanDocument est un profil permettant d’enregistrer une référence à un traitement dans un plan de traitement. |
 | [Condition - FR Condition Document](StructureDefinition-fr-condition-document.md) | FRConditionDocument est un profil utilisé pour décrire un problème du patient (une pathologie par exemple). |
 | [Consent - FR Advance directive Document](StructureDefinition-fr-advance-directive-document.md) | FRAdvanceDirectiveDocument permet d’indiquer si les directives anticipées du patient. Article L1111-11 du Code de la Santé Publique : « Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un jour hors d’état d’exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne relative à sa fin de vie en ce qui concerne les conditions de la poursuite, de la limitation, de l’arrêt ou du refus de traitement ou d’acte médicaux.» |
@@ -323,7 +324,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [Observation - FR Observation Vital Signs Panel Document](StructureDefinition-fr-Observation-vital-signs-panel-document.md) | FRObservationVitalSignsPanelDocument permet de regrouper des informations relatives aux mesures cliniques du patient. |
 | [Observation - FR Observation Work Related Accident Document](StructureDefinition-fr-observation-work-related-accident-document.md) | FRObservationWorkRelatedAccidentDocument permet d’indiquer si l’élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle. |
 | [Procedure - FR Procedure Act Document](StructureDefinition-fr-procedure-act-document.md) | FRProcedureActDocument est un profil utilisé pour décrire un acte planifié ou réalisé. |
-| [Procedure - FR Procedure Imaging Document](StructureDefinition-fr-procedure-imaging-document.md) | FRProcedureImagingDocument permet d’enregistrer les différents paramètres de l’acquisition d’image : acte d’imagerie, modalité d’acquisition, localisation anatomique / latéralité / topographie, d’autres paramètres de l’acte |
+| [Procedure - FR Procedure Imaging Document](StructureDefinition-fr-procedure-imaging-document.md) | FRProcedureImagingDocument permet d’enregistrer les différents paramètres de l’acquisition d’image : acte d’imagerie, localisation anatomique / latéralité / topographie, d’autres paramètres de l’acte |
 | [ServiceRequest - FR Service Request Document](StructureDefinition-fr-service-request-document.md) | FRSeviceRequestDocument profil permet de porter des demandes d’examens (analyses biologiques, évaluations, étude d’imagerie, etc…) ou de suivis particuliers à programmer dans le cadre d’un plan de soins. |
 | [Specimen - FR Specimen Document](StructureDefinition-fr-specimen-document.md) | FRSpecimenDocument est un profil utilisé pour décrire le prélèvement et l’échantillon biologique (le matériel). |
 | [Task - FR Task Patient Transport Document](StructureDefinition-fr-task-patient-transport-document.md) | FRTaskPatientTransportDocument permet de décrire le transport d’un patient/usager lors d’un déplacement (entrée ou sortie d’hôpital, …). |
@@ -332,7 +333,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 
 | | |
 | :--- | :--- |
-| [FR Accession Number Identifier Imaging Document](StructureDefinition-fr-accession-number-identifier-imaging-document.md) | DataType définissant l’Accession Number d’une demande d’examen d’imagerie. Il s’agit d’un identifiant unique attribué à chaque demande d’examen. |
+| [FR Accession Number Identifier Document](StructureDefinition-fr-accession-number-identifier-document.md) | DataType définissant l’Accession Number d’une demande d’examen. Il s’agit d’un identifiant unique attribué à chaque demande d’examen. |
 | [FR Human Name Document](StructureDefinition-fr-human-name-document.md) | Ce profil correspond au type de données HumanName utilisé dans le document. |
 | [FR Study Instance Uid Identifier Document](StructureDefinition-fr-study-instance-uid-identifier-document.md) | DataType définissant l’UID de l’instance Study (0020,000D) d’une demande d’examen d’imagerie |
 
@@ -432,7 +433,6 @@ These define constraints on FHIR data types for systems conforming to this imple
 | | |
 | :--- | :--- |
 | [FR Comparison Studies Extension](StructureDefinition-fr-comparison-studies-extension.md) | Examen de comparaison radiologique |
-| [FR Education Patient Extension](StructureDefinition-fr-education-patient-extension.md) | Informations du patient |
 | [FR Imaging Procedure Extension](StructureDefinition-fr-imaging-procedure-extension.md) | Imaging procedure used for the imaging acquisition |
 | [FR Patient History Extension](StructureDefinition-fr-patient-history-extension.md) | Historique médical du patient pertinent pour l’examen d’imagerie |
 
@@ -460,17 +460,24 @@ These define sets of codes used by systems conforming to this implementation gui
 Si aucun code approprié n’est disponible, l’acte peut être décrit en texte libre. |
 | [ValueSet – FR ValueSet Type d'évaluation](ValueSet-fr-vs-evaluation-type.md) | Codes autorisés pour indiquer le type d’évaluation. Inclut LOINC, ICF, et permet d’autres systèmes si aucun code approprié n’est trouvé. |
 
+### Example: Example Instances 
+
+These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+
+| | |
+| :--- | :--- |
+| [BIO-CR-BIO_2024.01_Microbiologie_V1](Binary-BIO-CR-BIO-2024.01-Microbiologie-V1.md) | Compte-rendu d’examens de biologie médicale - exemple Microbiologie (BIO-CR-BIO-2024.01) |
+| [IPS-FR](Binary-IPS-FR-2024.01.md) | Volet International Patient Summary - France (IPS-FR_2024.01) |
+| [LDL-SES_2022.01](Binary-LDL-SES-2022.01.md) | Document Lettre de liaison à la sortie d’un établissement de soins (LDL-SES_2022.01) |
+| [eDISP-MED-2024.01](Binary-eDISP-MED-2024.01.md) | eDispensation de médicaments (eDISP-MED-2024.01) |
+| [eP-MED-DM_2024.01_PosoNonStruct](Binary-eP-MED-DM-2024.01-PosoNonStruct.md) | ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01) |
+| [eP-MED-DM_2024.01_PosoStruct](Binary-eP-MED-DM-2024.01-PosoStruct.md) | ePrescription de médicaments et/ou de dispositifs médicaux (eP-MED-DM_2024.01) |
+
 ### Other 
 
 These are resources that are used within this implementation guide that do not fit into one of the other categories.
 
 | |
 | :--- |
-| [Binary/BIO-CR-BIO-2024.01-Microbiologie-V1](Binary-BIO-CR-BIO-2024.01-Microbiologie-V1.md) |
 | [Binary/BIO-CR-BIO-2024.01-glycemie-mole](Binary-BIO-CR-BIO-2024.01-glycemie-mole.md) |
-| [Binary/IPS-FR-2024.01](Binary-IPS-FR-2024.01.md) |
-| [Binary/LDL-SES-2022.01](Binary-LDL-SES-2022.01.md) |
-| [Binary/eDISP-MED-2024.01](Binary-eDISP-MED-2024.01.md) |
-| [Binary/eP-MED-DM-2024.01-PosoNonStruct](Binary-eP-MED-DM-2024.01-PosoNonStruct.md) |
-| [Binary/eP-MED-DM-2024.01-PosoStruct](Binary-eP-MED-DM-2024.01-PosoStruct.md) |
 

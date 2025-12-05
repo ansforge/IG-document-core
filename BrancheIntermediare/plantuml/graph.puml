@@ -31,7 +31,7 @@ package IG #DDDDDD{
              Observation.hasMember => [None..None]
         } 
 
-        class FRAccessionNumberIdentifierImagingDocument{
+        class FRAccessionNumberIdentifierDocument{
 
              Identifier.type => [1..None]
              Identifier.type.coding => [1..1]
@@ -91,6 +91,11 @@ package IG #DDDDDD{
              AllergyIntolerance.reaction.onset => [None..None]
              AllergyIntolerance.reaction.severity => [None..None]
              AllergyIntolerance.reaction.note => [None..1]
+        } 
+
+        class FRBodyStructureDocument{
+
+             BodyStructure.locationQualifier => [None..None]
         } 
 
         class FRBundleDocument{
@@ -913,7 +918,6 @@ package IG #DDDDDD{
              DiagnosticReport.extension:comparaison => <&plus>[0..*]
              DiagnosticReport.extension:historiqueMedical => <&plus>[0..*]
              DiagnosticReport.extension:procedure => <&plus>[0..*]
-             DiagnosticReport.extension:informationDuPatient => <&plus>[0..*]
              DiagnosticReport.identifier => [1..None]
              DiagnosticReport.basedOn => [None..None]
              DiagnosticReport.basedOn:serviceRequestAccessionNumber => [0..*]
@@ -930,9 +934,10 @@ package IG #DDDDDD{
              DiagnosticReport.resultsInterpreter.extension:author.extension:actor => <&plus>[None..None]
              DiagnosticReport.resultsInterpreter.extension:author.extension:actor.value[x] => <&plus>[None..None]
              DiagnosticReport.result => [None..None]
+             DiagnosticReport.result:resultatActuel => [0..1]
+             DiagnosticReport.result:resultatAnterieur => [0..1]
              DiagnosticReport.imagingStudy => [None..None]
              DiagnosticReport.conclusion => [None..None]
-             DiagnosticReport.conclusionCode => [None..None]
         } 
 
         class FRDocumentReferenceDocument{
@@ -3542,7 +3547,10 @@ package IG #DDDDDD{
              Observation.subject => [1..None]
              Observation.effective[x] => [1..None]
              Observation.performer => [1..1]
-             Observation.performer:professionnelAuthorisantExposition => [1..1]
+             Observation.performer:professionnelAutorisantExposition => [1..1]
+             Observation.bodySite => [1..None]
+             Observation.bodySite.extension:precisionTopographique => <&plus>[0..1]
+             Observation.bodySite.extension:precisionTopographique.value[x] => <&plus>[None..None]
              Observation.device => [None..None]
              Observation.component => [None..None]
              Observation.component.code => [None..None]
@@ -3715,6 +3723,7 @@ package IG #DDDDDD{
 
         class FRPatientINSDocument{
 
+             Patient.extension:sex-for-clinical-use => <&plus>[0..*]
              Patient.contact.relationship:Role => [None..None]
              Patient.contact.relationship:RelationType => [None..None]
              Patient.contact.name => [1..None]
@@ -3816,6 +3825,8 @@ package IG #DDDDDD{
              Procedure.performer:dispositif-medical.actor => [None..None]
              Procedure.reasonReference => [None..None]
              Procedure.bodySite => [None..None]
+             Procedure.bodySite.extension:precisionTopographique => <&plus>[0..1]
+             Procedure.bodySite.extension:precisionTopographique.value[x] => <&plus>[None..None]
              Procedure.complication.text => [None..None]
         } 
 
@@ -3925,7 +3936,6 @@ package IG #DDDDDD{
      FRDiagnosticReportImagingDocument -[#black,dashed,thickness=2]-> FRComparisonStudiesExtension
      FRDiagnosticReportImagingDocument -[#black,dashed,thickness=2]-> FRPatientHistoryExtension
      FRDiagnosticReportImagingDocument -[#black,dashed,thickness=2]-> FRImagingProcedureExtension
-     FRDiagnosticReportImagingDocument -[#black,dashed,thickness=2]-> FREducationPatientExtension
      FRDiagnosticReportImagingDocument -[#black,dashed,thickness=2]-> FRActorExtension
      FREncounterDocument -[#black,dashed,thickness=2]-> FRActorExtension
      FREncounterDocument -[#black,dashed,thickness=2]-> FRActorExtension
@@ -4000,12 +4010,6 @@ package IG #DDDDDD{
           Extension.value[x] => [None..None]
         } 
         class FRComparisonStudiesExtension{
-
-          Extension.extension => [None..0]
-          Extension.url => [None..None]
-          Extension.value[x] => [None..None]
-        } 
-        class FREducationPatientExtension{
 
           Extension.extension => [None..0]
           Extension.url => [None..None]
@@ -4175,7 +4179,7 @@ package "Ressources de base" #palegreen {
 
  class "Identifier" as  class29ee5d1ebcc033234938a5234f1f2075 
 
-    class29ee5d1ebcc033234938a5234f1f2075 --> FRAccessionNumberIdentifierImagingDocument
+    class29ee5d1ebcc033234938a5234f1f2075 --> FRAccessionNumberIdentifierDocument
 
  class "Consent" as  class1bbdf136f897ea2075a786bd05152095 
 
@@ -4188,6 +4192,10 @@ package "Ressources de base" #palegreen {
  class "AllergyIntolerance" as  classa809a3bb47583552029f4cbd0043d00f 
 
     classa809a3bb47583552029f4cbd0043d00f --> FRAllergyIntoleranceDocument
+
+ class "BodyStructure" as  class09bb6a98ab055feba97313b9e64d5941 
+
+    class09bb6a98ab055feba97313b9e64d5941 --> FRBodyStructureDocument
 
  class "Bundle" as  class94c51f19c37f96ed231f5a0ae512b2a8 
 

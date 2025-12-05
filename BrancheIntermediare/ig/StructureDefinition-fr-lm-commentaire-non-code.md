@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-commentaire-non-code | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRLMCommentaireNonCode |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMCommentaireNonCode |
 
  
 Section Commentaire (non-codé) 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-commentaire-no
   "name" : "FRLMCommentaireNonCode",
   "title" : "Modèle logique métier - FR LM Commentaire (non-codé)",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

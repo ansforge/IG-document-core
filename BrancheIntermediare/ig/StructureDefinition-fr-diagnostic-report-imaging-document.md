@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRDiagnosticReportImagingDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRDiagnosticReportImagingDocument |
 
  
 Le profil FRDiagnosticReportImagingDocument est dédié aux comptes rendus d’imagerie. Ce document représente le rapport d’un examen d’imagerie. Il constitue la ressource principale qui fait référence à l’ensemble des données produites lors de l’examen d’imagerie. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
   "name" : "FRDiagnosticReportImagingDocument",
   "title" : "DiagnosticReport - FR Diagnostic Report Imaging Document",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -160,23 +160,6 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
             "code" : "Extension",
             "profile" : [
               "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-procedure-extension"
-            ]
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "DiagnosticReport.extension:informationDuPatient",
-        "path" : "DiagnosticReport.extension",
-        "sliceName" : "informationDuPatient",
-        "short" : "Informations du patient",
-        "min" : 0,
-        "max" : "*",
-        "type" : [
-          {
-            "code" : "Extension",
-            "profile" : [
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-education-patient-extension"
             ]
           }
         ],
@@ -331,7 +314,18 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
       {
         "id" : "DiagnosticReport.result",
         "path" : "DiagnosticReport.result",
-        "short" : "Résultats de l'acte d'imagerie",
+        "slicing" : {
+          "discriminator" : [
+            {
+              "type" : "pattern",
+              "path" : "reference"
+            }
+          ],
+          "ordered" : false,
+          "rules" : "open"
+        },
+        "short" : "Résultats d'examen (actuels ou antérieurs)",
+        "comment" : "Les résultats sont exprimés sous forme non codée dans notre cas d’usage. Le contenu narratif du résultat est porté dans une note",
         "type" : [
           {
             "code" : "Reference",
@@ -341,6 +335,22 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
           }
         ],
         "mustSupport" : true
+      },
+      {
+        "id" : "DiagnosticReport.result:resultatActuel",
+        "path" : "DiagnosticReport.result",
+        "sliceName" : "resultatActuel",
+        "short" : "Résultats actuels de l'examen d'imagerie",
+        "min" : 0,
+        "max" : "1"
+      },
+      {
+        "id" : "DiagnosticReport.result:resultatAnterieur",
+        "path" : "DiagnosticReport.result",
+        "sliceName" : "resultatAnterieur",
+        "short" : "Résultats antérieurs",
+        "min" : 0,
+        "max" : "1"
       },
       {
         "id" : "DiagnosticReport.imagingStudy",
@@ -359,12 +369,6 @@ Other representations of profile: [CSV](StructureDefinition-fr-diagnostic-report
         "id" : "DiagnosticReport.conclusion",
         "path" : "DiagnosticReport.conclusion",
         "short" : "Conclusions cliniques et interprétations du rapport d’imagerie.",
-        "mustSupport" : true
-      },
-      {
-        "id" : "DiagnosticReport.conclusionCode",
-        "path" : "DiagnosticReport.conclusionCode",
-        "short" : "Conclusions codées du rapport d’imagerie.",
         "mustSupport" : true
       }
     ]

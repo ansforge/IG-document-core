@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-plan-soins | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRLMPlanSoins |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMPlanSoins |
 
  
 Section Plan de soins 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-plan-soins.csv
   "name" : "FRLMPlanSoins",
   "title" : "Modèle logique métier - FR LM Plan de soins",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

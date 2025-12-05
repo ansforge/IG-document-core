@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-radiation-exposure-document | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRObservationRadiationExposureDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRObservationRadiationExposureDocument |
 
  
 FRObservationRadiationExposureDocument permet d’enregistrer les informations relatives à l’exposition du patient aux rayonnements et les informations de radioprotection. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-radia
   "name" : "FRObservationRadiationExposureDocument",
   "title" : "Observation - FR Observation Radiation Exposure Document",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -287,9 +287,9 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-radia
         "mustSupport" : true
       },
       {
-        "id" : "Observation.performer:professionnelAuthorisantExposition",
+        "id" : "Observation.performer:professionnelAutorisantExposition",
         "path" : "Observation.performer",
-        "sliceName" : "professionnelAuthorisantExposition",
+        "sliceName" : "professionnelAutorisantExposition",
         "short" : "Identité du professionnel de santé ayant donné l'autorisation de l'exposition du patient aux rayonnements",
         "min" : 1,
         "max" : "1",
@@ -302,6 +302,42 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-radia
           }
         ],
         "mustSupport" : true
+      },
+      {
+        "id" : "Observation.bodySite",
+        "path" : "Observation.bodySite",
+        "short" : "Localisation anatomique en SNOMED CT",
+        "min" : 1,
+        "mustSupport" : true
+      },
+      {
+        "id" : "Observation.bodySite.extension:precisionTopographique",
+        "path" : "Observation.bodySite.extension",
+        "sliceName" : "precisionTopographique",
+        "short" : "Modificateurs topographiques",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Extension",
+            "profile" : [
+              "http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure"
+            ]
+          }
+        ],
+        "mustSupport" : true
+      },
+      {
+        "id" : "Observation.bodySite.extension:precisionTopographique.value[x]",
+        "path" : "Observation.bodySite.extension.value[x]",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-body-structure-document"
+            ]
+          }
+        ]
       },
       {
         "id" : "Observation.device",
@@ -338,11 +374,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-radia
             "code" : "Quantity"
           }
         ],
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "http://hl7.eu/fhir/imaging-r5/ValueSet/im-gray-square-units"
-        }
+        "mustSupport" : true
       }
     ]
   }

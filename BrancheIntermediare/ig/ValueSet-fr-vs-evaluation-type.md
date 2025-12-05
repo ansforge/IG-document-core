@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-evaluation-type | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRValueSetEvaluationTypeDocument |
+| Draft as of 2025-12-05 | *Computable Name*:FRValueSetEvaluationTypeDocument |
 
  
 Codes autorisés pour indiquer le type d’évaluation. Inclut LOINC, ICF, et permet d’autres systèmes si aucun code approprié n’est trouvé. 
@@ -59,7 +59,7 @@ Ce jeu de valeur (ValueSet) est composé de plus de 1000 codes. Dans le but de g
   "name" : "FRValueSetEvaluationTypeDocument",
   "title" : "ValueSet – FR ValueSet Type d'évaluation",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-role | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRCDAPatientRole |
+| Draft as of 2025-12-05 | *Computable Name*:FRCDAPatientRole |
 
  
 L’élément de l’en-tête du CDA patientRole permet de décrire le patient/usager. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-patient-role.
   "name" : "FRCDAPatientRole",
   "title" : "CDA - patientRole",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

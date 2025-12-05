@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-history-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRPatientHistoryExtension |
+| Draft as of 2025-12-05 | *Computable Name*:FRPatientHistoryExtension |
 
 Historique médical du patient pertinent pour l’examen d’imagerie
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-history-e
   "name" : "FRPatientHistoryExtension",
   "title" : "FR Patient History Extension",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -120,8 +120,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-history-e
               "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-condition-document",
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document",
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document",
-              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-document-reference-document"
+              "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document"
             ]
           }
         ]

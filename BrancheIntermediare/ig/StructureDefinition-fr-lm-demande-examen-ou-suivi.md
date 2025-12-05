@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-ou-suivi | *Version*:0.1.0 |
-| Draft as of 2025-12-04 | *Computable Name*:FRLMDemandeExamenOuSuivi |
+| Draft as of 2025-12-05 | *Computable Name*:FRLMDemandeExamenOuSuivi |
 
  
 Entrée Demande d’examen ou de suivi / Objectif à atteindre 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-demande-examen
   "name" : "FRLMDemandeExamenOuSuivi",
   "title" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
   "status" : "draft",
-  "date" : "2025-12-04T14:08:40+00:00",
+  "date" : "2025-12-05T10:50:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
