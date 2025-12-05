@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-imaging-study-doc
   "name" : "FRImagingStudyDocument",
   "title" : "ImagingStudy - FR Imaging study Document",
   "status" : "draft",
-  "date" : "2025-12-05T10:47:15+00:00",
+  "date" : "2025-12-05T14:21:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -245,13 +245,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-imaging-study-doc
       {
         "id" : "ImagingStudy.series.bodySite",
         "path" : "ImagingStudy.series.bodySite",
-        "short" : "Localisation anatomique",
-        "min" : 1,
-        "mustSupport" : true,
-        "binding" : {
-          "strength" : "required",
-          "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-localisation-anatomique-cisis"
-        }
+        "short" : "Localisation anatomique en SNOMED CT"
       },
       {
         "id" : "ImagingStudy.series.laterality",

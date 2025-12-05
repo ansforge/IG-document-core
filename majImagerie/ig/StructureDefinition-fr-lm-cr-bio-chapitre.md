@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-cr-bio-chapitr
   "name" : "FRLMCRBIOChapitre",
   "title" : "Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau",
   "status" : "draft",
-  "date" : "2025-12-05T10:47:15+00:00",
+  "date" : "2025-12-05T14:21:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

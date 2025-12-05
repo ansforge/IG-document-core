@@ -62,7 +62,7 @@ Ce jeu de valeur (ValueSet) contient 3 concepts
   "title" : "FR ValueSet Participation Type",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:47:15+00:00",
+  "date" : "2025-12-05T14:21:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

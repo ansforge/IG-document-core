@@ -20,7 +20,6 @@
   <sch:pattern>
     <sch:title>f:ImagingStudy/f:series</sch:title>
     <sch:rule context="f:ImagingStudy/f:series">
-      <sch:assert test="count(f:bodySite) &gt;= 1">bodySite: minimum cardinality of 'bodySite' is 1</sch:assert>
       <sch:assert test="count(f:laterality) &gt;= 1">laterality: minimum cardinality of 'laterality' is 1</sch:assert>
       <sch:assert test="count(f:instance) &gt;= 1">instance: minimum cardinality of 'instance' is 1</sch:assert>
     </sch:rule>
