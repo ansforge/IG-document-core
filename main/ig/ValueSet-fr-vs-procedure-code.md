@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-procedure-code | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRValueSetProcedureCodeDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRValueSetProcedureCodeDocument |
 
  
 Codes autorisés pour indiquer un acte. Inclut : 
@@ -24,12 +24,6 @@ Si aucun code approprié n’est disponible, l’acte peut être décrit en text
 * [Procedure - FR Procedure Act Document](StructureDefinition-fr-procedure-act-document.md)
 
 ### Définition logique (CLD)
-
-Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
-
-* Inclut tous les codes définis dans [`https://smt.esante.gouv.fr/terminologie-ccam`](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-ccam.html)version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-* Inclut ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl`](http://terminology.hl7.org/6.5.0/CodeSystem-v3-nciThesaurus.html)version Non précisé (utilise la dernière version provenant du serveur de terminologie) 
-* Importe tous les codes contenu dans [JDV Absent Or Unknown Procedure CISIS](https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-jdv-absent-or-unknown-procedure-cisis.html)
 
  
 
@@ -63,7 +57,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "FRValueSetProcedureCodeDocument",
   "title" : "ValueSet – FR ValueSet Codes d’actes",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

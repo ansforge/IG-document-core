@@ -9,123 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingParticipantCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Participant" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Participant" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "participant" et l’élément CDA "participant"
 * Mapping 2 : entre l’élément CDA "participant" et l’extension FHIR "ParticipantExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Participant](StructureDefinition-fr-lm-participant.md) to [CDA - participant](StructureDefinition-fr-cda-participant.md)
-
-* **Code source**: FRLMParticipant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: participant
-  * **Commentaire**: 
-* **Code source**: FRLMParticipant.typeParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: participant@typeCode
-  * **Commentaire**: 
-* **Code source**: FRLMParticipant.roleFonctionnel
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: participant.functionCode
-  * **Commentaire**: 
-* **Code source**: FRLMParticipant.dateDebutEtOuFinParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: participant.time
-  * **Commentaire**: 
-* **Code source**: FRLMParticipant.participant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: participant.associatedEntity
-  * **Commentaire**: L'élément participant est de type PersonneStructure
-
--------
-
-**Groupe 2**Mapping de [CDA - participant](StructureDefinition-fr-cda-participant.md) to [Participant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-ParticipantExtension.html)
-
-* **Code source**: participant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension
-  * **Commentaire**: 
-* **Code source**: participant@typeCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.extention:type
-  * **Commentaire**: 
-* **Code source**: participant.functionCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.extention:function.coding
-  * **Commentaire**: 
-* **Code source**: participant.time
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.extention:time
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(PractitionerRole)
-* **Code source**: participant.associatedEntity@classCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.qualification.code
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()
-* **Code source**: participant.associatedEntity.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.address
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.name
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.scopingOrganization
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Organization
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()
-* **Code source**: participant.associatedEntity.scopingOrganization.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Organization.identifier
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.scopingOrganization.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Organization.name
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.scopingOrganization.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Organization.telecom
-  * **Commentaire**: 
-* **Code source**: participant.associatedEntity.scopingOrganization.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ParticipantExtension.party.PractitionerRole.Organization.address
-  * **Commentaire**: 
 
 
 
@@ -141,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

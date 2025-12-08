@@ -9,47 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingOperateurSaisieCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Opérateur de saisie" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Opérateur de saisie" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "operateurSaisie" et l’élément CDA "dataEnterer"
 * Mapping 2 : entre l’élément CDA "dataEnterer" et l’extension FHIR "DataEntererExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Opérateur de saisie](StructureDefinition-fr-lm-operateur-saisie.md) to [CDA - dataEnterer](StructureDefinition-fr-cda-data-enterer.md)
-
-* **Code source**: FRLMOperateurSaisie
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: dataEnterer
-  * **Commentaire**: 
-* **Code source**: FRLMOperateurSaisie.dateSaisie
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: dataEnterer.time
-  * **Commentaire**: 
-* **Code source**: FRLMOperateurSaisie.operateurSaisie
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: dataEnterer.assignedEntity
-  * **Commentaire**: L'élément operateurSaisie est de type PersonneStructure.
-
--------
-
-**Groupe 2**Mapping de [CDA - dataEnterer](StructureDefinition-fr-cda-data-enterer.md) to [Data Enterer Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-data-enterer-extension.html)
-
-* **Code source**: dataEnterer
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: DataEntererExtension
-  * **Commentaire**: 
-* **Code source**: dataEnterer.time
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: DataEntererExtension.extension:time
-  * **Commentaire**: 
-* **Code source**: dataEnterer.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: DataEntererExtension.extension:party.ValueReference
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(PractitionerRole)
 
 
 
@@ -65,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

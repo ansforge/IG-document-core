@@ -9,76 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDestinatairePrevuCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Destinataire prévu" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Destinataire prévu" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "destinataire" et l’élément CDA "informationRecipient"
 * Mapping 2 : entre l’élément CDA "informationRecipient" et l’extension FHIR "InformationRecipientExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Destinataire prévu](StructureDefinition-fr-lm-destinataire-prevu.md) to [CDA - informationRecipient](StructureDefinition-fr-cda-information-recipient.md)
-
-* **Code source**: FRLMDestinatairePrevu
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: informationRecipient
-  * **Commentaire**: 
-* **Code source**: FRLMDestinatairePrevu.destinataire
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: informationRecipient.intendedRecipient
-  * **Commentaire**: L'élément destinataire est de type PersonneStructure.
-
--------
-
-**Groupe 2**Mapping de [CDA - informationRecipient](StructureDefinition-fr-cda-information-recipient.md) to [Information Recipient Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-information-recipient-extension.html)
-
-* **Code source**: informationRecipient
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:InformationRecipientExtension
-* **Code source**: informationRecipient.intendedRecipient
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:InformationRecipientExtension.extension:party.PractitionerRole
-* **Code source**: informationRecipient.intendedRecipient.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.identifier
-* **Code source**: informationRecipient.intendedRecipient.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.address
-* **Code source**: informationRecipient.intendedRecipient.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.telecom
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.name
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.name.family
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.name.given
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.name.prefix
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Practitioner.name.suffix
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.receivedOrganization
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Organization
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.receivedOrganization.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Organization.identifier
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.receivedOrganization.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Organization.name
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.receivedOrganization.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Organization.telecom
-* **Code source**: informationRecipient.intendedRecipient.informationRecipient.receivedOrganization.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:party.PractitionerRole.Organization.address
 
 
 
@@ -94,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

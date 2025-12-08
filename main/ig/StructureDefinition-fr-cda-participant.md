@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRCDAParticipant |
+| Draft as of 2025-12-08 | *Computable Name*:FRCDAParticipant |
 
  
 L’élément de l’en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-participant.c
   "name" : "FRCDAParticipant",
   "title" : "CDA - participant",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

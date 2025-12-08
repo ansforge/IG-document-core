@@ -9,41 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPrescriptionCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "prescription" et l’élément CDA "inFulfillmentOf"
 * Mapping 2 : entre l’élément CDA "inFulfillmentOf" et l’extension FHIR "OrderExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Prescription](StructureDefinition-fr-lm-prescription.md) to [CDA - inFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md)
-
-* **Code source**: FRLMPrescription
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: inFulfillmentOf
-* **Code source**: FRLMPrescription.identifiantPrescription
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: inFulfillmentOf.order.id
-* **Code source**: FRLMPrescription.accessionNumber
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: inFulfillmentOf.order.ps3-20:accessionNumber
-
--------
-
-**Groupe 2**Mapping de [CDA - inFulfillmentOf](StructureDefinition-fr-cda-inFulfillment-of.md) to [Based on](http://hl7.org/fhir/extensions/5.2.0/StructureDefinition-event-basedOn.html)
-
-* **Code source**: inFulfillmentOf
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:basedOn
-* **Code source**: inFulfillmentOf.order.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:basedOnExtension.ValueReference.ServiceRequest.identifier
-* **Code source**: inFulfillmentOf.order.ps3-20:accessionNumber
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:basedOn.ValueReference.ServiceRequest.identifier
 
 
 
@@ -59,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

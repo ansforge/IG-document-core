@@ -9,24 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAdministrativeGender | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping ValueSet AdministrativeGender |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping ValueSet AdministrativeGender |
 
  
 Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap. 
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [AdministrativeGender](http://hl7.org/fhir/R4/codesystem-administrative-gender.html) to [JDV_J143_AdministrativeGender_CISIS](https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-JDV-J143-AdministrativeGender-CISIS.html)
-
-* **Code source**: male
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: M
-* **Code source**: female
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: F
-* **Code source**: unknown
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: UN
 
 
 
@@ -42,7 +28,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping ValueSet AdministrativeGender",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,77 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingEvenementCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Evènement documenté" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Evènement documenté" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 :entre le modèle métier "evenement" et l’élément CDA "documentationOf"
 * Mapping 2 : entre l’élément CDA "documentationOf" et l’élément FHIR "Composition.event"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Évènement](StructureDefinition-fr-lm-evenement.md) to [CDA - documentationOf](StructureDefinition-fr-cda-documentation-of.md)
-
-* **Code source**: FRLMEvenement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf
-* **Code source**: FRLMEvenement.identifiantEvenement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.id
-* **Code source**: FRLMEvenement.codeEvenement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.code
-* **Code source**: FRLMEvenement.dateHeureEvenement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.effectiveTime
-* **Code source**: FRLMEvenement.executantEvenement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.performer@typeCode="PRF"
-* **Code source**: FRLMEvenement.executantEvenement.roleFonctionnel
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.performer.functionCode
-* **Code source**: FRLMEvenement.executantEvenement.dateHeureParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.performer.time
-* **Code source**: FRLMEvenement.executantEvenement.executant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: documentationOf.serviceEvent.performer.assignedEntity
-
--------
-
-**Groupe 2**Mapping de [CDA - documentationOf](StructureDefinition-fr-cda-documentation-of.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
-
-* **Code source**: documentationOf
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event
-  * **Commentaire**: 
-* **Code source**: documentationOf.serviceEvent.id
-  * **relation**: (not mapped)
-  * **Code cible**: Cette donnée est fournie dans un autre élément : Composition.relatesTo
-* **Code source**: documentationOf.serviceEvent.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event.code
-  * **Commentaire**: 
-* **Code source**: documentationOf.serviceEvent.effectiveTime
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event.period
-  * **Commentaire**: 
-* **Code source**: documentationOf.serviceEvent.performer@typeCode="PRF"
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event.extension:perfomer.PractitionerRole
-  * **Commentaire**: Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument)
-* **Code source**: documentationOf.serviceEvent.performer.functionCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event.extension:perfomer.PractitionerRole.code
-  * **Commentaire**: 
-* **Code source**: documentationOf.serviceEvent.performer.time
-  * **relation**: (not mapped)
-  * **Code cible**: Mapped in Composition.event.period
-* **Code source**: documentationOf.serviceEvent.performer.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.event.extension:perfomer.PractitionerRole.Practitioner
-  * **Commentaire**: Composition.event.extension:perfomer.ValueReference.resolve().ofType(FrPractitionerRoleDocument).Practitioner.resolve()
 
 
 
@@ -95,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

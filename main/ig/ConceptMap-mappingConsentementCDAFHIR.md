@@ -9,51 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingConsentementCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Consentement" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Consentement" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "ConsentementAssocie" et l’élément CDA "authorization"
 * Mapping 2 : entre l’élément CDA "authorization" et l’extension FHIR "ConsentExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Consentement](StructureDefinition-fr-lm-consentement.md) to [CDA - authorization](StructureDefinition-fr-cda-authorization.md)
-
-* **Code source**: FRLMConsentement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authorization
-* **Code source**: FRLMConsentement.identifiantConsentement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authorization.consent.id
-* **Code source**: FRLMConsentement.typeConsentement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authorization.consent.code
-* **Code source**: FRLMConsentement.statutConsentement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authorization.consent.statusCode="completed"
-
--------
-
-**Groupe 2**Mapping de [CDA - authorization](StructureDefinition-fr-cda-authorization.md) to [Consent Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-consent-extension.html)
-
-* **Code source**: authorization
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ConsentExtension.ValueReference.Consent
-  * **Commentaire**: ValueReference.resolve().ofType(Consent)
-* **Code source**: authorization.consent.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ConsentExtension.ValueReference.Consent.identifier
-  * **Commentaire**: 
-* **Code source**: authorization.consent.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ConsentExtension.ValueReference.Consent.category
-  * **Commentaire**: 
-* **Code source**: authorization.consent.statusCode="completed"
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:ConsentExtension.ValueReference.Consent.status:active
-  * **Commentaire**: 
 
 
 
@@ -69,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

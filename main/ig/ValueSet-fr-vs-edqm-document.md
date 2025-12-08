@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-edqm-document | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRValueSetEDQMDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRValueSetEDQMDocument |
 
  
 ValueSet basé sur le CodeSystem EDQM fourni par SMT 
@@ -24,15 +24,9 @@ ValueSet basé sur le CodeSystem EDQM fourni par SMT
 
 ### Définition logique (CLD)
 
-* Include tous les codes définis dans [`https://smt.esante.gouv.fr/terminologie-standardterms`](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-standardterms.html)version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-
  
 
 ### Expansion
-
-Expansion de smt.esante.gouv.fr basée sur [codesystem Standard Terms Data Base Dictionnaire européen multilingue de termes normalisés descripteurs de médicaments v2025-03-19 (CodeSystem)](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-standardterms.html)
-
-Ce jeu de valeurs (ValueSet) a 1,297 codes. Pour garder la publication gérable, seulement une selection (1,000 codes) de lensemble des codes est affiché.
 
 -------
 
@@ -61,7 +55,7 @@ Ce jeu de valeurs (ValueSet) a 1,297 codes. Pour garder la publication gérable,
   "title" : "ValueSet - FR ValueSet EDQM Document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

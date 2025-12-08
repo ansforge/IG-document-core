@@ -9,107 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingValidateurCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Validateur" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Validateur" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "validateur" et l’élément CDA "authenticator"
 * Mapping 2 : entre l’élément CDA "authenticator" et l’élément FHIR "Composition.attester"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Validateur](StructureDefinition-fr-lm-validateur.md) to [CDA - authenticator](StructureDefinition-fr-cda-authenticator.md)
-
-* **Code source**: FRLMValidateur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authenticator
-  * **Commentaire**: 
-* **Code source**: FRLMValidateur.dateHeureAttestationValidite
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authenticator.time
-  * **Commentaire**: 
-* **Code source**: FRLMValidateur.validateur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: authenticator.assignedEntity
-  * **Commentaire**: L'élément validateur est de type : PersonneStructure
-
--------
-
-**Groupe 2**Mapping de [CDA - authenticator](StructureDefinition-fr-cda-authenticator.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
-
-* **Code source**: authenticator
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester
-  * **Commentaire**: attester.where(mode='professional')
-* **Code source**: authenticator.time
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.time
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole
-  * **Commentaire**: attester.party.resolve().ofType(PractitionerRole)
-* **Code source**: authenticator.assignedEntity.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.identifier
-  * **Commentaire**: attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()
-* **Code source**: authenticator.assignedEntity.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.qualification.code
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.address
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.telecom
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.name
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.name.family
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.name.given
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.name.prefix
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Practitioner.name.suffix
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.representedOrganization
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization
-  * **Commentaire**: attester.party.resolve().ofType(PractitionerRole).organization.resolve()
-* **Code source**: authenticator.assignedEntity.representedOrganization.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization.identifier
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.representedOrganization.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization.name
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.representedOrganization.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization.telecom
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.representedOrganization.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization.address
-  * **Commentaire**: 
-* **Code source**: authenticator.assignedEntity.representedOrganization.standardIndustryClassCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.attester.party.PractitionerRole.Organization.type
-  * **Commentaire**: 
 
 
 
@@ -125,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

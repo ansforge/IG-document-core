@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-actor-type-document | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRValueSetActorTypeDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRValueSetActorTypeDocument |
 
  
 Jeu de valeurs pour les types d’acteurs. 
@@ -20,15 +20,9 @@ Jeu de valeurs pour les types d’acteurs.
 
 ### Définition logique (CLD)
 
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://terminology.hl7.org/CodeSystem/v3-ParticipationType`](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html)version 📦5.0.0
-
  
 
 ### Expansion
-
-Expansion effectuée en interne basée sur [codesystem ParticipationType v5.0.0 (CodeSystem)](http://terminology.hl7.org/7.0.0/CodeSystem-v3-ParticipationType.html)
-
-Ce jeu de valeur (ValueSet) contient 4 concepts
 
 -------
 
@@ -56,7 +50,7 @@ Ce jeu de valeur (ValueSet) contient 4 concepts
   "name" : "FRValueSetActorTypeDocument",
   "title" : "ValueSet - FR ValueSet Actor Type Document",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

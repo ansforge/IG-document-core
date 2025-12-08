@@ -9,41 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingDocumentDeReferenceCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "DocumentDeReference" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "DocumentDeReference" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "documentDeReference" et l’élément CDA "relatedDocument"
 * Mapping 2 : entre l’élément CDA "relatedDocument" et l’élément FHIR "Composition.relatesTo"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Document de référence](StructureDefinition-fr-lm-document-reference.md) to [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md)
-
-* **Code source**: FRLMDocumentDeReference
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedDocument
-* **Code source**: FRLMDocumentDeReference.typeReference
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedDocument@typeCode
-* **Code source**: FRLMDocumentDeReference.identifiantUniqueDocument
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedDocument.parentDocument.id
-
--------
-
-**Groupe 2**Mapping de [CDA - relatedDocument](StructureDefinition-fr-cda-related-document.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
-
-* **Code source**: relatedDocument
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.relatesTo
-* **Code source**: relatedDocument@typeCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.relatesTo.code
-* **Code source**: relatedDocument.parentDocument.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.relatesTo.targetIdentifier
 
 
 
@@ -59,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

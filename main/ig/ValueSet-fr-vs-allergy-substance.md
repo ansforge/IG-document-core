@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-allergy-substance | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRValueSetAllergySubstanceDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRValueSetAllergySubstanceDocument |
 
  
 Jeu de valeurs permettant de coder l’agent responsable d’une allergie : 
@@ -25,13 +25,6 @@ Jeu de valeurs permettant de coder l’agent responsable d’une allergie :
 * [AllergyIntolerance - FR Allergy and intolerance Document](StructureDefinition-fr-allergie-intolerance-document.md)
 
 ### Définition logique (CLD)
-
-Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
-
-* Inclut tous les codes définis dans [`https://smt.esante.gouv.fr/terminologie-bdpm`](https://interop.esante.gouv.fr/terminologies/1.4.0/CodeSystem-terminologie-bdpm.html)version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-* Inclut tous les codes définis dans `https://smt.esante.gouv.fr/terminologie-cip_ucd`version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-* Inclut tous les codes définis dans [`http://id.who.int/icd/release/11/mms`](http://terminology.hl7.org/6.5.0/CodeSystem-ICD11MMS.html)version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-* Importe tous les codes contenu dans [JDV Allergie Vaccin CISIS](https://interop.esante.gouv.fr/terminologies/1.4.0/ValueSet-jdv-allergie-vaccin-cisis.html)
 
  
 
@@ -65,7 +58,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "FRValueSetAllergySubstanceDocument",
   "title" : "ValueSet – FR ValueSet Allergy Substance Document",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

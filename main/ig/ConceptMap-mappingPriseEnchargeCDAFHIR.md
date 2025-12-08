@@ -9,147 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPriseEnchargeCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prise en charge" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prise en charge" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "prise en charge" et l’élément CDA "componentOf"
 * Mapping 2 : entre l’élément CDA "componentOf" et l’élément FHIR "Composition.encounter(Encounter)"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Prise en charge](StructureDefinition-fr-lm-prise-en-charge.md) to [CDA - componentOf](StructureDefinition-fr-cda-component-of.md)
-
-* **Code source**: FRLMPriseEncharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.identifiantPriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.id
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.typePriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.code
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.dateDebutFinPriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.effectiveTime
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.typeSortie
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.dischargeDispositionCode
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.responsablePriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.responsibleParty.assignedEntity
-  * **Commentaire**: L'élément responsablePriseEnCharge est de type PersonneStructure.
-* **Code source**: FRLMPriseEncharge.personneImpliqueePriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.encounterParticipant
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.encounterParticipant@typeCode
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.encounterParticipant.time
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.encounterParticipant.assignedEntity
-  * **Commentaire**: L'élément personneImpliqueePriseEnCharge est de type PersonneStructure.
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge.structure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location.healthcareFacility
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location.healthcareFacility.code
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge.structure.secteurActivite.categorieEtablissement
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location.healthcareFacility.code.translation
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge.structure.nomStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location.healthcareFacility.location.name
-  * **Commentaire**: 
-* **Code source**: FRLMPriseEncharge.lieuPriseEnCharge.structure.adresse
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: componentOf.encompassingEncounter.location.healthcareFacility.location.addr
-  * **Commentaire**: 
-
--------
-
-**Groupe 2**Mapping de [CDA - componentOf](StructureDefinition-fr-cda-component-of.md) to [Encounter - FR Encounter Document](StructureDefinition-fr-encounter-document.md)
-
-* **Code source**: componentOf
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.encounter.Encounter
-  * **Commentaire**: Composition.encounter.resolve().ofType(Encounter)
-* **Code source**: componentOf.encompassingEncounter.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.identifier
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.type
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.effectiveTime
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.period
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.dischargeDispositionCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.hospitalization.dischargeDisposition
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.responsibleParty.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.participant.type="DIS".individual
-  * **Commentaire**: Encounter.participant.individual.resolve().ofType(PractitionerRole)
-* **Code source**: componentOf.encompassingEncounter.encounterParticipant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.participant
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.encounterParticipant@typeCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.participant.type
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.encounterParticipant.time
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.participant.period
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.encounterParticipant.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.participant.individual
-  * **Commentaire**: Encounter.participant.individual.resolve().ofType(PractitionerRole)
-* **Code source**: componentOf.encompassingEncounter.location
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.location
-  * **Commentaire**: Encounter.location.resolve().ofType(Location)
-* **Code source**: componentOf.encompassingEncounter.location.healthcareFacility
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.location.Location
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.location.healthcareFacility.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.location.Location.type
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.location.healthcareFacility.location.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.location.Location.name
-  * **Commentaire**: 
-* **Code source**: componentOf.encompassingEncounter.location.healthcareFacility.location.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Encounter.location.Location.address
-  * **Commentaire**: 
 
 
 
@@ -165,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

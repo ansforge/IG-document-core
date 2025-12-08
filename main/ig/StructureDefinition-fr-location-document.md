@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-location-document | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRLocationDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRLocationDocument |
 
  
 Ce profil représente le lieu de la prise en charge. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-location-document
   "name" : "FRLocationDocument",
   "title" : "FR Location Document",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,65 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingStructureConservationCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "structureConservation" et l’élément CDA "custodian"
 * Mapping 2 : entre l’élément CDA "custodian" et l’élément FHIR "Composition.custodian"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Structure conservation](StructureDefinition-fr-lm-structure-conservation.md) to [CDA - custodian](StructureDefinition-fr-cda-custodian.md)
-
-* **Code source**: FRLMStructureConservation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian
-* **Code source**: FRLMStructureConservation.structure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian.assignedCustodian
-* **Code source**: FRLMStructureConservation.structure.identifiantStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian.assignedCustodian.representedCustodianOrganization.id
-* **Code source**: FRLMStructureConservation.structure.nomStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian.assignedCustodian.representedCustodianOrganization.name
-* **Code source**: FRLMStructureConservation.structure.adresse
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian.assignedCustodian.representedCustodianOrganization.addr
-* **Code source**: FRLMStructureConservation.structure.coordonneesTelecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: custodian.assignedCustodian.representedCustodianOrganization.telecom
-
--------
-
-**Groupe 2**Mapping de [CDA - custodian](StructureDefinition-fr-cda-custodian.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
-
-* **Code source**: custodian
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian
-  * **Commentaire**: Composition.custodian.resolve().ofType(Organization)
-* **Code source**: custodian.assignedCustodian
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian.organization
-  * **Commentaire**: 
-* **Code source**: custodian.assignedCustodian.representedCustodianOrganization.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian.organization.identifier
-  * **Commentaire**: 
-* **Code source**: custodian.assignedCustodian.representedCustodianOrganization.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian.organization.name
-  * **Commentaire**: 
-* **Code source**: custodian.assignedCustodian.representedCustodianOrganization.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian.organization.address
-  * **Commentaire**: 
-* **Code source**: custodian.assignedCustodian.representedCustodianOrganization.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.custodian.organization.telecom
-  * **Commentaire**: 
 
 
 
@@ -83,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

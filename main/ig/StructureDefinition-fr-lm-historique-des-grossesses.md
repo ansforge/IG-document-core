@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-grossesses | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRLMHistoriqueDesGrossesses |
+| Draft as of 2025-12-08 | *Computable Name*:FRLMHistoriqueDesGrossesses |
 
  
 Section Historique des grossesses 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-historique-des
   "name" : "FRLMHistoriqueDesGrossesses",
   "title" : "Modèle logique métier - FR LM Antécédents obstétricaux",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

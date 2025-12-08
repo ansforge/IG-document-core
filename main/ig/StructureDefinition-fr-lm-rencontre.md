@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-rencontre | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRLMRencontre |
+| Draft as of 2025-12-08 | *Computable Name*:FRLMRencontre |
 
  
 Entrée Rencontre 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-rencontre.csv)
   "name" : "FRLMRencontre",
   "title" : "Modèle logique métier - FR LM Rencontre",
   "status" : "draft",
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

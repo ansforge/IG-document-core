@@ -9,47 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingInformateurCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Informateur" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Informateur" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "informateur" et l’élément CDA "informant"
 * Mapping 2 : entre l’élément CDA "informant" et l’extension FHIR "InformantExtension"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Informateur](StructureDefinition-fr-lm-informateur.md) to [CDA - informant](StructureDefinition-fr-cda-informant.md)
-
-* **Code source**: FRLMInformateur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: informant
-  * **Commentaire**: 
-* **Code source**: FRLMInformateur.informateur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: informant.assignedEntity
-  * **Commentaire**: L'élément informateur est de type PersonneStructure.
-* **Code source**: FRLMInformateur.informateur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: informant.relatedEntity
-  * **Commentaire**: L'élément informateur est de type PersonneStructure.
-
--------
-
-**Groupe 2**Mapping de [CDA - informant](StructureDefinition-fr-cda-informant.md) to [Informant Extension](http://hl7.org/fhir/uv/fhir-clinical-document/STU1/StructureDefinition-informant-extension.html)
-
-* **Code source**: informant
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:InformantExtension
-  * **Commentaire**: 
-* **Code source**: informant.assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:InformantExtension.extension:party.ValueReference
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(PractitionerRole or Patient)
-* **Code source**: informant.relatedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: extension:InformantExtension.extension:party.ValueReference
-  * **Commentaire**: extension:party.ValueReference.resolve().ofType(RelatedPerson)
 
 
 
@@ -65,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,135 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureAssignedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "PersonneStructure" et l’élément CDA "assignedEntity"
 * Mapping 2 : entre l’élément CDA "assignedEntity" et le profil FHIR "FrPractitionerRoleDocument"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Personne et/ou Structure](StructureDefinition-fr-lm-personne-structure.md) to [CDA - assignedEntity](StructureDefinition-fr-cda-assigned-entity.md)
-
-* **Code source**: FRLMPersonneStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity
-* **Code source**: FRLMPersonneStructure.personne.identifiantPersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.id
-* **Code source**: FRLMPersonneStructure.personne.professionRole
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.code
-* **Code source**: FRLMPersonneStructure.personne.adresse
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.addr
-* **Code source**: FRLMPersonneStructure.personne.coordonneesTelecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.telecom
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.assignedPerson
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.nomPersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.assignedPerson.name.family
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.prenomPersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.assignedPerson.name.given
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.civilite
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.assignedPerson.name.prefix
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.titre
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.assignedPerson.name.suffix
-* **Code source**: FRLMPersonneStructure.structure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization
-* **Code source**: FRLMPersonneStructure.structure.identifiantStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization.id
-* **Code source**: FRLMPersonneStructure.structure.nomStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization.name
-* **Code source**: FRLMPersonneStructure.structure.adresse
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization.addr
-* **Code source**: FRLMPersonneStructure.structure.coordonneesTelecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization.telecom
-* **Code source**: FRLMPersonneStructure.structure.secteurActivite
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: assignedEntity.representedOrganization.standardIndustryClassCode
-
--------
-
-**Groupe 2**Mapping de [CDA - assignedEntity](StructureDefinition-fr-cda-assigned-entity.md) to [FR PractitionerRole Document](StructureDefinition-fr-practitionerRole-document.md)
-
-* **Code source**: assignedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole
-  * **Commentaire**: 
-* **Code source**: assignedEntity.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.practitioner.identifier
-  * **Commentaire**: PractitionerRole.practitioner.resolve().ofType(Practitioner)
-* **Code source**: assignedEntity.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.qualification.code
-  * **Commentaire**: 
-* **Code source**: assignedEntity.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.address
-  * **Commentaire**: 
-* **Code source**: assignedEntity.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.telecom
-  * **Commentaire**: 
-* **Code source**: assignedEntity.assignedPerson.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.name
-  * **Commentaire**: 
-* **Code source**: assignedEntity.assignedPerson.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.name.family
-  * **Commentaire**: 
-* **Code source**: assignedEntity.assignedPerson.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.name.given
-  * **Commentaire**: 
-* **Code source**: assignedEntity.assignedPerson.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.name.prefix
-  * **Commentaire**: 
-* **Code source**: assignedEntity.assignedPerson.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Practitioner.name.suffix
-  * **Commentaire**: 
-* **Code source**: assignedEntity.representedOrganization
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization
-  * **Commentaire**: PractitionerRole.organization.resolve().ofType(Organization)
-* **Code source**: assignedEntity.representedOrganization.id
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization.identifier
-  * **Commentaire**: 
-* **Code source**: assignedEntity.representedOrganization.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization.name
-  * **Commentaire**: 
-* **Code source**: assignedEntity.representedOrganization.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization.address
-  * **Commentaire**: 
-* **Code source**: assignedEntity.representedOrganization.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization.telecom
-  * **Commentaire**: 
-* **Code source**: assignedEntity.representedOrganization.standardIndustryClassCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: PractitionerRole.Organization.type
-  * **Commentaire**: 
 
 
 
@@ -153,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

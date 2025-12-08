@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-result-type-document | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:FRValueSetResultTypeDocument |
+| Draft as of 2025-12-08 | *Computable Name*:FRValueSetResultTypeDocument |
 
  
 ValueSet contenant les codes LOINC autorisés pour les types de résultats 
@@ -20,15 +20,9 @@ ValueSet contenant les codes LOINC autorisés pour les types de résultats
 
 ### Définition logique (CLD)
 
-* Include ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://loinc.org`](http://loinc.org)version Non précisé (utilise la dernière version provenant du serveur de terminologie)
-
  
 
 ### Expansion
-
-Expansion de tx.fhir.org basée sur Loinc v2.81
-
-Ce jeu de valeur (ValueSet) contient 5 concepts
 
 -------
 
@@ -57,7 +51,7 @@ Ce jeu de valeur (ValueSet) contient 5 concepts
   "title" : "ValueSet - FR ValueSet Result Type Document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

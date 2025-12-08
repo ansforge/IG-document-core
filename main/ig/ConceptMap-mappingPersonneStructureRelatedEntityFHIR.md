@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapping: 
@@ -17,110 +17,6 @@ Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapp
 * Mapping 2 : entre l’élément CDA "relatedEntity" et le profil FHIR "FrRelatedPersonDocument"
 * Mapping 3 : entre l’élément CDA "relatedEntity" et l’élément FHIR "Patient.contact"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Personne et/ou Structure](StructureDefinition-fr-lm-personne-structure.md) to [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md)
-
-* **Code source**: FRLMPersonneStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity
-* **Code source**: FRLMPersonneStructure.personne.professionRole
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity@classCode
-* **Code source**: FRLMPersonneStructure.personne.lien
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.code
-* **Code source**: FRLMPersonneStructure.personne.adresse
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.addr
-* **Code source**: FRLMPersonneStructure.personne.coordonneesTelecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.telecom
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.relatedPerson
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.nomPersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.relatedPerson.name.family
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.prenomPersonne
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.relatedPerson.name.given
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.civilite
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.relatedPerson.name.prefix
-* **Code source**: FRLMPersonneStructure.personne.IdentitePersonne.titre
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: relatedEntity.relatedPerson.name.suffix
-
--------
-
-**Groupe 2**Mapping de [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to [FR RelatedPerson Document](StructureDefinition-fr-related-person-document.md)
-
-* **Code source**: relatedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson
-* **Code source**: relatedEntity@classCode
-  * **relation**: (not mapped)
-* **Code source**: relatedEntity.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.relationship.coding
-* **Code source**: relatedEntity.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.address
-* **Code source**: relatedEntity.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.telecom
-* **Code source**: relatedEntity.relatedPerson
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.name
-* **Code source**: relatedEntity.relatedPerson.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.name.family
-* **Code source**: relatedEntity.relatedPerson.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.name.given
-* **Code source**: relatedEntity.relatedPerson.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.name.prefix
-* **Code source**: relatedEntity.relatedPerson.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: RelatedPerson.name.suffix
-
--------
-
-**Groupe 3**Mapping de [CDA - relatedEntity](StructureDefinition-fr-cda-related-entity.md) to `https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-fhir-document`
-
-* **Code source**: relatedEntity
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact
-* **Code source**: relatedEntity@classCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.relationship:Role
-* **Code source**: relatedEntity.code
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.relationship:RelationType.coding
-* **Code source**: relatedEntity.addr
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.address
-* **Code source**: relatedEntity.telecom
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.telecom
-* **Code source**: relatedEntity.relatedPerson.name
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.name
-* **Code source**: relatedEntity.relatedPerson.name.family
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.name.family
-* **Code source**: relatedEntity.relatedPerson.name.given
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.name.given
-* **Code source**: relatedEntity.relatedPerson.name.prefix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.name.prefix
-* **Code source**: relatedEntity.relatedPerson.name.suffix
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Patient.contact.name.suffix
 
 
 
@@ -136,7 +32,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

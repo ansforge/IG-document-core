@@ -9,67 +9,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingAuteurCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Auteur" |
+| Draft as of 2025-12-08 | *Computable Name*:Mapping Métier/CDA/FHIR : "Auteur" |
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "Auteur" et l’élément CDA "author"
 * Mapping 2 : entre l’élément CDA "author" et l’élément FHIR "Composition.author"
  
-
-Mapping de (non spécifié) vers (non spécifié)
-
-**Groupe 1**Mapping de [Modèle logique métier - FR LM Auteur](StructureDefinition-fr-lm-auteur.md) to [CDA - author](StructureDefinition-fr-cda-author.md)
-
-* **Code source**: FRLMAuteur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: author
-  * **Commentaire**: 
-* **Code source**: FRLMAuteur.roleFonctionnel
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: author.functionCode
-  * **Commentaire**: 
-* **Code source**: FRLMAuteur.horodatageParticipation
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: author.time
-  * **Commentaire**: 
-* **Code source**: FRLMAuteur.FRLMPersonneStructure
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: author.assignedAuthor
-  * **Commentaire**: L'élément PersonneStructure est de type PersonneStructure.
-* **Code source**: FRLMAuteur.FRLMSystemeStructureAuteur
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: author.assignedAuthor
-  * **Commentaire**: L'élément SystemeStructureAuteur est de type Systeme
-
--------
-
-**Groupe 2**Mapping de [CDA - author](StructureDefinition-fr-cda-author.md) to [FR Composition Document](StructureDefinition-fr-composition-document.md)
-
-* **Code source**: author
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author
-  * **Commentaire**: 
-* **Code source**: author.time
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author.extension:time
-  * **Commentaire**: 
-* **Code source**: author.functionCode
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author.PractitionerRole.code
-  * **Commentaire**: Auteur du document est un professionnel et author.ofType(PractitionerRole)
-* **Code source**: author.assignedAuthor
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author.Practitioner
-  * **Commentaire**: Composition.author.resolve().ofType(Practitioner)
-* **Code source**: author.assignedAuthor
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author.Patient
-  * **Commentaire**: Composition.author.resolve().ofType(Patient)
-* **Code source**: author.assignedAuthor
-  * **relation**: [is equivalent to](http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent)
-  * **Code cible**: Composition.author.Device
-  * **Commentaire**: Composition.author.resolve().ofType(Device)
 
 
 
@@ -85,7 +31,7 @@ Mapping de (non spécifié) vers (non spécifié)
   "title" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-05T10:54:45+00:00",
+  "date" : "2025-12-08T08:28:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
