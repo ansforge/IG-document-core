@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRLMTechniqueImagerie |
+| Draft as of 2025-12-10 | *Computable Name*:FRLMTechniqueImagerie |
 
  
 Entrée Technique imagerie 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-technique-imag
   "name" : "FRLMTechniqueImagerie",
   "title" : "Modèle logique métier - FR LM Technique imagerie",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -170,7 +170,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-technique-imag
           }
         ],
         "binding" : {
-          "description" : "jdv-localisation-anatomique-cisis (1.2.250.1.213.1.1.5.694)"
+          "description" : "SNOMED CT (2.16.840.1.113883.6.96)"
         }
       },
       {

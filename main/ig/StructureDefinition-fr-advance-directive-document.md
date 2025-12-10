@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-advance-directive-document | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRAdvanceDirectiveDocument |
+| Draft as of 2025-12-10 | *Computable Name*:FRAdvanceDirectiveDocument |
 
  
 FRAdvanceDirectiveDocument permet d’indiquer si les directives anticipées du patient. Article L1111-11 du Code de la Santé Publique : « Toute personne majeure peut rédiger des directives anticipées pour le cas où elle serait un jour hors d’état d’exprimer sa volonté. Ces directives anticipées expriment la volonté de la personne relative à sa fin de vie en ce qui concerne les conditions de la poursuite, de la limitation, de l’arrêt ou du refus de traitement ou d’acte médicaux.» 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-advance-directive
   "name" : "FRAdvanceDirectiveDocument",
   "title" : "Consent - FR Advance directive Document",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

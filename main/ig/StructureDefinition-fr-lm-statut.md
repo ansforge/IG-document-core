@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRLMStatut |
+| Draft as of 2025-12-10 | *Computable Name*:FRLMStatut |
 
  
 Entrée Statut 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut.csv), [
   "name" : "FRLMStatut",
   "title" : "Modèle logique métier - FR LM Statut",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

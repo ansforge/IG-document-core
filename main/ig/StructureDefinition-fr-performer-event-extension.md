@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-performer-event-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRPerformerEventExtension |
+| Draft as of 2025-12-10 | *Computable Name*:FRPerformerEventExtension |
 
 Extension permettant d’ajouter un performer à l’élément event d’une Composition.
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-performer-event-e
   "name" : "FRPerformerEventExtension",
   "title" : "FR Performer Event Extension",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

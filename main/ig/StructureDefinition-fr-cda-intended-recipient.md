@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-intended-recipient | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRCDAIntendedRecipient |
+| Draft as of 2025-12-10 | *Computable Name*:FRCDAIntendedRecipient |
 
  
 L’élément de l’en-tête du CDA intendedRecipient permet d’enregistrer le destinataire prévu du document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-intended-reci
   "name" : "FRCDAIntendedRecipient",
   "title" : "CDA - intendedRecipient",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

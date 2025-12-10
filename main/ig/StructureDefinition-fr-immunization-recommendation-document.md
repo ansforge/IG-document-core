@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-immunization-recommendation-document | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:FRImmunizationRecommendationDocument |
+| Draft as of 2025-12-10 | *Computable Name*:FRImmunizationRecommendationDocument |
 
  
 FRImmunizationRecommendationDocument permet de décrire une vaccination prévue ou proposée. 
@@ -45,7 +45,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-immunization-reco
   "name" : "FRImmunizationRecommendationDocument",
   "title" : "ImmunizationRecommendation - FR Immunization Recommendation Document",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:39+00:00",
+  "date" : "2025-12-10T16:53:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
