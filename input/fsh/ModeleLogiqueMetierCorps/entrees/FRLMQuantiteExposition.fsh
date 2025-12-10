@@ -11,7 +11,7 @@ Characteristics: #can-be-target
 * date 0..1 dateTime "Date de l'observation"
 * valeur 1..1 Quantity "Quantité mesurée"
 * lateralite 0..1 CodeableConcept "Latéralité et topographie" 
-  * ^binding.description = "jdv-localisation-anatomique-cisis (1.2.250.1.213.1.1.5.694)"
+  * ^binding.description = "SNOMED CT (2.16.840.1.113883.6.96)" 
   * topographique 0..1 CodeableConcept "Précision topographique"
     * nom 1..1 CodeableConcept "name"
     * valeur 1..1 CodeableConcept "Valeur de la topographie"
