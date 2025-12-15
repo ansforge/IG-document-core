@@ -122,7 +122,7 @@ FinalMapping AS (
 
 SELECT
   CASE
-    WHEN Metier NOT LIKE '%.%' and  THEN
+    WHEN Metier NOT LIKE '%.%' THEN
       '**' || Metier || '**'
 
     WHEN (LENGTH(Metier) - LENGTH(REPLACE(Metier, '.', ''))) > 2 THEN
