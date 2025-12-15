@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-number-of-frames-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRNumberOfFramesExtension |
+| Draft as of 2025-12-15 | *Computable Name*:FRNumberOfFramesExtension |
 
 Extension permettant d’indiquer le nombre de cadres référencés dans une instance ImagingStudy, conforme aux exigences du modèle logique Xt-EHR.
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-number-of-frames-
   "name" : "FRNumberOfFramesExtension",
   "title" : "FR Number of Frames Extension",
   "status" : "draft",
-  "date" : "2025-12-10T16:53:25+00:00",
+  "date" : "2025-12-15T10:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

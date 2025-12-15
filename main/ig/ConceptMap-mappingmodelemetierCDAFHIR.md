@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingmodelemetierCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:Mapping Métier/CDA/FHIR : Entête d'un document |
+| Draft as of 2025-12-15 | *Computable Name*:Mapping Métier/CDA/FHIR : Entête d'un document |
 
  
 Ce ConceptMap présente trois groupes de mapping : 
@@ -32,7 +32,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-10T16:53:25+00:00",
+  "date" : "2025-12-15T10:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -62,6 +62,15 @@ Ce ConceptMap présente trois groupes de mapping :
       "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-entete-document",
       "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document",
       "element" : [
+        {
+          "code" : "FRLMEnteteDocument",
+          "target" : [
+            {
+              "code" : "ClinicalDocument",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
         {
           "code" : "FRLMEnteteDocument.identifiantUniqueDocument",
           "target" : [

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-method-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRMethodExtension |
+| Draft as of 2025-12-15 | *Computable Name*:FRMethodExtension |
 
 Extension permettant d’indiquer la méthode utilisée : techniques biologiques (ex. : titration, agglutination…), techniques d’imagerie dans les demandes d’examen (ultrasound, tomographie, IRM…), des méthodes de mesure spécifiques, etc.
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-method-extension.
   "name" : "FRMethodExtension",
   "title" : "FR Method Extension",
   "status" : "draft",
-  "date" : "2025-12-10T16:53:25+00:00",
+  "date" : "2025-12-15T10:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

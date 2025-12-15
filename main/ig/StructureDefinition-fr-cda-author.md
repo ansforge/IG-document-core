@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRCDAAuthor |
+| Draft as of 2025-12-15 | *Computable Name*:FRCDAAuthor |
 
  
 L’élément de l’en-tête du CDA author permet d’enregistrer un auteur du document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-author.csv), 
   "name" : "FRCDAAuthor",
   "title" : "CDA - author",
   "status" : "draft",
-  "date" : "2025-12-10T16:53:25+00:00",
+  "date" : "2025-12-15T10:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

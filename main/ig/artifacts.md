@@ -424,7 +424,6 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md) | Ce ConceptMap présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "validateur" et l’élément CDA "authenticator"
 * Mapping 2 : entre l’élément CDA "authenticator" et l’élément FHIR "Composition.attester"
  |
-| [Mapping ValueSet AdministrativeGender](ConceptMap-mappingAdministrativeGender.md) | Mapping entre les codes du ValueSet FHIR AdministrativeGender et ceux du ValueSet JDV_J143-AdministrativeGender-CISIS établi par ce ConceptMap. |
 
 ### Structures: Extension Definitions 
 
