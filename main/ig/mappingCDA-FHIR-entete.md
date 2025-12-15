@@ -54,7 +54,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | **FRLMDestinatairePrevu** | **informationRecipient** | **extension:InformationRecipientExtension** |
 | FRLMDestinatairePrevu.destinataire | informationRecipient.intendedRecipient | extension:InformationRecipientExtension.extension:party.PractitionerRole |
 | **FRLMDocumentDeReference** | **relatedDocument** | Composition.relatesTo |
-| FRLMDocumentDeReference.typeReference | **relatedDocument@typeCode** | Composition.relatesTo.code |
+| FRLMDocumentDeReference.typeReference | relatedDocument@typeCode | Composition.relatesTo.code |
 | FRLMDocumentDeReference.identifiantUniqueDocument | relatedDocument.parentDocument.id | Composition.relatesTo.targetIdentifier |
 | **FRLMEvenement** | **documentationOf** | Composition.event |
 | FRLMEvenement.identifiantEvenement | documentationOf.serviceEvent.id |  |
@@ -71,7 +71,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMOperateurSaisie.dateSaisie | dataEnterer.time | DataEntererExtension.extension:time |
 | FRLMOperateurSaisie.operateurSaisie | dataEnterer.assignedEntity | DataEntererExtension.extension:party.ValueReference |
 | **FRLMParticipant** | **participant** | **extension:ParticipantExtension** |
-| FRLMParticipant.typeParticipation | **participant@typeCode** | extension:ParticipantExtension.extention:type |
+| FRLMParticipant.typeParticipation | participant@typeCode | extension:ParticipantExtension.extention:type |
 | FRLMParticipant.roleFonctionnel | participant.functionCode | extension:ParticipantExtension.extention:function.coding |
 | FRLMParticipant.dateDebutEtOuFinParticipation | participant.time | extension:ParticipantExtension.extention:time |
 | FRLMParticipant.participant | participant.associatedEntity | extension:ParticipantExtension.party |
@@ -142,8 +142,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPersonneStructureAuteur.structure.secteurActivite | assignedAuthor.representedOrganization.standardIndustryClassCode | PractitionerRole.Organization.type |
 | **FRLMPersonneStructure** | **relatedEntity** | Patient.contact |
 | **FRLMPersonneStructure** | **relatedEntity** | **RelatedPerson** |
-| FRLMPersonneStructure.personne.professionRole | **relatedEntity@classCode** |  |
-| FRLMPersonneStructure.personne.professionRole | **relatedEntity@classCode** | Patient.contact.relationship:Role |
+| FRLMPersonneStructure.personne.professionRole | relatedEntity@classCode |  |
+| FRLMPersonneStructure.personne.professionRole | relatedEntity@classCode | Patient.contact.relationship:Role |
 | FRLMPersonneStructure.personne.lien | relatedEntity.code | Patient.contact.relationship:RelationType.coding |
 | FRLMPersonneStructure.personne.lien | relatedEntity.code | RelatedPerson.relationship.coding |
 | FRLMPersonneStructure.personne.adresse | relatedEntity.addr | Patient.contact.address |

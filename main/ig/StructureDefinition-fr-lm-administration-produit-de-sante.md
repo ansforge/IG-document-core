@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-administration
   "name" : "FRLMAdministrationProduitDeSante",
   "title" : "Modèle logique métier - FR LM Administration produit de sante",
   "status" : "draft",
-  "date" : "2025-12-15T10:12:23+00:00",
+  "date" : "2025-12-15T10:59:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
