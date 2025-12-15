@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-adverse-event-document | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRAdverseEventDocument |
+| Draft as of 2025-12-15 | *Computable Name*:FRAdverseEventDocument |
 
  
 FRAdverseEventDocument permet de décrire un effet indésirable prévisible lié à un médicament 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-adverse-event-doc
   "name" : "FRAdverseEventDocument",
   "title" : "AdverseEvent - FR adverse event Document",
   "status" : "draft",
-  "date" : "2025-12-10T14:14:23+00:00",
+  "date" : "2025-12-15T09:06:09+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

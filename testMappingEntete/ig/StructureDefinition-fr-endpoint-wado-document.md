@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-endpoint-wado-document | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FREndpointWadoDocument |
+| Draft as of 2025-12-15 | *Computable Name*:FREndpointWadoDocument |
 
  
 FREndpointWadoDocument permet d’enregistrer les références Wado, les types de média et le type de connection IHE IID 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-endpoint-wado-doc
   "name" : "FREndpointWadoDocument",
   "title" : "Endpoint - FR Endpoint Wado Document",
   "status" : "draft",
-  "date" : "2025-12-10T14:14:23+00:00",
+  "date" : "2025-12-15T09:06:09+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

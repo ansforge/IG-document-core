@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ValueSet/fr-vs-edqm-document | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRValueSetEDQMDocument |
+| Draft as of 2025-12-15 | *Computable Name*:FRValueSetEDQMDocument |
 
  
 ValueSet basé sur le CodeSystem EDQM fourni par SMT 
@@ -55,7 +55,7 @@ ValueSet basé sur le CodeSystem EDQM fourni par SMT
   "title" : "ValueSet - FR ValueSet EDQM Document",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-10T14:14:23+00:00",
+  "date" : "2025-12-15T09:06:09+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

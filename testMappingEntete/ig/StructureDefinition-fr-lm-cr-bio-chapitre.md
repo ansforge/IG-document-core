@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-cr-bio-chapitre | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRLMCRBIOChapitre |
+| Draft as of 2025-12-15 | *Computable Name*:FRLMCRBIOChapitre |
 
  
 Section Compte rendu de biologie de 1er niveau 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-cr-bio-chapitr
   "name" : "FRLMCRBIOChapitre",
   "title" : "Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau",
   "status" : "draft",
-  "date" : "2025-12-10T14:14:23+00:00",
+  "date" : "2025-12-15T09:06:09+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

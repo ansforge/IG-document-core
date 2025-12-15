@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-exposition | *Version*:0.1.0 |
-| Draft as of 2025-12-10 | *Computable Name*:FRLMQuantiteExposition |
+| Draft as of 2025-12-15 | *Computable Name*:FRLMQuantiteExposition |
 
  
 Entrée Quantité exposition 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-quantite-expos
   "name" : "FRLMQuantiteExposition",
   "title" : "Modèle logique métier - FR LM Quantité exposition",
   "status" : "draft",
-  "date" : "2025-12-10T14:14:23+00:00",
+  "date" : "2025-12-15T09:06:09+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -177,7 +177,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-quantite-expos
           }
         ],
         "binding" : {
-          "description" : "jdv-localisation-anatomique-cisis (1.2.250.1.213.1.1.5.694)"
+          "description" : "SNOMED CT (2.16.840.1.113883.6.96)"
         }
       },
       {
