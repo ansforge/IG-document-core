@@ -14,6 +14,9 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 // Groupe Mapping 1 : Modèle métier to CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-entete-document"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document"
+* group[=].element[+].code = #FRLMEnteteDocument
+* group[=].element[=].target.code = #ClinicalDocument
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMEnteteDocument.identifiantUniqueDocument
 * group[=].element[=].target.code = #ClinicalDocument.id
 * group[=].element[=].target.equivalence = #equivalent
