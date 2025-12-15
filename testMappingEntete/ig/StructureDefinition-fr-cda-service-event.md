@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-service-event
   "name" : "FRCDAServiceEvent",
   "title" : "CDA - serviceEvent",
   "status" : "draft",
-  "date" : "2025-12-15T10:48:02+00:00",
+  "date" : "2025-12-15T10:54:30+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
