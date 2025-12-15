@@ -122,7 +122,7 @@ FinalMapping AS (
 
 SELECT
   CASE
-    WHEN Metier NOT LIKE '%.%' THEN
+    WHEN Metier NOT LIKE '%.%' and  THEN
       '**' || Metier || '**'
 
     WHEN (LENGTH(Metier) - LENGTH(REPLACE(Metier, '.', ''))) > 2 THEN
@@ -141,7 +141,8 @@ SELECT
     ELSE Metier
 END AS Metier,
   CASE
-    WHEN CDA NOT LIKE '%.%' THEN
+    WHEN CDA NOT LIKE '%@%' 
+     AND CDA NOT LIKE '%.%' THEN
       '**' || CDA || '**'
 
     WHEN (LENGTH(CDA) - LENGTH(REPLACE(CDA, '.', ''))) > 2 THEN
