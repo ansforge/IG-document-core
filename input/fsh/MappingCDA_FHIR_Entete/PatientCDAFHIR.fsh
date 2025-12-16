@@ -32,7 +32,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family										
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomNaissance										
-* group[=].element[=].target.code = #PrecordTarget.patientRole.patient.name.family@qualifier='BR'									
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='BR'									
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMPatientUsager.personnePhysique.nomsPrenomsPatient.nom.nomUtilise										
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='CL'									
