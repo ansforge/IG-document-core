@@ -28,6 +28,8 @@ Description: "Entrée FR-DICOM-Cadres-a-afficher: <b>Entrée Cadres à afficher<
 * value 1..1
 * value ^short = "Cadres référencés"
 * value only IVL_INT
+* value ^type.profile = "http://hl7.org/cda/stds/core/StructureDefinition/IVL-INT"
+
 
 
 
