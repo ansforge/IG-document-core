@@ -27,6 +27,27 @@ Description: "Mapping des éléments du modèle métier FRLMDispositifMedicalEnt
 * group[=].element[+].code = #FRLMDispositifMedicalEntree.date
 * group[=].element[=].target.code = #FRCDADispositifMedical.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
+// Nombre de renouvellement(s) possible(s)
+* group[=].element[+].code = #FRLMDispositifMedicalEntree.renouvellement
+* group[=].element[=].target.code = #FRCDADispositifMedical.repeatNumber
+* group[=].element[=].target.equivalence = #equivalent
+// Durée d'utilisation
+* group[=].element[+].code = #FRLMDispositifMedicalEntree.duree
+* group[=].element[=].target.code = #FRCDADispositifMedical.expectedUseTime
+* group[=].element[=].target.equivalence = #equivalent
+// Quantité
+* group[=].element[+].code = #FRLMDispositifMedicalEntree.quantite
+* group[=].element[=].target.code = #FRCDADispositifMedical.quantity
+* group[=].element[=].target.equivalence = #equivalent
+// Prescripteur
+* group[=].element[+].code = #FRLMDispositifMedicalEntree.auteur
+* group[=].element[=].target.code = #FRCDADispositifMedical.author
+* group[=].element[=].target.equivalence = #equivalent
+// Dispositif médical
+* group[=].element[+].code = #FRLMDispositifMedicalEntree.dispositifMedical
+* group[=].element[=].target.code = #FRCDADispositifMedical.participant
+* group[=].element[=].target.equivalence = #equivalent
+
 // Entrée En rapport avec une Affection Longue Durée (ALD)
 * group[=].element[+].code = #FRLMDispositifMedicalEntree.affectionLongueDuree
 * group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecALD
@@ -62,7 +83,7 @@ Description: "Mapping des éléments du modèle métier FRLMDispositifMedicalEnt
 * group[=].element[=].target.equivalence = #equivalent  
 // Date d'utilisation ou de présence chez le patient
 * group[=].element[+].code = #FRCDADispositifMedical.effectiveTime
-* group[=].element[=].target.code = #FRDeviceRequestDocument.occurrenceTiming
+* group[=].element[=].target.code = #FRDeviceRequestDocument.occurrence[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Nombre de renouvellement(s) possible(s)
 * group[=].element[+].code = #FRCDADispositifMedical.repeatNumber
