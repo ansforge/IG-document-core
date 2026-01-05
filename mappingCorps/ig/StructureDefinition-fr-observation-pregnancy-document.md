@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-document | *Version*:0.1.0 |
-| Draft as of 2025-12-29 | *Computable Name*:FRObservationPregnancyDocument |
+| Draft as of 2026-01-05 | *Computable Name*:FRObservationPregnancyDocument |
 
  
 FRObservationPregnancyDocument permet d’apporter des informations relatives aux grossesses actuelle ou passées. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-pregn
   "name" : "FRObservationPregnancyDocument",
   "title" : "Observation - FR Observation Pregnancy Document",
   "status" : "draft",
-  "date" : "2025-12-29T15:05:54+00:00",
+  "date" : "2026-01-05T15:47:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

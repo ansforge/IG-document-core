@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDeviceRequestLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-29 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription de dispositif médical" |
+| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription de dispositif médical" |
 
  
 Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument. 
@@ -27,7 +27,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
   "name" : "Mapping Métier/CDA/FHIR : \"Prescription de dispositif médical\"",
   "title" : "Mapping FRLMOrdreDispositifMedical → FRCDAOrdreDispositifMedical → FRDeviceRequestDocument",
   "status" : "draft",
-  "date" : "2025-12-29T15:05:54+00:00",
+  "date" : "2026-01-05T15:47:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -89,6 +89,51 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "target" : [
             {
               "code" : "FRCDADispositifMedical.effectiveTime",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMDispositifMedicalEntree.renouvellement",
+          "target" : [
+            {
+              "code" : "FRCDADispositifMedical.repeatNumber",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMDispositifMedicalEntree.duree",
+          "target" : [
+            {
+              "code" : "FRCDADispositifMedical.expectedUseTime",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMDispositifMedicalEntree.quantite",
+          "target" : [
+            {
+              "code" : "FRCDADispositifMedical.quantity",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMDispositifMedicalEntree.auteur",
+          "target" : [
+            {
+              "code" : "FRCDADispositifMedical.author",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMDispositifMedicalEntree.dispositifMedical",
+          "target" : [
+            {
+              "code" : "FRCDADispositifMedical.participant",
               "equivalence" : "equivalent"
             }
           ]
@@ -166,7 +211,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRCDADispositifMedical.effectiveTime",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.occurrenceTiming",
+              "code" : "FRDeviceRequestDocument.occurrence[x]",
               "equivalence" : "equivalent"
             }
           ]

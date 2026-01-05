@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-body-structure-document | *Version*:0.1.0 |
-| Draft as of 2025-12-29 | *Computable Name*:FRBodyStructureDocument |
+| Draft as of 2026-01-05 | *Computable Name*:FRBodyStructureDocument |
 
  
 FRBodyStructureDocument permet de préciser les modificateurs topographiques associés à une localisation anatomique. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-body-structure-do
   "name" : "FRBodyStructureDocument",
   "title" : "BodyStructure - FR Body Structure Document",
   "status" : "draft",
-  "date" : "2025-12-29T15:05:54+00:00",
+  "date" : "2026-01-05T15:47:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

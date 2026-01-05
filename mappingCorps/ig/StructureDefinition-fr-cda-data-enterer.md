@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer | *Version*:0.1.0 |
-| Draft as of 2025-12-29 | *Computable Name*:FRCDADataEnterer |
+| Draft as of 2026-01-05 | *Computable Name*:FRCDADataEnterer |
 
  
 L’élément de l’en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-data-enterer.
   "name" : "FRCDADataEnterer",
   "title" : "CDA - dataEnterer",
   "status" : "draft",
-  "date" : "2025-12-29T15:05:54+00:00",
+  "date" : "2026-01-05T15:47:03+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
