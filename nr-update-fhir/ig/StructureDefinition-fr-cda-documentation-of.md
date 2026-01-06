@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-documentation-of | *Version*:0.1.0 |
-| Draft as of 2025-12-30 | *Computable Name*:FRCDADocumentationOf |
+| Draft as of 2026-01-06 | *Computable Name*:FRCDADocumentationOf |
 
  
 L’élément de l’en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l’évènement principal avec obligatoirement une date de début et un exécutant. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-documentation
   "name" : "FRCDADocumentationOf",
   "title" : "CDA - documentationOf",
   "status" : "draft",
-  "date" : "2025-12-30T15:23:33+00:00",
+  "date" : "2026-01-06T16:42:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

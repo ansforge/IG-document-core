@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-statement-document | *Version*:0.1.0 |
-| Draft as of 2025-12-30 | *Computable Name*:FRMedicationStatementDocument |
+| Draft as of 2026-01-06 | *Computable Name*:FRMedicationStatementDocument |
 
  
 * FRMedicationStatementDocument permet de décrire les modalités d’administration d’un médicament au patient.
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-statem
   "name" : "FRMedicationStatementDocument",
   "title" : "MedicationStatement - FR Medication Statement Document",
   "status" : "draft",
-  "date" : "2025-12-30T15:23:33+00:00",
+  "date" : "2026-01-06T16:42:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient | *Version*:0.1.0 |
-| Draft as of 2025-12-30 | *Computable Name*:FRCDAPatient |
+| Draft as of 2026-01-06 | *Computable Name*:FRCDAPatient |
 
  
 L’élément de l’en-tête du CDA patient permet de représenter une personne physique. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-patient.csv),
   "name" : "FRCDAPatient",
   "title" : "CDA - patient",
   "status" : "draft",
-  "date" : "2025-12-30T15:23:33+00:00",
+  "date" : "2026-01-06T16:42:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
