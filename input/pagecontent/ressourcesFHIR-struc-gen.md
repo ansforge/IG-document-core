@@ -96,7 +96,7 @@ Les spécifications françaises des documents FHIR définies dans le CI-SIS :
 * s'appuient sur le guide d'implémentation [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document)
 * portent les exigences complémentaires et spécifiques au contexte français.
 
-#### Rattachement d'une section et d'une entrée à une personne
+#### Rattachement d'une section et d'une entrée à une personne différente du patient usager
 
 La norme FHIR permet d’indiquer de façon optionnelle le rattachement d'une section et/ou d'une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.
 
