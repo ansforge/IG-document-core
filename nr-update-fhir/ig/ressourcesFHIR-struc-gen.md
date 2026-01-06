@@ -109,23 +109,7 @@ Les spécifications françaises des documents FHIR définies dans le CI-SIS :
 * s’appuient sur le guide d’implémentation [FHIR Clinical Documents](https://hl7.org/fhir/uv/fhir-clinical-document)
 * portent les exigences complémentaires et spécifiques au contexte français.
 
-#### Rattachement d’une section et d’une entrée à une personne différente du patient usager
-
-La norme FHIR permet d’indiquer de façon optionnelle le rattachement d’une section et/ou d’une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.
-
-* Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l’élément **Composition.section.focus**.
-* Dans une entrée, la personne concernée par les informations de l’entrée, si elle est différente du patient/usager, est indiquée dans l’élément **subject**.
-
-Chaque entrée d’un document peut avoir un **subject**. Si l’entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l’élément **Composition.section.focus** de la section. Si la section ne contient pas d’élément **Composition.section.focus**, la section concerne la personne indiquée dans l’élément **subject** du document. C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.
-
-### Conformité des documents FHIR
-
-Les documents au format FHIR définis dans le CI-SIS doivent être conformes :
-
-* aux exigences françaises de l’entête
-* aux exigences d’un modèle spécifique défini dans un volet du CI-SIS
-
-#### Conformité aux exigences françaises de l’entête
+#### Spécifications françaises de l’entête des documents FHIR
 
 Pour être conforme aux exigences françaises de l’entête, un document FHIR DOIT respecter les profils suivants :
 
@@ -150,7 +134,7 @@ Ces profils portent les exigences complémentaires et spécifiques au contexte f
 * Les éléments obligatoires pour assurer la traçabilité et la responsabilité des documents (auteur, responsable, structure de conservation, etc.)
 * Les extensions nécessaires pour porter des informations non prévues dans le standard FHIR de base
 
-#### Conformité à un modèle de document spécifique défini dans le CI-SIS
+#### Spécifications françaises dédiées à un type de document FHIR (CR-Bio, VSM, …)
 
 Au-delà de la conformité aux exigences générales de l’entête, chaque **volet de contenu du CI-SIS** définit un **modèle de document spécifique** adapté à un contexte métier particulier.
 
@@ -168,6 +152,30 @@ Pour être conforme à un modèle de document spécifique, un document FHIR DOIT
 * **Jeux de valeurs métier** : codes issus des nomenclatures spécifiques au domaine (biologie, radiologie, etc.)
 
 1. **Déclarer sa conformité**dans`Composition.meta.profile`en référençant le profil canonique du volet
+
+#### Spécifications françaises des modèles de contenus (sections et entrées)
+
+##### Rattachement d’une section et d’une entrée à une personne
+
+La norme FHIR permet d’indiquer de façon optionnelle le rattachement d’une section et/ou d’une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.
+
+* Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l’élément **Composition.section.focus**.
+* Dans une entrée, la personne concernée par les informations de l’entrée, si elle est différente du patient/usager, est indiquée dans l’élément **subject**.
+
+Chaque entrée d’un document peut avoir un **subject**. Si l’entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l’élément **Composition.section.focus** de la section. Si la section ne contient pas d’élément **Composition.section.focus**, la section concerne la personne indiquée dans l’élément **subject** du document. C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.
+
+### Conformité des documents FHIR
+
+Les documents au format FHIR définis dans le CI-SIS doivent être conformes :
+
+* aux exigences françaises de l’entête
+* aux exigences d’un modèle spécifique défini dans un volet du CI-SIS
+
+#### Conformité aux exigences françaises de l’entête
+
+Les documents doivent être conformes aux spécifications françaises de l’entête. Ces spécifications sont communes à l’ensemble des documents FHIR produits en France.
+
+#### Conformité à un modèle de document spécifique défini dans le CI-SIS
 
 **Exemples de volets du CI-SIS** :
 
@@ -191,6 +199,18 @@ Chaque guide d’implémentation dédié précisera :
 * La structure documentaire attendue
 * Les exemples d’instances conformes
 * Les règles métier spécifiques sous forme d’invariants
+
+#### Convention sur le traitement des éléments hors modèle
+
+Une application productrice est autorisée à ajouter dans l’en-tête et dans le corps d’un document qu’elle produit des éléments non prévus dans le modèle dont se réclame le document, à condition que ces éléments restent conformes au standard FHIR.
+
+Une application consommatrice de document n’est pas tenue de traiter les éléments non définis dans le modèle, et dans le cas où elle ne les comprend pas, elle doit les ignorer.
+
+En d’autres termes, ce n’est pas une erreur de mettre dans un document plus d’éléments que n’en spécifie le modèle ; en revanche c’est une erreur de rejeter un tel document.
+
+Cette convention préserve la capacité aux implémentations d’apporter de la valeur ajoutée par rapport aux modèles.
+
+Elle protège en outre la compatibilité ascendante, en permettant que des versions ultérieures d’un modèle apportant des éléments nouveaux, restent compatibles avec des implémentations qui ne connaîtraient qu’une version plus ancienne du modèle.
 
 #### Vérification de la conformité d’un document FHIR
 

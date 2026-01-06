@@ -397,28 +397,7 @@ Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://h
   <li>portent les exigences complémentaires et spécifiques au contexte français.</li>
 </ul>
 
-<h4 id="rattachement-dune-section-et-dune-entrée-à-une-personne-différente-du-patient-usager">Rattachement d’une section et d’une entrée à une personne différente du patient usager</h4>
-
-<p>La norme FHIR permet d’indiquer de façon optionnelle le rattachement d’une section et/ou d’une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.</p>
-
-<ul>
-  <li>Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l’élément <strong>Composition.section.focus</strong>.</li>
-  <li>Dans une entrée, la personne concernée par les informations de l’entrée, si elle est différente du patient/usager, est indiquée dans l’élément <strong>subject</strong>.</li>
-</ul>
-
-<p>Chaque entrée d’un document peut avoir un <strong>subject</strong>. Si l’entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l’élément <strong>Composition.section.focus</strong> de la section. Si la section ne contient pas d’élément <strong>Composition.section.focus</strong>, la section concerne la personne indiquée dans l’élément <strong>subject</strong> du document.
- C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.</p>
-
-<h3 id="conformité-des-documents-fhir">Conformité des documents FHIR</h3>
-
-<p>Les documents au format FHIR définis dans le CI-SIS doivent être conformes :</p>
-
-<ul>
-  <li>aux exigences françaises de l’entête</li>
-  <li>aux exigences d’un modèle spécifique défini dans un volet du CI-SIS</li>
-</ul>
-
-<h4 id="conformité-aux-exigences-françaises-de-lentête">Conformité aux exigences françaises de l’entête</h4>
+<h4 id="spécifications-françaises-de-lentête-des-documents-fhir">Spécifications françaises de l’entête des documents FHIR</h4>
 
 <p>Pour être conforme aux exigences françaises de l’entête, un document FHIR DOIT respecter les profils suivants :</p>
 
@@ -431,13 +410,13 @@ Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://h
 
 <ul>
   <li><strong><a href="StructureDefinition-fr-patient-ins-document.html">FRPatientINSDocument</a></strong> ou <strong><a href="StructureDefinition-fr-patient-document.html">FRPatientDocument</a></strong> : profil du patient/usager</li>
-  <li><strong><a name="l951">​</a><a href="StructureDefinition-fr-practitionerrole-document.html">FRPractitionerRoleDocument</a></strong> : profil de la situation d’exercice d’un professionnel de santé</li>
+  <li><strong><a name="l900">​</a><a href="StructureDefinition-fr-practitionerrole-document.html">FRPractitionerRoleDocument</a></strong> : profil de la situation d’exercice d’un professionnel de santé</li>
   <li><strong><a href="StructureDefinition-fr-practitioner-document.html">FRPractitionerDocument</a></strong> : profil du professionnel de santé</li>
   <li><strong><a href="StructureDefinition-fr-organization-document.html">FROrganizationDocument</a></strong> : profil de l’organisation/structure</li>
   <li><strong><a href="StructureDefinition-fr-device-auteur-document.html">FRDeviceAuteurDocument</a></strong> : profil du dispositif auteur (si applicable)</li>
   <li><strong><a href="StructureDefinition-fr-encounter-care-document.html">FREncounterCareDocument</a></strong> : profil de la prise en charge</li>
   <li><strong><a href="StructureDefinition-fr-location-document.html">FRLocationDocument</a></strong> : profil du lieu d’exercice</li>
-  <li><strong><a name="l987">​</a><a href="StructureDefinition-fr-relatedperson-document.html">FRRelatedPersonDocument</a></strong> : profil d’une personne en relation avec le patient (si applicable)</li>
+  <li><strong><a name="l936">​</a><a href="StructureDefinition-fr-relatedperson-document.html">FRRelatedPersonDocument</a></strong> : profil d’une personne en relation avec le patient (si applicable)</li>
 </ul>
 
 <p>Ces profils portent les exigences complémentaires et spécifiques au contexte français, notamment :</p>
@@ -449,7 +428,7 @@ Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://h
   <li>Les extensions nécessaires pour porter des informations non prévues dans le standard FHIR de base</li>
 </ul>
 
-<h4 id="conformité-à-un-modèle-de-document-spécifique-défini-dans-le-ci-sis">Conformité à un modèle de document spécifique défini dans le CI-SIS</h4>
+<h4 id="spécifications-françaises-dédiées-à-un-type-de-document-fhir-cr-bio-vsm-">Spécifications françaises dédiées à un type de document FHIR (CR-Bio, VSM, …)</h4>
 
 <p>Au-delà de la conformité aux exigences générales de l’entête, chaque <strong>volet de contenu du CI-SIS</strong> définit un <strong>modèle de document spécifique</strong> adapté à un contexte métier particulier.</p>
 
@@ -473,6 +452,35 @@ Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://h
   </li>
   <li><strong>Déclarer sa conformité</strong> dans <code class="language-plaintext highlighter-rouge">Composition.meta.profile</code> en référençant le profil canonique du volet</li>
 </ol>
+
+<h4 id="spécifications-françaises-des-modèles-de-contenus-sections-et-entrées">Spécifications françaises des modèles de contenus (sections et entrées)</h4>
+
+<h5 id="rattachement-dune-section-et-dune-entrée-à-une-personne">Rattachement d’une section et d’une entrée à une personne</h5>
+
+<p>La norme FHIR permet d’indiquer de façon optionnelle le rattachement d’une section et/ou d’une entrée d’un document FHIR à une personne différente du patient/usager. Dans ce cas, elle remplace la personne décrite au niveau supérieur.</p>
+
+<ul>
+  <li>Dans une section, la personne concernée par les informations de la section, si elle est différente du patient/usager, est indiquée dans l’élément <strong>Composition.section.focus</strong>.</li>
+  <li>Dans une entrée, la personne concernée par les informations de l’entrée, si elle est différente du patient/usager, est indiquée dans l’élément <strong>subject</strong>.</li>
+</ul>
+
+<p>Chaque entrée d’un document peut avoir un <strong>subject</strong>. Si l’entrée ne contient pas de subject, l’entrée concerne la personne indiquée dans l’élément <strong>Composition.section.focus</strong> de la section. Si la section ne contient pas d’élément <strong>Composition.section.focus</strong>, la section concerne la personne indiquée dans l’élément <strong>subject</strong> du document.
+C’est le principe de propagation du contexte et qui part du document vers les sections, sous-sections, entrées et sous-entrées emboitées.</p>
+
+<h3 id="conformité-des-documents-fhir">Conformité des documents FHIR</h3>
+
+<p>Les documents au format FHIR définis dans le CI-SIS doivent être conformes :</p>
+
+<ul>
+  <li>aux exigences françaises de l’entête</li>
+  <li>aux exigences d’un modèle spécifique défini dans un volet du CI-SIS</li>
+</ul>
+
+<h4 id="conformité-aux-exigences-françaises-de-lentête">Conformité aux exigences françaises de l’entête</h4>
+
+<p>Les documents doivent être conformes aux spécifications françaises de l’entête. Ces spécifications sont communes à l’ensemble des documents FHIR produits en France.</p>
+
+<h4 id="conformité-à-un-modèle-de-document-spécifique-défini-dans-le-ci-sis">Conformité à un modèle de document spécifique défini dans le CI-SIS</h4>
 
 <p><strong>Exemples de volets du CI-SIS</strong> :</p>
 
@@ -502,6 +510,18 @@ Pour en savoir plus, voir <a href="https://hl7.org/fhir/R4/index.html">https://h
   <li>Les exemples d’instances conformes</li>
   <li>Les règles métier spécifiques sous forme d’invariants</li>
 </ul>
+
+<h4 id="convention-sur-le-traitement-des-éléments-hors-modèle">Convention sur le traitement des éléments hors modèle</h4>
+
+<p>Une application productrice est autorisée à ajouter dans l’en-tête et dans le corps d’un document qu’elle produit des éléments non prévus dans le modèle dont se réclame le document, à condition que ces éléments restent conformes au standard FHIR.</p>
+
+<p>Une application consommatrice de document n’est pas tenue de traiter les éléments non définis dans le modèle, et dans le cas où elle ne les comprend pas, elle doit les ignorer.</p>
+
+<p>En d’autres termes, ce n’est pas une erreur de mettre dans un document plus d’éléments que n’en spécifie le modèle ; en revanche c’est une erreur de rejeter un tel document.</p>
+
+<p>Cette convention préserve la capacité aux implémentations d’apporter de la valeur ajoutée par rapport aux modèles.</p>
+
+<p>Elle protège en outre la compatibilité ascendante, en permettant que des versions ultérieures d’un modèle apportant des éléments nouveaux, restent compatibles avec des implémentations qui ne connaîtraient qu’une version plus ancienne du modèle.</p>
 
 <h4 id="vérification-de-la-conformité-dun-document-fhir">Vérification de la conformité d’un document FHIR</h4>
 
@@ -618,7 +638,7 @@ Voir <a href="https://interop.esante.gouv.fr/ig/documentation/tests.html">https:
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 6, 2026 16:42+0000">2026-01-06</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.document.fr.core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 6, 2026 17:23+0000">2026-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
