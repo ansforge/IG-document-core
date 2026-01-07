@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument"
 Description: "Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument."
 
-* name = "Mapping Métier/CDA/FHIR : \"Directive Anticipee\""
+* title = "Mapping Métier/CDA/FHIR : \"Directive Anticipee\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA

@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument"
 Description: "Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent."    
 
-* name = "Mapping Métier/CDA/FHIR : \"Effet Indésirable\""
+* title = "Mapping Métier/CDA/FHIR : \"Effet Indésirable\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -44,27 +44,27 @@ Description: "Mapping des éléments du modèle métier FRLMEvenementIndesirable
 
 // Traitement
 * group[=].element[+].code = #FRLMEffetIndesirable.traitement
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship.frTraitement
+* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frTraitement
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée
 * group[=].element[+].code = #FRLMEffetIndesirable.probleme
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship.frProbleme
+* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frProbleme
 * group[=].element[=].target.equivalence = #equivalent
 
 // Imputabilité
 * group[=].element[+].code = #FRLMEffetIndesirable.imputabiliteEffetIndesirable
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship.frImputabiliteEffetIndesirable
+* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Gravité
 * group[=].element[+].code = #FRLMEffetIndesirable.graviteEffetIndesirable
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship.frGraviteEffetIndesirable
+* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Évolution
 * group[=].element[+].code = #FRLMEffetIndesirable.evolutionEffetIndesirable
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship.frEvolutionEffetIndesirable
+* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -107,26 +107,26 @@ Description: "Mapping des éléments du modèle métier FRLMEvenementIndesirable
 * group[=].element[=].target.equivalence = #unmatched
 
 // Traitement
-* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship.frTraitement
+* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship:frTraitement
 * group[=].element[=].target.code = #FRAdverseEventDocument.suspectEntity.instance
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée
-* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship.frProbleme
+* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship:frProbleme
 * group[=].element[=].target.code = #FRAdverseEventDocument.resultingCondition
 * group[=].element[=].target.equivalence = #equivalent
 
 // Imputabilité
-* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship.frImputabiliteEffetIndesirable
+* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable
 * group[=].element[=].target.code = #FRAdverseEventDocument.suspectEntity.causality
 * group[=].element[=].target.equivalence = #equivalent
 
 // Gravité
-* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship.frGraviteEffetIndesirable
+* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable
 * group[=].element[=].target.code = #FRAdverseEventDocument.seriousness
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Évolution
-* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship.frEvolutionEffetIndesirable
+* group[=].element[+].code = #FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable
 * group[=].element[=].target.code = #FRAdverseEventDocument.outcome
 * group[=].element[=].target.equivalence = #equivalent

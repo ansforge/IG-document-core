@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument"
 Description: "Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument."
-* name = "Mapping Métier/CDA/FHIR : \"Document Referencé\""
+* title = "Mapping Métier/CDA/FHIR : \"Document Referencé\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -31,7 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMDocumentAttache vers
 * group[=].element[=].target.equivalence = #equivalent
 // Type de document
 * group[=].element[+].code = #FRLMDocumentAttache.typeDocumentAttache
-* group[=].element[=].target.code = #FRCDADocumentAttache.component.frTypeDocumentAttache
+* group[=].element[=].target.code = #FRCDADocumentAttache.component:frTypeDocumentAttache
 * group[=].element[=].target.equivalence = #equivalent
 // Contenu du document
 * group[=].element[+].code = #FRLMDocumentAttache.documentAttache
@@ -71,7 +71,7 @@ Description: "Mapping des éléments du modèle métier FRLMDocumentAttache vers
 * group[=].element[=].target.code = #FRDocumentReferenceDocument.date
 * group[=].element[=].target.equivalence = #equivalent
 // Type de document
-* group[=].element[+].code = #FRCDADocumentAttache.component.frTypeDocumentAttache
+* group[=].element[+].code = #FRCDADocumentAttache.component:frTypeDocumentAttache
 * group[=].element[=].target.code = #FRDocumentReferenceDocument.type
 * group[=].element[=].target.equivalence = #equivalent
 // Contenu du document

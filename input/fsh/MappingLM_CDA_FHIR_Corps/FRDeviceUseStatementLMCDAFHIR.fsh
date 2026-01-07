@@ -5,7 +5,7 @@ Title: "Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDev
 Description: "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le
 profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument."
 
-* name = "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\""
+* title = "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -33,15 +33,15 @@ profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatement
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec une Affection Longue Durée (ALD)
 * group[=].element[+].code = #FRLMDispositifMedicalEntree.affectionLongueDuree
-* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecALD
+* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec accident travail
 * group[=].element[+].code = #FRLMDispositifMedicalEntree.accidentTravail
-* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecAccidentTravail
+* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec la prevention
 * group[=].element[+].code = #FRLMDispositifMedicalEntree.prevention
-* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecPrevention
+* group[=].element[=].target.code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA → FHIR
@@ -61,25 +61,25 @@ profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatement
 * group[=].element[=].target.equivalence = #equivalent
 // Dispensateur
 * group[=].element[+].code = #FRCDADispositifMedical.performer
-* group[=].element[=].target.code = #FRDeviceUseStatementDocument.source.extension.performer
+* group[=].element[=].target.code = #FRDeviceUseStatementDocument.source.extension:performer
 * group[=].element[=].target.equivalence = #equivalent
 // Dispositif médical
 * group[=].element[+].code = #FRCDADispositifMedical.participant
 * group[=].element[=].target.code = #FRDeviceUseStatementDocument.device
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec une Affection Longue Durée (ALD)
-* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecALD
-* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference.EnRapportAvecALD
+* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD
+* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference:EnRapportAvecALD
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec accident travail
-* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecAccidentTravail
-* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference.EnRapportAvecAccidentTravail
+* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail
+* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference:EnRapportAvecAccidentTravail
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée En rapport avec la prevention
-* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship.frEnRapportAvecPrevention
-* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference.EnRapportAvecLaPrevention
+* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention
+* group[=].element[=].target.code = #FRDeviceUseStatementDocument.reasonReference:EnRapportAvecLaPrevention
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Non remboursable
-* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship.frNonRemboursable
-* group[=].element[=].target.code = #FRDeviceUseStatementDocument.extension.notCovered
+* group[=].element[+].code = #FRCDADispositifMedical.entryRelationship:frNonRemboursable
+* group[=].element[=].target.code = #FRDeviceUseStatementDocument.extension:notCovered
 * group[=].element[=].target.equivalence = #equivalent

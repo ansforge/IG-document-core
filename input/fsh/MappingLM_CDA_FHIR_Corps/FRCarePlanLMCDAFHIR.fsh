@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument"
 Description: "Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument."
 
-* name = "Mapping Métier/CDA/FHIR : \"Référence Item Plan Traitement\""
+* title = "Mapping Métier/CDA/FHIR : \"Référence Item Plan Traitement\""
 * status = #active
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -25,7 +25,7 @@ Description: "Mapping des éléments du modèle métier FRLMReferenceItemPlanTra
 * group[=].element[=].target.equivalence = #equivalent
 // Produit de santé
 * group[=].element[+].code = #FRLMReferenceItemPlanTraitement.produitSante
-* group[=].element[=].target.code = #FRCDAReferenceItemPlanTraitement.frProduitSante
+* group[=].element[=].target.code = #FRCDAReferenceItemPlanTraitement.consumable
 * group[=].element[=].target.equivalence = #equivalent  
 // Auteur
 * group[=].element[+].code = #FRLMReferenceItemPlanTraitement.auteur
@@ -33,7 +33,7 @@ Description: "Mapping des éléments du modèle métier FRLMReferenceItemPlanTra
 * group[=].element[=].target.equivalence = #equivalent  
 // Traitement prescrit
 * group[=].element[+].code = #FRLMReferenceItemPlanTraitement.traitementPrescrit
-* group[=].element[=].target.code = #FRCDAReferenceItemPlanTraitement.entryRelationship.frItemPlanTraitement
+* group[=].element[=].target.code = #FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement
 * group[=].element[=].target.equivalence = #equivalent  
 // Référence
 * group[=].element[+].code = #FRLMReferenceItemPlanTraitement.reference
@@ -61,7 +61,7 @@ Description: "Mapping des éléments du modèle métier FRLMReferenceItemPlanTra
 * group[=].element[=].target.code = #FRCarePlanDocument.category
 * group[=].element[=].target.equivalence = #equivalent
 // Produit de santé
-* group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.frProduitSante
+* group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.consumable
 * group[=].element[=].target.code = #FRCarePlanDocument.activity.detail.productReference
 * group[=].element[=].target.equivalence = #equivalent  
 // Auteur
@@ -69,14 +69,14 @@ Description: "Mapping des éléments du modèle métier FRLMReferenceItemPlanTra
 * group[=].element[=].target.code = #FRCarePlanDocument.author  
 * group[=].element[=].target.equivalence = #equivalent  
 // Traitement prescrit  
-* group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.entryRelationship.frItemPlanTraitement
-* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference[FRMedicationRequestDocument]
+* group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement
+* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference:FRMedicationRequestDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Référence
 * group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.reference
-* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference[FRMedicationRequestDocument]
+* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference:FRMedicationRequestDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Document référencé - identifiant
 * group[=].element[+].code = #FRCDAReferenceItemPlanTraitement.reference.externalDocument.id
-* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference[FRMedicationRequestDocument].identifier
+* group[=].element[=].target.code = #FRCarePlanDocument.activity.reference:FRMedicationRequestDocument.identifier
 * group[=].element[=].target.equivalence = #equivalent

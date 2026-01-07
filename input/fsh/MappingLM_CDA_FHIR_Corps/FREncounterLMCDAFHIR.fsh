@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument"
 Description: "Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument."
-* name = "Mapping Métier/CDA/FHIR : \"Encounter\""
+* title = "Mapping Métier/CDA/FHIR : \"Encounter\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-rencontre"
@@ -87,15 +87,15 @@ Description: "Mapping des éléments du modèle métier FRLMRencontre vers le pr
 // Subject (patient) - pas de mapping car géré au niveau du document
 // exécutant
 * group[=].element[+].code = #FRCDARencontre.performer
-* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension.executant
+* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension:executant
 * group[=].element[=].target.equivalence = #equivalent
 // auteur
 * group[=].element[+].code = #FRCDARencontre.author
-* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension.author
+* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension:author
 * group[=].element[=].target.equivalence = #equivalent
 // informateur
 * group[=].element[+].code = #FRCDARencontre.informant
-* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension.informant
+* group[=].element[=].target.code = #FREncounterDocument.participant.individual.extension:informant
 * group[=].element[=].target.equivalence = #equivalent
 // lieu d'exécution
 * group[=].element[+].code = #FRCDARencontre.participant

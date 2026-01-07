@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument"
 Description: "Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument."
 
-* name = "Mapping Métier/CDA/FHIR : \"Types des résultats classés par type d’examens (BIO, IMG, etc…)\""
+* title = "Mapping Métier/CDA/FHIR : \"Types des résultats classés par type d’examens (BIO, IMG, etc…)\""
 * status = #draft   
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-entree"
@@ -39,7 +39,7 @@ Description: "Mapping des éléments du modèle métier FRLMResultatsEntry vers 
 * group[=].element[=].target.equivalence = #equivalent
 // Résultat
 * group[=].element[+].code = #FRLMResultatsEntry.resultat
-* group[=].element[=].target.code = #FRCDAResultats.component.frResultat
+* group[=].element[=].target.code = #FRCDAResultats.component:frResultat
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -64,13 +64,13 @@ Description: "Mapping des éléments du modèle métier FRLMResultatsEntry vers 
 * group[=].element[=].target.equivalence = #equivalent
 // Exécutant
 * group[=].element[+].code = #FRCDAResultats.performer
-* group[=].element[=].target.code = #FRDiagnosticReportDocument.performer.extension.performerFunction
+* group[=].element[=].target.code = #FRDiagnosticReportDocument.performer.extension:performerFunction
 * group[=].element[=].target.equivalence = #equivalent
 // Auteur
 * group[=].element[+].code = #FRCDAResultats.author
-* group[=].element[=].target.code = #FRDiagnosticReportDocument.resultsInterpreter.extension.performerFunction
+* group[=].element[=].target.code = #FRDiagnosticReportDocument.resultsInterpreter.extension:performerFunction
 * group[=].element[=].target.equivalence = #equivalent
 // Résultat
-* group[=].element[+].code = #FRCDAResultats.component.frResultat
+* group[=].element[+].code = #FRCDAResultats.component:frResultat
 * group[=].element[=].target.code = #FRDiagnosticReportDocument.result
 * group[=].element[=].target.equivalence = #equivalent

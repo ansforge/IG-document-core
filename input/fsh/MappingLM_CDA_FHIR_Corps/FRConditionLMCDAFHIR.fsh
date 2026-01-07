@@ -4,7 +4,7 @@ Usage: #definition
 Title: "Mapping FRLMCondition → FRCDACondition → FRConditionDocument"
 Description: "Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument."
 
-* name = "Mapping Métier/CDA/FHIR : \"Problème\""
+* title = "Mapping Métier/CDA/FHIR : \"Problème\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -41,19 +41,19 @@ Description: "Mapping des éléments du modèle métier FRLMProbleme vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 // Statut du problème
 * group[=].element[+].code = #FRLMProbleme.statutProbleme
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship.frStatutDuProbleme
+* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frStatutDuProbleme
 * group[=].element[=].target.equivalence = #equivalent
 // Sévérité
 * group[=].element[+].code = #FRLMProbleme.severite 
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship.frSeverite
+* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frSeverite
 * group[=].element[=].target.equivalence = #equivalent
 // Certitude
 * group[=].element[+].code = #FRLMProbleme.certitude
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship.frCertitude
+* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frCertitude
 * group[=].element[=].target.equivalence = #equivalent
 // Statut clinique du patient
 * group[=].element[+].code = #FRLMProbleme.statutClinique
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship.frStatutCliniqueDuPatient
+* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient
 * group[=].element[=].target.equivalence = #equivalent
 // Document référencé
 * group[=].element[+].code = #FRLMProbleme.reference
@@ -69,7 +69,7 @@ Description: "Mapping des éléments du modèle métier FRLMProbleme vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 // Commentaire
 * group[=].element[+].code = #FRLMProbleme.commentaire
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship.frCommentaireER
+* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frCommentaireER
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -108,19 +108,19 @@ Description: "Mapping des éléments du modèle métier FRLMProbleme vers le pro
 * group[=].element[=].target.code = #FRConditionDocument.abatementDateTime
 * group[=].element[=].target.equivalence = #equivalent
 // Statut du problème
-* group[=].element[+].code = #FRCDAProbleme.entryRelationship.frStatutDuProbleme
+* group[=].element[+].code = #FRCDAProbleme.entryRelationship:frStatutDuProbleme
 * group[=].element[=].target.code = #FRConditionDocument.clinicalStatus
 * group[=].element[=].target.equivalence = #equivalent
 // Sévérité
-* group[=].element[+].code = #FRCDAProbleme.entryRelationship.frSeverite
+* group[=].element[+].code = #FRCDAProbleme.entryRelationship:frSeverite
 * group[=].element[=].target.code = #FRConditionDocument.severity
 * group[=].element[=].target.equivalence = #equivalent
 // Certitude
-* group[=].element[+].code = #FRCDAProbleme.entryRelationship.frCertitude
+* group[=].element[+].code = #FRCDAProbleme.entryRelationship:frCertitude
 * group[=].element[=].target.code = #FRConditionDocument.verificationStatus
 * group[=].element[=].target.equivalence = #equivalent
 // Statut clinique du patient
-* group[=].element[+].code = #FRCDAProbleme.entryRelationship.frStatutCliniqueDuPatient
+* group[=].element[+].code = #FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient
 * group[=].element[=].target.code = #FRConditionDocument.stage.summary
 * group[=].element[=].target.equivalence = #equivalent
 // Document référencé
@@ -128,6 +128,6 @@ Description: "Mapping des éléments du modèle métier FRLMProbleme vers le pro
 * group[=].element[=].target.code = #FRConditionDocument.evidence.detail
 * group[=].element[=].target.equivalence = #equivalent
 // Commentaire
-* group[=].element[+].code = #FRCDAProbleme.entryRelationship.frCommentaireER
+* group[=].element[+].code = #FRCDAProbleme.entryRelationship:frCommentaireER
 * group[=].element[=].target.code = #FRConditionDocument.note
 * group[=].element[=].target.equivalence = #equivalent
