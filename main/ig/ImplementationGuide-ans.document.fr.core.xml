@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG document core"/>
   <status value="draft"/>
-  <date value="2025-12-15T10:59:45+00:00"/>
+  <date value="2026-01-07T21:19:48+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -290,7 +290,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.9.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -520,7 +520,7 @@
     <grouping id="Modèle métier du Corps d'un document(Eléments transversaux)">
       <name value="Modèles logiques métier des éléments transversaux"/>
     </grouping>
-    <grouping id="Ressources CDA">
+    <grouping id="Ressources CDA entête">
       <name value="Eléments CDA"/>
     </grouping>
     <grouping id="Ressources FHIR entête">
@@ -538,8 +538,11 @@
     <grouping id="Extensions FHIR corps">
       <name value="Extensions FHIR corps"/>
     </grouping>
-    <grouping id="Mapping">
-      <name value="Concept Maps"/>
+    <grouping id="Mapping ML-CDA-FHIR entête">
+      <name value="Concept Maps de l'entête du document"/>
+    </grouping>
+    <grouping id="Mapping ML-CDA-FHIR corps">
+      <name value="Concept Maps du corps d'un document"/>
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -610,7 +613,7 @@
       <name value="CDA - assignedAuthor"/>
       <description value="L'élément de l'en-tête du CDA assignedAuthor contient les éléments permettant de décrire l’auteur."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -622,7 +625,7 @@
       <name value="CDA - assignedCustodian"/>
       <description value="L'élément de l'en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -634,7 +637,7 @@
       <name value="CDA - assignedEntity"/>
       <description value="L'élément de l'en-tête du CDA assignedEntity est utilisé dans les éléments suivants : dataEnterer, informant, legalAuthenticator, authenticator, performer, responsibleParty et encounterParticipant."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -646,7 +649,7 @@
       <name value="CDA - assignedPerson"/>
       <description value="L'élément de l'en-tête du CDA assignedPerson permet de décrire une personne physique."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -658,7 +661,7 @@
       <name value="CDA - associatedEntity"/>
       <description value="L'élément de l'en-tête du CDA associatedEntity permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -670,7 +673,7 @@
       <name value="CDA - authenticator"/>
       <description value="L'élément de l'en-tête du CDA authenticator permet de représenter le professionnel (personne physique) attestant la validité du contenu du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -682,7 +685,7 @@
       <name value="CDA - author"/>
       <description value="L'élément de l'en-tête du CDA author permet d’enregistrer un auteur du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -694,7 +697,7 @@
       <name value="CDA - authoringDevice"/>
       <description value="L'élément de l'en-tête du CDA authoringDevice contient les informations complémentaires si l’auteur est un système."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -706,7 +709,7 @@
       <name value="CDA - authorization"/>
       <description value="L'élément de l'en-tête du CDA authorization permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -718,7 +721,7 @@
       <name value="CDA - clinicalDocument"/>
       <description value="L'élément de l'en-tête CDA 'ClinicalDocument' est l’élément racine d’un document médical."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -730,7 +733,7 @@
       <name value="CDA - componentOf"/>
       <description value="L'élément de l'en-tête du CDA componentOf permet d'associer le document à une prise en charge du patient/usager."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -742,7 +745,7 @@
       <name value="CDA - custodian"/>
       <description value="L'élément de l'en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -754,7 +757,7 @@
       <name value="CDA - dataEnterer"/>
       <description value="L'élément de l'en-tête du CDA dataEnterer contient les informations relatives à l’opérateur de saisie de tout ou partie du contenu du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -766,7 +769,7 @@
       <name value="CDA - documentationOf"/>
       <description value="L'élément de l'en-tête du CDA documentationOf permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -778,7 +781,7 @@
       <name value="CDA - encompassingEncounter"/>
       <description value="L'élément de l'en-tête du CDA encompassingEncounter permet de décrire la prise en charge du patient/usager par un professionnel ou par une structure."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -790,7 +793,7 @@
       <name value="CDA - encounterParticipant"/>
       <description value="L'élément de l'en-tête du CDA encounterParticipant permet de représenter la personne impliquée dans la prise en charge du patient/usager, comme par exemple, le professionnel co-responsable, le professionnel ayant fait l'admission ou encore le professionnel ayant donné son avis quant à la prise en charge."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -802,7 +805,7 @@
       <name value="CDA - healthCareFacility"/>
       <description value="L'élément de l'en-tête du CDA healthCareFacility permet de représenter la structure de prise en charge (cabinet du médecin, hôpital ou clinique, etc.)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -814,7 +817,7 @@
       <name value="CDA - informant"/>
       <description value="L'élément de l'en-tête du CDA informant permet d'identifier un informateur, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -826,7 +829,7 @@
       <name value="CDA - informationRecipient"/>
       <description value="L'élément de l'en-tête du CDA informationRecipient permet d'enregistrer une personne déclarée comme destinataire prévu du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -838,7 +841,7 @@
       <name value="CDA - inFulfillmentOf"/>
       <description value="L'élément de l'en-tête du CDA inFulfillmentOf permet d'associer un document à une prescription."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -850,7 +853,7 @@
       <name value="CDA - intendedRecipient"/>
       <description value="L'élément de l'en-tête du CDA intendedRecipient permet d'enregistrer le destinataire prévu du document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -862,7 +865,7 @@
       <name value="CDA - legalAuthenticator"/>
       <description value="L'élément de l'en-tête du CDA legalAuthenticator permet de représenter les caractéristiques du professionnel et/ou de l'établissement participant."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -874,7 +877,7 @@
       <name value="CDA - Name"/>
       <description value="L'élément de l'en-tête du CDA  correspond au nom d'une personne physique."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -886,7 +889,7 @@
       <name value="CDA - order"/>
       <description value="L'élément de l'en-tête du CDA order permet de représenter la prescription à l’origine de l’acte dont résulte le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -898,7 +901,7 @@
       <name value="CDA - parentDocument"/>
       <description value="L'élément de l'en-tête du CDA parentDocument permet de représenter le document de référence."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -910,7 +913,7 @@
       <name value="CDA - participant"/>
       <description value="L'élément de l'en-tête du CDA participant permet de représenter toute personne/structure impliquée dans les évènements décrits par le document qui n’a pas été mentionné ailleurs."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -922,7 +925,7 @@
       <name value="CDA - patient"/>
       <description value="L'élément de l'en-tête du CDA patient permet de représenter une personne physique."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -934,7 +937,7 @@
       <name value="CDA - patientRole"/>
       <description value="L'élément de l'en-tête du CDA patientRole permet de décrire le patient/usager."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -946,7 +949,7 @@
       <name value="CDA - performer"/>
       <description value="L'élément de l'en-tête du CDA performer permet de représenter l'exécutant de l’évènement documenté. Il est obligatoire et son attribut nullFlavor interdit pour l’évènement documenté principal."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -958,7 +961,7 @@
       <name value="CDA - recordTarget"/>
       <description value="L'élément de l'en-tête du CDA recordTarget permet de représenter le patient/usager concerné par le document."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -970,7 +973,7 @@
       <name value="CDA - relatedDocument"/>
       <description value="L'élément de l'en-tête du CDA relatedDocument permet de référencer un document existant (à remplacer ou transformé)."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -982,7 +985,7 @@
       <name value="CDA - relatedEntity"/>
       <description value="L'élément de l'en-tête du CDA relatedEntity permet de décrire : un informateur non professionnel, une personne de confiance, une personne à prévenir en cas d’urgence, un aidant ou une personne aidée."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -994,7 +997,7 @@
       <name value="CDA - representedCustodianOrganization"/>
       <description value="L'élément de l'en-tête du CDA representedCustodianOrganization contient les éléments caractérisant la structure conservant le document, à savoir l'identifiant, le nom, les adresses géopostales et de télécommunication."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1006,7 +1009,7 @@
       <name value="CDA - representedOrganization"/>
       <description value="L'élément de l'en-tête du CDA representedOrganization permet de représenter la structure pour le compte de laquelle intervient le professionnel."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1018,7 +1021,7 @@
       <name value="CDA - serviceEvent"/>
       <description value="L'élément de l'en-tête du CDA serviceEvent permet de représenter un évènement (acte, traitement, diagnostic, etc…) décrit dans le document. &#xA;L'occurrence de documentationOf/serviceEvent contenant les données de l’évènement documenté principal doit inclure un élément effectiveTime et un élément performer renseignés, sans recours à l'attribut nullFlavor."/>
       <exampleBoolean value="false"/>
-      <groupingId value="Ressources CDA"/>
+      <groupingId value="Ressources CDA entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1663,12 +1666,144 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRActLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMActe → FRCDAActe → FRProcedureActDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureActDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAllergyIntoleranceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -&gt; FRAllergyIntoleranceDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRConditionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCondition → FRCDACondition → FRConditionDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAdvanceDirectiveLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDeviceUseStatementLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le&#xA;profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDocumentReferenceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAdverseEventLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDeviceRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMOrdreDispositifMedical → FRCDAOrdreDispositifMedical → FRDeviceRequestDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRCarePlanLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FREncounterLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDiagnosticReportLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR corps"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/mappingmodelemetierCDAFHIR"/>
       </reference>
       <name value="Mapping Métier/CDA/FHIR  : Entête d'un document"/>
       <description value="Ce ConceptMap présente trois groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;EnteteDocument\&quot; et l'élément CDA \&quot;clinicalDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrBundleDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrCompositionDocument\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1680,7 +1815,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Auteur&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;Auteur\&quot; et l'élément CDA \&quot;author\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;author\&quot; et l'élément FHIR \&quot;Composition.author\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1692,7 +1827,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Consentement&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;ConsentementAssocie\&quot; et l'élément CDA \&quot;authorization\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authorization\&quot; et l'extension FHIR \&quot;ConsentExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1704,7 +1839,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Destinataire prévu&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;destinataire\&quot; et l'élément CDA \&quot;informationRecipient\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informationRecipient\&quot; et l'extension FHIR \&quot;InformationRecipientExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1716,7 +1851,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;DocumentDeReference&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;documentDeReference\&quot; et l'élément CDA \&quot;relatedDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedDocument\&quot; et l'élément FHIR \&quot;Composition.relatesTo\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1728,7 +1863,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Evènement documenté&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 :entre le modèle métier \&quot;evenement\&quot; et l'élément CDA \&quot;documentationOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;documentationOf\&quot; et l'élément FHIR \&quot;Composition.event\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1740,7 +1875,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Informateur&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;informateur\&quot; et l'élément CDA \&quot;informant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informant\&quot; et l'extension FHIR \&quot;InformantExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1752,7 +1887,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;operateurSaisie\&quot; et l'élément CDA \&quot;dataEnterer\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;dataEnterer\&quot; et l'extension FHIR \&quot;DataEntererExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1764,7 +1899,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Participant&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;participant\&quot; et l'élément CDA \&quot;participant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;participant\&quot; et l'extension FHIR \&quot;ParticipantExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1776,7 +1911,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;patient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;recordTarget\&quot; et le profil FHIR \&quot;FrPatientDocument\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1788,7 +1923,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;"/>
       <description value="Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructure\&quot; et l'élément CDA \&quot;assignedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedEntity\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1800,7 +1935,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;"/>
       <description value="Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1812,7 +1947,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;"/>
       <description value="Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: &#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMPersonneStructure\&quot; et l'élément CDA \&quot;relatedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedEntity\&quot; et le profil FHIR \&quot;FrRelatedPersonDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;relatedEntity\&quot; et l'élément FHIR \&quot;Patient.contact\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1824,7 +1959,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prescription\&quot; et l'élément CDA \&quot;inFulfillmentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;inFulfillmentOf\&quot; et l'extension FHIR \&quot;OrderExtension\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1836,7 +1971,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Prise en charge&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prise en charge\&quot; et l'élément CDA \&quot;componentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;componentOf\&quot; et l'élément FHIR \&quot;Composition.encounter(Encounter)\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1848,7 +1983,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;responsable\&quot; et l'élément CDA \&quot;legalAuthenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;legalAuthenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1860,7 +1995,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;structureConservation\&quot; et l'élément CDA \&quot;custodian\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;custodian\&quot; et l'élément FHIR \&quot;Composition.custodian\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1872,7 +2007,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;"/>
       <description value="Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;SystemeStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrDeviceDocument\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1884,7 +2019,7 @@
       <name value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;validateur\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
       <exampleBoolean value="false"/>
-      <groupingId value="Mapping"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

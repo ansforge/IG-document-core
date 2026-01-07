@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureAssignedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2025-12-15 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" |
+| Draft as of 2026-01-07 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente deux groupes de mapping : 
@@ -31,7 +31,7 @@ Ce ConceptMap de l’élément PersonneStructure présente deux groupes de mappi
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2025-12-15T10:59:45+00:00",
+  "date" : "2026-01-07T21:19:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

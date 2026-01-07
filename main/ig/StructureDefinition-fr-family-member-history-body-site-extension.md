@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-body-site-extension | *Version*:0.1.0 |
-| Draft as of 2025-12-15 | *Computable Name*:FRFamilyMemberHistoryBodySiteExtension |
+| Draft as of 2026-01-07 | *Computable Name*:FRFamilyMemberHistoryBodySiteExtension |
 
 Extension permettant d’indiquer la localisation anatomique d’une condition dans antécédents familiaux
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-family-member-his
   "name" : "FRFamilyMemberHistoryBodySiteExtension",
   "title" : "FR Family Member History Body Site Extension",
   "status" : "draft",
-  "date" : "2025-12-15T10:59:45+00:00",
+  "date" : "2026-01-07T21:19:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

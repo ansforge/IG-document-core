@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention | *Version*:0.1.0 |
-| Draft as of 2025-12-15 | *Computable Name*:FRLMResultatsLaboratoireBiologieSecondeIntention |
+| Draft as of 2026-01-07 | *Computable Name*:FRLMResultatsLaboratoireBiologieSecondeIntention |
 
  
 Section Résultats de laboratoire de biologie de seconde intention 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-labo
   "name" : "FRLMResultatsLaboratoireBiologieSecondeIntention",
   "title" : "Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention",
   "status" : "draft",
-  "date" : "2025-12-15T10:59:45+00:00",
+  "date" : "2026-01-07T21:19:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

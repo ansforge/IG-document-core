@@ -361,7 +361,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [FR Procedure Priority Extension](StructureDefinition-fr-procedure-priority-extension.md) | Extension permettant d’indiquer d’indique la priorité clinique de l’observation. |
 | [FR Status Reason Extension](StructureDefinition-fr-status-reason-extension.md) | Extension permettant d’indiquer le motif du statut métier d’une évaluation. |
 
-### Concept Maps 
+### Concept Maps de l'entête du document 
 
 | | |
 | :--- | :--- |
@@ -424,6 +424,22 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [Mapping Métier/CDA/FHIR : "Validateur"](ConceptMap-mappingValidateurCDAFHIR.md) | Ce ConceptMap présente deux groupes de mapping :* Mapping 1 : entre le modèle métier "validateur" et l’élément CDA "authenticator"
 * Mapping 2 : entre l’élément CDA "authenticator" et l’élément FHIR "Composition.attester"
  |
+
+### Concept Maps du corps d'un document 
+
+| | |
+| :--- | :--- |
+| [Mapping FRLMActe → FRCDAActe → FRProcedureActDocument](ConceptMap-FRActLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureActDocument. |
+| [Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -> FRAllergyIntoleranceDocument](ConceptMap-FRAllergyIntoleranceLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument. |
+| [Mapping FRLMCondition → FRCDACondition → FRConditionDocument](ConceptMap-FRConditionLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument. |
+| [Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument](ConceptMap-FRAdvanceDirectiveLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument. |
+| [Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement](ConceptMap-FRDeviceUseStatementLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument. |
+| [Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument](ConceptMap-FRDocumentReferenceLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument. |
+| [Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument](ConceptMap-FRAdverseEventLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent. |
+| [Mapping FRLMOrdreDispositifMedical → FRCDAOrdreDispositifMedical → FRDeviceRequestDocument](ConceptMap-FRDeviceRequestLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument. |
+| [Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument](ConceptMap-FRCarePlanLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument. |
+| [Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument](ConceptMap-FREncounterLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument. |
+| [Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument](ConceptMap-FRDiagnosticReportLMCDAFHIR.md) | Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument. |
 
 ### Structures: Extension Definitions 
 

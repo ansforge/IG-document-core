@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document | *Version*:0.1.0 |
-| Draft as of 2025-12-15 | *Computable Name*:FRMedicationAdministrationDocument |
+| Draft as of 2026-01-07 | *Computable Name*:FRMedicationAdministrationDocument |
 
  
 * FRMedicationAdministrationDocument permert de décrire les modalités d’administration d’un médicament au patient.
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-medication-admini
   "name" : "FRMedicationAdministrationDocument",
   "title" : "MedicationAdministration - FR Medication Administration Document",
   "status" : "draft",
-  "date" : "2025-12-15T10:59:45+00:00",
+  "date" : "2026-01-07T21:19:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

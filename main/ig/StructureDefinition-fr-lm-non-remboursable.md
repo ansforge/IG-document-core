@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-non-remboursable | *Version*:0.1.0 |
-| Draft as of 2025-12-15 | *Computable Name*:FRLMNonRemboursable |
+| Draft as of 2026-01-07 | *Computable Name*:FRLMNonRemboursable |
 
  
 Modèle logique métier - FR LM Entrée Non remboursable 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-non-remboursab
   "name" : "FRLMNonRemboursable",
   "title" : "Non remboursable",
   "status" : "draft",
-  "date" : "2025-12-15T10:59:45+00:00",
+  "date" : "2026-01-07T21:19:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
