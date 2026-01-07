@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDocumentReferenceLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Document Referencé" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA
   "id" : "FRDocumentReferenceLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDocumentReferenceLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Document Referencé\"",
-  "title" : "Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Document Referencé\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -106,7 +105,7 @@ Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA
           "code" : "FRLMDocumentAttache.typeDocumentAttache",
           "target" : [
             {
-              "code" : "FRCDADocumentAttache.component.frTypeDocumentAttache",
+              "code" : "FRCDADocumentAttache.component:frTypeDocumentAttache",
               "equivalence" : "equivalent"
             }
           ]
@@ -189,7 +188,7 @@ Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA
           ]
         },
         {
-          "code" : "FRCDADocumentAttache.component.frTypeDocumentAttache",
+          "code" : "FRCDADocumentAttache.component:frTypeDocumentAttache",
           "target" : [
             {
               "code" : "FRDocumentReferenceDocument.type",

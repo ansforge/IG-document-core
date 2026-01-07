@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRAdverseEventLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Effet Indésirable" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
   "id" : "FRAdverseEventLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRAdverseEventLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Effet Indésirable\"",
-  "title" : "Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Effet Indésirable\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -115,7 +114,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           "code" : "FRLMEffetIndesirable.traitement",
           "target" : [
             {
-              "code" : "FRCDAEffetIndesirable.entryRelationship.frTraitement",
+              "code" : "FRCDAEffetIndesirable.entryRelationship:frTraitement",
               "equivalence" : "equivalent"
             }
           ]
@@ -124,7 +123,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           "code" : "FRLMEffetIndesirable.probleme",
           "target" : [
             {
-              "code" : "FRCDAEffetIndesirable.entryRelationship.frProbleme",
+              "code" : "FRCDAEffetIndesirable.entryRelationship:frProbleme",
               "equivalence" : "equivalent"
             }
           ]
@@ -133,7 +132,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           "code" : "FRLMEffetIndesirable.imputabiliteEffetIndesirable",
           "target" : [
             {
-              "code" : "FRCDAEffetIndesirable.entryRelationship.frImputabiliteEffetIndesirable",
+              "code" : "FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable",
               "equivalence" : "equivalent"
             }
           ]
@@ -142,7 +141,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           "code" : "FRLMEffetIndesirable.graviteEffetIndesirable",
           "target" : [
             {
-              "code" : "FRCDAEffetIndesirable.entryRelationship.frGraviteEffetIndesirable",
+              "code" : "FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable",
               "equivalence" : "equivalent"
             }
           ]
@@ -151,7 +150,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           "code" : "FRLMEffetIndesirable.evolutionEffetIndesirable",
           "target" : [
             {
-              "code" : "FRCDAEffetIndesirable.entryRelationship.frEvolutionEffetIndesirable",
+              "code" : "FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable",
               "equivalence" : "equivalent"
             }
           ]
@@ -225,7 +224,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           ]
         },
         {
-          "code" : "FRCDAEffetIndesirable.entryRelationship.frTraitement",
+          "code" : "FRCDAEffetIndesirable.entryRelationship:frTraitement",
           "target" : [
             {
               "code" : "FRAdverseEventDocument.suspectEntity.instance",
@@ -234,7 +233,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           ]
         },
         {
-          "code" : "FRCDAEffetIndesirable.entryRelationship.frProbleme",
+          "code" : "FRCDAEffetIndesirable.entryRelationship:frProbleme",
           "target" : [
             {
               "code" : "FRAdverseEventDocument.resultingCondition",
@@ -243,7 +242,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           ]
         },
         {
-          "code" : "FRCDAEffetIndesirable.entryRelationship.frImputabiliteEffetIndesirable",
+          "code" : "FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable",
           "target" : [
             {
               "code" : "FRAdverseEventDocument.suspectEntity.causality",
@@ -252,7 +251,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           ]
         },
         {
-          "code" : "FRCDAEffetIndesirable.entryRelationship.frGraviteEffetIndesirable",
+          "code" : "FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable",
           "target" : [
             {
               "code" : "FRAdverseEventDocument.seriousness",
@@ -261,7 +260,7 @@ Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profi
           ]
         },
         {
-          "code" : "FRCDAEffetIndesirable.entryRelationship.frEvolutionEffetIndesirable",
+          "code" : "FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable",
           "target" : [
             {
               "code" : "FRAdverseEventDocument.outcome",

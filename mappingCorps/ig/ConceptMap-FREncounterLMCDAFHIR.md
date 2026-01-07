@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FREncounterLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Encounter" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDA
   "id" : "FREncounterLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FREncounterLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Encounter\"",
-  "title" : "Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Encounter\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -229,7 +228,7 @@ Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDA
           "code" : "FRCDARencontre.performer",
           "target" : [
             {
-              "code" : "FREncounterDocument.participant.individual.extension.executant",
+              "code" : "FREncounterDocument.participant.individual.extension:executant",
               "equivalence" : "equivalent"
             }
           ]
@@ -238,7 +237,7 @@ Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDA
           "code" : "FRCDARencontre.author",
           "target" : [
             {
-              "code" : "FREncounterDocument.participant.individual.extension.author",
+              "code" : "FREncounterDocument.participant.individual.extension:author",
               "equivalence" : "equivalent"
             }
           ]
@@ -247,7 +246,7 @@ Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDA
           "code" : "FRCDARencontre.informant",
           "target" : [
             {
-              "code" : "FREncounterDocument.participant.individual.extension.informant",
+              "code" : "FREncounterDocument.participant.individual.extension:informant",
               "equivalence" : "equivalent"
             }
           ]

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDiagnosticReportLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Types des résultats classés par type d’examens (BIO, IMG, etc…)" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA 
   "id" : "FRDiagnosticReportLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDiagnosticReportLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Types des résultats classés par type d’examens (BIO, IMG, etc…)\"",
-  "title" : "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Types des résultats classés par type d’examens (BIO, IMG, etc…)\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -124,7 +123,7 @@ Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA 
           "code" : "FRLMResultatsEntry.resultat",
           "target" : [
             {
-              "code" : "FRCDAResultats.component.frResultat",
+              "code" : "FRCDAResultats.component:frResultat",
               "equivalence" : "equivalent"
             }
           ]
@@ -175,7 +174,7 @@ Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA 
           "code" : "FRCDAResultats.performer",
           "target" : [
             {
-              "code" : "FRDiagnosticReportDocument.performer.extension.performerFunction",
+              "code" : "FRDiagnosticReportDocument.performer.extension:performerFunction",
               "equivalence" : "equivalent"
             }
           ]
@@ -184,13 +183,13 @@ Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA 
           "code" : "FRCDAResultats.author",
           "target" : [
             {
-              "code" : "FRDiagnosticReportDocument.resultsInterpreter.extension.performerFunction",
+              "code" : "FRDiagnosticReportDocument.resultsInterpreter.extension:performerFunction",
               "equivalence" : "equivalent"
             }
           ]
         },
         {
-          "code" : "FRCDAResultats.component.frResultat",
+          "code" : "FRCDAResultats.component:frResultat",
           "target" : [
             {
               "code" : "FRDiagnosticReportDocument.result",

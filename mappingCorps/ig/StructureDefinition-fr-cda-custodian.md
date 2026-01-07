@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:FRCDACustodian |
+| Draft as of 2026-01-07 | *Computable Name*:FRCDACustodian |
 
  
 L’élément de l’en-tête du CDA custodian permet de représenter la structure chargée de la conservation du document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-custodian.csv
   "name" : "FRCDACustodian",
   "title" : "CDA - custodian",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRActLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Acte" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureActDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
   "id" : "FRActLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRActLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Acte\"",
-  "title" : "Mapping FRLMActe → FRCDAActe → FRProcedureActDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Acte\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -187,7 +186,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRLMActe.circonstances",
           "target" : [
             {
-              "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+              "code" : "FRCDAActe.entryRelationship:frReferenceInterne",
               "equivalence" : "equivalent"
             }
           ]
@@ -196,7 +195,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRLMActe.reason",
           "target" : [
             {
-              "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+              "code" : "FRCDAActe.entryRelationship:frReferenceInterne",
               "equivalence" : "equivalent"
             }
           ]
@@ -205,7 +204,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRLMActe.dispositifMedical",
           "target" : [
             {
-              "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+              "code" : "FRCDAActe.entryRelationship:frReferenceInterne",
               "equivalence" : "equivalent"
             }
           ]
@@ -214,7 +213,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRLMActe.difficulte",
           "target" : [
             {
-              "code" : "FRCDAActe.entryRelationship.frSimpleObservation",
+              "code" : "FRCDAActe.entryRelationship:frSimpleObservationDifficulte",
               "equivalence" : "equivalent"
             }
           ]
@@ -223,7 +222,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRLMActe.scores",
           "target" : [
             {
-              "code" : "FRCDAActe.entryRelationship.frSimpleObservation",
+              "code" : "FRCDAActe.entryRelationship:frSimpleObservationScores",
               "equivalence" : "equivalent"
             }
           ]
@@ -294,7 +293,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           ]
         },
         {
-          "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+          "code" : "FRCDAActe.entryRelationship:frReferenceInterneDM",
           "target" : [
             {
               "code" : "FRProcedureActDocument.usedReference",
@@ -304,7 +303,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           ]
         },
         {
-          "code" : "FRCDAActe.entryRelationship.frSimpleObservation",
+          "code" : "FRCDAActe.entryRelationship:frSimpleObservationObservationsLiees",
           "target" : [
             {
               "code" : "FRProcedureActDocument.partOf",
@@ -317,7 +316,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRCDAActe.performer",
           "target" : [
             {
-              "code" : "FRProcedureActDocument.performer.actor.extension.Intervenant",
+              "code" : "FRProcedureActDocument.performer.actor.extension:Intervenant",
               "equivalence" : "equivalent"
             }
           ]
@@ -326,7 +325,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRCDAActe.informant",
           "target" : [
             {
-              "code" : "FRProcedureActDocument.performer.actor.extension.Informateur",
+              "code" : "FRProcedureActDocument.performer.actor.extension:Informateur",
               "equivalence" : "equivalent"
             }
           ]
@@ -335,13 +334,13 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRCDAActe.participant",
           "target" : [
             {
-              "code" : "FRProcedureActDocument.performer.actor.extension.Participant",
+              "code" : "FRProcedureActDocument.performer.actor.extension:Participant",
               "equivalence" : "equivalent"
             }
           ]
         },
         {
-          "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+          "code" : "FRCDAActe.entryRelationship:frReferenceInterneMotifActe",
           "target" : [
             {
               "code" : "FRProcedureActDocument.reasonReference",
@@ -351,7 +350,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           ]
         },
         {
-          "code" : "FRCDAActe.entryRelationship.frReferenceInterne",
+          "code" : "FRCDAActe.entryRelationship:frReferenceInterneRencontreAssociee",
           "target" : [
             {
               "code" : "FRProcedureActDocument.encounter",
@@ -364,7 +363,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "FRCDAActe.author",
           "target" : [
             {
-              "code" : "FRProcedureActDocument.recorder.extension.author",
+              "code" : "FRProcedureActDocument.recorder.extension:author",
               "equivalence" : "equivalent",
               "comment" : "author CDA → recorder FHIR."
             }
@@ -374,7 +373,7 @@ Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe,
           "code" : "priorityCode",
           "target" : [
             {
-              "code" : "FRProcedureActDocument.extension.priority",
+              "code" : "FRProcedureActDocument.extension:priority",
               "equivalence" : "equivalent"
             }
           ]

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRConditionLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Problème" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
   "id" : "FRConditionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRConditionLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Problème\"",
-  "title" : "Mapping FRLMCondition → FRCDACondition → FRConditionDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Problème\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -124,7 +123,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           "code" : "FRLMProbleme.statutProbleme",
           "target" : [
             {
-              "code" : "FRCDAProbleme.entryRelationship.frStatutDuProbleme",
+              "code" : "FRCDAProbleme.entryRelationship:frStatutDuProbleme",
               "equivalence" : "equivalent"
             }
           ]
@@ -133,7 +132,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           "code" : "FRLMProbleme.severite",
           "target" : [
             {
-              "code" : "FRCDAProbleme.entryRelationship.frSeverite",
+              "code" : "FRCDAProbleme.entryRelationship:frSeverite",
               "equivalence" : "equivalent"
             }
           ]
@@ -142,7 +141,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           "code" : "FRLMProbleme.certitude",
           "target" : [
             {
-              "code" : "FRCDAProbleme.entryRelationship.frCertitude",
+              "code" : "FRCDAProbleme.entryRelationship:frCertitude",
               "equivalence" : "equivalent"
             }
           ]
@@ -151,7 +150,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           "code" : "FRLMProbleme.statutClinique",
           "target" : [
             {
-              "code" : "FRCDAProbleme.entryRelationship.frStatutCliniqueDuPatient",
+              "code" : "FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient",
               "equivalence" : "equivalent"
             }
           ]
@@ -187,7 +186,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           "code" : "FRLMProbleme.commentaire",
           "target" : [
             {
-              "code" : "FRCDAProbleme.entryRelationship.frCommentaireER",
+              "code" : "FRCDAProbleme.entryRelationship:frCommentaireER",
               "equivalence" : "equivalent"
             }
           ]
@@ -270,7 +269,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           ]
         },
         {
-          "code" : "FRCDAProbleme.entryRelationship.frStatutDuProbleme",
+          "code" : "FRCDAProbleme.entryRelationship:frStatutDuProbleme",
           "target" : [
             {
               "code" : "FRConditionDocument.clinicalStatus",
@@ -279,7 +278,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           ]
         },
         {
-          "code" : "FRCDAProbleme.entryRelationship.frSeverite",
+          "code" : "FRCDAProbleme.entryRelationship:frSeverite",
           "target" : [
             {
               "code" : "FRConditionDocument.severity",
@@ -288,7 +287,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           ]
         },
         {
-          "code" : "FRCDAProbleme.entryRelationship.frCertitude",
+          "code" : "FRCDAProbleme.entryRelationship:frCertitude",
           "target" : [
             {
               "code" : "FRConditionDocument.verificationStatus",
@@ -297,7 +296,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           ]
         },
         {
-          "code" : "FRCDAProbleme.entryRelationship.frStatutCliniqueDuPatient",
+          "code" : "FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient",
           "target" : [
             {
               "code" : "FRConditionDocument.stage.summary",
@@ -315,7 +314,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
           ]
         },
         {
-          "code" : "FRCDAProbleme.entryRelationship.frCommentaireER",
+          "code" : "FRCDAProbleme.entryRelationship:frCommentaireER",
           "target" : [
             {
               "code" : "FRConditionDocument.note",

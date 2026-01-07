@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-probleme | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:FRLMProbleme |
+| Draft as of 2026-01-07 | *Computable Name*:FRLMProbleme |
 
  
 Entrée Problème 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-probleme.csv),
   "name" : "FRLMProbleme",
   "title" : "Modèle logique métier - FR LM Problème",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

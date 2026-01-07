@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -721,8 +721,12 @@
       "name" : "Extensions FHIR corps"
     },
     {
-      "id" : "Mapping",
-      "name" : "Concept Maps"
+      "id" : "Mapping ML-CDA-FHIR entête",
+      "name" : "Concept Maps de l'entête du document"
+    },
+    {
+      "id" : "Mapping ML-CDA-FHIR corps",
+      "name" : "Concept Maps du corps d'un document"
     }],
     "resource" : [{
       "extension" : [{
@@ -1945,7 +1949,8 @@
       },
       "name" : "Mapping FRLMActe → FRCDAActe → FRProcedureActDocument",
       "description" : "Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureActDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -1957,7 +1962,8 @@
       },
       "name" : "Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -> FRAllergyIntoleranceDocument",
       "description" : "Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -1969,7 +1975,8 @@
       },
       "name" : "Mapping FRLMCondition → FRCDACondition → FRConditionDocument",
       "description" : "Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -1981,7 +1988,8 @@
       },
       "name" : "Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -1993,7 +2001,8 @@
       },
       "name" : "Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement",
       "description" : "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le\nprofil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2005,7 +2014,8 @@
       },
       "name" : "Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2017,7 +2027,8 @@
       },
       "name" : "Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument",
       "description" : "Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2029,7 +2040,8 @@
       },
       "name" : "Mapping FRLMOrdreDispositifMedical → FRCDAOrdreDispositifMedical → FRDeviceRequestDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2041,7 +2053,8 @@
       },
       "name" : "Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument",
       "description" : "Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2053,7 +2066,8 @@
       },
       "name" : "Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument",
       "description" : "Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2065,7 +2079,8 @@
       },
       "name" : "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR corps"
     },
     {
       "extension" : [{
@@ -2078,7 +2093,7 @@
       "name" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
       "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2091,7 +2106,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2104,7 +2119,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2117,7 +2132,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2130,7 +2145,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2143,7 +2158,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2156,7 +2171,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2169,7 +2184,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2182,7 +2197,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Participant\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2195,7 +2210,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2208,7 +2223,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2221,7 +2236,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2234,7 +2249,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2247,7 +2262,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2260,7 +2275,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2273,7 +2288,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2286,7 +2301,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2299,7 +2314,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"",
       "description" : "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -2312,7 +2327,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "Mapping"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRCarePlanLMCDAFHIR | *Version*:0.1.0 |
-| Active as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Référence Item Plan Traitement" |
+| Active as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
   "id" : "FRCarePlanLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRCarePlanLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Référence Item Plan Traitement\"",
-  "title" : "Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Référence Item Plan Traitement\"",
   "status" : "active",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -88,7 +87,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           "code" : "FRLMReferenceItemPlanTraitement.produitSante",
           "target" : [
             {
-              "code" : "FRCDAReferenceItemPlanTraitement.frProduitSante",
+              "code" : "FRCDAReferenceItemPlanTraitement.consumable",
               "equivalence" : "equivalent"
             }
           ]
@@ -106,7 +105,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           "code" : "FRLMReferenceItemPlanTraitement.traitementPrescrit",
           "target" : [
             {
-              "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship.frItemPlanTraitement",
+              "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
               "equivalence" : "equivalent"
             }
           ]
@@ -163,7 +162,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           ]
         },
         {
-          "code" : "FRCDAReferenceItemPlanTraitement.frProduitSante",
+          "code" : "FRCDAReferenceItemPlanTraitement.consumable",
           "target" : [
             {
               "code" : "FRCarePlanDocument.activity.detail.productReference",
@@ -181,10 +180,10 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           ]
         },
         {
-          "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship.frItemPlanTraitement",
+          "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
           "target" : [
             {
-              "code" : "FRCarePlanDocument.activity.reference[FRMedicationRequestDocument]",
+              "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
               "equivalence" : "equivalent"
             }
           ]
@@ -193,7 +192,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           "code" : "FRCDAReferenceItemPlanTraitement.reference",
           "target" : [
             {
-              "code" : "FRCarePlanDocument.activity.reference[FRMedicationRequestDocument]",
+              "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
               "equivalence" : "equivalent"
             }
           ]
@@ -202,7 +201,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
           "code" : "FRCDAReferenceItemPlanTraitement.reference.externalDocument.id",
           "target" : [
             {
-              "code" : "FRCarePlanDocument.activity.reference[FRMedicationRequestDocument].identifier",
+              "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument.identifier",
               "equivalence" : "equivalent"
             }
           ]

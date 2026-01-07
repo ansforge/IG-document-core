@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDeviceRequestLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-05 | *Computable Name*:Mapping Métier/CDA/FHIR : "Prescription de dispositif médical" |
+| Draft as of 2026-01-07 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument. 
@@ -24,10 +24,9 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
   "id" : "FRDeviceRequestLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDeviceRequestLMCDAFHIR",
   "version" : "0.1.0",
-  "name" : "Mapping Métier/CDA/FHIR : \"Prescription de dispositif médical\"",
-  "title" : "Mapping FRLMOrdreDispositifMedical → FRCDAOrdreDispositifMedical → FRDeviceRequestDocument",
+  "title" : "Mapping Métier/CDA/FHIR : \"Prescription de dispositif médical\"",
   "status" : "draft",
-  "date" : "2026-01-05T15:47:03+00:00",
+  "date" : "2026-01-07T15:20:53+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -142,7 +141,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRLMDispositifMedicalEntree.affectionLongueDuree",
           "target" : [
             {
-              "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecALD",
+              "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD",
               "equivalence" : "equivalent"
             }
           ]
@@ -151,7 +150,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRLMDispositifMedicalEntree.accidentTravail",
           "target" : [
             {
-              "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecAccidentTravail",
+              "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail",
               "equivalence" : "equivalent"
             }
           ]
@@ -160,7 +159,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRLMDispositifMedicalEntree.prevention",
           "target" : [
             {
-              "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecPrevention",
+              "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention",
               "equivalence" : "equivalent"
             }
           ]
@@ -169,7 +168,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRLMDispositifMedicalEntree.nonRemboursable",
           "target" : [
             {
-              "code" : "FRCDADispositifMedical.entryRelationship.frNonRemboursable",
+              "code" : "FRCDADispositifMedical.entryRelationship:frNonRemboursable",
               "equivalence" : "equivalent"
             }
           ]
@@ -247,7 +246,7 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           "code" : "FRCDADispositifMedical.author",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.requester.extension.prescripteur",
+              "code" : "FRDeviceRequestDocument.requester.extension:prescripteur",
               "equivalence" : "equivalent"
             }
           ]
@@ -262,37 +261,37 @@ Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le pr
           ]
         },
         {
-          "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecALD",
+          "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.reasonReference.EnRapportAvecALD",
+              "code" : "FRDeviceRequestDocument.reasonReference:EnRapportAvecALD",
               "equivalence" : "equivalent"
             }
           ]
         },
         {
-          "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecAccidentTravail",
+          "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.reasonReference.EnRapportAvecAccidentTravail",
+              "code" : "FRDeviceRequestDocument.reasonReference:EnRapportAvecAccidentTravail",
               "equivalence" : "equivalent"
             }
           ]
         },
         {
-          "code" : "FRCDADispositifMedical.entryRelationship.frEnRapportAvecPrevention",
+          "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.reasonReference.EnRapportAvecLaPrevention",
+              "code" : "FRDeviceRequestDocument.reasonReference:EnRapportAvecLaPrevention",
               "equivalence" : "equivalent"
             }
           ]
         },
         {
-          "code" : "FRCDADispositifMedical.entryRelationship.frNonRemboursable",
+          "code" : "FRCDADispositifMedical.entryRelationship:frNonRemboursable",
           "target" : [
             {
-              "code" : "FRDeviceRequestDocument.extension.notCovered",
+              "code" : "FRDeviceRequestDocument.extension:notCovered",
               "equivalence" : "equivalent"
             }
           ]
