@@ -7,7 +7,7 @@ WITH AllGroups AS (
   -- Récupère tous les groupes de tous les ConceptMap et leur index
   SELECT
     r.id AS cm_id,
-    r.name AS Name,
+    r.title AS Title,
     r.Web AS Web,
     g.key AS group_index,
     g.value AS group_json,
@@ -22,7 +22,7 @@ ClassifiedGroups AS (
   -- Classer chaque groupe en METIER / CDA / FHIR
   SELECT
     cm_id,
-    Name,
+    Title,
     Web,
     group_index,
     group_json,
@@ -43,7 +43,7 @@ Elements AS (
   -- Extraire éléments + targets de chaque groupe classé
   SELECT
     cg.cm_id,
-    cg.Name,
+    cg.Title,
     cg.Web,
     cg.group_index,
     cg.grp_type,
@@ -58,7 +58,7 @@ Elements AS (
 MetierToCDA AS (
   SELECT
     cm_id,
-    Name,
+    Title,
     Web,
     group_index,
     elem_index,
@@ -82,7 +82,7 @@ FinalMapping AS (
   -- Join Metier->CDA with CDA->FHIR
   SELECT
     m.Web,
-    m.Name,
+    m.Title,
     m.group_index,
     m.elem_index,
     m.Metier,
@@ -138,11 +138,11 @@ END AS Metier,
     WHEN FHIR NOT LIKE '%.%' THEN '**' || FHIR || '**'
     ELSE FHIR
   END AS FHIR,
-  Name AS \"Titre du profil\",
+  Title AS \"Titre du profil\",
   Web
 FROM FinalMapping
 ORDER BY
-  Name,
+  Title,
   group_index,
   elem_index
 ",

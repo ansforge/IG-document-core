@@ -68,15 +68,15 @@ Description: "Mapping des éléments du modèle métier FRLMActe vers le profil 
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #FRLMActe.circonstances
-* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterne
+* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterneCirconstances
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #FRLMActe.reason
-* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterne
+* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterneMotifActe
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #FRLMActe.dispositifMedical
-* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterne
+* group[=].element[=].target.code = #FRCDAActe.entryRelationship:frReferenceInterneDM
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #FRLMActe.difficulte
@@ -133,11 +133,11 @@ Description: "Mapping des éléments du modèle métier FRLMActe vers le profil 
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "DM référencé dans usedReference."
 
-/* Observations liées */
-* group[=].element[+].code = #FRCDAActe.entryRelationship:frSimpleObservationObservationsLiees
+/* Observations liées aux scores */
+* group[=].element[+].code = #FRCDAActe.entryRelationship:frSimpleObservationScores
 * group[=].element[=].target.code = #FRProcedureActDocument.partOf
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Les observations deviennent partOf."
+* group[=].element[=].target.comment = "Les observations liées aux scores deviennent partOf."
 
 /* Performers / Informant / Participant */
 * group[=].element[+].code = #FRCDAActe.performer
@@ -159,10 +159,15 @@ Description: "Mapping des éléments du modèle métier FRLMActe vers le profil 
 * group[=].element[=].target.comment = "Motif de l'acte en CDA correspond à reasonReference en FHIR."
 
 /* Rencontre associée */
-* group[=].element[+].code = #FRCDAActe.entryRelationship:frReferenceInterneRencontreAssociee
+* group[=].element[+].code = #FRCDAActe.entryRelationship:frReferenceInterneCirconstances
 * group[=].element[=].target.code = #FRProcedureActDocument.encounter
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Référence de contexte CDA → Encounter FHIR."
+
+/* Difficulté */
+* group[=].element[+].code = #FRCDAActe.entryRelationship:frSimpleObservationDifficulte
+* group[=].element[=].target.code = #FRProcedureActDocument.extension:difficulte
+* group[=].element[=].target.equivalence = #equivalent
 
 /* author → recorder */
 * group[=].element[+].code = #FRCDAActe.author
