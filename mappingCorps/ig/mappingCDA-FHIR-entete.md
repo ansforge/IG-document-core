@@ -135,12 +135,12 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMDispositifMedicalEntree.nonRemboursable | FRCDADispositifMedical.entryRelationship:frNonRemboursable | FRDeviceRequestDocument.extension:notCovered |
 | FRLMActe.participant | FRCDAActe.participant | FRProcedureActDocument.performer.actor.extension:Participant |
 | FRLMProbleme.reference. externalDocument.text.reference | FRCDAProbleme.reference. externalDocument.text.reference |  |
-| FRLMActe.circonstances | FRCDAActe.entryRelationship:frReferenceInterne |  |
+| FRLMActe.circonstances | FRCDAActe.entryRelationship:frReferenceInterneCirconstances | FRProcedureActDocument.encounter |
 | FRLMProbleme.commentaire | FRCDAProbleme.entryRelationship:frCommentaireER | FRConditionDocument.note |
-| FRLMActe.reason | FRCDAActe.entryRelationship:frReferenceInterne |  |
-| FRLMActe.dispositifMedical | FRCDAActe.entryRelationship:frReferenceInterne |  |
-| FRLMActe.difficulte | FRCDAActe.entryRelationship:frSimpleObservationDifficulte |  |
-| FRLMActe.scores | FRCDAActe.entryRelationship:frSimpleObservationScores |  |
+| FRLMActe.reason | FRCDAActe.entryRelationship:frReferenceInterneMotifActe | FRProcedureActDocument.reasonReference |
+| FRLMActe.dispositifMedical | FRCDAActe.entryRelationship:frReferenceInterneDM | FRProcedureActDocument.usedReference |
+| FRLMActe.difficulte | FRCDAActe.entryRelationship:frSimpleObservationDifficulte | FRProcedureActDocument.extension:difficulte |
+| FRLMActe.scores | FRCDAActe.entryRelationship:frSimpleObservationScores | FRProcedureActDocument.partOf |
 | **FRLMEnteteDocument** | **ClinicalDocument** |  |
 | FRLMEnteteDocument.identifiantUniqueDocument | ClinicalDocument.id | Bundle.identifier |
 | FRLMEnteteDocument.modeleDocument | ClinicalDocument.templateId | Composition.meta.profile |

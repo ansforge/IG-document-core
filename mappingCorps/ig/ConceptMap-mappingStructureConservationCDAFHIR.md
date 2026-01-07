@@ -31,7 +31,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-07T15:20:53+00:00",
+  "date" : "2026-01-07T21:00:10+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
