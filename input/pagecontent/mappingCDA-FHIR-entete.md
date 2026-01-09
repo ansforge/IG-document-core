@@ -41,7 +41,7 @@ WITH AllGroups AS (
     json_extract(g.value, '$.target') AS grp_target
   FROM Resources r
   JOIN json_each(r.json, '$.group') g
-  WHERE r.Type = 'ConceptMap'
+  WHERE r.Type = 'ConceptMap' AND Description LIKE 'Ce ConceptMap%'
 ),
 
 ClassifiedGroups AS (
