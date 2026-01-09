@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-survey-pannel-document | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRObservationSurveyPannelDocument |
+| Draft as of 2026-01-09 | *Computable Name*:FRObservationSurveyPannelDocument |
 
  
 FRObservationSurveyPannelDocument permet de rassembler des observations de questionnaires. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-surve
   "name" : "FRObservationSurveyPannelDocument",
   "title" : "Observation - FR Observation Survey Pannel Document",
   "status" : "draft",
-  "date" : "2026-01-07T21:19:48+00:00",
+  "date" : "2026-01-09T15:13:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

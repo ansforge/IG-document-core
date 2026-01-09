@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-inFulfillment-of | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRCDAInFulfillmentOf |
+| Draft as of 2026-01-09 | *Computable Name*:FRCDAInFulfillmentOf |
 
  
 L’élément de l’en-tête du CDA inFulfillmentOf permet d’associer un document à une prescription. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-inFulfillment
   "name" : "FRCDAInFulfillmentOf",
   "title" : "CDA - inFulfillmentOf",
   "status" : "draft",
-  "date" : "2026-01-07T21:19:48+00:00",
+  "date" : "2026-01-09T15:13:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

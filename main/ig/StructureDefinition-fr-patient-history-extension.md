@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-patient-history-extension | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRPatientHistoryExtension |
+| Draft as of 2026-01-09 | *Computable Name*:FRPatientHistoryExtension |
 
 Historique médical du patient pertinent pour l’examen d’imagerie
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient-history-e
   "name" : "FRPatientHistoryExtension",
   "title" : "FR Patient History Extension",
   "status" : "draft",
-  "date" : "2026-01-07T21:19:48+00:00",
+  "date" : "2026-01-09T15:13:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

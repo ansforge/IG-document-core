@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-document | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRFamilyMemberHistoryDocument |
+| Draft as of 2026-01-09 | *Computable Name*:FRFamilyMemberHistoryDocument |
 
  
 FRFamilyMemberHistoryDocument est un profil utilisé pour apporter des informations complémentaires relatives aux membres de la famille du patient (pathologies, etc…). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-family-member-his
   "name" : "FRFamilyMemberHistoryDocument",
   "title" : "FamilyMemberHistory - FR Family Member History Document",
   "status" : "draft",
-  "date" : "2026-01-07T21:19:48+00:00",
+  "date" : "2026-01-09T15:13:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
