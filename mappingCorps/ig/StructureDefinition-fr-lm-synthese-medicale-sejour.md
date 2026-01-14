@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-synthese-medicale-sejour | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMSyntheseMedicaleSejour |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMSyntheseMedicaleSejour |
 
  
-Entrée Synthese medicale sejour 
+Synthese medicale sejour 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-synthese-medic
   "name" : "FRLMSyntheseMedicaleSejour",
   "title" : "Modèle logique métier - FR LM Synthese medicale sejour",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-synthese-medic
       ]
     }
   ],
-  "description" : "Entrée Synthese medicale sejour",
+  "description" : "Synthese medicale sejour",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-synthese-medic
         "id" : "fr-lm-synthese-medicale-sejour",
         "path" : "fr-lm-synthese-medicale-sejour",
         "short" : "Modèle logique métier - FR LM Synthese medicale sejour",
-        "definition" : "Entrée Synthese medicale sejour"
+        "definition" : "Synthese medicale sejour"
       },
       {
         "id" : "fr-lm-synthese-medicale-sejour.identifiant",

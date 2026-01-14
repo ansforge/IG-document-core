@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-evaluation | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMEvaluation |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMEvaluation |
 
  
-Entrée Evaluation 
+Evaluation 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-evaluation.csv
   "name" : "FRLMEvaluation",
   "title" : "Modèle logique métier - FR LM Evaluation",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-evaluation.csv
       ]
     }
   ],
-  "description" : "Entrée Evaluation",
+  "description" : "Evaluation",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-evaluation.csv
         "id" : "fr-lm-evaluation",
         "path" : "fr-lm-evaluation",
         "short" : "Modèle logique métier - FR LM Evaluation",
-        "definition" : "Entrée Evaluation"
+        "definition" : "Evaluation"
       },
       {
         "id" : "fr-lm-evaluation.identifiant",

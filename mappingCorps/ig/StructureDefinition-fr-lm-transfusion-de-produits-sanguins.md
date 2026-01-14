@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-transfusion-de-produits-sanguins | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMTransfusionDeProduitsSanguins |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMTransfusionDeProduitsSanguins |
 
  
-Entrée Transfusion de produits sanguins 
+Transfusion de produits sanguins 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfusion-de
   "name" : "FRLMTransfusionDeProduitsSanguins",
   "title" : "Modèle logique métier - FR LM Transfusion de produits sanguins",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfusion-de
       ]
     }
   ],
-  "description" : "Entrée Transfusion de produits sanguins",
+  "description" : "Transfusion de produits sanguins",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfusion-de
         "id" : "fr-lm-transfusion-de-produits-sanguins",
         "path" : "fr-lm-transfusion-de-produits-sanguins",
         "short" : "Modèle logique métier - FR LM Transfusion de produits sanguins",
-        "definition" : "Entrée Transfusion de produits sanguins"
+        "definition" : "Transfusion de produits sanguins"
       },
       {
         "id" : "fr-lm-transfusion-de-produits-sanguins.identifiant",

@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-entree | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMPrescriptionEntree |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMPrescriptionEntree |
 
  
-Entrée Prescription 
+Prescription 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prescription-e
   "name" : "FRLMPrescriptionEntree",
   "title" : "Modèle logique métier - FR LM Prescription",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prescription-e
       ]
     }
   ],
-  "description" : "Entrée Prescription ",
+  "description" : "Prescription ",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-prescription-e
         "id" : "fr-lm-prescription-entree",
         "path" : "fr-lm-prescription-entree",
         "short" : "Modèle logique métier - FR LM Prescription",
-        "definition" : "Entrée Prescription "
+        "definition" : "Prescription "
       },
       {
         "id" : "fr-lm-prescription-entree.identifiantPrescription",

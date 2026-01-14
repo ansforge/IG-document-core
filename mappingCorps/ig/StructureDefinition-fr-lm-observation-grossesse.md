@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-grossesse | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMObservationGrossesse |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMObservationGrossesse |
 
  
-Entrée Observation sur la grossesse 
+Observation sur la grossesse 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-observation-gr
   "name" : "FRLMObservationGrossesse",
   "title" : "Modèle logique métier - FR LM Observation sur la grossesse",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-observation-gr
       ]
     }
   ],
-  "description" : "Entrée Observation sur la grossesse",
+  "description" : "Observation sur la grossesse",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-observation-gr
         "id" : "fr-lm-observation-grossesse",
         "path" : "fr-lm-observation-grossesse",
         "short" : "Modèle logique métier - FR LM Observation sur la grossesse",
-        "definition" : "Entrée Observation sur la grossesse"
+        "definition" : "Observation sur la grossesse"
       },
       {
         "id" : "fr-lm-observation-grossesse.identifiant",

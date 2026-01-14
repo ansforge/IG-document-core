@@ -1,0 +1,330 @@
+# Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument - ANS IG document core v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument**
+
+## ConceptMap: Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRMediaLMCDAFHIR | *Version*:0.1.0 |
+| Draft as of 2026-01-14 | *Computable Name*: |
+
+ 
+Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument. 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRMediaLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRMediaLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Image illustrative\"",
+  "status" : "draft",
+  "date" : "2026-01-14T15:34:52+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [
+    {
+      "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://esante.gouv.fr"
+        }
+      ]
+    }
+  ],
+  "description" : "Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }
+      ]
+    }
+  ],
+  "group" : [
+    {
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-image-illustrative",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-image-illustrative",
+      "element" : [
+        {
+          "code" : "FRLMImageIllustrative",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.identifiant",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.id",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.langue",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.languageCode",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.imageEncodee",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.value",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.mediaType",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.value.mediaType",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.representation",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.value.representation",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.subject",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.subject",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.specimen",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.specimen",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.performer",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.performer",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.auteur",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.author",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.informant",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.informant",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.participant",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.participant",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.entryRelationship",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.entryRelationship",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.reference",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.reference",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.precondition",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.precondition",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-image-illustrative",
+      "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-media-document",
+      "element" : [
+        {
+          "code" : "FRLMImageIllustrative.id",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.identifier",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.languageCode",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.content.language",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.value",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.content.data",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.value.mediaType",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.content.contentType",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.value.representation",
+          "target" : [
+            {
+              "equivalence" : "unmatched"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.subject",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.subject:Patient",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.specimen",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.subject:Specimen",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.performer",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.operator.extension:performer",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.author",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.operator.extension:author",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.informant",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.operator.extension:informant",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.participant",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.operator.extension:participant",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.entryRelationship",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.basedOn",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.reference",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.partOf",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "FRLMImageIllustrative.precondition",
+          "target" : [
+            {
+              "code" : "FRCDAImageIllustrative.reasonCode",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+```

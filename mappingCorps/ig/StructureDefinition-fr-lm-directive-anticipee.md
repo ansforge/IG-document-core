@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-directive-anticipee | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMDirectiveAnticipee |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMDirectiveAnticipee |
 
  
-Entrée Directive anticipée 
+Directive anticipée 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-directive-anti
   "name" : "FRLMDirectiveAnticipee",
   "title" : "Modèle logique métier - FR LM Directive anticipée",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-directive-anti
       ]
     }
   ],
-  "description" : "Entrée Directive anticipée",
+  "description" : "Directive anticipée",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-directive-anti
         "id" : "fr-lm-directive-anticipee",
         "path" : "fr-lm-directive-anticipee",
         "short" : "Modèle logique métier - FR LM Directive anticipée",
-        "definition" : "Entrée Directive anticipée"
+        "definition" : "Directive anticipée"
       },
       {
         "id" : "fr-lm-directive-anticipee.identifiant",

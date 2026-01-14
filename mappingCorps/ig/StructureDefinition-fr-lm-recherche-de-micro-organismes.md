@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-recherche-de-micro-organismes | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMRechercheDeMicroOrganismes |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMRechercheDeMicroOrganismes |
 
  
-Entrée Recherche de micro organismes 
+Recherche de micro organismes 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-recherche-de-m
   "name" : "FRLMRechercheDeMicroOrganismes",
   "title" : "Modèle logique métier - FR LM Recherche de micro organismes",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-recherche-de-m
       ]
     }
   ],
-  "description" : "Entrée Recherche de micro organismes",
+  "description" : "Recherche de micro organismes",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-recherche-de-m
         "id" : "fr-lm-recherche-de-micro-organismes",
         "path" : "fr-lm-recherche-de-micro-organismes",
         "short" : "Modèle logique métier - FR LM Recherche de micro organismes",
-        "definition" : "Entrée Recherche de micro organismes"
+        "definition" : "Recherche de micro organismes"
       },
       {
         "id" : "fr-lm-recherche-de-micro-organismes.identifiant",

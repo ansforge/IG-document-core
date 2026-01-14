@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-probleme | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMStatutProbleme |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMStatutProbleme |
 
  
-Entrée Statut du problème. 
+Statut du problème. 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-problem
   "name" : "FRLMStatutProbleme",
   "title" : "Modèle logique métier - FR LM Statut du problème",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-problem
       ]
     }
   ],
-  "description" : "Entrée Statut du problème.",
+  "description" : "Statut du problème.",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-problem
         "id" : "fr-lm-statut-probleme",
         "path" : "fr-lm-statut-probleme",
         "short" : "Modèle logique métier - FR LM Statut du problème",
-        "definition" : "Entrée Statut du problème."
+        "definition" : "Statut du problème."
       },
       {
         "id" : "fr-lm-statut-probleme.codeStatutProbleme",

@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-statut-clinique-patient | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMStatutCliniquePatient |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMStatutCliniquePatient |
 
  
-Entrée Statut clinique du patient 
+Statut clinique du patient 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-cliniqu
   "name" : "FRLMStatutCliniquePatient",
   "title" : "Modèle logique métier - FR LM Statut clinique du patient",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-cliniqu
       ]
     }
   ],
-  "description" : "Entrée Statut clinique du patient",
+  "description" : "Statut clinique du patient",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-statut-cliniqu
         "id" : "fr-lm-statut-clinique-patient",
         "path" : "fr-lm-statut-clinique-patient",
         "short" : "Modèle logique métier - FR LM Statut clinique du patient",
-        "definition" : "Entrée Statut clinique du patient"
+        "definition" : "Statut clinique du patient"
       },
       {
         "id" : "fr-lm-statut-clinique-patient.codeStatutCliniquePatient",

@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-vaccination | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMVaccination |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMVaccination |
 
  
-Entrée Vaccination 
+Vaccination 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-vaccination.cs
   "name" : "FRLMVaccination",
   "title" : "Modèle logique métier - FR LM Vaccination",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-vaccination.cs
       ]
     }
   ],
-  "description" : "Entrée Vaccination",
+  "description" : "Vaccination",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-vaccination.cs
         "id" : "fr-lm-vaccination",
         "path" : "fr-lm-vaccination",
         "short" : "Modèle logique métier - FR LM Vaccination",
-        "definition" : "Entrée Vaccination"
+        "definition" : "Vaccination"
       },
       {
         "id" : "fr-lm-vaccination.identifiant",

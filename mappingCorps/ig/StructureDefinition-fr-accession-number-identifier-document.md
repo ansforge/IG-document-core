@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-accession-number-identifier-document | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRAccessionNumberIdentifierDocument |
+| Draft as of 2026-01-14 | *Computable Name*:FRAccessionNumberIdentifierDocument |
 
  
 DataType définissant l’Accession Number d’une demande d’examen. Il s’agit d’un identifiant unique attribué à chaque demande d’examen. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-accession-number-
   "name" : "FRAccessionNumberIdentifierDocument",
   "title" : "FR Accession Number Identifier Document",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

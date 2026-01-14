@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-familiaux-entree | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMAntecedentsFamiliauxEntree |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMAntecedentsFamiliauxEntree |
 
  
-Entrée Antécédents familiaux 
+Antécédents familiaux 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedents-fa
   "name" : "FRLMAntecedentsFamiliauxEntree",
   "title" : "Modèle logique métier - FR LM Antécédents familiaux",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedents-fa
       ]
     }
   ],
-  "description" : "Entrée Antécédents familiaux",
+  "description" : "Antécédents familiaux",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedents-fa
         "id" : "fr-lm-antecedents-familiaux-entree",
         "path" : "fr-lm-antecedents-familiaux-entree",
         "short" : "Modèle logique métier - FR LM Antécédents familiaux",
-        "definition" : "Entrée Antécédents familiaux"
+        "definition" : "Antécédents familiaux"
       },
       {
         "id" : "fr-lm-antecedents-familiaux-entree.statut",

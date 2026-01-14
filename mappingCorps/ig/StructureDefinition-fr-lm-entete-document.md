@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-entete-document | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMEnteteDocument |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMEnteteDocument |
 
  
 Eléments de l’entête d’un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-entete-documen
   "name" : "FRLMEnteteDocument",
   "title" : "Modèle logique métier - FR LM En-tête document",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

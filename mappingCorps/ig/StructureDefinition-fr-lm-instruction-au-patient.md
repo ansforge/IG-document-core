@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-instruction-au-patient | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMInstructionAuPatient |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMInstructionAuPatient |
 
  
-Entrée Instruction au patient 
+Instruction au patient 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-instruction-au
   "name" : "FRLMInstructionAuPatient",
   "title" : "Modèle logique métier - FR LM Instruction au patient",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-instruction-au
       ]
     }
   ],
-  "description" : "Entrée Instruction au patient",
+  "description" : "Instruction au patient",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-instruction-au
         "id" : "fr-lm-instruction-au-patient",
         "path" : "fr-lm-instruction-au-patient",
         "short" : "Modèle logique métier - FR LM Instruction au patient",
-        "definition" : "Entrée Instruction au patient"
+        "definition" : "Instruction au patient"
       },
       {
         "id" : "fr-lm-instruction-au-patient.identifiant",

@@ -11,17 +11,17 @@
   fhir:id [ fhir:v "ans.document.fr.core"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><h2>FRDocumentCore</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
      fhir:v "https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core>
   ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "ExampleIG"] ; # 
+  fhir:name [ fhir:v "FRDocumentCore"] ; # 
   fhir:title [ fhir:v "ANS IG document core"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-07T21:00:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-14T15:34:52+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1426,17 +1426,15 @@
        ]
      ] ) ;
      fhir:grouping ( [
-       fhir:id [ fhir:v "Modèles logiques de l'entête du document" ] ;
-       fhir:name [ fhir:v "Modèle logique métier de l'entête du document" ]
+       fhir:id [ fhir:v "Modèles logiques métier de l'entête d'un document" ] ;
+       fhir:name [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
-       fhir:id [ fhir:v "Modèle métier du Corps d'un document(Sections)" ] ;
-       fhir:name [ fhir:v "Modèles logiques métier des sections" ]
+       fhir:id [ fhir:v "Modèles logiques métier des sections d'un document" ] ;
+       fhir:name [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
-       fhir:id [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ] ;
-       fhir:name [ fhir:v "Modèles logiques métier des entrées" ]
-     ] [
-       fhir:id [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ] ;
-       fhir:name [ fhir:v "Modèles logiques métier des éléments transversaux" ]
+       fhir:id [ fhir:v "Modèles logiques métier des composants élémentaires" ] ;
+       fhir:name [ fhir:v "Modèles logiques métier des composants élémentaires" ] ;
+       fhir:description [ fhir:v "Modèles de données métier représentant les concepts élémentaires, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR." ]
      ] [
        fhir:id [ fhir:v "Ressources CDA entête" ] ;
        fhir:name [ fhir:v "Eléments CDA" ]
@@ -3392,7 +3390,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -3581,6 +3579,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRFamilyMemberHistoryLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRFamilyMemberHistoryLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMAntecedentFamilialObserve → FRCDAAntecedentFamilialObserve → FRFamilyMemberHistoryDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMAntecedentFamilialObserve vers le profil CDA FRCDAAntecedentFamilialObserve, puis vers le profil FHIR FRFamilyMemberHistoryDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMAntecedentsFamiliauxEntree → FRCDAAntecedentsFamiliaux → FRFamilyMemberHistoryDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMAntecedentsFamiliauxEntree vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRConditionLMCDAFHIR> ;
          fhir:reference [ fhir:v "ConceptMap/FRConditionLMCDAFHIR" ]
        ] ;
@@ -3691,6 +3733,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRImagingStudyLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRImagingStudyLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRMediaLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRMediaLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRDeviceRequestLMCDAFHIR> ;
          fhir:reference [ fhir:v "ConceptMap/FRDeviceRequestLMCDAFHIR" ]
        ] ;
@@ -3762,6 +3848,72 @@
        ] ;
        fhir:name [ fhir:v "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument" ] ;
        fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRMedicationAdministrationLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRMedicationAdministrationLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMTraitement → FRCDATraitement → FRMedicationAdministrationDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMTraitement vers le profil CDA FRCDATraitement, puis vers le profil FHIR FRMedicationAdministrationDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRImmunizationLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRImmunizationLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMVaccination → FRCDAVaccination → FRImmunizationDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMVaccination vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Mapping ML-CDA-FHIR corps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ConceptMap"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRImmunizationRecommendationLMCDAFHIR> ;
+         fhir:reference [ fhir:v "ConceptMap/FRImmunizationRecommendationLMCDAFHIR" ]
+       ] ;
+       fhir:name [ fhir:v "Mapping FRLMVaccinRecommande → FRCDAVaccinRecommande → FRImmunizationRecommendationDocument" ] ;
+       fhir:description [ fhir:v "Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CDA FRCDAVaccinRecommande, puis vers le profil FHIR FRImmunizationRecommendationDocument." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -4360,7 +4512,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4377,12 +4529,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-accidents-transfusionnels" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Accident transfusionnel" ] ;
-       fhir:description [ fhir:v "Entrée Accident transfusionnel" ] ;
+       fhir:description [ fhir:v "Accident transfusionnel" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4399,12 +4551,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-acte" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Acte" ] ;
-       fhir:description [ fhir:v "Entrée Acte" ] ;
+       fhir:description [ fhir:v "Acte" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4426,7 +4578,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4443,12 +4595,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-acte-substitution" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Acte substitution" ] ;
-       fhir:description [ fhir:v "Entrée Acte substitution" ] ;
+       fhir:description [ fhir:v "Acte substitution" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4470,7 +4622,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4487,12 +4639,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-administration-de-derives-du-sang" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Administration de dérivés du sang" ] ;
-       fhir:description [ fhir:v "Entrée Administration de dérivés du sang" ] ;
+       fhir:description [ fhir:v "Administration de dérivés du sang" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4509,12 +4661,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-administration-produit-de-sante" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Administration produit de sante" ] ;
-       fhir:description [ fhir:v "Entrée Administration produit de sante" ] ;
+       fhir:description [ fhir:v "Administration produit de sante" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4531,12 +4683,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-allergie-ou-hypersensibilite" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Allergie ou Hypersensibilité" ] ;
-       fhir:description [ fhir:v "Entrée Allergie ou hypersensibilite" ] ;
+       fhir:description [ fhir:v "Allergie ou hypersensibilite" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4558,7 +4710,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4575,12 +4727,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-antecedent-familial-observe" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Antécédent familial observé" ] ;
-       fhir:description [ fhir:v "Entrée Antécédent familial" ] ;
+       fhir:description [ fhir:v "Antécédent familial" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4597,12 +4749,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-antecedents-familiaux-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Antécédents familiaux" ] ;
-       fhir:description [ fhir:v "Entrée Antécédents familiaux" ] ;
+       fhir:description [ fhir:v "Antécédents familiaux" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4624,7 +4776,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4646,7 +4798,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4668,7 +4820,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4690,7 +4842,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4712,7 +4864,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4729,12 +4881,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-autorisation-exposition" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Autorisation exposition" ] ;
-       fhir:description [ fhir:v "Entrée Autorisation exposition" ] ;
+       fhir:description [ fhir:v "Autorisation exposition" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4751,12 +4903,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-autorisation-substitution" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Autorisation substitution" ] ;
-       fhir:description [ fhir:v "Entrée Autorisation substitution" ] ;
+       fhir:description [ fhir:v "Autorisation substitution" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4773,12 +4925,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-batterie-examens-biologie-medicale" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Batterie d'examens de biologie médicale" ] ;
-       fhir:description [ fhir:v "Entrée Batterie d'examens de biologie médicale" ] ;
+       fhir:description [ fhir:v "Batterie d'examens de biologie médicale" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4795,12 +4947,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-certitude" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Certitude" ] ;
-       fhir:description [ fhir:v "Entrée Certitude" ] ;
+       fhir:description [ fhir:v "Certitude" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4822,7 +4974,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4839,12 +4991,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-commentaire-er" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Commentaire" ] ;
-       fhir:description [ fhir:v "Entrée Commentaire" ] ;
+       fhir:description [ fhir:v "Commentaire" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4866,7 +5018,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4888,7 +5040,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4910,7 +5062,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4932,7 +5084,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4954,7 +5106,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4976,7 +5128,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -4998,7 +5150,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5015,12 +5167,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-criticite" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Criticite" ] ;
-       fhir:description [ fhir:v "Entrée Criticite" ] ;
+       fhir:description [ fhir:v "Criticite" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5042,7 +5194,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5059,12 +5211,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-demande-examen-ou-suivi" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Demande d'examen ou de suivi" ] ;
-       fhir:description [ fhir:v "Entrée Demande d'examen ou de suivi / Objectif à atteindre" ] ;
+       fhir:description [ fhir:v "Demande d'examen ou de suivi / Objectif à atteindre" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5086,7 +5238,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5103,12 +5255,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-directive-anticipee" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Directive anticipée" ] ;
-       fhir:description [ fhir:v "Entrée Directive anticipée" ] ;
+       fhir:description [ fhir:v "Directive anticipée" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5130,7 +5282,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5152,7 +5304,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5169,12 +5321,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-dispositif-medical-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Dispositif médical" ] ;
-       fhir:description [ fhir:v "Entrée Dispositif médical" ] ;
+       fhir:description [ fhir:v "Dispositif médical" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5196,7 +5348,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5213,12 +5365,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-document-attache" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Document attaché" ] ;
-       fhir:description [ fhir:v "Entrée Document attaché" ] ;
+       fhir:description [ fhir:v "Document attaché" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5240,7 +5392,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5262,7 +5414,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5284,7 +5436,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5301,12 +5453,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-dose-antigene" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Dose d'antigène" ] ;
-       fhir:description [ fhir:v "Entrée Dose d'antigène" ] ;
+       fhir:description [ fhir:v "Dose d'antigène" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5328,7 +5480,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5345,12 +5497,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-effet-indesirable" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Effet indesirable" ] ;
-       fhir:description [ fhir:v "Entrée Effet indesirable" ] ;
+       fhir:description [ fhir:v "Effet indesirable" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5372,7 +5524,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5389,12 +5541,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-en-rapport-avec-la-prevention" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM En rapport avec la prevention" ] ;
-       fhir:description [ fhir:v "Entrée En rapport avec la prevention" ] ;
+       fhir:description [ fhir:v "En rapport avec la prevention" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5411,12 +5563,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-en-rapport-avec-accident-travail" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM En rapport avec un accident travail" ] ;
-       fhir:description [ fhir:v "Entrée En rapport avec un accident travail" ] ;
+       fhir:description [ fhir:v "En rapport avec un accident travail" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5433,12 +5585,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-en-rapport-avec-ald" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM En rapport avec une Affection Longue Durée (ALD)" ] ;
-       fhir:description [ fhir:v "Entrée En rapport avec une Affection Longue Durée (ALD)" ] ;
+       fhir:description [ fhir:v "En rapport avec une Affection Longue Durée (ALD)" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5460,7 +5612,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5477,12 +5629,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evaluation" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evaluation" ] ;
-       fhir:description [ fhir:v "Entrée Evaluation" ] ;
+       fhir:description [ fhir:v "Evaluation" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5499,12 +5651,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evaluation-composant" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evaluation Composant" ] ;
-       fhir:description [ fhir:v "Entrée Evaluation Composant" ] ;
+       fhir:description [ fhir:v "Evaluation Composant" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5521,12 +5673,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evaluation-composant-n2" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evaluation Composant N2" ] ;
-       fhir:description [ fhir:v "Entrée Evaluation Composant N2" ] ;
+       fhir:description [ fhir:v "Evaluation Composant N2" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5543,12 +5695,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evolution-effet-indesirable" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evolution effet indesirable" ] ;
-       fhir:description [ fhir:v "Entrée Evolution effet indesirable" ] ;
+       fhir:description [ fhir:v "Evolution effet indesirable" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5565,12 +5717,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evenement-indesirable-pendant-hospitalisation" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evènements indésirables pendant l'hospitalisation" ] ;
-       fhir:description [ fhir:v "Entrée Evènements indésirables pendant l'hospitalisation" ] ;
+       fhir:description [ fhir:v "Evènements indésirables pendant l'hospitalisation" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5587,12 +5739,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-evenements-indesirables-suite-administration-derives-sang" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Evènements indésirables suite à l'administration de dérivés du sang" ] ;
-       fhir:description [ fhir:v "Entrée Evènements indésirables suite à l'administration de dérivés du sang" ] ;
+       fhir:description [ fhir:v "Evènements indésirables suite à l'administration de dérivés du sang" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5609,12 +5761,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-examen-imagerie" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Examen Imagerie" ] ;
-       fhir:description [ fhir:v "Entrée DICOM Examen Imagerie" ] ;
+       fhir:description [ fhir:v "DICOM Examen Imagerie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5636,7 +5788,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5658,7 +5810,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5680,7 +5832,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5697,12 +5849,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-gravite-effet-indesirable" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Gravite effet indesirable" ] ;
-       fhir:description [ fhir:v "Entrée Gravite effet indesirable" ] ;
+       fhir:description [ fhir:v "Gravite effet indesirable" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5719,12 +5871,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-group-de-questionnaires-devaluation" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Groupe de questionnaires d'évalutation" ] ;
-       fhir:description [ fhir:v "Entrée Groupe de questionnaires d'évalutation" ] ;
+       fhir:description [ fhir:v "Groupe de questionnaires d'évalutation" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5746,7 +5898,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5763,12 +5915,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-habitus-mode-de-vie-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Habitus Mode de vie" ] ;
-       fhir:description [ fhir:v "Entrée Habitus Mode de vie" ] ;
+       fhir:description [ fhir:v "Habitus Mode de vie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5785,12 +5937,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-historique-grossesse" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Historique de la grossesse" ] ;
-       fhir:description [ fhir:v "Entrée Historique de la grossesse" ] ;
+       fhir:description [ fhir:v "Historique de la grossesse" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5807,12 +5959,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-hors-amm" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Hors Autorisation de Mise sur le Marché (AMM)" ] ;
-       fhir:description [ fhir:v "Entrée Hors Autorisation de Mise sur le Marché (AMM)" ] ;
+       fhir:description [ fhir:v "Hors Autorisation de Mise sur le Marché (AMM)" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5829,12 +5981,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-identification-de-micro-organismes-multiresistants" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Identification de micro-organismes multirésistants" ] ;
-       fhir:description [ fhir:v "Entrée Identification de micro-organismes multirésistants" ] ;
+       fhir:description [ fhir:v "Identification de micro-organismes multirésistants" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5851,12 +6003,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-image-illustrative" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Image illustrative" ] ;
-       fhir:description [ fhir:v "Entrée Image illustrative." ] ;
+       fhir:description [ fhir:v "Image illustrative." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5873,12 +6025,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-imputabilite-effet-indesirable" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Imputabilite effet indesirable" ] ;
-       fhir:description [ fhir:v "Entrée Imputabilite effet indesirable" ] ;
+       fhir:description [ fhir:v "Imputabilite effet indesirable" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5900,7 +6052,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5922,7 +6074,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5944,7 +6096,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5961,12 +6113,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-instruction-au-patient" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Instruction au patient" ] ;
-       fhir:description [ fhir:v "Entrée Instruction au patient" ] ;
+       fhir:description [ fhir:v "Instruction au patient" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -5983,12 +6135,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-instructions-au-dispensateur" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Instructions au dispensateur" ] ;
-       fhir:description [ fhir:v "Entrée Instructions au dispensateur" ] ;
+       fhir:description [ fhir:v "Instructions au dispensateur" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6005,12 +6157,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-instructions-patient" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Instructions au patient" ] ;
-       fhir:description [ fhir:v "Entrée Instructions au patient" ] ;
+       fhir:description [ fhir:v "Instructions au patient" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6027,12 +6179,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-isolat-microbiologique" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Isolat microbiologique" ] ;
-       fhir:description [ fhir:v "Entrée Isolat microbiologique" ] ;
+       fhir:description [ fhir:v "Isolat microbiologique" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6054,7 +6206,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6071,12 +6223,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-modalite-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Modalité d'entrée" ] ;
-       fhir:description [ fhir:v "Entrée Modalité d'entrée" ] ;
+       fhir:description [ fhir:v "Modalité d'entrée" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6093,12 +6245,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-modalite-sortie" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Modalité de sortie" ] ;
-       fhir:description [ fhir:v "Entrée Modalité de sortie" ] ;
+       fhir:description [ fhir:v "Modalité de sortie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6115,12 +6267,34 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-naissance" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Naissance" ] ;
-       fhir:description [ fhir:v "Entrée Naissance" ] ;
+       fhir:description [ fhir:v "Naissance" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-non-remboursable> ;
+         fhir:reference [ fhir:v "StructureDefinition/fr-lm-non-remboursable" ]
+       ] ;
+       fhir:name [ fhir:v "Modèle logique métier - FR LM Non remboursable" ] ;
+       fhir:description [ fhir:v "Non remboursable" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ] ;
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6137,12 +6311,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-notes-dispensateur" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Notes du dispensateur" ] ;
-       fhir:description [ fhir:v "Entrée Notes du dispensateur" ] ;
+       fhir:description [ fhir:v "Notes du dispensateur" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6164,7 +6338,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6181,12 +6355,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-observation" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Observation" ] ;
-       fhir:description [ fhir:v "Entrée observation" ] ;
+       fhir:description [ fhir:v "observation" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6203,12 +6377,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-observation-grossesse" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Observation sur la grossesse" ] ;
-       fhir:description [ fhir:v "Entrée Observation sur la grossesse" ] ;
+       fhir:description [ fhir:v "Observation sur la grossesse" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6230,7 +6404,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6252,7 +6426,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6274,7 +6448,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6296,7 +6470,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6318,7 +6492,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6340,7 +6514,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6362,7 +6536,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6384,7 +6558,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6406,7 +6580,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6428,7 +6602,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6450,7 +6624,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6467,12 +6641,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-prescription-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Prescription" ] ;
-       fhir:description [ fhir:v "Entrée Prescription" ] ;
+       fhir:description [ fhir:v "Prescription" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6494,7 +6668,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6516,7 +6690,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6538,7 +6712,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6560,7 +6734,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6577,12 +6751,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-probleme" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Problème" ] ;
-       fhir:description [ fhir:v "Entrée Problème" ] ;
+       fhir:description [ fhir:v "Problème" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6604,7 +6778,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6626,7 +6800,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6643,12 +6817,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-prelevement" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Prélèvement" ] ;
-       fhir:description [ fhir:v "Entrée Prélèvement" ] ;
+       fhir:description [ fhir:v "Prélèvement" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6665,12 +6839,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-periode-de-renouvellement" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Période de renouvellement de la prescription" ] ;
-       fhir:description [ fhir:v "Entrée Période de renouvellement de la prescription" ] ;
+       fhir:description [ fhir:v "Période de renouvellement de la prescription" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6687,12 +6861,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-quantite-produit" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Quantité de produit" ] ;
-       fhir:description [ fhir:v "Entrée Quantité de produit" ] ;
+       fhir:description [ fhir:v "Quantité de produit" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6709,12 +6883,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-quantite-exposition" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Quantité exposition" ] ;
-       fhir:description [ fhir:v "Entrée Quantité exposition" ] ;
+       fhir:description [ fhir:v "Quantité exposition" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6736,7 +6910,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6758,7 +6932,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6775,12 +6949,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-rang-vaccination" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Rang de la vaccination" ] ;
-       fhir:description [ fhir:v "Entrée Rang de la vaccination" ] ;
+       fhir:description [ fhir:v "Rang de la vaccination" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6797,12 +6971,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-recherche-de-micro-organismes" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Recherche de micro organismes" ] ;
-       fhir:description [ fhir:v "Entrée Recherche de micro organismes" ] ;
+       fhir:description [ fhir:v "Recherche de micro organismes" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6819,12 +6993,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-rencontre" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Rencontre" ] ;
-       fhir:description [ fhir:v "Entrée Rencontre" ] ;
+       fhir:description [ fhir:v "Rencontre" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6846,7 +7020,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6863,12 +7037,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-resultats-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Resultats" ] ;
-       fhir:description [ fhir:v "Entrée Resultats" ] ;
+       fhir:description [ fhir:v "Resultats" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6885,12 +7059,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-resultats-examens-biologie-medicale" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Resultats d'examens de biologie medicale" ] ;
-       fhir:description [ fhir:v "Entrée Resultats d'examens de biologie medicale" ] ;
+       fhir:description [ fhir:v "Resultats d'examens de biologie medicale" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6907,12 +7081,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-reference-interne" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Référence interne" ] ;
-       fhir:description [ fhir:v "Entrée Référence interne" ] ;
+       fhir:description [ fhir:v "Référence interne" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6929,12 +7103,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-reference-item-plan-traitement" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Référence item plan traitement" ] ;
-       fhir:description [ fhir:v "Entrée Référence item plan traitement" ] ;
+       fhir:description [ fhir:v "Référence item plan traitement" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6951,12 +7125,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-reference-item-prescription" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Référence item prescription" ] ;
-       fhir:description [ fhir:v "Entrée Référence item prescription" ] ;
+       fhir:description [ fhir:v "Référence item prescription" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6973,12 +7147,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-references-externes" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Références externes" ] ;
-       fhir:description [ fhir:v "Entrée Références externes" ] ;
+       fhir:description [ fhir:v "Références externes" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -6995,12 +7169,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent" ] ;
-       fhir:description [ fhir:v "Entrée Résultat d'examens de biologie / élement clinique pertinent" ] ;
+       fhir:description [ fhir:v "Résultat d'examens de biologie / élement clinique pertinent" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7022,7 +7196,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7044,7 +7218,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7066,7 +7240,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7088,7 +7262,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7110,7 +7284,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7132,7 +7306,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7154,7 +7328,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7171,12 +7345,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-serie-imagerie" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Serie imagerie" ] ;
-       fhir:description [ fhir:v "Entrée Serie imagerie" ] ;
+       fhir:description [ fhir:v "Serie imagerie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7193,12 +7367,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-signe-vital" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Signe vital" ] ;
-       fhir:description [ fhir:v "Entrée Signe vital" ] ;
+       fhir:description [ fhir:v "Signe vital" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7215,12 +7389,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-signe-vital-observe" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Signe vital observé" ] ;
-       fhir:description [ fhir:v "Entrée Signe vital observé" ] ;
+       fhir:description [ fhir:v "Signe vital observé" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7242,7 +7416,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7259,12 +7433,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-sop-instance" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM SOP Instance" ] ;
-       fhir:description [ fhir:v "Entrée SOP Instance" ] ;
+       fhir:description [ fhir:v "SOP Instance" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7286,7 +7460,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7303,12 +7477,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-statut" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Statut" ] ;
-       fhir:description [ fhir:v "Entrée Statut" ] ;
+       fhir:description [ fhir:v "Statut" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7325,12 +7499,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-statut-clinique-patient" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Statut clinique du patient" ] ;
-       fhir:description [ fhir:v "Entrée Statut clinique du patient" ] ;
+       fhir:description [ fhir:v "Statut clinique du patient" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7347,12 +7521,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-statut-document-entree" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Statut du document" ] ;
-       fhir:description [ fhir:v "Entrée Statut du document" ] ;
+       fhir:description [ fhir:v "Statut du document" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7374,7 +7548,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7391,12 +7565,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-statut-probleme" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Statut du problème" ] ;
-       fhir:description [ fhir:v "Entrée Statut du problème." ] ;
+       fhir:description [ fhir:v "Statut du problème." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7418,7 +7592,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7440,7 +7614,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7462,7 +7636,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7484,7 +7658,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7501,12 +7675,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-synthese-medicale-sejour" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Synthese medicale sejour" ] ;
-       fhir:description [ fhir:v "Entrée Synthese medicale sejour" ] ;
+       fhir:description [ fhir:v "Synthese medicale sejour" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7528,7 +7702,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7545,12 +7719,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-severite" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Sévérité" ] ;
-       fhir:description [ fhir:v "Entrée Sévérité." ] ;
+       fhir:description [ fhir:v "Sévérité." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7567,12 +7741,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-technique-imagerie" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Technique imagerie" ] ;
-       fhir:description [ fhir:v "Entrée Technique imagerie" ] ;
+       fhir:description [ fhir:v "Technique imagerie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7589,12 +7763,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-traitement" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Traitement" ] ;
-       fhir:description [ fhir:v "Entrée Traitement" ] ;
+       fhir:description [ fhir:v "Traitement" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7611,12 +7785,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-traitement-dispense" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Traitement dispensé" ] ;
-       fhir:description [ fhir:v "Entrée Traitement dispense" ] ;
+       fhir:description [ fhir:v "Traitement dispense" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7633,12 +7807,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-traitement-prescrit" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Traitement Prescrit" ] ;
-       fhir:description [ fhir:v "Entrée Traitement prescrit" ] ;
+       fhir:description [ fhir:v "Traitement prescrit" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7655,12 +7829,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-traitement-prescrit-subordonne" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Traitement Prescrit Subordonnee" ] ;
-       fhir:description [ fhir:v "Entrée Traitement prescrit subordonne" ] ;
+       fhir:description [ fhir:v "Traitement prescrit subordonne" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7677,12 +7851,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-traitement-subordonne" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Traitement subordonné" ] ;
-       fhir:description [ fhir:v "Entrée Traitement subordonné" ] ;
+       fhir:description [ fhir:v "Traitement subordonné" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7704,7 +7878,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7726,7 +7900,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7748,7 +7922,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7765,12 +7939,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-transfert-du-patient" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Transfert du patient" ] ;
-       fhir:description [ fhir:v "Entrée Transfert du patient" ] ;
+       fhir:description [ fhir:v "Transfert du patient" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7787,12 +7961,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-transfusion-de-produits-sanguins" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Transfusion de produits sanguins" ] ;
-       fhir:description [ fhir:v "Entrée Transfusion de produits sanguins" ] ;
+       fhir:description [ fhir:v "Transfusion de produits sanguins" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7809,12 +7983,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-vaccin-recommande" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Vaccin recommandé" ] ;
-       fhir:description [ fhir:v "Entrée Vaccin recommandé" ] ;
+       fhir:description [ fhir:v "Vaccin recommandé" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7831,12 +8005,12 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-lm-vaccination" ]
        ] ;
        fhir:name [ fhir:v "Modèle logique métier - FR LM Vaccination" ] ;
-       fhir:description [ fhir:v "Entrée Vaccination" ] ;
+       fhir:description [ fhir:v "Vaccination" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7858,7 +8032,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Sections)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des sections d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7880,7 +8054,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7902,7 +8076,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Eléments transversaux)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier des composants élémentaires" ]
      ] [
        fhir:extension ( [
          fhir:url [
@@ -7924,29 +8098,7 @@
          a fhir:Boolean ;
          fhir:v false
        ] ;
-       fhir:groupingId [ fhir:v "Modèles logiques de l'entête du document" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "StructureDefinition:logical"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-non-remboursable> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-lm-non-remboursable" ]
-       ] ;
-       fhir:name [ fhir:v "Non remboursable" ] ;
-       fhir:description [ fhir:v "Modèle logique métier - FR LM Entrée Non remboursable" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ] ;
-       fhir:groupingId [ fhir:v "Modèle métier du Corps d'un document(Entrées)" ]
+       fhir:groupingId [ fhir:v "Modèles logiques métier de l'entête d'un document" ]
      ] [
        fhir:extension ( [
          fhir:url [

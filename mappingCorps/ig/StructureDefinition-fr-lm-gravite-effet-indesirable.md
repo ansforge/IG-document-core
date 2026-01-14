@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-gravite-effet-indesirable | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMGraviteEffetIndesirable |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMGraviteEffetIndesirable |
 
  
-Entrée Gravite effet indesirable 
+Gravite effet indesirable 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-gravite-effet-
   "name" : "FRLMGraviteEffetIndesirable",
   "title" : "Modèle logique métier - FR LM Gravite effet indesirable",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-gravite-effet-
       ]
     }
   ],
-  "description" : "Entrée Gravite effet indesirable",
+  "description" : "Gravite effet indesirable",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-gravite-effet-
         "id" : "fr-lm-gravite-effet-indesirable",
         "path" : "fr-lm-gravite-effet-indesirable",
         "short" : "Modèle logique métier - FR LM Gravite effet indesirable",
-        "definition" : "Entrée Gravite effet indesirable"
+        "definition" : "Gravite effet indesirable"
       },
       {
         "id" : "fr-lm-gravite-effet-indesirable.code",

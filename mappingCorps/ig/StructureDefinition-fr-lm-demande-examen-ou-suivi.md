@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-ou-suivi | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRLMDemandeExamenOuSuivi |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMDemandeExamenOuSuivi |
 
  
-Entrée Demande d’examen ou de suivi / Objectif à atteindre 
+Demande d’examen ou de suivi / Objectif à atteindre 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-demande-examen
   "name" : "FRLMDemandeExamenOuSuivi",
   "title" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-demande-examen
       ]
     }
   ],
-  "description" : "Entrée Demande d'examen ou de suivi / Objectif à atteindre",
+  "description" : "Demande d'examen ou de suivi / Objectif à atteindre",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-demande-examen
         "id" : "fr-lm-demande-examen-ou-suivi",
         "path" : "fr-lm-demande-examen-ou-suivi",
         "short" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
-        "definition" : "Entrée Demande d'examen ou de suivi / Objectif à atteindre"
+        "definition" : "Demande d'examen ou de suivi / Objectif à atteindre"
       },
       {
         "id" : "fr-lm-demande-examen-ou-suivi.identifiant",

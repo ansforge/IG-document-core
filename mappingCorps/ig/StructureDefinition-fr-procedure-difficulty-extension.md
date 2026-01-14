@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-difficulty-extension | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:FRProcedureDifficultyExtension |
+| Draft as of 2026-01-14 | *Computable Name*:FRProcedureDifficultyExtension |
 
 Extension permettant d’indiquer la difficulté perçue ou mesurée d’un acte.
 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-procedure-difficu
   "name" : "FRProcedureDifficultyExtension",
   "title" : "FR Procedure Difficulty Extension",
   "status" : "draft",
-  "date" : "2026-01-07T21:00:10+00:00",
+  "date" : "2026-01-14T15:34:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
