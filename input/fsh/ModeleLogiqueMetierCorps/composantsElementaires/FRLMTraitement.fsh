@@ -22,6 +22,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT (2.16.840.1.113883.6.96)" 
   * dose 0..1 Quantity "Dose à administrer"
   * rate[x] 0..1 Ratio or Quantity  "Rythme d'administration"
+  * doseMaximale 0..1 Ratio "Dose maximale"
 
 * medicament 1..1 FRLMProduitSante "Médicament"
 * reason 0..* FRLMReferenceInterne "Motif du traitement"

@@ -1,5 +1,6 @@
 /* Equivalents EHDSDevice précisés en commentaires pour chaque donnée métier */
 Logical: FRLMDispositifMedical
+Id: fr-lm-dispositif-medical
 //Parent: EHDSDevice
 Title: "Modèle logique métier - Dispositif médical"
 Description: """Dispositif médical"""
