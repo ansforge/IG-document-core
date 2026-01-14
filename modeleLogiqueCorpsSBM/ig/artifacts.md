@@ -103,7 +103,7 @@ Modèles de données métier représentant les concepts élémentaires, modélis
 
 | | |
 | :--- | :--- |
-| [Modèle logique métier - Dispositif médical](StructureDefinition-FRLMDispositifMedical.md) | Dispositif médical |
+| [Modèle logique métier - Dispositif médical](StructureDefinition-fr-lm-dispositif-medical.md) | Dispositif médical |
 | [Modèle logique métier - FR LM Accident transfusionnel](StructureDefinition-fr-lm-accidents-transfusionnels.md) | Accident transfusionnel |
 | [Modèle logique métier - FR LM Acte](StructureDefinition-fr-lm-acte.md) | Acte |
 | [Modèle logique métier - FR LM Acte substitution](StructureDefinition-fr-lm-acte-substitution.md) | Acte substitution |

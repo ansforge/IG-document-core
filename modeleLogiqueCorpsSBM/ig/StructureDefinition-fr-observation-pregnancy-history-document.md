@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-history-document | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:FRObservationPregnancyHistoryDocument |
+| Draft as of 2026-01-14 | *Computable Name*:FRObservationPregnancyHistoryDocument |
 
  
 FRObservationPregnancyHistoryDocument permet de regrouper les observations relatives à un épisode de grossesse. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-pregn
   "name" : "FRObservationPregnancyHistoryDocument",
   "title" : "Observation - FR Observation Pregnancy History Document",
   "status" : "draft",
-  "date" : "2026-01-08T10:06:53+00:00",
+  "date" : "2026-01-14T16:02:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -1,10 +1,10 @@
-ExampleIG : Validation Results
+FRDocumentCore : Validation Results
 =========================================
 
-err = 510, warn = 3740, info = 1105
+err = 510, warn = 3756, info = 1105
 $--
 Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https://interop.esante.gouv.fr/ig/document/core)
- Build Errors : 8 / 4 / 0
+ Build Errors : 10 / 4 / 0
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-FRActLMCDAFHIR : 0 / 8 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-FRAdvanceDirectiveLMCDAFHIR : 0 / 8 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-FRAdverseEventLMCDAFHIR : 0 / 8 / 1
@@ -36,7 +36,6 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingValidateurCDAFHIR : 0 / 5 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ConceptMap-mappingmodelemetierCDAFHIR : 0 / 8 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/ImplementationGuide-ans.document.fr.core : 316 / 12 / 1
- /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-FRLMDispositifMedical : 0 / 0 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-Observation-vital-signs-panel-document : 0 / 1 / 2
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-accession-number-identifier-document : 0 / 1 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-actor-extension : 0 / 1 / 1
@@ -140,6 +139,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-directive-anticipee : 0 / 24 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-directives-anticipees : 0 / 11 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-dispensation-medicaments : 0 / 14 / 1
+ /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-dispositif-medical : 0 / 14 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-dispositif-medical-entree : 0 / 30 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-dispositifs-medicaux : 0 / 11 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-document-attache : 0 / 22 / 1
@@ -254,7 +254,7 @@ Generated $--. FHIR version $-- for ans.document.fr.core#$-- (canonical = https:
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-synthese-medicale-sejour : 0 / 16 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-systeme-structure-auteur : 0 / 24 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-technique-imagerie : 8 / 32 / 1
- /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-traitement : 5 / 36 / 1
+ /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-traitement : 5 / 38 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-traitement-dispense : 0 / 24 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-traitement-prescrit : 0 / 62 / 1
  /home/runner/work/IG-document-core/IG-document-core/igSource/fsh-generated/resources/StructureDefinition-fr-lm-traitement-prescrit-subordonne : 0 / 18 / 1
@@ -345,6 +345,8 @@ ERROR: package.tgz: Error converting pacakge to R4B: Error processing package/Cl
 ERROR: StructureDefinition-fr-lm-historique-des-grossesses.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 484, column 743: The link 'StructureDefinition-fr-lm-historique-des-grossesses-definitions.html#fr-lm-historique-des-grossesses.entree[x]' for "entree[x]" cannot be resolved (valid targets: 44 targets)
 ERROR: StructureDefinition-fr-lm-historique-des-grossesses.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 703, column 743: The link 'StructureDefinition-fr-lm-historique-des-grossesses-definitions.html#fr-lm-historique-des-grossesses.entree[x]' for "entree[x]" cannot be resolved (valid targets: 44 targets)
 ERROR: enteteDocument.html#/html/body/div/div/div/div/div/ul/li/a at Line 270, column 8: The link './modelesLogiquesMetier-entete.html' for "Modèles logiques métier" cannot be resolved
+ERROR: ressourcesFHIR-struc-gen.html#/html/body/div/div/div/div/div/ul/li/strong/a at Line 413, column 16: The link 'StructureDefinition-fr-practitionerrole-document.html' for "FRPractitionerRoleDocument" cannot be resolved
+ERROR: ressourcesFHIR-struc-gen.html#/html/body/div/div/div/div/div/ul/li/strong/a at Line 419, column 16: The link 'StructureDefinition-fr-relatedperson-document.html' for "FRRelatedPersonDocument" cannot be resolved
 WARNING: /home/runner/work/IG-document-core/IG-document-core/igSource/output/searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img/footer/div/div/div/div/div/div/a/img/div/a/img/script at Line 255, column 7: The <script> containing the javascript '$( document ).ready('... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
@@ -903,7 +905,6 @@ ERROR: ImplementationGuide/ans.document.fr.core: ImplementationGuide.definition.
 ERROR: ImplementationGuide/ans.document.fr.core: ImplementationGuide.definition.resource[327].reference: Unable to resolve resource with reference 'Binary/BIO-CR-BIO-2024.01-glycemie-mole'
 WARNING: ImplementationGuide/ans.document.fr.core: ImplementationGuide.dependsOn[1]: The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.cda.uv.core#2.0.1-sd is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 WARNING: ImplementationGuide/ans.document.fr.core: ImplementationGuide.dependsOn[7]: The ImplementationGuide is based on FHIR version 4.0.1 but package ihe.pharm.mpd#1.0.0-comment-2 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
-== fsh-generated/resources/StructureDefinition-FRLMDispositifMedical.json ==
 == fsh-generated/resources/StructureDefinition-fr-Observation-vital-signs-panel-document.json ==
 INFORMATION: StructureDefinition/fr-Observation-vital-signs-panel-document: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Observation-vital-signs-panel-document'): The Implementation Guide contains no examples for this profile
@@ -1887,6 +1888,21 @@ WARNING: StructureDefinition/fr-lm-dispensation-medicaments: StructureDefinition
 WARNING: StructureDefinition/fr-lm-dispensation-medicaments: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-dispensation-medicaments: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-dispensation-medicaments: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+== fsh-generated/resources/StructureDefinition-fr-lm-dispositif-medical.json ==
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-dispositif-medical: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 == fsh-generated/resources/StructureDefinition-fr-lm-dispositif-medical-entree.json ==
 WARNING: StructureDefinition/fr-lm-dispositif-medical-entree: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-dispositif-medical-entree: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -4034,6 +4050,7 @@ WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.elem
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -4053,6 +4070,7 @@ WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+WARNING: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 ERROR: StructureDefinition/fr-lm-traitement: StructureDefinition.differential.element[7]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
 ERROR: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[7]: This element has a Binding but the types [Base] do not make this kind of constraint relevant
 ERROR: StructureDefinition/fr-lm-traitement: StructureDefinition.snapshot.element[7].binding: The element fr-lm-traitement.dosage has a binding, but no bindable types are present [Base]
@@ -4581,8 +4599,8 @@ WARNING: ValueSet/fr-vs-evaluation-type: ValueSet: Published value sets SHOULD c
 == fsh-generated/resources/ValueSet-fr-vs-medication-translation-document.json ==
 WARNING: ValueSet/fr-vs-medication-translation-document: ValueSet.compose.include[1].system: No definition could be found for URL value 'https://smt.esante.gouv.fr/terminologie-cip_ucd'
 WARNING: ValueSet/fr-vs-medication-translation-document: ValueSet.compose.include[3].system: No definition could be found for URL value 'https://smt.esante.gouv.fr/terminologie-medicabase'
-ERROR: ValueSet.where(id = 'fr-vs-medication-translation-document'): Error from https://smt.esante.gouv.fr/fhir: Error: [0af52ae1-96c2-4499-a7b3-d8e53f995b5a]: Could not find the code system https://smt.esante.gouv.fr/terminologie-cip_ucd|2026-01
-Information: X-Request-Id: 7f1952d7-fe8c-4b41-8c3a-0443697ab2ee
+ERROR: ValueSet.where(id = 'fr-vs-medication-translation-document'): Error from https://smt.esante.gouv.fr/fhir: Error: [3e5b19e2-3538-42e7-ad57-965108d3e977]: Could not find the code system https://smt.esante.gouv.fr/terminologie-cip_ucd|2026-01
+Information: X-Request-Id: 2168ac26-80b5-49ae-a5b5-8ba5132022f5
 == fsh-generated/resources/ValueSet-fr-vs-procedure-code.json ==
 WARNING: ValueSet/fr-vs-procedure-code: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 ERROR: ValueSet.where(id = 'fr-vs-procedure-code'): Error from https://tx.fhir.org/r4: A definition for CodeSystem 'https://smt.esante.gouv.fr/terminologie-ccam' could not be found, so the value set cannot be expanded

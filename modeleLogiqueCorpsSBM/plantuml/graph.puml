@@ -7,15 +7,6 @@ package IG #DDDDDD{
 
      package Profiles #DDDDDD{
 
-        class FRLMDispositifMedical{
-
-             FRLMDispositifMedical => [None..None]
-             FRLMDispositifMedical.identifiant => [0..*]
-             FRLMDispositifMedical.type => [1..1]
-             FRLMDispositifMedical.type.code => [1..1]
-             FRLMDispositifMedical.type.code.autreCode => [0..*]
-        } 
-
         class FRObservationVitalSignsPanelDocument{
 
              Observation => [None..None]
@@ -1546,6 +1537,15 @@ package IG #DDDDDD{
              fr-lm-dispositif-medical-entree.nonRemboursable => [0..1]
         } 
 
+        class FRLMDispositifMedical{
+
+             fr-lm-dispositif-medical => [None..None]
+             fr-lm-dispositif-medical.identifiant => [0..*]
+             fr-lm-dispositif-medical.type => [1..1]
+             fr-lm-dispositif-medical.type.code => [1..1]
+             fr-lm-dispositif-medical.type.code.autreCode => [0..*]
+        } 
+
         class FRLMDispositifsMedicaux{
 
              fr-lm-dispositifs-medicaux => [None..None]
@@ -2983,6 +2983,7 @@ package IG #DDDDDD{
              fr-lm-traitement.dosage.site => [0..*]
              fr-lm-traitement.dosage.dose => [0..1]
              fr-lm-traitement.dosage.rate[x] => [0..1]
+             fr-lm-traitement.dosage.doseMaximale => [0..1]
              fr-lm-traitement.medicament => [1..1]
              fr-lm-traitement.reason => [0..*]
              fr-lm-traitement.prescription => [0..*]
@@ -4169,10 +4170,6 @@ package IG #DDDDDD{
 
 package "Ressources de base" #palegreen {
 
- class "Base" as  class095a1b43effec73955e31e790438de49 
-
-    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedical
-
  class "vitalspanel" as  class48cc96dc575369fad67347d24c304310 
 
     class48cc96dc575369fad67347d24c304310 --> FRObservationVitalSignsPanelDocument
@@ -4560,6 +4557,10 @@ package "Ressources de base" #palegreen {
  class "Base" as  class095a1b43effec73955e31e790438de49 
 
     class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedicalEntree
+
+ class "Base" as  class095a1b43effec73955e31e790438de49 
+
+    class095a1b43effec73955e31e790438de49 --> FRLMDispositifMedical
 
  class "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section" as  class5dabea989fe22a905d8f89cc210527f2 
 

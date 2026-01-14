@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-Observation-vital-signs-panel-document | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:FRObservationVitalSignsPanelDocument |
+| Draft as of 2026-01-14 | *Computable Name*:FRObservationVitalSignsPanelDocument |
 
  
 FRObservationVitalSignsPanelDocument permet de regrouper des informations relatives aux mesures cliniques du patient. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-Observation-vital
   "name" : "FRObservationVitalSignsPanelDocument",
   "title" : "Observation - FR Observation Vital Signs Panel Document",
   "status" : "draft",
-  "date" : "2026-01-08T10:06:53+00:00",
+  "date" : "2026-01-14T16:02:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-periode-de-renouvellement | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:FRLMPeriodeDeRenouvellement |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMPeriodeDeRenouvellement |
 
  
 Période de renouvellement de la prescription 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-periode-de-ren
   "name" : "FRLMPeriodeDeRenouvellement",
   "title" : "Modèle logique métier - FR LM Période de renouvellement de la prescription",
   "status" : "draft",
-  "date" : "2026-01-08T10:06:53+00:00",
+  "date" : "2026-01-14T16:02:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

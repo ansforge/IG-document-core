@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-custodian | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:FRCDAAssignedCustodian |
+| Draft as of 2026-01-14 | *Computable Name*:FRCDAAssignedCustodian |
 
  
 L’élément de l’en-tête du CDA assignedCustodian contient l’élément representedCustodianOrganization caractérisant la structure conservant le document. 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-cda-assigned-cust
   "name" : "FRCDAAssignedCustodian",
   "title" : "CDA - assignedCustodian",
   "status" : "draft",
-  "date" : "2026-01-08T10:06:53+00:00",
+  "date" : "2026-01-14T16:02:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

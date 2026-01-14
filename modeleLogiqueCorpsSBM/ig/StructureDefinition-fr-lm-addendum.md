@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-addendum | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:FRLMAddendum |
+| Draft as of 2026-01-14 | *Computable Name*:FRLMAddendum |
 
  
 Section Addendum 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-addendum.csv),
   "name" : "FRLMAddendum",
   "title" : "Modèle logique métier - FR LM Addendum",
   "status" : "draft",
-  "date" : "2026-01-08T10:06:53+00:00",
+  "date" : "2026-01-14T16:02:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
