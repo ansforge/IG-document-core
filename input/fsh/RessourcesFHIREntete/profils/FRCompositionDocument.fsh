@@ -131,12 +131,21 @@ Description: "Ce profil est utilisé pour représenter un document médical."
 * encounter 1..1 MS
 * encounter only Reference(FREncounterCareDocument)
 
-* section 1..* MS
-* section ^slicing.discriminator[0].type = #value
+
+/* * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
-  * ^definition = "La ressource Composition est structurée en différentes sections."
+  * ^definition = "La ressource Composition est structurée en différentes sections." */
+
+* section 1..*
+// Binder section.code sur le ValueSet
+* section.id 0..1
+* section.code from FRValueSetListeSectionsDocument (extensible)
+* section.title 1..1
+* section.text 1..1
+* section.entry 0..*   // entrée libre, sera profilée dans les volets spécifiques
+* section.section 0..* // sous-section libre, sera profilée dans les volets spécifiques
 
 /// INVARIANTS
 Invariant:  comp-1
@@ -147,4 +156,9 @@ Severity:    #error
 Invariant: comp-3
 Description: "La valeur du PractitionerRole.code dans l'extension[party]' doit être 'PROV' ou 'AGNT'."
 Expression: "value.resolve().code.coding.code.contains('PROV') or value.resolve().code.coding.code.contains('AGNT')"
+Severity: #error
+
+Invariant: comp-4
+Description: "Une section ne peut pas contenir à la fois des entrées et des sous-sections."
+Expression: "not(exists(f:entry) and exists(f:section))"
 Severity: #error

@@ -18,6 +18,7 @@ Alias: $CISP-2 = https://smt.esante.gouv.fr/terminologie-cisp
 Alias: $CCAM = https://smt.esante.gouv.fr/terminologie-ccam
 Alias: $SMS = https://smt.esante.gouv.fr/terminologie-sms
 Alias: $terminologie-cisis = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis
+Alias: $DCM = http://dicom.nema.org/resources/ontology/DCM
 
 // JDVs
 Alias: $jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdministrationImmunizationCode-cisis
