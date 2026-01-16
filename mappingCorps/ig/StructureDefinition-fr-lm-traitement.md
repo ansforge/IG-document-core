@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRLMTraitement |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMTraitement |
 
  
 Traitement 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement.csv
   "name" : "FRLMTraitement",
   "title" : "Modèle logique métier - FR LM Traitement",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -232,6 +232,19 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement.csv
           },
           {
             "code" : "Quantity"
+          }
+        ]
+      },
+      {
+        "id" : "fr-lm-traitement.dosage.doseMaximale",
+        "path" : "fr-lm-traitement.dosage.doseMaximale",
+        "short" : "Dose maximale",
+        "definition" : "Dose maximale",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Ratio"
           }
         ]
       },

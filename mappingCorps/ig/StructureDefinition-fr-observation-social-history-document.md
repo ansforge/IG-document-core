@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-social-history-document | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRObservationSocialHistoryDocument |
+| Draft as of 2026-01-16 | *Computable Name*:FRObservationSocialHistoryDocument |
 
  
 FRObservationSocialHistoryDocument décrit les habitudes de vie du patient (Habitus / Mode de vie). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-socia
   "name" : "FRObservationSocialHistoryDocument",
   "title" : "Observation - FR Observation Social History Document",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

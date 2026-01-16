@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRLMPersonneStructureAuteur |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMPersonneStructureAuteur |
 
  
 Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels). 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-personne-struc
   "name" : "FRLMPersonneStructureAuteur",
   "title" : "Modèle logique métier - FR LM Personne et/ou Structure Auteur",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
+| Draft as of 2026-01-16 | *Computable Name*:Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)" |
 
  
 Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapping: 
@@ -32,7 +32,7 @@ Ce ConceptMap de l’élément PersonneStructure présente trois groupes de mapp
   "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

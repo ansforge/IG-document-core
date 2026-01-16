@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-work-related-accident-document | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRObservationWorkRelatedAccidentDocument |
+| Draft as of 2026-01-16 | *Computable Name*:FRObservationWorkRelatedAccidentDocument |
 
  
 FRObservationWorkRelatedAccidentDocument permet d’indiquer si l’élément auquel elle est associée est en rapport avec un accident du travail / une maladie professionnelle. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-observation-work-
   "name" : "FRObservationWorkRelatedAccidentDocument",
   "title" : "Observation - FR Observation Work Related Accident Document",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRLMBatterieExamensBiologieMedicale |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMBatterieExamensBiologieMedicale |
 
  
 Batterie d’examens de biologie médicale 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-batterie-exame
   "name" : "FRLMBatterieExamensBiologieMedicale",
   "title" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

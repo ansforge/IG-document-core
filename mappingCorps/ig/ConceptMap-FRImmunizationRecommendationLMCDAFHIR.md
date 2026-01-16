@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRImmunizationRecommendationLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*: |
+| Draft as of 2026-01-16 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CDA FRCDAVaccinRecommande, puis vers le profil FHIR FRImmunizationRecommendationDocument. 
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccin recommandé\"",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

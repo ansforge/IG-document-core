@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRLMResultatExamensBiologieElementCliniquePertinent |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMResultatExamensBiologieElementCliniquePertinent |
 
  
 Résultat d’examens de biologie / élement clinique pertinent 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultat-exame
   "name" : "FRLMResultatExamensBiologieElementCliniquePertinent",
   "title" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

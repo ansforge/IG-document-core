@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-severite | *Version*:0.1.0 |
-| Draft as of 2026-01-14 | *Computable Name*:FRLMSeverite |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMSeverite |
 
  
 Sévérité. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-severite.csv),
   "name" : "FRLMSeverite",
   "title" : "Modèle logique métier - FR LM Sévérité",
   "status" : "draft",
-  "date" : "2026-01-14T15:34:52+00:00",
+  "date" : "2026-01-16T14:41:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
