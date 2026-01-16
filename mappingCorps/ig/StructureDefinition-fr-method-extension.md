@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-method-extension.
   "name" : "FRMethodExtension",
   "title" : "FR Method Extension",
   "status" : "draft",
-  "date" : "2026-01-16T14:41:46+00:00",
+  "date" : "2026-01-16T14:59:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

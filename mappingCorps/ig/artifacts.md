@@ -92,7 +92,7 @@ This page provides a list of the FHIR artifacts defined as part of this implemen
 | [Modèle logique métier - FR LM Sous-chapitre du compte rendu d'examens de biologie](StructureDefinition-fr-lm-cr-bio-sous-chapitre.md) | Modèle logique métier de la section Sous-chapitre du compte rendu d’examens de biologie (section de 2nd niveau) |
 | [Modèle logique métier - FR LM Statut du document](StructureDefinition-fr-lm-statut-document.md) | Section Statut du document |
 | [Modèle logique métier - FR LM Statut fonctionnel](StructureDefinition-fr-lm-statut-fonctionnel.md) | Section Statut fonctionnel |
-| [Modèle logique métier - FR LM Traitement](StructureDefinition-fr-lm-traitement.md) | Traitement |
+| [Modèle logique métier - FR LM Traitements](StructureDefinition-fr-lm-traitements.md) | Section Traitements |
 | [Modèle logique métier - FR LM Traitements administrés](StructureDefinition-fr-lm-traitements-administres.md) | Section Traitements administrés |
 | [Modèle logique métier - FR LM Traitements à la sortie](StructureDefinition-fr-lm-traitement-sortie.md) | Section Traitements à la sortie |
 | [Modèle logique métier - FR LM Vaccinations](StructureDefinition-fr-lm-vaccinations.md) | Section Vaccinations |
@@ -190,11 +190,11 @@ Modèles de données métier représentant les concepts élémentaires, modélis
 | [Modèle logique métier - FR LM Synthese medicale sejour](StructureDefinition-fr-lm-synthese-medicale-sejour.md) | Synthese medicale sejour |
 | [Modèle logique métier - FR LM Sévérité](StructureDefinition-fr-lm-severite.md) | Sévérité. |
 | [Modèle logique métier - FR LM Technique imagerie](StructureDefinition-fr-lm-technique-imagerie.md) | Technique imagerie |
+| [Modèle logique métier - FR LM Traitement](StructureDefinition-fr-lm-traitement.md) | Traitement |
 | [Modèle logique métier - FR LM Traitement dispensé](StructureDefinition-fr-lm-traitement-dispense.md) | Traitement dispense |
 | [Modèle logique métier - FR LM Traitement Prescrit](StructureDefinition-fr-lm-traitement-prescrit.md) | Traitement prescrit |
 | [Modèle logique métier - FR LM Traitement Prescrit Subordonnee](StructureDefinition-fr-lm-traitement-prescrit-subordonne.md) | Traitement prescrit subordonne |
 | [Modèle logique métier - FR LM Traitement subordonné](StructureDefinition-fr-lm-traitement-subordonne.md) | Traitement subordonné |
-| [Modèle logique métier - FR LM Traitements](StructureDefinition-fr-lm-traitements.md) | Section Traitements |
 | [Modèle logique métier - FR LM Transfert du patient](StructureDefinition-fr-lm-transfert-du-patient.md) | Transfert du patient |
 | [Modèle logique métier - FR LM Transfusion de produits sanguins](StructureDefinition-fr-lm-transfusion-de-produits-sanguins.md) | Transfusion de produits sanguins |
 | [Modèle logique métier - FR LM Vaccin recommandé](StructureDefinition-fr-lm-vaccin-recommande.md) | Vaccin recommandé |

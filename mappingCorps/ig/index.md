@@ -144,7 +144,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
   "name" : "FRDocumentCore",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2026-01-16T14:41:46+00:00",
+  "date" : "2026-01-16T14:59:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -5276,7 +5276,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Traitement",
         "description" : "Traitement",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques métier des sections d'un document"
+        "groupingId" : "Modèles logiques métier des composants élémentaires"
       },
       {
         "extension" : [
@@ -5351,7 +5351,7 @@ Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner aupr
         "name" : "Modèle logique métier - FR LM Traitements",
         "description" : "Section Traitements",
         "exampleBoolean" : false,
-        "groupingId" : "Modèles logiques métier des composants élémentaires"
+        "groupingId" : "Modèles logiques métier des sections d'un document"
       },
       {
         "extension" : [

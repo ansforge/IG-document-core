@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-evenement.csv)
   "name" : "FRLMEvenement",
   "title" : "Modèle logique métier - FR LM Évènement",
   "status" : "draft",
-  "date" : "2026-01-16T14:41:46+00:00",
+  "date" : "2026-01-16T14:59:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
