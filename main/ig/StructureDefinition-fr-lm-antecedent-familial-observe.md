@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedent-familial-observe | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMAntecedentFamilialObserve |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMAntecedentFamilialObserve |
 
  
-Entrée Antécédent familial 
+Antécédent familial 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedent-fam
   "name" : "FRLMAntecedentFamilialObserve",
   "title" : "Modèle logique métier - FR LM Antécédent familial observé",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedent-fam
       ]
     }
   ],
-  "description" : "Entrée Antécédent familial",
+  "description" : "Antécédent familial",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-antecedent-fam
         "id" : "fr-lm-antecedent-familial-observe",
         "path" : "fr-lm-antecedent-familial-observe",
         "short" : "Modèle logique métier - FR LM Antécédent familial observé",
-        "definition" : "Entrée Antécédent familial"
+        "definition" : "Antécédent familial"
       },
       {
         "id" : "fr-lm-antecedent-familial-observe.identifiant",

@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMDispositifMedical | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMDispositifMedical |
+| *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical | *Version*:0.1.0 |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMDispositifMedical |
 
  
 Dispositif médical 
@@ -18,7 +18,7 @@ Dispositif médical
 
 * Utiliser ce Modèle logique: [Modèle logique métier - FR LM Dispositif médical](StructureDefinition-fr-lm-dispositif-medical-entree.md), [Modèle logique métier - FR LM Dispositifs medicaux](StructureDefinition-fr-lm-dispositifs-medicaux.md) and [Modèle logique métier - FR LM Prélèvement](StructureDefinition-fr-lm-prelevement.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/FRLMDispositifMedical)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.document.fr.core|current/StructureDefinition/fr-lm-dispositif-medical)
 
 ### Formal Views of Profile Content
 
@@ -26,7 +26,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
  
 
-Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedical.csv), [Excel](StructureDefinition-FRLMDispositifMedical.xlsx) 
+Other representations of profile: [CSV](StructureDefinition-fr-lm-dispositif-medical.csv), [Excel](StructureDefinition-fr-lm-dispositif-medical.xlsx) 
 
 
 
@@ -35,19 +35,19 @@ Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedica
 ```json
 {
   "resourceType" : "StructureDefinition",
-  "id" : "FRLMDispositifMedical",
+  "id" : "fr-lm-dispositif-medical",
   "extension" : [
     {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
       "valueCode" : "can-be-target"
     }
   ],
-  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMDispositifMedical",
+  "url" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical",
   "version" : "0.1.0",
   "name" : "FRLMDispositifMedical",
   "title" : "Modèle logique métier - Dispositif médical",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -75,20 +75,20 @@ Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedica
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMDispositifMedical",
+  "type" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation" : "specialization",
   "differential" : {
     "element" : [
       {
-        "id" : "FRLMDispositifMedical",
-        "path" : "FRLMDispositifMedical",
+        "id" : "fr-lm-dispositif-medical",
+        "path" : "fr-lm-dispositif-medical",
         "short" : "Modèle logique métier - Dispositif médical",
         "definition" : "Dispositif médical"
       },
       {
-        "id" : "FRLMDispositifMedical.identifiant",
-        "path" : "FRLMDispositifMedical.identifiant",
+        "id" : "fr-lm-dispositif-medical.identifiant",
+        "path" : "fr-lm-dispositif-medical.identifiant",
         "short" : "Identifiant unique du DM (UDI)",
         "definition" : "Identifiant unique du DM (UDI)",
         "min" : 0,
@@ -100,8 +100,8 @@ Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedica
         ]
       },
       {
-        "id" : "FRLMDispositifMedical.type",
-        "path" : "FRLMDispositifMedical.type",
+        "id" : "fr-lm-dispositif-medical.type",
+        "path" : "fr-lm-dispositif-medical.type",
         "short" : "Type de DM",
         "definition" : "Type de DM",
         "min" : 1,
@@ -113,8 +113,8 @@ Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedica
         ]
       },
       {
-        "id" : "FRLMDispositifMedical.type.code",
-        "path" : "FRLMDispositifMedical.type.code",
+        "id" : "fr-lm-dispositif-medical.type.code",
+        "path" : "fr-lm-dispositif-medical.type.code",
         "short" : "Code du DM",
         "definition" : "Code du DM",
         "min" : 1,
@@ -126,8 +126,8 @@ Other representations of profile: [CSV](StructureDefinition-FRLMDispositifMedica
         ]
       },
       {
-        "id" : "FRLMDispositifMedical.type.code.autreCode",
-        "path" : "FRLMDispositifMedical.type.code.autreCode",
+        "id" : "fr-lm-dispositif-medical.type.code.autreCode",
+        "path" : "fr-lm-dispositif-medical.type.code.autreCode",
         "short" : "Autre code du dispositif médical",
         "definition" : "Autre code du dispositif médical",
         "min" : 0,

@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMResultatExamensBiologieElementCliniquePertinent |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMResultatExamensBiologieElementCliniquePertinent |
 
  
-Entrée Résultat d’examens de biologie / élement clinique pertinent 
+Résultat d’examens de biologie / élement clinique pertinent 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultat-exame
   "name" : "FRLMResultatExamensBiologieElementCliniquePertinent",
   "title" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultat-exame
       ]
     }
   ],
-  "description" : "Entrée Résultat d'examens de biologie / élement clinique pertinent",
+  "description" : "Résultat d'examens de biologie / élement clinique pertinent",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultat-exame
         "id" : "fr-lm-resultat-examens-biologie-element-clinique-pertinent",
         "path" : "fr-lm-resultat-examens-biologie-element-clinique-pertinent",
         "short" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
-        "definition" : "Entrée Résultat d'examens de biologie / élement clinique pertinent"
+        "definition" : "Résultat d'examens de biologie / élement clinique pertinent"
       },
       {
         "id" : "fr-lm-resultat-examens-biologie-element-clinique-pertinent.identifiant",
@@ -209,8 +209,8 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultat-exame
       {
         "id" : "fr-lm-resultat-examens-biologie-element-clinique-pertinent.auteur",
         "path" : "fr-lm-resultat-examens-biologie-element-clinique-pertinent.auteur",
-        "short" : "Auteur. Apparaît à ce niveau si le rendu de ce  résultat procède de cet auteur spécifique, différent de celui déclaré aux niveaux supérieurs.",
-        "definition" : "Auteur. Apparaît à ce niveau si le rendu de ce  résultat procède de cet auteur spécifique, différent de celui déclaré aux niveaux supérieurs.",
+        "short" : "Auteur",
+        "definition" : "Auteur",
         "min" : 0,
         "max" : "*",
         "type" : [

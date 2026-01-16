@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/ConceptMap/FRConditionLMCDAFHIR | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*: |
+| Draft as of 2026-01-16 | *Computable Name*: |
 
  
 Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument. 
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Problème\"",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

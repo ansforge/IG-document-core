@@ -3,14 +3,14 @@
   "id" : "ans.document.fr.core",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.document.fr.core</b></p><a name=\"ans.document.fr.core\"> </a><a name=\"hcans.document.fr.core\"> </a><h2>FRDocumentCore</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/document/core/ImplementationGuide/ans.document.fr.core",
   "version" : "0.1.0",
-  "name" : "ExampleIG",
+  "name" : "FRDocumentCore",
   "title" : "ANS IG document core",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -681,20 +681,17 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "grouping" : [{
-      "id" : "Modèles logiques de l'entête du document",
-      "name" : "Modèle logique métier de l'entête du document"
+      "id" : "Modèles logiques métier de l'entête d'un document",
+      "name" : "Modèles logiques métier de l'entête d'un document"
     },
     {
-      "id" : "Modèle métier du Corps d'un document(Sections)",
-      "name" : "Modèles logiques métier des sections"
+      "id" : "Modèles logiques métier des sections d'un document",
+      "name" : "Modèles logiques métier des sections d'un document"
     },
     {
-      "id" : "Modèle métier du Corps d'un document(Entrées)",
-      "name" : "Modèles logiques métier des entrées"
-    },
-    {
-      "id" : "Modèle métier du Corps d'un document(Eléments transversaux)",
-      "name" : "Modèles logiques métier des éléments transversaux"
+      "id" : "Modèles logiques métiers des composants élémentaires",
+      "name" : "Modèles logiques métier des composants élémentaires",
+      "description" : "Modèles de données métier représentant les concepts élémentaires, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR."
     },
     {
       "id" : "Ressources CDA entête",
@@ -1861,7 +1858,7 @@
       "name" : "Historique des actes",
       "description" : "Section Historique des actes",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2426,12 +2423,12 @@
         "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/FRLMDispositifMedical"
+        "reference" : "StructureDefinition/fr-lm-dispositif-medical"
       },
       "name" : "Modèle logique métier - Dispositif médical",
       "description" : "Dispositif médical",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2442,9 +2439,9 @@
         "reference" : "StructureDefinition/fr-lm-accidents-transfusionnels"
       },
       "name" : "Modèle logique métier - FR LM Accident transfusionnel",
-      "description" : "Entrée Accident transfusionnel",
+      "description" : "Accident transfusionnel",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2455,9 +2452,9 @@
         "reference" : "StructureDefinition/fr-lm-acte"
       },
       "name" : "Modèle logique métier - FR LM Acte",
-      "description" : "Entrée Acte",
+      "description" : "Acte",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2470,7 +2467,7 @@
       "name" : "Modèle logique métier - FR LM Acte d'imagerie",
       "description" : "Section Acte d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2481,9 +2478,9 @@
         "reference" : "StructureDefinition/fr-lm-acte-substitution"
       },
       "name" : "Modèle logique métier - FR LM Acte substitution",
-      "description" : "Entrée Acte substitution",
+      "description" : "Acte substitution",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2496,7 +2493,7 @@
       "name" : "Modèle logique métier - FR LM Addendum",
       "description" : "Section Addendum",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2507,9 +2504,9 @@
         "reference" : "StructureDefinition/fr-lm-administration-de-derives-du-sang"
       },
       "name" : "Modèle logique métier - FR LM Administration de dérivés du sang",
-      "description" : "Entrée Administration de dérivés du sang",
+      "description" : "Administration de dérivés du sang",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2520,9 +2517,9 @@
         "reference" : "StructureDefinition/fr-lm-administration-produit-de-sante"
       },
       "name" : "Modèle logique métier - FR LM Administration produit de sante",
-      "description" : "Entrée Administration produit de sante",
+      "description" : "Administration produit de sante",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2533,9 +2530,9 @@
         "reference" : "StructureDefinition/fr-lm-allergie-ou-hypersensibilite"
       },
       "name" : "Modèle logique métier - FR LM Allergie ou Hypersensibilité",
-      "description" : "Entrée Allergie ou hypersensibilite",
+      "description" : "Allergie ou hypersensibilite",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2548,7 +2545,7 @@
       "name" : "Modèle logique métier - FR LM Allergies et hypersensibilités",
       "description" : "Section Allergies et hypersensibilités",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2559,9 +2556,9 @@
         "reference" : "StructureDefinition/fr-lm-antecedent-familial-observe"
       },
       "name" : "Modèle logique métier - FR LM Antécédent familial observé",
-      "description" : "Entrée Antécédent familial",
+      "description" : "Antécédent familial",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2572,9 +2569,9 @@
         "reference" : "StructureDefinition/fr-lm-antecedents-familiaux-entree"
       },
       "name" : "Modèle logique métier - FR LM Antécédents familiaux",
-      "description" : "Entrée Antécédents familiaux",
+      "description" : "Antécédents familiaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2587,7 +2584,7 @@
       "name" : "Modèle logique métier - FR LM Antécédents familiaux",
       "description" : "Section Antécédents familiaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2600,7 +2597,7 @@
       "name" : "Modèle logique métier - FR LM Antécédents médicaux",
       "description" : "Section Antécédents médicaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2613,7 +2610,7 @@
       "name" : "Modèle logique métier - FR LM Antécédents obstétricaux",
       "description" : "Section Historique des grossesses",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2626,7 +2623,7 @@
       "name" : "Modèle logique métier - FR LM Auteur",
       "description" : "Auteur du document : ce peut être un professionnel, un patient/usager ou un système. \n- Pour un professionnel ou un système, la structure de rattachement doit être précisée.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2639,7 +2636,7 @@
       "name" : "Modèle logique métier - FR LM Auteur APSR",
       "description" : "Auteur APSR (Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Auteur",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2650,9 +2647,9 @@
         "reference" : "StructureDefinition/fr-lm-autorisation-exposition"
       },
       "name" : "Modèle logique métier - FR LM Autorisation exposition",
-      "description" : "Entrée Autorisation exposition",
+      "description" : "Autorisation exposition",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2663,9 +2660,9 @@
         "reference" : "StructureDefinition/fr-lm-autorisation-substitution"
       },
       "name" : "Modèle logique métier - FR LM Autorisation substitution",
-      "description" : "Entrée Autorisation substitution",
+      "description" : "Autorisation substitution",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2676,9 +2673,9 @@
         "reference" : "StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
       },
       "name" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
-      "description" : "Entrée Batterie d'examens de biologie médicale",
+      "description" : "Batterie d'examens de biologie médicale",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2689,9 +2686,9 @@
         "reference" : "StructureDefinition/fr-lm-certitude"
       },
       "name" : "Modèle logique métier - FR LM Certitude",
-      "description" : "Entrée Certitude",
+      "description" : "Certitude",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2704,7 +2701,7 @@
       "name" : "Modèle logique métier - FR LM Codes à barres",
       "description" : "Section Codes à barres",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2715,9 +2712,9 @@
         "reference" : "StructureDefinition/fr-lm-commentaire-er"
       },
       "name" : "Modèle logique métier - FR LM Commentaire",
-      "description" : "Entrée Commentaire",
+      "description" : "Commentaire",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2730,7 +2727,7 @@
       "name" : "Modèle logique métier - FR LM Commentaire (non-codé)",
       "description" : "Section Commentaire (non-codé)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2743,7 +2740,7 @@
       "name" : "Modèle logique métier - FR LM Comparaison d'examens d'imagerie",
       "description" : "Section Comparaison d'examens d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2756,7 +2753,7 @@
       "name" : "Modèle logique métier - FR LM Complications Acte",
       "description" : "Section Complications au cours de l'acte",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2769,7 +2766,7 @@
       "name" : "Modèle logique métier - FR LM Compte rendu de biologie de 1er niveau",
       "description" : "Section Compte rendu de biologie de 1er niveau",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2782,7 +2779,7 @@
       "name" : "Modèle logique métier - FR LM Conclusion examen d'imagerie",
       "description" : "Section Conclusion examen d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2795,7 +2792,7 @@
       "name" : "Modèle logique métier - FR LM Consentement",
       "description" : "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2808,7 +2805,7 @@
       "name" : "Modèle logique métier - FR LM Corps document",
       "description" : "Eléments métier du corps d'un document contenant les sections du document.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2819,9 +2816,9 @@
         "reference" : "StructureDefinition/fr-lm-criticite"
       },
       "name" : "Modèle logique métier - FR LM Criticite",
-      "description" : "Entrée Criticite",
+      "description" : "Criticite",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2834,7 +2831,7 @@
       "name" : "Modèle logique métier - FR LM Demande d'examen d'imagerie",
       "description" : "Section Demande d'examen d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2845,9 +2842,9 @@
         "reference" : "StructureDefinition/fr-lm-demande-examen-ou-suivi"
       },
       "name" : "Modèle logique métier - FR LM Demande d'examen ou de suivi",
-      "description" : "Entrée Demande d'examen ou de suivi / Objectif à atteindre",
+      "description" : "Demande d'examen ou de suivi / Objectif à atteindre",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2860,7 +2857,7 @@
       "name" : "Modèle logique métier - FR LM Destinataire prévu",
       "description" : "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2871,9 +2868,9 @@
         "reference" : "StructureDefinition/fr-lm-directive-anticipee"
       },
       "name" : "Modèle logique métier - FR LM Directive anticipée",
-      "description" : "Entrée Directive anticipée",
+      "description" : "Directive anticipée",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2886,7 +2883,7 @@
       "name" : "Modèle logique métier - FR LM Directives-anticipées",
       "description" : "Section Directives anticipées",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2899,7 +2896,7 @@
       "name" : "Modèle logique métier - FR LM Dispensation médicaments",
       "description" : "Section Dispensation médicaments",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2910,9 +2907,9 @@
         "reference" : "StructureDefinition/fr-lm-dispositif-medical-entree"
       },
       "name" : "Modèle logique métier - FR LM Dispositif médical",
-      "description" : "Entrée Dispositif médical",
+      "description" : "Dispositif médical",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2925,7 +2922,7 @@
       "name" : "Modèle logique métier - FR LM Dispositifs medicaux",
       "description" : "Section Dispositifs medicaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2936,9 +2933,9 @@
         "reference" : "StructureDefinition/fr-lm-document-attache"
       },
       "name" : "Modèle logique métier - FR LM Document attaché",
-      "description" : "Entrée Document attaché",
+      "description" : "Document attaché",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -2951,7 +2948,7 @@
       "name" : "Modèle logique métier - FR LM Document de référence",
       "description" : "Référence un document existant (à remplacer ou transformé).",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2964,7 +2961,7 @@
       "name" : "Modèle logique métier - FR LM Document PDF copie",
       "description" : "Section Document PDF-copie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2977,7 +2974,7 @@
       "name" : "Modèle logique métier - FR LM Documents ajoutés",
       "description" : "Section Documents ajoutés",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -2988,9 +2985,9 @@
         "reference" : "StructureDefinition/fr-lm-dose-antigene"
       },
       "name" : "Modèle logique métier - FR LM Dose d'antigène",
-      "description" : "Entrée Dose d'antigène",
+      "description" : "Dose d'antigène",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3003,7 +3000,7 @@
       "name" : "Modèle logique métier - FR LM Education du patient",
       "description" : "Section Education du patient",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3014,9 +3011,9 @@
         "reference" : "StructureDefinition/fr-lm-effet-indesirable"
       },
       "name" : "Modèle logique métier - FR LM Effet indesirable",
-      "description" : "Entrée Effet indesirable",
+      "description" : "Effet indesirable",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3029,7 +3026,7 @@
       "name" : "Modèle logique métier - FR LM Effets indesirables",
       "description" : "Section Effets indesirables",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3040,9 +3037,9 @@
         "reference" : "StructureDefinition/fr-lm-en-rapport-avec-la-prevention"
       },
       "name" : "Modèle logique métier - FR LM En rapport avec la prevention",
-      "description" : "Entrée En rapport avec la prevention",
+      "description" : "En rapport avec la prevention",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3053,9 +3050,9 @@
         "reference" : "StructureDefinition/fr-lm-en-rapport-avec-accident-travail"
       },
       "name" : "Modèle logique métier - FR LM En rapport avec un accident travail",
-      "description" : "Entrée En rapport avec un accident travail",
+      "description" : "En rapport avec un accident travail",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3066,9 +3063,9 @@
         "reference" : "StructureDefinition/fr-lm-en-rapport-avec-ald"
       },
       "name" : "Modèle logique métier - FR LM En rapport avec une Affection Longue Durée (ALD)",
-      "description" : "Entrée En rapport avec une Affection Longue Durée (ALD)",
+      "description" : "En rapport avec une Affection Longue Durée (ALD)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3081,7 +3078,7 @@
       "name" : "Modèle logique métier - FR LM En-tête document",
       "description" : "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3092,9 +3089,9 @@
         "reference" : "StructureDefinition/fr-lm-evaluation"
       },
       "name" : "Modèle logique métier - FR LM Evaluation",
-      "description" : "Entrée Evaluation",
+      "description" : "Evaluation",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3105,9 +3102,9 @@
         "reference" : "StructureDefinition/fr-lm-evaluation-composant"
       },
       "name" : "Modèle logique métier - FR LM Evaluation Composant",
-      "description" : "Entrée Evaluation Composant",
+      "description" : "Evaluation Composant",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3118,9 +3115,9 @@
         "reference" : "StructureDefinition/fr-lm-evaluation-composant-n2"
       },
       "name" : "Modèle logique métier - FR LM Evaluation Composant N2",
-      "description" : "Entrée Evaluation Composant N2",
+      "description" : "Evaluation Composant N2",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3131,9 +3128,9 @@
         "reference" : "StructureDefinition/fr-lm-evolution-effet-indesirable"
       },
       "name" : "Modèle logique métier - FR LM Evolution effet indesirable",
-      "description" : "Entrée Evolution effet indesirable",
+      "description" : "Evolution effet indesirable",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3144,9 +3141,9 @@
         "reference" : "StructureDefinition/fr-lm-evenement-indesirable-pendant-hospitalisation"
       },
       "name" : "Modèle logique métier - FR LM Evènements indésirables pendant l'hospitalisation",
-      "description" : "Entrée Evènements indésirables pendant l'hospitalisation",
+      "description" : "Evènements indésirables pendant l'hospitalisation",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3157,9 +3154,9 @@
         "reference" : "StructureDefinition/fr-lm-evenements-indesirables-suite-administration-derives-sang"
       },
       "name" : "Modèle logique métier - FR LM Evènements indésirables suite à l'administration de dérivés du sang",
-      "description" : "Entrée Evènements indésirables suite à l'administration de dérivés du sang",
+      "description" : "Evènements indésirables suite à l'administration de dérivés du sang",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3170,9 +3167,9 @@
         "reference" : "StructureDefinition/fr-lm-examen-imagerie"
       },
       "name" : "Modèle logique métier - FR LM Examen Imagerie",
-      "description" : "Entrée DICOM Examen Imagerie",
+      "description" : "DICOM Examen Imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3185,7 +3182,7 @@
       "name" : "Modèle logique métier - FR LM Exposition aux radiations",
       "description" : "Section Exposition aux radiations",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3198,7 +3195,7 @@
       "name" : "Modèle logique métier - FR LM Facteurs de risque professionnels non code",
       "description" : "Section Facteurs de risque professionnels non code",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3211,7 +3208,7 @@
       "name" : "Modèle logique métier - FR LM Fonctions physiques",
       "description" : "Section Fonctions physiques",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3222,9 +3219,9 @@
         "reference" : "StructureDefinition/fr-lm-gravite-effet-indesirable"
       },
       "name" : "Modèle logique métier - FR LM Gravite effet indesirable",
-      "description" : "Entrée Gravite effet indesirable",
+      "description" : "Gravite effet indesirable",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3235,9 +3232,9 @@
         "reference" : "StructureDefinition/fr-lm-group-de-questionnaires-devaluation"
       },
       "name" : "Modèle logique métier - FR LM Groupe de questionnaires d'évalutation",
-      "description" : "Entrée Groupe de questionnaires d'évalutation",
+      "description" : "Groupe de questionnaires d'évalutation",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3250,7 +3247,7 @@
       "name" : "Modèle logique métier - FR LM Habitus et modes de vie",
       "description" : "Section Habitus et modes de vie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3261,9 +3258,9 @@
         "reference" : "StructureDefinition/fr-lm-habitus-mode-de-vie-entree"
       },
       "name" : "Modèle logique métier - FR LM Habitus Mode de vie",
-      "description" : "Entrée Habitus Mode de vie",
+      "description" : "Habitus Mode de vie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3274,9 +3271,9 @@
         "reference" : "StructureDefinition/fr-lm-historique-grossesse"
       },
       "name" : "Modèle logique métier - FR LM Historique de la grossesse",
-      "description" : "Entrée Historique de la grossesse",
+      "description" : "Historique de la grossesse",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3287,9 +3284,9 @@
         "reference" : "StructureDefinition/fr-lm-hors-amm"
       },
       "name" : "Modèle logique métier - FR LM Hors Autorisation de Mise sur le Marché (AMM)",
-      "description" : "Entrée Hors Autorisation de Mise sur le Marché (AMM)",
+      "description" : "Hors Autorisation de Mise sur le Marché (AMM)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3300,9 +3297,9 @@
         "reference" : "StructureDefinition/fr-lm-identification-de-micro-organismes-multiresistants"
       },
       "name" : "Modèle logique métier - FR LM Identification de micro-organismes multirésistants",
-      "description" : "Entrée Identification de micro-organismes multirésistants",
+      "description" : "Identification de micro-organismes multirésistants",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3313,9 +3310,9 @@
         "reference" : "StructureDefinition/fr-lm-image-illustrative"
       },
       "name" : "Modèle logique métier - FR LM Image illustrative",
-      "description" : "Entrée Image illustrative.",
+      "description" : "Image illustrative.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3326,9 +3323,9 @@
         "reference" : "StructureDefinition/fr-lm-imputabilite-effet-indesirable"
       },
       "name" : "Modèle logique métier - FR LM Imputabilite effet indesirable",
-      "description" : "Entrée Imputabilite effet indesirable",
+      "description" : "Imputabilite effet indesirable",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3341,7 +3338,7 @@
       "name" : "Modèle logique métier - FR LM Informant APSR",
       "description" : "Informant APSR(Anatomic Pathology Structured Report), la structure de cet élément est identique à celle de l’élément Informateur",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3354,7 +3351,7 @@
       "name" : "Modèle logique métier - FR LM Informateur",
       "description" : "Informateur (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3367,7 +3364,7 @@
       "name" : "Modèle logique métier - FR LM Informations Cliniques",
       "description" : "Section Informations Cliniques",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3378,9 +3375,9 @@
         "reference" : "StructureDefinition/fr-lm-instruction-au-patient"
       },
       "name" : "Modèle logique métier - FR LM Instruction au patient",
-      "description" : "Entrée Instruction au patient",
+      "description" : "Instruction au patient",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3391,9 +3388,9 @@
         "reference" : "StructureDefinition/fr-lm-instructions-au-dispensateur"
       },
       "name" : "Modèle logique métier - FR LM Instructions au dispensateur",
-      "description" : "Entrée Instructions au dispensateur",
+      "description" : "Instructions au dispensateur",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3404,9 +3401,9 @@
         "reference" : "StructureDefinition/fr-lm-instructions-patient"
       },
       "name" : "Modèle logique métier - FR LM Instructions au patient",
-      "description" : "Entrée Instructions au patient",
+      "description" : "Instructions au patient",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3417,9 +3414,9 @@
         "reference" : "StructureDefinition/fr-lm-isolat-microbiologique"
       },
       "name" : "Modèle logique métier - FR LM Isolat microbiologique",
-      "description" : "Entrée Isolat microbiologique",
+      "description" : "Isolat microbiologique",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3432,7 +3429,7 @@
       "name" : "Modèle logique métier - FR LM Laboratoire exécutant",
       "description" : "Laboratoire exécutant",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3443,9 +3440,9 @@
         "reference" : "StructureDefinition/fr-lm-modalite-entree"
       },
       "name" : "Modèle logique métier - FR LM Modalité d'entrée",
-      "description" : "Entrée Modalité d'entrée",
+      "description" : "Modalité d'entrée",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3456,9 +3453,9 @@
         "reference" : "StructureDefinition/fr-lm-modalite-sortie"
       },
       "name" : "Modèle logique métier - FR LM Modalité de sortie",
-      "description" : "Entrée Modalité de sortie",
+      "description" : "Modalité de sortie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3469,9 +3466,22 @@
         "reference" : "StructureDefinition/fr-lm-naissance"
       },
       "name" : "Modèle logique métier - FR LM Naissance",
-      "description" : "Entrée Naissance",
+      "description" : "Naissance",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-non-remboursable"
+      },
+      "name" : "Modèle logique métier - FR LM Non remboursable",
+      "description" : "Non remboursable",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3482,9 +3492,9 @@
         "reference" : "StructureDefinition/fr-lm-notes-dispensateur"
       },
       "name" : "Modèle logique métier - FR LM Notes du dispensateur",
-      "description" : "Entrée Notes du dispensateur",
+      "description" : "Notes du dispensateur",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3497,7 +3507,7 @@
       "name" : "Modèle logique métier - FR LM Object Catalog",
       "description" : "Section Object Catalog",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3508,9 +3518,9 @@
         "reference" : "StructureDefinition/fr-lm-observation"
       },
       "name" : "Modèle logique métier - FR LM Observation",
-      "description" : "Entrée observation",
+      "description" : "observation",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3521,9 +3531,9 @@
         "reference" : "StructureDefinition/fr-lm-observation-grossesse"
       },
       "name" : "Modèle logique métier - FR LM Observation sur la grossesse",
-      "description" : "Entrée Observation sur la grossesse",
+      "description" : "Observation sur la grossesse",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3536,7 +3546,7 @@
       "name" : "Modèle logique métier - FR LM Opérateur de saisie",
       "description" : "Opérateur de saisie de la totalité ou d'une partie du contenu du document.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3549,7 +3559,7 @@
       "name" : "Modèle logique métier - FR LM Participant",
       "description" : "Participant",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3562,7 +3572,7 @@
       "name" : "Modèle logique métier - FR LM Participant",
       "description" : "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3575,7 +3585,7 @@
       "name" : "Modèle logique métier - FR LM Participant APSR",
       "description" : "Participant APSR(Anatomic Pathology Structured Report)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3588,7 +3598,7 @@
       "name" : "Modèle logique métier - FR LM Patient avec sujet non humain",
       "description" : "Patient avec sujet non humain",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3601,7 +3611,7 @@
       "name" : "Modèle logique métier - FR LM Patient Usager",
       "description" : "Patient/Usager concerné par le document.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3614,7 +3624,7 @@
       "name" : "Modèle logique métier - FR LM Performer",
       "description" : "Performer",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3627,7 +3637,7 @@
       "name" : "Modèle logique métier - FR LM Personne et/ou Structure",
       "description" : "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3640,7 +3650,7 @@
       "name" : "Modèle logique métier - FR LM Personne et/ou Structure Auteur",
       "description" : "Une personne (professionnel ou patient ou autre) et/ou une structure (pour les professionnels).",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3653,7 +3663,7 @@
       "name" : "Modèle logique métier - FR LM Plan de soins",
       "description" : "Section Plan de soins",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3666,7 +3676,7 @@
       "name" : "Modèle logique métier - FR LM Points de vigilance (non-codés)",
       "description" : "Section Points de vigilance (non-codés)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3677,9 +3687,9 @@
         "reference" : "StructureDefinition/fr-lm-prescription-entree"
       },
       "name" : "Modèle logique métier - FR LM Prescription",
-      "description" : "Entrée Prescription",
+      "description" : "Prescription",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3692,7 +3702,7 @@
       "name" : "Modèle logique métier - FR LM Prescription",
       "description" : "Association à une prescription à l’origine de l’acte dont résulte le document.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3705,7 +3715,7 @@
       "name" : "Modèle logique métier - FR LM Prescription de dispositifs médicaux",
       "description" : "Section Prescription de dispositifs médicaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3718,7 +3728,7 @@
       "name" : "Modèle logique métier - FR LM Prescription de médicaments",
       "description" : "Section Prescription de médicaments",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3731,7 +3741,7 @@
       "name" : "Modèle logique métier - FR LM Prise en charge",
       "description" : "Association du document à une prise en charge du patient/usager par un professionnel ou par une structure.\n - Exemples :\n   - Dans une structure hospitalière, cette prise en charge est une hospitalisation complète ou partielle, des actes et soins externes, une consultation, etc.\n   - Dans un cabinet, cette prise en charge est une consultation ou des actes et soins.\n - Pour un document d'expression personnelle du patient ou pour un document élaboré sans la présence du patient (ex : synthèse médicale) ou pour un document produit via un SNR, la prise en charge n'a pas de signification. Dans ce cas, on ne renseignera que les données obligatoires : date de prise en charge (avec nulllFlavor possible) et secteur d'activité.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3742,9 +3752,9 @@
         "reference" : "StructureDefinition/fr-lm-probleme"
       },
       "name" : "Modèle logique métier - FR LM Problème",
-      "description" : "Entrée Problème",
+      "description" : "Problème",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3757,7 +3767,7 @@
       "name" : "Modèle logique métier - FR LM Problèmes actifs",
       "description" : "Section Problèmes actifs",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3770,7 +3780,7 @@
       "name" : "Modèle logique métier - FR LM Produit de santé",
       "description" : "Produit de santé",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3781,9 +3791,9 @@
         "reference" : "StructureDefinition/fr-lm-prelevement"
       },
       "name" : "Modèle logique métier - FR LM Prélèvement",
-      "description" : "Entrée Prélèvement",
+      "description" : "Prélèvement",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3794,9 +3804,9 @@
         "reference" : "StructureDefinition/fr-lm-periode-de-renouvellement"
       },
       "name" : "Modèle logique métier - FR LM Période de renouvellement de la prescription",
-      "description" : "Entrée Période de renouvellement de la prescription",
+      "description" : "Période de renouvellement de la prescription",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3807,9 +3817,9 @@
         "reference" : "StructureDefinition/fr-lm-quantite-produit"
       },
       "name" : "Modèle logique métier - FR LM Quantité de produit",
-      "description" : "Entrée Quantité de produit",
+      "description" : "Quantité de produit",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3820,9 +3830,9 @@
         "reference" : "StructureDefinition/fr-lm-quantite-exposition"
       },
       "name" : "Modèle logique métier - FR LM Quantité exposition",
-      "description" : "Entrée Quantité exposition",
+      "description" : "Quantité exposition",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3835,7 +3845,7 @@
       "name" : "Modèle logique métier - FR LM Raison de la recommandation",
       "description" : "Section Raison de la recommandation",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3848,7 +3858,7 @@
       "name" : "Modèle logique métier - FR LM Raison de la recommandation (non codée)",
       "description" : "Section Raison de la recommandation (non codée)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -3859,9 +3869,9 @@
         "reference" : "StructureDefinition/fr-lm-rang-vaccination"
       },
       "name" : "Modèle logique métier - FR LM Rang de la vaccination",
-      "description" : "Entrée Rang de la vaccination",
+      "description" : "Rang de la vaccination",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3872,9 +3882,9 @@
         "reference" : "StructureDefinition/fr-lm-recherche-de-micro-organismes"
       },
       "name" : "Modèle logique métier - FR LM Recherche de micro organismes",
-      "description" : "Entrée Recherche de micro organismes",
+      "description" : "Recherche de micro organismes",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3885,9 +3895,9 @@
         "reference" : "StructureDefinition/fr-lm-rencontre"
       },
       "name" : "Modèle logique métier - FR LM Rencontre",
-      "description" : "Entrée Rencontre",
+      "description" : "Rencontre",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3900,7 +3910,7 @@
       "name" : "Modèle logique métier - FR LM Responsable",
       "description" : "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -3911,9 +3921,9 @@
         "reference" : "StructureDefinition/fr-lm-resultats-entree"
       },
       "name" : "Modèle logique métier - FR LM Resultats",
-      "description" : "Entrée Resultats",
+      "description" : "Resultats",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3924,9 +3934,9 @@
         "reference" : "StructureDefinition/fr-lm-resultats-examens-biologie-medicale"
       },
       "name" : "Modèle logique métier - FR LM Resultats d'examens de biologie medicale",
-      "description" : "Entrée Resultats d'examens de biologie medicale",
+      "description" : "Resultats d'examens de biologie medicale",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3937,9 +3947,9 @@
         "reference" : "StructureDefinition/fr-lm-reference-interne"
       },
       "name" : "Modèle logique métier - FR LM Référence interne",
-      "description" : "Entrée Référence interne",
+      "description" : "Référence interne",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3950,9 +3960,9 @@
         "reference" : "StructureDefinition/fr-lm-reference-item-plan-traitement"
       },
       "name" : "Modèle logique métier - FR LM Référence item plan traitement",
-      "description" : "Entrée Référence item plan traitement",
+      "description" : "Référence item plan traitement",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3963,9 +3973,9 @@
         "reference" : "StructureDefinition/fr-lm-reference-item-prescription"
       },
       "name" : "Modèle logique métier - FR LM Référence item prescription",
-      "description" : "Entrée Référence item prescription",
+      "description" : "Référence item prescription",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3976,9 +3986,9 @@
         "reference" : "StructureDefinition/fr-lm-references-externes"
       },
       "name" : "Modèle logique métier - FR LM Références externes",
-      "description" : "Entrée Références externes",
+      "description" : "Références externes",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -3989,9 +3999,9 @@
         "reference" : "StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
       },
       "name" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
-      "description" : "Entrée Résultat d'examens de biologie / élement clinique pertinent",
+      "description" : "Résultat d'examens de biologie / élement clinique pertinent",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4004,7 +4014,7 @@
       "name" : "Modèle logique métier - FR LM Résultats",
       "description" : "Section Résultats",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4017,7 +4027,7 @@
       "name" : "Modèle logique métier - FR LM Résultats d'examen d'imagerie",
       "description" : "Section Résultats d'examen d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4030,7 +4040,7 @@
       "name" : "Modèle logique métier - FR LM Résultats d'examens",
       "description" : "Section Résultats d'examens",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4043,7 +4053,7 @@
       "name" : "Modèle logique métier - FR LM Résultats d'examens (non codée)",
       "description" : "Section Résultats d'examens (non codée)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4056,7 +4066,7 @@
       "name" : "Modèle logique métier - FR LM Résultats d'événements",
       "description" : "Section Résultats d'événements",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4069,7 +4079,7 @@
       "name" : "Modèle logique métier - FR LM Résultats de laboratoire de biologie de seconde intention",
       "description" : "Section Résultats de laboratoire de biologie de seconde intention",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4082,7 +4092,7 @@
       "name" : "Modèle logique métier - FR LM Section",
       "description" : "Section",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4093,9 +4103,9 @@
         "reference" : "StructureDefinition/fr-lm-serie-imagerie"
       },
       "name" : "Modèle logique métier - FR LM Serie imagerie",
-      "description" : "Entrée Serie imagerie",
+      "description" : "Serie imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4106,9 +4116,9 @@
         "reference" : "StructureDefinition/fr-lm-signe-vital"
       },
       "name" : "Modèle logique métier - FR LM Signe vital",
-      "description" : "Entrée Signe vital",
+      "description" : "Signe vital",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4119,9 +4129,9 @@
         "reference" : "StructureDefinition/fr-lm-signe-vital-observe"
       },
       "name" : "Modèle logique métier - FR LM Signe vital observé",
-      "description" : "Entrée Signe vital observé",
+      "description" : "Signe vital observé",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4134,7 +4144,7 @@
       "name" : "Modèle logique métier - FR LM Signes vitaux",
       "description" : "Section Signes vitaux",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4145,9 +4155,9 @@
         "reference" : "StructureDefinition/fr-lm-sop-instance"
       },
       "name" : "Modèle logique métier - FR LM SOP Instance",
-      "description" : "Entrée SOP Instance",
+      "description" : "SOP Instance",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4160,7 +4170,7 @@
       "name" : "Modèle logique métier - FR LM Sous-chapitre du compte rendu d'examens de biologie",
       "description" : "Modèle logique métier de la section Sous-chapitre du compte rendu d'examens de biologie  (section de 2nd niveau)",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4171,9 +4181,9 @@
         "reference" : "StructureDefinition/fr-lm-statut"
       },
       "name" : "Modèle logique métier - FR LM Statut",
-      "description" : "Entrée Statut",
+      "description" : "Statut",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4184,9 +4194,9 @@
         "reference" : "StructureDefinition/fr-lm-statut-clinique-patient"
       },
       "name" : "Modèle logique métier - FR LM Statut clinique du patient",
-      "description" : "Entrée Statut clinique du patient",
+      "description" : "Statut clinique du patient",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4197,9 +4207,9 @@
         "reference" : "StructureDefinition/fr-lm-statut-document-entree"
       },
       "name" : "Modèle logique métier - FR LM Statut du document",
-      "description" : "Entrée Statut du document",
+      "description" : "Statut du document",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4212,7 +4222,7 @@
       "name" : "Modèle logique métier - FR LM Statut du document",
       "description" : "Section Statut du document",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4223,9 +4233,9 @@
         "reference" : "StructureDefinition/fr-lm-statut-probleme"
       },
       "name" : "Modèle logique métier - FR LM Statut du problème",
-      "description" : "Entrée Statut du problème.",
+      "description" : "Statut du problème.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4238,7 +4248,7 @@
       "name" : "Modèle logique métier - FR LM Statut fonctionnel",
       "description" : "Section Statut fonctionnel",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4251,7 +4261,7 @@
       "name" : "Modèle logique métier - FR LM Structure conservation",
       "description" : "Structure chargée de la conservation du document, c'est-à-dire de garder physiquement le document qui lui est confié tout en garantissant son cycle de vie.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -4264,7 +4274,7 @@
       "name" : "Modèle logique métier - FR LM Sujet",
       "description" : "Sujet",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4277,7 +4287,7 @@
       "name" : "Modèle logique métier - FR LM Sujet non humain",
       "description" : "Sujet non humain",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4288,9 +4298,9 @@
         "reference" : "StructureDefinition/fr-lm-synthese-medicale-sejour"
       },
       "name" : "Modèle logique métier - FR LM Synthese medicale sejour",
-      "description" : "Entrée Synthese medicale sejour",
+      "description" : "Synthese medicale sejour",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4303,7 +4313,7 @@
       "name" : "Modèle logique métier - FR LM Système / Structure",
       "description" : "Système auteur du document",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -4314,9 +4324,9 @@
         "reference" : "StructureDefinition/fr-lm-severite"
       },
       "name" : "Modèle logique métier - FR LM Sévérité",
-      "description" : "Entrée Sévérité.",
+      "description" : "Sévérité.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4327,9 +4337,9 @@
         "reference" : "StructureDefinition/fr-lm-technique-imagerie"
       },
       "name" : "Modèle logique métier - FR LM Technique imagerie",
-      "description" : "Entrée Technique imagerie",
+      "description" : "Technique imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4340,9 +4350,9 @@
         "reference" : "StructureDefinition/fr-lm-traitement"
       },
       "name" : "Modèle logique métier - FR LM Traitement",
-      "description" : "Entrée Traitement",
+      "description" : "Traitement",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4353,9 +4363,9 @@
         "reference" : "StructureDefinition/fr-lm-traitement-dispense"
       },
       "name" : "Modèle logique métier - FR LM Traitement dispensé",
-      "description" : "Entrée Traitement dispense",
+      "description" : "Traitement dispense",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4366,9 +4376,9 @@
         "reference" : "StructureDefinition/fr-lm-traitement-prescrit"
       },
       "name" : "Modèle logique métier - FR LM Traitement Prescrit",
-      "description" : "Entrée Traitement prescrit",
+      "description" : "Traitement prescrit",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4379,9 +4389,9 @@
         "reference" : "StructureDefinition/fr-lm-traitement-prescrit-subordonne"
       },
       "name" : "Modèle logique métier - FR LM Traitement Prescrit Subordonnee",
-      "description" : "Entrée Traitement prescrit subordonne",
+      "description" : "Traitement prescrit subordonne",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4392,9 +4402,9 @@
         "reference" : "StructureDefinition/fr-lm-traitement-subordonne"
       },
       "name" : "Modèle logique métier - FR LM Traitement subordonné",
-      "description" : "Entrée Traitement subordonné",
+      "description" : "Traitement subordonné",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4407,7 +4417,7 @@
       "name" : "Modèle logique métier - FR LM Traitements",
       "description" : "Section Traitements",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4420,7 +4430,7 @@
       "name" : "Modèle logique métier - FR LM Traitements administrés",
       "description" : "Section Traitements administrés",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4433,7 +4443,7 @@
       "name" : "Modèle logique métier - FR LM Traitements à la sortie",
       "description" : "Section Traitements à la sortie",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4444,9 +4454,9 @@
         "reference" : "StructureDefinition/fr-lm-transfert-du-patient"
       },
       "name" : "Modèle logique métier - FR LM Transfert du patient",
-      "description" : "Entrée Transfert du patient",
+      "description" : "Transfert du patient",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4457,9 +4467,9 @@
         "reference" : "StructureDefinition/fr-lm-transfusion-de-produits-sanguins"
       },
       "name" : "Modèle logique métier - FR LM Transfusion de produits sanguins",
-      "description" : "Entrée Transfusion de produits sanguins",
+      "description" : "Transfusion de produits sanguins",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4470,9 +4480,9 @@
         "reference" : "StructureDefinition/fr-lm-vaccin-recommande"
       },
       "name" : "Modèle logique métier - FR LM Vaccin recommandé",
-      "description" : "Entrée Vaccin recommandé",
+      "description" : "Vaccin recommandé",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4483,9 +4493,9 @@
         "reference" : "StructureDefinition/fr-lm-vaccination"
       },
       "name" : "Modèle logique métier - FR LM Vaccination",
-      "description" : "Entrée Vaccination",
+      "description" : "Vaccination",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4498,7 +4508,7 @@
       "name" : "Modèle logique métier - FR LM Vaccinations",
       "description" : "Section Vaccinations",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Sections)"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -4511,7 +4521,7 @@
       "name" : "Modèle logique métier - FR LM Validateur",
       "description" : "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -4524,7 +4534,7 @@
       "name" : "Modèle logique métier - FR LM Échantillon prélevé",
       "description" : "Échantillon prélevé",
       "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Eléments transversaux)"
+      "groupingId" : "Modèles logiques métiers des composants élémentaires"
     },
     {
       "extension" : [{
@@ -4537,20 +4547,7 @@
       "name" : "Modèle logique métier - FR LM Évènement",
       "description" : "Évènement (acte, traitement, diagnostic, etc…) décrit dans le document. Il y a au minimum une occurrence de cet élément pour décrire l'évènement principal avec obligatoirement une date de début et un exécutant.",
       "exampleBoolean" : false,
-      "groupingId" : "Modèles logiques de l'entête du document"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-lm-non-remboursable"
-      },
-      "name" : "Non remboursable",
-      "description" : "Modèle logique métier - FR LM Entrée Non remboursable",
-      "exampleBoolean" : false,
-      "groupingId" : "Modèle métier du Corps d'un document(Entrées)"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{

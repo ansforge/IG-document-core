@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRCarePlanDocument |
+| Draft as of 2026-01-16 | *Computable Name*:FRCarePlanDocument |
 
  
 FRCarePlanDocument est un profil permettant d’enregistrer une référence à un traitement dans un plan de traitement. 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-care-plan-documen
   "name" : "FRCarePlanDocument",
   "title" : "CarePlan - FR Care Plan Document",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

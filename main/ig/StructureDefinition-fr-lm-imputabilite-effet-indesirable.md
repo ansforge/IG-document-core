@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imputabilite-effet-indesirable | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMImputabiliteEffetIndesirable |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMImputabiliteEffetIndesirable |
 
  
-Entrée Imputabilite effet indesirable 
+Imputabilite effet indesirable 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-imputabilite-e
   "name" : "FRLMImputabiliteEffetIndesirable",
   "title" : "Modèle logique métier - FR LM Imputabilite effet indesirable",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-imputabilite-e
       ]
     }
   ],
-  "description" : "Entrée Imputabilite effet indesirable",
+  "description" : "Imputabilite effet indesirable",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-imputabilite-e
         "id" : "fr-lm-imputabilite-effet-indesirable",
         "path" : "fr-lm-imputabilite-effet-indesirable",
         "short" : "Modèle logique métier - FR LM Imputabilite effet indesirable",
-        "definition" : "Entrée Imputabilite effet indesirable"
+        "definition" : "Imputabilite effet indesirable"
       },
       {
         "id" : "fr-lm-imputabilite-effet-indesirable.code",

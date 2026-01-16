@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMBatterieExamensBiologieMedicale |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMBatterieExamensBiologieMedicale |
 
  
-Entrée Batterie d’examens de biologie médicale 
+Batterie d’examens de biologie médicale 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-batterie-exame
   "name" : "FRLMBatterieExamensBiologieMedicale",
   "title" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-batterie-exame
       ]
     }
   ],
-  "description" : "Entrée Batterie d'examens de biologie médicale",
+  "description" : "Batterie d'examens de biologie médicale",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-batterie-exame
         "id" : "fr-lm-batterie-examens-biologie-medicale",
         "path" : "fr-lm-batterie-examens-biologie-medicale",
         "short" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
-        "definition" : "Entrée Batterie d'examens de biologie médicale"
+        "definition" : "Batterie d'examens de biologie médicale"
       },
       {
         "id" : "fr-lm-batterie-examens-biologie-medicale.identifiant",
@@ -170,8 +170,8 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-batterie-exame
       {
         "id" : "fr-lm-batterie-examens-biologie-medicale.auteur",
         "path" : "fr-lm-batterie-examens-biologie-medicale.auteur",
-        "short" : "Auteur. Apparaît à ce niveau si le rendu de ce  résultat procède de cet auteur spécifique, différent de celui déclaré aux niveaux supérieurs.",
-        "definition" : "Auteur. Apparaît à ce niveau si le rendu de ce  résultat procède de cet auteur spécifique, différent de celui déclaré aux niveaux supérieurs.",
+        "short" : "Auteur",
+        "definition" : "Auteur",
         "min" : 0,
         "max" : "*",
         "type" : [

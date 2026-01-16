@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-transfert-du-patient | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMTransfertDuPatient |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMTransfertDuPatient |
 
  
-Entrée Transfert du patient 
+Transfert du patient 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfert-du-p
   "name" : "FRLMTransfertDuPatient",
   "title" : "Modèle logique métier - FR LM Transfert du patient",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfert-du-p
       ]
     }
   ],
-  "description" : "Entrée Transfert du patient",
+  "description" : "Transfert du patient",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-transfert-du-p
         "id" : "fr-lm-transfert-du-patient",
         "path" : "fr-lm-transfert-du-patient",
         "short" : "Modèle logique métier - FR LM Transfert du patient",
-        "definition" : "Entrée Transfert du patient"
+        "definition" : "Transfert du patient"
       },
       {
         "id" : "fr-lm-transfert-du-patient.identifiant",

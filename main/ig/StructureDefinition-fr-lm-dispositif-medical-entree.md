@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical-entree | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMDispositifMedicalEntree |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMDispositifMedicalEntree |
 
  
-Entrée Dispositif médical 
+Dispositif médical 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-dispositif-med
   "name" : "FRLMDispositifMedicalEntree",
   "title" : "Modèle logique métier - FR LM Dispositif médical",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-dispositif-med
       ]
     }
   ],
-  "description" : "Entrée Dispositif médical",
+  "description" : "Dispositif médical",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-dispositif-med
         "id" : "fr-lm-dispositif-medical-entree",
         "path" : "fr-lm-dispositif-medical-entree",
         "short" : "Modèle logique métier - FR LM Dispositif médical",
-        "definition" : "Entrée Dispositif médical"
+        "definition" : "Dispositif médical"
       },
       {
         "id" : "fr-lm-dispositif-medical-entree.identifiant",
@@ -212,7 +212,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-dispositif-med
         "max" : "*",
         "type" : [
           {
-            "code" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMDispositifMedical"
+            "code" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical"
           }
         ]
       },

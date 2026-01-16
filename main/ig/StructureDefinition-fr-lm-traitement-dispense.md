@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-dispense | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMTraitementDispense |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMTraitementDispense |
 
  
-Entrée Traitement dispense 
+Traitement dispense 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-dis
   "name" : "FRLMTraitementDispense",
   "title" : "Modèle logique métier - FR LM Traitement dispensé",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-dis
       ]
     }
   ],
-  "description" : "Entrée Traitement dispense",
+  "description" : "Traitement dispense",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-dis
         "id" : "fr-lm-traitement-dispense",
         "path" : "fr-lm-traitement-dispense",
         "short" : "Modèle logique métier - FR LM Traitement dispensé",
-        "definition" : "Entrée Traitement dispense"
+        "definition" : "Traitement dispense"
       },
       {
         "id" : "fr-lm-traitement-dispense.identifiant",

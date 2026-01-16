@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-prescrit-subordonne | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMTraitementPrescritSubordonne |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMTraitementPrescritSubordonne |
 
  
-Entrée Traitement prescrit subordonne 
+Traitement prescrit subordonne 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-pre
   "name" : "FRLMTraitementPrescritSubordonne",
   "title" : "Modèle logique métier - FR LM Traitement Prescrit Subordonnee",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-pre
       ]
     }
   ],
-  "description" : "Entrée Traitement prescrit subordonne",
+  "description" : "Traitement prescrit subordonne",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-traitement-pre
         "id" : "fr-lm-traitement-prescrit-subordonne",
         "path" : "fr-lm-traitement-prescrit-subordonne",
         "short" : "Modèle logique métier - FR LM Traitement Prescrit Subordonnee",
-        "definition" : "Entrée Traitement prescrit subordonne"
+        "definition" : "Traitement prescrit subordonne"
       },
       {
         "id" : "fr-lm-traitement-prescrit-subordonne.identifiant",

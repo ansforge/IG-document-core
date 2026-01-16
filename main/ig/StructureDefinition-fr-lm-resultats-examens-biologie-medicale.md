@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examens-biologie-medicale | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMResultatsExamensBiologieMedicale |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMResultatsExamensBiologieMedicale |
 
  
-Entrée Resultats d’examens de biologie medicale 
+Resultats d’examens de biologie medicale 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-exam
   "name" : "FRLMResultatsExamensBiologieMedicale",
   "title" : "Modèle logique métier - FR LM Resultats d'examens de biologie medicale",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-exam
       ]
     }
   ],
-  "description" : "Entrée Resultats d'examens de biologie medicale",
+  "description" : "Resultats d'examens de biologie medicale",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-exam
         "id" : "fr-lm-resultats-examens-biologie-medicale",
         "path" : "fr-lm-resultats-examens-biologie-medicale",
         "short" : "Modèle logique métier - FR LM Resultats d'examens de biologie medicale",
-        "definition" : "Entrée Resultats d'examens de biologie medicale"
+        "definition" : "Resultats d'examens de biologie medicale"
       },
       {
         "id" : "fr-lm-resultats-examens-biologie-medicale.code",
@@ -144,8 +144,8 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-exam
       {
         "id" : "fr-lm-resultats-examens-biologie-medicale.laboratoireExecutant",
         "path" : "fr-lm-resultats-examens-biologie-medicale.laboratoireExecutant",
-        "short" : "Laboratoire sous-traitant. Apparaît à ce niveau si et et seulement si ce résultat a été produit par un laboratoire exécutant distinct du laboratoire exécutant déclaré aux niveaux supérieurs.",
-        "definition" : "Laboratoire sous-traitant. Apparaît à ce niveau si et et seulement si ce résultat a été produit par un laboratoire exécutant distinct du laboratoire exécutant déclaré aux niveaux supérieurs.",
+        "short" : "Laboratoire sous-traitant.",
+        "definition" : "Laboratoire sous-traitant.",
         "min" : 0,
         "max" : "*",
         "type" : [
@@ -157,8 +157,8 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-resultats-exam
       {
         "id" : "fr-lm-resultats-examens-biologie-medicale.auteur",
         "path" : "fr-lm-resultats-examens-biologie-medicale.auteur",
-        "short" : "Participation d'un auteur au document. Apparaît à ce niveau si le compte-rendu de cette analyse procède de cet auteur spécifique.",
-        "definition" : "Participation d'un auteur au document. Apparaît à ce niveau si le compte-rendu de cette analyse procède de cet auteur spécifique.",
+        "short" : "Participation d'un auteur au document.",
+        "definition" : "Participation d'un auteur au document.",
         "min" : 0,
         "max" : "*",
         "type" : [

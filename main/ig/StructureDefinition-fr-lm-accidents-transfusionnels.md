@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-accidents-transfusionnels | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMAccidentsTransfusionnels |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMAccidentsTransfusionnels |
 
  
-Entrée Accident transfusionnel 
+Accident transfusionnel 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-accidents-tran
   "name" : "FRLMAccidentsTransfusionnels",
   "title" : "Modèle logique métier - FR LM Accident transfusionnel",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-accidents-tran
       ]
     }
   ],
-  "description" : "Entrée Accident transfusionnel",
+  "description" : "Accident transfusionnel",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-accidents-tran
         "id" : "fr-lm-accidents-transfusionnels",
         "path" : "fr-lm-accidents-transfusionnels",
         "short" : "Modèle logique métier - FR LM Accident transfusionnel",
-        "definition" : "Entrée Accident transfusionnel"
+        "definition" : "Accident transfusionnel"
       },
       {
         "id" : "fr-lm-accidents-transfusionnels.identifiant",

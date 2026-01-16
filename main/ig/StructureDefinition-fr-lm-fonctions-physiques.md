@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-fonctions-physiques | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMFonctionsPhysiques |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMFonctionsPhysiques |
 
  
 Section Fonctions physiques 
@@ -51,7 +51,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-fonctions-phys
   "name" : "FRLMFonctionsPhysiques",
   "title" : "Modèle logique métier - FR LM Fonctions physiques",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

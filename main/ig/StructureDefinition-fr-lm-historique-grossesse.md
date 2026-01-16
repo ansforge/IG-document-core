@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-grossesse | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMHistoriqueGrossesse |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMHistoriqueGrossesse |
 
  
-Entrée Historique de la grossesse 
+Historique de la grossesse 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-historique-gro
   "name" : "FRLMHistoriqueGrossesse",
   "title" : "Modèle logique métier - FR LM Historique de la grossesse",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-historique-gro
       ]
     }
   ],
-  "description" : "Entrée Historique de la grossesse",
+  "description" : "Historique de la grossesse",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-historique-gro
         "id" : "fr-lm-historique-grossesse",
         "path" : "fr-lm-historique-grossesse",
         "short" : "Modèle logique métier - FR LM Historique de la grossesse",
-        "definition" : "Entrée Historique de la grossesse"
+        "definition" : "Historique de la grossesse"
       },
       {
         "id" : "fr-lm-historique-grossesse.identifiant",

@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-allergie-ou-hypersensibilite | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMAllergieOuHypersensibilite |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMAllergieOuHypersensibilite |
 
  
-Entrée Allergie ou hypersensibilite 
+Allergie ou hypersensibilite 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-allergie-ou-hy
   "name" : "FRLMAllergieOuHypersensibilite",
   "title" : "Modèle logique métier - FR LM Allergie ou Hypersensibilité",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-allergie-ou-hy
       ]
     }
   ],
-  "description" : "Entrée Allergie ou hypersensibilite",
+  "description" : "Allergie ou hypersensibilite",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-allergie-ou-hy
         "id" : "fr-lm-allergie-ou-hypersensibilite",
         "path" : "fr-lm-allergie-ou-hypersensibilite",
         "short" : "Modèle logique métier - FR LM Allergie ou Hypersensibilité",
-        "definition" : "Entrée Allergie ou hypersensibilite"
+        "definition" : "Allergie ou hypersensibilite"
       },
       {
         "id" : "fr-lm-allergie-ou-hypersensibilite.identifiant",

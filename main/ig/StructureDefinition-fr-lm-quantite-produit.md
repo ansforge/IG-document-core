@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-produit | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMQuantiteProduit |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMQuantiteProduit |
 
  
-Entrée Quantité de produit 
+Quantité de produit 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-quantite-produ
   "name" : "FRLMQuantiteProduit",
   "title" : "Modèle logique métier - FR LM Quantité de produit",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-quantite-produ
       ]
     }
   ],
-  "description" : "Entrée Quantité de produit",
+  "description" : "Quantité de produit",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-quantite-produ
         "id" : "fr-lm-quantite-produit",
         "path" : "fr-lm-quantite-produit",
         "short" : "Modèle logique métier - FR LM Quantité de produit",
-        "definition" : "Entrée Quantité de produit"
+        "definition" : "Quantité de produit"
       },
       {
         "id" : "fr-lm-quantite-produit.independant",

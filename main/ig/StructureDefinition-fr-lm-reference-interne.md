@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-reference-interne | *Version*:0.1.0 |
-| Draft as of 2026-01-09 | *Computable Name*:FRLMReferenceInterne |
+| Draft as of 2026-01-16 | *Computable Name*:FRLMReferenceInterne |
 
  
-Entrée Référence interne 
+Référence interne 
 
 **Utilisations:**
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-reference-inte
   "name" : "FRLMReferenceInterne",
   "title" : "Modèle logique métier - FR LM Référence interne",
   "status" : "draft",
-  "date" : "2026-01-09T15:21:06+00:00",
+  "date" : "2026-01-16T13:49:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-reference-inte
       ]
     }
   ],
-  "description" : "Entrée Référence interne",
+  "description" : "Référence interne",
   "jurisdiction" : [
     {
       "coding" : [
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-lm-reference-inte
         "id" : "fr-lm-reference-interne",
         "path" : "fr-lm-reference-interne",
         "short" : "Modèle logique métier - FR LM Référence interne",
-        "definition" : "Entrée Référence interne"
+        "definition" : "Référence interne"
       },
       {
         "id" : "fr-lm-reference-interne.identifiant",
